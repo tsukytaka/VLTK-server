@@ -30,7 +30,7 @@ CFG_Xu_Boss_ThuyTacDauLinh	= 1
 CFG_Xu_Boss_ST9x	= 1
 
 --== Tinh nang Test Game ==--
-CFG_ChayThuNghiem		= 1
+CFG_ChayThuNghiem		= 0
 nlevel_test	= 90
 nKimNguyenBao	= 1
 nTienDong	= 100

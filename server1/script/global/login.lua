@@ -104,10 +104,6 @@ function main(bExchangeIn)
 	logplayer("dulieu/login/LoginSuccess_HwD_IP_"..date("%d_%m_%Y")..".txt",(""..date("%y-%m-%d_%H:%M:%S").." - TK : ["..GetAccount().."] - NV : ["..GetName().."] - IP : ["..GetIP().."] - HwD : ["..GetIP().."]"))
 	-- Usser login
 	-- Add lenh bai Tan thu
-	if (CalcEquiproomItemCount(6,1,4258,-1) == 0) then
-		local nItemIndex = AddItem(6,1,4258,1,0,0);
-		SetItemBindState(nItemIndex, -1);
-	end;
 	if (CalcEquiproomItemCount(6,1,4381,-1) == 0) then
 		local nItemIndex = AddItem(6,1,4381,1,0,0);
 		SetItemBindState(nItemIndex, -1);
