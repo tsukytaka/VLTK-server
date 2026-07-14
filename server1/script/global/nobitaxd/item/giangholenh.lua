@@ -8,6 +8,8 @@ function main()
     local tbOpt = {
         {"Nhan ho tro tan thu (1 Bo An Bang & 1 VK HKMP)", check_and_give_support},
         {"Gia nhap mon phai (Nhan skill 60)", change_phai_tanthu},
+        {"Phan phoi diem tiem nang", menu_diemtiemnang},
+        {"Phan phoi diem ky nang", menu_diemkynang},
         {"Thoat"}
     }
     CreateNewSayEx(szTitle, tbOpt)
@@ -239,4 +241,159 @@ function joinMonphaiTanthu(nIndex)
     if DoClearPropCore then DoClearPropCore() end
     Msg2SubWorld(JoinMsgs)
     KickOutSelf()
+end
+
+---------------------- Phan Phoi Tiem Nang (New) -------------------------
+function menu_diemtiemnang()
+    local nPoints = GetProp()
+    if nPoints <= 0 then
+        Talk(1, "", "Ban khong co diem tiem nang nao de phan phoi!")
+        return 1
+    end
+    
+    local szTitle = "Phan phoi nhanh diem tiem nang\\n" ..
+                    "Diem tiem nang hien tai: <color=yellow>" .. nPoints .. "</color> diem.\\n" ..
+                    "Hay chon phuong thuc phan phoi:"
+                    
+    local tbOpt = {
+        {"Tang Suc Manh (Str)", select_stat_points, {"str"}},
+        {"Tang Than Phap (Dex)", select_stat_points, {"dex"}},
+        {"Tang Ngoai Cong (Vit)", select_stat_points, {"vit"}},
+        {"Tang Noi Cong (Eng)", select_stat_points, {"eng"}},
+        {"Quay lai", main},
+        {"Thoat"}
+    }
+    CreateNewSayEx(szTitle, tbOpt)
+end
+
+function select_stat_points(stat)
+    local nPoints = GetProp()
+    if nPoints <= 0 then
+        Talk(1, "", "Ban khong co diem tiem nang!")
+        return 1
+    end
+    
+    local statName = ""
+    if stat == "str" then statName = "Suc Manh"
+    elseif stat == "dex" then statName = "Than Phap"
+    elseif stat == "vit" then statName = "Ngoai Cong"
+    elseif stat == "eng" then statName = "Noi Cong"
+    end
+    
+    local szTitle = "Phan phoi vao: " .. statName .. "\\n" ..
+                    "Diem tiem nang hien co: " .. nPoints .. "\\n" ..
+                    "Nhap so diem muon cong:"
+                    
+    g_AskClientNumberEx(nPoints, nPoints, szTitle, {apply_stat_points, {stat}})
+end
+
+function apply_stat_points(stat, nCount)
+    nCount = tonumber(nCount) or 0
+    local nPoints = GetProp()
+    if nCount <= 0 or nCount > nPoints then
+        Talk(1, "", "So diem nhap vao khong hop le!")
+        return 1
+    end
+    
+    if stat == "str" then
+        AddStrg(nCount)
+    elseif stat == "dex" then
+        AddDex(nCount)
+    elseif stat == "vit" then
+        AddVit(nCount)
+    elseif stat == "eng" then
+        AddEng(nCount)
+    end
+    
+    Msg2Player("Cong thanh cong " .. nCount .. " diem tiem nang!")
+    menu_diemtiemnang()
+end
+
+---------------------- Phan Phoi Ky Nang (New) -------------------------
+function menu_diemkynang()
+    local nFaction = GetLastFactionNumber()
+    if nFaction == -1 or GetFaction() == "" then
+        Talk(1, "", "Ban chua gia nhap mon phai!")
+        return 1
+    end
+    
+    local nPoints = GetMagicPoint()
+    if nPoints <= 0 then
+        Talk(1, "", "Ban khong co diem ky nang nao de phan phoi!")
+        return 1
+    end
+    
+    local faction_skills = {
+        [0] = {10, 14, 4, 6, 8, 15, 16, 20, 11, 19, 271, 21, 273}, -- Thieu Lam
+        [1] = {29, 30, 34, 23, 24, 26, 33, 31, 35, 37, 40, 42, 32, 36, 41, 324}, -- Thien Vuong
+        [2] = {45, 43, 303, 347, 47, 50, 54, 343, 345, 349, 48, 58, 249, 341}, -- Duong Mon
+        [3] = {63, 65, 60, 62, 67, 66, 70, 64, 68, 69, 384, 73, 356, 72, 71, 74, 75}, -- Ngu Doc
+        [4] = {80, 85, 77, 79, 93, 82, 89, 385, 86, 92, 88, 91, 252, 282}, -- Nga My
+        [5] = {99, 102, 95, 97, 269, 105, 113, 100, 109, 108, 111, 114}, -- Thuy Yen
+        [6] = {119, 122, 115, 116, 129, 124, 274, 277, 125, 128, 130, 360}, -- Cai Bang
+        [7] = {135, 145, 131, 132, 136, 137, 138, 140, 141, 364, 143, 142, 148, 150}, -- Thien Nhan
+        [8] = {153, 155, 151, 152, 159, 158, 164, 160, 157, 165, 166, 267}, -- Vo Dang
+        [9] = {169, 179, 167, 168, 171, 392, 174, 172, 173, 178, 393, 175, 181, 90, 176, 182, 275, 630} -- Con Lon
+    }
+    
+    local skills = faction_skills[nFaction]
+    if not skills then
+        Talk(1, "", "Khong tim thay danh sach ky nang cua mon phai ban!")
+        return 1
+    end
+    
+    local szTitle = "Phan phoi nhanh diem ky nang\\n" ..
+                    "Diem ky nang hien tai: <color=yellow>" .. nPoints .. "</color> diem.\\n" ..
+                    "Hay chon ky nang muon cong diem:"
+                    
+    local tbOpt = {}
+    for i = 1, getn(skills) do
+        local skillId = skills[i]
+        local curLvl = HaveMagic(skillId)
+        if curLvl >= 0 then
+            local maxLvl = GetSkillMaxLevel(skillId) + GetSkillMaxLevelAddons()
+            if curLvl < maxLvl then
+                local skillName = GetSkillName(skillId)
+                tinsert(tbOpt, {skillName .. " (" .. curLvl .. "/" .. maxLvl .. ")", select_skill_points, {skillId, curLvl, maxLvl}})
+            end
+        end
+    end
+    tinsert(tbOpt, {"Quay lai", main})
+    tinsert(tbOpt, {"Thoat"})
+    
+    CreateNewSayEx(szTitle, tbOpt)
+end
+
+function select_skill_points(skillId, curLvl, maxLvl)
+    local nPoints = GetMagicPoint()
+    if nPoints <= 0 then
+        Talk(1, "", "Ban khong co diem ky nang!")
+        return 1
+    end
+    
+    local skillName = GetSkillName(skillId)
+    local maxAddable = maxLvl - curLvl
+    local limit = nPoints
+    if limit > maxAddable then limit = maxAddable end
+    
+    local szTitle = "Ky nang: " .. skillName .. " (Cap hien tai: " .. curLvl .. "/" .. maxLvl .. ")\\n" ..
+                    "Diem ky nang hien co: " .. nPoints .. "\\n" ..
+                    "Nhap so diem muon cong (Toi da: " .. limit .. "):"
+                    
+    g_AskClientNumberEx(limit, limit, szTitle, {apply_skill_points, {skillId, curLvl, maxAddable}})
+end
+
+function apply_skill_points(skillId, curLvl, maxAddable, nCount)
+    nCount = tonumber(nCount) or 0
+    local nPoints = GetMagicPoint()
+    if nCount <= 0 or nCount > nPoints or nCount > maxAddable then
+        Talk(1, "", "So diem nhap vao khong hop le!")
+        return 1
+    end
+    
+    AddMagic(skillId, curLvl + nCount)
+    AddMagicPoint(-nCount)
+    
+    Msg2Player("Cong " .. nCount .. " diem vao ky nang " .. GetSkillName(skillId) .. " thanh cong!")
+    menu_diemkynang()
 end
