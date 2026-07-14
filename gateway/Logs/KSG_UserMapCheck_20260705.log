@@ -1,0 +1,11 @@
+2026-07-05 00:46:57	GameServer[0] create: 127.0.0.1 : 43462
+2026-07-05 00:47:10	GameServer[1] create: 127.0.0.1 : 52205
+2026-07-05 00:47:17	Gameserver(1) update map ok
+2026-07-05 00:48:14	LoginToMap: Account(jxclone1), Index(0), IP:192.168.1.250 : 58248
+2026-07-05 00:48:18	Unlock jxclone1(null): 1
+2026-07-05 00:48:18	LogoutFromMap: Account(jxclone1), GameServer(-1), Status(1), PlayrIndex(0), Role(), Map(0)
+2026-07-05 00:48:35	GameServer[0] destroy
+2026-07-05 00:48:40	GameServer[1] destroy
+2026-07-05 00:48:48	GameServer[2] create: 127.0.0.1 : 55634
+2026-07-05 00:48:56	GameServer[3] create: 127.0.0.1 : 56375
+2026-07-05 00:49:00	Gameserver(3) update map ok

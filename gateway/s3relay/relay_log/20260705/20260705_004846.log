@@ -1,0 +1,135 @@
+[2026/07/05 00:48:46] Loading All Scripts....................
+[2026/07/05 00:48:46] Load Rank FUNC_RANK_EQUIPVALUE
+[2026/07/05 00:48:46] Load Stable Rank count 0
+[2026/07/05 00:48:46] Load Dynamic Rank count 0
+[2026/07/05 00:48:46] Load Rank FUNC_RANK_EQUIPVALUE end
+[2026/07/05 00:48:46] [PLD] Auto reset on startup. Mode = 0
+[2026/07/05 00:48:46] 
+All Scripts Have Been Loaded! Count = 93
+[2026/07/05 00:48:46] root client[:0] create
+[2026/07/05 00:48:48] start autotimer for Ping: 
+[2026/07/05 00:48:48] TRIP_MODE: None
+[2026/07/05 00:48:48] Loading World Setting...
+[2026/07/05 00:48:48] Reset map pho ban thanh cong
+[2026/07/05 00:48:48] Load LeagueData: LeagueType: 4, Leagues: 7, Roles: 7
+[2026/07/05 00:48:48] Load LeagueData: LeagueType: 500, Leagues: 4, Roles: 4
+[2026/07/05 00:48:48] Load LeagueData: LeagueType: 502, Leagues: 19, Roles: 19
+[2026/07/05 00:48:48] =====> THONG BAO TIN TUC TU DONG
+[2026/07/05 00:48:48] =====> BAT DAU KHOI DONG CAC TINH NANG CUA GAME VO LAM TRUYEN KY <=====
+[2026/07/05 00:48:48] =====> Boss Tieu Hoang Kim Xuat Hien Vao Luc :  12:30
+[2026/07/05 00:48:48] gateway client create: 127.0.0.1
+[2026/07/05 00:48:48] =====> SO LUONG BOSS HOANG KIM XUAT HIEN :  0
+[2026/07/05 00:48:48] =====> BOSS DOC CO THIEN PHONG XUAT HIEN :  19:45
+[2026/07/05 00:48:48] =====> Boss Hoang Kim Xuat Hien Vao Luc :  08:00
+[2026/07/05 00:48:48] =====> Boss Dai Hoang Kim Xuat Hien Vao Luc :  19:30
+[2026/07/05 00:48:48] =====> Boss Hoang Kim Xuat Hien Vao Luc :  22:00
+[2026/07/05 00:48:48] =====> HOAT DONG QUA HUY HOANG BAT DAU LUC 12 PM
+[2026/07/05 00:48:48] =====> HOAT DONG QUA HUY HOANG BAT DAU LUC 20 PM
+[2026/07/05 00:48:48] =====> HOAT DONG GIET NHIM BEO PHI BAT DAU 1:0 VA 30 PHUT SAU KET THUC
+[2026/07/05 00:48:48] =====> HOAT DONG HOA DANG KHOI DONG : 0048
+[2026/07/05 00:48:48]  ========================================================================================
+[2026/07/05 00:48:48]                 Tinh nang Lien Dau (Don dau tu do) Start: Phase=2  SeasonID=46 
+[2026/07/05 00:48:48]                            tu thu 2 den thu 6: 19h00 ~ 19h45, 4 tran 
+[2026/07/05 00:48:48]                    2 ngay cuoi tuan 18h00 ~ 18h45 va 20h00 ~ 20h45, 8 tran 
+[2026/07/05 00:48:48] =====> CHIEN TRUONG TONG KIM BAT DAU DA LEN LICH GIO LE, BAT DAU TU 01:00 <=====
+[2026/07/05 00:48:48] =====> PHONG HOA LIEN THANH LEN LICH GIO CHAN, BAT DAU TU 02:00
+[2026/07/05 00:48:48] 
+[2026/07/05 00:48:48] S3Relay -- S3Relay- Khoi dong hoan tat! 
+[2026/07/05 00:48:48] 
+*
+***** S3Relay Start (@ 170727728/00/43200 00:-7102216:135861597.136280271) >>>>>
+*
+
+
+[2026/07/05 00:48:48] SockThread start success
+[2026/07/05 00:48:48] Game Module Is Started. -->Hoat dong mua xuan 2006
+[2026/07/05 00:48:48] Game Module Is Started. -->OpenShop
+[2026/07/05 00:48:48] Game Module Is Started. -->Thiep Chuc Mung Nam Moi
+[2026/07/05 00:48:48] Game Module Is Started. -->Do Pho Hoang Kim
+[2026/07/05 00:48:48] Game Module Is Started. -->Phuc Duyen - Phao Bong
+[2026/07/05 00:48:48] Game Module Is Started. -->Truyen Cong
+[2026/07/05 00:48:48] Game Module Is Started. -->Le vat tinh nhan
+[2026/07/05 00:48:48] Game Module Is Started. -->YANDIBAOZANG
+[2026/07/05 00:48:48] Game Module Is Started. -->YANDIBAOZANG_TALK
+[2026/07/05 00:48:48] Game Module Is Started. -->SWITH_DAIYITOUSHI
+[2026/07/05 00:48:48] Game Module Is Started. -->chunjie2009_dangboss
+[2026/07/05 00:48:48] ===> Bang Xep Hang Khoi Dong Hoan Tat<===
+[2026/07/05 00:48:56] ChatConnection create: 127.0.0.1
+[2026/07/05 00:48:56] HostConnection create: 127.0.0.1
+[2026/07/05 00:48:56] TongConnection create: 127.0.0.1
+[2026/07/05 00:49:00] TongDataSendFinish: 127.0.0.1
+[2026/07/05 00:49:00] ============ League Match GSReady(16777343): Phase=2  MatchID=0  SeasonID=46 =============
+[2026/07/05 00:49:00] GameServerLogin: 127.0.0.1
+[2026/07/05 00:49:00] Assign Dynamic map(948,70021) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:1
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(948,70022) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:2
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(948,70023) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:3
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(948,70024) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:4
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(948,70025) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:5
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(958,70026) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:6
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(958,70027) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:7
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(958,70028) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:8
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(958,70029) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:9
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(958,70030) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:10
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(976,65536) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:11
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(976,65537) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:12
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(976,65538) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:13
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(976,65539) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:14
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(976,65540) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:15
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(975,65541) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:16
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(975,65542) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:17
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(975,65543) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:18
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(975,65544) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:19
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:00] Assign Dynamic map(975,65545) for GS:0
+[2026/07/05 00:49:00] GS:0 Total Dynamic map:20
+[2026/07/05 00:49:00] GS:0 Total Static map:668
+[2026/07/05 00:49:07] SockThread stop success
+[2026/07/05 00:49:07] S3Relay-开始关闭！ S3Relay- bat dau dong lai! 
+[2026/07/05 00:49:07] 
+*
+***** S3Relay Stop (@ 0000/00/00 00:-7102184:134777086.170727728) <<<<<
+*
+
+
+[2026/07/05 00:49:07] chat server shutdown
+[2026/07/05 00:49:07] tong server shutdown
+[2026/07/05 00:49:07] host server shutdown
+[2026/07/05 00:49:07] stop autotimer for Ping: 127.0.0.1
+[2026/07/05 00:49:07] S3Relay: 与RelayRoot的链接断开了 -  cung voi RelayRoot lien tiep bi ngat quang - 127.0.0.1

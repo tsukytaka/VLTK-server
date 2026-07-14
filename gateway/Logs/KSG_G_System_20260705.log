@@ -1,0 +1,16 @@
+2026-07-05 00:46:48	Node[0] connect: Ip(127.0.0.1 : 48098), Identity(0)
+2026-07-05 00:46:48	ClientConnectCreate:[0]127.0.0.1 : 48098
+2026-07-05 00:46:48	Bishop claim from Node[0]!
+2026-07-05 00:47:10	Node[1] connect: Ip(127.0.0.1 : 50259), Identity(1)
+2026-07-05 00:47:10	ClientConnectCreate:[1]127.0.0.1 : 50259
+2026-07-05 00:48:40	Node[1] disconnect: Ip(127.0.0.1 : 50259), Identity(1)
+2026-07-05 00:48:40	ClientConnectClose:[1]
+
+2026-07-05 00:48:56	Node[2] connect: Ip(127.0.0.1 : 44975), Identity(2)
+2026-07-05 00:48:56	ClientConnectCreate:[2]127.0.0.1 : 44975
+2026-07-05 00:49:12	Node[2] disconnect: Ip(127.0.0.1 : 44975), Identity(2)
+2026-07-05 00:49:12	ClientConnectClose:[2]
+
+2026-07-05 00:49:16	Node[0] disconnect: Ip(127.0.0.1 : 48098), Identity(0)
+2026-07-05 00:49:16	ClientConnectClose:[0]
+
