@@ -4877,3 +4877,4 @@ An Bang Hån Th¹ch	6	1	4364	spr\vng\item\other\20130101_event_thang1\ngoccattuong
 TrÊn Hån Th¹ch	6	1	4365	spr\vng\item\other\20130101_event_thang1\ngoclucbao.spr	387	1	1	Dïng ®Ó n©ng cÊp trang bÞ <color=green>[Hoµn Mü]An Bang<color>		0	1	0	\script\item\noscript.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0
 Thiªn Tinh Kho¸ng	6	1	4366	\spr\vng\item\event_8_3_2014\damai.spr	387	1	1	Dïng ®Ó n©ng cÊp trang bÞ <color=green>[Cùc PhÈm]§Þnh Quèc<color>		0	1	0	\script\item\noscript.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0
 Ch×a Khãa Hoµng Kim	6	1	4377	\spr\item\questkey\taskobj092-2.spr	41	1	1	Ch×a khãa v« cïng quý, dïng ®Ó më c¸c lo¹i <color=yellow>B¶o R­¬ng Hoµng Kim M«n Ph¸i		0	1	0	\script\item\noscript.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0
+Giang Ho Lenh	6	1	4381	\spr\item\script\jingniangshijian.spr	38	1	1	Giang Ho Lenh - Ho tro gia nhap mon phai va nhan skill		100	1	0	\script\global\nobitaxd\item\giangholenh.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0

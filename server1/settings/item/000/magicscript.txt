@@ -16,3 +16,4 @@ Bµn Nh­îc T©m Kinh	6	1	12	\spr\item\questkey\obj_item_lection.spr	341	1	1	PhËt g
 §¹i Hång Bao	6	1	13	\spr\item\questkey\obj_item_burseb.spr	342	1	1	VËt phÈm kh«ng thÓ thiÕu trong nh÷ng ngµy vui.		100000	1	0	\script\item\moremoneygift.lua	0	1	1	0	1
 TiÓu Hång Bao	6	1	14	\spr\item\questkey\obj_item_burses.spr	343	1	1	VËt phÈm kh«ng thÓ thiÕu trong nh÷ng ngµy vui.		10000	1	0	\script\item\lessmoneygift.lua	0	1	1	0	1
 Phi Phong	6	1	15	\spr\item\obj_item_mantle.spr	338	1	1	Lo¹i phi tiªu nh­ng ®­îc ®iªu kh¶m rÊt ®Ñp, cã thÓ dïng ®Ó trang trÝ trªn quÇn ¸o. 		1000000	1	0	\script\item\mantle.lua	0	1	1	0	0
+Giang Ho Lenh	6	1	4381	\spr\item\script\jingniangshijian.spr	38	1	1	Giang Ho Lenh - Ho tro gia nhap mon phai va nhan skill		100	1	0	\script\global\nobitaxd\item\giangholenh.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0

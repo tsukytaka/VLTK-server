@@ -4881,3 +4881,4 @@ Ch×a Khãa Hoµng Kim	6	1	4377	\spr\item\questkey\taskobj092-2.spr	41	1	1	"Ch×a kh
 D· TÈu Chi B¶o	6	1	4378	\spr\item\beidou\beidouzhibao.spr	41	1	1	NhÊn chuét ph¶i sö dông ®Ó hoµn thµnh nhiÖm vô <color=yellow>D· TÈu<color> hiÖn t¹i		0	1	1	\script\global\nobitaxd\item\dataulenhbai.lua	0	1	1	0	0		50	0	0	0	0	0	0	0	0	0
 Check Res Lªn	6	1	4379	\spr\item\script\spring2007\chunjie_hongbao.spr	342	1	1	Trong chøa ngÉu nhiªn 1 viªn ph¸o.		20	1	0	\script\global\nobitaxd\vdk\tinhnang\res\next_button.lua	0	1	1	0	1		50	0	0	0	0	0	0	0	0	0
 Check Res Xuèng	6	1	4380	\spr\item\script\spring2007\chunjie_hongbao.spr	342	1	1	Trong chøa ngÉu nhiªn 1 viªn ph¸o.		20	1	0	\script\global\nobitaxd\vdk\tinhnang\res\back_button.lua	0	1	1	0	1		50	0	0	0	0	0	0	0	0	0
+Giang Ho Lenh	6	1	4381	\spr\item\script\jingniangshijian.spr	38	1	1	Giang Ho Lenh - Ho tro gia nhap mon phai va nhan skill		100	1	0	\script\global\nobitaxd\item\giangholenh.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0

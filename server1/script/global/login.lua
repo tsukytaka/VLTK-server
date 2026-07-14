@@ -108,6 +108,10 @@ function main(bExchangeIn)
 		local nItemIndex = AddItem(6,1,4258,1,0,0);
 		SetItemBindState(nItemIndex, -1);
 	end;
+	if (CalcEquiproomItemCount(6,1,4381,-1) == 0) then
+		local nItemIndex = AddItem(6,1,4381,1,0,0);
+		SetItemBindState(nItemIndex, -1);
+	end;
 	-- Ho tro tan thu
 	if	((GetLevel() == 1) and CFG_HoTroTanThu == 1)	then
 		HoTroTanThu()
