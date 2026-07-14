@@ -68,7 +68,7 @@ function execCreateChar(self, simInstance, tbNpc, isNew, goX32, goY32)
 			name = tbNpc.hardsetName     
 		end
 
-        local _spawnLv = (tbNpc.level and tbNpc.level >= 1 and tbNpc.level <= 119) and tbNpc.level or 95
+        local _spawnLv = (tbNpc.level and tbNpc.level >= 1 and tbNpc.level <= 200) and tbNpc.level or GetTop1PlayerLevel()
         nNpcIndex = AddNpcEx(tbNpc.nNpcId, _spawnLv, tbNpc.series, nMapIndex, tX32, tY32, 1, name, 0)
 
         if nNpcIndex > 0 then
