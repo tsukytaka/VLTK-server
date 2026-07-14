@@ -4,7 +4,7 @@ ThoiGianOpenStr = "10H H«m Nay 16-04-2022"
 
 --== Settings May Chu ==--
 CFG_HoTroTanThu	=	1
-Level_KhoiTao	= 1	-- cap do ho tro tan thu khi tao nhan vat moi
+Level_KhoiTao   = 60	-- cap do ho tro tan thu khi tao nhan vat moi
 Level_DaTau	= 90	-- cap do co the nhan nhiem vu
 SLNV_DaTau	= 40	-- So luong nhiem vu gioi han moi ngay
 Loai_NV_Muon_Nhan = {2} -- 0 = Tat (random binh thuong) 1 = Tim manh Son Ha Xa Tac, 2 = Tim/Mua vat pham, 3 = Tim/Xem vat pham co thuoc tinh  4 = Tim ban do (train quai rot Than Bi Do Chi/Mat Chi) 5 = Nang cap diem kinh nghiem, danh vong, phuc duyen ,tong kim..v..v..
