@@ -234,8 +234,8 @@ function joinMonphaiTanthu(nIndex)
     SetTask(TaskId_137s, Value_137s)
     SetLastFactionNumber(FacNumber)
     
-    -- Chi nhan ky nang toi cap 60
-    for i = 10, 60, 10 do
+    -- Nhan day du ky nang den cap 60 (bao gom ca chieu Tran phai cap 60/70)
+    for i = 10, 70, 10 do
             AddFacSkill(FacNumber, i)
     end
     if DoClearPropCore then DoClearPropCore() end
