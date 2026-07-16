@@ -284,7 +284,7 @@ function select_stat_points(stat)
                     "Diem tiem nang hien co: " .. nPoints .. "\\n" ..
                     "Nhap so diem muon cong:"
                     
-    g_AskClientNumberEx(nPoints, nPoints, szTitle, {apply_stat_points, {stat}})
+    g_AskClientNumberEx(1, nPoints, szTitle, {apply_stat_points, {stat}})
 end
 
 function apply_stat_points(stat, nCount)
@@ -380,7 +380,7 @@ function select_skill_points(skillId, curLvl, maxLvl)
                     "Diem ky nang hien co: " .. nPoints .. "\\n" ..
                     "Nhap so diem muon cong (Toi da: " .. limit .. "):"
                     
-    g_AskClientNumberEx(limit, limit, szTitle, {apply_skill_points, {skillId, curLvl, maxAddable}})
+    g_AskClientNumberEx(1, limit, szTitle, {apply_skill_points, {skillId, curLvl, maxAddable}})
 end
 
 function apply_skill_points(skillId, curLvl, maxAddable, nCount)
