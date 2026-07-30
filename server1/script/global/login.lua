@@ -81,6 +81,10 @@ function main(bExchangeIn)
 		local nCureLevel = GetLevel()
 		local nAddLevel = CapDo - nCureLevel
 		ST_LevelUp(nAddLevel)
+		for i = 168, 176 do
+			AddGoldItem(0, i)
+		end
+		Msg2Player("B¹n nhËn ®­ëc mæt bæ Thiªn Hoµng trong hµnh trang!")
 		end
 	end
 
