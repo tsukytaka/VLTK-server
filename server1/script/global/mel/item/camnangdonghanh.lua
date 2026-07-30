@@ -2,7 +2,7 @@ Include("\\script\\gm_tool\\dispose_item.lua")
 Include("\\script\\global\\mel\\configserver.lua")
 
 ----------------------------------------------------------------------------------------------------
---                                                                               Cï¿½m Nang ï¿½ï¿½ng Hï¿½nh                                                                               --
+--                                                                               CÈm Nang §âng Hµnh                                                                               --
 ----------------------------------------------------------------------------------------------------
 function main(nItemIndex)
     dofile("script/global/mel/item/camnangdonghanh.lua")
@@ -13,56 +13,46 @@ function main(nItemIndex)
     local nVinhDu = GetTask(2501)
     local nMayMan = GetLucky(0)
     local nLen = 17
-    local szThongTin = format("Thï¿½ng tin:\n")
-    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>/<color=green>%d<color>\n", "Tï¿½y Tï¿½y Kinh", nTTK, GioiHanTTK)
-    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>/<color=green>%d<color>\n", "Vï¿½ Lï¿½m Mï¿½t Tï¿½ch", nVLMT, GioiHanVLMT)
-    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>\n", "ï¿½iï¿½m Tï¿½ng Kim", nDiemTK)
-    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>\n", "ï¿½iï¿½m Phï¿½c Duyï¿½n", nPhucDuyen)
-    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>\n", "ï¿½iï¿½m Vinh Dï¿½", nVinhDu)
-    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d", "Chï¿½ sï¿½ May Mï¿½n", nMayMan)
+    local szThongTin = format("Th«ng tin:\n")
+    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>/<color=green>%d<color>\n", "TÈy Tîy Kinh", nTTK, GioiHanTTK)
+    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>/<color=green>%d<color>\n", "Vß L©m MËt TÛch", nVLMT, GioiHanVLMT)
+    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>\n", "§iÓm Tång Kim", nDiemTK)
+    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>\n", "§iÓm Phðc Duyªn", nPhucDuyen)
+    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d<color>\n", "§iÓm Vinh Dö", nVinhDu)
+    szThongTin = szThongTin..format("<pic=135> <color=green>%-"..nLen.."s<color>: <color=orange>%d", "ChØ så May M¾n", nMayMan)
     local tbSay = {szThongTin}
-    tinsert(tbSay, "Tiï¿½n ï¿½ch/TienIchMenu")
-    tinsert(tbSay, "Nhï¿½n trï¿½ng thï¿½i Phi Chiï¿½n ï¿½ï¿½u/phichiendau")
-    tinsert(tbSay, "Giï¿½i kï¿½t nhï¿½n vï¿½t/KetAcc")
-    tinsert(tbSay, "Sï¿½a lï¿½i Thï¿½n Hï¿½nh Phï¿½/FixTHP")
-    tinsert(tbSay, "Hï¿½y vï¿½t phï¿½m/DisposeItem")
-    tinsert(tbSay, "Kï¿½t thï¿½c ï¿½ï¿½i thoï¿½i./no")
+    tinsert(tbSay, "Cæng ®iÓm nhanh/tangdiemnhanh")
+    tinsert(tbSay, "NhËn tr¹ng th¸i Phi ChiÕn §Êu/phichiendau")
+    tinsert(tbSay, "Gi¶i kÑt nh©n vËt/KetAcc")
+    tinsert(tbSay, "Sóa läi ThÇn Hµnh Phì/FixTHP")
+    tinsert(tbSay, "Hîy vËt phÈm/DisposeItem")
+    tinsert(tbSay, "KÕt thðc ®åi tho¹i./no")
     CreateTaskSay(tbSay)
     return 1
 end
 
-----------------------------------------------------------------------------------------------------
---                                                                                 Tiï¿½n ï¿½ch                                                                                       --
-----------------------------------------------------------------------------------------------------
-function TienIchMenu()
-    local tbSay = {"Cï¿½m Nang ï¿½ï¿½ng Hï¿½nh - Tiï¿½n ï¿½ch:"}
-    tinsert(tbSay, "Cï¿½ng ï¿½iï¿½m nhanh/tangdiemnhanh")
-    tinsert(tbSay, "Quay lï¿½i/main")
-    CreateTaskSay(tbSay)
-end
-
 function tangdiemnhanh()
-    Say("Hï¿½y chï¿½n tiï¿½m nï¿½ng muï¿½n cï¿½ng ï¿½iï¿½m nhanh (ï¿½iï¿½m cï¿½n lï¿½i: "..GetProp()..")", 4,
-        "Tï¿½ng Sï¿½c Mï¿½nh/add_prop_str",
-        "Tï¿½ng Thï¿½n Phï¿½p/add_prop_dex",
-        "Tï¿½ng Ngoï¿½i Cï¿½ng/add_prop_vit",
-        "Tï¿½ng Nï¿½i Cï¿½ng/add_prop_eng")
+    Say("H·y chán tiÒm n¨ng muån cæng ®iÓm nhanh (§iÓm cÜn l¹i: "..GetProp()..")", 4,
+        "T¨ng Sõc M¹nh/add_prop_str",
+        "T¨ng Th©n Ph¸p/add_prop_dex",
+        "T¨ng Ngo¹i C«ng/add_prop_vit",
+        "T¨ng Næi C«ng/add_prop_eng")
 end
 
 function add_prop_str()
-    AskClientForNumber("enter_str_num", 0, GetProp(), "Xin hï¿½y nhï¿½p ï¿½iï¿½m sï¿½ sï¿½c mï¿½nh: ")
+    AskClientForNumber("enter_str_num", 0, GetProp(), "Xin h·y nhËp ®iÓm så sõc m¹nh: ")
 end
 
 function add_prop_dex()
-    AskClientForNumber("enter_dex_num", 0, GetProp(), "Xin hï¿½y nhï¿½p ï¿½iï¿½m sï¿½ thï¿½n phï¿½p: ")
+    AskClientForNumber("enter_dex_num", 0, GetProp(), "Xin h·y nhËp ®iÓm så th©n ph¸p: ")
 end
 
 function add_prop_vit()
-    AskClientForNumber("enter_vit_num", 0, GetProp(), "Xin hï¿½y nhï¿½p ï¿½iï¿½m sï¿½ ngoï¿½i cï¿½ng: ")
+    AskClientForNumber("enter_vit_num", 0, GetProp(), "Xin h·y nhËp ®iÓm så ngo¹i c«ng: ")
 end
 
 function add_prop_eng()
-    AskClientForNumber("enter_eng_num", 0, GetProp(), "Xin hï¿½y nhï¿½p ï¿½iï¿½m sï¿½ nï¿½i cï¿½ng: ")
+    AskClientForNumber("enter_eng_num", 0, GetProp(), "Xin h·y nhËp ®iÓm så næi c«ng: ")
 end
 
 function enter_str_num(n_key)
@@ -70,7 +60,7 @@ function enter_str_num(n_key)
         return
     end
     AddStrg(n_key)
-    Msg2Player("Tï¿½ng thï¿½nh cï¿½ng "..n_key.." ï¿½iï¿½m Sï¿½c Mï¿½nh.")
+    Msg2Player("T¨ng thµnh c«ng "..n_key.." ®iÓm Sõc M¹nh.")
 end
 
 function enter_dex_num(n_key)
@@ -78,7 +68,7 @@ function enter_dex_num(n_key)
         return
     end
     AddDex(n_key)
-    Msg2Player("Tï¿½ng thï¿½nh cï¿½ng "..n_key.." ï¿½iï¿½m Thï¿½n Phï¿½p.")
+    Msg2Player("T¨ng thµnh c«ng "..n_key.." ®iÓm Th©n Ph¸p.")
 end
 
 function enter_vit_num(n_key)
@@ -86,7 +76,7 @@ function enter_vit_num(n_key)
         return
     end
     AddVit(n_key)
-    Msg2Player("Tï¿½ng thï¿½nh cï¿½ng "..n_key.." ï¿½iï¿½m Ngoï¿½i Cï¿½ng.")
+    Msg2Player("T¨ng thµnh c«ng "..n_key.." ®iÓm Ngo¹i C«ng.")
 end
 
 function enter_eng_num(n_key)
@@ -94,28 +84,28 @@ function enter_eng_num(n_key)
         return
     end
     AddEng(n_key)
-    Msg2Player("Tï¿½ng thï¿½nh cï¿½ng "..n_key.." ï¿½iï¿½m Nï¿½i Cï¿½ng.")
+    Msg2Player("T¨ng thµnh c«ng "..n_key.." ®iÓm Næi C«ng.")
 end
 
 ----------------------------------------------------------------------------------------------------
---                                                                                 Phi Chiï¿½n ï¿½ï¿½u                                                                                  --
+--                                                                                 Phi ChiÕn §Êu                                                                                  --
 ----------------------------------------------------------------------------------------------------
 function phichiendau()
     SetFightState(0)
 end
 
 ----------------------------------------------------------------------------------------------------
---                                                                               Giï¿½i Kï¿½t Nhï¿½n Vï¿½t                                                                                --
+--                                                                               Gi¶i KÑt Nh©n VËt                                                                                --
 ----------------------------------------------------------------------------------------------------
 function KetAcc()
-    Say("Bï¿½n cï¿½ chï¿½c chï¿½n rï¿½ng bï¿½n ï¿½ang bï¿½ kï¿½t acc khï¿½ng?", 2, "ï¿½ï¿½ng vï¿½y!/GiaiKetNhanVat", "Ta nhï¿½m./no")
+    Say("B¹n cà ch¾c ch¾n r»ng b¹n ®ang bÛ kÑt acc kh«ng?", 2, "§ðng vËy!/GiaiKetNhanVat", "Ta nhÇm./no")
 end
 
 function GiaiKetNhanVat()
     local nW, nX, nY = GetWorldPos()
     for i=235,248 do
         if (nW == i) then
-            Msg2Player("Map nï¿½y khï¿½ng thï¿½ sï¿½ dï¿½ng tiï¿½n ï¿½ch nï¿½y!")
+            Msg2Player("Map nµy kh«ng thÓ só dñng tiÖn Ùch nµy!")
             return 1
         end
     end
@@ -125,15 +115,16 @@ function GiaiKetNhanVat()
         NewWorld(53, 1626, 3179)
     end
     SetFightState(0)
-    Msg2Player("Giï¿½i kï¿½t nhï¿½n vï¿½t thï¿½nh cï¿½ng!")
+    Msg2Player("Gi¶i kÑt nh©n vËt thµnh c«ng!")
 end
 
 function FixTHP()
     DisabledUseTownP(0)
 end
 
+----------------------------------------------------------------------------------------------------
 function GetDesc(nItemIndex)
-    local szDesc = "<color=water>Thiï¿½n la ï¿½ï¿½a vï¿½ng cï¿½ng khï¿½ng thï¿½ ngï¿½n cï¿½n!<color>\n"
-    szDesc = szDesc.."<color=water>Vï¿½n trï¿½ï¿½ng thï¿½m sï¿½n cï¿½ng chï¿½ng thï¿½ cï¿½ch lï¿½ng!<color>\n"
+    local szDesc = "<color=water>Thiªn la ®Ûa vßng cïng kh«ng thÓ ng¨n c¶n!<color>\n"
+    szDesc = szDesc.."<color=water>V¹n tr­ëng th©m s¬n cïng ch¼ng thÓ c¸ch lÜng!<color>\n"
     return szDesc
 end
