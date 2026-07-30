@@ -77,7 +77,7 @@ function go()
 
 	-- Hç trî Kü N¨ng 10-60 khi gia nhËp m«n ph¸i
 	if (HoTroKyNangGiaNhapPhai == 1) then
-		add_em(70)
+		add_em(90)
 	else
 		add_em(10)
 	end

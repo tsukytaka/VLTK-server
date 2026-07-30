@@ -83,7 +83,7 @@ function go()
 
 	-- Hç trî Kü N¨ng 10-60 khi gia nhËp m«n ph¸i
 	if (HoTroKyNangGiaNhapPhai == 1) then
-		add_cy(70)
+		add_cy(90)
 	else
 		add_cy(10)
 	end

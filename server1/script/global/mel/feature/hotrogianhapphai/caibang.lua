@@ -88,7 +88,7 @@ function go()
 
 	-- Hç trî Kü N¨ng 10-60 khi gia nhËp m«n ph¸i
 	if (HoTroKyNangGiaNhapPhai == 1) then
-		add_gb(70)
+		add_gb(90)
 	else
 		add_gb(10)
 	end

@@ -43,7 +43,7 @@ SuDoThiep = 0 -- 0: §ãng, 1: Më
 
 ----------------------------------------------------------------------------------------------------
 -- Hç trî Kü N¨ng 10-60 khi gia nhËp m«n ph¸i
-HoTroKyNangGiaNhapPhai = 0 -- 0: §ãng, 1: Më
+HoTroKyNangGiaNhapPhai = 1 -- 0: §ãng, 1: Më
 
 -- Kü N¨ng 120
 HocKyNang120 = 1 -- 0: §ãng, 1: Më

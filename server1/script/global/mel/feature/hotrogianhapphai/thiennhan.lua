@@ -77,7 +77,7 @@ function yes()
 
 	-- Hç trî Kü N¨ng 10-60 khi gia nhËp m«n ph¸i
 	if (HoTroKyNangGiaNhapPhai == 1) then
-		add_tr(70)
+		add_tr(90)
 	else
 		add_tr(10)
 	end

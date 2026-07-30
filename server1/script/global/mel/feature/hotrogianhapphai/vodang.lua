@@ -78,7 +78,7 @@ function go()
 
 	-- Hç trî Kü N¨ng 10-60 khi gia nhËp m«n ph¸i
 	if (HoTroKyNangGiaNhapPhai == 1) then
-		add_wd(70)
+		add_wd(90)
 	else
 		add_wd(10)
 	end

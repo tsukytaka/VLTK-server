@@ -84,7 +84,7 @@ function go()
 
 	-- Hç trî Kü N¨ng 10-60 khi gia nhËp m«n ph¸i
 	if (HoTroKyNangGiaNhapPhai == 1) then
-		add_kl(70)
+		add_kl(90)
 	else
 		add_kl(10)
 	end
