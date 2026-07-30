@@ -1,0 +1,22 @@
+# Logs directories
+gateway/Logs/
+gateway/s3relay/Logs/
+gateway/s3relay/relay_log/
+server1/Logs/
+server1/itemexchange_setting/rolevalue_log/
+server1/rolevalueladder_setting/rolevalue_log/
+server1/dulieu/login/
+gateway/roleback/
+
+# Stats & data directories
+gateway/s3relay/Stat/
+gateway/s3relay/RelayRunData/
+gateway/s3relay/SaveData/
+server1/data/
+
+# Runtime log and temporary files
+*.log
+*.tmp
+*.dat
+server1/gameserver.log
+gateway/bishop_livetime.dat

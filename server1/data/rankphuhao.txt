@@ -1,5 +1,0 @@
-Ten              Tien          FNo Faction   
-111111           5000          -1            
-KhoDamTest       5000          -1            
-HoaThan          3800          6   gaibang   
-HoaThan1         0             -1            
