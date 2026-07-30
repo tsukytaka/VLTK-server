@@ -176,7 +176,7 @@ ObstaclePos =
 	"HiÖn ®ang ®­îc tÊn phong lµm <color=yellow><bclr=red>§¹i t­íng<bclr><color>!",
 	"B¹n ®­îc phong lµ <color=yellow>Nguyªn So¸i<color=>!"}
 	
-	tbRANKNAME={"<color=white>Binh SÜ<color>", "<color=0xa0ff>HiÖu óy<color>", "<color=0xff>Thèng LÜnh<color>", "<color=yellow>Phã T­íng<color.", "<color=yellow><bclr=red>§¹i T­íng<bclr><color>" , "<color=black>Nguyªn So¸i<color>"}
+	tbRANKNAME={"<color=white>Binh SÜ<color>", "<color=0xa0ff>HiÖu óy<color>", "<color=0xff>Thèng LÜnh<color>", "<color=yellow>Phã T­íng<color>", "<color=yellow><bclr=red>§¹i T­íng<bclr><color>" , "<color=black>Nguyªn So¸i<color>"}
 	
 	TITLE_BONUSRANK1 = 0		--³ÉÎªÏàÓ¦Í·ÏÎËùÐè»ý·ÖÖµ
 	TITLE_BONUSRANK2 = 10000
@@ -265,18 +265,27 @@ function CheckWin()
 	return nResult;
 end;
 --------------------------------------------------------------------------------------
+Ctc3tru_GW_TB_CITYWAR_ARRANGE = {{3,4, "Ph­îng T­êng"},{1,2, "Thµnh §«"},{2,3, "§¹i Lý"},{5,6, "BiÖn Kinh"},{4,5, "T­¬ng D­¬ng"},{0,1, "D­¬ng Ch©u"},{6,0, "L©m An"},}		
+
+function Ctc3tru_GetNameCityWarWithGameWin(ncan)
+	return Ctc3tru_GW_TB_CITYWAR_ARRANGE[ncan][3];
+end
+
 function GameWin(nWinner)
+	local Ctc3tru_GameCityName = Ctc3tru_GetNameCityWarWithGameWin(GetWarOfCity());
 	if (nWinner == 1) then 
-		str = "Chung cuéc" .. "phe thñ:"..GetGamerName(1).."Th¾ng lîi lín råi, tiÕp tôc duy tr×! "..GetGameCity().."Giµnh quyÒn thèng trÞ! TiÕp tôc duy tr× ";
+		str = "Chung cuéc" .. "phe thñ: "..GetGamerName(1).." Th¾ng lîi lín råi, tiÕp tôc duy tr× quyÒn thèng trÞ thµnh "..Ctc3tru_GameCityName..".";
+		str4SubW = "Chung cuéc" .. "phe thñ: <color=green>"..GetGamerName(1).."<color> Th¾ng lîi lín råi, tiÕp tôc duy tr× quyÒn thèng trÞ thµnh <color=yellow>"..Ctc3tru_GameCityName.."<color>.";
 		NotifyWarResult(GetWarOfCity(), 0)
 	else
-		str= "Chung cuéc" .. "phe c«ng:"..GetGamerName(2) .. "Thu ®­îc ®¹i th¾ng lîi! Th¾ng lîi råi! "..GetGameCity().."Giµnh quyÒn thèng trÞ! TiÕp tôc duy tr× ";
-	
+		str = "Chung cuéc" .. " phe c«ng: "..GetGamerName(2).." ®¹i th¾ng lîi!, Giµnh quyÒn thèng trÞ thµnh "..Ctc3tru_GameCityName..".";
+		str4SubW = "Chung cuéc" .. " phe c«ng: <color=green>"..GetGamerName(2).."<color> ®¹i th¾ng lîi!, Giµnh quyÒn thèng trÞ thµnh <color=yellow>"..Ctc3tru_GameCityName.."<color>.";
 		NotifyWarResult(GetWarOfCity(), 1)
 	end;
 	
 	WriteLog(date("%m%d-%H:%M")..str)
 	AddGlobalNews(str); 
+	Msg2SubWorld(str4SubW);
 	CloseMission(MISSIONID);
 end;
 

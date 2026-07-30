@@ -11,7 +11,7 @@ function main()
 	ndate = tonumber(GetLocalDate("%y%m%d"));
 	if (ndate ~= GetTask(TSK_Lingyao_Date)) then
 		SetTask(TSK_Lingyao_Date, ndate);
-		AddOwnExp(20000000);
+		AddOwnExp(1000000);
 	else
 		Say("Mét ngµy chØ cã thÓ sö dông ®­îc 1 Thiªn Niªn Linh D­îc", 0);
 		return 1

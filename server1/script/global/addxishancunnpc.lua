@@ -2,16 +2,16 @@
 -- ÀîÐÀ 2005-01-26
 
 xishancunnpc = {
-{306,1,4,175,1641,3191,0,"BÊt TØnh Nh©n SÜ",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_buxingrenshi.lua"},
-{242,1,4,175,1716,3124,0,"T©y S¬n TiÓu NhÞ",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_xishanxiaoer.lua"},
-{750,1,4,175,1624,3138,0,"NguyÖt L­îng Thá",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_yueliangtu.lua"},
-{749,1,4,175,1623,3139,0,"Kú Kú",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_tuziqiqi.lua"},
-{307,1,4,175,1620,3149,0,"C©u TÉn Thiªn h¹ §éc C« Kh¸ch",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_diaosou.lua"},
-{77,1,4,175,1701,3190,0,"Biªn Thµnh L·ng Tö",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_bianchenglangzi.lua"},
-{662,1,4,175,1698,3205,0,"Gi¸o LuyÖn TrÇn Lé Sinh",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_jiaolian.lua"},
-{181,1,4,175,1697,3110,0,"VÜ ChØ CÇm Ma",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_weizhiqinmo.lua"},
-{135,1,4,175,1657,3208,0,"BÊt ThÞ Ng· ThÞ Phong",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_bushiwoshifeng.lua"},
-{133,1,4,175,1665,3214,0,"Thñy Tinh B×nh Qu¶",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_pingguo.lua"},
+	{306,1,4,175,1641,3191,0,"BÊt TØnh Nh©n SÜ",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_buxingrenshi.lua"},
+	{242,1,4,175,1716,3124,0,"T©y S¬n TiÓu NhÞ",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_xishanxiaoer.lua"},
+	{750,1,4,175,1624,3138,0,"NguyÖt L­îng Thá",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_yueliangtu.lua"},
+	{749,1,4,175,1623,3139,0,"Kú Kú",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_tuziqiqi.lua"},
+	{307,1,4,175,1620,3149,0,"C©u TÉn Thiªn h¹ §éc C« Kh¸ch",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_diaosou.lua"},
+	{77,1,4,175,1701,3190,0,"Biªn Thµnh L·ng Tö",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_bianchenglangzi.lua"},
+	{662,1,4,175,1698,3205,0,"Gi¸o LuyÖn TrÇn Lé Sinh",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_jiaolian.lua"},
+	{181,1,4,175,1697,3110,0,"VÜ ChØ CÇm Ma",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_weizhiqinmo.lua"},
+	{135,1,4,175,1657,3208,0,"BÊt ThÞ Ng· ThÞ Phong",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_bushiwoshifeng.lua"},
+	{133,1,4,175,1665,3214,0,"Thñy Tinh B×nh Qu¶",0,"\\script\\½­ÄÏÇø\\Î÷É½´å\\npc\\npc_pingguo.lua"},
 }
 
 function add_xishancunnpc(Tab2)

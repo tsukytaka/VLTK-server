@@ -1,36 +1,3 @@
--- Generate SimBot parameters by level (1 - 200)
-SIMBOT_STATS_BY_LEVEL = {}
-for lv = 1, 200 do
-    local atkSpeed = 10 + (lv - 1) * (200 - 10) / 199
-    local enforceHp = 50 + (lv - 1) * (1000 - 50) / 199
-    local maxHP = 100 + (lv - 1) * (20000 - 100) / 199
-
-    SIMBOT_STATS_BY_LEVEL[lv] = {
-        AtkSpeed = floor(atkSpeed),
-        EnforceHp = floor(enforceHp),
-        MaxHP = floor(maxHP)
-    }
-end
-
-function GetTop1PlayerLevel()
-    if Ladder_GetLadderInfo then
-        local szName, nLevel = Ladder_GetLadderInfo(1, 1)
-        if nLevel and nLevel > 0 then
-            if nLevel > 200 then return 200 end
-            if nLevel < 1 then return 1 end
-            return nLevel
-        end
-    end
-    return 95 -- default level
-end
-
-function GetSimBotStats(lv)
-    local level = lv or GetTop1PlayerLevel()
-    if level < 1 then level = 1 end
-    if level > 200 then level = 200 end
-    return SIMBOT_STATS_BY_LEVEL[level]
-end
-
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\config.lua")
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\libs\\index.lua")
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\components\\sim.movement.lua")
@@ -64,11 +31,10 @@ function SimCore:initCharConfig(config)
     config.rank = 1
     config.ngoaitrang = config.ngoaitrang or 0
     config.capHP = config.capHP or 1
-    config.level = config.level or GetTop1PlayerLevel()
+    config.level = config.level or 95
     config.isAttackable = config.isAttackable or 0
     if config.capHP and config.capHP ~= "auto" then
-        local stats = GetSimBotStats(config.level)
-        config.maxHP = stats.MaxHP * (config.capHP or 1)
+        config.maxHP = random(SIMBOT_HP_MIN or 60000, SIMBOT_HP_MAX or 120000)  
     end
     config.parentAppointPos = {0, 0}
     config.walkMode = config.walkMode or "random"
@@ -446,7 +412,7 @@ function SimPartyFollow(simInstance, tbNpc)
             else
                 local _cd = SimBotCastDist(tbNpc)
                 local _td = GetDistanceRadius(myX, myY, tX, tY)
-                if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end
+                if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, 95) end
                 
                 if IsAttackableCamp and GetNpcCurCamp and SetNpcCurCamp then
                     local _tc = GetNpcCurCamp(_tgt) or 0
@@ -469,11 +435,8 @@ function SimPartyFollow(simInstance, tbNpc)
                 elseif _td <= _cd and SimPickSkill and (BotDuelArm or BotDoSkill) and (not tbNpc.partyArmTick or tbNpc.partyArmTick <= tbNpc.tick_breath) then
                     local sk = SimPickSkill(tbNpc)  
                     if sk and sk[1] and sk[1] > 0 then
-                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end
-                        if SetNpcAtkSpeed then
-                            local stats = GetSimBotStats(tbNpc.level)
-                            SetNpcAtkSpeed(tbNpc.finalIndex, stats.AtkSpeed)
-                        end
+                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end
+                        if SetNpcAtkSpeed then SetNpcAtkSpeed(tbNpc.finalIndex, 250) end
                         tbNpc.partyArmTick = tbNpc.tick_breath + 1
                         if BotDuelArm then
                             BotDuelArm(tbNpc.finalIndex, _tgt, sk[1], sk[2] or 20) 
@@ -582,11 +545,8 @@ function SimDuelMove(simInstance, tbNpc)
                 if sk and sk[1] and sk[1] > 0 then
                     local _tn = PIdx2NpcIdx(pID)
                     if _tn and _tn > 0 then
-                        if SetNpcAtkSpeed then
-                            local stats = GetSimBotStats(tbNpc.level)
-                            SetNpcAtkSpeed(tbNpc.finalIndex, stats.AtkSpeed)
-                        end  
-                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end 
+                        if SetNpcAtkSpeed then SetNpcAtkSpeed(tbNpc.finalIndex, 250) end  
+                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end 
                         tbNpc.duelArmTick = tbNpc.tick_breath + 1  
                         if BotDuelArm then   
                             BotDuelArm(tbNpc.finalIndex, _tn, sk[1], sk[2] or 20)   
@@ -681,7 +641,7 @@ function SimBotDuelMove(simInstance, tbNpc)
     local myY = floor(ny32 / 32)
     local dist = GetDistanceRadius(myX, myY, tX, tY)
     local _castDist = SimBotCastDist(tbNpc)
-    if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end  
+    if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, 95) end  
     tbNpc.isFighting = 1; tbNpc.botFighting = 1   
     if SetNpcCombat and (not tbNpc.botCombatTick or tbNpc.botCombatTick <= tbNpc.tick_breath) then
         SetNpcCombat(tbNpc.finalIndex, 1, tbNpc.skillCastBua and tbNpc.skillCastBua[1] or 0)   
@@ -712,11 +672,8 @@ function SimBotDuelMove(simInstance, tbNpc)
     if _inBandBV and NpcCastSkill and SimPickSkill and (not tbNpc.botCastTick or tbNpc.botCastTick <= tbNpc.tick_breath) then
         local sk = SimPickSkill(tbNpc, 1)  
         if sk and sk[1] and sk[1] > 0 then
-            if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end   
-            if SetNpcAtkSpeed then
-                local stats = GetSimBotStats(tbNpc.level)
-                SetNpcAtkSpeed(tbNpc.finalIndex, stats.AtkSpeed)
-            end
+            if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end   
+            if SetNpcAtkSpeed then SetNpcAtkSpeed(tbNpc.finalIndex, 250) end
             local _gd = GetNpcDoing and GetNpcDoing(tbNpc.finalIndex) or 1   
             if _gd ~= 6 and _gd ~= 7 and BotDoSkill then BotDoSkill(tbNpc.finalIndex, sk[1], sk[2] or 20, tIdx) end  
             tbNpc.botCastTick = tbNpc.tick_breath + 1   
@@ -797,7 +754,7 @@ function SimCore:OnTimer(tbNpc, rate)
                                 local _dn = 12  
                                 local _destX = _bx + floor(_dx * _dn / _dd)
                                 local _destY = _by + floor(_dy * _dn / _dd)
-                                if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end          
+                                if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end          
                                 local _dr = BotDashTo(tbNpc.finalIndex, _destX, _destY, 20)
                                 if _dr and _dr > 0 then tbNpc.dashUntil = tbNpc.tick_breath + 2*18/REFRESH_RATE end   
                             end
@@ -821,8 +778,7 @@ function SimCore:OnTimer(tbNpc, rate)
                     elseif _cl < _ml * 0.9 then
                         if not tbNpc.healStartTick then tbNpc.healStartTick = tbNpc.tick_breath end  
                         if tbNpc.tick_breath < tbNpc.healStartTick + 40*18/REFRESH_RATE then   
-                            local stats = GetSimBotStats(tbNpc.level)
-                            EnforceBotHp(tbNpc.finalIndex, stats.EnforceHp)   
+                            EnforceBotHp(tbNpc.finalIndex, 350)   
                         end
                         
                     end

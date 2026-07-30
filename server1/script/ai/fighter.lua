@@ -32,7 +32,7 @@ function main()
 
 	--Í¨ÖªÊ£ÓàÊ±¼ä
 	if ( mod(ai_totaltime,  AI_REPORTTIME) == 0 ) then 
-		Sys_Msg2Player("Thêi gian tù ®éng ®¸nh qu¸i cßn ".. floor(AI_GetRestTime() / (60 * 18)).."phót" );
+		Sys_Msg2Player("Thêi gian tù ®éng ®¸nh qu¸i cßn ".. floor(AI_GetRestTime() / (60 * 18)).." phót" );
 	end
 
 	--Ã¿¸ôÒ»¶¨Ê±¼äÖ´ĞĞÒ»´ÎÓÒ¼ü¼¼ÄÜ£¬±ÈÈç¸¨Öú¼¼ÄÜ

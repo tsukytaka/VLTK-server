@@ -95,7 +95,7 @@ function CallBoss( lingpai  )
 			return 1;
 		end
 		local equit_index=random(159,167);--随机定国安邦
-		AddGoldItem(0,equit_index);
+		--AddGoldItem(0,equit_index);
 		for i=1,5 do
 			summonBoss(i);
 		end

@@ -519,7 +519,7 @@ boss019	NormalNpc	spr\npcres\boss\boss019
 boss022	NormalNpc	spr\npcres\boss\boss022																
 boss023	NormalNpc	spr\npcres\boss\boss023																
 boss024	NormalNpc	spr\npcres\boss\boss024																
-passerby201	NormalNpc	spr\skill\gongcheng																
+passerby201 	NormalNpc	spr\skill\gongcheng																
 boss010	NormalNpc	spr\npcres\boss\boss010																
 passerby202	NormalNpc	spr\obj\box																
 boss016	NormalNpc	spr\npcres\boss\boss016																
@@ -790,7 +790,7 @@ passerby336	NormalNpc	spr\npcres\passerby\passerby336
 passerby337	NormalNpc	spr\npcres\passerby\passerby337																
 passerby338	NormalNpc	spr\npcres\passerby\passerby338																
 passerby339	NormalNpc	spr\npcres\passerby\passerby339																
-yanhua	NormalNpc	spr\skill\²¹³ä																
+yanhua	NormalNpc	\spr\skill\²¹³ä																
 passerby_wulin	NormalNpc	spr\npcres\passerby\passerby_wulin																
 passerby_mengzhu	NormalNpc	spr\npcres\passerby\passerby_wulin																
 passerby_jianfeng	NormalNpc	spr\npcres\passerby\passerby_jianfeng																
@@ -956,7 +956,7 @@ boss141	NormalNpc	spr\npcres\boss\boss141
 boss142	NormalNpc	spr\npcres\boss\boss142																
 boss115	NormalNpc	spr\npcres\boss\boss115																
 passerby382	NormalNpc	spr\npcres\passerby\passerby382																
-passerby383	NormalNpc	spr\npcres\passerby\passerby383															
+passerby383	NormalNpc	spr\npcres\passerby\passerby383																
 passerby384	NormalNpc	spr\npcres\passerby\passerby384																
 passerby385	NormalNpc	spr\npcres\passerby\passerby385																
 passerby386	NormalNpc	spr\npcres\passerby\passerby386																
@@ -986,3 +986,6 @@ passerby389_huo	NormalNpc	spr\item\songjin
 passerby389_tu	NormalNpc	spr\item\songjin																
 passerby389	NormalNpc	spr\npcres\passerby\passerby389																
 passerby390	NormalNpc	spr\npcres\passerby\passerby390																
+passerby394	NormalNpc	spr\npcres\passerby\passerby394																
+passerby395	NormalNpc	spr\npcres\passerby\passerby395																
+passerby397	NormalNpc	spr\npcres\passerby\passerby397																

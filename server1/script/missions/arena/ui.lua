@@ -16,3 +16,4 @@ function signup_arean()
 	
 	ScriptProtocol:SendData("emSCRIPT_PROTOCOL_SIGNUP_AREAN", 0)
 end
+

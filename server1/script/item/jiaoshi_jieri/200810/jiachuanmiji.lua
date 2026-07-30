@@ -25,9 +25,9 @@ local tbAwardList =
 		{szName="Hi÷p CËt Thi’t Huy’t Sam", nQuality=1, nRate=0.1, tbProp={0, 186}},
 		{szName="Hi÷p CËt ßan T©m GiÌi", nQuality=1, nRate=0.1, tbProp={0, 188}},
 		{szName="Hi÷p CËt ßa T◊nh Hoµn", nQuality=1, nRate=0.5, tbProp={0, 187}},
-		{szName="Huy“n tinh kho∏ng thπch c p 3", nRate=5, tbProp={6, 1, 147, 3, 0, 0}},
-		{szName="Huy“n tinh kho∏ng thπch c p 4", nRate=3, tbProp={6, 1, 147, 4, 0, 0}},
-		{szName="Huy“n tinh kho∏ng thπch c p 5", nRate=2, tbProp={6, 1, 147, 5, 0, 0}},
+		{szName="Huy“n tinh kho∏ng thπch c p 2", nRate=5, tbProp={6, 1, 147, 2, 0, 0}},
+		{szName="Huy“n tinh kho∏ng thπch c p 3", nRate=3, tbProp={6, 1, 147, 3, 0, 0}},
+		{szName="Huy“n tinh kho∏ng thπch c p 4", nRate=2, tbProp={6, 1, 147, 4, 0, 0}},
 		{szName="V‚ L©m MÀt Tﬁch", nRate=0.1, tbProp={6, 1, 26, 1, 0, 0}},
 		{szName="T»y TÒy Kinh", nRate=0.1, tbProp={6, 1, 22, 1, 0, 0}},
 	}

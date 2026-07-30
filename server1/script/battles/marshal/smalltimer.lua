@@ -126,20 +126,14 @@ function OnTimer()
 	end
 	
 	-- off dac tham
-	-- (DOI 2026-06-18) SPAWN BOT TRUOC KHAI CHIEN cho dep: 60 giay truoc RUNGAME_TIME.
-	--   Doi so 60 (giay) de bot xuat hien som/muon hon. Spawn qua som -> bot danh nhau truoc khai chien.
-	--   Chi Cao cap (lsf_level==3) nhu cu. == nen chi ban 1 lan dung luc.
-	if (lsf_level == 3 and t == 1) then
-		simTK:add_npc_simcity(BT_GetGameData(GAME_MAPID))
-	end
 	--if (t >= RUNGAME_TIME) then
 	--	AddTeTan(t)  -- ‘ˆº”ÀŒΩÃÿÃΩ
 		
 		if (t == RUNGAME_TIME) then --’˝ Ωø™’Ωµƒµ⁄“ª¥Œ¥•∑¢ ±£¨≤˙…˙’Ω∂∑Npcµƒ…˙≥…πÊ‘Ú ˝æ›
 			if lsf_level == 3 then
-				--sf_buildfightnpcdata() --tat NPC trong map TongKim
+				sf_buildfightnpcdata()
 				-- elseif lsf_level == 3 then				
-				-- (DOI) simTK:add_npc_simcity da chuyen len block PRE-SPAWN (truoc khai chien) o tren
+				simTK:add_npc_simcity(BT_GetGameData(GAME_MAPID))
 			end
 		else
 			--µΩø™’Ω∫Û∞Î–° ±ø¥À´∑Ω◊‹ª˝∑÷£¨ª˝∑÷–°µƒ“ª∑Ω≤˙…˙‘™Àß
@@ -157,7 +151,7 @@ function OnTimer()
 				end
 			end
 
-			if (t == BOSS_TIME2) then	--µΩ◊Ó∫Û20∑÷÷” ±Ω´¡Ì“ª∑Ωµƒ‘™Àß≤˙…˙
+			if (t == VANISHGAME_TIME) then	--µΩ◊Ó∫Û20∑÷÷” ±Ω´¡Ì“ª∑Ωµƒ‘™Àß≤˙…˙
 				mar = GetMissionV(MS_MARSHAL)
 				if (mar == 1) then
 					marshal_down(2)
@@ -173,8 +167,7 @@ function OnTimer()
 				if lsf_level == 3 then
 					sf_callfightnpc(t - RUNGAME_TIME, VANISHGAME_TIME - RUNGAME_TIME)	-- ≤˙…˙’Ω∂∑Npc
 				end
-				local bs, bj = 0, 0; if GetBotPoints then bs, bj = GetBotPoints(SubWorld) end
-				msstr = "C´ng c∏o: hi÷n giÍ tÊng t›ch lÚy cÒa 2 phe lµ "..(GetMissionV(MS_TOTALPOINT_S)+bs)..":"..(GetMissionV(MS_TOTALPOINT_J)+bj);
+				msstr = "C´ng c∏o: hi÷n giÍ tÊng t›ch lÚy cÒa 2 phe lµ "..GetMissionV(MS_TOTALPOINT_S)..":"..GetMissionV(MS_TOTALPOINT_J);
 				Msg2MSAll(MISSIONID, msstr)
 			end
 			
@@ -227,7 +220,6 @@ function marshal_down(camp)
 		x,y = bt_str2xydata(enterpos)	
 		npcidx_s = AddNpc(GetMissionV(MS_TRANK1_S + 6 - 1), GetMissionV(MS_RANK1LVL_S + 6 - 1), SubWorld, x*32, y*32, 1, "Nguy™n So∏i", 1)
 		SetNpcCurCamp(npcidx_s, 1)
-		if simTK then simTK:markMarshal(BT_GetGameData(GAME_MAPID), 1, x, y, npcidx_s) end   -- [2026-06-28] dang ky boss -> sim bot phe Tong ve thu
 		SetNpcDeathScript(npcidx_s, tabFILE_NPCDEATH[6])
 		Msg2MSAll(MISSIONID, "<color=0x00FFFF>TËng Kim chi’n b∏o: Nguy™n So∏i Æ∑ xu t hi÷n")
 	else
@@ -235,7 +227,6 @@ function marshal_down(camp)
 		x,y = bt_str2xydata(enterpos)	
 		npcidx_j = AddNpc(GetMissionV(MS_TRANK1_J + 6 - 1), GetMissionV(MS_RANK1LVL_J + 6 - 1), SubWorld, x*32, y*32, 1, "Nguy™n So∏i", 1)
 		SetNpcCurCamp(npcidx_j, 2)
-		if simTK then simTK:markMarshal(BT_GetGameData(GAME_MAPID), 2, x, y, npcidx_j) end   -- [2026-06-28] dang ky boss -> sim bot phe Kim ve thu
 		SetNpcDeathScript(npcidx_j, tabFILE_NPCDEATH[6])
 		Msg2MSAll(MISSIONID, "<color=0x9BFF9B>TËng Kim chi’n b∏o: Nguy™n So∏i Æ∑ xu t hi÷n")
 	end		

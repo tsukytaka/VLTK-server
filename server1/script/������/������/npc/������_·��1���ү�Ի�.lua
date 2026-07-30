@@ -1,6 +1,6 @@
--- ÄÏÔÀÕò¡¡Â·ÈË¡¡Åí´óÒ¯ (Ãû¾Ô±¼»ğÈÎÎñ)
--- 2004/4/17 Ãû¾Ô±¼»ğÈÎÎñ by fangjieying
+-- Bµnh §¹i Gia ë Nam Nh¹c TrÊn - Editor by AloneScript (Linh Em)
 
+Include("\\script\\lib\\alonelib.lua");
 Include("\\script\\global\\repute_head.lua")
 
 function main()
@@ -10,7 +10,7 @@ function main()
 --		SetTask(76,10)
 --		Msg2Player("Ì½²éÅí´óÒ¯Éí±ßµÄÂí")
 	if (Uworld76 == 10) then
-		Talk (1,"","«ng h·y xem con ngùa bªn c¹nh ta nµy. ")
+		Talk (1,"","¤ng h·y xem con ngùa bªn c¹nh ta nµy.")
 	elseif (Uworld76 == 20) then
 		SetTask(76,25)
 		Talk (3,"W76_get","Mµu l«ng thuÇn khiÕt, kú liÖt nh­ ho¶, bèn vã kháe m¹nh, ch¹y nhanh nh­ bay. §©y lµ con ngùa tuyÖt vêi. ","Ng­¬i thËt lµ cã m¾t nh×n, con B«n Háa nµy lµ cña mét tiÓu l·o ®Ö. Sau khi «ng Êy qua ®êi th× do ta thay thÕ ch¨m sãc. ChØ tiÕc lµ c¸ch ®©y kh«ng l©u, Ho¶ Nhi m¾c bÖnh nªn ngµy cµng yÕu, cÇn ph¶i nhanh chãng trŞ liÖu. ","¤i. §¸ng tiÕc t¹i h¹ kh«ng ph¶i lµ thÇy thuèc, kh«ng ®ñ søc gi¶i quyÕt. ")
@@ -28,12 +28,12 @@ function main()
 	elseif (Uworld76 == 70) then			-- ÈÎÎñÒÑ¾­Íê³É
 		Talk(1,"","Tuy B«n Ho¶ kh«ng biÕt nãi nh­ng ta nh×n thÊy nã rÊt nhí ng­¬i")
 	else
-		Talk(1,"","B¹n rÎ! Kh«ng cã viÖc g× th× nªn häc mét chót nghÒ nghiÖp, kh«ng nªn c¶ ngµy v¸c kiÕm chĞm chĞm giÕt giÕt. ")
+		Talk(1,"","B¹n trÎ! Kh«ng cã viÖc g× th× nªn häc mét chót nghÒ nghiÖp, kh«ng nªn c¶ ngµy v¸c kiÕm chĞm chĞm giÕt giÕt.")
 	end
 end
 
 function W76_get()
-	Say("Kh«ng cÇn tiÓu huynh ®Ö ra tay. L·o H¸n cã quen mét ng­êi, y thuËt tinh th«ng, chØ bã tay víi nh÷ng chøng bÖnh qu¸ nghiªm träng, l¹i kh«ng t×m ®­îc ng­êi ®¸ng tin cËy. Mong ng­¬icã thÓ gióp l·o mét tay!",2,"Kh«ng cã vÊn ®Ò g×, nhÊt ®Şnh sÏ lµm ®­îc /W76_get_yes","H«m nay ta cã viÖc, hay lµ ®Ó lÇn sau /no")
+	Say("<color=green>Bµnh §¹i Gia<color>: Kh«ng cÇn tiÓu huynh ®Ö ra tay. L·o H¸n cã quen mét ng­êi, y thuËt tinh th«ng, chØ bã tay víi nh÷ng chøng bÖnh qu¸ nghiªm träng, l¹i kh«ng t×m ®­îc ng­êi ®¸ng tin cËy. Mong ng­¬i cã thÓ gióp l·o mét tay!"..Note("banhdaigia_namnhactran"),2,"Kh«ng cã vÊn ®Ò g×, nhÊt ®Şnh sÏ lµm ®­îc /W76_get_yes","H«m nay ta cã viÖc, hay lµ ®Ó lÇn sau /no")
 end
 
 function W76_get_yes()                                        -- ÈÎÎñÆô¶¯

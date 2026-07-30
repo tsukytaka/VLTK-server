@@ -36,10 +36,10 @@ GËy Tróc Xanh 	4	33	\spr\item\questkey\taskobj033.spr	41	1	2	Tİn vËt gia nhËp §­
 GËy Tróc Tr¾ng 	4	34	\spr\item\questkey\taskobj034.spr	41	1	2	Tİn vËt gia nhËp §­êng m«n.	0	0
 GËy Tróc Tİm 	4	35	\spr\item\questkey\taskobj035.spr	41	1	2	Tİn vËt gia nhËp §­êng m«n.	0	0
 Ma Vò Ch©m	4	36	\spr\item\questkey\taskobj036.spr	41	1	2	§­êng M«n §éc M«n ¸m khİ.	0	0
-Kh¨n t¬ Qu¸i th¹ch trËn 1 	4	37	\spr\item\questkey\taskobj040.spr	41	1	1	Trªn kh¨n cã thªu ch÷ "ThiÖn" 	0	0
-Kh¨n t¬ Qu¸i th¹ch trËn 2 	4	38	\spr\item\questkey\taskobj038.spr	41	1	1	Trªn kh¨n cã thªu ch÷ "SÊm" 	0	0
-Kh¨n t¬ Qu¸i th¹ch trËn 3 	4	39	\spr\item\questkey\taskobj037.spr	41	1	1	Trªn kh¨n cã thªu ch÷ "Gi¶" 	0	0
-Kh¨n t¬ Qu¸i th¹ch trËn 4	4	40	\spr\item\questkey\taskobj039.spr	41	1	1	Trªn kh¨n cã thªu ch÷ "Tö" 	0	0
+Kh¨n t¬ Qu¸i th¹ch trËn 1 	4	37	\spr\item\questkey\taskobj040.spr	41	1	1	"Trªn kh¨n cã thªu ch÷ ""ThiÖn"" "	0	0
+Kh¨n t¬ Qu¸i th¹ch trËn 2 	4	38	\spr\item\questkey\taskobj038.spr	41	1	1	"Trªn kh¨n cã thªu ch÷ ""SÊm"" "	0	0
+Kh¨n t¬ Qu¸i th¹ch trËn 3 	4	39	\spr\item\questkey\taskobj037.spr	41	1	1	"Trªn kh¨n cã thªu ch÷ ""Gi¶"" "	0	0
+Kh¨n t¬ Qu¸i th¹ch trËn 4	4	40	\spr\item\questkey\taskobj039.spr	41	1	1	"Trªn kh¨n cã thªu ch÷ ""Tö"" "	0	0
 Kim H¹ng Khuyªn	4	41	\spr\item\questkey\taskobj041.spr	41	1	1	VËt phÈm nhiÖm vô 	0	0
 Háa Khİ Phæ 	4	42	\spr\item\questkey\taskobj042.spr	41	1	1	§­êng M«n MËt tŞch, vËt phÈm nhiÖm vô.	0	0
 Da Cãc	4	43	\spr\item\questkey\taskobj043.spr	41	1	1	VËt phÈm nhiÖm vô 	0	0
@@ -89,15 +89,15 @@ NhÖn	4	86	\spr\item\questkey\taskobj080.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 Méc H­¬ng §Ønh 	4	87	\spr\item\questkey\taskobj081.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 Ngäc San h« 	4	88	\spr\item\questkey\taskobj082.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 TrÊn gi¸o chi b¶o	4	89	\spr\item\questkey\taskobj083.spr	41	1	2	VËt phÈm nhiÖm vô  	0	0
-Bång Lai Xu©n	4	90	\spr\item\questkey\taskobj084.spr	41	1	1	Lµ "Tiªn Töu" ë §éng §×nh Hå, mïi vŞ th¬m nång, nuèt råi vÉn cßn tiÕc, rÊt thİch hîp víi c¸c vŞ ®¹i h¸n.	0	0
+Bång Lai Xu©n	4	90	\spr\item\questkey\taskobj084.spr	41	1	1	"Lµ ""Tiªn Töu"" ë §éng §×nh Hå, mïi vŞ th¬m nång, nuèt råi vÉn cßn tiÕc, rÊt thİch hîp víi c¸c vŞ ®¹i h¸n."	0	0
 Kª HuyÕt Th¹ch 	4	91	\spr\item\questkey\taskobj085.spr	41	1	1	Lo¹i b¶o th¹ch quı hiÕm, cã thÓ xua ®uæi tµ ma	0	0
-Mét l¸ cê GÊm	4	92	\spr\item\questkey\taskobj086.spr	41	1	2	Mét l¸ cê GÊm mµu hång, phİa trªn cã thªu 4 ch÷ Vµng "Yªu d©n nh­ con".	0	0
+Mét l¸ cê GÊm	4	92	\spr\item\questkey\taskobj086.spr	41	1	2	"Mét l¸ cê GÊm mµu hång, phİa trªn cã thªu 4 ch÷ Vµng ""Yªu d©n nh­ con""."	0	0
 Háa Tİch DŞch L©n PhiÕn	4	93	\spr\item\questkey\taskobj087.spr	41	1	1	Mét tÊm da cã thÓ dïng ®Ó may ¸o gi¸p.	0	0
 Lôc Thñ Quy	4	94	\spr\item\questkey\taskobj088.spr	41	1	1	Mét lo¹i ®éng vËt quı hiÕm, vá nã cøng cã thÓ thÓ sö dông nhiÒu ph­¬ng diÖn.	0	0
 Ngò s¾c th¹ch	4	95	\spr\item\questkey\taskobj089.spr	41	1	1	T­îng tr­ng cho h¹nh phóc, an b×nh. Ph¸t ra hµo quang ngò s¾c lung linh	0	0
 Thiªn V­¬ng di th­ 	4	96	\spr\item\questkey\taskobj090.spr	41	1	1	MËt th­ cña Thiªn V­¬ng Bang, ghi l¹i c¸c ph­¬ng thøc bè trËn	0	0
 Th­ tİn, MËt tİn, mËt hµm 	4	97	\spr\item\questkey\taskobj091.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
-Ch×a khãa 1 	4	98	\spr\item\questkey\taskobj092.spr	41	1	1	Dïng më b¶o r­¬ng lÊy "Háa Khİ Phæ ".	0	0
+Ch×a khãa 1 	4	98	\spr\item\questkey\taskobj092.spr	41	1	1	"Dïng më b¶o r­¬ng lÊy ""Háa Khİ Phæ ""."	0	0
 Ch×a khãa 2 	4	99	\spr\item\questkey\taskobj092-1.spr	41	1	1	Ch×a khãa ®Ó lªn tÇng 2 Tróc T¬ ®éng.	0	0
 Ch×a khãa 3 	4	100	\spr\item\questkey\taskobj092-2.spr	41	1	1	Ch×a khãa ®Ó lªn tÇng 3 Tróc T¬ ®éng 	0	0
 Ch×a khãa Thiªn V­¬ng bang	4	101	\spr\item\questkey\taskobj092-3.spr	41	1	1	Dïng ®Ó më b¶o r­¬ng.	0	0
@@ -115,7 +115,7 @@ Tö Môc Tóc 	4	112	\spr\item\questkey\taskobj099.spr	41	1	1	VËt phÈm nhiÖm vô  	1
 §Şa CÈm Th¶o 	4	113	\spr\item\questkey\taskobj100.spr	41	1	1	VËt phÈm nhiÖm vô  	1	0
 ThiÕn Th¶o 	4	114	\spr\item\questkey\taskobj101.spr	41	1	1	VËt phÈm nhiÖm vô  	1	0
 Hæ NhÜ Th¶o 	4	115	\spr\item\questkey\taskobj102.spr	41	1	1	VËt phÈm nhiÖm vô  	1	0
-Linh Chi	4	116	\spr\item\questkey\taskobj103.spr	41	1	1	Tiªn d­îc, t¨ng c­êng khİ lùc, cã thÓ c¶i tö hoµn sinh 	1	0
+Linh Chi	4	116	\spr\item\questkey\taskobj103.spr	41	1	1	"§©y lµ 1 lo¹i d­îc phÈm quı hiÕm rÊt cã İch cho chİ khİ, t¨ng trİ kh«n, uèng l©u ngµy th× sÏ trÎ m·i kh«ng giµ,  cã s½n c«ng n¨ng c¶i tö hoµn sinh, tªn lµ ""Tiªn Th¶o""."	1	0
 S¬n Lı Hång 	4	117	\spr\item\questkey\taskobj104.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 L­îng Ng©n Kho¸ng 	4	118	\spr\item\questkey\taskobj105.spr	41	1	1	Kho¸ng th¹ch dïng ®Ó v¸ g­¬ng ®ång	1	0
 §ïi gµ 	4	119	\spr\item\questkey\taskobj106.spr	41	1	1	VËt phÈm ®Ó dô Háa hå.	0	0
@@ -144,7 +144,7 @@ Bao Tİn th¹ch 	4	141	\spr\item\questkey\taskobj128.spr	41	1	1	VËt phÈm nhiÖm vô 
 X¹ H­¬ng 	4	142	\spr\item\questkey\taskobj129.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 Nh·n Kİnh V­¬ng M·ng Xµ 	4	143	\spr\item\questkey\taskobj130.spr	41	2	1	VËt phÈm nhiÖm vô  	0	0
 Hµ Thñ ¤ 	4	144	\spr\item\questkey\taskobj131.spr	41	1	1	Lo¹i d­îc liÖu, cã thÓ tr¸ng d­¬ng c­êng cèt, ®en tãc tr¾ng da..	0	0
-Thiªn V­¬ng lÖnh 	4	145	\spr\item\questkey\taskobj132.spr	41	1	1	Trªn kh¾c 2 ch÷ "Thiªn V­¬ng", lµ tİn vËt vña bang ph¸i.	0	0
+Thiªn V­¬ng lÖnh 	4	145	\spr\item\questkey\taskobj132.spr	41	1	1	"Trªn kh¾c 2 ch÷ ""Thiªn V­¬ng"", lµ tİn vËt vña bang ph¸i."	0	0
 Thá 	4	146	\spr\item\questkey\taskobj133.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 B¹ch Hoa Xµ ThiÖt th¶o	4	147	\spr\item\questkey\taskobj134.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 H¹t sen  	4	148	\spr\item\questkey\taskobj135.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
@@ -201,9 +201,9 @@ Ch×a khãa B¹c	4	198	\spr\item\questkey\taskobj092-6.spr	41	1	1	Mét chiÕc ch×a kh
 Trung nguyªn ®Şa ®å 	4	199	\spr\item\questkey\taskobj076.spr	41	2	1	VËt phÈm nhiÖm vô  	0	0
 Tói v¶i thø 8	4	200	\spr\item\questkey\taskobj077.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 Tói v¶i thø 2	4	201	\spr\item\questkey\taskobj077.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
-Ch×a khãa C¸i bang Bİnh 	4	202	\spr\item\questkey\taskobj092-6.spr	41	1	1	Ch×a khãa mËt ®éng C¸i bang, trªn kh¾c 1 ch÷  "Bİnh" 	0	0
-Ch×a khãa C¸i bang Gi¸p 	4	203	\spr\item\questkey\taskobj092-6.spr	41	1	1	Ch×a khãa mËt ®éng C¸i bang, trªn kh¾c 1 ch÷  "Gi¸p" 	0	0
-Ch×a khãa C¸i bang Êt 	4	204	\spr\item\questkey\taskobj092-6.spr	41	1	1	Ch×a khãa mËt ®éng C¸i bang, trªn kh¾c 1 ch÷  "Êt" 	0	0
+Ch×a khãa C¸i bang Bİnh 	4	202	\spr\item\questkey\taskobj092-6.spr	41	1	1	"Ch×a khãa mËt ®éng C¸i bang, trªn kh¾c 1 ch÷  ""Bİnh"" "	0	0
+Ch×a khãa C¸i bang Gi¸p 	4	203	\spr\item\questkey\taskobj092-6.spr	41	1	1	"Ch×a khãa mËt ®éng C¸i bang, trªn kh¾c 1 ch÷  ""Gi¸p"" "	0	0
+Ch×a khãa C¸i bang Êt 	4	204	\spr\item\questkey\taskobj092-6.spr	41	1	1	"Ch×a khãa mËt ®éng C¸i bang, trªn kh¾c 1 ch÷  ""Êt"" "	0	0
 Tói v¶i thø 9 	4	205	\spr\item\questkey\taskobj077.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 Tói v¶i thø 6	4	206	\spr\item\questkey\taskobj077.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 Tói v¶i thø 7 	4	207	\spr\item\questkey\taskobj077.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
@@ -229,17 +229,17 @@ Khæng t­íc vò thø 5 	4	226	\spr\item\questkey\taskobj082.spr	41	1	2	VËt phÈm nhi
 Khæng t­íc vò thø 1 	4	227	\spr\item\questkey\taskobj078.spr	41	1	2	VËt phÈm nhiÖm vô  	0	0
 ThŞt heo rõng	4	228	\spr\item\questkey\taskobj150.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
 Ph¸ ®ao	4	229	\spr\item\questkey\taskobj152.spr	41	1	2	Mét thanh ®ao bŞ g·y mÎ rÊt nham nhë 	0	0
-B¶o ®ao 	4	230	\spr\item\questkey\taskobj151.spr	41	1	2	Mét thanh ®ao ph¸t ra ¸nh s¸ng l¹nh, trªn kh¾c mét ch÷ "Bµnh" 	0	0
+B¶o ®ao 	4	230	\spr\item\questkey\taskobj151.spr	41	1	2	"Mét thanh ®ao ph¸t ra ¸nh s¸ng l¹nh, trªn kh¾c mét ch÷ ""Bµnh"" "	0	0
 D­¬ng Xu©n Linh Chi 	4	231	\spr\item\questkey\taskobj153.spr	41	1	1	Lo¹i d­îc th¶o chØ mäc ë nh÷ng vïng hoang d· 	0	0
 B¹ch TuyÕt B¸ch Hîp	4	232	\spr\item\questkey\taskobj103.spr	41	1	1	Lo¹i B¸ch hîp hoa ®Æc thï, rÊt hiÕm thÊy	0	0
 Giá c¬m 	4	233	\spr\item\questkey\taskobj154.spr	41	1	1	Lo¹i giá tre dïng ®ùng thøc ¨n	0	0
 NhÉn cña A Kinh, 	4	234	\spr\item\equip\ring\obj-ring09.spr	41	1	1	Lo¹i nhÉn ®eo b»ng M· N·o, ®iªu kh¶m rÊt tinh tÕ 	0	0
-Th­ v« danh 	4	235	\spr\item\questkey\taskobj091.spr	41	1	1	Th­ cña "V« Danh l·o gi¶" göi cho ch­ëng m«n hiÖn thêi	0	0
+Th­ v« danh 	4	235	\spr\item\questkey\taskobj091.spr	41	1	1	"Th­ cña ""V« Danh l·o gi¶"" göi cho ch­ëng m«n hiÖn thêi"	0	0
 Thİch s¸t mËt hµm	4	236	\spr\item\questkey\taskobj091.spr	41	1	1	MËt hµm thİch s¸t Tr­¬ng TuÊn cña Kim quèc	0	0
 Thóy Yªn CÊm ®Şa ph¸ch 	4	237	\spr\item\questkey\taskobj007.spr	41	1	1	VËt phÈm nhiÖm vô  	0	0
-Lam Thñy Tinh	4	238	\spr\item\questkey\baoshi_zhuanxu.spr	333	1	1	Lo¹i Thñy tinh cã thÓ lµm thay ®æi ngò hµnh cña trang bŞ 	1	0
-Tö Thñy Tinh	4	239	\spr\item\questkey\baoshi_xingtian.spr	333	1	1	Lo¹i Thñy tinh cã thÓ n©ng cÊp trang bŞ.  	1	0
-Lôc Thñy Tinh	4	240	\spr\item\questkey\baoshi_nvwa.spr	333	1	1	Lo¹i thñy tinh cã thÓ gióp thay ®æi c¸c thuéc tİnh cña trang bŞ 	1	0
+Lam Thñy Tinh	4	238	\spr\item\questkey\baoshi_zhuanxu.spr	333	1	1	Lo¹i Thñy tinh cã thÓ lµm thay ®æi ngò hµnh cña trang bŞ 	1	999
+Tö Thñy Tinh	4	239	\spr\item\questkey\baoshi_xingtian.spr	333	1	1	Lo¹i Thñy tinh cã thÓ n©ng cÊp trang bŞ.  	1	999
+Lôc Thñy Tinh	4	240	\spr\item\questkey\baoshi_nvwa.spr	333	1	1	Lo¹i thñy tinh cã thÓ gióp thay ®æi c¸c thuéc tİnh cña trang bŞ 	1	999
 Hoa s¬n  Anh hïng lÖnh	4	241	\spr\item\questkey\taskobj126.spr	41	1	1	Tİn vËt ®Ó tham gia Hoa s¬n  Anh Hïng héi 	0	0
 Bøc hµm th­ v« dông	4	242	\spr\item\questkey\taskobj075.spr	41	1	1	Bøc hµm th­ v« dông	0	0
 DŞch tr¹m hµm th­ 	4	243	\spr\item\questkey\taskobj075.spr	41	1	1	Hµm th­ tõ L©m An ®­a ®Õn Ph­îng T­êng	0	0
@@ -346,10 +346,10 @@ Kim Nguyªn b¶o	4	343	\spr\item\questkey\obj_item_cardg.spr	340	1	1	§¹i Nguyªn b¶
 Bao hîp hoan	4	344	\spr\item\questkey\obj_item_hehuan.spr	348	1	1	Bao hîp hoan	1	0
 Kh¨n Uyªn ¦¬ng	4	345	\spr\item\questkey\obj_item_yuanyang.spr	349	1	1	Kh¨n Uyªn ¦¬ng	1	0
 N¬ T×nh ı 	4	346	\spr\item\questkey\obj_item_qingyi.spr	350	1	1	N¬ T×nh ı 	1	0
-HuyÕt Hång Anh hïng lÖnh	4	347	\spr\item\questkey\obj_item_herokey1.spr	352	1	1	Tİn vËt ®Ó tham gia "Anh hïng héi".	1	0
-DiÖp Lôc Anh hïng lÖnh	4	348	\spr\item\questkey\obj_item_herokey2.spr	352	1	1	Tİn vËt ®Ó tham gia "Anh hïng héi".	1	0
-Tinh Hång Anh hïng lÖnh	4	349	\spr\item\questkey\obj_item_herokey3.spr	352	1	1	Tİn vËt ®Ó tham gia "Anh hïng héi".	1	0
-¸m Hoµng Anh hïng lÖnh	4	350	\spr\item\questkey\obj_item_herokey4.spr	352	1	1	Tİn vËt ®Ó tham gia "Anh hïng héi".	1	0
+HuyÕt Hång Anh hïng lÖnh	4	347	\spr\item\questkey\obj_item_herokey1.spr	352	1	1	"Tİn vËt ®Ó tham gia ""Anh hïng héi""."	1	0
+DiÖp Lôc Anh hïng lÖnh	4	348	\spr\item\questkey\obj_item_herokey2.spr	352	1	1	"Tİn vËt ®Ó tham gia ""Anh hïng héi""."	1	0
+Tinh Hång Anh hïng lÖnh	4	349	\spr\item\questkey\obj_item_herokey3.spr	352	1	1	"Tİn vËt ®Ó tham gia ""Anh hïng héi""."	1	0
+¸m Hoµng Anh hïng lÖnh	4	350	\spr\item\questkey\obj_item_herokey4.spr	352	1	1	"Tİn vËt ®Ó tham gia ""Anh hïng héi""."	1	0
 M¶nh b¶n ®å S¬n Hµ X· T¾c	4	351	\spr\item\questkey\obj_item_shanhe.spr	351	1	1	Ng­êi nµo cã toµn bé bøc ®Şa ®å nµy, néi trong vßng 3 n¨m, v¨n vâ sÏ v« ®Şch thiªn h¹.	1	0
 Ch×a khãa C¬ quan	4	352	\spr\item\questkey\taskobj092.spr	41	1	1	Ch×a khãa ®Ó më H¾c Lao trong Cæ D­¬ng ®éng.	0	0
 Tinh Hång B¶o Th¹ch	4	353	\spr\item\obj_item_red.spr	333	1	1	Mét viªn b¶o th¹ch thÇn bİ, ng­êi luyÖn vâ cã thÓ dïng ®Ó ®¶ th«ng kinh m¹ch.	1	0
@@ -373,16 +373,16 @@ R¨ng ¸nh ®iÖn	4	370	\spr\item\questkey\002.spr	41	1	1	Mét chiÕc r¨ng d· thó, s¾c
 N­íc nhiÔm phÌn	4	371	\spr\item\questkey\003.spr	41	1	1	Mét chiÕc b×nh chøa n­íc b»ng l­u ly	0	0
 C¸nh B¹ch v©n	4	372	\spr\item\questkey\005.spr	41	1	1	Mét cÆp c¸nh chim mÒm m¹i tr¾ng tinh	0	0
 KĞo s¾t	4	373	\spr\item\questkey\004.spr	41	1	1	Mét c©y kĞo th«, nhän vµ nÆng.	0	0
-C«ng chóa phñ lÖnh tiÔn	4	374	\spr\item\questkey\006.spr	41	1	1	Mét miÕng lÖnh tiÔn mµu vµng, trªn cã kh¾c mét ch÷ " LÖnh".	0	0
+C«ng chóa phñ lÖnh tiÔn	4	374	\spr\item\questkey\006.spr	41	1	1	"Mét miÕng lÖnh tiÔn mµu vµng, trªn cã kh¾c mét ch÷ "" LÖnh""."	0	0
 HuyÕt Dòng hoµn	4	375	\spr\item\questkey\007.spr	41	1	1	Mét viªn Chu Sa mµu ®á	0	0
-Kh¨n t¬ 	4	376	\spr\item\questkey\008.spr	41	1	1	Mét tÊm kh¨n t¬ mµu hång phÊn, thªu 1 ch÷ "Hµ"	0	0
+Kh¨n t¬ 	4	376	\spr\item\questkey\008.spr	41	1	1	"Mét lo¹i kh¨n lôa mµu hång, trªn kh¨n nµy cã thªu ch÷ ""Hµ""."	0	0
 §­êng M«n tuyÖt häc mËt tŞch 	4	377	\spr\item\questkey\009.spr	41	1	1	§­êng m«n TuyÖt häc mËt tŞch, ®¸ng tiÕc lµ b¹n xem nöa ngµy còng kh«ng hiÓu	0	0
 QuyÓn s¸ch bŞ lÊy trém	4	378	\spr\item\questkey\010.spr	41	1	1	Mét quyÓn s¸ch b×a b»ng B¹c	0	0
 Th­ cña §­êng BÊt NhiÔm	4	379	\spr\item\questkey\taskobj091.spr	41	1	1	Thu cña §­êng BÊt NhiÔm göi cho B¹ch C«ng tö 	0	0
 Th­ håi ©m cña B¹ch C«ng Tö 	4	380	\spr\item\questkey\taskobj091.spr	41	1	1	Thu cña B¹ch C«ng tö göi cho §­êng BÊt NhiÔm	0	0
 L«i Th­îc 	4	381	\spr\item\questkey\taskobj092-2.spr	41	1	1	Ch×a khãa cña L«i Bé Cuång Lang ®ang gi÷ 	0	0
 V©n Th­îc 	4	382	\spr\item\questkey\taskobj092-4.spr	41	1	1	Ch×a khãa cña V©n Bé s¬n  ¦ng ®ang gi÷ 	0	0
-ChØ dô cña Hoµng Nhan L­îng	4	383	\spr\item\questkey\taskobj075.spr	41	1	1	 Tõ Trung Nguyªn ®· bŞ B¹ch Doanh Doanh mª hoÆc <enter> ®©y lµ c¬ héi tèt ®Ó tiªu diÖt vâ §ang <enter>  	0	0
+ChØ dô cña Hoµng Nhan L­îng	4	383	\spr\item\questkey\taskobj075.spr	41	1	1	B¹ch c« n­¬ng mª hoÆc Tõ Trung Nguyªn, hiÖn nay néi bé cña Vâ §ang ®· lôc ®ôc bÊt hßa. <enter>Hi vong cè g¾ng n¾m v÷ng quyÒn lÖnh ®Ó dïng m­u h¹i thÇy trß, g©y lôc ®ôc néi bé Vâ §ang<enter>####§¹i Kim quèc Hoµn Nhan L­îng.	0	0
 Th­ giíi thiÖu cña L¹c Cöu Thiªn	4	384	\spr\item\questkey\taskobj075.spr	41	1	1	Th­ giíi thiÖu b¹n cña L¹c Cöu Thiªn	0	0
 Th­ cña V©n BÊt Tµ 	4	385	\spr\item\questkey\taskobj090.spr	41	1	1	Th­ cña V©n BÊt Tµ nhê b¹n göi cho §­êng D· 	0	0
 Th­ cña §­êng D· 	4	386	\spr\item\questkey\taskobj090.spr	41	1	1	Th­ cña §­êng D· nhê b¹n göi cho V©n BÊt Tµ 	0	0
@@ -399,10 +399,10 @@ L¸ b¸nh	4	396	\spr\item\questkey\taskobj396.spr	362	1	1	Lo¹i l¸ khi nÊu chİn cã 
 G¹o nÕp	4	397	\spr\item\questkey\taskobj397.spr	363	1	1	Lo¹i g¹o nÕp th­êng thÊy, cã thÓ dïng lµm B¸nh ch­ng	1	0
 ThŞt heo 	4	398	\spr\item\questkey\taskobj398.spr	364	1	1	ThŞt heo th«ng th­êng, cã thÓ dïng lµm nh©n B¸nh ch­ng 	1	0
 ThŞt heo	4	399	\spr\item\questkey\taskobj399.spr	365	1	1	ThŞt bß th«ng th­êng, cã thÓ dïng lµm nh©n B¸nh ch­ng	1	0
-M¶nh ch÷ H« 	4	400	\spr\item\questkey\hu.spr	41	1	1	1 m¶nh giÊy, trªn viÕt ch÷ "H«" 	1	0
-M¶nh ch÷ Liªn	4	401	\spr\item\questkey\lian.spr	41	1	1	1 m¶nh giÊy, trªn viÕt ch÷ "Liªn" 	1	0
-M¶nh ch÷ Tinh	4	402	\spr\item\questkey\xing.spr	41	1	1	1 m¶nh giÊy, trªn viÕt ch÷ "Tinh" 	1	0
-M¶nh ch÷ Kh«ng 	4	403	\spr\item\questkey\kong.spr	41	1	1	1 m¶nh giÊy, trªn viÕt ch÷ "Kh«ng" 	1	0
+M¶nh ch÷ H« 	4	400	\spr\item\questkey\hu.spr	41	1	1	"1 m¶nh giÊy, trªn viÕt ch÷ ""H«"" "	1	0
+M¶nh ch÷ Liªn	4	401	\spr\item\questkey\lian.spr	41	1	1	"1 m¶nh giÊy, trªn viÕt ch÷ ""Liªn"" "	1	0
+M¶nh ch÷ Tinh	4	402	\spr\item\questkey\xing.spr	41	1	1	"1 m¶nh giÊy, trªn viÕt ch÷ ""Tinh"" "	1	0
+M¶nh ch÷ Kh«ng 	4	403	\spr\item\questkey\kong.spr	41	1	1	"1 m¶nh giÊy, trªn viÕt ch÷ ""Kh«ng"" "	1	0
 KhuÊt Nguyªn MËt ph­¬ng	4	404	\spr\item\questkey\quyuanmifang.spr	368	1	1	MËt th­ cña T« thŞ ë Hå Ch©u ghi l¹i nh÷ng ph­¬ng ph¸p lµm B¸nh ch­ng bİ truyÒn	1	0
 G¹o nÕp may m¾n	4	405	\spr\item\questkey\taskobj397.spr	363	1	1	Chuyªn dïng ®Ó lµm B¸nh ch­ng may m¾n 	1	0
 L¨ng V­¬ng Th­îng §o¹n T¹o Tµn biªn	4	406	\spr\item\questkey\taskobj119.spr	341	1	1	MËt phæ chÕ t¹o th­¬ng,<enter>Cã thÓ dïng ®Ó t¨ng ®¼ng cÊp c¸c lo¹i th­¬ng.	1	0
@@ -413,26 +413,26 @@ LiÔu DiÖp To¸i Phong §ao. Tôy Thó biªn	4	410	\spr\item\questkey\taskobj119.spr	3
 HuyÒn NguyÖt ®ao Tö Kinh b¶o lôc 	4	411	\spr\item\questkey\taskobj119.spr	341	1	1	S¸ch d¹y thuËt rÌn ®ao do danh s­ ®êi §­êng HuyÒn NguyÖt Tö truyÒn l¹i,<enter> Cã thÓ dïng ®Ó t¨ng ®¼ng cÊp c¸c lo¹i §ao.	1	0
 Thiªn C¬ C«n ®å phæ 	4	412	\spr\item\questkey\taskobj119.spr	341	1	1	S¸ch d¹y thuËt chÕ t¹o c¸c lo¹i c«n,<enter> Cã thÓ dïng ®Ó t¨ng ®¼ng cÊp c¸c lo¹i C«n.	1	0
 ¸m Khİ Tæng phæ. QuyÓn 1	4	413	\spr\item\questkey\taskobj119.spr	341	1	1	Miªu t¶ c¸c ph­¬ng ph¸p chÕ t¹o phi tiªu,<enter> Cã thÓ dïng ®Ó t¨ng ®¼ng cÊp c¸c lo¹i Phi tiªu.	1	0
-Uyªn ¦¬ng ®ao. Khai Quang  biªn	4	414	\spr\item\questkey\taskobj119.spr	341	1	1	S¸ch d¹y thuËt chÕ t¹o sö dông Uyªn ­¬ng ®ao, ®­îc xem lµ "Vâ l©m chi b¶o",<enter> Cã thÓ dïng ®Ó t¨ng ®¼ng cÊp c¸c lo¹i Song ®ao.	1	0
+Uyªn ¦¬ng ®ao. Khai Quang  biªn	4	414	\spr\item\questkey\taskobj119.spr	341	1	1	"S¸ch d¹y thuËt chÕ t¹o sö dông Uyªn ­¬ng ®ao, ®­îc xem lµ ""Vâ l©m chi b¶o"",<enter> Cã thÓ dïng ®Ó t¨ng ®¼ng cÊp c¸c lo¹i Song ®ao."	1	0
 B¨ng Tµm V« Cùc T¬ 	4	415	\spr\item\questkey\bingcanwujisi.spr	371	1	1	Thiªn s¬n  B¨ng Tµm T¬, s¶n phÈm cùc hiÕm.<enter> cã thÓ dïng ®Ó t¨ng ®¼ng cÊp c¸c lo¹i y phôc, ¸o mò.	1	0
 Nam Minh Chi Tinh	4	416	\spr\item\questkey\nanmingzhijing.spr	372	1	1	Nh÷ng m¶nh thñy tinh cùc hiÕm, <enter> Cã thÓ lµm gi¶m ®¼ng cÊp y phôc, kh«i m·o	1	0
-TiÒn ®ång	4	417	\spr\item\tongqian.spr	373	1	1	Dïng ®Ó mua nh÷ng vËt phÈm ®Æc thï.	1	100
-Ch÷ "NguyÖt" 	4	418	\spr\item\questkey\zq_icon_005.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "NguyÖt".	1	0
-Ch÷ "Minh" 	4	419	\spr\item\questkey\zq_icon_006.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Minh".	1	0
-Ch÷ "Thu" 	4	420	\spr\item\questkey\zq_icon_007.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Thu" 	1	0
-Ch÷ "Ca" 	4	421	\spr\item\questkey\zq_icon_008.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Ca".	1	0
-Ch÷ "¶nh" 	4	422	\spr\item\questkey\zq_icon_009.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "¶nh" 	1	0
-Ch÷ "Cö"	4	423	\spr\item\questkey\zq_icon_010.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Cö".	1	0
-Ch÷ "Väng" 	4	424	\spr\item\questkey\zq_icon_011.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Väng" 	1	0
-Ch÷ "Nguyªn" 	4	425	\spr\item\questkey\zq_icon_012.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Nguyªn" 	1	0
-Ch÷ "Töu" 	4	426	\spr\item\questkey\zq_icon_013.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Töu" 	1	0
-Ch÷ "Thêi" 	4	427	\spr\item\questkey\zq_icon_014.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Thêi" 	1	0
-Ch÷ "Th¸i" 	4	428	\spr\item\questkey\zq_icon_015.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Th¸i".	1	0
-Ch÷ "Vò"	4	429	\spr\item\questkey\zq_icon_016.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Vò"	1	0
-Ch÷ "T¹i" 	4	430	\spr\item\questkey\zq_icon_017.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "T¹i".	1	0
-Ch÷ "Nh©n" 	4	431	\spr\item\questkey\zq_icon_018.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Nh©n".	1	0
-Ch÷ "T­"	4	432	\spr\item\questkey\zq_icon_019.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "T­".	1	0
-Ch÷ "Quyªn" 	4	433	\spr\item\questkey\zq_icon_020.spr	378	1	1	Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ "Quyªn".	1	0
+TiÒn ®ång	4	417	\spr\item\tongqian.spr	373	1	1	Dïng ®Ó mua nh÷ng vËt phÈm ®Æc thï.	1	999
+"Ch÷ ""NguyÖt"" "	4	418	\spr\item\questkey\zq_icon_005.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""NguyÖt""."	1	0
+"Ch÷ ""Minh"" "	4	419	\spr\item\questkey\zq_icon_006.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Minh""."	1	0
+"Ch÷ ""Thu"" "	4	420	\spr\item\questkey\zq_icon_007.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Thu"" "	1	0
+"Ch÷ ""Ca"" "	4	421	\spr\item\questkey\zq_icon_008.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Ca""."	1	0
+"Ch÷ ""¶nh"" "	4	422	\spr\item\questkey\zq_icon_009.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""¶nh"" "	1	0
+"Ch÷ ""Cö"""	4	423	\spr\item\questkey\zq_icon_010.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Cö""."	1	0
+"Ch÷ ""Väng"" "	4	424	\spr\item\questkey\zq_icon_011.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Väng"" "	1	0
+"Ch÷ ""Nguyªn"" "	4	425	\spr\item\questkey\zq_icon_012.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Nguyªn"" "	1	0
+"Ch÷ ""Töu"" "	4	426	\spr\item\questkey\zq_icon_013.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Töu"" "	1	0
+"Ch÷ ""Thêi"" "	4	427	\spr\item\questkey\zq_icon_014.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Thêi"" "	1	0
+"Ch÷ ""Th¸i"" "	4	428	\spr\item\questkey\zq_icon_015.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Th¸i""."	1	0
+"Ch÷ ""Vò"""	4	429	\spr\item\questkey\zq_icon_016.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Vò"""	1	0
+"Ch÷ ""T¹i"" "	4	430	\spr\item\questkey\zq_icon_017.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""T¹i""."	1	0
+"Ch÷ ""Nh©n"" "	4	431	\spr\item\questkey\zq_icon_018.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Nh©n""."	1	0
+"Ch÷ ""T­"""	4	432	\spr\item\questkey\zq_icon_019.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""T­""."	1	0
+"Ch÷ ""Quyªn"" "	4	433	\spr\item\questkey\zq_icon_020.spr	378	1	1	"Mét m¶nh giÊy trong tËp th¬ cæ, trªn cã ch÷ ""Quyªn""."	1	0
 ThiÖp G (Kim) 	4	434	\spr\item\questkey\Gj.spr	378	1	1	 [ (ThiÖp G thuéc tİnh Kim) ]	1	0
 ThiÖp G (Méc) 	4	435	\spr\item\questkey\Gm.spr	378	1	1	 [ (ThiÖp G thuéc tİnh Méc ) ]	1	0
 ThiÖp G (Thñy) 	4	436	\spr\item\questkey\Gs.spr	378	1	1	 [ (ThiÖp G thuéc tİnh Thñy ) ]	1	0
@@ -486,21 +486,21 @@ Tö Hoa B¨ng Tinh	4	483	\spr\item\christmas\high_purple.spr	333	1	1	Dïng ­¬m h¹t 
 Lôc Hoa B¨ng Tinh	4	484	\spr\item\christmas\high_green.spr	333	1	1	Dïng ­¬m h¹t Gi¸ng sinh ®Ó nhËn ®­îc h¹t Thñy Tinh. NÕu cã 1 bé 6 m¶nh kh¸c nhau sÏ luyÖn thµnh Hoµn Mü B¨ng Tinh  	1	100
 B¹ch Hoa B¨ng Tinh	4	485	\spr\item\christmas\high_white.spr	333	1	1	Dïng ­¬m h¹t Gi¸ng sinh ®Ó nhËn ®­îc h¹t Thñy Tinh. NÕu cã 1 bé 6 m¶nh kh¸c nhau sÏ luyÖn thµnh Hoµn Mü B¨ng Tinh  	1	100
 Hoµn Mü B¨ng Tinh	4	486	\spr\item\christmas\perfect.spr	333	1	1	Dïng ­¬m h¹t Gi¸ng sinh ®Ó nhËn ®­îc h¹t Hoµng Kim.	1	100
-H¹t Gi¸ng sinh 	4	487	\spr\item\christmas\seed_normal.spr	380	1	1	Nh÷ng h¹t "gi¸ng sinh" do «ng giµ N«el ®¸nh r¬i. Sau khi kÕt hîp víi B¨ng tinh sÏ mäc thµnh nh÷ng c©y th«ng N«el thÇn kú 	1	100
+H¹t Gi¸ng sinh 	4	487	\spr\item\christmas\seed_normal.spr	380	1	1	"Nh÷ng h¹t ""gi¸ng sinh"" do «ng giµ N«el ®¸nh r¬i. Sau khi kÕt hîp víi B¨ng tinh sÏ mäc thµnh nh÷ng c©y th«ng N«el thÇn kú "	1	100
 Ng©n phiÕu	4	488	\spr\item\questkey\yinpiao.spr	378	1	1	C«ng hiÖu kh«ng kĞm Kim Nguyªn B¶o.	1	0
-LÖnh bµi Phong L¨ng §é	4	489	\spr\item\questkey\006.spr	352	1	1	Tİn vËt ®Ó ®i Phong L¨ng §é.	1	0
-M¶nh Tµng B¶o §å 1	4	490	\spr\item\task\treasure1.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 2	4	491	\spr\item\task\treasure2.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 3	4	492	\spr\item\task\treasure3.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 4	4	493	\spr\item\task\treasure4.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 5	4	494	\spr\item\task\treasure5.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 6	4	495	\spr\item\task\treasure6.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 7	4	496	\spr\item\task\treasure7.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 8	4	497	\spr\item\task\treasure8.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 9	4	498	\spr\item\task\treasure9.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 10	4	499	\spr\item\task\treasure10.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 11	4	500	\spr\item\task\treasure11.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
-M¶nh Tµng B¶o §å 12	4	501	\spr\item\task\treasure12.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	0
+LÖnh bµi Phong L¨ng §é	4	489	\spr\item\questkey\006.spr	352	1	1	Nép cho NPC ë c¸c BÕn thuyÒn ®Ó ®i Phong L¨ng §é	1	999
+M¶nh Tµng B¶o §å 1	4	490	\spr\item\task\treasure1.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 2	4	491	\spr\item\task\treasure2.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 3	4	492	\spr\item\task\treasure3.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 4	4	493	\spr\item\task\treasure4.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 5	4	494	\spr\item\task\treasure5.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 6	4	495	\spr\item\task\treasure6.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 7	4	496	\spr\item\task\treasure7.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 8	4	497	\spr\item\task\treasure8.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 9	4	498	\spr\item\task\treasure9.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 10	4	499	\spr\item\task\treasure10.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 11	4	500	\spr\item\task\treasure11.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
+M¶nh Tµng B¶o §å 12	4	501	\spr\item\task\treasure12.spr	412	1	1	Mét m¶nh cña b¶n ®å kho b¸u	1	999
 Bøc Tµng B¶o ®å hoµn chØnh	4	502	\spr\item\task\treasure.spr	412	1	1	H­íng dÉn vŞ trİ ®i t×m kho b¸u.	1	0
 Kim PhËt 	4	503	\spr\item\task\buddha.spr	413	1	1	Mét bøc t­îng PhËt b»ng Vµng	1	0
 ThÕ cê tµn	4	504	\spr\item\questkey\taskobj119.spr	341	1	1	Mét thÕ cê tuyÖt kü l­u truyÒn ®Õn nay.	0	0
@@ -950,11 +950,11 @@ Tiªn Linh töu	4	947	\spr\item\questkey\taskobj070.spr	376	1	1	Lo¹i d­îc töu ®iÒu
 Hæ Cèt Töu	4	948	\spr\item\questkey\taskobj071.spr	376	1	1	Lo¹i d­îc töu ®iÒu chÕ tõ Hæ cèt vµ Linh Chi, gi¸ng ©m th¨ng d­¬ng, tiªu trõ tµ khİ 	1	0
 Léc Nhung töu	4	949	\spr\item\questkey\taskobj072.spr	376	1	1	Lo¹i d­îc töu ®iÒu chÕ tõ Léc Nhung vµ Linh Chi,İch khİ huyÕt, c­êng g©n cèt	1	0
 Nh©n S©m töu	4	950	\spr\item\questkey\taskobj073.spr	376	1	1	Lo¹i d­îc töu ®iÒu chÕ tõ Nh©n S©m vµ Linh Chi. Phôc håi nguyªn khİ, tr¸ng d­¬ng c­êng thËn 	1	0
-M·ng cÇu	4	951	\spr\item\yn_chunjie\yn_manqiuguo.spr	434	1	1	Mét trong "ngò qu¶" ngµy TÕt	1	0
-Dõa	4	952	\spr\item\yn_chunjie\yn_yezi.spr	435	1	1	Mét trong "ngò qu¶" ngµy TÕt	1	0
-§u ®ñ	4	953	\spr\item\yn_chunjie\yn_mugua.spr	436	1	1	Mét trong "ngò qu¶" ngµy TÕt	1	0
-Xoµi	4	954	\spr\item\yn_chunjie\yn_mangguo.spr	437	1	1	Mét trong "ngò qu¶" ngµy TÕt	1	0
-Sung	4	955	\spr\item\yn_chunjie\yn_chengqunguo.spr	438	1	1	Mét trong "ngò qu¶" ngµy TÕt	1	0
+M·ng cÇu	4	951	\spr\item\yn_chunjie\yn_manqiuguo.spr	434	1	1	"Mét trong ""ngò qu¶"" ngµy TÕt"	1	0
+Dõa	4	952	\spr\item\yn_chunjie\yn_yezi.spr	435	1	1	"Mét trong ""ngò qu¶"" ngµy TÕt"	1	0
+§u ®ñ	4	953	\spr\item\yn_chunjie\yn_mugua.spr	436	1	1	"Mét trong ""ngò qu¶"" ngµy TÕt"	1	0
+Xoµi	4	954	\spr\item\yn_chunjie\yn_mangguo.spr	437	1	1	"Mét trong ""ngò qu¶"" ngµy TÕt"	1	0
+Sung	4	955	\spr\item\yn_chunjie\yn_chengqunguo.spr	438	1	1	"Mét trong ""ngò qu¶"" ngµy TÕt"	1	0
 Bét ®¸	4	956	\spr\item\medecine\obj-potion18.spr	41	1	1	VËt liÖu ®Ó chÕ háa ph¸o. Thu thËp ®ñ 5 mãn cã thÓ ®Õn nhê LÔ quan chÕ thµnh háa ph¸o.	1	0
 L­u huúnh	4	957	\spr\item\medecine\obj-potion19.spr	41	1	1	VËt liÖu ®Ó chÕ háa ph¸o. Thu thËp ®ñ 5 mãn cã thÓ ®Õn nhê LÔ quan chÕ thµnh háa ph¸o.	1	0
 Than cñi	4	958	\spr\item\ma_chunjie\charcoal.spr	41	1	1	VËt liÖu ®Ó chÕ háa ph¸o. Thu thËp ®ñ 5 mãn cã thÓ ®Õn nhê LÔ quan chÕ thµnh háa ph¸o.	1	0
@@ -994,9 +994,9 @@ M¶nh Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï (3/6)	4	991	\spr\item\citydefence\fragme
 M¶nh Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï (4/6)	4	992	\spr\item\citydefence\fragment.spr	347	1	1	M¶nh Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï, chØ cÇn thu thËp ®ñ 6 m¶nh th× cã thÓ ®Õn thî rÌn thÇn bİ t¹i L©m An ®Ó hîp thµnh “Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï”.	1	100
 M¶nh Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï (5/6)	4	993	\spr\item\citydefence\fragment.spr	347	1	1	M¶nh Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï, chØ cÇn thu thËp ®ñ 6 m¶nh th× cã thÓ ®Õn thî rÌn thÇn bİ t¹i L©m An ®Ó hîp thµnh “Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï”.	1	100
 M¶nh Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï (6/6)	4	994	\spr\item\citydefence\fragment.spr	347	1	1	M¶nh Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï, chØ cÇn thu thËp ®ñ 6 m¶nh th× cã thÓ ®Õn thî rÌn thÇn bİ t¹i L©m An ®Ó hîp thµnh “Thiªn Ngoa §Şnh T©m Ng­ng ThÇn Phï”.	1	100
-Tu Phôc Kho¸ng Th¹ch	4	995	\spr\item\questkey\golden_stone.spr	347	1	1	(IB) VËt liÖu cÇn thiÕt ®Ó söa chöa <trang bŞ tæn h¹i> t¹i thî rÌn.<enter>Trang bŞ phæ th«ng cÇn 1 viªn, trang bŞ huyÒn tinh cÇn 2 viªn, trang bŞ Hoµng Kim cÇn 5 viªn.	1	0
+Tu Phôc Kho¸ng Th¹ch	4	995	\spr\item\questkey\golden_stone.spr	347	1	1	TiÖm thî rÌn söa <Trang bŞ h­ háng> cÇn ph¶i cã nguyªn liÖu cÇn thiÕt. <enter> Trang bŞ phæ th«ng 1 c¸i, trang bŞ tİm 2 c¸i, trang bŞ hoµng kim 5 c¸i.	1	0
 LÖnh Bµi Tr­êng Ca M«n	4	996	\spr\item\questkey\006.spr	352	1	1	LÖnh bµi ra vµo cÊm ®Şa Tr­êng Ca M«n, giao cho m«n h¹ cña Tr­êng Ca M«n cã thÓ vµo cÊm ®Şa ®¸nh qu¸i trong 2 giê.<enter>NhËn ®­îc gÊp 10 lÇn kinh nghiÖm vµ cã c¬ héi kiÕm ®­îc trang bŞ cao cÊp.	1	0
-Tu LuyÖn LÖnh Bµi	4	997	\spr\item\questkey\006.spr	352	1	1	(IB)LÖnh bµi Vâ L©m TruyÒn Nh©n ban tÆng, cã thÓ ra vµo cÊm ®Şa Tr­êng Ca M«n tu luyÖn trong vßng 1 giê.	1	0
+Tu LuyÖn LÖnh Bµi	4	997	\spr\item\questkey\006.spr	352	1	1	Vâ l©m minh truyÒn nh©n tÆng 1 lÖnh bµi vµo cÊm ®Şa Tr­êng Ca M«n ®Ó tu luyÖn trong vßng 1 giê.	1	0
 M¶nh Méng Long Chİnh Hoµng T¨ng M·o(1/6)	4	998	\spr\item\citydefence\fragment.spr	347	1	1	M¶nh Méng Long Chİnh Hoµng T¨ng M·o, chØ cÇn thu thËp ®ñ 6 m¶nh th× cã thÓ ®Õn thî rÌn thÇn bİ t¹i L©m An ®Ó hîp thµnh “Méng Long Chİnh Hoµng T¨ng M·o”.	1	100
 M¶nh Méng Long Chİnh Hoµng T¨ng M·o(2/6)	4	999	\spr\item\citydefence\fragment.spr	347	1	1	M¶nh Méng Long Chİnh Hoµng T¨ng M·o, chØ cÇn thu thËp ®ñ 6 m¶nh th× cã thÓ ®Õn thî rÌn thÇn bİ t¹i L©m An ®Ó hîp thµnh “Méng Long Chİnh Hoµng T¨ng M·o”.	1	100
 M¶nh Méng Long Chİnh Hoµng T¨ng M·o(3/6)	4	1000	\spr\item\citydefence\fragment.spr	347	1	1	M¶nh Méng Long Chİnh Hoµng T¨ng M·o, chØ cÇn thu thËp ®ñ 6 m¶nh th× cã thÓ ®Õn thî rÌn thÇn bİ t¹i L©m An ®Ó hîp thµnh “Méng Long Chİnh Hoµng T¨ng M·o”.	1	100
@@ -1325,3 +1325,722 @@ M¶nh thiªn th¹ch	4	1322	\spr\item\questkey\yunshisuipian6.spr	372	1	1	Mét m¶nh t
 M¶nh thiªn th¹ch	4	1323	\spr\item\questkey\yunshisuipian7.spr	372	1	1	Mét m¶nh thiªn th¹ch, dïng ®Ó chÕ t¹o b¶o vËt<enter>Nghe nãi ®©y lµ vËt ®Ó hîp thµnh <color=yellow> m¶nh Hoµng Kim thø 7<color>.	1	0
 M¶nh thiªn th¹ch	4	1324	\spr\item\questkey\yunshisuipian8.spr	372	1	1	Mét m¶nh thiªn th¹ch, dïng ®Ó chÕ t¹o b¶o vËt<enter>Nghe nãi ®©y lµ vËt ®Ó hîp thµnh <color=yellow> m¶nh Hoµng Kim thø 8<color>.	1	0
 M¶nh thiªn th¹ch	4	1325	\spr\item\questkey\yunshisuipian9.spr	372	1	1	Mét m¶nh thiªn th¹ch, dïng ®Ó chÕ t¹o b¶o vËt<enter>Nghe nãi ®©y lµ vËt ®Ó hîp thµnh <color=yellow> m¶nh Hoµng Kim thø 9<color>.	1	0
+M¶nh Méng Long Tö Kim B¸t Nh· Giíi (1/6)	4	1326	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Méng Long Tö Kim B¸t Nh· Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Méng Long Tö Kim B¸t Nh· Giíi""."	1	0
+M¶nh Méng Long Tö Kim B¸t Nh· Giíi  (2/6)	4	1327	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Méng Long Tö Kim B¸t Nh· Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Méng Long Tö Kim B¸t Nh· Giíi""."	1	0
+M¶nh Méng Long Tö Kim B¸t Nh· Giíi  (3/6)	4	1328	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Méng Long Tö Kim B¸t Nh· Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Méng Long Tö Kim B¸t Nh· Giíi""."	1	0
+M¶nh Méng Long Tö Kim B¸t Nh· Giíi  (4/6)	4	1329	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Méng Long Tö Kim B¸t Nh· Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Méng Long Tö Kim B¸t Nh· Giíi""."	1	0
+M¶nh Méng Long Tö Kim B¸t Nh· Giíi  (5/6)	4	1330	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Méng Long Tö Kim B¸t Nh· Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Méng Long Tö Kim B¸t Nh· Giíi""."	1	0
+M¶nh Méng Long Tö Kim B¸t Nh· Giíi  (6/6)	4	1331	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Méng Long Tö Kim B¸t Nh· Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Méng Long Tö Kim B¸t Nh· Giíi""."	1	0
+M¶nh Phôc Ma V« L­îng Kim Cang UyÓn(1/6)	4	1332	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Phôc Ma V« L­îng Kim Cang UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Phôc Ma V« L­îng Kim Cang UyÓn""."	1	0
+M¶nh Phôc Ma V« L­îng Kim Cang UyÓn(2/6)	4	1333	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Phôc Ma V« L­îng Kim Cang UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Phôc Ma V« L­îng Kim Cang UyÓn""."	1	0
+M¶nh Phôc Ma V« L­îng Kim Cang UyÓn(3/6)	4	1334	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Phôc Ma V« L­îng Kim Cang UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Phôc Ma V« L­îng Kim Cang UyÓn""."	1	0
+M¶nh Phôc Ma V« L­îng Kim Cang UyÓn(4/6)	4	1335	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Phôc Ma V« L­îng Kim Cang UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Phôc Ma V« L­îng Kim Cang UyÓn""."	1	0
+M¶nh Phôc Ma V« L­îng Kim Cang UyÓn(5/6)	4	1336	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Phôc Ma V« L­îng Kim Cang UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Phôc Ma V« L­îng Kim Cang UyÓn""."	1	0
+M¶nh Phôc Ma V« L­îng Kim Cang UyÓn(6/6)	4	1337	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Phôc Ma V« L­îng Kim Cang UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Phôc Ma V« L­îng Kim Cang UyÓn""."	1	0
+M¶nh Tø Kh«ng §¹t Ma T¨ng Hµi (1/6)	4	1338	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Tø Kh«ng §¹t Ma T¨ng Hµi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Tø Kh«ng §¹t Ma T¨ng Hµi""."	1	0
+M¶nh Tø Kh«ng §¹t Ma T¨ng Hµi (2/6)	4	1339	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Tø Kh«ng §¹t Ma T¨ng Hµi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Tø Kh«ng §¹t Ma T¨ng Hµi""."	1	0
+M¶nh Tø Kh«ng §¹t Ma T¨ng Hµi (3/6)	4	1340	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Tø Kh«ng §¹t Ma T¨ng Hµi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Tø Kh«ng §¹t Ma T¨ng Hµi""."	1	0
+M¶nh Tø Kh«ng §¹t Ma T¨ng Hµi (4/6)	4	1341	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Tø Kh«ng §¹t Ma T¨ng Hµi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Tø Kh«ng §¹t Ma T¨ng Hµi""."	1	0
+M¶nh Tø Kh«ng §¹t Ma T¨ng Hµi (5/6)	4	1342	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Tø Kh«ng §¹t Ma T¨ng Hµi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Tø Kh«ng §¹t Ma T¨ng Hµi""."	1	0
+M¶nh Tø Kh«ng §¹t Ma T¨ng Hµi (6/6)	4	1343	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Tø Kh«ng §¹t Ma T¨ng Hµi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Tø Kh«ng §¹t Ma T¨ng Hµi""."	1	0
+H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p (1/6)	4	1344	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p""."	1	0
+H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p (2/6)	4	1345	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p""."	1	0
+H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p (3/6)	4	1346	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p""."	1	0
+H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p (4/6)	4	1347	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p""."	1	0
+H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p (5/6)	4	1348	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p""."	1	0
+H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p (6/6)	4	1349	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""H¸m Thiªn Vâ ThÇn T­¬ng Kim Gi¸p""."	1	0
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (1/6)	4	1350	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa""."	1	0
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (2/6)	4	1351	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa""."	1	0
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (3/6)	4	1352	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa""."	1	0
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (4/6)	4	1353	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa""."	1	0
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (5/6)	4	1354	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa""."	1	0
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (6/6)	4	1355	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa""."	1	0
+M¶nh Ngù Long TÊn Phong Ph¸t C¬ (1/6)	4	1356	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ngù Long TÊn Phong Ph¸t C¬ råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ngù Long TÊn Phong Ph¸t C¬""."	1	0
+M¶nh Ngù Long TÊn Phong Ph¸t C¬ (2/6)	4	1357	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ngù Long TÊn Phong Ph¸t C¬ råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ngù Long TÊn Phong Ph¸t C¬""."	1	0
+M¶nh Ngù Long TÊn Phong Ph¸t C¬ (3/6)	4	1358	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ngù Long TÊn Phong Ph¸t C¬ råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ngù Long TÊn Phong Ph¸t C¬""."	1	0
+M¶nh Ngù Long TÊn Phong Ph¸t C¬ (4/6)	4	1359	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ngù Long TÊn Phong Ph¸t C¬ råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ngù Long TÊn Phong Ph¸t C¬""."	1	0
+M¶nh Ngù Long TÊn Phong Ph¸t C¬ (5/6)	4	1360	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ngù Long TÊn Phong Ph¸t C¬ råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ngù Long TÊn Phong Ph¸t C¬""."	1	0
+M¶nh Ngù Long TÊn Phong Ph¸t C¬ (6/6)	4	1361	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ngù Long TÊn Phong Ph¸t C¬ råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ngù Long TÊn Phong Ph¸t C¬""."	1	0
+M¶nh V« Gian Thanh Phong NhuyÔn KŞch (1/6)	4	1362	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« Gian Thanh Phong NhuyÔn KŞch råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« Gian Thanh Phong NhuyÔn KŞch""."	1	0
+M¶nh V« Gian Thanh Phong NhuyÔn KŞch (2/6)	4	1363	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« Gian Thanh Phong NhuyÔn KŞch råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« Gian Thanh Phong NhuyÔn KŞch""."	1	0
+M¶nh V« Gian Thanh Phong NhuyÔn KŞch (3/6)	4	1364	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« Gian Thanh Phong NhuyÔn KŞch råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« Gian Thanh Phong NhuyÔn KŞch""."	1	0
+M¶nh V« Gian Thanh Phong NhuyÔn KŞch (4/6)	4	1365	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« Gian Thanh Phong NhuyÔn KŞch råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« Gian Thanh Phong NhuyÔn KŞch""."	1	0
+M¶nh V« Gian Thanh Phong NhuyÔn KŞch (5/6)	4	1366	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« Gian Thanh Phong NhuyÔn KŞch råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« Gian Thanh Phong NhuyÔn KŞch""."	1	0
+M¶nh V« Gian Thanh Phong NhuyÔn KŞch (6/6)	4	1367	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« Gian Thanh Phong NhuyÔn KŞch råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« Gian Thanh Phong NhuyÔn KŞch""."	1	0
+M¶nh V« YÓm Thu Thñy L­u Quang §¸i (1/6)	4	1368	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« YÓm Thu Thñy L­u Quang §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« YÓm Thu Thñy L­u Quang §¸i""."	1	0
+M¶nh V« YÓm Thu Thñy L­u Quang §¸i (2/6)	4	1369	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« YÓm Thu Thñy L­u Quang §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« YÓm Thu Thñy L­u Quang §¸i""."	1	0
+M¶nh V« YÓm Thu Thñy L­u Quang §¸i (3/6)	4	1370	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« YÓm Thu Thñy L­u Quang §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« YÓm Thu Thñy L­u Quang §¸i""."	1	0
+M¶nh V« YÓm Thu Thñy L­u Quang §¸i (4/6)	4	1371	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« YÓm Thu Thñy L­u Quang §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« YÓm Thu Thñy L­u Quang §¸i""."	1	0
+M¶nh V« YÓm Thu Thñy L­u Quang §¸i (5/6)	4	1372	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« YÓm Thu Thñy L­u Quang §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« YÓm Thu Thñy L­u Quang §¸i""."	1	0
+M¶nh V« YÓm Thu Thñy L­u Quang §¸i (6/6)	4	1373	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« YÓm Thu Thñy L­u Quang §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« YÓm Thu Thñy L­u Quang §¸i""."	1	0
+M¶nh V« TrÇn TŞnh ¶nh L­u T« (1/6)	4	1374	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« TrÇn TŞnh ¶nh L­u T« råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« TrÇn TŞnh ¶nh L­u T«""."	1	0
+M¶nh V« TrÇn TŞnh ¶nh L­u T« (2/6)	4	1375	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« TrÇn TŞnh ¶nh L­u T« råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« TrÇn TŞnh ¶nh L­u T«""."	1	0
+M¶nh V« TrÇn TŞnh ¶nh L­u T« (3/6)	4	1376	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« TrÇn TŞnh ¶nh L­u T« råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« TrÇn TŞnh ¶nh L­u T«""."	1	0
+M¶nh V« TrÇn TŞnh ¶nh L­u T« (4/6)	4	1377	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« TrÇn TŞnh ¶nh L­u T« råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« TrÇn TŞnh ¶nh L­u T«""."	1	0
+M¶nh V« TrÇn TŞnh ¶nh L­u T« (5/6)	4	1378	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« TrÇn TŞnh ¶nh L­u T« råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« TrÇn TŞnh ¶nh L­u T«""."	1	0
+M¶nh V« TrÇn TŞnh ¶nh L­u T« (6/6)	4	1379	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña V« TrÇn TŞnh ¶nh L­u T« råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""V« TrÇn TŞnh ¶nh L­u T«""."	1	0
+M¶nh Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu (1/6)	4	1380	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu""."	1	0
+M¶nh Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu (2/6)	4	1381	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu""."	1	0
+M¶nh Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu (3/6)	4	1382	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu""."	1	0
+M¶nh Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu (4/6)	4	1383	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu""."	1	0
+M¶nh Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu (5/6)	4	1384	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu""."	1	0
+M¶nh Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu (6/6)	4	1385	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thª Hoµng TuÖ T©m Tr­êng Sinh KhÊu""."	1	0
+M¶nh Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n (1/6)	4	1386	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n""."	1	0
+M¶nh Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n (2/6)	4	1387	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n""."	1	0
+M¶nh Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n (3/6)	4	1388	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n""."	1	0
+M¶nh Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n (4/6)	4	1389	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n""."	1	0
+M¶nh Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n (5/6)	4	1390	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n""."	1	0
+M¶nh Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n (6/6)	4	1391	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Bİch H¶i Hoµn Ch©u Tuyªn Thanh C©n""."	1	0
+M¶nh ¤ Lung Xİch H¹t Bİ Trang (1/6)	4	1392	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña ¤ Lung Xİch H¹t Bİ Trang råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""¤ Lung Xİch H¹t Bİ Trang""."	1	0
+M¶nh ¤ Lung Xİch H¹t Bİ Trang (2/6)	4	1393	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña ¤ Lung Xİch H¹t Bİ Trang råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""¤ Lung Xİch H¹t Bİ Trang""."	1	0
+M¶nh ¤ Lung Xİch H¹t Bİ Trang (3/6)	4	1394	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña ¤ Lung Xİch H¹t Bİ Trang råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""¤ Lung Xİch H¹t Bİ Trang""."	1	0
+M¶nh ¤ Lung Xİch H¹t Bİ Trang (4/6)	4	1395	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña ¤ Lung Xİch H¹t Bİ Trang råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""¤ Lung Xİch H¹t Bİ Trang""."	1	0
+M¶nh ¤ Lung Xİch H¹t Bİ Trang (5/6)	4	1396	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña ¤ Lung Xİch H¹t Bİ Trang råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""¤ Lung Xİch H¹t Bİ Trang""."	1	0
+M¶nh ¤ Lung Xİch H¹t Bİ Trang (6/6)	4	1397	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña ¤ Lung Xİch H¹t Bİ Trang råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""¤ Lung Xİch H¹t Bİ Trang""."	1	0
+M¶nh Minh Hoan Song Hoµn Xµ KhÊu (1/6)	4	1398	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Minh Hoan Song Hoµn Xµ KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Minh Hoan Song Hoµn Xµ KhÊu""."	1	0
+M¶nh Minh Hoan Song Hoµn Xµ KhÊu (2/6)	4	1399	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Minh Hoan Song Hoµn Xµ KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Minh Hoan Song Hoµn Xµ KhÊu""."	1	0
+M¶nh Minh Hoan Song Hoµn Xµ KhÊu (3/6)	4	1400	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Minh Hoan Song Hoµn Xµ KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Minh Hoan Song Hoµn Xµ KhÊu""."	1	0
+M¶nh Minh Hoan Song Hoµn Xµ KhÊu (4/6)	4	1401	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Minh Hoan Song Hoµn Xµ KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Minh Hoan Song Hoµn Xµ KhÊu""."	1	0
+M¶nh Minh Hoan Song Hoµn Xµ KhÊu (5/6)	4	1402	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Minh Hoan Song Hoµn Xµ KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Minh Hoan Song Hoµn Xµ KhÊu""."	1	0
+M¶nh Minh Hoan Song Hoµn Xµ KhÊu (6/6)	4	1403	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Minh Hoan Song Hoµn Xµ KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Minh Hoan Song Hoµn Xµ KhÊu""."	1	0
+M¶nh Chó Phäc Thùc Cèt Ngäc Béi (1/6)	4	1404	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Chó Phäc Thùc Cèt Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Chó Phäc Thùc Cèt Ngäc Béi""."	1	0
+M¶nh Chó Phäc Thùc Cèt Ngäc Béi (2/6)	4	1405	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Chó Phäc Thùc Cèt Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Chó Phäc Thùc Cèt Ngäc Béi""."	1	0
+M¶nh Chó Phäc Thùc Cèt Ngäc Béi (3/6)	4	1406	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Chó Phäc Thùc Cèt Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Chó Phäc Thùc Cèt Ngäc Béi""."	1	0
+M¶nh Chó Phäc Thùc Cèt Ngäc Béi (4/6)	4	1407	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Chó Phäc Thùc Cèt Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Chó Phäc Thùc Cèt Ngäc Béi""."	1	0
+M¶nh Chó Phäc Thùc Cèt Ngäc Béi (5/6)	4	1408	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Chó Phäc Thùc Cèt Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Chó Phäc Thùc Cèt Ngäc Béi""."	1	0
+M¶nh Chó Phäc Thùc Cèt Ngäc Béi (6/6)	4	1409	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Chó Phäc Thùc Cèt Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Chó Phäc Thùc Cèt Ngäc Béi""."	1	0
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (1/6)	4	1410	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña B¨ng Hµn NguyÖt ¶nh Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""B¨ng Hµn NguyÖt ¶nh Ngoa""."	1	0
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (2/6)	4	1411	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña B¨ng Hµn NguyÖt ¶nh Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""B¨ng Hµn NguyÖt ¶nh Ngoa""."	1	0
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (3/6)	4	1412	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña B¨ng Hµn NguyÖt ¶nh Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""B¨ng Hµn NguyÖt ¶nh Ngoa""."	1	0
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (4/6)	4	1413	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña B¨ng Hµn NguyÖt ¶nh Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""B¨ng Hµn NguyÖt ¶nh Ngoa""."	1	0
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (5/6)	4	1414	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña B¨ng Hµn NguyÖt ¶nh Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""B¨ng Hµn NguyÖt ¶nh Ngoa""."	1	0
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (6/6)	4	1415	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña B¨ng Hµn NguyÖt ¶nh Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""B¨ng Hµn NguyÖt ¶nh Ngoa""."	1	0
+M¶nh Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa (1/6)	4	1416	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa""."	1	0
+M¶nh Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa (2/6)	4	1417	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa""."	1	0
+M¶nh Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa (3/6)	4	1418	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa""."	1	0
+M¶nh Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa (4/6)	4	1419	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa""."	1	0
+M¶nh Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa (5/6)	4	1420	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa""."	1	0
+M¶nh Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa (6/6)	4	1421	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Thiªn Quang §Şa Hµnh Thiªn Lı Ngoa""."	1	0
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (1/6)	4	1422	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p""."	1	0
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (2/6)	4	1423	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p""."	1	0
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (3/6)	4	1424	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p""."	1	0
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (4/6)	4	1425	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p""."	1	0
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (5/6)	4	1426	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p""."	1	0
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (6/6)	4	1427	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p""."	1	0
+M¶nh §Şa Ph¸ch Phong Hµn Thóc Yªu (1/6)	4	1428	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şa Ph¸ch Phong Hµn Thóc Yªu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şa Ph¸ch Phong Hµn Thóc Yªu""."	1	0
+M¶nh §Şa Ph¸ch Phong Hµn Thóc Yªu (2/6)	4	1429	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şa Ph¸ch Phong Hµn Thóc Yªu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şa Ph¸ch Phong Hµn Thóc Yªu""."	1	0
+M¶nh §Şa Ph¸ch Phong Hµn Thóc Yªu (3/6)	4	1430	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şa Ph¸ch Phong Hµn Thóc Yªu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şa Ph¸ch Phong Hµn Thóc Yªu""."	1	0
+M¶nh §Şa Ph¸ch Phong Hµn Thóc Yªu (4/6)	4	1431	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şa Ph¸ch Phong Hµn Thóc Yªu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şa Ph¸ch Phong Hµn Thóc Yªu""."	1	0
+M¶nh §Şa Ph¸ch Phong Hµn Thóc Yªu (5/6)	4	1432	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şa Ph¸ch Phong Hµn Thóc Yªu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şa Ph¸ch Phong Hµn Thóc Yªu""."	1	0
+M¶nh §Şa Ph¸ch Phong Hµn Thóc Yªu (6/6)	4	1433	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şa Ph¸ch Phong Hµn Thóc Yªu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şa Ph¸ch Phong Hµn Thóc Yªu""."	1	0
+M¶nh §ång Cõu Ngù Long Ngäc Béi (1/6)	4	1434	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §ång Cõu Ngù Long Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§ång Cõu Ngù Long Ngäc Béi""."	1	0
+M¶nh §ång Cõu Ngù Long Ngäc Béi (2/6)	4	1435	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §ång Cõu Ngù Long Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§ång Cõu Ngù Long Ngäc Béi""."	1	0
+M¶nh §ång Cõu Ngù Long Ngäc Béi (3/6)	4	1436	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §ång Cõu Ngù Long Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§ång Cõu Ngù Long Ngäc Béi""."	1	0
+M¶nh §ång Cõu Ngù Long Ngäc Béi (4/6)	4	1437	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §ång Cõu Ngù Long Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§ång Cõu Ngù Long Ngäc Béi""."	1	0
+M¶nh §ång Cõu Ngù Long Ngäc Béi (5/6)	4	1438	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §ång Cõu Ngù Long Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§ång Cõu Ngù Long Ngäc Béi""."	1	0
+M¶nh §ång Cõu Ngù Long Ngäc Béi (6/6)	4	1439	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §ång Cõu Ngù Long Ngäc Béi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§ång Cõu Ngù Long Ngäc Béi""."	1	0
+M¶nh §Şch Kh¸i Cöu §¹i C¸i Y (1/6)	4	1440	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şch Kh¸i Cöu §¹i C¸i Y råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şch Kh¸i Cöu §¹i C¸i Y""."	1	0
+M¶nh §Şch Kh¸i Cöu §¹i C¸i Y (2/6)	4	1441	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şch Kh¸i Cöu §¹i C¸i Y råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şch Kh¸i Cöu §¹i C¸i Y""."	1	0
+M¶nh §Şch Kh¸i Cöu §¹i C¸i Y (3/6)	4	1442	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şch Kh¸i Cöu §¹i C¸i Y råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şch Kh¸i Cöu §¹i C¸i Y""."	1	0
+M¶nh §Şch Kh¸i Cöu §¹i C¸i Y (4/6)	4	1443	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şch Kh¸i Cöu §¹i C¸i Y råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şch Kh¸i Cöu §¹i C¸i Y""."	1	0
+M¶nh §Şch Kh¸i Cöu §¹i C¸i Y (5/6)	4	1444	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şch Kh¸i Cöu §¹i C¸i Y råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şch Kh¸i Cöu §¹i C¸i Y""."	1	0
+M¶nh §Şch Kh¸i Cöu §¹i C¸i Y (6/6)	4	1445	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña §Şch Kh¸i Cöu §¹i C¸i Y råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""§Şch Kh¸i Cöu §¹i C¸i Y""."	1	0
+M¶nh Ma S¸t Cö Háa Liªu Thiªn Hoµn (1/6)	4	1446	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma S¸t Cö Háa Liªu Thiªn Hoµn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma S¸t Cö Háa Liªu Thiªn Hoµn""."	1	0
+M¶nh Ma S¸t Cö Háa Liªu Thiªn Hoµn (2/6)	4	1447	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma S¸t Cö Háa Liªu Thiªn Hoµn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma S¸t Cö Háa Liªu Thiªn Hoµn""."	1	0
+M¶nh Ma S¸t Cö Háa Liªu Thiªn Hoµn (3/6)	4	1448	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma S¸t Cö Háa Liªu Thiªn Hoµn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma S¸t Cö Háa Liªu Thiªn Hoµn""."	1	0
+M¶nh Ma S¸t Cö Háa Liªu Thiªn Hoµn (4/6)	4	1449	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma S¸t Cö Háa Liªu Thiªn Hoµn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma S¸t Cö Háa Liªu Thiªn Hoµn""."	1	0
+M¶nh Ma S¸t Cö Háa Liªu Thiªn Hoµn (5/6)	4	1450	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma S¸t Cö Háa Liªu Thiªn Hoµn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma S¸t Cö Háa Liªu Thiªn Hoµn""."	1	0
+M¶nh Ma S¸t Cö Háa Liªu Thiªn Hoµn (6/6)	4	1451	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma S¸t Cö Háa Liªu Thiªn Hoµn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma S¸t Cö Háa Liªu Thiªn Hoµn""."	1	0
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m §¸i (1/6)	4	1452	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma ThŞ LÖ Ma PhÖ T©m §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma ThŞ LÖ Ma PhÖ T©m §¸i""."	1	0
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m §¸i (2/6)	4	1453	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma ThŞ LÖ Ma PhÖ T©m §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma ThŞ LÖ Ma PhÖ T©m §¸i""."	1	0
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m §¸i (3/6)	4	1454	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma ThŞ LÖ Ma PhÖ T©m §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma ThŞ LÖ Ma PhÖ T©m §¸i""."	1	0
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m §¸i (4/6)	4	1455	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma ThŞ LÖ Ma PhÖ T©m §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma ThŞ LÖ Ma PhÖ T©m §¸i""."	1	0
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m §¸i (5/6)	4	1456	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma ThŞ LÖ Ma PhÖ T©m §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma ThŞ LÖ Ma PhÖ T©m §¸i""."	1	0
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m §¸i (6/6)	4	1457	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma ThŞ LÖ Ma PhÖ T©m §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma ThŞ LÖ Ma PhÖ T©m §¸i""."	1	0
+M¶nh Ma Hoµng Dung Kim §o¹n NhËt Giíi (1/6)	4	1458	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma Hoµng Dung Kim §o¹n NhËt Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma Hoµng Dung Kim §o¹n NhËt Giíi""."	1	0
+M¶nh Ma Hoµng Dung Kim §o¹n NhËt Giíi (2/6)	4	1459	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma Hoµng Dung Kim §o¹n NhËt Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma Hoµng Dung Kim §o¹n NhËt Giíi""."	1	0
+M¶nh Ma Hoµng Dung Kim §o¹n NhËt Giíi (3/6)	4	1460	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma Hoµng Dung Kim §o¹n NhËt Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma Hoµng Dung Kim §o¹n NhËt Giíi""."	1	0
+M¶nh Ma Hoµng Dung Kim §o¹n NhËt Giíi (4/6)	4	1461	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma Hoµng Dung Kim §o¹n NhËt Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma Hoµng Dung Kim §o¹n NhËt Giíi""."	1	0
+M¶nh Ma Hoµng Dung Kim §o¹n NhËt Giíi (5/6)	4	1462	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma Hoµng Dung Kim §o¹n NhËt Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma Hoµng Dung Kim §o¹n NhËt Giíi""."	1	0
+M¶nh Ma Hoµng Dung Kim §o¹n NhËt Giíi (6/6)	4	1463	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Ma Hoµng Dung Kim §o¹n NhËt Giíi råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Ma Hoµng Dung Kim §o¹n NhËt Giíi""."	1	0
+M¶nh L¨ng Nh¹c V« Ng· Thóc §¸i (1/6)	4	1464	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña  L¨ng Nh¹c V« Ng· Thóc §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" L¨ng Nh¹c V« Ng· Thóc §¸i""."	1	0
+M¶nh L¨ng Nh¹c V« Ng· Thóc §¸i (2/6)	4	1465	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña  L¨ng Nh¹c V« Ng· Thóc §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" L¨ng Nh¹c V« Ng· Thóc §¸i""."	1	0
+M¶nh L¨ng Nh¹c V« Ng· Thóc §¸i (3/6)	4	1466	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña  L¨ng Nh¹c V« Ng· Thóc §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" L¨ng Nh¹c V« Ng· Thóc §¸i""."	1	0
+M¶nh L¨ng Nh¹c V« Ng· Thóc §¸i (4/6)	4	1467	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña  L¨ng Nh¹c V« Ng· Thóc §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" L¨ng Nh¹c V« Ng· Thóc §¸i""."	1	0
+M¶nh L¨ng Nh¹c V« Ng· Thóc §¸i (5/6)	4	1468	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña  L¨ng Nh¹c V« Ng· Thóc §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" L¨ng Nh¹c V« Ng· Thóc §¸i""."	1	0
+M¶nh L¨ng Nh¹c V« Ng· Thóc §¸i (6/6)	4	1469	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña  L¨ng Nh¹c V« Ng· Thóc §¸i råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" L¨ng Nh¹c V« Ng· Thóc §¸i""."	1	0
+M¶nh CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn (1/6)	4	1470	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn""."	1	0
+M¶nh CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn (2/6)	4	1471	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn""."	1	0
+M¶nh CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn (3/6)	4	1472	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn""."	1	0
+M¶nh CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn (4/6)	4	1473	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn""."	1	0
+M¶nh CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn (5/6)	4	1474	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn""."	1	0
+M¶nh CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn (6/6)	4	1475	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" CËp Phong Thóy Ngäc HuyÒn Hoµng UyÓn""."	1	0
+M¶nh S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu (1/6)	4	1476	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu""."	1	0
+M¶nh S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu (2/6)	4	1477	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu""."	1	0
+M¶nh S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu (3/6)	4	1478	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu""."	1	0
+M¶nh S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu (4/6)	4	1479	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu""."	1	0
+M¶nh S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu (5/6)	4	1480	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu""."	1	0
+M¶nh S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu (6/6)	4	1481	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh "" S­¬ng Tinh L­u Tinh C¶n NguyÖt KhÊu""."	1	0
+M¶nh L«i Khung Linh Ngäc UÈn L«i UyÓn (1/6)	4	1482	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña L«i Khung Linh Ngäc UÈn L«i UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""L«i Khung Linh Ngäc UÈn L«i UyÓn""."	1	0
+M¶nh L«i Khung Linh Ngäc UÈn L«i UyÓn (2/6)	4	1483	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña L«i Khung Linh Ngäc UÈn L«i UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""L«i Khung Linh Ngäc UÈn L«i UyÓn""."	1	0
+M¶nh L«i Khung Linh Ngäc UÈn L«i UyÓn (3/6)	4	1484	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña L«i Khung Linh Ngäc UÈn L«i UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""L«i Khung Linh Ngäc UÈn L«i UyÓn""."	1	0
+M¶nh L«i Khung Linh Ngäc UÈn L«i UyÓn (4/6)	4	1485	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña L«i Khung Linh Ngäc UÈn L«i UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""L«i Khung Linh Ngäc UÈn L«i UyÓn""."	1	0
+M¶nh L«i Khung Linh Ngäc UÈn L«i UyÓn (5/6)	4	1486	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña L«i Khung Linh Ngäc UÈn L«i UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""L«i Khung Linh Ngäc UÈn L«i UyÓn""."	1	0
+M¶nh L«i Khung Linh Ngäc UÈn L«i UyÓn (6/6)	4	1487	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña L«i Khung Linh Ngäc UÈn L«i UyÓn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""L«i Khung Linh Ngäc UÈn L«i UyÓn""."	1	0
+M¶nh Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn (1/6)	4	1488	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn""."	1	0
+M¶nh Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn (2/6)	4	1489	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn""."	1	0
+M¶nh Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn (3/6)	4	1490	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn""."	1	0
+M¶nh Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn (4/6)	4	1491	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn""."	1	0
+M¶nh Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn (5/6)	4	1492	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn""."	1	0
+M¶nh Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn (6/6)	4	1493	\spr\item\citydefence\bigfragment.spr	347	1	1	"Ph¶i thu thËp tÊt c¶ 6 m¶nh cña Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn råi ®Õn thî rÌn thÇn bİ ë L©m An ®Ó hîp thµnh ""Vô Hoan Th¸i Uyªn Ch©n Vâ Liªn""."	1	0
+Kim Chuyªn	4	1494	\spr\item\questkey\jinzhuan.spr	378	1	1	§­îc lµm tõ vµng nguyªn chÊt (Cã thÓ ®æi 1 tØ ng©n l­îng t¹i TiÒn Trang)	1	0
+V©n Tinh Th¹ch	4	1495	\spr\item\questkey\yunjinshi.spr	41	1	1	KÕt tinh tõ linh khİ cña trêi ®Êt, n¨ng lùc v« biªn	1	0
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (1/9) 	4	1496	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (2/9) 	4	1497	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (3/9) 	4	1498	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (4/9) 	4	1499	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (5/9) 	4	1500	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (6/9) 	4	1501	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (7/9) 	4	1502	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (8/9) 	4	1503	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm (9/9) 	4	1504	\spr\item\citydefence\bigfragment.spr	347	1	1	M¶nh Bİch H¶i Hoµn Ch©u Vò Liªm. ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (1/9)	4	1505	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (2/9)	4	1506	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (3/9)	4	1507	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (4/9)	4	1508	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn(5/9)	4	1509	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (6/9)	4	1510	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (7/9)	4	1511	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (8/9)	4	1512	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Bİch H¶i Tiªm TÕ ChØ Hoµn (9/9)	4	1513	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (1/9)	4	1514	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (2/9)	4	1515	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (3/9)	4	1516	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (4/9)	4	1517	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi(5/9)	4	1518	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (6/9)	4	1519	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (7/9)	4	1520	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (8/9)	4	1521	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn HuyÒn Thiªn B¨ng Háa Béi (9/9)	4	1522	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (1/9)	4	1523	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (2/9)	4	1524	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (3/9)	4	1525	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (4/9)	4	1526	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (5/9)	4	1527	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (6/9)	4	1528	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (7/9)	4	1529	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (8/9)	4	1530	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh B¨ng Hµn NguyÖt ¶nh Ngoa (9/9)	4	1531	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi(1/9)	4	1532	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (2/9)	4	1533	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (3/9)	4	1534	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (4/9)	4	1535	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (5/9)	4	1536	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (6/9)	4	1537	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (7/9)	4	1538	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (8/9)	4	1539	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Th¶o Gian Th¹ch Giíi (9/9)	4	1540	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (1/9)	4	1541	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (2/9)	4	1542	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (3/9)	4	1543	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (4/9)	4	1544	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (5/9)	4	1545	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (6/9)	4	1546	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (7/9)	4	1547	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (8/9)	4	1548	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şch Kh¸i Cöu §¸i C¸i Y (9/9)	4	1549	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (1/9)	4	1550	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (2/9)	4	1551	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (3/9)	4	1552	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (4/9)	4	1553	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (5/9)	4	1554	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (6/9)	4	1555	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (7/9)	4	1556	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (8/9)	4	1557	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch §Şa Hµnh Thiªn Lı Ngoa (9/9)	4	1558	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (1/9)	4	1559	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (2/9)	4	1560	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (3/9)	4	1561	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (4/9)	4	1562	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (5/9)	4	1563	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (6/9)	4	1564	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (7/9)	4	1565	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (8/9)	4	1566	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §Şa Ph¸ch Tİch LŞch L«i Háa Giíi (9/9)	4	1567	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi(1/9)	4	1568	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (2/9)	4	1569	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (3/9)	4	1570	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (4/9)	4	1571	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (5/9)	4	1572	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (6/9)	4	1573	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (7/9)	4	1574	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (8/9)	4	1575	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim §iªu Long Giíi (9/9)	4	1576	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (1/9)	4	1577	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (2/9)	4	1578	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (3/9)	4	1579	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (4/9)	4	1580	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (5/9)	4	1581	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (6/9)	4	1582	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (7/9),	4	1583	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (8/9)	4	1584	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Kim Tó Phông Giíi (9/9)	4	1585	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (1/9)	4	1586	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (2/9)	4	1587	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (3/9)	4	1588	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (4/9)	4	1589	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (5/9)	4	1590	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (6/9)	4	1591	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (7/9)	4	1592	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (8/9)	4	1593	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t B¹ch Ngäc Cµn Kh«n Béi (9/9)	4	1594	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (1/9)	4	1595	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (2/9)	4	1596	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (3/9)	4	1597	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (4/9)	4	1598	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (5/9)	4	1599	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (6/9)	4	1600	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (7/9)	4	1601	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (8/9)	4	1602	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §éng S¸t PhØ Thuı Ngäc H¹ng Khuyªn (9/9)	4	1603	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (1/9)	4	1604	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (2/9)	4	1605	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (3/9)	4	1606	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (4/9)	4	1607	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (5/9)	4	1608	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (6/9)	4	1609	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (7/9)	4	1610	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (8/9)	4	1611	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma PhËt T©m NhuyÔn KhÊu (9/9)	4	1612	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (1/9)	4	1613	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (2/9)	4	1614	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (3/9)	4	1615	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (4/9)	4	1616	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (5/9)	4	1617	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (6/9)	4	1618	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (7/9)	4	1619	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (8/9)	4	1620	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Phôc Ma HuyÒn Hoµng Cµ Sa (9/9)	4	1621	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (1/9)	4	1622	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (2/9)	4	1623	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (3/9)	4	1624	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (4/9)	4	1625	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (5/9)	4	1626	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (6/9)	4	1627	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (7/9)	4	1628	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (8/9)	4	1629	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Hæ §Çu CÈn Thóc UyÓn (9/9)	4	1630	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (1/9)	4	1631	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (2/9)	4	1632	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (3/9)	4	1633	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (4/9)	4	1634	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (5/9)	4	1635	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (6/9)	4	1636	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (7/9)	4	1637	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (8/9)	4	1638	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p (9/9)	4	1639	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (1/9)	4	1640	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (2/9)	4	1641	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (3/9)	4	1642	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (4/9)	4	1643	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (5/9)	4	1644	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (6/9)	4	1645	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (7/9)	4	1646	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (8/9)	4	1647	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thuı Ngäc HuyÒn Hoµn Béi (9/9)	4	1648	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (1/9)	4	1649	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (2/9)	4	1650	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (3/9)	4	1651	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (4/9)	4	1652	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (5/9)	4	1653	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (6/9)	4	1654	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (7/9)	4	1655	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (8/9)	4	1656	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh CËp Phong Thanh Tïng Ph¸p Giíi (9/9)	4	1657	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (1/9)	4	1658	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (2/9)	4	1659	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (3/9)	4	1660	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (4/9)	4	1661	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (5/9)	4	1662	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (6/9)	4	1663	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (7/9)	4	1664	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (8/9)	4	1665	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Háa V©n Kú L©n Thñ (9/9)	4	1666	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (1/9)	4	1667	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (2/9)	4	1668	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (3/9)	4	1669	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (4/9)	4	1670	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (5/9)	4	1671	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (6/9)	4	1672	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (7/9)	4	1673	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (8/9)	4	1674	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh KÕ NghiÖp Chu T­íc L¨ng V©n Ngoa (9/9)	4	1675	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (1/9)	4	1676	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (2/9)	4	1677	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (3/9)	4	1678	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (4/9)	4	1679	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (5/9)	4	1680	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (6/9)	4	1681	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (7/9)	4	1682	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (8/9)	4	1683	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Cöu Thiªn DÉn L«i Giíi (9/9)	4	1684	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (1/9)	4	1685	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (2/9)	4	1686	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (3/9)	4	1687	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (4/9)	4	1688	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (5/9)	4	1689	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (6/9)	4	1690	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (7/9)	4	1691	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (8/9)	4	1692	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L«i Khung Linh Ngäc UÈn L«i (9/9)	4	1693	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (1/9)	4	1694	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (2/9)	4	1695	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (3/9)	4	1696	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (4/9)	4	1697	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (5/9)	4	1698	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (6/9)	4	1699	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (7/9)	4	1700	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (8/9)	4	1701	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Né L«i Thóc Yªu (9/9)	4	1702	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (1/9)	4	1703	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (2/9)	4	1704	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (3/9)	4	1705	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (4/9)	4	1706	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (5/9)	4	1707	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (6/9)	4	1708	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (7/9)	4	1709	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (8/9)	4	1710	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c Thiªn §Şa HuyÒn Hoµng Giíi (9/9)	4	1711	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (1/9)	4	1712	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (2/9)	4	1713	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (3/9)	4	1714	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (4/9)	4	1715	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (5/9)	4	1716	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (6/9)	4	1717	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (7/9)	4	1718	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (8/9)	4	1719	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh L¨ng Nh¹c V« Ng· §¹o Bµo (9/9)	4	1720	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (1/9)	4	1721	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (2/9)	4	1722	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (3/9)	4	1723	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (4/9)	4	1724	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (5/9)	4	1725	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (6/9)	4	1726	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (7/9)	4	1727	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (8/9)	4	1728	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long §¹t Ma T¨ng Hµi (9/9)	4	1729	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (1/9)	4	1730	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (2/9)	4	1731	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (3/9)	4	1732	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (4/9)	4	1733	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (5/9)	4	1734	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (6/9)	4	1735	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (7/9)	4	1736	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (8/9)	4	1737	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Méng Long PhËt Ph¸p HuyÒn Béi (9/9)	4	1738	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (1/9)	4	1739	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (2/9)	4	1740	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (3/9)	4	1741	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (4/9)	4	1742	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (5/9)	4	1743	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (6/9)	4	1744	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (7/9)	4	1745	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (8/9)	4	1746	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o §éc H¹t ChØ Hoµn (9/9)	4	1747	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (1/9)	4	1748	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (2/9)	4	1749	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (3/9)	4	1750	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (4/9)	4	1751	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (5/9)	4	1752	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (6/9)	4	1753	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (7/9)	4	1754	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (8/9)	4	1755	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Minh ¶o Song Hoµn Xµ Hµi (9/9)	4	1756	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (1/9)	4	1757	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (2/9)	4	1758	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (3/9)	4	1759	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (4/9)	4	1760	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (5/9)	4	1761	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (6/9)	4	1762	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (7/9)	4	1763	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (8/9)	4	1764	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng §¨ng §¹p Ngoa (9/9)	4	1765	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (1/9)	4	1766	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (2/9)	4	1767	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (3/9)	4	1768	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (4/9)	4	1769	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (5/9)	4	1770	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (6/9)	4	1771	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (7/9)	4	1772	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (8/9)	4	1773	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma Hoµng HuyÕt Y Thó Träc (9/9)	4	1774	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (1/9)	4	1775	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (2/9)	4	1776	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (3/9)	4	1777	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (4/9)	4	1778	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (5/9)	4	1779	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (6/9)	4	1780	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (7/9)	4	1781	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (8/9)	4	1782	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t Cö Háa Liªu Thiªn UyÓn (9/9)	4	1783	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (1/9)	4	1784	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (2/9)	4	1785	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (3/9)	4	1786	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (4/9)	4	1787	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (5/9)	4	1788	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (6/9)	4	1789	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (7/9)	4	1790	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (8/9)	4	1791	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma S¸t V©n Long Thæ Ch©u Giíi (9/9)	4	1792	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (1/9)	4	1793	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (2/9)	4	1794	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (3/9)	4	1795	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (4/9)	4	1796	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (5/9)	4	1797	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (6/9)	4	1798	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (7/9)	4	1799	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (8/9)	4	1800	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ LÖ Ma PhÖ T©m Liªn (9/9)	4	1801	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (1/9)	4	1802	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (2/9)	4	1803	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (3/9)	4	1804	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (4/9)	4	1805	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (5/9)	4	1806	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (6/9)	4	1807	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (7/9)	4	1808	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (8/9)	4	1809	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ma ThŞ NghiÖp Háa U Minh Giíi (9/9)	4	1810	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (1/9)	4	1811	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (2/9)	4	1812	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (3/9)	4	1813	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (4/9)	4	1814	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (5/9)	4	1815	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (6/9)	4	1816	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (7/9)	4	1817	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (8/9)	4	1818	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng Thóy Ngäc ChØ Hoµn (9/9)	4	1819	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (1/9)	4	1820	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (2/9)	4	1821	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (3/9)	4	1822	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (4/9)	4	1823	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (5/9)	4	1824	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (6/9)	4	1825	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (7/9)	4	1826	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (8/9)	4	1827	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tª Hoµng TuÖ T©m Khinh Sa Y (9/9)	4	1828	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (1/9)	4	1829	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (2/9)	4	1830	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (3/9)	4	1831	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (4/9)	4	1832	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (5/9)	4	1833	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (6/9)	4	1834	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (7/9)	4	1835	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (8/9)	4	1836	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang Kim TiÒn Liªn Hoµn Gi¸p (9/9)	4	1837	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (1/9)	4	1838	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (2/9)	4	1839	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (3/9)	4	1840	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (4/9)	4	1841	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (5/9)	4	1842	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (6/9)	4	1843	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (7/9)	4	1844	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (8/9)	4	1845	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S©m Hoang HuyÒn ThiÕt T­¬ng Ngäc Béi (9/9)	4	1846	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (1/9)	4	1847	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (2/9)	4	1848	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (3/9)	4	1849	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (4/9)	4	1850	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (5/9)	4	1851	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (6/9)	4	1852	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (7/9)	4	1853	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (8/9)	4	1854	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Ng¹o S­¬ng §¹o Bµo (9/9)	4	1855	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (1/9)	4	1856	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (2/9)	4	1857	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (3/9)	4	1858	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (4/9)	4	1859	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (5/9)	4	1860	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (6/9)	4	1861	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (7/9)	4	1862	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (8/9)	4	1863	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh S­¬ng Tinh Phong B¹o ChØ Hoµn (9/9)	4	1864	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (1/9)	4	1865	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (2/9)	4	1866	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (3/9)	4	1867	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (4/9)	4	1868	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (5/9)	4	1869	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (6/9)	4	1870	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (7/9)	4	1871	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (8/9)	4	1872	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Giíi LuËt Ph¸p Giíi (9/9)	4	1873	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (1/9)	4	1874	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (2/9)	4	1875	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (3/9)	4	1876	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (4/9)	4	1877	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (5/9)	4	1878	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (6/9)	4	1879	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (7/9)	4	1880	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (8/9)	4	1881	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Tø Kh«ng Tö Kim Cµ Sa (9/9)	4	1882	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (1/9)	4	1883	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (2/9)	4	1884	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (3/9)	4	1885	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (4/9)	4	1886	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (5/9)	4	1887	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (6/9)	4	1888	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (7/9)	4	1889	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (8/9)	4	1890	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Phong B¹o Hµn ThiÕt Träc (9/9)	4	1891	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (1/9)	4	1892	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (2/9)	4	1893	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (3/9)	4	1894	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (4/9)	4	1895	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (5/9)	4	1896	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (6/9)	4	1897	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (7/9)	4	1898	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (8/9)	4	1899	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Thiªn Quang Thóc Thiªn Ph­îc §Şa Hoµn (9/9)	4	1900	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (1/9)	4	1901	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (2/9)	4	1902	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (3/9)	4	1903	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (4/9)	4	1904	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (5/9)	4	1905	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (6/9)	4	1906	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (7/9)	4	1907	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (8/9)	4	1908	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu Phi Long §Çu Hoµn (9/9)	4	1909	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (1/9)	4	1910	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (2/9)	4	1911	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (3/9)	4	1912	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (4/9)	4	1913	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (5/9)	4	1914	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (6/9)	4	1915	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (7/9)	4	1916	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (8/9)	4	1917	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh §ång Cõu KiÕn Long Ban ChØ (9/9)	4	1918	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (1/9)	4	1919	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (2/9)	4	1920	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (3/9)	4	1921	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (4/9)	4	1922	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (5/9)	4	1923	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (6/9)	4	1924	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (7/9)	4	1925	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (8/9)	4	1926	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn Tõ Bi Ngäc Ban ChØ (9/9)	4	1927	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (1/9)	4	1928	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (2/9)	4	1929	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (3/9)	4	1930	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (4/9)	4	1931	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (5/9)	4	1932	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (6/9)	4	1933	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (7/9)	4	1934	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (8/9)	4	1935	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« TrÇn PhËt T©m Tõ H÷u Yªu Phèi (9/9)	4	1936	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (1/9)	4	1937	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (2/9)	4	1938	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (3/9)	4	1939	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (4/9)	4	1940	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (5/9)	4	1941	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (6/9)	4	1942	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (7/9)	4	1943	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (8/9)	4	1944	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian B¹ch Ngäc Ban ChØ (9/9)	4	1945	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (1/9)	4	1946	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (2/9)	4	1947	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (3/9)	4	1948	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (4/9)	4	1949	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (5/9)	4	1950	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (6/9)	4	1951	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (7/9)	4	1952	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (8/9)	4	1953	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« Gian Thanh Phong Tri Y (9/9)	4	1954	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (1/9)	4	1955	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (2/9)	4	1956	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (3/9)	4	1957	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (4/9)	4	1958	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (5/9)	4	1959	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (6/9)	4	1960	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (7/9)	4	1961	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (8/9)	4	1962	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm B¨ng Tinh ChØ Hoµn (9/9)	4	1963	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (1/9)	4	1964	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (2/9)	4	1965	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (3/9)	4	1966	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (4/9)	4	1967	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (5/9)	4	1968	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (6/9)	4	1969	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (7/9)	4	1970	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (8/9)	4	1971	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh V« YÓm Tö Kh©m Cµ Sa (9/9)	4	1972	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (1/9)	4	1973	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (2/9)	4	1974	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (3/9)	4	1975	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (4/9)	4	1976	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (5/9)	4	1977	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (6/9)	4	1978	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (7/9)	4	1979	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (8/9)	4	1980	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Ki B¸n Phï Chó (9/9)	4	1981	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (1/9)	4	1982	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (2/9)	4	1983	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (3/9)	4	1984	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (4/9)	4	1985	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (5/9)	4	1986	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (6/9)	4	1987	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (7/9)	4	1988	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (8/9)	4	1989	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Vô ¶o Thóc T©m ChØ Hoµn (9/9)	4	1990	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (1/9)	4	1991	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (2/9)	4	1992	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (3/9)	4	1993	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (4/9)	4	1994	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (5/9)	4	1995	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (6/9)	4	1996	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (7/9)	4	1997	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (8/9)	4	1998	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Xİch H¹t Bİ Trang (9/9)	4	1999	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (1/9)	4	2000	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (2/9)	4	2001	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (3/9)	4	2002	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (4/9)	4	2003	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (5/9)	4	2004	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (6/9)	4	2005	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (7/9)	4	2006	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (8/9)	4	2007	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh U Lung Ng©n ThiÒm Hé Thñ (9/9)	4	2008	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (1/9)	4	2009	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (2/9)	4	2010	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (3/9)	4	2011	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (4/9)	4	2012	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (5/9)	4	2013	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (6/9)	4	2014	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (7/9)	4	2015	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (8/9)	4	2016	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TuyÖt MÖnh ChØ Hoµn (9/9)	4	2017	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (1/9)	4	2018	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (2/9)	4	2019	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (3/9)	4	2020	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (4/9)	4	2021	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (5/9)	4	2022	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (6/9)	4	2023	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (7/9)	4	2024	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (8/9)	4	2025	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Ngù Long TÊn Phong Hé UyÓn (9/9)	4	2026	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (1/9)	4	2027	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (2/9)	4	2028	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (3/9)	4	2029	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (4/9)	4	2030	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (5/9)	4	2031	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (6/9)	4	2032	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (7/9)	4	2033	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (8/9)	4	2034	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc B¨ng Háa Thùc Cèt Ngoa (9/9)	4	2035	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (1/9)	4	2036	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (2/9)	4	2037	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (3/9)	4	2038	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (4/9)	4	2039	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (5/9)	4	2040	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (6/9)	4	2041	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (7/9)	4	2042	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (8/9)	4	2043	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100
+M¶nh Chó Ph­îc U Hoan ChØ Hoµn (9/9)	4	2044	\spr\item\citydefence\bigfragment.spr	347	1	1	ChØ cÇn thu thËp ®ñ bé 9 M¶nh, mang ®Õn thî rÌn thÇn bİ L©m An ®Ó hîp thµnh mãn trang bŞ nµy.	1	100

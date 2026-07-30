@@ -10,7 +10,7 @@ Include("\\script\\lib\\pay.lua");
 --tinhpn 20100803: Patch Request
 local tbUseOnlyInMap = 
 {
-	586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,1,
+	586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,
 }
 local checkOnlyUseInMap = function()
 	local nMapId = SubWorldIdx2MapCopy(SubWorld)
@@ -33,20 +33,16 @@ function main( nItemIdx )
 	--end
 	
 	--tinhpn 20100803: Patch ReQuest
-	if %checkOnlyUseInMap() ~= 1 then
-		Msg2Player("Kh«ng thÓ sö dông vËt phÈm nµy t¹i ®©y.")
-		return 1
-	end
+	--if %checkOnlyUseInMap() ~= 1 then
+		--Msg2Player("Kh«ng thÓ sö dông vËt phÈm nµy t¹i ®©y.")
+		--return 1
+	--end
 	
 	--tinhpn 20100720: forbid item
 	if (ForbidMap() == 1) then
 		return 1
 	end
 	
-	if( IsCharged() == 0) then
-		Say("ThËt ®¸ng tiÕc, chØ cã ng­êi ch¬i ®· n¹p thÎ míi cã thÓ sö dông.",0);
-		return 1; 
-	end
 	if( GetLevel() <90 ) then
 		Say("ThËt ®¸ng tiÕc, chØ cã ng­êi ch¬i cÊp 90 trë lªn míi cã thÓ sö dông.",0);
 		return 1;

@@ -1,7 +1,6 @@
 Include("\\script\\lib\\baseclass.lua");
 Include("\\script\\lib\\compose_jinnang.lua");
 Include("\\script\\event\\jiefang_jieri\\200904\\taskctrl.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 if not tbJiefang0904_jiu then
 	tbJiefang0904_jiu = tbBaseClass:new()
@@ -22,7 +21,7 @@ tbFormulaList =
 		},
 		tbProduct = 
 		{
-			szName="BÇu r­îu",	tbProp={6, 1, 2013, 1, 0, 0},
+			szName="BÇu r­îu",	tbProp={6, 1, 2013, 1, 0, 0},	nExpiredTime = 20090608,
 		},
 	},
 	[2] =
@@ -38,13 +37,13 @@ tbFormulaList =
 		},
 		tbProduct = 
 		{
-			szName="R­îu nho",	tbProp={6, 1, 2014, 1, 0, 0},
+			szName="R­îu nho",	tbProp={6, 1, 2014, 1, 0, 0},	nExpiredTime = 20090608,
 		},
 	},
 }
 
 function tbJiefang0904_jiu:OnDailogMain(nItemIndex, szDescLink)
-	if (CFG_jiefang_jieri2009	== 0) then
+	if self:IsActDate() ~= 1 then
 		return Talk(1, "", "Ho¹t ®éng ®· kÕt thóc.")
 	end
 	nItemIndex = nItemIndex or -1

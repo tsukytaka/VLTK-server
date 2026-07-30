@@ -82,10 +82,10 @@ function main(nItemIndex)
 	local nExp				= 1000000
 	local nTotalRate		= 100000;
 	local nRate				= floor(nTotalRate*5/100)
-	--if xmas07_makeSnowMan_isUsePeriod() == 0 then
-	--	Msg2Player("VÀt ph»m Æ∑ qu∏ hπn sˆ dÙng, sœ bﬁ m t Æi.")
-	--	return 0
-	--end
+	if xmas07_makeSnowMan_isUsePeriod() == 0 then
+		Msg2Player("VÀt ph»m Æ∑ qu∏ hπn sˆ dÙng, sœ bﬁ m t Æi.")
+		return 0
+	end
 	if xmas2007_SnowManItem_CheckForbitMap() == 1 then
 		return 1
 	end

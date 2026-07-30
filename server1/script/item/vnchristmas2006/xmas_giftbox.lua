@@ -5,12 +5,12 @@
 TB_Giftbox = {
  --1.ÎïÆ·Ãû	    2.ÎïÆ·ID	3.µôÂä¼¸ÂÊ
 	{"Hoa tuyÕt", 			1312,		20	},
-	{"Cµ rèt",		1313,		20	},
-	{"Cµnh th«ng",	1314,		20	},
-	{"Nãn gi¸ng sinh",		1315,		18	},
-	{"Kh¨n choµng (xanh)",	1316,		11	},
-	{"Kh¨n choµng (®á)",	1317,		5		},
-	{"C©y th«ng ",		1318,		1		},
+	{"Cµ rèt",		1313,		15	},
+	{"Cµnh th«ng",	1314,		15	},
+	{"Nãn gi¸ng sinh",		1315,		15	},
+	{"Kh¨n choµng (xanh)",	1316,		15	},
+	{"Kh¨n choµng (®á)",	1317,		15		},
+--	{"C©y th«ng ",		1318,		25		},
 }
 
 function main()

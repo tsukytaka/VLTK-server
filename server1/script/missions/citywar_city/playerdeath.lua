@@ -66,12 +66,12 @@ function OnDeath(Launcher)
 			BT_BroadSelf();
 			
 			if (GetCurCamp()  == 1) then
-				str  = format("Phe thñ %s%s tiªu diÖt phe c«ng %s%s, sè PK t¨ng lªn %s",launrankname,LaunName,rankname,DeathName,BT_GetData(PL_KILLPLAYER));
+				str  = format("Phe thñ %s %s tiªu diÖt phe c«ng %s %s, sè PK t¨ng lªn %s",launrankname,LaunName,rankname,DeathName,BT_GetData(PL_KILLPLAYER));
 			else
-				str  = "Bªn c«ng"..launrankname..LaunName.." tiªu diÖt phe thñ"..rankname..DeathName..", tæng PK lµ "..BT_GetData(PL_KILLPLAYER);
+				str  = "Bªn c«ng "..launrankname..LaunName.." tiªu diÖt phe thñ "..rankname..DeathName..", tæng PK lµ "..BT_GetData(PL_KILLPLAYER);
 			end
 			
-			Msg2Player(format("<color=pink>Xin chóc mõng: ®· tiªu diÖt ®­îc phe ®Þch: %s%s, sè PK t¨ng lªn %s",rankname,DeathName,BT_GetData(PL_KILLPLAYER)));
+			Msg2Player(format("<color=pink>Xin chóc mõng: ®· tiªu diÖt ®­îc phe ®Þch: %s %s, sè PK t¨ng lªn %s",rankname,DeathName,BT_GetData(PL_KILLPLAYER)));
 			Msg2MSAll(MISSIONID, str);
 		end
 		PlayerIndex = OrgPlayer;

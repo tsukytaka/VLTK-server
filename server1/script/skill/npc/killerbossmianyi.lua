@@ -37,7 +37,7 @@ return Param2String(200,-1,0)
 end;
 
 function Getpoisontimereduce_p(level)
-return Param2String(-800,-1,0)
+return Param2String(180,-1,0)
 end;
 
 function Getstuntimereduce_p(level)

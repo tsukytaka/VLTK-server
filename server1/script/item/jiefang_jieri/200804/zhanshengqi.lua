@@ -16,14 +16,13 @@
 IncludeLib("SETTING");
 Include("\\script\\lib\\pay.lua");
 Include("\\script\\event\\jiefang_jieri\\200804\\taskctrl.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 function main(nItemIndex)
 	jiefang_0804_ResetTask()
 	local nItemData	= 20080531
 	local nDate = tonumber(GetLocalDate("%Y%m%d"))
 	
 	
-	if (CFG_jiefang_jieri2008	==	0) then
+	if nDate > nItemData then
 		Msg2Player("VËt phÈm qu¸ h¹n sö dông, tù ®éng mÊt ®i.")
 		return 0;
 	end

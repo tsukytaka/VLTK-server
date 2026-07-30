@@ -3,7 +3,7 @@ Include("\\script\\lib\\pay.lua");	--³äÖµµÄÅĞ¶Ï
 
 function main()
 	local nDate = tonumber(GetLocalDate("%y%m%d"));
-	if (nDate >= 70314 and nDate <= 500321) then
+	if (nDate >= 70314 and nDate <= 70321) then
 		Say("L·o phu ®ang thu thËp c¸c m¶nh mËt ®å thÇn bİ, nÕu c¸c vŞ cã thÓ gióp ta t×m, l·o phu nhÊt ®Şnh sÏ tr¶ c«ng hËu hÜ", 3,
 					"§æi10 mËt ®å thÇn bİ lÊy R­¬ng b¹c/sure2takeboxaward",
 					"§æi 10 mËt ®å thÇn bİ vµ Kim th¹ch lÊy R­¬ng vµng/sure2takeboxaward",

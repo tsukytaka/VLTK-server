@@ -48,10 +48,9 @@ function openbook(nItem)
 	
 	SetTaskTemp(193, nItem);
 	local nMaskIdx = GetItemParam(nItem, 2);
---	Say("¸ÃÎÞË«É±Õó»¹Ã»ÓÐÑ¡Ôñ±íÏÖÔìÐÍ£¬¿ÉÒÔ´ÓÒÑÓÐÔìÐÍÖÖÌí¼ÓÒ»¸ö¡£·ñÔò£¬ÄãºÍÄãÊÜÎÞË«É±ÕóÓ°ÏìµÄÅóÓÑ½«ÒÔ´Ìâ¬µÄÍâÐÎ³öÏÖ£¬ÄãÈ·Êµ²»ÐèÒªÑ¡ÔñÔìÐÍÂð£¿", 2, 
---	"ÎÒÒªÑ¡Ôñ¶ÀÌØµÄÔìÐÍ/sel_face", 
---	"ÎÒ¾õµÃ´Ìâ¬ÍâÐÎ²»´í/select_no");
-	select_no();
+	Say("V« song s¸t trËn vÉn ch­a chän khu«n mÉu, cã thÓ chØnh söa lo¹i h×nh ®· cã. Cã muèn lùa chän khu«n mÉu kh«ng?", 2, 
+	"Chän khu«n mÉu ®Æc s¾c/sel_face", 
+	"Ta c¶m thÊy lo¹i nµy còng tèt råi/select_no");
 end
 
 function sel_face()
@@ -133,7 +132,6 @@ function getresttime(nTimes)
 end;
 
 function closebook(nItem)
-	
 	local nRestCount = GetItemParam(nItem, 1)
 	ItemGenre, DetailType, ParticualrType = GetItemProp(nItem); --µÃµ½ÎïÆ·Àà±ð
 	if (PlayerIndex ~= GetItemBelong(nItem) or ItemGenre ~= 6 or DetailType ~= 1 or ParticualrType ~= 1106) then
@@ -179,9 +177,6 @@ function no()
 end
 
 function OnTimer()
-	
-	Msg2Player("É±ÕóTimer");
-	
 	local nRestCount = TM_GetRestCount(TIMER_ID)
 
 	if (nRestCount == 0) then --Èç¹û´ÎÊýÎª0£»
@@ -200,7 +195,6 @@ function OnTimer()
 end
 
 function emitskill(nMask, nRestCount) --·¢¼¼ÄÜ
-	
 	local nCamp = GetCamp();
 	local nTongID;
 	_, dwTongID = GetTongName();
@@ -213,7 +207,7 @@ function emitskill(nMask, nRestCount) --·¢¼¼ÄÜ
 	for i = 1, getn(tab_P) do
 		PlayerIndex = tab_P[i];
 		if (PlayerIndex > 0) then
-			SetPkReduceState(nRestTime, 50, 50, 50);
+			SetPkReduceState(nRestTime, 80, 80, 50);
 			--±äÑù×Ó
 			ChangeOwnFeature( 1, nRestTime, nMaskIdx);
 		end;

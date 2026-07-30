@@ -2,7 +2,7 @@ Include( "\\script\\leaguematch\\head.lua" )
 
 --Ìá¹©GameServerµ÷ÓÃµÄ½¨Á¢Õ½¶Óº¯Êı
 function wlls_create(szParam)
-	_M("Mêi wlls_create nhËp tham sè lµ:"..szParam);
+	_M("Çë wlls_create ÊäÈë²ÎÊıÎª:"..szParam);
 	
 	--²ğ·Ö´«Èë²ÎÊı
 	local aryParam = split(szParam, " ")
@@ -13,7 +13,7 @@ function wlls_create(szParam)
 
 	--±ÜÃâÖØ¸´¼ÓÈë¶ÓÔ±
 	if (not FALSE(LG_GetLeagueObjByRole(WLLS_LGTYPE, rolename))) then
-		wlls_say(rolename, "Xin lçi! B¹n ®· gia nhËp vµo ®éi kh¸c, kh«ng thÓ lËp ®éi n÷a!!")
+		wlls_say(rolename, "¶Ô²»Æğ£¬ÄãÒÑ¼ÓÈëÆäËü¶Ó£¬²»ÄÜ½¨¶ÓÁË!")
 		return 0
 	end
 
@@ -38,7 +38,7 @@ function wlls_create(szParam)
 			wlls_rest_hint(rolename, 1, n_type)
 			return 1
 		end
-		wlls_say(rolename, "Ch­a ph¸t hiÖn ®­îc lçi! Xin liªn hÖ qu¶n lı!")
+		wlls_say(rolename, "Î´·¢ÏÖµ½´íÎó£¬ÇëÁªÏµ¹ÜÀí")
 	end
 
 	OutputMsg("create league "..leaguename.." error!!!")
@@ -47,7 +47,7 @@ end
 
 --Ìá¹©GameServerµ÷ÓÃµÄ¼ÓÈë¶ÓÔ±º¯Êı
 function wlls_add(szParam)
-	_M("Mêi wlls_add nhËp tham sè lµ:"..szParam);
+	_M("Çë wlls_add ÊäÈë²ÎÊıÎª:"..szParam);
 
 	--²ğ·Ö´«Èë²ÎÊı
 	local aryParam = split(szParam, " ")
@@ -57,31 +57,31 @@ function wlls_add(szParam)
 	
 	--±ÜÃâÖØ¸´¼ÓÈë¶ÓÔ±
 	if (not FALSE(LG_GetLeagueObjByRole(WLLS_LGTYPE, rolename))) then
-		wlls_say(rolename, "Xin lçi! B¹n ®· gia nhËp vµo ®éi kh¸c, kh«ng thÓ gia nhËp ®éi n÷a!!")
-		wlls_say(cpname, "§éi viªn cña b¹n <color=yellow>"..rolename.."<color> ®· gia nhËp ®éi kh¸c, kh«ng thÓ gia nhËp ®éi n÷a!!", 0)
+		wlls_say(rolename, "¶Ô²»Æğ£¬ÄãÒÑ¼ÓÈëÆäËü¶Ó£¬²»ÄÜÔÙ¼ÓÈëÁË!!")
+		wlls_say(cpname, "ÄãµÄ¶ÓÔ± <color=yellow>"..rolename.."<color> ÒÑ¼ÓÈëÆäËü¶Ó£¬²»ÄÜÔÙ¼ÓÈëÁË!", 0)
 		return 0
 	end
 	
 	--·ÀÖ¹³¬¹ıÕ½¶ÓÈËÊıÉÏÏŞ
 	local n_lid = LG_GetLeagueObj(WLLS_LGTYPE, leaguename)
 	if (FALSE(n_lid)) then
-		wlls_say(rolename, "Xin lçi! §éi nµy kh«ng tån t¹i hoÆc ®· bŞ gi¶i t¸n!!")
-		wlls_say(cpname, "§éi cña b¹n gÆp vÊn ®Ò, h×nh nh­ kh«ng thÓ nhËp thªm ®éi viªn!.", 0)
+		wlls_say(rolename, "¶Ô²»Æğ£¬¸Ã¶Ó²»´æÔÚ»òÕßÒÑ±»½âÉ¢!")
+		wlls_say(cpname, "ÄãµÄ¶ÓÓöµ½À§ÄÑ£¬ºÃÏñ²»ÄÜÔÙ¼ÓÈë¶ÓÔ±ÁË!.", 0)
 		return 0
 	end
 	_, _, membercount = LG_GetLeagueInfo(n_lid)
 	local n_type = LG_GetLeagueTask(WLLS_LGTYPE, leaguename, WLLS_LGTASK_STYPE)
 	local n_maxmem = WLLS_TYPE[n_type].max_member
 	if (membercount >= n_maxmem) then
-		wlls_say(rolename, "Xin lçi! §éi viªn ®· ®ñ! Kh«ng thÓ gia nhËp thµnh viªn míi!!")
-		wlls_say(cpname, "Sè thµnh viªn trong ®éi cña b¹n ®· ®ñ! Kh«ng thÓ gia nhËp thµnh viªn míi!!", 0)
+		wlls_say(rolename, "¶Ô²»Æğ£¬¶ÓÔ±ÒÑ¹»£¬²»ÄÜ¼ÓÈëĞÂ³ÉÔ±ÁË!!")
+		wlls_say(cpname, "Äã¶ÓµÄ³ÉÔ±ÊıÒÑ¹»£¬²»ÄÜ¼ÓÈëĞÂ³ÉÔ±ÁË!!", 0)
 		return 0
 	end
 
 	--¼ÓÈëÕ½¶Ó
 	if(wlls_relay_addmember(leaguename, rolename) == 1) then
-		wlls_say(rolename, "Chóc mõng b¹n ®· nhËp ®éi thµnh c«ng! [<color=yellow>"..leaguename.."<color>]", nil, 1)
-		wlls_say(cpname, "<color=yellow>"..rolename.."<color> ®· gia nhËp thµnh c«ng vµo ®éi cña b¹n!", 0)
+		wlls_say(rolename, "¹§Ï²ÄãÒÑ³É¹¦¼ÓÈë¶Ó [<color=yellow>"..leaguename.."<color>]", nil, 1)
+		wlls_say(cpname, "<color=yellow>"..rolename.."<color> ÒÑ³É¹¦¼ÓÈëÄãµÄ¶Ó!", 0)
 		wlls_rest_hint(cpname, membercount+1, n_type)
 		return 1
 	end
@@ -92,12 +92,12 @@ end
 
 --Ìá¹©GameServerµ÷ÓÃµÄÉ¾³ı¶ÓÔ±º¯Êı£¨×îÖÕ£©
 function wlls_leave(rolename)
-	_M("Mêi wlls_leave nhËp tham sè lµ:"..rolename);
+	_M("Çë wlls_leave ÊäÈë²ÎÊıÎª:"..rolename);
 	
 	--È·ÈÏÒÑ¾­¼ÓÈëÁË¶ÓÎé
 	local n_lid = LG_GetLeagueObjByRole(WLLS_LGTYPE, rolename)
 	if (FALSE(n_lid)) then
-		wlls_say(rolename, "B¹n ch­a cã ®éi nhãm!")
+		wlls_say(rolename, "ÄãÃ»ÓĞ×é¶Ó!")
 		return 0
 	end
 
@@ -116,13 +116,13 @@ function wlls_leave(rolename)
 						wlls_SetMemberTask(leaguename, name, WLLS_LGMTASK_OVER, 1)
 					else	--ÆäËû±ÈÈü£¬ÒÆ½»¶Ó³¤
 						wlls_SetMemberTask(leaguename, name, WLLS_LGMTASK_JOB, 1)
-						str = str .. "Th©n phËn ®éi tr­ëng cña b¹n ®· chuyÓn giao cho ®ång ®éi: <color=yellow>" .. name.."<color>"
+						str = str .. "ÄãµÄ¶Ó³¤Éí·İÒÑ×ª½»¸ø¶ÓÓÑ: <color=yellow>" .. name.."<color>"
 						break
 					end
 				end
 			end
 			if (n_type == 3) then	--Ê¦Í½Èü£¬È¡ÏûÍ½µÜ±ÈÈü×Ê¸ñ
-				str = str .. "T­ c¸ch thi ®Êu cña ®å ®Ö b¹n ®· bŞ xãa!."
+				str = str .. "ÄãµÄÍ½µÜ±ÈÈü×Ê¸ñÒÑ±»É¾!."
 			end
 		end
 	else
@@ -171,7 +171,7 @@ end
 function wlls_rest_hint(n_plname, n_count, n_type)
 	local n_maxmem = WLLS_TYPE[n_type].max_member
 	if (n_count < n_maxmem) then
-		wlls_say(n_plname, "§éi [<color=yellow>"..leaguename.."<color>] cña b¹n hiÖn cã <color=yellow>"..n_count.."<color> thµnh viªn, b¹n cßn cã thÓ mêi thªm <color=yellow>"..(n_maxmem-n_count).."<color> ng­êi", 1)
+		wlls_say(n_plname, "ÄãµÄ¶Ó [<color=yellow>"..leaguename.."<color>] Ä¿Ç°ÓĞ<color=yellow>"..n_count.."<color> ³ÉÔ±£¬Äã»¹¿ÉÒÔÔÙÇë<color=yellow>"..(n_maxmem-n_count).."<color> ng­êi", 1)
 	else
 		-- wlls_say(n_plname, "ÄãµÄ¶Ó [<color=yellow>"..leaguename.."<color>] Ä¿Ç°ÒÑ¹» <color=yellow>"..n_maxmem.."<color> ³ÉÔ±.", 1)
 		wlls_say(n_plname, "ChiÕn ®éi cña [<color=yellow>"..leaguename.."<color>] ®· ®­îc thµnh lËp.", 1)

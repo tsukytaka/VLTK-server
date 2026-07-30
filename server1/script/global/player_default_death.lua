@@ -14,4 +14,9 @@ function OnDeath(Launcher)
     	end
     end
     
+
+    local pW, pX, pY = GetWorldPos()
+    SetTask(801, pW)
+    SetTask(802, pX)
+    SetTask(803, pY)
 end

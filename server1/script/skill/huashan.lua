@@ -1,6 +1,4 @@
---µü´úº¯Êý£¬ÓÃÓÚ¼ÆËã¼¼ÄÜÊìÁ·¶È
---¾ßÌå·½·¨£º
---¸ù¾Ý1¼¶ÊìÁ·¶È£¬Éý¼¶¼ÓËÙ¶È£¬¼¶Êý£¬ÖØ¸´ÉËº¦´ÎÊý£¬·¶Î§£¬¼ÆËã³öÏàÓ¦µÈ¼¶ÊìÁ·¶È
+--ky nang phai Hoa Son
 -- SkillExp(i) = Exp1*a^(i-1)*time*range
 function SkillExpFunc(Exp0,a,Level,Time,Range)
 	return floor(Exp0*(a^(Level-1))*Time*Range/2)
@@ -8,8 +6,7 @@ end
 
 
 SKILLS={
-	--»ªÉ½
-	baihong_guanri={ --°×ºç¹áÈÕ
+	baihong_guanri={ --Bach hong quan nhat
 		physicsenhance_p={
 			[1]={{1,30},{20,75}},
 		},
@@ -41,26 +38,26 @@ SKILLS={
 		--missle_speed_v={{{1,20},{20,24}}},
 		--skill_attackradius={{{1,320},{20,384}}},
 		--skill_cost_v={{{1,10},{20,10}}},
-		skill_eventskilllevel={{{1,1},{20,20}}},
-		skill_showevent={{{1,1},{10,1},{20,1}}},
+		--*skill_eventskilllevel={{{1,1},{20,20}}},
+		--*skill_showevent={{{1,1},{10,1},{20,1}}},
 	},
-	jianzong_zongjue={ --½£×Ú×Ü¾ö
+	jianzong_zongjue={ --kiem tong tong quyet
 		addphysicsdamage_p={{{1,15},{20,75},{26,150},{32,220},{33,220}},{{1,-1},{2,-1}},{{1,0},{2,0}}},
-		deadlystrikeenhance_p={{{1,6},{20,26}},{{1,-1},{2,-1}}},
+		--*deadlystrikeenhance_p={{{1,6},{20,26}},{{1,-1},{2,-1}}},
 --		deadlystrikeenhance_p={{{1,6},{20,36}},{{1,-1},{2,-1}}},
-		attackspeed_yan_v={{{1,6},{26,32},{31,32},{32,32}},{{1,-1},{2,-1}}},
+		--*attackspeed_yan_v={{{1,6},{26,32},{31,32},{32,32}},{{1,-1},{2,-1}}},
 		attackspeed_v={{{1,6},{26,32},{31,32},{32,32}},{{1,-1},{2,-1}}},
-		manareplenish_v={{{1,-10000},{20,-10000}},{{1,-1},{2,-1}}},
-		manamax_yan_v={{{1,-1000},{20,-20000}},{{1,-1},{2,-1}}},
-		manamax_v={{{1,-1000},{20,-20000}},{{1,-1},{2,-1}}},
-		manareplenish_p={{{1,-200},{20,-200}},{{1,-1},{2,-1}}},
-		lifemax_yan_p={{{1,10},{25,30},{36,30}},{{1,-1},{2,-1}}},
+		--*manareplenish_v={{{1,-10000},{20,-10000}},{{1,-1},{2,-1}}},
+		--*manamax_yan_v={{{1,-1000},{20,-20000}},{{1,-1},{2,-1}}},
+		--*manamax_v={{{1,-1000},{20,-20000}},{{1,-1},{2,-1}}},
+		--*manareplenish_p={{{1,-200},{20,-200}},{{1,-1},{2,-1}}},
+		--*lifemax_yan_p={{{1,10},{25,30},{36,30}},{{1,-1},{2,-1}}},
 	},
-	yangwu_jianfa={ --ÑøÎá½£·¨
+	yangwu_jianfa={ --duong ngo kiem phap
 		clearallcd={{{1,1},{25,2},{26,3},{27,3},{31,4},{32,4}},{{1,-1},{2,-1}}},
 		deadlystrikeenhance_p={{{1,6},{30,36},{31,38},{32,38}},{{1,-1},{2,-1}}},
 	},
-	jinyan_hengkong={ --½ðÑãºá¿Õ
+	jinyan_hengkong={ --kim nhan hoanh khong
 		seriesdamage_p={{{1,10},{20,50},{21,52}}},
 		colddamage_v={
 			[1]={{1,35},{20,450}},
@@ -97,7 +94,7 @@ SKILLS={
 				return format("Gì ®å trªn ng­êi <color=orange>%d<color> trong ph¹m vi mµn h×nh<color=blue> KiÕm Hoa Ho¸n Tinh<color>, <color=blue> B¨ng T­íc ViÖt Chi<color>, <color=blue> U Hån PhÖ ¶nh<color>,\n", nMag)
 			end,
 	},
-	podao_pojian={ --ÆÆµ¶ÆÆ½£Ê½
+	podao_pojian={ --huu phung lai nghi
 		candetonate1={
 			[1]={{1,323*256+1},{2,323*256+1}},
 			[3]={{1,10},{15,25},{26,128},{27,128}}
@@ -172,7 +169,7 @@ SKILLS={
 		addcolddamage_v={{{1,100},{30,315}},{{1,60*18},{2,180*18}}},
 		coldenhance_p={{{1,8},{32,39},{33,39}},{{1,60*18},{2,180*18}}},
 		lifemax_yan_p={{{1,10},{25,35},{36,55},{37,55}},{{1,60*18},{2,180*18}}},
-		item_reserve6={
+		walkrunshadow={
 			[1]={{1,1},{20,1}},
 			[2]={{1,60*18},{20,180*18}}
 		},
@@ -235,7 +232,7 @@ SKILLS={
 --	liushui={--Á÷Ë®1
 --		fastwalkrun_p={{{1,9},{20,66}},{{1,18},{2,18}}}
 --	},
-	duoming_lianhuan={ --¶áÃüÁ¬»·ÈýÏÉ½£
+	duoming_lianhuan={ --thai nhac tam thanh phong
 		physicsenhance_p={{{1,10},{15,156},{20,566},{26,788},{32,812},{33,812}}},
 		seriesdamage_p={{{1,10},{20,60},{21,62}}},
 		colddamage_v={
@@ -315,7 +312,7 @@ SKILLS={
 		--lifereplenish_p={{{1,-1},{20,-10},{26,-15},{27,-15}},{{1,18*1},{26,18*5},{26,18*5}}},
 		lifereplenish_v={{{1,300},{23,5600},{25,6100},{26,6100}},{{1,18*1},{26,18*5},{26,18*5}}},
 	},
-	jiujian_heyi={ --¾Å½£ºÏÒ»
+	jiujian_heyi={ --Doc co cuu kiem
 		physicsenhance_p={{{1,3},{15,100},{20,130},{26,262},{31,312},{32,322}}},
 		seriesdamage_p={{{1,10},{20,80},{21,82}}},
 		fatallystrike_p={{{1,2},{15,25},{20,50},{25,75},{26,75}}},
@@ -353,13 +350,8 @@ SKILLS={
 												{17,17100},
 												{18,19000},
 												{19,21400},
-												{20,90000},
-												{21,120000},
-												{22,150000},
-												{23,200000},
-												{24,250000},
-												{25,300000},
-												}},	
+												{20,21000},
+												}},
 		skill_desc=
 			function(level)
 				local nMag = floor(Link(level,SKILLS.jiujian_start.autoattackskill[3])-15*18*256)
@@ -370,11 +362,34 @@ SKILLS={
 		skill_showevent={{{1,1},{10,1},{20,1}}},
 	},
 	haoran_zhiqi={ --ºÆÈ»Ö®Æø
-		item_reserve8={
+		addblockrate={
 			[1]={{1,10},{20,3}},
 			[2]={{1,-1},{20,-1}},
 			[3]={{1,1},{19,1},{20,2},{21,2}},
 		},
+		skill_skillexp_v = 
+		{{
+			{1,100},
+			{2,500},
+			{3,1100},
+			{4,1900},
+			{5,2900},
+			{6,4100},
+			{7,5500},
+			{8,7100},
+			{9,8900},
+			{10,10900},
+			{11,13100},
+			{12,15700},
+			{13,18700},
+			{14,22100},
+			{15,25900},
+			{16,30100},
+			{17,34700},
+			{18,39700},
+			{19,45100},
+			{20,50900},
+		}},
 	},
 	wuji_jianqi1={ --ÎÞ¼«½£Æø1
 		lifemax_p={{{1,5},{20,80},{31,100},{32,100}},{{1,10},{31,18},{32,18}}},
@@ -455,11 +470,11 @@ SKILLS={
 			},
 	},
 	qizhen_shanhe={ --ÆøÕðÉ½ºÓ
-		item_reserve9={{{1,10},{20,20},{32,25}},{{1,-1},{20,-1},{32,-1}}},
-		item_reserve5={{{1,10},{20,20},{32,25}},{{1,-1},{20,-1},{32,-1}}},
+		meleedamagereturnmana_p={{{1,10},{20,20},{32,25}},{{1,-1},{20,-1},{32,-1}}},
+		rangedamagereturnmana_p={{{1,10},{20,20},{32,25}},{{1,-1},{20,-1},{32,-1}}},
 	},
 	qiguan_changhong={ --Æø¹á³¤ºç
-		item_reserve7={{{1,30},{20,100}},{{1,-1},{20,-1}}},
+		manatoskill_enhance={{{1,30},{20,100}},{{1,-1},{20,-1}}},
 	},
 	moyun_jianqi2={ --Ä¦ÔÆ½£Æø2
 		candetonate1={
@@ -556,13 +571,8 @@ SKILLS={
 												{17,17100},
 												{18,19000},
 												{19,21400},
-												{20,90000},
-												{21,120000},
-												{22,150000},
-												{23,200000},
-												{24,250000},
-												{25,300000},
-												}},	
+												{20,21000},
+												}},
 	},
 	new_wuji={ --ÐÂÎÞ¼«½£Æø£¬ÉÏÃæµÄÎÞ¼«½£Æø×÷·Ï
 		sorbdamage_yan_p={{{1,10},{15,25},{32,80}},{{1,18},{2,18}}},
@@ -596,7 +606,7 @@ SKILLS={
 			},
 		
 	},
-	pishi_poyu={ --ÅüÊ¯ÆÆÓñ
+	pishi_poyu={ --Phach Thach Pha Ngoc
 		seriesdamage_p={{{1,40},{15,40},{20,80},{21,82}}},
 		colddamage_v={
 			[1]={{1,36},{15,480},{20,1200},{23,2064},{26,2496}},
@@ -712,7 +722,6 @@ function Link(x,points)
 			c = i
 			break
 		end
-
 	end
 	return points[c][3](x,points[c-1][1],points[c-1][2],points[c][1],points[c][2])
 end

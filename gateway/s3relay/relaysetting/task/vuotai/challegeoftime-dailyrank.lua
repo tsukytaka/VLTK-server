@@ -11,7 +11,8 @@ function TaskShedule()
 	
 	--设置触发次数，0表示无限次数
 	TaskCountLimit(0)
-	OutputMsg("=====> BANG XEP HANG <THACH THUC THOI GIAN> MOI NGAY=======");
+	OutputMsg("                      BANG XEP HANG <THACH THUC THOI GIAN> MOI NGAY")
+	OutputMsg("==========================================================================================")
 end
 
 function TaskContent()

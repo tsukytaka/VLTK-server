@@ -30,6 +30,7 @@ Ngùa sè 13
 ÂíÆ¥29																																																
 ÂíÆ¥30																																																
 ÂíÆ¥31																																																
-ÂíÆ¥32																																																
-ÂíÆ¥33																																																
-ÂíÆ¥34																																																
+Háa Viªm																																							htfnguatrangxanh_rs01.spr	htfnguatrangxanh_rw.spr	htfnguatrangxanh_rr.spr	htfnguatrangxanh_ra01.spr	htfnguatrangxanh_ra02.spr	htfnguatrangxanh_rm.spr	htfnguatrangxanh_rb.spr	htfnguatrangxanh_rd.spr	htfnguatrangxanh_ra02.spr	htfnguatrangxanh_ra02.spr
+H¾c Tinh 																																							htfnguatrangxanh_rs01.spr	htfnguatrangxanh_rw.spr	htfnguatrangxanh_rr.spr	htfnguatrangxanh_ra01.spr	htfnguatrangxanh_ra02.spr	htfnguatrangxanh_rm.spr	htfnguatrangxanh_rb.spr	htfnguatrangxanh_rd.spr	htfnguatrangxanh_ra02.spr	htfnguatrangxanh_ra02.spr
+H¾c Hãa																																							htfnguavang_rs01.spr	htfnguavang_rw.spr	htfnguavang_rr.spr	htfnguavang_ra01.spr	htfnguavang_ra02.spr	htfnguavang_rm.spr	htfnguavang_rb.spr	htfnguavang_rd.spr	htfnguavang_ra02.spr	htfnguavang_ra02.spr
+Giao Phong																																							htfnguavang_rs01.spr	htfnguavang_rw.spr	htfnguavang_rr.spr	htfnguavang_ra01.spr	htfnguavang_ra02.spr	htfnguavang_rm.spr	htfnguavang_rb.spr	htfnguavang_rd.spr	htfnguavang_ra02.spr	htfnguavang_ra02.spr

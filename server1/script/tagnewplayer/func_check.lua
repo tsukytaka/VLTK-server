@@ -41,7 +41,7 @@ function IsCode()
 		if (nBit == 1) then
 			return 1
 		else
-			return 1
+			return 0
 		end
 end
 

@@ -43,7 +43,7 @@ end
 function TaskContent()
 	local n_date = tonumber(date("%Y%m%d"));
 
-	if (n_date > 20200719 or n_date < 20500619) then
+	if (n_date > 20200719 or n_date < 20110619) then
 		return
 	end
 	

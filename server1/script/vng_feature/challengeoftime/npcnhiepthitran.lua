@@ -24,7 +24,7 @@ function tbCOT_Party:CheckCondition()
 			local nLHHUse = self:GetLHHUseCount()
 			if (nDailyTaskCount == 1 and nLHHUse < 1) or (nDailyTaskCount == 2 and nLHHUse < 2) then
 				tinsert(tbDialog, getn(tbDialog) + 1, format("<color=red>%s<color>: %s", GetName(), "Ch­a sö dông Long HuyÕt Hoµn"))
-			end
+			end	
 		end
 		
 	end -- loop whole party

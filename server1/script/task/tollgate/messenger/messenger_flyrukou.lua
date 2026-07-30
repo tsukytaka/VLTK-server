@@ -14,14 +14,14 @@ Include("\\script\\lib\\common.lua");
 function main()
 	local tbDialog =
 	{
-		"B¾t ®Çu nhiÖm vô /fly_starttask",
-	  	"Rêi khái khu vùc/fly_movecity",
-	  	"L¸t n÷a quay l¹i /no",
+		"B¾t ®Çu nhiÖm vô/fly_starttask", 
+		"Rêi ®i khu vùc/fly_movecity", 
+		"Sau nµy trë l¹i/no",
 	}
 	if (tbBirthday0905:IsActDate() == 1) then
-		tinsert(tbDialog, 3, " nhiÖm vô t¹i b¶n ®å Phong Kú/birthday0905_fly");
+--		tinsert(tbDialog, 3, "Map Phong Kú trªn b¶n ®å ®İch nhiÖm vô/birthday0905_fly");
 	end
-	 Describe(DescLink_YiGuan..": §· b¾t ®Çu tİnh thêi gian qua ¶i, cè g¾ng lªn! B©y giê b¹n muèn lµm g×?",getn(tbDialog), unpack(tbDialog))
+	 Describe(DescLink_YiGuan..": §· më míi tİnh to¸n x«ng quan thêi gian, cè g¾ng lªn nha ! B©y giê ng­¬i nghÜ lµm c¸i g× ?",getn(tbDialog), unpack(tbDialog))
 end
 
 function fly_starttask()
@@ -37,13 +37,13 @@ function fly_starttask()
 		SetPKFlag(0);               --ÉèÖÃÎªÁ·¹¦Ä£Ê½            
 		SetDeathScript("\\script\\task\\tollgate\\messenger\\playerdead_tollgate.lua");
 		SetPos(1559,3113);
-		Msg2Player("§· b¾t ®Çu tİnh thêi gian lµm nhŞªm vô ")
+		Msg2Player("§· më míi tİnh to¸n thêi gian lµm nhiÖm vô")
 	elseif ( nt_getTask(1201) == 20 ) then
-		Describe(DescLink_YiGuan.."B¹n ®· hoµn thµnh nhiÖm vô, kh«ng cÇn tiÕp nhËn l¹i!",1,"KÕt thóc ®èi tho¹i/no")
+		Describe(DescLink_YiGuan.."Ng­¬i ®· hoµn thµnh nhiÖm vô, kh«ng cÇn tiÕp tôc nhËn !",1,"KÕt thóc ®èi tho¹i/no")
 	elseif ( nt_getTask(1201) == 25 or nt_getTask(1201) == 30 ) then
-		Describe(DescLink_YiGuan..": Ng­¬i ®· hoµn thµnh nhiÖm vô, sao cßn muèn tiÕp nhËn l¹i nhiÖm vô? Mau rêi khái ®©y ®i!",1,"KÕt thóc ®èi tho¹i/no")
+		Describe(DescLink_YiGuan..": Ng­¬i ®· hoµn thµnh nhiÖm vô, cßn muèn tiÕp tôc lµm nhiÖm vô sao? H·y nhanh ch©n rêi khái n¬i nµy ®i!",1,"KÕt thóc ®èi tho¹i/no")
 	elseif ( nt_getTask(1201) == 0 ) then
-		Describe(DescLink_YiGuan..": Ng­¬i ®· hoµn thµnh nhiÖm vô Tİn sø råi! Lµm ¬n biÕn cho khuÊt m¾t!",1,"KÕt thóc ®èi tho¹i/no")
+		Describe(DescLink_YiGuan..": Ng­¬i ®· hoµn thµnh nhiÖm vô tİn sø, xin nhanh lªn mét chót rêi ®i ®i!",1,"KÕt thóc ®èi tho¹i/no")
 	end
 end
 
@@ -54,7 +54,7 @@ function fly_movecity()
 			if ( nt_getTask(1204) == citygo[i][2] ) then
 				SetLogoutRV(0);
 				NewWorld(citygo[i][7], citygo[i][8], citygo[i][9])
-				Msg2Player("Phong Kú DŞch tr¹m cung tèng"..name.."§¹i nh©n ®Õn"..citygo[i][4].."DŞch tr¹m!")
+				Msg2Player("Phong kş dŞch tr¹m cung tiÔn "..name.." ®¹i nh©n ®Õn "..citygo[i][4].." dŞch tr¹m !")
 			end
 		end	
 	elseif ( nt_getTask(1201) == 10 ) or ( nt_getTask(1201) == 0 ) then
@@ -65,15 +65,15 @@ end
 
 function birthday0905_fly()
 	tbBirthday0905.tbTask:reset_task();
-	Say("DŞch quan: Tõ ngµy 19/06/2009 ®Õn 24h ngµy 19/07/2009 , nÕu ®¹i hiÖp cã thÓ v­ît qua ®­îc mét trong nh÷ng thö th¸ch sau ®©y th× ®¹i hiÖp sÏ nhËn ®­îc mét trong bèn tİn vËt v« cïng quı gi¸ lµ “B¸ V­¬ng Th­¬ng”. §¹i hiÖp cã b»ng lßng tham gia thö th¸ch kh«ng?", 8, 
-		"NhËn nhiÖm vô Tiªu diÖt 500 Kim Quèc gian tÕ./#birthday0905_settask_message(1)",
-		"NhËn nhiÖm vô Tiªu diÖt 6 Hæ B¸o Kş./#birthday0905_settask_message(2)",
-		"NhËn nhiÖm vô TiÕp xóc 100 täa ®é./#birthday0905_settask_message(3)",
-		"Ta ®· hoµn thµnh nhiÖm vô Tiªu diÖt 500 Kim Quèc gian tÕ./#birthday0905_gettask_message(1)",
-		"Ta ®· hoµn thµnh nhiÖm vô Tiªu diÖt 6 Hæ B¸o Kş./#birthday0905_gettask_message(2)",
-		"Ta ®· hoµn thµnh nhiÖm vô TiÕp xóc 100 täa ®é./#birthday0905_gettask_message(3)",
-		"Ta muèn hñy nhiÖm vô hiÖn t¹i/birthday0905_cancel_message",
-		"Ta cã chuyÖn gÊp, sÏ quay l¹i sau./no");
+	Say("DŞch quan : tõ 19/06/2009 ®Õn 19/07/2009 24 lóc , nÕu nh­ ®¹i hiÖp cã thÓ xuyªn qua phİa d­íi mét c¸i trong ®ã khiªu chiÕn , ®¹i hiÖp ®em ®¹t ®­îc 4 c¸ b¶o vËt trung ®İch mét , lµ b¸ v­¬ng sóng . ®¹i hiÖp muèn tham gia khiªu chiÕn sao ?", 8, 
+         "NhËn tiªu diÖt 500 kim quèc gi¸n ®iÖp nhiÖm vô /#birthday0905_settask_message(1)", 
+         "NhËn tiªu diÖt 6 c¸ hæ b¸o kş nhiÖm vô /#birthday0905_settask_message(2)", 
+         "TiÕp nhËn tiÕp xóc 100 c¸ täa ®é nhiÖm vô./#birthday0905_settask_message(3)", 
+         "Ta ®· hoµn thµnh tiªu diÖt 500 kim quèc gi¸n ®iÖp nhiÖm vô/#birthday0905_gettask_message(1)", 
+         "Ta ®· hoµn thµnh tiªu diÖt 6 c¸ hæ b¸o kş nhiÖm vô/#birthday0905_gettask_message(2)", 
+         "Ta ®· hoµn thµnh tiÕp xóc 100 c¸ täa ®é nhiÖm vô./#birthday0905_gettask_message(3)", 
+         "Ta muèn bu«ng tha cho tr­íc m¾t nhiÖm vô/birthday0905_cancel_message", 
+         "Ta cã viÖc gÊp , chê mét chót trë l¹i./no");
 end
 
 function no()

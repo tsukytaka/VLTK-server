@@ -1,166 +1,87 @@
-Include("\\script\\global\\nobitaxd\\config\\cfg_activity_bonus.lua")
-
-ITEM_SuKien	=	{szName="CÈm nang thÇn bÝ",tbProp={6,1,1502,1,0,0},}
-EVENT_LOG_TITLE	=	"Event VLTK OFFLINE 2023"
-
 tbConfig = {}
-tbConfig[1] = 
+tbConfig[1] = --Ò»¸öÏ¸½Ú
 {
 	nId = 1,
 	szMessageType = "Chuanguan",
-	szName = "Chuanguan_17",
-	nStartDate = nil,
-	nEndDate  = nil,
-	tbMessageParam = {"17"},
-	tbCondition = 
-	{
-		{"PlayerFunLib:CheckTotalLevel",	{90,"",">="} },
-	},
-	tbActition = 
-	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien,10,EVENT_LOG_TITLE,"VuotAi17"} },
-	},
-}
-tbConfig[2] = 
-{
-	nId = 2,
-	szMessageType = "Chuanguan",
-	szName = "Chuanguan_28",
+	szName = "´³¹Ø28",
 	nStartDate = nil,
 	nEndDate  = nil,
 	tbMessageParam = {"28"},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{90,"",">="} },
+		{"lib:Include",	{"\\script\\huoyuedu\\huoyuedu.lua"} },
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien,20,EVENT_LOG_TITLE,"VuotAi28"} },
+		{"tbHuoYueDu:AddHuoYueDu",	{"shijiandetiaozhan"} },
 	},
 }
-tbConfig[3] = 
+tbConfig[2] = --Ò»¸öÏ¸½Ú
+{
+	nId = 2,
+	szMessageType = "FinishSongJin",
+	szName = "ËÎ½ð»ý·Ö³¬¹ý1000",
+	nStartDate = nil,
+	nEndDate  = nil,
+	tbMessageParam = {-2,"3"},
+	tbCondition = 
+	{
+		{"lib:Include",	{"\\script\\huoyuedu\\huoyuedu.lua"} },
+		{"PlayerFunLib:CheckBT_PL_BATTLEPOINT",	{1000,">="} },
+	},
+	tbActition = 
+	{
+		{"tbHuoYueDu:AddHuoYueDu",	{"songjin"} },
+	},
+}
+tbConfig[3] = --Ò»¸öÏ¸½Ú
 {
 	nId = 3,
-	szMessageType = "FinishSongJin",
-	szName = "songjin mark >= 5000",
+	szMessageType = "CaiJiHuiHuangZhiGuo",
+	szName = "NhÆt qu¶ huy hoµng",
 	nStartDate = nil,
 	nEndDate  = nil,
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{80,"",">="} },
-		{"PlayerFunLib:CheckTask",	{"751",5000,"",">="} },
+		{"lib:Include",	{"\\script\\huoyuedu\\huoyuedu.lua"} },
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien_2,500,EVENT_LOG_TITLE,"TongKim5000"} },
+		{"tbHuoYueDu:AddHuoYueDu",	{"huihuangzhiguo"} },
 	},
 }
-tbConfig[4] = 
+tbConfig[4] = --Ò»¸öÏ¸½Ú
 {
 	nId = 4,
-	szMessageType = "FinishSongJin",
-	szName = "songjin mark >= 1000 and < 5000",
+	szMessageType = "YDBZguoguan",
+	szName = "Ñ×µÛ±¦²Ø´³¹ý10¹Ø",
 	nStartDate = nil,
 	nEndDate  = nil,
-	tbMessageParam = {nil},
+	tbMessageParam = {10},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{80,"",">="} },
-		{"PlayerFunLib:CheckTask",	{"751",5000,"","<"} },
-		{"PlayerFunLib:CheckTask",	{"751",1000,"",">="} },
+		{"lib:Include",	{"\\script\\huoyuedu\\huoyuedu.lua"} },
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien_2,100,EVENT_LOG_TITLE,"TongKim1000"} },
+		{"tbHuoYueDu:AddHuoYueDu",	{"yandibaozang"} },
 	},
 }
-tbConfig[5] = 
+tbConfig[5] = --Ò»¸öÏ¸½Ú
 {
 	nId = 5,
-	szMessageType = "NpcOnDeath",
-	szName = "fenglingdu_boatboss",
+	szMessageType = "FinishMail",
+	szName = "NhiÖm vô TÝn Sø ",
 	nStartDate = nil,
 	nEndDate  = nil,
-	tbMessageParam = {nil},
+	tbMessageParam = {-2,3},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{90,"",">="} },
-		{"NpcFunLib:CheckBoatBoss",	{nil} },
+		{"lib:Include",	{"\\script\\huoyuedu\\huoyuedu.lua"} },
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien,50,EVENT_LOG_TITLE,"TieuDietThuyTacDauLinh"} },
-	},
-}
-tbConfig[6] = 
-{
-	nId = 6,
-	szMessageType = "NpcOnDeath",
-	szName = "fenglingdu_bigboatboss",
-	nStartDate = nil,
-	nEndDate  = nil,
-	tbMessageParam = {nil},
-	tbCondition = 
-	{
-		{"PlayerFunLib:CheckTotalLevel",	{90,"",">="} },
-		{"NpcFunLib:CheckId",	{"1692"} },
-	},
-	tbActition = 
-	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien_2,5,EVENT_LOG_TITLE,"TieuDietThuyTacDaiDauLinh"} },
-	},
-}
-tbConfig[7] = 
-{
-	nId = 7,
-	szMessageType = "NpcOnDeath",
-	szName = "kill_gold_boss",
-	nStartDate = nil,
-	nEndDate  = nil,
-	tbMessageParam = {nil},
-	tbCondition = 
-	{
-		{"PlayerFunLib:CheckTotalLevel",	{90,"",">="} },
-		{"NpcFunLib:CheckWorldBoss",	{nil} },
-	},
-	tbActition = 
-	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien,50,EVENT_LOG_TITLE,"TieuDietBossTheGioi"} },
-	},
-}
-tbConfig[8] = 
-{
-	nId = 8,
-	szMessageType = "NpcOnDeath",
-	szName = "kill_killer_boss",
-	nStartDate = nil,
-	nEndDate  = nil,
-	tbMessageParam = {nil},
-	tbCondition = 
-	{
-		{"PlayerFunLib:CheckTotalLevel",	{90,"",">="} },
-		{"NpcFunLib:CheckKillerdBoss",	{90} },
-	},
-	tbActition = 
-	{
-		--{"PlayerFunLib:GetItem",	{ITEM_SuKien_2,100,EVENT_LOG_TITLE,"TieuDietBossSatThu"} },
-	},
-}
-tbConfig[9] =
-{
-	nId = 9,
-	szMessageType = "NpcOnDeath",
-	szName = "§¸nh qu¸i rít ®¹i hØ b¶o h¹p",
-	nStartDate = nil,
-	nEndDate  = nil,
-	tbMessageParam = {nil},
-	tbCondition = 
-	{
-		{"NpcFunLib:CheckNormalMonster",	{"10,20,30,40,50,60,70,80,90"} },
-	},
-	tbActition = 
-	{
-		{"NpcFunLib:DropSingleItem",	{ITEM_SuKien,1,"5"} },
+		{"tbHuoYueDu:AddHuoYueDu",	{"xinshirenwu"} },
 	},
 }

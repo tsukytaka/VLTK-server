@@ -1,8 +1,7 @@
 -- 文件名　：makesnowman.lua
 -- 创建者　：zhongchaolong
 -- 创建时间：2007-11-23 10:56:30
--- Reload: /script/event/xmas07_makesnowman/makesnowman.lua
-Include("\\script\\global\\nobitaxd\\npc\\npcsukien_quanly.lua")
+
 Include("\\script\\event\\xmas07_makesnowman\\head.lua")
 Include("\\script\\task\\system\\task_string.lua");
 Include("\\script\\lib\\basic.lua");
@@ -10,8 +9,7 @@ function main()
 	xmas07_makeSnowMan_main()
 end
 function xmas07_makeSnowMan_main()
---	if xmas07_makeSnowMan_isActPeriod() == 0 then
-	if (GetTask(Task_QuanLySuKien)	~= 200712) then
+	if xmas07_makeSnowMan_isActPeriod() == 0 then
 		Say(format("Ho箃 ng <color=yellow>%s<color>  k誸 th骳!",xmas07_makeSnowMan_ActName),0)
 		return 0;
 	end

@@ -1,1 +1,0 @@
--- 5000 task Event tù ®éng qua NPC Sù KiÖn

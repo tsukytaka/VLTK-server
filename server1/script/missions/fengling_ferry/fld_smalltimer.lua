@@ -5,65 +5,61 @@ function OnTimer()
 	t = GetMissionV(MS_TIMEACC_20SEC) + 1
 	SetMissionV(MS_TIMEACC_20SEC, t)
 	local npcindex
-	
-	-- Tinh tu bien config: tong thoi gian tran - thoi gian bao danh
-	local nTongPhut = floor(FLD_TIMER_2 / (60 * FRAME2TIME))             -- 25
-	local nBaoDanh  = floor(ENDSIGN_TIME * FLD_TIMER_1 / (60 * FRAME2TIME))  -- 1
-	local nThuyenDi = nTongPhut - nBaoDanh                               -- 24
-	
-	if (t == ENDSIGN_TIME) then
+	if (t == ENDSIGN_TIME) then		--±¨ÃûÊ±¼ä½áÊø£¬¿ª´¬
 		RunMission(MISSIONID)
-		Msg2MSAll(MISSIONID, "ThuyÒn ®i råi! "..nThuyenDi.." phót sau sÏ ®Õn bê B¾c Phong L¨ng §é.")
+		Msg2MSAll(MISSIONID, "ThuyÒn ®i råi! "..ThoiGianDiThuyenPLD.." phót sau sÏ ®Õn bê B¾c Phong L¨ng §é.")
 		
+		-- ÈÕ³£ÈÎÎñË¢ÐÂ¶Ô»°NPC
 		%tbTalkDailyTask:AddTalkNpc(SubWorldIdx2ID(SubWorld), SubWorldIdx2ID(SubWorld));
 	end
 	
-	if (mod(t, 3) == 0) then
+	if (mod(t, 3) == 0) then				--Ã¿·ÖÖÓ¼ÆÊý
 		SetMissionV(MS_TIMEACC_1MIN, GetMissionV(MS_TIMEACC_1MIN) + 1)
 	end
 	
 	if (t < ENDSIGN_TIME and mod(t, 9) == 0) then
-		local bf_mint = nBaoDanh - GetMissionV(MS_TIMEACC_1MIN)
-		Msg2MSAll(MISSIONID, "Cßn "..bf_mint.." phót rêi bÕn")
+		local bf_mint = ThoiGianBaoDanhPLD - GetMissionV(MS_TIMEACC_1MIN)
+		Msg2MSAll(MISSIONID, "Cßn "..bf_mint.." phót n÷a thuyÒn sÏ rêi bÕn")
 	end
 	
 	if (t >= ENDSIGN_TIME and mod(t, 15) == 0) then
-		local mint = nTongPhut - GetMissionV(MS_TIMEACC_1MIN)
-		Msg2MSAll(MISSIONID, "Cßn "..mint.." phót sÏ ®Õn bê B¾c Phong L¨ng §é")
+		local mint = ThoiGianDiThuyenPLD - GetMissionV(MS_TIMEACC_1MIN)
+		Msg2MSAll(MISSIONID, "Cßn "..mint.." phót n÷a thuyÒn sÏ ®Õn bê B¾c Phong L¨ng §é")
 	end
 	
 	if (t == REPORT_TIME) then
-		local mint = nTongPhut - GetMissionV(MS_TIMEACC_1MIN)
-		Msg2MSAll(MISSIONID, "Cßn "..mint.." phót sÏ ®Õn bê B¾c Phong L¨ng §é")
+		local mint = ThoiGianDiThuyenPLD - GetMissionV(MS_TIMEACC_1MIN)
+		Msg2MSAll(MISSIONID, "Cßn "..mint.." phót n÷a thuyÒn sÏ ®Õn bê B¾c Phong L¨ng §é")
 	end
-		
+	
 	if (t == UPBOSS_TIME) then		-- 15·ÖÖÓ
 		posx, posy = fld_getadata(npcthiefpos)
-		npcindex = AddNpc(725, 85, SubWorld, posx, posy, 1, "Thñy tÆc ®Çu lÜnh", 1)
+		npcindex = AddNpc(725, 95, SubWorld, posx, posy, 1, "Thñy TÆc §Çu LÜnh", 1)
 		SetNpcDeathScript(npcindex, "\\script\\missions\\fengling_ferry\\bossdeath.lua");
-		Msg2MSAll(MISSIONID, "Thñy tÆc ®Çu lÜnh ®· xuÊt hiÖn.")
+		Msg2MSAll(MISSIONID, "<color=yellow>Thñy TÆc §Çu LÜnh ®· xuÊt hiÖn")
 	end
 	
 	if (t == UPBOSS_TIME2) then		-- 20·ÖÖÓ
 		posx, posy = fld_getadata(npcthiefpos)
-		npcindex = AddNpc(725, 85, SubWorld, posx, posy, 1, "Thñy tÆc ®Çu lÜnh", 1)
+		npcindex = AddNpc(725, 95, SubWorld, posx, posy, 1, "Thñy TÆc §Çu LÜnh", 1)
 		SetNpcDeathScript(npcindex, "\\script\\missions\\fengling_ferry\\bossdeath.lua");
-		Msg2MSAll(MISSIONID, "Thñy tÆc ®Çu lÜnh ®· xuÊt hiÖn.")
+		Msg2MSAll(MISSIONID, "<color=yellow>Thñy TÆc §Çu LÜnh ®· xuÊt hiÖn")
 		
 		if (check_new_shuizeitask() == 1) then
 			for i = 1, 2 do
 				posx, posy = fld_getadata(npcthiefpos)
-				AddNpc(1692, 85, SubWorld, posx, posy, 1, "Thñy TÆc §¹i §Çu LÜnh.", 1)
-				Msg2MSAll(MISSIONID, "Thñy TÆc §¹i §Çu LÜnh xuÊt hiÖn råi")
+				AddNpc(1692, 95, SubWorld, posx, posy, 1, "Thñy TÆc §¹i §Çu LÜnh.", 1)
+				SetNpcDeathScript(npcindex, "\\script\\missions\\fengling_ferry\\bossdeath.lua");				
+				Msg2MSAll(MISSIONID, "<color=yellow>Thñy TÆc §¹i §Çu LÜnh xuÊt hiÖn")
 			end
 		end
 	end
 	
 	if (t == UPBOSS_TIME3) then
 		posx, posy = fld_getadata(npcthiefpos)
-		npcindex = AddNpc(725, 85, SubWorld, posx, posy, 1, "Thñy tÆc ®Çu lÜnh", 1)
+		npcindex = AddNpc(725, 95, SubWorld, posx, posy, 1, "Thñy TÆc §Çu LÜnh", 1)
 		SetNpcDeathScript(npcindex, "\\script\\missions\\fengling_ferry\\bossdeath.lua");
-		Msg2MSAll(MISSIONID, "Thñy tÆc ®Çu lÜnh ®· xuÊt hiÖn.")
+		Msg2MSAll(MISSIONID, "<color=yellow>Thñy TÆc §Çu LÜnh ®· xuÊt hiÖn")
 	end		
 	
 	-- »îÔ¾¶È
@@ -83,7 +79,7 @@ function fld_addhuoyuedu(nPassedTime)
 	for i=1, nCount do 
 		nIndex, nPlayerIndex = GetNextPlayer(MISSIONID, nIndex, 0)
 		if (nPlayerIndex > 0) then
-			DynamicExecuteByPlayer(nPlayerIndex, "\\script\\huoyuedu\\huoyuedu.lua", "tbHuoYueDu:AddHuoYueDu", "fenglingdu")
+			--DynamicExecuteByPlayer(nPlayerIndex, "\\script\\huoyuedu\\huoyuedu.lua", "tbHuoYueDu:AddHuoYueDu", "fenglingdu")
  		end
 		if (nIndex == 0) then
 	 		break

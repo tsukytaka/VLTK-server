@@ -64,33 +64,8 @@ function TaskContent()
 		--return
 	--end
 	local flag = 0
-	
-	
-		
-	if (nTime >= 900 and nTime < 1100) then
-		flag = 1
-	end
-	if (nTime >= 1100 and nTime < 1300) then
-		flag = 1
-	end
 
-	if (nTime >= 1300 and nTime < 1500) then
-		flag = 1
-	end
-
-	if (nTime >= 1500 and nTime < 1700) then
-		flag = 1
-	end
-
-	if (nTime >= 1700 and nTime < 1900) then
-		flag = 1
-	end
-
-	if (nTime >= 1900 and nTime < 2100) then
-		flag = 1
-	end
-
-	if (nTime >= 2100 and nTime < 2300) then
+	if (nTime >= 2100 and nTime < 2200) then
 		flag = 1
 	end
 

@@ -20,11 +20,11 @@ tab_Exp = {
 --ÖÐÇï»î¶¯Èë¿Úº¯Êý
 function main()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	--if (nDate < AU06_BEGINDATE or nDate >= AU06_ENDDATE or 
-	--		gb_GetTask("midautumn2006_city_all", 1) ~= 0) then
-	--	Say("B¸nh Trung thu chØ ®­îc dïng tõ 30/9 ®Õn 16/11.B¸nh Trung thu chØ ®­îc dïng tõ 30/9 ®Õn 16/11.", 0);
-	--	return 1;
-	--end;
+	if (nDate < AU06_BEGINDATE or nDate >= 20061117 or 
+			gb_GetTask("midautumn2006_city_all", 1) ~= 0) then
+		Say("B¸nh Trung thu chØ ®­îc dïng tõ 30/9 ®Õn 16/11.B¸nh Trung thu chØ ®­îc dïng tõ 30/9 ®Õn 16/11.", 0);
+		return 1;
+	end;
 	
 	if (au06_IsPayed_player() == 0) then
 		Say("ChØ cã ng­êi ch¬i n¹p thÎ míi cã thÓ ¨n b¸nh trung thu", 0);

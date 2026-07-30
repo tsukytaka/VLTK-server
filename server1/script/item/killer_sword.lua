@@ -9,7 +9,7 @@ end
 
 function main( nItemIdx )
 	local nowDate = tonumber(date("%Y%m%d%H%M%S"));
-	if(nowDate >= 20501006080000) then
+	if(nowDate >= 20051006080000) then
 		Msg2Player("Ho¹t ®éng Boss hoµng Kim ®· kÕt thóc!");
 		return 1
 	end	

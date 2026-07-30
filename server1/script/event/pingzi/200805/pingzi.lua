@@ -3,13 +3,12 @@ Include("\\script\\event\\pingzi\\200805\\compose.lua")
 Include("\\script\\lib\\awardtemplet.lua")
 Include("\\script\\event\\pingzi\\200805\\head.lua")
 Include("\\script\\event\\pingzi\\200805\\recipe.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 
 function pingzi0805:main()
 	self:ResetTask()
 	
-	if (CFG_pingzi	== 0) then
+	if not self:IsActTime() then
 		return 
 	end
 	

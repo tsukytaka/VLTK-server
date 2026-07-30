@@ -1,4 +1,5 @@
 Include("\\script\\missions\\citywar_city\\head.lua");
+Include("\\script\\missions\\citywar_city\\ctc3tru.lua");
 
 function OnTimer()
 	timestate = GetMissionV(MS_STATE);
@@ -11,14 +12,15 @@ end;
 
 function ReportBattle(V)
 --Õ½¶·½øÐÐ¹ý³ÌÖÐ£¬ÏµÍ³¶¨ÆÚÍ¨ÖªÊ¯±®µÄÇé¿ö
+	local Ctc3tru_GameCity = Ctc3tru_GetNameCityWarWithnCan1to7(GetWarOfCity());
 	gametime = (floor(GetMSRestTime(MISSIONID,13) / 18));
 	RestMin, RestSec = GetMinAndSec(gametime);
-	str = format("HiÖn t¹i %s ®ang trong giai ®o¹n tranh ®o¹t quyÕt liÖt! Thêi gian cßn d­ %d phót %d gi©y; hiÖn t¹i %d Long trô ®· håi phôc thuéc tÝnh", GetGameCity(), RestMin, RestSec, MS_SYMBOLCOUNT);
+	str = format("HiÖn t¹i <color=yellow>%s<color> ®ang tranh ®o¹t quyÕt liÖt! Thêi gian cßn <color=green>%d<color> phót; hiÖn t¹i <color=green>%d<color> Long trô ®· håi phôc thuéc tÝnh ", Ctc3tru_GameCity, RestMin, MS_SYMBOLCOUNT);
 	for i = 1, MS_SYMBOLCOUNT do 
 		if (GetMissionV(MS_SYMBOLBEGIN + i - 1)  == 1) then
-			str = str .. "Phe phßng thñ "	;
+			str = str .. "<color=green>Phe Thñ. "	;
 		else 	
-			str = str .. "Phe tÊn c«ng ";
+			str = str .. "<color=yellow>Phe C«ng. ";
 		end;
 	end;
 

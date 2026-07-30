@@ -224,3 +224,26 @@ Status222	\spr\skill\others\skill_90_como.spr	Foot	Loop	0	0	15	1	15	1	Co mo KT
 Status223	\spr\skill\others\skill_90x_como.spr	Foot	Loop	0	0	15	1	15	1	Co mo KT
 Status224	\spr\skill\others\skill_110_como.spr	Head	Loop	0	0	15	1	15	1	Co mo KT
 Status225	\spr\skill\others\skill_120_como.spr	Foot	Loop	0	0	15	1	15	1	Co mo KT
+Status226	\spr\rank\rankvip1.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 1
+Status227	\spr\rank\rankvip2.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 2
+Status228	\spr\rank\rankvip3.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 3
+Status229	\spr\rank\rankvip4.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 4
+Status230	\spr\rank\rankvip5.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 5
+Status231	\spr\rank\rankvip6.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 6
+Status232	\spr\rank\rankvip7.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 7
+Status233	\spr\rank\rankvip8.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 8
+Status234	\spr\rank\rankvip9.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 9
+Status235	\spr\rank\rankvip10.spr	Head	Loop	0	0	10	1	10	1	Danh Hi÷u V.I.P 10
+Status236	\spr\rank\foot01.spr	Foot	Loop	0	0	10	1	10	1	Vﬂng s∏ng
+Status237	\spr\rank\foot02.spr	Foot	Loop	0	0	10	1	10	1	Vﬂng s∏ng
+Status238	\spr\rank\foot03.spr	Foot	Loop	0	0	10	1	10	1	Vﬂng s∏ng
+Status239	\spr\rank\foot04.spr	Foot	Loop	0	0	10	1	10	1	Vﬂng s∏ng
+Status240	\spr\rank\foot05.spr	Foot	Loop	0	0	10	1	10	1	Vﬂng s∏ng
+Status241	\spr\rank\foot06.spr	Foot	Loop	0	0	10	1	10	1	Vﬂng s∏ng
+Status242	\spr\rank\foot07.spr	Foot	Loop	0	0	10	1	10	1	Vﬂng s∏ng
+Status243	\spr\rank\wing_blue.spr	Body	Loop	0	0	10	1	10	1	C∏nh b≠Ìm xanh
+Status244	\spr\rank\wing_orange.spr	Body	Loop	0	0	10	1	10	1	C∏nh b≠Ìm cam
+Status245	\spr\rank\wing_purple.spr	Body	Loop	0	0	10	1	10	1	C∏nh b≠Ìm t›m
+Status246	\spr\rank\rankdaithanh.spr	Head	Loop	0	0	15	1	15	1	Danh hi÷u ßπi Th∏nh
+Status247	\spr\rank\ranksieuthan.spr	Head	Loop	50	100	10	1	10	1	Danh hi÷u Si™u Th«n
+Status248	\spr\rank\rankgm.spr	Head	Loop	0	0	10	1	10	1	Danh hi÷u GM

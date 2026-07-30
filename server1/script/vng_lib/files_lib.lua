@@ -25,18 +25,11 @@ end
 
 tbVngLib_File = {}
 
-function tbVngLib_File:Table2File(filePath, strFileName, strMode, tbData)
-	
+function tbVngLib_File:Table2File(filePath, strFileName, strMode, tbData)	
 	local file = openfile(filePath..strFileName, strMode)
 	if file == nil then
 		execute(format("mkdir -p %s", filePath))
 		file = openfile(filePath..strFileName, strMode)
-		
-		--NÕu ko cã thu môc sÏ t¹o ra 1 file b¸o lçi ®Ó biÕt ®Ó admin t¹o thu môc
-		file =format("Logs/script/Chua tao thu muc %s.txt",GetLocalDate("%m-%d-%Y"))
-		file_op = openfile( file, "a+" )  --- a+ la vit them hem xoa file dau -- w+ -- la che do doc ghi xoa file dau  
-    		write(file_op,filePath..strFileName,"\n") 
-    		closefile(file_op) 
 	end
 	if type(tbData[1]) == "table" then
 		for row = 1, getn(tbData) do

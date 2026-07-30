@@ -53,27 +53,27 @@ tbTreeMap = {
 tbTreeName = {
 	[1] = "C©y Hoa Hång",
 	[2] = "C©y §a",
---	[3] = "Thiªn TuÕ ThÞnh V­îng",
---	[4] = "Thiªn TuÕ Tµi Léc",
---	[5] = "Thiªn TuÕ Ngµn N¨m",
---	[6] = "Thiªn TuÕ May M¾n",
---	[7] = "Thiªn TuÕ NguyÖt ThÇn",
---	[8] = "Thiªn TuÕ BÊt Tö",
---	[9] = "Thiªn TuÕ Hoµng Kim",
---	[10] = "Thiªn TuÕ B¹ch Kim",
+	[3] = "Thiªn TuÕ ThÞnh V­îng",
+	[4] = "Thiªn TuÕ Tµi Léc",
+	[5] = "Thiªn TuÕ Ngµn N¨m",
+	[6] = "Thiªn TuÕ May M¾n",
+	[7] = "Thiªn TuÕ NguyÖt ThÇn",
+	[8] = "Thiªn TuÕ BÊt Tö",
+	[9] = "Thiªn TuÕ Hoµng Kim",
+	[10] = "Thiªn TuÕ B¹ch Kim",
 }
---tbTreeRate = {
---	[1] = 50,
---	[2] = 30,
---	[3] = 13.09,
---	[4] = 3,
---	[5] = 2,
---	[6] = 1,
---	[7] = 0.5,
---	[8] = 0.14,
---	[9] = 0.07,
---	[10] = 0.2,
---}
+tbTreeRate = {
+	[1] = 50,
+	[2] = 30,
+	[3] = 13.09,
+	[4] = 3,
+	[5] = 2,
+	[6] = 1,
+	[7] = 0.5,
+	[8] = 0.14,
+	[9] = 0.07,
+	[10] = 0.2,
+}
 
 tbMaterial_ = {
 [1] = {tbProp = {4,417,1,1,0,0},nCount=67},

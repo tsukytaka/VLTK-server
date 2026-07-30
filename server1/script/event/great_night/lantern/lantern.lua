@@ -3,7 +3,6 @@
 IncludeLib("FILESYS")
 Include("\\script\\event\\great_night\\lantern\\create_lanterns.lua")
 Include("\\script\\tong\\tong_award_head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua");
 
 LANTERN_TSKID_DATE	= 1604;
 LANTERN_TSKID_WCNT	= 1605;
@@ -11,11 +10,6 @@ MX_LANTERN_COUNT	= 30;
 LANTERN_FILE = "\\settings\\event\\zhongqiuhuodong\\zhongqiudengmi.txt"
 
 function main()
-	if (CFG_GreatNight == 0) then
-		Say("Hi÷n tπi t›nh n®ng nµy ch≠a mÎ ! ! !", 0)
-		return
-	end
-
 	local npcidx = GetLastDiagNpc()
 	if (GetNpcParam(npcidx, 4) == 0 ) then
 		return

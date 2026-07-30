@@ -8,7 +8,7 @@ playerInTK = {}
 
 
 
-RANKS = { "Binh sÜ", "HiÖu óy", "Thèng LÜnh", "Phã tíng", "§¹i t­íng", "Nguyªn So¸i" }
+RANKS = { "Binh SÜ", "HiÖu óy", "Thèng LÜnh", "Phã T­íng", "§¹i T­íng", "Nguyªn So¸i" }
 
 ITEM_DROPRATE_TABLE = {
 	{ { 6, 1, 156, 1, 0, 0 }, { 0.003, 0.0200, 0.0520, 0.0400, 0.0500, 0.0600 } }, -- Õ½¹Ä
@@ -120,13 +120,12 @@ function OnDeath(nNpcIndex)
 		pointplayer .. " <color=yellow>®iÓm tÝch lòy ")
 
 	local rankname = "";
-	rankname = tbRANKNAME[currank] or ""
+	rankname = tbRANKNAME[currank]
 	launchrank = BT_GetData(PL_CURRANK)
-	launrankname = tbRANKNAME[launchrank] or ""
+	launrankname = tbRANKNAME[launchrank]
 
 	BT_SortLadder();
 	BT_BroadSelf();
-	BT_BroadAllLadder();	-- CACH B: re-broadcast ladder (co bot) -> F-key update
 
 	str = "Ng­êi ch¬i " ..
 		launrankname ..

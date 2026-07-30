@@ -57,5 +57,5 @@ function initialize()
 	DynamicExecute("\\script\\missions\\zhaojingling\\prepare\\preparegame.lua", "PrepareGame:Start")
 end
 
---AutoFunctions:Add(initialize)
+AutoFunctions:Add(initialize)
 

@@ -39,14 +39,14 @@ function messenger_main()
 	local name = GetName()
 
 	if ( messenger_middletime() == 10 ) then
-		Msg2Player("Xin lçi! "..name.."! B¹n ®· hÕt thêi gian thùc hiÖn nhiÖm vô TÝn sø! NhiÖm vô thÊt b¹i!.")
+		Msg2Player("ThËt xin lçi ! "..name.."! thêi gian nhiÖm vô tÝn sø ®· hÕt, nhiÖm vô thÊt b¹i !.")
 		losemessengertask()
 	else
-		Describe(DescLink_XiaoZhen..":"..name..", cã ph¶i ng­¬i ®· th«ng qua kh¶o nghiÖm cña Thiªn B¶o Khè, cã cÇn ra khái ¶i kh«ng?"
+		Describe(DescLink_XiaoZhen..":"..name..",cã ph¶i hay kh«ng ng­¬i ®· th«ng qua thiªn b¶o kho ®Ých kh¶o nghiÖm ? cÇn rêi ®i quan t¹p sao?"
 			,3
-			,"§óng! Ta muèn rêi khái/messenger_comeback"
-			,"Ta ch­a hoµn thµnh kh¶o nghiÖm, ta muèn ®i ra mét chót/messenger_icantdo"
-			,"Kh«ng ph¶i! Ta cßn muèn thö tiÕp/no")	
+		,"Ta muèn rêi ®i /messenger_comeback" 
+                ,"Ta cßn kh«ng hoµn thµnh kh¶o nghiÖm, ta muèn ®i ra ngoµi mét håi /messenger_icantdo" 
+                ,"Ta cßn muèn tiÕp tôc thö mét chót/no")	
 		
 		if ( Uworld1206 == 0 ) then 
                           Describe(DescLink_XiaoZhen..":"..name.." ,Ng­¬i cã ph¶i hay kh«ng ®· th«ng qua thiªn b¶o kho kh¶o nghiÖm, cÇn xuÊt quan ? ",3,"§óng vËy, ta ph¶i ra khái quan/messenger_comeback","Ta kh«ng xong thµnh kh¶o nghiÖm, bÊt qu¸ ta kh«ng muèn tiÕp tôc lµm /messenger_icantdo","Kh«ng ph¶i lµ, ta cßn muèn n÷a ng¬ ng¸c/no") 
@@ -74,19 +74,19 @@ function messenger_comeback()
 			--¸ù¾Ý¾È³öµÄÈËÊý¸øÓè¶ÔÓ¦½±Àø
 			if ( SubWorldIdx2ID( nMapIndex ) == 393 ) then
 				AddOwnExp(50000*Uworld1214)
-				local Uworld1205 = nt_getTask(1205)
+				local Uworld3000 = nt_getTask(3000)
 				nRealjifen = Uworld1214*16;
-				nt_setTask(1205,Uworld1214*16+Uworld1205)
+				nt_setTask(3000,Uworld1214*16+Uworld3000)
 			elseif ( SubWorldIdx2ID( nMapIndex ) == 394 ) then
 				AddOwnExp(100000*Uworld1214)
-				local Uworld1205 = nt_getTask(1205)
+				local Uworld3000 = nt_getTask(3000)
 				nRealjifen = Uworld1214*18;
-				nt_setTask(1205,Uworld1214*18+Uworld1205)
+				nt_setTask(3000,Uworld1214*18+Uworld3000)
 			elseif ( SubWorldIdx2ID( nMapIndex ) == 395 ) then
 				AddOwnExp(150000*Uworld1214)
-				local Uworld1205 = nt_getTask(1205)
+				local Uworld3000 = nt_getTask(3000)
 				nRealjifen = Uworld1214*24;
-				nt_setTask(1205,Uworld1214*24+Uworld1205)		
+				nt_setTask(3000,Uworld1214*24+Uworld3000)		
 			end				 
 			nt_setTask(1214,0)
 		end
@@ -113,16 +113,16 @@ function messenger_comeback()
 		
 		SetPos(1414,3197);
 	else
-		Describe(DescLink_XiaoZhen..": Xin l­îng thø, hiÖn t¹i ng­¬i vÉn ch­a hoµn thµnh môc tiªu cöa ¶i, ë trong b¶n ®å Thiªn B¶o Khè ng­¬i ph¶i dùa theo thø tù nhiÖm vô më ra 5 B¶o R­¬ng míi ®­îc xem lµ qua ¶i.",1,"KÕt thóc ®èi tho¹i/no")
+		Describe(DescLink_XiaoZhen..": ThËt xin lçi, tr­íc m¾t ng­¬i cßn ch­a hoµn thµnh x«ng quan môc tiªu, ë thiªn b¶o kho trªn b¶n ®å, ng­¬i cÇn dùa theo nhiÖm vô trËt tù më ra 5 c¸ b¶o r­¬ng míi cã thÓ coi nh­ lµ qu¸ quan.",1,"KÕt thóc ®èi tho¹i/no")
 	end
 end
 
 function messenger_icantdo()
 	if nt_getTask(1203) ==25 then
-		Talk(1, "", "NhiÖm vô cña ng­¬i ®· hoµn thµnh, hay lµ ta trùc tiÕp tiÔn ng­¬i ra khái ¶i nhÐ.")
+		Talk(1, "", "NhiÖm vô cña ng­¬i ®· hoµn thµnh, nÕu kh«ng ta trùc tiÕp ®­a ng­¬i xuÊt quan ®i.")
 		messenger_comeback()
 	else
-		Describe(DescLink_XiaoZhen..": Ng­¬i quyÕt ®Þnh rêi khái ­, nhiÖm vô ch­a hoµn thµnh ng­¬i vÉn cã thÓ quay l¹i bÊt cø lóc nµo!",2,"§óng! Ta muèn rêi khái/q_fallmessengertask","§Ó ta nghÜ l¹i xem sao/no")
+		Describe(DescLink_XiaoZhen..": Ng­¬i quyÕt ®Þnh ®i ra ngoµi sao ? nhiÖm vô kh«ng hoµn thµnh nh­ cò cã thÓ trë vÒ tíi, bÊt cø lóc nµo ®Òu ®­îc !",2,"Ta muèn rêi ®i /q_fallmessengertask","§Ó cho ta/no")
 	end
 end
 
@@ -140,19 +140,19 @@ function q_fallmessengertask()
 			--¸ù¾Ý¾È³öµÄÈËÊý¸øÓè¶ÔÓ¦½±Àø
 			if ( SubWorldIdx2ID( nMapIndex ) == 393 ) then
 				AddOwnExp(50000*Uworld1214)
-				local Uworld1205 = nt_getTask(1205)
+				local Uworld3000 = nt_getTask(3000)
                			nRealjifen = Uworld1214*16;
-				nt_setTask(1205,Uworld1214*16+Uworld1205)
+				nt_setTask(3000,Uworld1214*16+Uworld3000)
 			elseif ( SubWorldIdx2ID( nMapIndex ) == 394 ) then
 				AddOwnExp(100000*Uworld1214)
-				local Uworld1205 = nt_getTask(1205)
+				local Uworld3000 = nt_getTask(3000)
 				nRealjifen = Uworld1214*18;
-				nt_setTask(1205,Uworld1214*18+Uworld1205)
+				nt_setTask(3000,Uworld1214*18+Uworld3000)
 			elseif ( SubWorldIdx2ID( nMapIndex ) == 395 ) then
 				AddOwnExp(150000*Uworld1214)
-				local Uworld1205 = nt_getTask(1205)				
+				local Uworld3000 = nt_getTask(3000)				
                                 nRealjifen = Uworld1214*24;
-				nt_setTask(1205,Uworld1214*24+Uworld1205)		
+				nt_setTask(3000,Uworld1214*24+Uworld3000)		
 
 			end				 
 			nt_setTask(1214,0)

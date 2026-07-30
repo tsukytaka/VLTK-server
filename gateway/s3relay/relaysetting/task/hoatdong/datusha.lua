@@ -54,10 +54,7 @@ function TaskContent()
 		OutputMsg("XOA XEP HANG LOAN CHIEN CUC CHAU COC")
 	end
 	local flag = 0
-	if (nTime >= 1200 and nTime < 1300) then	
-		flag = 1
-
-	elseif (nTime >= 1900 and nTime < 2200) then
+	if (nTime >= 1600 and nTime < 1700) then	
 		flag = 1
 	end
 	if flag == 1 then

@@ -5,7 +5,6 @@
 --Ê¹ÓÃ·½·¨£ºÓÒ¼üµã»÷Ê¹ÓÃ
 --Ê¹ÓÃ½ØÖ¹Ê±¼ä£º2008Äê05ÔÂ18ÈÕ24µã00·Ö
 Include("\\script\\lib\\awardtemplet.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 jiefang_0804_luckybox_Award = 
 {
 	{szName="M¶nh cê 1", tbProp={6, 1, 1735, 1, 0, 0}, nRate = 50},
@@ -19,7 +18,7 @@ function main()
 		return 1;
 	end
 	local nDate = tonumber(GetLocalDate("%Y%m%d"))
-	if (CFG_jiefang_jieri2008	==	0) then
+	if nDate > 20080518 then
 		Say("VËt phÈm qu¸ h¹n sö dông, tù ®éng mÊt ®i.", 0);
 		return 0;
 	end 

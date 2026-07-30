@@ -15,7 +15,7 @@ BINGO_MAX_RATE = 10000
 BINGO_AWARD_RATE =
 {	
 	--Change flag rate - Modified By DinhHQ - 20120524
-	{2205, 205, 80}, -- 0ÐÇ, ³ý±¦ÏäÖ®Íâ¸÷ÖÖÎïÆ·µÄ¸ÅÂÊÏàÍ¬
+	{2205, 205, 80}, -- 0ÐÇ, ³ý±¦ÏäÖ®Íâ¸÷ÖÖÎïÆ·µÄ¸ÅÂÊÏàÍ¬    (2205 tû lÖ quay 1 sao, 205 tû lÖ quay 2 sao, 80 tû lÖ quay ra 3 sao)
 	{2100, 150, 10}, -- 1ÐÇ, ³ýÉÏ´ÎÖÐµÄÎïÆ·Íâ,ÆäËüÎïÆ·µÄ¸ÅÂÊÏàÍ¬
 	{2100, 100, 10}, -- ...
 	{2400, 100, 10},
@@ -95,7 +95,7 @@ function BingoMachine:OnRotate(nOdds)
 		self:SendResult(ROTATE_ERROR_STATUS, nCount, 0, 0)
 	end
 	
-	local nCount = CalcEquiproomItemCount(6,1,2312,1)
+	local nCount = CalcEquiproomItemCount(4,417,1,1) --(6,1,2312,1)
 	if Gambler:GetState() ~= STATE_NORMAL then
 		self:SendResult(ROTATE_ERROR_STATUS, nCount, 0, 0)
 		return
@@ -143,7 +143,7 @@ function BingoMachine:OnRotate(nOdds)
 	if nFinalLevel > OVERFLOW_LEVEL  then
 		self:ApplyBigAward(GetName())
 	else
-		nCount = CalcEquiproomItemCount(6,1,2312,1)
+		nCount = CalcEquiproomItemCount(4,417,1,1) --(6,1,2312,1)
 		self:SendResult(ROTATE_SUCCESS, nCount, nNewType, nNewLevel)		
 	end
 end
@@ -172,7 +172,7 @@ function BingoMachine:RecvBigAward(nParam, nResultHandle)
 		local strLogs = GetAccount().."\t"..GetName().."\tBingoMachine\tBitAward\t".. nCoin .. "\t" .. nTotalCoin
 		WriteLog(strLogs)
 		local nType, nLevel = CallPlayerFunction(nPlayerIndex, Gambler.GetResult, Gambler)
-		local nCount = CalcEquiproomItemCount(6,1,2312,1)
+		local nCount = CalcEquiproomItemCount(4,417,1,1) --(6,1,2312,1)
 		self:SendResult(ROTATE_SUCCESS, nCount, nType, nLevel)
 		Gambler:SetState(STATE_AWARD)
 	else
@@ -278,9 +278,9 @@ function BingoMachine:OnGetAward(nSelType)
 			self:SendGetAwardResult(S2C_GET_AWARD_ERR_NO_SPACE, 0)
 			return
 		end
-		local tbAward = {szName = "Hçn Nguyªn Linh Lé", tbProp = {6,1,2312,1,0,0}}
+		local tbAward = {szName = "TiÒn §ång", tbProp = {4,417,1,1,0,0}} --tbProp = {6,1,2312,1,0,0}}
 		PlayerFunLib:GetItem(tbAward, nCount, "", "")
-		strAwardDesc = nCount .. "Hçn Nguyªn Linh Lé"
+		strAwardDesc = nCount .. "TiÒn §ång"
 		strAward = "Refining\t" .. nCount
 	end
 
@@ -288,17 +288,17 @@ function BingoMachine:OnGetAward(nSelType)
 	WriteLog(strLogs)
 	
 	if nCoin > 0 then
-		local nItemIndex = AddItem(6,1,3060,1,0,0);	
+		local nItemIndex = AddItem(4,417,1,1,0,0); --(6,1,2312,1,0,0)	
 		SetSpecItemParam(nItemIndex, 1, nCoin)
 		SyncItem(nItemIndex)	
-		Say(format("Ng­¬i nhËn ®­îc 1 LÔ Bao chøa %d Hçn Nguyªn Linh Lé!", nCoin), 0);			
-		AddGlobalNews(format("Ng­êi ch¬i:  <color=green>%s<color> nhËn ®­îc %d Hçn Nguyªn Linh Lé trong Th¸i Kim Tr× cña Phong V©n B¶o §iÖn !!!", GetName(), nCoin))
-		Msg2SubWorld(format("Ng­êi ch¬i:  <color=green>%s<color> nhËn ®­îc %d Hçn Nguyªn Linh Lé trong Th¸i Kim Tr× cña Phong V©n B¶o §iÖn !!!", GetName(), nCoin))
+		Say(format("Ng­¬i nhËn ®­îc 1 LÔ Bao chøa %d TiÒn §ång!", nCoin), 0);			
+		AddGlobalNews(format("Ng­êi ch¬i:  <color=green>%s<color> nhËn ®­îc %d TiÒn §ång trong Th¸i Kim Tr× cña Vßng Quay May M¾n !!!", GetName(), nCoin))
+		Msg2SubWorld(format("Ng­êi ch¬i:  <color=green>%s<color> nhËn ®­îc %d TiÒn §ång trong Th¸i Kim Tr× cña Vßng Quay May M¾n !!!", GetName(), nCoin))
 	end
 	Gambler:SetBigAward(0)
 	Gambler:SetState(STATE_NORMAL)
 	Gambler:SetFinalAward(0, 0)
-	local nCount = CalcEquiproomItemCount(6,1,2312,1)
+	local nCount = CalcEquiproomItemCount(4,417,1,1) --(6,1,2312,1)
 	self:SendGetAwardResult(S2C_GET_AWARD_SUCCESS, nCount)
 end
 
@@ -318,7 +318,7 @@ function BingoMachine:Add2PrizePool(nCoin)
 end
 
 function OpenBingoMachine()
-	local nCount = CalcEquiproomItemCount(6,1,2312,1)
+	local nCount = CalcEquiproomItemCount(4,417,1,1) --(6,1,2312,1)
 	local handle = OB_Create()
 	ObjBuffer:PushByType(handle, OBJTYPE_NUMBER, Gambler:GetState())
 	ObjBuffer:PushByType(handle, OBJTYPE_NUMBER, Gambler:GetOdds())
@@ -329,4 +329,4 @@ function OpenBingoMachine()
 	ScriptProtocol:SendData("emSCRIPT_PROTOCOL_BINGO_OPENWINDOW", handle)
 	OB_Release(handle)
 end
-pEventType:Reg("LÔ Quan", "Phong V©n B¶o §iÖn", OpenBingoMachine, {})
+-- pEventType:Reg("LÔ Quan", "Phong V©n B¶o §iÖn", OpenBingoMachine, {})

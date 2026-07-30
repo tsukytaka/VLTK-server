@@ -312,6 +312,7 @@ tbConfig[18] =
 	nStartDate = nil,
 	nEndDate  = nil,
 	tbMessageParam = {"<npc>Xem ra giang hå l¹i cã mét phen dËy sãng"},
+
 	tbCondition = 
 	{
 	},

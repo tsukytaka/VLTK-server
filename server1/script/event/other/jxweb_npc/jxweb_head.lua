@@ -10,9 +10,9 @@ Include("\\script\\task\\system\\task_string.lua");	-- 对话处理头文件
 
 -- COMMON 常量 --
 JxWeb_Start_Date	= 20090501;		-- 活动起始时间
-JxWeb_End_Date		= 20500523;		-- 领取限期
-JxWeb_Item_End_Date	= 20500529;		-- 道具使用期限
-JxWeb_Item_Expire_Date	= 20500530;		-- 连心丹使用限期 2009-05-29 24：00
+JxWeb_End_Date		= 20200523;		-- 领取限期
+JxWeb_Item_End_Date	= 20200529;		-- 道具使用期限
+JxWeb_Item_Expire_Date	= 20200530;		-- 连心丹使用限期 2009-05-29 24：00
 
 
 -- TSK 任务变量 --

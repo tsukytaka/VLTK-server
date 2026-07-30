@@ -1,9 +1,7 @@
-
-
 Include("\\script\\lib\\objbuffer_head.lua")
 Include("\\script\\missions\\arena\\rule.lua")
 Include("\\script\\dailogsys\\dailogsay.lua")
-
+Include("\\script\\event\\bingo_machine\\bingo_machine_gs.lua")
 
 Include("\\script\\global\\logout_head.lua")
 IncludeLib("SETTING")
@@ -195,43 +193,7 @@ end
 
 
 function apply_signup()
-	--§ãng chøc n¨ng c¶nh kü tr­êng  - Modified By NgaVN - 20120305
-	do return end
-	local nMapId = GetWorldPos()
-	if not %tbAccMapList[nMapId] then
-		return Talk(1, "", "ChØ cã thÓ b¸o danh t¹i t©n thñ th«n hoÆc thµnh thÞ.")
-	end
-
-	if ST_IsTransLife() ~= 1  and GetLevel() < 125 then
-		return Talk(1, "", "CÊp 125 trë lªn míi ®­îc b¸o danh.")
-	end
-
-	local _, nValue = GetRoleEquipValue()
-	if nValue < 400 then
-		return Talk(1, "", "Gi¸ trÞ binh gi¸p 400 trë lªn míi ®­îc b¸o danh.")
-	end
-
-	local nMapId = GetWorldPos()
-	if not tbPlayer:CheckState() then
-		return Talk(1, "", "Trong tr¹ng th¸i ñy th¸c hoÆc bµy b¸n kh«ng thÓ b¸o danh.")
-	end
-	
-	local nRank = tbPlayer:GetRank()
-	local nGroup = 0	
-	if nRank < 1200 then
-		nGroup = 1
-	elseif 1200 <= nRank and nRank <= 2599 then
-		nGroup = ceil((nRank - 1200 + 1)/50 + 1)
-	else
-		nGroup = ceil((2600 - 1200 + 1)/50 + 1)
-	end
-	
-	local handle = OB_Create()
-	ObjBuffer:PushObject(handle, GetName())
-	ObjBuffer:PushObject(handle, nGroup)
-	if nGroup > 0 then
-		RemoteExecute("\\script\\missions\\arena\\protocol.lua", "apply_search_opponents", handle, "signup_callback")
-	end
-	OB_Release(handle)
+	OpenBingoMachine()
 end
+
 

@@ -1,26 +1,27 @@
--- 战役系统
--- Fanghao_Wu 2004-12-6
 function GameSvrConnected(dwGameSvrIP)
 	SyncAllLadder(dwGameSvrIP)
-end;
+end
+
 function GameSvrReady(dwGameSvrIP)
 end
 
 function TaskShedule()
-	-- 设置方案名称
-	TaskName( "Relay BANG XEP HANG" );
-	-- 10分钟一次
-	TaskInterval( 2440 );
-	-- 设置触发次数，0表示无限次数
-	TaskCountLimit( 0 );
-	-- 输出启动消息
-	--OutputMsg( "=======================>Xoa thong tin Xep Hang<========================" );
-	for i=10001, 10300 do 
+	TaskName( "Relay b秐g x誴 h筺g" )
+	TaskInterval( 1440 )
+	TaskCountLimit( 0 )
+	OutputMsg("==========================================================================================")
+	OutputMsg("                           Ladder startup. . . 10.001 -> 10500")
+	OutputMsg("==========================================================================================")
+	for i=10001, 10500 do
 		LoadLadder(i)
 	end
-	
 end
 
 function TaskContent()
-	OutputMsg( "===> Bang Xep Hang Khoi Dong Hoan Tat<===" );
+	OutputMsg("Khoi dong lai bang Xep Hang" )
+	OutputMsg("==========================================================================================")
+	OutputMsg(" ")
+	OutputMsg("                              VO LAM TRUYEN KY OFFLINE by MEL  ")
+	OutputMsg(" ")
+	OutputMsg("==========================================================================================")
 end

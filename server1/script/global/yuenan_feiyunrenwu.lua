@@ -79,10 +79,10 @@ function v_fy_awardcheck(nLevel)
 		return 0;
 	end;
 	
---	if (v_fy_is_newrole() == 0) then
---		Say("B¹n kh«ng ph¶i ch¬i tõ tµi kho¶n míi, kh«ng thÓ nhËn th­ëng.", 0);
---		return 0;
---	end;
+	if (v_fy_is_newrole() == 0) then
+		Say("B¹n kh«ng ph¶i ch¬i tõ tµi kho¶n míi, kh«ng thÓ nhËn th­ëng.", 0);
+		return 0;
+	end;
 	return 1;
 end;
 
@@ -93,13 +93,6 @@ function v_fy_tkvalueadd(nTaskID, nAddend)
 end;
 
 --	common interface above
-function v_fy_entrance()
-	Say("Kim binh thÕ m¹nh nh­ th¸c lò, T­¬ng D­¬ng s¾p thÊt thñ!, Hoµng Th­îng ®· tô häp anh hïng nghÜa sü kh¾p n¬i bµn b¹c tİnh kÕ, ®ång thêi ban tÆng 1 mãn trang bŞ tri ©n c¸c anh hïng hµo kiÖt ®¹t ®Õn cÊp 60, 90, 100.", 4, 
-	"NhËn phÇn th­ëng cÊp 60/v_fy_60_next",
-	"NhËn phÇn th­ëng cÊp 90/v_fy_90_next",
-	"NhËn phÇn th­ëng cÊp 100/v_fy_100_next",
-	"Nh©n tiÖn ghĞ xem th«i!/no");
-end;
 
 --	field level 60:	Prize when a role level up at 60:
 function v_fy_60_entrance()
@@ -112,7 +105,7 @@ function v_fy_60_next()
 	local tab_Content = {
 		"Ta muèn nhËn Giíi chØ/v_fy_60_ring",
 		"Ta muèn nhËn ngäc béi (h­¬ng nang)/v_fy_60_yu",
-		"Hé th©n phï (H¹ng liªn)/v_fy_60_necklace",
+		" Hé th©n phï (H¹ng liªn)/v_fy_60_necklace",
 		"Rêi khái/no"
 	};
 	Say("Ng­¬i muèn nhËn phÇn th­ëng g×?", getn(tab_Content), tab_Content);

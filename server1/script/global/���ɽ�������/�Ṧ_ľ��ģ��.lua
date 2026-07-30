@@ -3,7 +3,7 @@
 
 function learn()
 	UTask_world32 = GetTask(32)
-	if UTask_world32 and (UTask_world32 >= 140) and (UTask_world32 < 190) then
+	if (UTask_world32 >= 140) and (UTask_world32 < 190) then
 		SetTask(32,GetTask(32)+1)
 	end
 end;

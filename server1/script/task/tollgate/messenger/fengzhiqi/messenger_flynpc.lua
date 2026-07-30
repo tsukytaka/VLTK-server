@@ -17,24 +17,24 @@ function main()
 	local Uworld1206 = nt_getTask(1206)
 	local name = GetName()
 	
-	if ( messenger_middletime() == 10  ) then
-		Msg2Player("Xin lçi! "..name.."! B¹n ®· hÕt thêi gian thùc hiÖn nhiÖm vô Tİn sø! NhiÖm vô thÊt b¹i!.")
-		losemessengertask()
-	else
-		if ( Uworld1206 == 0 ) then
-			Describe(DescLink_BaiYi..":"..name..", Kh«ng ph¶i b¹n ®· v­ît qua thö th¸ch cña Phong Kú sao? Muèn xuÊt quan µ?",3,"§óng! Ta muèn rêi khái/messenger_comeback","Ta ch­a hoµn thµnh kh¶o nghiÖm, nh­ng kh«ng muèn tiÕp tôc lµm n÷a/messenger_icantdo","Kh«ng ph¶i! Ta cßn muèn thö tiÕp/no")	
-		elseif ( Uworld1206 == 1 ) then
-			Describe(DescLink_BaiYi..": Tİn Sø LÖnh - Méc"..name..", Kh«ng ph¶i b¹n ®· v­ît qua thö th¸ch cña Phong Kú sao? Muèn xuÊt quan µ?",3,"§óng! Ta muèn rêi khái/messenger_comeback","Ta ch­a hoµn thµnh kh¶o nghiÖm, nh­ng kh«ng muèn tiÕp tôc lµm n÷a/messenger_icantdo","Kh«ng ph¶i! Ta cßn muèn thö tiÕp/no")
-		elseif ( Uworld1206 == 2 ) then
-			Describe(DescLink_BaiYi..": Tİn sø lÖnh - §ång"..name.."§¹i nh©n! Cã ph¶i ng­êi ®· v­ît qua thö th¸ch cña Phong Kú sao? Muèn xuÊt quan µ?",3,"§óng! Ta muèn rêi khái/messenger_comeback","Ta ch­a hoµn thµnh kh¶o nghiÖm, nh­ng kh«ng muèn tiÕp tôc lµm n÷a/messenger_icantdo","Kh«ng ph¶i! Ta cßn muèn thö tiÕp/no")
-		elseif ( Uworld1206 == 3 ) then
-			Describe(DescLink_BaiYi..": Tİn sø lÖnh - B¹c"..name.."§¹i nh©n! Cã ph¶i ng­êi ®· v­ît qua thö th¸ch cña Phong Kú sao? Muèn xuÊt quan µ?",3,"§óng! Ta muèn rêi khái/messenger_comeback","Ta ch­a hoµn thµnh kh¶o nghiÖm, nh­ng kh«ng muèn tiÕp tôc lµm n÷a/messenger_icantdo","Kh«ng ph¶i! Ta cßn muèn thö tiÕp/no")
-		elseif ( Uworld1206 == 4 ) then
-			Describe(DescLink_BaiYi..": Tİn sø lÖnh - Vµng"..name.."§¹i nh©n! Cã ph¶i ng­êi ®· v­ît qua thö th¸ch cña Phong Kú sao? Muèn xuÊt quan µ?",3,"§óng! Ta muèn rêi khái/messenger_comeback","Ta ch­a hoµn thµnh kh¶o nghiÖm, nh­ng kh«ng muèn tiÕp tôc lµm n÷a/messenger_icantdo","Kh«ng ph¶i! Ta cßn muèn thö tiÕp/no")
-		elseif ( Uworld1206 == 5 ) then
-			Describe(DescLink_BaiYi..": Ngù Tø lÖnh bµi - Vµng"..name.."§¹i nh©n! Ta ch­a thÊy qua Ngù Tø Kim bµi, h«m nay coi nh­ ®­îc më mang tÇm nh×n! ¤ng thËt lîi h¹i!  Ng­êi ®· v­ît qua thö th¸ch cña Phong Kú, muèn xuÊt quan ­?",3,"§óng! Ta muèn rêi khái/messenger_comeback","Ta ch­a hoµn thµnh kh¶o nghiÖm, nh­ng kh«ng muèn tiÕp tôc lµm n÷a/messenger_icantdo","Kh«ng ph¶i! Ta cßn muèn thö tiÕp/no")
-		end
-	end
+	if ( messenger_middletime() == 10 ) then 
+               Msg2Player("ThËt xin lçi ! "..name.."! ng­¬i ®· kh«ng cßn thêi gian nhiÖm vô tİn sø, nhiÖm vô thÊt b¹i !.") 
+               losemessengertask() 
+       else 
+            if ( Uworld1206 == 0 ) then 
+                Describe(DescLink_BaiYi..":"..name..", Ng­¬i kh«ng ph¶i lµ ®· xuyªn qua phong kş khiªu chiÕn sao ? NghÜ ra quan a ?",3,"Ta muèn rêi ®i/messenger_comeback","Ta vÉn ch­a hoµn thµnh kh¶o nghiÖm, nh­ng kh«ng thÓ tiÕp tôc lµm/messenger_icantdo","Kh«ng ph¶i, ta cßn muèn tiÕp tôc lµm/no") 
+            elseif ( Uworld1206 == 1 ) then 
+                Describe(DescLink_BaiYi..": Tİn sø lÖnh - méc "..name..", ng­¬i kh«ng ph¶i lµ ®· xuyªn qua phong kş khiªu chiÕn sao ? NghÜ ra quan a ?",3,"Ta muèn rêi ®i /messenger_comeback","Ta kh«ng hoµn thµnh kh¶o nghiÖm, nh­ng lµ kh«ng muèn tiÕp tôc lµm /messenger_icantdo","Kh«ng ph¶i lµ, ta cßn muèn tiÕp tôc/no") 
+            elseif ( Uworld1206 == 2 ) then 
+                Describe(DescLink_BaiYi..": Tİn sø lÖnh - ®ång "..name.." ®¹i nh©n, cã ph¶i hay kh«ng ng­¬i ®· qua liÔu phong kş ®İch khiªu chiÕn ? NghÜ ra quan ph¶i kh«ng ?",3,"Ta muèn rêi ®i /messenger_comeback","Ta kh«ng hoµn thµnh kh¶o nghiÖm, nh­ng lµ kh«ng muèn tiÕp tôc lµm /messenger_icantdo","Kh«ng ph¶i lµ , ta cßn muèn tiÕp tôc /no") 
+            elseif ( Uworld1206 == 3 ) then 
+                Describe(DescLink_BaiYi..": Tİn sø lÖnh - ng©n "..name.." ®¹i nh©n, cã ph¶i hay kh«ng ng­¬i ®· qua liÔu phong kş ®İch khiªu chiÕn ? NghÜ ra quan ph¶i kh«ng ?",3,"Ta muèn rêi ®i /messenger_comeback","Ta kh«ng hoµn thµnh kh¶o nghiÖm, nh­ng lµ kh«ng muèn tiÕp tôc lµm /messenger_icantdo","Kh«ng ph¶i lµ , ta cßn muèn tiÕp tôc /no") 
+            elseif ( Uworld1206 == 4 ) then 
+                Describe(DescLink_BaiYi..": Tİn sø lÖnh - kim "..name.." ®¹i nh©n, cã ph¶i hay kh«ng ng­¬i ®· qua liÔu phong kş ®İch khiªu chiÕn ? NghÜ ra quan ph¶i kh«ng ?",3,"Ta muèn rêi ®i /messenger_comeback","Ta kh«ng hoµn thµnh kh¶o nghiÖm, nh­ng lµ kh«ng muèn tiÕp tôc lµm /messenger_icantdo","Kh«ng ph¶i lµ , ta cßn muèn tiÕp tôc /no") 
+            elseif ( Uworld1206 == 5 ) then 
+                Describe(DescLink_BaiYi..": Ngù tø kim bµi - kim "..name.." ®¹i nh©n, ta ch­a thÊy qua ngù tø kim bµi, h«m nay coi nh­ lµ më réng ra nh·n giíi. Ng­¬i thËt lµ lîi h¹i. Ng­¬i ®· qua liÔu phong kş ®İch khiªu chiÕn, nghÜ ra quan ph¶i kh«ng ?",3,"Ta muèn rêi ®i /messenger_comeback","Ta kh«ng hoµn thµnh kh¶o nghiÖm, nh­ng lµ kh«ng muèn tiÕp tôc lµm /messenger_icantdo","Ta cßn muèn tiÕp tôc /no") 
+            end 
+       end
 end
 
 function messenger_comeback()
@@ -58,13 +58,12 @@ function messenger_comeback()
 		
 		SetPos(1563,3118);
 	else
-		Describe(DescLink_BaiYi..":Xin lçi!  B¹n ch­a qua ¶i, trong b¶n ®å Phong Kú İt nhÊt b¹n ph¶i x¸c ®Şnh İt nhÊt <color=red>5 täa ®é<color> míi cã thÓ qua ¶i.",1,"KÕt thóc ®èi tho¹i/no")
+		Describe(DescLink_BaiYi..": ThËt xin lçi, ng­¬i kh«ng v­ît qua kiÓm tra, ë phong kş trªn b¶n ®å İt nhÊt ng­¬i muèn x¸c ®Şnh <color=red>5 c¸i täa ®é<color> míi cã thÓ v­ît qua kiÓm tra.",1,"KÕt thóc ®èi tho¹i /no")
 	end
 end
 
 function messenger_icantdo()
-	Describe(DescLink_BaiYi..": Cã ph¶i b¹n muèn rêi khái, nÕu ch­a hoµn thµnh nhiÖm vô mµ rêi khái, b¹n còng cã thÓ ®Õn DŞch Quan giao tr¶ nhiÖm vô vµ nhËn phÇn th­ëng nh­ng phÇn th­ëng sÏ gi¶m xuèng rÊt nhiÒu.",2,"§óng! Ta muèn rêi khái/f_fallmessengertask","§Ó ta nghÜ l¹i xem sao/no")
-
+	    Describe(DescLink_BaiYi..": Ng­¬i nghÜ rêi ®i ph¶i kh«ng ? NÕu nh­ kh«ng hoµn thµnh nhiÖm vô liÒn rêi ®i, ng­¬i còng cã thÓ ®Õn dŞch quan n¬i ®ã ®ãng nhiÖm vô cïng nhËn th­ëng, nh­ng lµ, phÇn th­ëng sÏ İt ®i rÊt nhiÒu. ",2,"Ta muèn rêi ®i /f_fallmessengertask","§Ó cho ta muèn /no")
 end
 
 function f_fallmessengertask()	

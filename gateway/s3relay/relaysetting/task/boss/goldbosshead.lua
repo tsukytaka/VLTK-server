@@ -76,7 +76,7 @@ function TaskShedule()
 	end;
 	--删除从前的数据
 	success = ClearRecordOnShareDB("GoldBoss",Sid, 0,1,0);
-	--OutputMsg("Xoa du lieu thong tin boss Hoang Kim "..Sid);
+	OutputMsg("Xoa du lieu thong tin boss Hoang Kim "..Sid);
 end
 
 function TaskContent()

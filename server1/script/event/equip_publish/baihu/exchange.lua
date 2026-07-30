@@ -27,4 +27,4 @@ local tbFormula2 =
 	nFreeItemCellLimit = 1,
 }
 local tbCompose_PVT2BHL = tbActivityCompose:new(tbFormula2, "DungPhongVanThachDoiBachHoLenh")
-pEventType:Reg("Hµng rong", "§æi B¹ch Hæ LÖnh", tbCompose_PVT2BHL.ComposeDailog, {tbCompose_PVT2BHL})
+-- pEventType:Reg("Hµng rong", "§æi B¹ch Hæ LÖnh", tbCompose_PVT2BHL.ComposeDailog, {tbCompose_PVT2BHL})

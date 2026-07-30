@@ -18,10 +18,10 @@ jf0904_TSK_denggao_gettoptimes	= 1943;		-- 第几次达到峰值
 jf0904_TSK_denggao_getaward		= 1944;		-- 是否已经领奖
 
 jf0904_item_expiredtime	= 20090601
-jf0904_jiu_expiredtime	= 20500608
+jf0904_jiu_expiredtime	= 20090608
 
 jf0904_act_dateS 	= 20090428; 
-jf0904_act_dateE	= 20500601;
+jf0904_act_dateE	= 20090601;
 
 function jf0904_InitTaskctrl()	
 	if (GetTask(jf0904_TSK_version) ~= 200904) then

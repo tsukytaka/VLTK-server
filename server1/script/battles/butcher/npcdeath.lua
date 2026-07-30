@@ -74,13 +74,9 @@ function OnDeath( nNpcIndex )
 	
 	BT_SetData(PL_KILLNPC, BT_GetData(PL_KILLNPC) + 1);
 	BT_SetData(PL_KILLRANK1 + rank - 1, BT_GetData(PL_KILLRANK1 + rank - 1) + 1);
-	pointnpc = bt_addtotalpoint(BT_GetTypeBonus(PL_KILLRANK1 + rank - 1, GetCurCamp()))
+	bt_addtotalpoint(BT_GetTypeBonus(PL_KILLRANK1 + rank - 1, GetCurCamp()))
 	mar_addmissionpoint(BT_GetTypeBonus(PL_KILLRANK1 + rank - 1, GetCurCamp()))
-	if (pointnpc == nil or pointnpc == 0 ) then
-		Msg2Player("B¹n nhËn ®­îc <color=yellow>0<color> ®iÓm tÝch lòy!")
-	else
-		Msg2Player("B¹n nhËn ®­îc <color=yellow>"..pointnpc .."<color> ®iÓm tÝch lòy!")
-	end
+	
 	if (rank == 6) then
 		if (GetCurCamp() == 1) then
 			Msg2MSAll(MISSIONID, "<color=yellow> Tèng Kim c«ng c¸o: Tèng qu©n "..GetName().." ®· giÕt ®­îc Nguyªn So¸i phe Kim!!!")

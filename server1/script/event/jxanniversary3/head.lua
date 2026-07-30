@@ -3,7 +3,7 @@
 Include("\\script\\task\\random\\task_head.lua");
 
 JXANNIVERSARY3_OPENDATE	= 20060901;			--三周年活动开始时间
-JXANNIVERSARY3_ENDDATE	= 20500926;			--三周年活动结束时间
+JXANNIVERSARY3_ENDDATE	= 20060926;			--三周年活动结束时间
 JXANNIVERSARY3_SHOUTAONUM	= 3;					--每日最多制作寿桃的个数
 JXANNIVERSARY3_MAXOWNEXP	= 100000000;	--豆沙寿桃最大获得经验值
 JXANNIVERSARY3_ONCEEXP		= 3000000;		--豆沙寿桃每次给与的经验

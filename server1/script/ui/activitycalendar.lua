@@ -35,7 +35,6 @@ function LoadTable(szPath)
 				tbActivity[nActivityId]["nTotalValue"] = tbActivity[nActivityId]["nTotalValue"] + tbActivity[nActivityId]["tbValue"][j]
 			end
 		end
-		tbActivity[nActivityId]["nWeekResetFlag"] = tonumber(TabFile_GetCell(szPath, i + 1, 15)) or 0
 	end
 	return tbActivity
 end
@@ -62,31 +61,6 @@ function GetTaskDaily(nTaskId)
 		nTaskValue = nCurDate * 256
 	end
 	return mod(nTaskValue, 256)
-end
-
-function GetTaskWeekly(nTaskId)
-	local nTaskValue = GetTask(nTaskId)
-	local nCurTime = GetCurServerTime()
-	local nCurWeek = tonumber(GetLocalDate("%y%W"))
-	local WEEK_FACTOR = 1024 --pow(2,10)
-	
-	if floor(nTaskValue/WEEK_FACTOR) ~= nCurWeek then
-		nTaskValue = nCurWeek * WEEK_FACTOR
-	end
-	return mod(nTaskValue, WEEK_FACTOR)
-end
-
-function GetTaskCount(nActivityId)
-	local tbTemp = %tbHuoYueDu[nActivityId]
-	if not tbTemp then
-		return 0
-	end
-	local nWeekResetFlag = tbTemp["nWeekResetFlag"] or 0
-	local nTaskId = tbTemp["nTaskId"]
-	if nWeekResetFlag == 1 then
-		return GetTaskWeekly(nTaskId)
-	end
-	return GetTaskDaily(nTaskId)
 end
 
 function UpdateHuoYueDu(nUpdateHuoYueDu)
@@ -131,7 +105,7 @@ function UpdatePVPActivityList(nUpdatePVPActivityList)
 	for i = 1, getn(%tbPVP) do
 		local nActivityId = %tbPVP[i]["nActivityId"]
 		local tbTemp = %tbHuoYueDu[nActivityId]
-		if GetTaskCount(nActivityId) < tbTemp["nLimit"] then
+		if GetTaskDaily(tbTemp["nTaskId"]) < tbTemp["nLimit"] then
 			tinsert(tbNotFinished, i)
 		else
 			tinsert(tbFinished, i)
@@ -157,7 +131,7 @@ function UpdatePVEActivityList(nUpdatePVEActivityList)
 		local nActivityId = %tbPVE[i]["nActivityId"]
 		local tbTemp = %tbHuoYueDu[nActivityId]
 	
-		if GetTaskCount(nActivityId) < tbTemp["nLimit"] then
+		if GetTaskDaily(tbTemp["nTaskId"]) < tbTemp["nLimit"] then
 			tinsert(tbNotFinished, i)
 		else
 			tinsert(tbFinished, i)
@@ -180,7 +154,7 @@ function GetHuoYueDuString(nActivityId)
 	local nJoinNumber = 0
 	local nCount = 0
 	
-	nJoinNumber = GetTaskCount(nActivityId)
+	nJoinNumber = GetTaskDaily(%tbHuoYueDu[nActivityId]["nTaskId"])
 	nCount = min(nJoinNumber, %tbHuoYueDu[nActivityId]["nLimit"])
 	for i = 1, nCount do
 		if %tbHuoYueDu[nActivityId]["tbValue"][i] then

@@ -3,52 +3,66 @@ tbclassname = tbclass_newyear2008_zongbing
 tbclassname.TITLE = "B¸nh ch­ng"
 tbclassname.LIMIT_LEVEL = 50
 tbclassname.tbdate = {}
-tbclassname.tbdate.nstart = 802020000
-tbclassname.tbdate.nend 	= 803312400
+tbclassname.tbdate.nstart = 1802020000
+tbclassname.tbdate.nend 	= 1803102400
 tbclassname.mareial =
 {
-		nexpmax = 2000000000,
+		nexpmax = 20000000000,
 		ntask = 1872,
 		tbitem = {
 			{
-				G=6,D=1,P=1662,szname="B¸nh ch­ng th­îng h¹ng",nexp=2000000,
+				G=6,D=1,P=1662,szname="B¸nh ch­ng th­îng h¹ng",nexp=1000000,
 				tbrandomitem =
 				{
 					ntotalprop = 100,
 					tbitem = 
 					{
-						{G=6,D=1,P=72,LV=1,szname="Thiªn s¬n  B¶o Lé ",prob=14.89},
-						{G=6,D=1,P=125,LV=1,szname="QuÕ Hoa Töu",prob=16.0},
-						{G=0,D=11,P=201,LV=1,szname="MÆt n¹ - §Çu «ng ®Þa",prob=10.90},
-						{G=6,D=1,P=1482,LV=1,szname="Ngäc Bµi",prob=0.01	},
-						{G=6,D=1,P=1481,LV=1,szname="Kim Bµi"	 ,prob=0.05	},
-						{G=6,D=1,P=1480,LV=1,szname="Ng©n Bµi"	 ,prob=5.00	},
-						{G=6,D=1,P=147,LV=3,szname="HuyÒn tinh kho¸ng th¹ch cÊp 3"	 ,prob=22.0	},			
-						{G=6,D=1,P=147,LV=4,szname="HuyÒn Tinh Kho¸ng Th¹ch cÊp 4",prob=16.0},
-						{G=6,D=1,P=147,LV=5,szname="HuyÒn Tinh Kho¸ng Th¹ch cÊp 5",prob=2.0},
-						{G=6,D=1,P=147,LV=6,szname="HuyÒn Tinh Kho¸ng Th¹ch cÊp 6",prob=1.0},
-						{G=6,D=1,P=147,LV=7,szname="HuyÒn Tinh Kho¸ng Th¹ch cÊp 7",prob=0.10	},
-						{G=6,D=1,P=147,LV=8,szname="HuyÒn Tinh Kho¸ng Th¹ch cÊp 8"	 ,prob=0.05	},
-						{G=6,D=1,P=71,LV=1,szname="Tiªn Th¶o Lé "	 ,prob=11.00	},
-						{G=6,D=1,P=1181,LV=1,szname="Tiªn Th¶o Lé ®Æc biÖt"	 ,prob=1.0	},					
+						{G=6,D=1,P=4689,LV=1,szname="§å phæ Hoµng Kim ",prob=10},
+						{G=6,D=1,P=4689,LV=1,szname="B¶o r­¬ng V« Danh ",prob=1},
+						{G=6,D=1,P=2125,LV=1,szname="Ngò Hµnh Kú Th¹ch",prob=59},
+						{G=0,D=11,P=201,LV=1,szname="MÆt n¹ - §Çu «ng ®Þa",prob=2 },
+						{G=0,D=11,P=202,LV=1,szname="MÆt n¹ - Nam S­",prob=2 },
+						{G=0,D=11,P=203,LV=1,szname="MÆt n¹ - B¾c S­",prob=2 },
+						{G=0,D=11,P=204,LV=1,szname="MÆt n¹ - Long Ch©u",prob=2 },
+						{G=0,D=11,P=205,LV=1,szname="MÆt n¹ - §Çu Rång",prob=2 },
+						{G=0,D=11,P=206,LV=1,szname="MÆt n¹ - Th©n Rång",prob=2 },
+						{G=0,D=11,P=207,LV=1,szname="MÆt n¹ - §u«i Rång",prob=2 },
+--						{G=6,D=1,P=1480,LV=1,szname="Ng©n Bµi LÖnh"	 ,prob=5},
+						{G=6,D=1,P=26,LV=1,szname="Vâ L©m MËt TÞch ",prob=0.5},
+						{G=6,D=1,P=22,LV=1,szname="TÈy Tñy Kinh ",prob=0.5},
+						{G=6,D=1,P=4692,LV=1,szname="Thiªn V­¬ng Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4693,LV=1,szname="Ngò §éc Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4694,LV=1,szname="Thóy Yªn Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4695,LV=1,szname="C«n L«n Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4696,LV=1,szname="Thiªn NhÉn Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4697,LV=1,szname="ThiÕu L©m Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4698,LV=1,szname="§­êng M«n Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4699,LV=1,szname="Nga Mi Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4700,LV=1,szname="Vâ §ang Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},
+						{G=6,D=1,P=4701,LV=1,szname="C¸i Bang Hoµng Kim Trang BÞ B¶o R­¬ng Lo¹i 4 ",prob=1},					
 					}
 				} 
 			},
-			{G=6,D=1,P=1663,szname="B¸nh ch­ng h¶o h¹ng",nexp=1500000,
+			{G=6,D=1,P=1663,szname="B¸nh ch­ng h¶o h¹ng",nexp=500000,
 				tbrandomitem =
 				{
 					ntotalprop = 100,
 					tbitem = 
 					{
-						{G=6,D=1,P=124,LV=1,szname="Phóc Duyªn Lé (§¹i) ",prob=19.5},
-						{G=6,D=1,P=72,LV=1,szname="Thiªn s¬n  B¶o Lé ",prob=15.0},
-						{G=6,D=1,P=73,LV=1,szname="B¸ch Qu¶ Lé ",prob=14.0},
-						{G=6,D=1,P=71,LV=1,szname="Tiªn Th¶o Lé ",prob=7.0	},
-						{G=6,D=1,P=125,LV=1,szname="QuÕ Hoa Töu"	 ,prob=17.0	},
-						{G=0,D=11,P=201,LV=1,szname="MÆt n¹ - §Çu «ng ®Þa"	 ,prob=15.0	},
-						{G=6,D=1,P=147,LV=3,szname="HuyÒn tinh kho¸ng th¹ch cÊp 3"	 ,prob=7.0	},		
-						{G=6,D=1,P=147,LV=4,szname="HuyÒn Tinh Kho¸ng Th¹ch cÊp 4"	 ,prob=5.0	},		
-						{G=6,D=1,P=147,LV=5,szname="HuyÒn Tinh Kho¸ng Th¹ch cÊp 5"	 ,prob=0.5	},						
+--						{G=6,D=1,P=4689,LV=1,szname="§å phæ Hoµng Kim ",prob=5},
+						{G=6,D=1,P=4689,LV=1,szname="B¶o r­¬ng V« Danh ",prob=1},
+--						{G=6,D=1,P=2125,LV=1,szname="Ngò Hµnh Kú Th¹ch",prob=18},
+						{G=6,D=1,P=2125,LV=1,szname="Ngò Hµnh Kú Th¹ch",prob=77},
+						{G=0,D=11,P=201,LV=1,szname="MÆt n¹ - §Çu «ng ®Þa",prob=3 },
+						{G=0,D=11,P=202,LV=1,szname="MÆt n¹ - Nam S­",prob=3 },
+						{G=0,D=11,P=203,LV=1,szname="MÆt n¹ - B¾c S­",prob=3 },
+						{G=0,D=11,P=204,LV=1,szname="MÆt n¹ - Long Ch©u",prob=3 },
+						{G=0,D=11,P=205,LV=1,szname="MÆt n¹ - §Çu Rång",prob=3 },
+						{G=0,D=11,P=206,LV=1,szname="MÆt n¹ - Th©n Rång",prob=3 },
+						{G=0,D=11,P=207,LV=1,szname="MÆt n¹ - §u«i Rång",prob=3 },
+--						{G=6,D=1,P=1480,LV=1,szname="Ng©n Bµi"	 ,prob=5},
+						{G=6,D=1,P=26,LV=1,szname="Vâ L©m MËt TÞch ",prob=0.5},
+						{G=6,D=1,P=22,LV=1,szname="TÈy Tñy Kinh ",prob=0.5},							
 					}
 				}
 			},
@@ -112,7 +126,7 @@ function tbclassname:selectitem(szkey)
 	return nil
 end
 function tbclassname:check()
-	if (CFG_newyear_2008	== 0) then
+	if self:check_date() == 0 then
 		Say("B¸nh ch­ng ®· qu¸ h¹n, kh«ng thÓ sö dông.",0)
 		return 2
 	end

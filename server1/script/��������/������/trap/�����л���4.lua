@@ -1,14 +1,26 @@
---中原北区 龙门 战斗状态切换Trap
---Trap Id 105
---By 苏宇 2003年10月28日
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
+--Long M玭 Tr蕁
 function main(sel)
-
-if ( GetFightState() == 0 ) then	-- 玩家处于非战斗状态，即在城内
-	SetPos(1903, 4411)		-- 设置走出Trap点，目的点在城外	
-	SetFightState(1)		-- 转换为战斗状态
-else			       		-- 玩家处于战斗状态，即在城外
-	SetPos(1908, 4421)		-- 设置走出Trap点，目的点在城内	
-	SetFightState(0)		-- 转换为非战斗状态
+local nDate = tonumber(GetLocalDate("%Y%m%d%H%M"))
+if nDate < ThoiGianOpenServer then
+if ( GetFightState() == 0 ) then	
+	SetPos(1908, 4421)	
+	Msg2Player(""..ThoiGianOpenServerText.."")		
+else
+	SetPos(1908, 4421)
+	Msg2Player(""..ThoiGianOpenServerText.."")
 end;
+	AddStation(10)			
+	SetProtectTime(18*3)
+	AddSkillState(963, 1, 0, 18*3) 
+else
+if ( GetFightState() == 0 ) then	
+	SetPos(1903, 4411)
+	SetFightState(1)		
+else
+	SetPos(1908, 4421)
+	SetFightState(0)		
+end;
+
+end
 end;

@@ -9,9 +9,11 @@ function main(sel)
 	local Uworld96 = GetTask(96)
 	local PK_value = GetPK();
 	if (Uworld96 == 1) then			-- Ì½¼àµÄ
-		Say("Th¨m xong ch­a vËy? Mau ®i ®i! ",2,"C¶m ¬n vŞ ®¹i ca nµy, ta ®i ®©y /visit_leave","Xin ®¹i ca th­ th¶ cho chót ®·! Ta sÏ ®i ngay th«i /no")
---	elseif (Uworld96 == 0) then		-- ³ö´íÁË
---		Talk(1,"","ÀÎÍ·£ºÎ¹£¡ÄãÊÇÔõÃ´»ì½øÌìÀÎÖØµØÀ´µÄ£¿ÓĞÊ²Ã´»°È¥ÕÒGM½âÊÍ°É£¡")
+		Say("Th¨m xong ch­a vËy? Mau ®i ®i! ",2,
+		"C¶m ¬n vŞ ®¹i ca nµy, ta ®i ®©y/visit_leave",
+		"Xin ®¹i ca th­ th¶ cho chót ®·! Ta sÏ ®i ngay th«i./no")
+	-- elseif (Uworld96 == 0) then		-- ³ö´íÁË
+		-- Talk(1,"","ÀÎÍ·£ºÎ¹£¡ÄãÊÇÔõÃ´»ì½øÌìÀÎÖØµØÀ´µÄ£¿ÓĞÊ²Ã´»°È¥ÕÒGM½âÊÍ°É£¡")
 	elseif (PK_value <= 0) then		-- Ï´ÇåÁËPKµÄ
 		Talk(2,"PKclear","Mau thu xÕp hµnh lı ®i!  Ng­¬i cã thÓ ra khái ®©y råi! ","§a t¹ ®ai ca, vËy ta ®i ®©y! ")
 	else									-- Ï´PKµÄ
@@ -19,8 +21,7 @@ function main(sel)
 		local absolve_time = NW_GetTask(NW_TASKNO_ABSOLVE)
 		local current_time = GetCurServerTime()
 		if (absolve_time ~= 0 and current_time < absolve_time + SECONDS_ONEHOUR) then
-			Say("Thiªn tö nh©n tõ, ®¹i x¸ thiªn h¹. Ng­¬i sau nµy ®õng ph¹m téi n÷a nha.",
-				2,
+			Say("Thiªn tö nh©n tõ, ®¹i x¸ thiªn h¹. Ng­¬i sau nµy ®õng ph¹m téi n÷a nha.", 2,
 				"Trë vÒ nhµ/nw_absolve",
 				"Ta muèn ë l¹i tï/Cancel")
 		else
@@ -28,9 +29,11 @@ function main(sel)
 			if (n_timerid ~= 9) then
 				SetTask(96,100 + PK_value);
 				SetTimer(12 * CTime * FramePerSec, 9)
-				return
-			end
-			Say("§¹i ngôc thiªn lao, kh«ng ®­îc tïy ı ®i l¹i! ",3,"Hái thêi gian /ask_timer","Nép tiÒn ®Ó t¹i ngo¹i/pay_money","D¹! D¹! NÕu vËy ta sÏ trë vµo trong ®ã /no")
+			return end
+			Say("§¹i ngôc thiªn lao, kh«ng ®­îc tïy ı ®i l¹i! ",3,
+			"Hái thêi gian /ask_timer",
+			"Nép tiÒn ®Ó t¹i ngo¹i/pay_money",
+			"D¹! D¹! NÕu vËy ta sÏ trë vµo trong ®ã /no")
 		end
 	end
 end
@@ -44,9 +47,11 @@ end
 function ask_timer()
 	if (GetCash() >= 1000) then		-- ÓĞ500Á½Òø×Ó²ÅÈÃÎÊ
 		Pay(1000)
-		Talk(2,"","VŞ ®¹i ca nµy. §©y lµ 1000 l­îng b¹c xin cÇm ®Ó uèng trµ. Ta chØ lµ muèn hái thö b©y giê lµ mÊy giê th«i. ","Lao §Çu: Téi ®å nghiÖt sóc, ®õng kiÕm chuyÖn n÷a "..GetRestCTime(9).."Mau ®i v« trong ®ã ®i ")
+		Talk(2,"","VŞ ®¹i ca nµy. §©y lµ 1000 l­îng b¹c xin cÇm ®Ó uèng trµ. Ta chØ lµ muèn hái thö b©y giê lµ mÊy giê th«i. ",
+		"Lao §Çu: Téi ®å nghiÖt sóc, ®õng kiÕm chuyÖn n÷a "..GetRestCTime(9).."Mau ®i v« trong ®ã ®i ")
 	else
-		Talk(2,"","VŞ ®¹i ca nµy! Ta chØ muèn hái b©y giê lµ mÊy giê th«i! ","Hái g× mµ hái! Muèn ¨n ®ßn h¶! Cßn kh«ng mau quay vÒ chç ngåi! ")
+		Talk(2,"","VŞ ®¹i ca nµy! Ta chØ muèn hái b©y giê lµ mÊy giê th«i! ",
+		"Hái g× mµ hái! Muèn ¨n ®ßn h¶! Cßn kh«ng mau quay vÒ chç ngåi! ")
 	end
 end
 
@@ -56,7 +61,9 @@ function pay_money()
 end
 
 function pay_money2()
-	Say("Xem ng­¬i r¸ch r­íi vËy,sao l¹i cã nhiÒu tiÒn vËy thÕ! ",2,"§Æt tiÒn vµo tay h¾n /pay_yes","TiÕp tôc thØnh cÇu /pay_no")
+	Say("Xem ng­¬i r¸ch r­íi vËy,sao l¹i cã nhiÒu tiÒn vËy thÕ! ",2,
+	"§Æt tiÒn vµo tay h¾n /pay_yes",
+	"TiÕp tôc thØnh cÇu /pay_no")
 end
 
 function pay_yes()

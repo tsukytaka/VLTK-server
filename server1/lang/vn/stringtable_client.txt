@@ -57,13 +57,13 @@ G_UiChatCentre_8	§iÒn nhËp tªn cña nhãm míi
 G_UIGAME_0	T¸n gÉu
 G_UIGAME_1	B¹n h÷u
 G_UIGAME_2	Giao dÞch
-G_UIGAME_3	nhËp ®éi 
+G_UIGAME_3	NhËp ®éi 
 G_UIGAME_4	Tæ ®éi
 G_UIGAME_5	Theo sau
 G_UIGAME_6	Tin tøc 
 G_UIGAME_7	Bang héi
 G_UIGAME_8	Cõu s¸t
-G_UIGAME_9	®­a tiÒn
+G_UIGAME_9	§­a tiÒn
 G_UIGAME_10	Tªn truy nhËp
 G_UIGAME_11	Rêi khái ®éi ngò 
 G_UIGAME_12	Trôc xuÊt khái tæ ®éi
@@ -221,7 +221,7 @@ G_SysMsgCentre_6	Xem nhÑ
 G_SysmsgCentre_7	Th«ng b¸o míi nhÊt vÒ viÖc ®iÒu chØnh trß ch¬i
 
 G_TONG_0	Tr­ëng L·o
-G_TONG_1	§­êng Chñ
+G_TONG_1	§éi tr­ëng
 G_TONG_2	§Ö tö 
 G_TONG_3	Xin lùa chän chøc vÞ 
 G_TONG_4	Xin lùa chän chøc vÞ râ rµng
@@ -396,8 +396,8 @@ G_STR_DANGER_WARNING1	B¹n ®· ch¬i qu¸ thêi gian quy ®Þnh, xin h·y t¹m nghØ!
 G_STR_DANGER_WARNING2	NÕu kh«ng nghØ ng¬i sÏ cã h¹i cho søc kháe! §iÓm kinh nghiÖm b¹n thu ®­îc lµ 0!
 
 K_SERVER_NAME_PRIFIX	Vâ L©m TruyÒn Kú 
-K_UIGAME_0	 Tªn truy nhËp ( kh«ng cã kho¶ng c¸ch ) 
-K_SHOT_FOLDER	\\JxOnlinePhoto\\
+K_UIGAME_0	 Tªn truy nhËp (kh«ng cã kho¶ng c¸ch) 
+K_SHOT_FOLDER	\\AloneJXPhotos\\
 K_CHANNEL_TEAM	§éi ngò 
 K_CHANNEL_NEARBY	
 
@@ -509,13 +509,13 @@ G_STRING_GOLDCOIN_SCORE_C	TÝch lòy th­¬ng héi
 G_STRING_CONTRIBUTION_C	 ®iÓm cèng hiÕn
 G_STRING_BUILDFUND_C	§é kiÕn thiÕt bang héi
 
-G_VICEROY_FENGXIANG	[Th¸i Thó ]
-G_VICEROY_CHENGDU	[Th¸i Thó ]
-G_VICEROY_DALI	[Th¸i Thó ]
-G_VICEROY_BIANJING	[Th¸i Thó ]
-G_VICEROY_XIANGYANG	[Th¸i Thó ]
-G_VICEROY_YANGZHOU	[Th¸i Thó ]
-G_VICEROY_LINAN	[Th¸i Thó ]
+G_VICEROY_FENGXIANG	[Th¸i Thó]
+G_VICEROY_CHENGDU	[Th¸i Thó]
+G_VICEROY_DALI	[Th¸i Thó]
+G_VICEROY_BIANJING	[Th¸i Thó]
+G_VICEROY_XIANGYANG	[Th¸i Thó]
+G_VICEROY_YANGZHOU	[Th¸i Thó]
+G_VICEROY_LINAN	[Th¸i Thó]
 
 G_STR_NW_MINISTER	Thõa T­íng
 G_STR_NW_MARSHAL	Nguyªn So¸i
@@ -530,8 +530,8 @@ G_STR_TODAY	H«m nay
 G_STR_SOME_DAYS_AGO	Ngµy tr­íc
 G_STR_JUDGE_FOR_ME	Theo ta ®¸nh gi¸
 G_STR_JUDGE_FOR_HIM	Theo %s ®¸nh gi¸
-G_STR_HIM	Anh 
-G_STR_HER	Cô 
+G_STR_HIM	Anh Êy 
+G_STR_HER	C« Êy 
 G_STR_FUREN	Phu nh©n
 G_STR_XIANGGONG	T­íng c«ng
 G_STR_XINQING	T©m t×nh cña
@@ -548,19 +548,20 @@ G_STR_SIGN_GUIDE_TXT	ViÕt vµi lêi nh¾n göi
 G_STR_JUDGE_GUIDE_TXT	NhËp v¨n tù ®¸nh gi¸ b»ng h÷u
 
 G_STR_FIND_PATH_WRONG_WORLD	Xin h·y ®Ðn b¶n ®å së t¹i cña NPC nµy råi h·y tù ®éng t×m ®­êng!
+--------------------------------------------------------------------------------------------------------------
 G_STR_BINGO_MACHINE_STAR	%s * %d
-G_STR_BINGO_MACHINE_CUR_CATHECTIC	§Æt:%u HNLL.
-G_STR_BINGO_MACHINE_CATHECTIC	Ng­¬i ®Æt %d HNLL
-G_STR_BINGO_MACHINE_TOTAL_COUNT	Th¸i Tr× HNLL: %u
-G_STR_BINGO_MACHINE_AWARD_DESC	Ng­¬i nhËn ®­îc %sx%d hoÆc %sx%d HNLL
+G_STR_BINGO_MACHINE_CUR_CATHECTIC	§Æt:%u Xu.
+G_STR_BINGO_MACHINE_CATHECTIC	B¹n ®Æt %d Xu
+G_STR_BINGO_MACHINE_TOTAL_COUNT	Th¸i Tr× Xu: %u
+G_STR_BINGO_MACHINE_AWARD_DESC	B¹n nhËn ®­îc %sx%d hoÆc %sx%d Xu
 G_STR_BEGIN	B¾t ®Çu 
 G_STR_CONTINUE	TiÕp tôc
-G_STR_BINGO_MACHINE_AWARD_NOTHING	ThËt ®¸ng tiÕc,lÇn nµy ng­¬i kh«ng may!
+G_STR_BINGO_MACHINE_AWARD_NOTHING	Chóc b¹n may m¾n lÇn sau!
 G_STR_BINGO_MACHINE_NO_CATHECTIC	Vui lßng ®Æt c­îc cho lÇn nµy
-G_STR_BINGO_MACHINE_REFINING_TOTAL	HiÖn t¹i ng­¬i cã %d Hçn Nguyªn Linh Lé!
-G_STR_BINGO_MACHINE_NOT_SPACE	Hµnh trang cña ng­¬i kh«ng ®ñ chç, h·y s¾p xÕp l¹i
-G_STR_BINGO_MACHINE_BIG_AWARD	Ng­¬i nhËn ®­îc th­ëng lín %u HNLL
-
+G_STR_BINGO_MACHINE_REFINING_TOTAL	%d Xu
+G_STR_BINGO_MACHINE_NOT_SPACE	Hµnh trang cña b¹n kh«ng ®ñ chç, h·y s¾p xÕp l¹i
+G_STR_BINGO_MACHINE_BIG_AWARD	Ng­¬i nhËn ®­îc th­ëng lín %u Xu
+--------------------------------------------------------------------------------------------------------------
 G_STR_DATE_FORMATE	%d/%m/%Y %H:%M:%S
 G_STR_WEEK_MONDAY	thø 2
 G_STR_WEEK_TUESDAY	thø 3

@@ -8,7 +8,10 @@ function default_talk()
 	if (GetFightState() ~= 0) then
 		SetFightState(0)
 	end
-	Say("Quèc cã quèc ph¸p. Gia cã gia quy!  Ng­êi hai tay dÝnh ®Çy m¸u ®i ®Õn ch©n trêi gãc bÓ th× còng kh«ng thÓ tho¸t khái luËt ph¸p! ",3,"Ta ®Õn ®Çu thó /atone","Ta ®Õn th¨m tï /visit","Kh«ng hái n÷a!/no")
+	Say("Quèc cã quèc ph¸p. Gia cã gia quy!  Ng­êi hai tay dÝnh ®Çy m¸u ®i ®Õn ch©n trêi gãc bÓ th× còng kh«ng thÓ tho¸t khái luËt ph¸p! ",3,
+	"Ta ®Õn ®Çu thó /atone",
+	"Ta ®Õn th¨m tï /visit",
+	"Kh«ng hái n÷a!/no")
 	LeaveTeam();
 end
 
@@ -49,7 +52,6 @@ function want_atone()
 end;
 
 function go_atone()
-
 	SetTask(96,100+GetPK())
 	i = GetTimerId()
 	if (i > 0) and (i ~= 9) then		-- Èç¹ûÉíÉÏÔ­ÓÐ¼ÆÊ±Æ÷²¢ÇÒ²»ÊÇ×øÀÎ¼ÆÊ±Æ÷£¬ÏÈ±£´æ
@@ -62,7 +64,7 @@ function go_atone()
 	end
 	local my_money = GetCash();
 	Pay(my_money);
-	Msg2Player("Quan sai tÞch thu toµn bé"..my_money.." ng©n l­îng cña b¹n. B¹n bÞ ®­a vµo ®¹i lao")
+	Msg2Player("Quan sai tÞch thu toµn bé "..my_money.." ng©n l­îng cña b¹n. B¹n bÞ ®­a vµo ®¹i lao")
 	WriteLog(date().."\tName:"..GetName().."\tAccount:"..GetAccount().."\t bÞ tÞch thu hÕt tiÒn trong ng­êi vµ ®­a vµo ®¹i"..my_money.." l­îng")
 	FuYuan_Pause();
 	SetTimer(12 * CTime * FramePerSec, 9)				-- Ã¿120·ÖÖÓÍ¨¹ý¼ÆÊ±Æ÷¸üÐÂ½µµÍPKÖµ
@@ -71,7 +73,9 @@ function go_atone()
 end
 
 function visit()			-- Ì½¼à
-	Say("Mau ®i chç kh¸c!  Nh×n c¸i g×? Cã ph¶i lµ ®ång bän kh«ng! ",2,"Hèi lé 5000 l­îng b¹c /go_visit","§i ra /no")
+	Say("Mau ®i chç kh¸c!  Nh×n c¸i g×? Cã ph¶i lµ ®ång bän kh«ng! ",2,
+	"Hèi lé 5000 l­îng b¹c /go_visit",
+	"§i ra /no")
 end
 
 function go_visit()

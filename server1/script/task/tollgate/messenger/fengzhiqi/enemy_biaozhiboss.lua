@@ -17,7 +17,7 @@ function messenger_gogogo()
 	local name = GetName()
 	local Uworld1201 = nt_getTask(1201)  --·çÖ®ÆïÈÎÎñµÄÈÎÎñ±äÁ¿
 	local Uworld1204 = nt_getTask(1204)  --ËÍĞÅÈÎÎñËùµ½µØµãÈÎÎñ±äÁ¿
-	local Uworld1205 = nt_getTask(1205)  --ĞÅÊ¹»ı·Ö
+	local Uworld3000 = nt_getTask(3000)  --ĞÅÊ¹»ı·Ö
 	local Uworld1206 = nt_getTask(1206)  --ĞÅÊ¹³ÆºÅ
 	local Uworld1207 = nt_getTask(1207)  --ĞÅÊ¹ÈÎÎñµ±Ç°É±¹Ö¼ÇÊıÆ÷
 	local Uworld1208 = nt_getTask(1208)  --·çÖ®ÆïÉ±¹Ö¼ÇÊıÆ÷
@@ -52,12 +52,12 @@ function messenger_gogogo()
 				Msg2Player("B¹n ®· tiÕp xóc ®­îc täa ®é")
 			end
 		elseif ( messenger_choice == 11 ) then  --Ôö¼Ó»ı·Ö10 
-			nt_setTask(1205,Uworld1205+20)
+			nt_setTask(3000,Uworld3000+20)
 			tongaward_message(20);	--by Ğ¡É½
 			Msg2Player("§iÓm tİch lòy trong nhiÖm vô Tİn Sø cña b¹n t¨ng lªn 20 ®iÓm!")
 		elseif ( messenger_choice == 13 ) then  --¼õÉÙ»ı·Ö10
-			if ( Uworld1205 >= 10 ) then 
-				nt_setTask(1205,Uworld1205-10)
+			if ( Uworld3000 >= 10 ) then 
+				nt_setTask(3000,Uworld3000-10)
 				Msg2Player("§iÓm tİch lòy trong nhiÖm vô Tİn Sø cña b¹n gi¶m ®i 10 ®iÓm!")
 			end
 		elseif ( messenger_choice == 16 ) then  --Èç¹ûÃ»ÓĞ´¥·¢¹ı¶¨µã´ò¹ÖµÄÊÂ¼ş£¬´¥·¢ÔÚÄ³µã´òÌØÊâ¹ÖÎïµÄÊÂ¼ş,
@@ -153,7 +153,7 @@ function messenger_gogogo()
 		end
 	end
 	
-	local Uworld1205 = nt_getTask(1205)
+	local Uworld3000 = nt_getTask(3000)
 	local Uworld1207 = nt_getTask(1207)
 	local Uworld1207 = nt_getTask(1208)
 	

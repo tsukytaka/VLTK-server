@@ -1,5 +1,5 @@
 Include("\\script\\battles\\battlehead.lua")
-
+BALANCE_MAMCOUNT = 16
 strbattleinfo=
 {
 	"Tèng Kim cã nh÷ng h×nh thøc tham chiÕn sau, ng­¬i muèn t×m hiÓu……",

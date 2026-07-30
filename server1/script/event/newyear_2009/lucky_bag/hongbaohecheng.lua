@@ -1,5 +1,3 @@
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 Include("\\script\\lib\\compose_jinnang.lua")
 
 Include("\\script\\lib\\string.lua")
@@ -59,7 +57,7 @@ end
 
 function newyear0901_hongbao_IsActDate()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_newyear_2009	==	0) then
+	if (nDate < 20090116 or nDate > 20090215) then
 		return 0;
 	else
 		return 1;

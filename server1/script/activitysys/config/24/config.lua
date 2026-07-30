@@ -6,14 +6,14 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	szName = "BÊm vµo long nhi",
 	nStartDate = nil,
 	nEndDate  = nil,
-	tbMessageParam = {"BÐ Long"},
+	tbMessageParam = {"LÔ Quan"},
 	tbCondition = 
 	{
-		{"ThisActivity:IsOpen",	{nil} },
+		--{"ThisActivity:IsOpen",	{nil} },
 	},
 	tbActition = 
 	{
-		{"AddDialogOpt",	{"Ta muèn ®æi phi phong",2} },
+		--{"AddDialogOpt",	{"Ta muèn ®æi phi phong",2} },
 	},
 }
 tbConfig[2] = --Ò»¸öÏ¸½Ú

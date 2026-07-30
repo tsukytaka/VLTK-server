@@ -2,7 +2,6 @@
 
 Include("\\script\\lib\\awardtemplet.lua");
 Include("\\script\\event\\jiefang_jieri\\200904\\taskctrl.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 local tb_putaojiu_award	=
 {
@@ -280,7 +279,7 @@ local tb_putaojiu_exp	=
 
 function main()
 	local ndate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_jiefang_jieri2009	== 0) then
+	if (ndate >= jf0904_jiu_expiredtime) then
 		Msg2Player("VÀt ph»m nµy Æ∑ qu∏ hπn.");
 		return 0;
 	end

@@ -2,6 +2,8 @@
 --Èç¹ûÍæ¼Ò²»ÊÇ½»Õ½Á½¸ö°ï»áÖ®Ò»µÄ»°£¬Èç¹ûÉíÉÏÓĞºÏ·¨µÄÆ±µÄ»°£¬ÈÃËû½øÈëµØÍ¼
 -------------------------------------------------------------------------
 --Íæ¼ÒÒªÇóÀë¿ªÓÎÏ·
+Include("\\script\\missions\\citywar_city\\head.lua");
+
 function LeaveGame()
 	curcamp=	GetCurCamp();
 	camp = GetCamp();--»Ö¸´Ô­Ê¼ÕóÓª
@@ -55,7 +57,7 @@ function GameOver()
 				PlayerIndex = nTopPlayerIdx;
 				AddOwnExp(CITYWAR_TOP10_EXP);
 				local szLog = format("%d ®iÓm kinh nghiÖm", CITYWAR_TOP10_EXP);
-				szLog = format("B¹n nhËn ®­îc phÇn th­ëng C«ng thµnh chiÕn——%s", szLog);
+				szLog = format("B¹n nhËn ®­îc phÇn th­ëng C«ng thµnh chiÕn —— %s", szLog);
 				Msg2Player(szLog);
 				WriteLog(format("[citywar_award]\t%s\tName:%s\tAccount:%s\t%s",
 							GetLocalDate("%Y-%m-%d_%H:%M"),
@@ -75,15 +77,25 @@ function GameOver()
 		if (tbRandPlayer[i]) then
 			citywar_awardplayer();
 		end
+		local Ctc3truExpAdd = tonumber(BT_GetData(PL_KILLPLAYER))*100000
+		Ctc3truActivity_EnCityWar(Ctc3truExpAdd)
 		LeaveGame()
 		SetFightState(0)
 	end;
 	PlayerIndex = OldPlayer;
 end;
 
+function Ctc3truActivity_EnCityWar(Ctc3tru_1)
+	-- Ctc3tru_1: ®iÓm kinh nghiÖm
+	AddOwnExp(Ctc3tru_1)
+	Msg2Player("<color=yellow>H¹ gôc ®­îc "..(Ctc3tru_1/100000).." ®Şch qu©n<enter>B¹n nhËn ®­îc "..Ctc3tru_1.." ®iÓm kinh nghiÖm")
+end
+
 function citywar_awardplayer()
-	AddItem(6,1,1075,1,1,0);
-	local szLog = format("B¹n nhËn ®­îc phÇn th­ëng C«ng thµnh chiÕn——%s","LÔ hép qu¶ huy hoµng")
+	for i = 1, 10 do
+	AddItem(6,1,2815,1,1,0);
+	end
+	local szLog = format("B¹n nhËn ®­îc phÇn th­ëng C«ng thµnh chiÕn —— %s","C«ng thµnh lÔ bao")
 	Msg2Player(szLog);
 	WriteLog(format("[citywar_award]\t%s\tName:%s\tAccount:%s\t%s",
 							GetLocalDate("%Y-%m-%d_%H:%M"),
@@ -105,19 +117,19 @@ function JoinCamp(Camp, Type)
 			end;
 		else 
 			if (GetMSPlayerCount(MISSIONID, Camp) >= MAX_CAMP2COUNT) then
-				Say("HiÖn giê sè ng­êi tham chiÕn bang héi c«ng thµnh ®· ®Çy,t¹m thêi kh«ng thÓ gia nhËp!",0)
+				Say("HiÖn giê sè ng­êi tham chiÕn bang héi thñ thµnh ®· ®Çy, t¹m thêi kh«ng thÓ gia nhËp!",0)
 				return
 			end
 		end;
 	else
 		if (Camp == 1) then 
 			if (GetMSPlayerCount(MISSIONID,Camp + 2 ) >= MAX_CAMP3COUNT) then
-				Say("HiÖn giê sè nghÜa sÜ gióp ®ì thñ thµnh ®· ®Çy, t¹m thêi kh«ng thÓ gia nhËp!",0)
+				Say("HiÖn giê sè ng­êi tham chiÕn bang héi c«ng thµnh ®· ®Çy, t¹m thêi kh«ng thÓ gia nhËp!",0)
 				return
 			end;
 		else 
 			if (GetMSPlayerCount(MISSIONID, Camp + 2) >= MAX_CAMP4COUNT) then
-				Say("HiÖn giê sè nghÜa sÜ gióp ®ì c«ng thµnh ®· ®Çy, t¹m thêi kh«ng thÓ gia nhËp!",0)
+				Say("HiÖn giê sè ng­êi tham chiÕn bang héi c«ng thµnh ®· ®Çy, t¹m thêi kh«ng thÓ gia nhËp!",0)
 				return
 			end
 		end;

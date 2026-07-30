@@ -1,12 +1,5 @@
 Include("\\script\\skill\\head.lua")
 SKILLS={
-	quntisuijizoudong={ --群体随机走动
-		--skill_mintimepercastonhorse_v={{{1,10*18},{15,10*18},{20,10*18},{21,10*18}}},  --cd
-		--skill_mintimepercast_v={{{1,15*18},{20,15*18}}},
-		randmove={{{1,1},{20,1}},{{1,4*18},{20,4*18}}},
-		missle_missrate={{{1,0},{20,0}}},
-		missle_hitcount={{{1,6},{20,6}}},
-	},
 	lengbingjineng={ --冷冰技能
 		fatallystrike_p={{{1,100},{20,100}}},
 		forbit_attack={
@@ -20,7 +13,7 @@ SKILLS={
 			{{1,18*2},{20,18*2}}
 		},
 	},
-	gujuesha=  --古绝杀
+	gujuesha=
 	{
 		forbit_takemedicine=
 		{

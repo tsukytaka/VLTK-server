@@ -82,7 +82,7 @@ GLBID_SPLIT_DAILY_COUNT = 920;							-- 全局变量ID of 当天执行装备拆分的次数
 SPLIT_COUNT_DAILY_THRESHOLD = 500;						-- 一台GameSvr一天内可执行装备拆分的次数上限
 SPLIT_AVAILABLE_DATE_RANGE = { 20080113, 20080401 };	-- 装备拆分功能开放的开始、结束时间
 
-FRAME_EXCHANGE_COIN = 2;			-- 交换装备碎片所需支付的铜钱个数
+FRAME_EXCHANGE_COIN = 200;			-- 交换装备碎片所需支付的铜钱个数
 TASKTMP_EXCHANGE_FRAME = 194;		-- 要交换的装备碎片的索引
 
 -- 黄金装备拆分

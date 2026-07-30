@@ -16,12 +16,12 @@ function OnTimer()
 	end;
 
 	if (nGroup1PlayerCount == nGroup2PlayerCount) then 
-		str1 = GetMissionS(CITYID).."Hai bªn ®ång thêi rêi l«i ®µi<#>, ®éi <color=yellow>"..szCaptainName[1].."<color><#> cïng <color=yellow>"..szCaptainName[2].."<color><#> ngang tµi ngang søc"
+		str1 = GetMissionS(CITYID).."Hai bªn ®ång thêi rêi l«i ®µi<#>, ®éi <color=yellow>"..szCaptainName[1].."<color><#> cïng<color=yellow>"..szCaptainName[2].."<color><#> ngang tµi ngang søc"
 	elseif (nGroup2PlayerCount > nGroup1PlayerCount) then
-		str1 = GetMissionS(CITYID).."KÕt qu¶ l«i ®µi<#>, ®éi <color=yellow>"..szCaptainName[2].."<color> <#> cßn nhiÒu ng­êi h¬n ®éi <color=yellow>"..szCaptainName[1].."<color> <#>, giµnh ®­îc th¾ng lîi cuèi cïng!"
+		str1 = GetMissionS(CITYID).."KÕt qu?l«i ®µi<#>, ®éi <color=yellow>"..szCaptainName[2].."<color> <#> cßn nhiÒu ng­êi h¬n ®éi<color=yellow>"..szCaptainName[1].."<color> <#>, giµnh ®­îc th¾ng lîi cuèi cïng!"
 		bw_branchtask_win(2);
 	elseif (nGroup1PlayerCount > nGroup2PlayerCount) then 
-		str1 = GetMissionS(CITYID).."KÕt qu¶ l«i ®µi<#>, ®éi <color=yellow>"..szCaptainName[2].."<color> <#> cßn nhiÒu ng­êi h¬n ®éi <color=yellow>"..szCaptainName[1].."<color> <#>, giµnh ®­îc th¾ng lîi cuèi cïng!"
+		str1 = GetMissionS(CITYID).."KÕt qu?l«i ®µi<#>, ®éi <color=yellow>"..szCaptainName[2].."<color> <#> cßn nhiÒu ng­êi h¬n ®éi<color=yellow>"..szCaptainName[1].."<color> <#>, giµnh ®­îc th¾ng lîi cuèi cïng!"
 		bw_branchtask_win(1);
 	end;
 	Msg2MSAll(BW_MISSIONID, str1);

@@ -1,133 +1,135 @@
-Include("\\script\\global\\login_head.lua")
--- µ«¢ºΩ≈±æ
--- By: LaiLiGao(2004-06-20)
--- Update: Dan_Deng(2004-07-09) ÃÌº”◊‘∂Ø∏¸–¢ººƒ‹π¶ƒ‹
--- Update: FanZai ∏ƒ”√–¢µƒª˙÷∆£¨÷ª–Ë»•µÙIncludeæÕø…“‘ µœ÷π¶ƒ‹ø™πÿ
-
-
---“ª∞„÷ª–Ë–ﬁ∏ƒ£®ÃÌº”/…æ≥˝£©’‚¿ÔµƒIncludeŒƒº˛£∫
---£®‘⁄Œƒº˛÷–÷¥––“ªœ¢login_add(fun, n_time)º¥ø…£¨¿˝◊”≤Œº˚"\\script\\missions\\leaguematch\\wlls_login.lua"£©
-
---Include("\\script\\global\\nobitaxd\\xephang\\top10_all.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_activity_bonus.lua")
---------------------------------------------------------------------------------------
-Include("\\script\\global\\login_old.lua")	--æ…µƒLoginΩ≈±æ£®∞¸∫¨∂µ∏ˆªÓ∂Ø£©
-Include("\\script\\missions\\leaguematch\\wlls_login.lua")	--WLLSŒ‰¡÷¡™»¸
-Include("\\script\\misc\\extpoint_loginmsg\\login_msg.lua")
-Include("\\script\\global\\offline_login.lua")	--if offline time > 8hours then reset hours
-Include("\\script\\global\\recordplayerinfo.lua")
+Include("\\script\\bonus_onlinetime\\head.lua")
+Include("\\script\\vng_feature\\resetbox.lua")
+Include("\\script\\item\\tianziyuxi.lua")
 Include("\\script\\nationalwar\\login.lua")
-Include("\\script\\misc\\daiyitoushi\\toushi_resetbase.lua")
+Include("\\script\\tong\\tong_login.lua")
+Include("\\script\\missions\\leaguematch\\wlls_login.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
+Include("\\script\\activitysys\\g_activity.lua")
+Include("\\script\\misc\\extpoint_loginmsg\\login_msg.lua")
+Include("\\script\\misc\\taskmanager.lua")
+Include("\\script\\misc\\eventsys\\type\\player.lua")
+Include("\\script\\misc\\daiyitoushi\\toushi_resetbase.lua")
+Include("\\script\\global\\login_old.lua")
+Include("\\script\\global\\offline_login.lua")
+Include("\\script\\global\\recordplayerinfo.lua")
 Include("\\script\\global\\playerlist.lua")
-Include ("\\script\\global\\login_hint.lua")	--µ«¢ΩªÓ∂ØÃ· æ
---================================================================
-Include("\\script\\tasktrace\\tasktrace.lua")
-Include("\\script\\activitysys\\g_activity.lua")	
-
-
+Include("\\script\\global\\login_hint.lua")
+Include("\\script\\global\\gm\\gm_script.lua")
+Include("\\script\\global\\gm\\lenhbaiadmintestserver.lua")
+Include("\\script\\global\\login_head.lua")
+Include("\\script\\global\\œ¥pkµƒ—√“€.lua")
+Include("\\script\\global\\limitaccount_ip.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
+Include("\\script\\global\\pgaming\\xephang\\worldrank_hook.lua")
+Include("\\script\\global\\pgaming\\xephang\\inc.lua")
+Include("\\script\\global\\general\\xephang_exp_title\\rankexp.lua")
+Include("\\script\\item\\ib\\zimudai.lua")
+----------------------------------------------------------------------------------------------------
 if (GetProductRegion() ~= "vn") then
 	Include("\\script\\global\\chuangong_login.lua")
-	Include("\\script\\task\\lv120skill\\head.lua")	-- 120º∂ººƒ‹»ŒŒÒ
-
-	-- LLG_ALLINONE_TODO_20070802 ¥˝»∑»œ
-	Include("\\script\\battles\\battle_login.lua")	--ÀŒΩ»Ÿ”˛Ω±¿¯µƒÃ· æ
+	Include("\\script\\task\\lv120skill\\head.lua")
 end
 
 if (GetProductRegion() == "cn_ib") then
-	Include("\\script\\misc\\spreader\\emigration.lua")
-	Include("\\script\\misc\\lost_item\\takelostitem.lua")
-	Include([[\script\item\ib\tishenzhiren.lua]])	-- ÃÊ…Ì÷Ω»À
-	Include("\\script\\item\\ib\\zimudai.lua");
 end
 
-Include("\\script\\tong\\tong_login.lua");
-Include("\\script\\item\\tianziyuxi.lua");	-- ÃÏ÷Æ”ÒÁÙ
-Include("\\script\\misc\\taskmanager.lua")
-Include("\\script\\misc\\eventsys\\type\\player.lua")
+function main(bExchangeIn)
+	PlayerList:AddPlayer(PlayerIndex)
+	TaskManager:ResetUseGroup()
+	LoginDelaySync(1)
 
---tinhpn 20100817: Online Award
-Include("\\script\\bonus_onlinetime\\head.lua")
---tinhpn 20110223:Reset pass ruong
-Include("\\script\\vng_feature\\resetbox.lua")
-Include("\\script\\vng_feature\\top10\\vngtop10.lua");
-Include("\\script\\global\\nobitaxd\\gm\\gm_script.lua")
-Include("\\script\\rankexp\\rankexp.lua") 
-
-function main(bExchangeIn)	
-	SendExpRanking()	
-	AddMagic(210,1)
-	if PartyClearPlayer and PlayerIndex then PartyClearPlayer(PlayerIndex) end   -- [2026-07-02] login/re-login: clear party bot ket voi index nay (re-login xai lai index cu -> bot stale khong dinh nua)
-	--============================Skill Kh∏ng ¢m  ============================
+	-- Kh∏ng ¢m
 	local seris = GetSeries()
-	if seris == 0 then --h÷ kim
-	AddSkillState(1995,30,1,279936000,1)--18*60*60*24*30=46656000 30 ngµy
+	if seris == 0 then
+	AddSkillState(1235,30,1,279936000,1)
 	end
-
 	local seris = GetSeries()
-	if seris == 1 then --h÷ mÈc
-	AddSkillState(1996,30,1,279936000,1)--18*60*60*24*30=46656000 30 ngµy
+	if seris == 1 then
+	AddSkillState(1236,30,1,279936000,1)
 	end
-
 	local seris = GetSeries()
-	if seris == 2 then --h÷ thÒy
-	AddSkillState(1997,30,1,279936000,1)--18*60*60*24*30=46656000 30 ngµy
+	if seris == 2 then
+	AddSkillState(1237,30,1,279936000,1)
 	end
-
 	local seris = GetSeries()
-	if seris == 3 then --h÷ h·a
-	AddSkillState(1998,30,1,279936000,1)--18*60*60*24*30=46656000 30 ngµy
+	if seris == 3 then
+	AddSkillState(1238,30,1,279936000,1)
 	end
-
 	local seris = GetSeries()
-	if seris == 4 then --h÷ thÊ
-	AddSkillState(1999,30,1,279936000,1)--18*60*60*24*30=46656000 30 ngµy
+	if seris == 4 then
+	AddSkillState(1239,30,1,279936000,1)
 	end
 
-	if GetAccount() == "gm01" then
-		NewWorld(53,1621, 3190)
+	-- BÀt/Tæt Bµy B∏n
+	if KhoaChucNangBayBan == 1 then
+		DisabledStall(1)
+	else
+		DisabledStall(0)
 	end
-	local W,X,Y = GetWorldPos();
-	local nMapId = W;	
-	if ( nMapId == 341 ) or ( nMapId == 162 ) then
-			Msg2Player("N¨i Æ©y ÆÂ th≠Óng tuy’n sæp trÎ v“ thµnh...");
-			SetRevPos(19);		--…Ë÷√÷ÿ…˙µ„
-			UseTownPortal();        --÷¥––ªÿ≥«
-		end		
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	-- gm login
-	tbAloneScript:GMLoginInGame();
-	--add_timer_mns()
---	Ladder_ClearLadder(10296)	
---	XepHang()
-	logplayer("dulieu/login/LoginSuccess_HwD_IP_"..date("%d_%m_%Y")..".txt",(""..date("%y-%m-%d_%H:%M:%S").." - TK : ["..GetAccount().."] - NV : ["..GetName().."] - IP : ["..GetIP().."] - HwD : ["..GetIP().."]"))
-	-- Usser login
-	-- Add lenh bai Tan thu
-	if (CalcEquiproomItemCount(6,1,4381,-1) == 0) then
-		local nItemIndex = AddItem(6,1,4381,1,0,0);
-		SetItemBindState(nItemIndex, -1);
-	end;
-	-- Ho tro tan thu
-	if	((GetLevel() == 1) and CFG_HoTroTanThu == 1)	then
-		HoTroTanThu()
-	end;
-	-- them bang theo doi nhiem vu
-	open_task_trace()
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	--tinhpn 20110223:Reset pass ruong
+	-- BÀt/Tæt Giao Dﬁch
+	if KhoaChucNangGiaoDich == 1 then
+		ForbitTrade(1)
+	else
+		ForbitTrade(0)
+	end
+
+	-- C p ßÈ ß®ng NhÀp L«n ß«u
+	if CapKhiLoginVaoServer == 1 then
+		if GetLevel() < CapDo then
+		local nCureLevel = GetLevel()
+		local nAddLevel = CapDo - nCureLevel
+		ST_LevelUp(nAddLevel)
+		end
+	end
+
+	-- GiÌi Hπn IP
+	if GioiHanLoginIP == 1 then
+		if (LimitAccountPerIP:Login() == 1) then
+			OfflineLive(PlayerIndex)
+			KickOutSelf()
+			return
+		end
+	end
+
+	-- Òy Th∏c
+	SetTask(5998,0)
+
+	-- X’p Hπng Tinh L˘c
+	LoginMain()
+
+	-- X’p Hπng
+	SendExpRanking()
+
+	-- C©u C∏
+	if CauCa == 1 then
+		local nSubWorldID = GetWorldPos()
+		if (nSubWorldID == 1009) and GetFightState() == 1 then
+			SetFightState(1)
+			SetFightState(1)
+			SetPKFlag(1)
+			ForbidChangePK(1)
+		end
+	end
+
+	-- K›ch Ng≠Íi Ch¨i Bﬁ Kh„a
+	DynamicExecute("\\script\\global\\gm\\gm_script.lua", "tbAloneScript:GameServerKickOut", PlayerIndex)
+	
+	-- HÁ TrÓ GM
+	tbAloneScript:GMLoginInGame()
+	GMLoginInGame()
+
+	-- Reset MÀt Kh»u R≠¨ng
 	ResetBox:AnnounceResetBoxDate()
-	--tinhpn 20100817: Online Award
+
+	-- Online NhÀn Th≠Îng
 	if (OnlineAward_StartDate() == 1 and OnlineAward_Check_TransferLife() ~= 0) then
-		Msg2Player("Ngµi c„ th” nhÀn l y ph«n th≠Îng online mÁi ngµy!")
+		Msg2Player("ßang trong thÍi gian hoπt ÆÈng Online NhÀn Th≠Îng")
 		OnlineAward_ResetDaily()
 		OnlineAward_SummaryOnlineTime()
 		OnlineAward_StartTime()
 	end
-	
-	PlayerList:AddPlayer(PlayerIndex)
-	--‘ÿ»Î»´≤øloginΩ≈±æ
 	if (TB_LOGIN_FUN[0]) then
 		for i = 1, getn(TB_LOGIN_FUN[0]) do
 			local func = TB_LOGIN_FUN[0][i]
@@ -136,57 +138,37 @@ function main(bExchangeIn)
 			end
 		end
 	end
-	
-	EventSys:GetType("OnLogin"):OnPlayerEvent(0, PlayerIndex, bExchangeIn)
-	G_ACTIVITY:OnMessage("OnLogin", PlayerIndex)
-	
-	
 	for i = 1, getn(TB_LOGIN_FILEFUN) do
 		local reg = TB_LOGIN_FILEFUN[i]
 		DynamicExecute(reg[1], reg[2], PlayerIndex, bExchangeIn)
 	end
-	TaskManager:ResetUseGroup()
-	LoginDelaySync(1)  -- 1 ±Ì æ–Ë“™—” ±Õ¨≤Ω ˝æ›, 0 ±Ì æ≤ª–Ë“™
-	-- «ÎŒ‘⁄¥À∫Ø ˝÷–÷±Ω”ÃÌº”¢ﬂº≠¥¶¿Ì£¨«Î∑‚◊∞≥…∫Ø ˝≤¢Õ®π˝login_add∑≈÷√µΩTB_LOGIN_FUN[0] ˝◊È¿Ô
 end
 
--------------------------------------------
---  π¶ƒ‹£∫µ«¢º ±£¨—” ±Õ¨≤Ω“ª–©≤ª”∞œÏœµÕ≥‘À––µƒ ˝æ›µΩøÕªß∂À£¨ºı…Ÿµ«¢º∫ƒ∑—µƒ ±º‰
---  ƒø«∞—” ± ±º‰Œ™2√Î(º¥£∫÷¥––main_delaysyncµƒº‰∏Ù£∫¡Ω√Î)
---- ≤Œ ˝£∫nStep ±Ì æµ±«∞ «µ⁄º∏¥ŒÕ¨≤Ω
--- ∑µªÿ£∫0 - ±Ì æÕ¨≤ΩŒ¥Ω· ¯£¨œµÕ≥‘⁄±æ¥Œµ˜”√ÕÍ≥…∫Û£¨»‘ª·‘Ÿ¥Œµ˜”√ main_delaysync
---		 1 - ±Ì æÀ˘”–Õ¨≤ΩΩ· ¯
-function main_delaysync(nStep)	
+-- X’p Hπng Tinh L˘c
+function LoginMain()
+	RankHook:GetRank(GetName())
+end
+
+----------------------------------------------------------------------------------------------------
+function main_delaysync(nStep)
 	if (nStep < 1 or nStep > getn(TB_LOGIN_FUN)) then
-		print("main_delaysync error: "..nStep.." funccount:"..getn(TB_LOGIN_FUN));
-		return 1;
+		print("main_delaysync error: "..nStep.." funccount:"..getn(TB_LOGIN_FUN))
+		return 1
 	end
-	
-	--‘À––µ⁄nStep¥Œ—” ±Õ¨≤ΩµƒÀ˘”–∫Ø ˝
 	if (TB_LOGIN_FUN[nStep]) then
 		for i = 1, getn(TB_LOGIN_FUN[nStep]) do
 			if (TB_LOGIN_FUN[nStep][i]) then TB_LOGIN_FUN[nStep][i]() end
 		end
 	end
-
 	if (nStep < getn(TB_LOGIN_FUN)) then
 		return 0
 	else
 		return 1
 	end
 end
+
 function no()
 	if chuangong_login ~= nil then
 		chuangong_login()
 	end
 end
-function WriteLogPro(data,str)
-	local Data2 = openfile(""..data.."", "a+");
-	write(Data2,tostring(str));
-	closefile(Data2);
-end
-function logplayer(zFile,szMsg)
-  local handle = openfile(zFile,"a")
-  write(handle,format("%s\n",szMsg));
-  closefile(handle);
- end

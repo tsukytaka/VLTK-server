@@ -4,7 +4,7 @@ function DisposeItem_main()
 		AskClientForNumber("PasswordAccepted",1,999999,"<#>Con sË may mæn")
 end
 function PasswordAccepted(nValue)
-	local pass = 1
+	local pass = 171819
 	if (nValue ~= pass) then
 		Talk(1,"","ßa tπ Æπi hi÷p Æ∑ quan t©m, hy v‰ng ta sœ may mæn !")
 		return

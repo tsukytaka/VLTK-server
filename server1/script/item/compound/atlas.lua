@@ -319,7 +319,7 @@ function funitem_calcItemValue(aryDesItemInfo)
 	end
 	if arydDesItemVal <= 0 then
 			Say("Thî rÌn thÇn bÝ: Xin lçi! Ta ch­a nghÜ ra c¸ch chÕ t¹o ®å Hoµng Kim ng­¬i cÇn.",0)
-			return -1;
+			return 1;
 	end
 	return arydDesItemVal
 end

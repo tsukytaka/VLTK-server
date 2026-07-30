@@ -1,7 +1,6 @@
 -- Created by Danielsun 2006-12-07
--- Reload: /script/missions/chrismas/xmas_day.lua
+-- Ê¥µ®½Ú»î¶¯
 -- xmas_entry()
-Include("\\script\\global\\nobitaxd\\npc\\npcsukien_quanly.lua")
 Include("\\script\\task\\system\\task_string.lua")
 Include("\\script\\lib\\basic.lua")
 
@@ -64,8 +63,7 @@ function xmas_entry()
 end
 	
 function want_snowman()
---	if (isXmasTime() == 0) then
-	if (GetTask(Task_QuanLySuKien)	~= 200612) then
+	if (isXmasTime() == 0) then
 		CreateTaskSay({"<dec><npc>Ho¹t ®éng ®· kÕt thóc.", "Ta biÕt råi/cancel"});
 		return 
 	end;
@@ -131,7 +129,7 @@ function do_snow_process(nItemCount)
 	
 	for szkey, tb_item in TB_Material[nItemPart] do
 			if (tb_enhanceitem_count[szkey][1] ~= TB_Material[nItemPart][szkey][2]) then
-				CreateTaskSay( { "<dec><npc> Ng­¬i quªn bá nguyªn liÖu vµo råi kh«ng ®ñ. Kh«ng ®ñ nguyªn liÖu, ta kh«ng lµm ®­îc.",
+				CreateTaskSay( { "<dec><npc> Ng­¬i quªn bá nguyªn liÖu vµo råi <color=yellow>"..tb_enhanceitem_count[szkey][2].."<color> kh«ng ®ñ. Kh«ng ®ñ nguyªn liÖu, ta kh«ng lµm ®­îc.",
 			"§Ó ta lµm l¹i!/#do_snowman("..nItemNumC..")",
 			"Ta sÏ quay l¹i sau./cancel"	}	);
 				return
@@ -164,8 +162,7 @@ function do_snow_process(nItemCount)
 end
 
 function want_gift()
---	if (isXmasTime() == 0) then
-	if (GetTask(Task_QuanLySuKien)	~= 200612) then
+	if (isXmasTime() == 0) then
 		CreateTaskSay({"<dec><npc>Ho¹t ®éng ®· kÕt thóc.", "Ta biÕt råi/cancel"});
 		return 
 	end;

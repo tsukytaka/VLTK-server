@@ -1,6 +1,6 @@
---江南区	临安
---Trap ID：临安 2
+-- script viet hoa By http://tranhba.com  Giang Nam khu trc khi an 
+-- script viet hoa By http://tranhba.com Trap ID# trc khi an 2 
 
-function main(sel)
---	NewWorld(332, 1480, 3048);
-end;
+function main(sel) 
+-- script viet hoa By http://tranhba.com  NewWorld(332, 1480, 3048); 
+end; 

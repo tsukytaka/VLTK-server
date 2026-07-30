@@ -10,9 +10,9 @@ Include("\\script\\global\\repute_head.lua")
 function main()
 	UTask_tm = GetTask(2);
 	Uworld51 = GetTask(51)
---	if (GetTask(123) >= 80) and (Uworld51 < 10) and (GetReputeLevel(GetRepute()) >= 8) then		-- Ï´ÇåÔ©ÇüÈÎÎñÆô¶¯
-		--		Talk(2,"Uworld51_get", 13429, 13430)
-	if (Uworld51 == 20) then
+	if (GetTask(123) >= 80) and (Uworld51 < 10) and (GetReputeLevel(GetRepute()) >= 8) then		-- Ï´ÇåÔ©ÇüÈÎÎñÆô¶¯
+				Talk(2,"Uworld51_get", 13429, 13430)
+	elseif (Uworld51 == 20) then
 		Talk(5,"Uworld51_30","Ta còng kh«ng khohuynh Êyy ®øng nh×n, vÉn ®ang t×m c¸ch. ChØ v× cha ta hiÖn ®ang nghi ngê ta, ta hµnh ®éng e kh«ng tiÖn.","Nh­ng ta ®· biÕt ®­îc mÊy ngµy tr­íc cã mÊy vŞ cao thñ ThiÕu L©m gÆp n¹n, th­¬ng tİch rÊt gièng víi tuyÖt kü cña Bæn m«n g©y ra, cha ta nghi ngê ta ®· tiÕt lé tuyÖt kü cña m«n ph¸i.","Ng­êi n¬i ®i gÆp M«n chñ gi¶i thİch râ!","V« dông th«i! Cha ta ®ang tøc giËn vèn kh«ng cho ta c¬ héi gi¶i thİch. Ngay c¶ tin nµy ta còng chØ nghe §­êng H¹c nãi th«i.","NÕu vËy… M«n chñ kh«ng cã thµnh kiÕn víi ta, cã lÏ ta cã thÓ gióp «ng.")
 	elseif (Uworld51 == 55) then
 		Talk(6,"Uworld51_60","NhÊt TrÇn c«ng tö, ta võa nghe tin tøc tõ Thiªn NhÉn gi¸o, chuyÖn ¸m s¸t cao thñ ThiÕu L©m qu¶ nhiªn lµ do hä lµm. BÊt NhiÔm c«ng tö v× muèn tranh quyÒn víi ng­êi ®· ®em MËt tŞch Bæn m«n ®­a cho Thiªn NhÉn gi¸o.","Co chuyÖn vËy sao? BÊt NhiÔm cho dï muèn trë thµnh M«n chñ còng kh«ng nªn lµm vËy.","§¸nh tiÕc ta ®ang bŞ nghi ngê, cha ta l¹i kh«ng tin ta nãi, ta ph¶i lËp tøc ®Õn th­¬ng l­îng víi §­êng H¹c s­ phô mét chót.","Môc tiªu thİch s¸t tiÕp theo cña Thiªn NhÉn gi¸o lµ C¸i Bang, xin c«ng tö nh¾c nhë C¸i Bang tr¸nh ®Ó Thiªn NhÉn gi¸o thõa c¬ h·m h¹i.","Bİ kiÕp Bæn m«n lät vµo tay ®èi thñ nhÊt ®Şnh ph¶i lÊy l¹i, hay lµ nhê ng­¬i tiªu diÖt tªn thİch kh¸ch, lÊy l¹i bİ kiÕp.","§­îc th«i!")

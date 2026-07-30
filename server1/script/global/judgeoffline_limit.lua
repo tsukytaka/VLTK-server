@@ -420,13 +420,11 @@ function offlineCheckPermitRegion()
 			szDirection, nDistance = getDirection({nX, nY}, {nLimitX, nLimitY});
 			-- 如果距离任何一点小于 10，则说明在禁止区域内
 			if nDistance<=NUM_OFFLINE_PERMITREGION_MAX then
-				return 0;
-			end;
+			return 0; end;
 		end;
 		return 1;
 	else
-		return 1;
-	end;
+	return 1; end;
 end;
 
 
@@ -440,22 +438,14 @@ end
 
 -- 获得一个位置相对于玩家位置的大体方位
 function getDirection(posOrigin, posTarget)
-	
 	local tbStr = {"T﹜ Nam", "Nam", "Йng Nam", "Йng", "Йng B綾", "b綾 ", "T﹜ B綾", "T﹜"};
-	
 	local nX	= posOrigin[2] - posTarget[2];
 	local nY	= posTarget[1] - posOrigin[1];
-	
 	local nDeg	= atan2(posOrigin[2] - posTarget[2], posTarget[1] - posOrigin[1]);
 	local nDirection = floor(nDeg/45+4.5);
-	
 	if (nDirection == 0) then
 		nDirection = 8;
 	end;
-	
 	-- 具体的距离，取整数
 	local nDistance = floor(sqrt(nX*nX + nY*nY));
-	
-	return tbStr[nDirection], nDistance;
-	
-end;
+return tbStr[nDirection], nDistance; end;

@@ -5,7 +5,6 @@
 Include("\\script\\lib\\awardtemplet.lua")
 Include("\\script\\event\\zhongqiu_jieri\\200808\\taskctrl.lua")
 Include("\\script\\event\\zhongqiu_jieri\\200808\\lib\\common.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 local tbNpcList =
 {
@@ -19,7 +18,7 @@ local tbNpcList =
 function main()
 	zhongqiu0808_ResetTask()
 	local nDate = tonumber(GetLocalDate("%y%m%d"))
-	if (CFG_zhongqiu_jieri_2008 == 0) then
+	if nDate > zhongqiu0808_ItemEndTime then
 		Say("VÀt ph»m nµy Æ∑ qu∏ hπn.",0)
 		return 0;
 	end

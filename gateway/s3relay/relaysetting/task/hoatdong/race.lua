@@ -25,7 +25,7 @@ function TaskContent()
 	local nWeek	= tonumber(date("%w"))
 	local nDate	= tonumber(date("%y%m%d"))
 	
-	if nDate < 080611 or nDate > 500713 then --从2008年06月11号 至– 2008年07月13号24点
+	if nDate < 080611 or nDate > 120713 then --从2008年06月11号 至– 2008年07月13号24点
 		return
 	end
 	local bIsStart = 0

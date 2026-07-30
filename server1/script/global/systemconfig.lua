@@ -14,7 +14,7 @@ SYSCFG_PRODUCT_REGION_NAME, SYSCFG_PRODUCT_REGION_ID = GetProductRegion();	-- µ±
 ---------------------------------------------------------------
 -- Ç®×¯¹¦ÄÜÅäÖÃ (1 - ¿ªÆô£¬nil - ¹Ø±Õ)
 SYSCFG_GAMEBANK_GOLDSILVER_OPEN = 1; -- ½ðÒøÔª±¦¹¦ÄÜ¿ª·Å
-
+SYSCFG_EXTPOINTID1_TYPEPAY = 1; -- HÖ thèng tiÒn n¹p thÎ t¹i TiÒn Trang. 0:TiÒn ®ång, 1: KNB
 SYSCFG_GAMEBANK_GOLD_GET 		= 1; -- ½ðÔª±¦ÁìÈ¡
 SYSCFG_GAMEBANK_GOLD_PAY 		= 1; -- ½ðÔª±¦³äÖµ
 SYSCFG_GAMEBANK_GOLD_COIN 	= 1; -- ½ðÔª±¦»»Í­Ç®
@@ -73,7 +73,7 @@ end
 -- ÐÂ°ï»á¹¦ÄÜÅäÖÃ (1 - ¿ªÆô£¬nil - ¹Ø±Õ)
 SYSCFG_NEWTONG_OPEN     = nil;
 if (SYSCFG_PRODUCT_REGION_ID == DEF_PRODUCT_REGION_CN or SYSCFG_PRODUCT_REGION_ID == DEF_PRODUCT_REGION_CN_IB or SYSCFG_PRODUCT_REGION_ID == DEF_PRODUCT_REGION_VN) then
-	SYSCFG_NEWTONG_OPEN = 0;
+	SYSCFG_NEWTONG_OPEN = 1;
 end
 ---------------------------------------------------------------
 

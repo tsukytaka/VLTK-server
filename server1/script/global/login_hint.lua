@@ -25,36 +25,36 @@ EVENTS_TB = {
 	{
 		ndate = {070414,070424},
 		name = "Ngµy 3 th¸ng 3",
-		describe = "Tõ <color=yellow>14/4/2007<color> ®Õn <color=yellow>24/4/2007<color>, ®ang trong thêi gian diÔn ra ho¹t ®éng, tÊt c¶ c¸c nh©n sÜ vâ l©m trong qu¸ tr×nh luyÖn ®Òu cã cã c¬ héi nhÆt ®­îc <color=yellow> VËt phÈm quİ <color>. Cã thÓ mang ®Õn TiÖn Taph Ho¸ ë c¸c thµnh thŞ ®Ó ®æi lÊy ng©n l­îng vµ <color=yellow>vËt phÈm cÇn thiÕt <color>.",
+		describe = "Tõ <color=yellow>14/4/2007<color> ®Õn <color=yellow>24/4/2007<color>, ho¹t ®éng thêi gian bªn trong, tÊt c¶ ®ang ®¸nh tr¸ch luyÖn c«ng trong qu¸ tr×nh ®İch nhµ ch¬i ®em cã c¬ héi nhÆt ®­îc <color=yellow> hµng hãa ®¹i <color>. CÇm hµng hãa ®¹i cïng ng©n l­îng ®Õn c¸c thµnh phè NPC th­¬ng phiÕn chç ®æi lÊy <color=yellow> nguyªn liÖu chøa ®ùng tói <color>.",
 	},
 	{	--3¼¶ÒÔÇ°ÁúÎå½ÌÓıÈÎÎñ
 		level = {1, 3},
 		tasknot = {1014, 2},
-		name = "Ta ®Õn nhËn nhiÖm vô s¬ nhËp",
-		describe = " GÆp Long Ngò ë c¸c th«n dÓ nhËn nhiÖm vô ",
+		name = "NhiÖm vô gi¸o huÊn",
+		describe = "Long ngò nhiÖm vô s¬ nhËp",
 		callback = Uworld1000_word,
 	},
 	{	--ÎäÁÖÁªÈü¡ª¡ªĞ¢Ğã
 		level = {80, 119},
-		name = "Vâ l©m liªn ®Êu so tµi, vâ l©m liªn ®Êu cuéc so tµi Vâ L©m T©n Tó",
-		describe = "CÊp ®é cao cã thÓ dÕn Quan Viªn Liªn §Êu ghi danh ®Ó so tµi.",
+		name = "Vâ l©m liªn ®Êu, vâ l©m liªn cuéc so tµi Vâ L©m T©n Tó",
+		describe = "Ng­¬i cã thÓ ®Õn quan viªn chç ghi danh tham gia vâ l©m liªn ®Êu.",
 		detail =
-[[ Vâ l©m liªn ®Êu cuéc so tµi ®ang ë giai ®o¹n chuÈn bŞ, cÊp bËc cña ng­¬i cã thÓ tham gia <color=yellow>Vâ L©m Liªn §Êu<color>.
+[[ Vâ l©m liªn ®Êu ®ang ®ang chuÈn bŞ giai ®o¹n, cÊp bËc cña ng­¬i cã thÓ tham gia <color=yellow>Vâ L©m Liªn §Êu<color>.
 liªn cuéc so tµi vŞ trİ : <color=yellow>BiÖn kinh(222, 191)<color>, <color=yellow>L©m An(182, 204)<color>.]],
 	},
 	{	--ÎäÁÖÁªÈü¡ª¡ª¸ß¼¶
 		level = {120, 200},
-		name = "Vâ l©m liªn ®Êu so tµi, vâ l©m liªn ®Êu cuéc so tµi Vâ L©m Cao CÊp",
-		describe = "CÊp ®é cao cã thÓ dÕn Quan Viªn Liªn §Êu ghi danh ®Ó so tµi..",
+		name = "Vâ l©m liªn ®Êu, vâ l©m liªn cuéc so tµi Vâ L©m T©n Tó",
+		describe = "Ng­¬i cã thÓ ®Õn quan viªn chç ghi danh tham gia vâ l©m liªn ®Êu.",
 		detail =
-[[ Vâ l©m liªn ®Êu cuéc so tµi ®ang ë giai ®o¹n chuÈn bŞ, cÊp bËc cña ng­¬i cã thÓ tham gia <color=yellow>Vâ L©m Liªn §Êu<color>.
+[[ Vâ l©m liªn ®Êu ®ang ®ang chuÈn bŞ giai ®o¹n, cÊp bËc cña ng­¬i cã thÓ tham gia <color=yellow>Vâ L©m Liªn §Êu<color>.
 liªn cuéc so tµi vŞ trİ<color=yellow>§¹i Lı(200, 197)<color>, <color=yellow>D­¬ng Ch©u(219, 190)<color>.]],
 	},
 	{	--»Ô»ÍÖ®Ò¹
 		name = "§ªm huy hoµng", 
-describe = "Minh Chñ Vâ L©m <color= red>§éc C« KiÕm Ma<color> më ra ho¹t ®éng mang tªn §ªm Huy Hoµng, diÔn ra mçi ®ªm vµo lóc 7 giê 30 phót mçi tèi trong tuÇn.",
+describe = "Minh chñ vâ l©m ®éc c« kiÕm ma ho¹t ®éng tªn §ªm Huy Hoµng mçi ®ªm 7:30 phót.",
 		detail =
-[[Tr­íc m¾t lµ thêi gian m­a thuËn giã hßa , v× ®¸p tr¶ ©n t×nh cña c¸c vâ l©m nh©n sÜ giang hå, Minh Chñ Vâ L©m <color= red>§éc C« KiÕm Ma<color> cö hµnh ho¹t ®éng §ªm Huy Hoµng. Ho¹t ®éng tõ mçi ngµy 19 giê 30 phót, mçi lÇn ho¹t ®éng 30 phót. Cô thÓ néi dung cã thÓ ®i t×m lÔ quan ®Ó hái thªm .]],
+[[Tr­íc m¾t lµ giã ®iÒu m­a thuËn thêi gian, v× thŞnh t×nh ®¸p t¹ giang hå vâ l©m nh©n sÜ, minh chñ vâ l©m truyÒn nh©n cö hµnh ho¹t ®éng §ªm Huy Hoµng. Ho¹t ®éng tõ mçi ngµy 19 giê 30 phót, mçi lÇn ho¹t ®éng 30 phót. Cô thÓ néi dung cã thÓ ®i t×m lÔ quan mæ .]],
 	},
 
 	-- {
@@ -67,7 +67,7 @@ describe = "Minh Chñ Vâ L©m <color= red>§éc C« KiÕm Ma<color> më ra ho¹t ®éng ma
 	-- },
 }
 
-EVENT_HINT_LINK = "<link=image[0,1]:\\spr\\npcres\\enemy\\enemy060\\enemy060_st.spr>HÖ Thèng th«ng b¸o ho¹t ®éng cã thÓ lµm : <link>"
+EVENT_HINT_LINK = "<link=image[0,1]:\\spr\\npcres\\enemy\\enemy060\\enemy060_st.spr>Ho¹t §éng cã thÓ lµm : <link>"
 EVENT_HINT_TIMES = 3	--Ã¿ÌìÉÏÏßÌáÊ¾´ÎÊı
 
 --Èç¹ûÓĞ½Ï¸´ÔÓµÄ»î¶¯ĞèÒª×Ô¶¨ÒåÒ»Ğ©º¯Êı¡£ÇëÔÚÏ¢ÃæInclude£¬²¢Ê¹ÓÃ£º

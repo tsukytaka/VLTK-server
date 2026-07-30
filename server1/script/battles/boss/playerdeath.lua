@@ -63,9 +63,9 @@ function OnDeath(Launcher)
 			else
 				earnbonus = floor(BT_GetTypeBonus(PL_KILLPLAYER, 1) * rankradio)
 			end
-			pointplayer = bt_addtotalpoint(earnbonus)
+			bt_addtotalpoint(earnbonus)
 			mar_addmissionpoint(earnbonus)
-			Msg2Player("<color=yellow> B¹n h¹ gôc ®èi ph­¬ng nh©n vµ nhËn d­îc <color>"..pointplayer.." <color=yellow>®iÓm tÝch lòy " )
+			
 			local rankname = "";
 			rankname = tbRANKNAME[currank]
 			launchrank = BT_GetData(PL_CURRANK);

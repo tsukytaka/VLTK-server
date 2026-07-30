@@ -53,10 +53,10 @@ end
 
 function add_prop()
 	Say("ThÝch Minh: Ng­¬i muèn t¨ng ®iÓm kü n¨ng nµo?", 4,
-			"t¨ng søc m¹nh/add_prop_str",
-			"t¨ng Th©n Ph¸p/add_prop_dex",
-			"t¨ng Ngo¹i C«ng/add_prop_vit",
-			"T¨ng néi c«ng/add_prop_eng")
+			"T¨ng Søc M¹nh/add_prop_str",
+			"T¨ng Th©n Ph¸p/add_prop_dex",
+			"T¨ng Ngo¹i C«ng/add_prop_vit",
+			"T¨ng Néi C«ng/add_prop_eng")
 end
 
 function add_prop_str()
@@ -165,7 +165,7 @@ function Help()
 end;
 
 function LeaveHere()
-	Say("ng­¬i cho r»ng ®· TÈy Tñy xong råi ­? Cã muèn rêi khái kh«ng? ",2, "Muèn rêi khái /LeaveHere2", "§Ó ta suy nghÜ kü l¹i xem/OnCanCel")
+	Say("Ng­¬i cho r»ng ®· TÈy Tñy xong råi ­? Cã muèn rêi khái kh«ng? ",2, "Muèn rêi khái /LeaveHere2", "§Ó ta suy nghÜ kü l¹i xem/OnCanCel")
 end
 
 function LeaveHere2()

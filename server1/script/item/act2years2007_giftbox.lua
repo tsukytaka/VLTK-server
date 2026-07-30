@@ -2,8 +2,6 @@
 --fmz
 --
 --
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 ACT2YEAR_TWhiteBoxRan = {
     tRan = {1000},
     tItemID = { {6,1,1442}},
@@ -73,10 +71,10 @@ ACT2YEAR_TYellowBoxRan = {
 --
 function main(nItemIndex)
     local nDate = tonumber(GetLocalDate("%y%m%d"))
-    --if nDate > CFG_Act2Years2007_ENDTIME then
-    --    Say("VËt phÈm ®· qu¸ h¹n sö dông.",0)
-    --    return 0
-    --end
+    if nDate > 70712 then
+        Say("VËt phÈm ®· qu¸ h¹n sö dông.",0)
+        return 0
+    end
     local szItemName = GetItemName(nItemIndex)
     local tRan = {}
     local g, d , p = GetItemProp( nItemIndex )

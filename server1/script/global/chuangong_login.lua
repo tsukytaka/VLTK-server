@@ -1,5 +1,6 @@
 Include("\\script\\global\\login_head.lua")
 Include("\\script\\global\\head_qianzhuang.lua")
+
 TV_LAST_APPLY_TIME = 1571 -- ÉÏ´ÎÉêÇë´«¹¦Ê±¼ä
 TBMONTH = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 strimg = "<link=image[0,1]:\\spr\\npcres\\enemy\\enemy111\\enemy111_pst.spr>§éc C« KiÕm:<link>"
@@ -9,9 +10,13 @@ function chuangong_login()
 		local nowday = tonumber(date("%y%m%d"))
 		local applytime = GetTask(TV_LAST_APPLY_TIME)
 		if (nowday >= applytime ) then 
-			Describe(strimg.."HiÖn ng­¬i <color=yellow>®· chuÈn bŞ xong truyÒn c«ng<color>, cã thÓ ®Õn chç ta truyÒn c«ng bÊt kú lóc nµo!", 2, "Ta biÕt råi!/cg_OnCancel", "Ta kh«ng muèn truyÒn c«ng!/cg_undo");
-		else
-			Describe(strimg.."B¹n hiÖn ®· <color=yellow>chuÈn bŞ hoµn tÊt"..(num2datestr(applytime)).." <color>, ®· cã thÓ lËp tøc truyÒn c«ng!", 2, "§a t¹ Minh chñ thøc tØnh! V·n bèi c¸o biÖt!/cg_OnCancel", "Ta kh«ng muèn truyÒn c«ng!/cg_undo");
+			Describe(strimg.."Ng­¬i tr­íc m¾t <color=yellow>truyÒn c«ng ®· chuÈn bŞ<color>, tïy thêi cã thÓ tíi ta chç truyÒn c«ng !", 2,
+			"V©ng, ta biÕt, ®Õn lóc ®ã ta sÏ tíi b¸i. /cg_OnCancel",
+			"Kh«ng, minh chñ, ta kh«ng muèn truyÒn c«ng liÔu, ta muèn hñy bá truyÒn c«ng th©n thØnh !/cg_undo"); 
+		else 
+			Describe(strimg.."Ng­¬i tr­íc m¾t <color=yellow> ®· truyÒn c«ng , "..(num2datestr(applytime)).." <color> sau lµ ®­îc truyÒn c«ng !", 2,
+			"C¸m ¬n minh chñ nh¾c nhë, v·n bèi ë chç nµy c¸m ¬n !/cg_OnCancel",
+			"Kh«ng , minh chñ, ta kh«ng muèn truyÒn c«ng, ta muèn hñy bá truyÒn c«ng!/cg_undo"); 
 		end
 	end
 end
@@ -22,9 +27,9 @@ function chuangong_msg()
 		local nowday = tonumber(date("%y%m%d"))
 		local applytime = GetTask(TV_LAST_APPLY_TIME)
 		if (nowday >= applytime ) then 
-			Msg2Player("HiÖn t¹i <color=yellow>b¹n ®· ®¨ng kı thµnh c«ng truyÒn c«ng<color=>, cã thÓ ®Õn chç §éc C« KiÕm ®Ó truyÒn thô. TruyÒn c«ng cÇn 2 Ng©n phiÕu, xin h·y chuÈn bŞ!")
-		else
-			Msg2Player("HiÖn t¹i <color=yellow>b¹n ®· ®¨ng kı thµnh c«ng truyÒn c«ng, thêi gian truyÒn c«ng t¹i"..(num2datestr(applytime)).."<color>. TruyÒn c«ng cÇn 2 Ng©n phiÕu, xin h·y chuÈn bŞ!")
+			Msg2Player("Ng­¬i tr­íc m¾t <color=yellow> ®· truyÒn c«ng ®· chuÈn bŞ hoµn thµnh <color>, tïy thêi cã thÓ ®Õn ®éc c« kiÕm chç chİnh thøc truyÒn c«ng ! truyÒn c«ng cÇn tèn hao 2 tÊm ng©n phiÕu, xin mêi còng nãi tr­íc chuÈn bŞ xong.") 
+		else 
+			Msg2Player("Ng­¬i tr­íc m¾t <color=yellow> ®· truyÒn c«ng , truyÒn c«ng thêi gian ë "..(num2datestr(applytime)).."<color>Sau, truyÒn c«ng cÇn tèn hao 2 tÊm ng©n phiÕu , xin mêi còng nãi tr­íc chuÈn bŞ xong.") 
 		end
 	end
 end
@@ -33,25 +38,25 @@ function num2datestr(nday)
 	local year = floor(nday / 10000) + 2000
 	local month = mod( floor(nday / 100) , 100)
 	local day = mod(nday, 100)
-	return year.."n¨m"..month.."th¸ng"..day.."ngµy"
-end
+return "N¨m "..year.." th¸ng "..month.." ngµy "..day; end
 
 function cg_undo()
 	local nowday = GetTask(TV_LAST_APPLY_TIME)
 	if (nowday > 0) then 
-		Describe(strimg.."Ta ®Õn"..num2datestr(nowday).."lµ cã thÓ truyÒn c«ng cho ng­¬i, cã thËt ng­¬i kh«ng muèn truyÒn c«ng kh«ng?",2,"Kh«ng! Ta kh«ng muèn truyÒn c«ng!/cg_undo_sure", "V©ng! Ta muèn truyÒn c«ng./cg_OnCancel")
-	else
-		Describe(strimg.."Ng­¬i ch­a xin phĞp truyÒn c«ng, cÇn g× hñy bá!",1,"KÕt thóc ®èi tho¹i/cg_OnCancel")
+		Describe(strimg.."Ta ®Õn "..num2datestr(nowday).." liÒn cã thÓ chuÈn bŞ xong gióp ng­¬i truyÒn c«ng, ng­¬i thËt kh«ng muèn truyÒn sao ? ",2,
+		"§óng vËy, ta kh«ng muèn truyÒn c«ng!/cg_undo_sure",
+		"Kh«ng, ta cßn lµ muèn truyÒn, míi võa råi nhÊt thêi khÈn tr­¬ng nãi sai råi mµ th«i. /cg_OnCancel") 
+	else 
+		Describe(strimg.."Ng­¬i kh«ng cã ®· nãi víi ta muèn truyÒn c«ng a. Ch­a nãi qua nh­ thÕ nµo hñy bá ®©y ? ",1,"KÕt thóc ®èi tho¹i /cg_OnCancel") 
 	end
 end
 
 function cg_undo_sure()
 	SetTask(TV_LAST_APPLY_TIME, 0)
-	Describe(strimg.."§­îc! Nguyªn liÖu nµy ta t¹m gi÷ l¹i, nÕu lÇn sau muèn truyÒn c«ng th× ®Õn ®©y!",1,"C¶m ¬n Minh chñ!/cg_OnCancel")
+	Describe(strimg.."§­îc råi, vËy nh÷ng nguyªn liÖu nµy ta thulaij, nÕu nh­ lÇn sau muèn truyÖn lêi cña n÷a chuÈn bŞ ®i !",1,"KÕt thóc ®èi tho¹i/cg_OnCancel")
 end
 
 function cg_OnCancel()
-		
 end
 
 if (GetProductRegion() ~= "vn") then

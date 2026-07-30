@@ -1,10 +1,6 @@
--- Edited by Giangleloi WwW.ClbGamesVN.COM
-
 G_COIN = 20 -- 1 lan rut duoc bao nhieu tien dong, mac dinh 20, by Giangleloi
 function OnExtPointChange_Proc(nExtPointIndex, nChangeValue)
 	if (ExtFunTab[nExtPointIndex + 1] == nil) then
-		--print("Error!!!!!!!!, No ExtPoint Fun On"..nExtPointIndex)
-		--WriteGoldLog("Importacne Error!!!!!!!!, No ExtPoint CallFun On"..nExtPointIndex..", "..GetAccount().." "..GetName().." nExtPointIndex"..nExtPointIndex.." nChangeValue"..nChangeValue, 0, 0, 0, 0)
 		return 0;
 	end
 	ExtFunTab[nExtPointIndex + 1](nChangeValue)
@@ -14,13 +10,12 @@ end
 function OnPayYuanBao(nChangeValue)
 	nValue = -nChangeValue
 	if (nValue == 1) then
-	--ÄÃÒøÔª±¦
-
+	
 		AddStackItem(G_COIN,4,417,1,1,0,0,0)--Add G_COIN tien dong
-		SaveNow(); -- Á¢¼´´æÅÌ
+		SaveNow();
 		WriteGoldLog( GetAccount().."("..GetName()..") MAKE a SILVER with a LOW CARD", 0, 1, 0, 0 );
 		local nCurValue = GetExtPoint(1)
-		WriteLog(date("%Y%m%d %H%M%S").."\t".." Tµi kho¶n"..GetAccount().."\t"..GetName().."\t".." lÊy 20 tiÒn ®ång"..nCurValue*20)
+		WriteLog(date("%Y%m%d %H%M%S").."\t".." Tµi kho¶n"..GetAccount().."\t"..GetName().."\t".."§· Rót TiÒn §ång Thµnh C«ng"..nCurValue*10)
  		Say("Kh¸ch quan ®· rót thµnh c«ng 20 TiÒn ®ång! Xin kiÓm tra l¹i!", 0)
 		Msg2Player("NhËn ®­îc 20 TiÒn ®ång!");
  	elseif( nValue > 1) then
@@ -35,7 +30,7 @@ end
 ExtFunTab=
 {
 	nil,
- 	OnPayYuanBao,
+-- 	OnPayYuanBao,
  	nil,
  	nil,
  	nil,

@@ -1,7 +1,6 @@
 IncludeLib("TONG")
 Include("\\script\\tong\\tong_header.lua")
 
---function jackstraw_main()
 function main()
 	local _, nTongID = GetTongName();
 	if (nTongID == 0) then

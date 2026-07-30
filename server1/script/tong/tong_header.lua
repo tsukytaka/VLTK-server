@@ -1,6 +1,6 @@
 COEF_CONTRIB_TO_VALUE	=	1000		
 MAX_SHITU_VALUE_STORE	=	10000000	
-MAX_WEEK_CONTRIBUTION	=	22400000	
+MAX_WEEK_CONTRIBUTION	=	22400	
 MAX_KICK_COUNT			=	20	
 EVE_NOEVENT		=	0
 EVE_SOJIN		=	1	
@@ -27,7 +27,7 @@ WEEKGOAL_VALUE_TONG_SYNC	=	WEEKGOAL_VALUE_PERSON / 10
 WEEKGOAL_PRICE_PERSON		=	1000															
 WEEKGOAL_PRICE_TONG			=	10																
 TB_WEEKGOAL_TYPE_ID		= 	{ EVE_SOJIN,	EVE_XINSHI,	EVE_CHUNGGUAN,	EVE_YESHOU }	
-TB_WEEKGOAL_TYPE_NAME	=	{ "ChiÕn tr­êng Tèng Kim",	"NhiÖm vô TÝn Sø ",	"Th¸ch thøc thêi gian",	"Chuçi nhiÖm vô D· TÈu" }	
+TB_WEEKGOAL_TYPE_NAME	=	{ "ChiÕn tr­êng Tèng Kim",	"NhiÖm vô TÝn Sø ",	"Th¸ch thøc thêi gian",		"Chuçi nhiÖm vô D· TÈu" }	
 TASKID_CONTRIVALUE			=	2361			
 TASKID_STORED_OFFER			=	2389			
 TASKID_STUNT_LASTWEEK		=	2443		
@@ -106,9 +106,9 @@ TONG_MASS		= 3
 TONG_RETIRE		= 4	
 TB_TONG_FIGURE_NAME =
 {
-	[TONG_MASTER]	=	"Bang Chñ",
+	[TONG_MASTER]	=	"Bang chñ ",
 	[TONG_ELDER]	=	"Tr­ëng L·o",
-	[TONG_MANAGER]	=	"§­êng Chñ",
+	[TONG_MANAGER]	=	"§éi tr­ëng",
 	[TONG_MASS]		=	"§Ö tö ",
 	[TONG_RETIRE]	=	"Èn sü",
 };

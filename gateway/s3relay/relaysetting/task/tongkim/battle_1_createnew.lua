@@ -1,30 +1,23 @@
--- Õ½ÒÛÏµÍ³
--- Fanghao_Wu 2004-12-6
-Include( "\\RelaySetting\\battle\\script\\rf_header.lua" )
+Include("\\RelaySetting\\battle\\script\\rf_header.lua")
 
 function TaskShedule()
-	-- ÉèÖÃ·½°¸Ãû³Æ
-	TaskName( "ËÎ½ğÕ½ÒÛ×ÜÖ¸»Ó" );
-	TaskSetMode(1);
-
-	--Ã¿ÖÜµÄ£¨ĞÇÆÚÒ»)¿ªÊ¼ĞÂµÄÒ»ÂÖ
-	TaskSetStartDay(1, 3);
-
-	-- Ò»ÖÜÒ»¸öÑ­»·
-	TaskInterval(7);
-	TaskTime(2, 0);
-	TaskCountLimit(0);
+	TaskName("Tèng kim chiÕn dŞch tæng chØ huy")
+	TaskSetMode(1)
+	TaskSetStartDay(1,3)
+	TaskInterval(7)
+	TaskTime(2,0)
+	TaskCountLimit(0)
 end
 
 function TaskContent()
-	OutputMsg("****************TAO XIANGYANG MOI TONGKIM********")
-	battle_StartNewIssue(1, 1 );	
-	battle_StartNewIssue(1, 2 );	
-	battle_StartNewIssue(1, 3 );	
-	OutputMsg("***************************************************")
+	OutputMsg("Khoi dong TONG KIM - Chien Dich Chi Huy")
+	battle_StartNewIssue(1,1)
+	battle_StartNewIssue(1,2)
+	battle_StartNewIssue(1,3)
 end
 
 function GameSvrConnected(dwGameSvrIP)
 end
+
 function GameSvrReady(dwGameSvrIP)
 end

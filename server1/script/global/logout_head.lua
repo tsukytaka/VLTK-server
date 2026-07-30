@@ -16,11 +16,9 @@ function IsLogoutFileFunction(script, func)
 	for i = 1, getn(TB_LOGOUT_FILEFUN) do
 		local tb = TB_LOGOUT_FILEFUN[i]
 		if (tb[1] == script and tb[2] == func) then
-			return 1
-		end
+		return 1 end
 	end
-	return 0
-end
+return 0 end
 
 function AddLogoutFileFunction(script, func)
 	local tb = {}
@@ -33,11 +31,9 @@ function IsExchangeFileFunction(script, func)
 	for i = 1, getn(TB_EXCHANGE_FILEFUN) do
 		local tb = TB_EXCHANGE_FILEFUN[i]
 		if (tb[1] == script and tb[2] == func) then
-			return 1
-		end
+		return 1 end
 	end
-	return 0
-end
+return 0 end
 
 function AddExchangeFileFunction(script, func)
 	local tb = {}

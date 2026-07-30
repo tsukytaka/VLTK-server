@@ -1,4 +1,5 @@
 Include("\\script\\global\\login_head.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 -- 120¼¶¼¼ÄÜÈÎÎñÍ·ÎÄ¼ş
 
 LV120_SKILL_STATE = 2450	-- ´æ·Åµ±Ç°ÈÎÎñ×´Ì¬µÄÈ«¾ÖÈÎÎñ±äÁ¿£¬³õÊ¼ÖµÎª1£¬Îª0±íÊ¾ÈÎÎñÒÑ¾­Íê³É
@@ -368,6 +369,11 @@ end
 
 -- 120¼¶¼¼ÄÜÊé¶Ò»»
 function lvl120skill_learn()
+
+	if HocKyNang120 ~= 1 then
+		return Talk(1, "", "Tİnh n¨ng nµy t¹m ®ãng, h·y quay l¹i sau!")	
+	end	
+
 	Describe("Cã c¸i g× khã mæ sao ?",4, 
                "Ta muèn ®æi s¸ch kü n¨ng cÊp 120 /lvl120skill_getbook", 
                "Lµm sao cã thÓ häc ®­îc  kü n¨ng 120/lvl120skill_learninfo", 
@@ -421,7 +427,7 @@ function lvl120skill_getbook()
 				GetLocalDate("%Y-%m-%d %X"),GetName(), GetAccount()))
 		else
 			Describe("ThËt lµ tiÕc nuèi, mang vËt phÈm kh«ng hîp yªu cÇu, xin mêi kiÓm tra !", 1,"KÕt thóc ®èi tho¹i /no"); 
-                     Msg2Player("CÇn thu thËp vËt phÈm : mét quyÓnbµn nh­îc t©m kinh, mét quyÓn s¸ch kü n¨ng cÊp 90 cña bæn m«n, mét viªn tinh hång b¶o th¹ch cïng mét viªn thñy tinh .");
+                     Msg2Player("CÇn thu thËp vËt phÈm : mét quyÓn bµn nh­îc t©m kinh, mét bé s¸ch kü n¨ng cÊp 90 cña bæn m«n, mét viªn tinh hång b¶o th¹ch cïng mét viªn thñy tinh .");
 		end;
 	end;
 end;

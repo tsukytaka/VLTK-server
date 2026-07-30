@@ -1,8 +1,10 @@
 Include("\\script\\dailogsys\\dailogsay.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 Include("\\script\\changefeature\\equip_tryon.lua")
+Include("\\script\\vng_lib\\extpoint.lua")
+Include("\\script\\activitysys\\playerfunlib.lua")
+Include("\\script\\misc\\eventsys\\type\\npc.lua")
 tbFeatureNpc = {}
-
 
 function tbFeatureNpc:SelectType()
 	local szTitle = "Xin h∑y ch‰n vﬁ tr›"
@@ -21,17 +23,42 @@ function tbFeatureNpc:SelectType()
 end
 	
 function tbFeatureNpc:Dialog()
-	
-	local szTitle = "Xin chµo Æπi hi÷p, l∑o phu c„ th” giÛp g◊ Æ≠Óc?"
+	local nMoney = CalcEquiproomItemCount(4,417,1,-1);
+	if (nMoney <= 0) then
+		Talk(1, "", "Tr™n ng≠Íi c∏c hπ kh´ng c„ Ti“n ßÂng, chæc c∏c hπ Æang tr™u ch‰c ta ph∂i kh´ng?")
+	return 1
+	end
+	local szTitle = "Ngµi c„ muËn thay ÆÊi ngoπi trang kh´ng?"
 	local tbOpt = 
 	{
-		{"Xem tr≠Ìc ngoπi h◊nh trang bﬁ", self.SelectType, {self}},
-		{"Thay ÆÊi ngoπi h◊nh trang bﬁ ≠ng ˝ nh t cho trang bﬁ", self.InjectToItem, {self}},
+		{"Xem vµ thay ÆÊi ngoπi h◊nh trang bﬁ", self.SelectType, {self}},
+		--{"Thay ÆÊi ngoπi h◊nh trang bﬁ ≠ng ˝ nh t cho trang bﬁ", self.InjectToItem, {self}},
+		{"TrÎ v“ ngoπi h◊nh ban Æ«u", self.RestoreItem, {self}},
 		{"X„a hi÷u ¯ng hi÷n tπi", RestoreOwnFeature},
-		{"Lµm th’ nµo Æ” thay ÆÊi ngoπi h◊nh trang bﬁ",  self.Explain, {self}},
-		{"Nh©n ti÷n gh– qua th´i"},
+		--{"Lµm th’ nµo Æ” thay ÆÊi ngoπi h◊nh trang bﬁ",  self.Explain, {self}},
+		{"Tho∏t"},
 	}
 	CreateNewSayEx(szTitle, tbOpt)
+end
+
+function tbFeatureNpc:Dialog2()
+	local nMoney = CalcEquiproomItemCount(4,417,1,-1);
+	if (nMoney <= 0) then
+		Talk(1, "", "Tr™n ng≠Íi c∏c hπ kh´ng c„ Ti“n ßÂng, chæc c∏c hπ Æang tr™u ch‰c ta ph∂i kh´ng?")
+	return 1
+	end
+	local szTitle = "Ngµi c„ muËn thay ÆÊi ngoπi trang kh´ng?"
+	local tbOpt = 
+	{
+		{"Xem vµ thay ÆÊi ngoπi h◊nh trang bﬁ", self.SelectType, {self}},
+		--{"Thay ÆÊi ngoπi h◊nh trang bﬁ ≠ng ˝ nh t cho trang bﬁ", self.InjectToItem, {self}},
+		{"TrÎ v“ ngoπi h◊nh ban Æ«u", self.RestoreItem, {self}},
+		{"X„a hi÷u ¯ng hi÷n tπi", RestoreOwnFeature},
+		--{"Lµm th’ nµo Æ” thay ÆÊi ngoπi h◊nh trang bﬁ",  self.Explain, {self}},
+		{"Tho∏t"},
+	}
+	CreateNewSayEx(szTitle, tbOpt)
+
 end
 
 function tbFeatureNpc:Explain()
@@ -60,6 +87,1129 @@ function tbFeatureNpc:InjectToItem()
 	CreateNewSayEx(szTitle, tbOpt)
 end
 
-function main()
-	return tbFeatureNpc:Dialog()
+function tbFeatureNpc:RestoreItem()
+	local szTitle = "Xin h∑y ch‰n vﬁ tr› cÒa trang bﬁ hi÷n tπi"
+	
+	
+	local tbOpt = {}
+	
+	for key , value in tbEquipTryOn.tbTemplate do
+		tinsert(tbOpt, {key, value.GiveEquip2, {value}})
+	end
+	
+	tinsert(tbOpt, {"TrÎ lπi", self.Dialog, {self}})
+	tinsert(tbOpt, {"K’t thÛc ÆËi thoπi"})
+	
+	CreateNewSayEx(szTitle, tbOpt)
 end
+
+function main()
+	dofile("script/global/pgaming/item/lunglinhhap.lua")
+if GetSex() == 1 then
+	 tbFeatureNpc:Dialog2()
+	 else
+	 tbFeatureNpc:Dialog()	 
+end
+return 1
+end
+------------------------------
+function xemtruocngoaitrangnu()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"N„n", nonnu},	
+		{"∏o", aonu},
+		--{"VÚ Kh›", vukhi},	
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function nonnu()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"1. Th›ch Ni M∑o", thichnico},
+		{"2. Thi™n Thanh M∑o", thienthanhmao},
+		{"3. X›ch ∂nh ph∏t Qu∏n", xichphatquan},
+		{"4. B◊TrÙ", botro},
+		{"5. ThÛ CËt Tr©m", thucottram},
+		{"Trang K’", trangkenonnu2},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thichnico()
+local szTitle =  NONNU_001.."Loπi mÚ c∏c ni c´ th≠Íng ÆÈi.."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thienthanhmao()
+local szTitle =  NONNU_002.."Loπi mÚ mµu xanh cÒa PhÀt gia, thanh tho∏t cao qu˝."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function xichphatquan()
+local szTitle =  NONNU_003.."Loπi mÚ cao c p cÒa PhÀt gia, dÔng trong nh˜ng lÛc nghi™m trang."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function botro()
+local szTitle =  NONNU_004.."Loπi mÚ b∂o hÈ Æ≠Óc tinh ch’ tı nh˜ng loπi da thÛ, ca kh∂ n®ng t n c´ng vµ phﬂng ng˘ r t tËt."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thucottram()
+local szTitle =  NONNU_005.."Loπi Tr©m lµm bªng x≠¨ng thÛ."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkenonnu2()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"6. Huy“n T™ Di÷n Tr∏o", huyentedienmao},
+		{"7. Th´ Thi’t ß«u Hoµn", thietthietdauhoan},
+		{"8. K™ V‹ Thoa", kevuthoa},
+		{"9. Long Huy’t ß«u hoµn", longhuyetdauhoan},
+		{"10. Vi™n M∑o", vienmao},
+		{"Trang TruÌc", nonnu},
+		{"Trang K’", trangkenonnu3},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function huyentedienmao()
+local szTitle =  NONNU_006.."Loπi mÚ phﬂng hÈ th≠Óng Æºng bªng da t™ gi∏c, c˘c k˙ qu˝ hiOm."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thietthietdauhoan()
+local szTitle =  NONNU_007.."Loπi mÚ b∂o hÈ tinh ch’ tı th–p, kh∂ n®ng phﬂng ng˘ r t cao."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function kevuthoa()
+local szTitle =  NONNU_008.."Loπi thoa Æ≠Óc lµm to Æu´i chim, r t n˜ t›nh."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function longhuyetdauhoan()
+local szTitle =  NONNU_009.."Loπi mÚ b∂o hÈ tinh ch’ tı vµng c˘c k˙ quu hi’m."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function vienmao()
+local szTitle =  NONNU_010.."MÈt loπi mÚ th´ng th≠Íng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkenonnu3()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"11. Song PhÙng Tri“u Thi™n Qu∏n", phongtrieuthienquan},
+		{"12. Long L©n Kh´i", longlankhoi},
+		{"13. BË M∑o", bomao},
+		{"14. L≠u Ly Thoa", luulythoa},
+		{"15. Thanh Tinh Thoa", thanhtinhthoa},
+		{"Trang TruÌc", trangkenonnu2},
+		{"Trang K’", trangkenonnu4},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+
+function phongtrieuthienquan()
+local szTitle =  NONNU_011.."Loπi mÚ b∂o hÈ tinh ch’ tı vµng, trÔm kUn c∂ Æ«u."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function longlankhoi()
+local szTitle =  NONNU_012.."Kh´i ph∏t ra hµo quang nh≠ rÂng l©n uËn l≠Ón, Vıa nh◊n Æ∑ bi’t ngay lµ mÈt ph»m vÀt c˘c k˙ quu hi’m."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function bomao()
+local szTitle =  NONNU_013.."Loπi mÚ th´ng th≠Íng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function luulythoa()
+local szTitle =  NONNU_014.."Thoa lµm to ng‰c L≠u Ly, c˘c k˙ quu hi’m."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thanhtinhthoa()
+local szTitle =  NONNU_015.."Thoa ca kh∂m thÒy tinh xanh, ∏nh s∏ng huy“n ∂o, c˘c k˙ quu hi’m"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkenonnu4()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"16. Hoµng BË Ph∏t ß∏i", hoangbophatdai},
+		{"17. Thanh L≠u Ly Ph∏t Xoa", thanhluulyphatxoa},
+		{"18. Kim PhÙng Tri”n S›", kimphongtriensy},
+		{"Trang TruÌc", trangkenonnu3},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function hoangbophatdai()
+local szTitle =  NONNU_016.."MÈt loπi Æai thæt th´ng th≠Íng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu4},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thanhluulyphatxoa()
+local szTitle =  NONNU_017.."Loπi tr©m cµi bªng L≠u Ly pha l…n nhi“u loπi b∂o thπch."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu4},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function kimphongtriensy()
+local szTitle =  NONNU_018.."Loπi kh´i gi∏p ca h◊nh d∏ng nh≠ Æ«u chim phÙng, chÿ dµnh cho t≠Ìng l‹nh."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenonnu4},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function aonu()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"1. Sa Ni phÙc", saniphuc},
+		{"2. Nguy÷n Bπch cµ sa", nguyenbachcasanu},
+		{"3. Th t B∂o cµ sa", thatbaocasanu},
+		{"4. Linh Xµ y", linhxay},
+		{"5. HÊ B◊ y", hobiy},
+		{"Trang K’", trangkeaonu2},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function saniphuc()
+local szTitle =  AONU_001.."T®ng y dµnh cho c∏c ti”u Sa Di voa nhÀp m´n"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function nguyenbachcasanu()
+local szTitle =  AONU_002.."Cﬂn g‰i lµ Th t ßi”u y, y phÙc cÒa c∏c t®ng nh©n ch¯c vﬁ cao"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thatbaocasanu()
+local szTitle =  AONU_003.."Lµ PhÀt m´n chi b∂o, do PhÀt TÊ t∆ng cho ß≠Íng Tam Tπng khi Æi thÿnh kinh"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function linhxay()
+local szTitle =  AONU_004.."GiËng nh≠ kho∏t tr™n ng≠Íi mÈt t m da ræn, cˆ ÆÈng c˘c k˙ linh hoπt"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function hobiy()
+local szTitle =  AONU_005.."May bªng da hÊ, m∆c vµo kh› l˘c t®ng l™n, c˘c k˙ hi’m th y."
+		local tbOpt =
+	{
+		{"TrÎ v“",aonu},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkeaonu2()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"6. Cˆu V‹ Bπch HÂ trang", bachhotrang},
+		{"7. C»m Sam", camsam},
+		{"8. Thanh La sam", thanhlasam},
+		{"9. Tr«m H≠¨ng sam", tramhuongsam},
+		{"10. Kh∂m Thi’t n˜ gi∏p", kiemthietnugiap},
+		{"Trang Tr≠Ìc", aonu},
+		{"Trang K’", trangkeaonu3},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function bachhotrang()
+local szTitle =  AONU_006.."ß≠Óc may to Æu´i cÒa 9 con HÂ Ly tinh, m∆c vµo n®ng l˘c v´ song"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function camsam()
+local szTitle =  AONU_007.."Y phÙc Æ≠Óc ch’ tı nh˜ng loπi v∂i th´ng th≠Íng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thanhlasam()
+local szTitle =  AONU_008.."B™n ngoµi lµ ∏o nh≠ng b™n trong lµ gi∏p, kh∂ n®ng phﬂng ng˘ r t tËt"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function tramhuongsam()
+local szTitle =  AONU_009.."Trong ∏o lu´n ph∂ng ph t mÔi tr«m h≠¨ng, nh≠ ti™n n˜ gi∏ng tr«n."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function kiemthietnugiap()
+local szTitle =  AONU_010.."∏o gi∏p th´ng th≠Íng cÒa n˜ giÌi."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkeaonu3()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"11. X›ch Nhπn gi∏p", xichnhangiap},
+		{"12. T›ch Lﬁch Kim PhÙng gi∏p", tichlichkimphonggiap},
+		{"13. Ph∏ Ma y", phapmay},
+		{"14. Bπch ßi÷p qu«n", dichdichquan},
+		{"15. Nguy÷t Hoa qu«n", nguyethoaquan},
+		{"16. L≠u Ti™n Qu«n", luutienquan},
+		{"Trang Tr≠Ìc", trangkeaonu2},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function xichnhangiap()
+local szTitle =  AONU_011.."∏o gi∏p Æ≠Óc k’t bªng l´ng Nhπn Æ·, n˜ t›nh th≠Íng hay dÔng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function tichlichkimphonggiap()
+local szTitle =  AONU_012.."HÈ gi∏p cÒa MÙc Qu’ Anh, theo truy?n thuyOt lµ do Th∏nh M…u ban t∆ng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function phapmay()
+local szTitle =  AONU_013.."Lµ loπi ∏o Æ≠Óc lµm to v· c©y Ma thÙ."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function dichdichquan()
+local szTitle =  AONU_014.."Lµ loπi th≠Íng phÙc cÒa n˜ giÌi."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function nguyethoaquan()
+local szTitle =  AONU_015.."Loπi qu«n ph∏t ra ∏nh s∏ng k˙ ∂o nh≠ ∏nh s∏ng tr®ng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function luutienquan()
+local szTitle =  AONU_016.."Truy“n thuy’t n„i rªng Æ©y lµ do Tri÷u Phi YOn thÍi H∏n t˘ tay lµm ra, m∆c vµo nh≠ Æang du ti™n."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkeaonu3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+----------------------------
+
+
+function xemtruocngoaitrangnam()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"N„n", nonnam},	
+		{"∏o", aonam},
+		--{"VÚ Kh›", vukhi},	
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function vukhi()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"1. Ki’m", kiem1},
+		{"2. TrÔy", truy1},
+		{"3. ßao", dao1},
+		{"4. Th≠¨ng", thuong1},
+		{"5. BÁng", kiem2},
+		{"6. VÚ Kh› ß≠Íng M´n", duongmon2},
+		{"Trang K’", trangkevukhi},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function kiem1()
+local szTitle =  VUKHI_001.."ßai cÒa c∏c ti”u Sa Di th≠Íng Æeo."
+		local tbOpt =
+	{
+		{"TrÎ v“",vukhi},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function truy1()
+local szTitle =  VUKHI_002.."ßai cÒa c∏c ti”u Sa Di th≠Íng Æeo."
+		local tbOpt =
+	{
+		{"TrÎ v“",vukhi},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function dao1()
+local szTitle =  VUKHI_003.."ßai cÒa c∏c ti”u Sa Di th≠Íng Æeo."
+		local tbOpt =
+	{
+		{"TrÎ v“",vukhi},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thuong1()
+local szTitle =  VUKHI_004.."ßai cÒa c∏c ti”u Sa Di th≠Íng Æeo."
+		local tbOpt =
+	{
+		{"TrÎ v“",vukhi},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function kiem2()
+local szTitle =  VUKHI_005.."ßai cÒa c∏c ti”u Sa Di th≠Íng Æeo."
+		local tbOpt =
+	{
+		{"TrÎ v“",vukhi},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function duongmon2()
+local szTitle =  VUKHI_006.."ßai cÒa c∏c ti”u Sa Di th≠Íng Æeo."
+		local tbOpt =
+	{
+		{"TrÎ v“",vukhi},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+----------------------------------------------------
+function nonnam()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"1. Sa Di GiÌi C´", sadigioico},
+		{"2. PhÔ Dung M∑o", phudungmao},
+		{"3. T˙ L´ m∑o", tulaomao},
+		{"4. TrÛc Lπp", triclap},
+		{"5. Nh©n B◊ Di÷n Tr∏o", nhanbidientrao},
+		{"Trang K’", trangkenon},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function sadigioico()
+local szTitle =  NONNAM_001.."ßai cÒa c∏c ti”u Sa Di th≠Íng Æeo."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function phudungmao()
+local szTitle =  NONNAM_002.."C∏c T®ng L˜ trung Æºng th≠Íng Æeo, lµm bªng th¯ lÙa th≠Óng Æºng."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function tulaomao()
+local szTitle =  NONNAM_003.."C∏c T®ng L˜ th≠Óng Æºng th≠Íng Æeo, tr™n ca  n PhÀt, ß≠Íng T®ng th≠Íng Æeo na"
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function triclap()
+local szTitle =  NONNAM_004.."Loπi mÚ th≠Íng th y Î vÔng Giang Nam."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function nhanbidientrao()
+local szTitle =  NONNAM_005.."Nghe nai sau khi gi’t ng≠Íi th◊ lÈt da lµm ∏o, o∏n kh› cuÂn cuÈn."
+		local tbOpt =
+	{
+		{"TrÎ v“",nonnam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkenon()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"6. Tu La Ph∏t k’t", tulaphatket},
+		{"7. Phi Y’n Qu∏n", phiyenquan},
+		{"8. Anh Lπc Qu∏n", anhlucquan},
+		{"9. Th´ng Thi™n Ph∏t Qu∏n", thongthienphatquan},
+		{"10. Thi’t Kh´i", thietkhoi},
+		{"Trang Tr≠Ìc", nonnam},
+		{"Trang K’", trangkenon2},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function tulaphatket()
+local szTitle =  NONNAM_006.."Lµ mÈt di vÀt tr™n th’ gian, s∏t kh› t·a ra ngÔn ngÙt."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function phiyenquan()
+local szTitle =  NONNAM_007.."Loπi mÚ r t Æ—p, danh s‹ ≠a dÔng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function anhlucquan()
+local szTitle =  NONNAM_008.."Loπi mÚ r t Æ—p, Æ≠Óc kh∂m bªng c· Anh Lπc, c∏c v®n nh©n Nho s‹ th≠Íng th›ch ÆÈi"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thongthienphatquan()
+local szTitle =  NONNAM_009.."Lµ loπi mÚ cao qu˝, chÿ ca Hoµng Th≠Óng mÌi Æ≠Óc ÆÈi"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thietkhoi()
+local szTitle =  NONNAM_010.."Loπi kh´i lµm bªng tinh th–p th≠Óng Æºng."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkenon2()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"11. Ng©n Kh´i", ngankhoi},
+		{"12. Y”m NhÀt kh´i", yemnhatkhoi},
+		{"13. Ph∏ BË C©n", phabocan},
+		{"14. Song T«ng L≠u Ly Hoµn", songtangluulyhoan},
+		{"15. Tr›ch Tinh hoµn", trichtinhhoan},
+		{"Trang Tr≠Ìc", trangkenon},
+		{"Trang K’", trangkenon3},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function ngankhoi()
+local szTitle =  NONNAM_011.."Loπi kh´i bªng bπc nguy™n ch t."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function yemnhatkhoi()
+local szTitle =  NONNAM_012.."Loπi kh´i gi∏p bªng vµng, kh∂ n®ng phﬂng ng˘ r t cao."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function phabocan()
+local szTitle =  NONNAM_013.."Loπi kh®n nh˜ng ng≠Íi an mµy th≠Íng qu n tr™n Æ«u, r t r∏ch n∏t."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function songtangluulyhoan()
+local szTitle =  NONNAM_014.."Loπi vﬂng Æeo ca kh∂m nhi“u ng‰c L≠u Ly, ca hai lÌp."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trichtinhhoan()
+local szTitle =  NONNAM_015.."Loπi vﬂng Æeo ca kh∂m nhi“u ng‰c L≠u Ly, b∂o vÀt cÒa C∏i Bang."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function trangkenon3()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"16. BË C©n", bocan},
+		{"17. Chu KhÎi Qu∏n", chukhoiquan},
+		{"18. § Tµm M∑o", otammao},
+		{"Trang Tr≠Ìc", trangkenon2},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function bocan()
+local szTitle =  NONNAM_016.."Loπi kh®n th≠Íng ÆÈi cÒa nh˜ng ng≠Íi b◊nh d©n."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function chukhoiquan()
+local szTitle =  NONNAM_017.."Loπi m? d÷t bªng t¨ th≠Óng ph»m, ki”u d∏ng r t Æ—p."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function otammao()
+local szTitle =  NONNAM_018.."Loπi mÚ d÷t bªng t¨ § T«m th≠Óng ph»m, phong c∏ch quu ph∏i."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangkenon3},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+--------------------------------------------------------------------
+
+
+function aonam()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"1. Sa Di PhÙc", sadiphuc},
+		{"2. Nguy÷n Bπch Cµ Sa", nguyenbachcasa},
+		{"3. Th t B∂o Cµ Sa", thatbaocasa},
+		{"4. CÊn y", cony},
+		{"5. Ng≠ Nh…n y", nhany},
+		{"Trang K’", trangke},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+	
+
+function sadiphuc()
+local szTitle =  AONAM_001.."T®ng y dµnh cho c∏c ti”u Sa Di vµo nhÀp m´n"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function nguyenbachcasa()
+local szTitle =  AONAM_002.."Cﬂn g‰i lµ Th t ßi”u y, y phÙc cÒa c∏c t®ng nh©n ch¯c vﬁ cao"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thatbaocasa()
+local szTitle =  AONAM_003.."Lµ PhÀt m´n chi b∂o, do PhÀt TÊ t∆ng cho ß≠Íng Tam Tπng khi Æi thÿnh kinh"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function cony()
+local szTitle =  AONAM_004.."∏o dµnh cho c∏c s∏t thÒ c p th p nh t »n gi u th©n phÀn"
+		local tbOpt =
+	{
+		{"TrÎ v“",aonam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function nhany()
+local szTitle =  AONAM_005.."Trang bﬁ cho c∏c s∏t thÒ c p cao."
+		local tbOpt =
+	{
+		{"TrÎ v“",aonam},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+
+function trangke()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"6. Thi™n Nh…n MÀt Trang", thiennhanmattrang},
+		{"7. Th´ BË tr≠Íng bµo", thobotruongbao},
+		{"8. Ng©n T¨ Bµo", ngantambao},
+		{"9. Gi∏ng Sa Bµo", giangsabao},
+		{"10. T·a Tˆ gi∏p", toatugiap},
+		{"Trang Tr≠Ìc", xemtruocngoaitrang},
+		{"Trang K’", trangke2},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thiennhanmattrang()
+local szTitle =  AONAM_006.."TÀp trung s∏t kh› v´ bi™n, g∆p th«n gi’t th«n, g∆p PhÀt gi’t PhÀt."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function thobotruongbao()
+local szTitle =  AONAM_007.."Do c∏c loπi v∂i th´ d÷t thµnh"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function ngantambao()
+local szTitle =  AONAM_008.."DÔng Tµm t¨ phËi hÓp vÌi Ng©n t¨ ch’ thµnh, c„ kh∂ n®ng phﬂng ng˘ c˘c tËt."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function giangsabao()
+local szTitle =  AONAM_009.."DÔng Gi∏ng Sa ch’ thµnh, dÔng cho c∏c bÀc Æ’ v≠¨ng, cao qu˝ kh„ t∂."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function toatugiap()
+local szTitle =  AONAM_010.."Trang bﬁ cho nh©n s‹ tËt trong qu©n ÆÈi, s¯c phﬂng ng˘ k–m."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+
+function trangke2()
+local szTitle =  "Thay ÆÊi ngoπi trang giÛp c∏c nh©n s‹ trÎ n™n xinh Æ—p h¨n, c∏c bπn c„ muËn thˆ kh´ng nµo ? "
+		local tbOpt =
+	{
+		{"11. S¨n V®n T˘ gi∏p", sonvantugiap},
+		{"12. ß≠Íng Ngh™ gi∏p", duongnghegiap},
+		{"13. Lan BË y", lanbony},
+		{"14. ∏o v∂i th´", aovaitho},
+		{"15. Huy“n Hoµng Æo∂n gi∏p", huyenhoangdoangiap},
+		{"16. Tuy“n Long bµo", tuyenlongbao},
+		{"Trang Tr≠Ìc", trangke},
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function sonvantugiap()
+local szTitle =  AONAM_011.."Lµ mÈt m∂nh ∏o gi∏p. gi˜a lÂi, hai b™n l‚m, c´ng dÙng chËng t™n."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function duongnghegiap()
+local szTitle =  AONAM_012.."truy“n thi’t Æ©y lµ hÈ th©n b∂o gi∏p cÒa L∑ §n H«u, lµ hÈ ph∏p c˘c ph»m"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function lanbony()
+local szTitle =  AONAM_013.."lµ th¯ v∂i bªng v‚ c©y, chÿ m∆c nh˜ng lÛc b◊nh th≠Íng"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function aovaitho()
+local szTitle =  AONAM_014.."∏o v∂i th´ s¨, kh´ng ca t™n g‰i"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function huyenhoangdoangiap()
+local szTitle =  AONAM_015.."B™n ngoµi lµ ∏o, b™n trong th˘c ch t lµ mÈt ∏o gi∏p, s¯c phﬂng ng˘ c˘ hπn."
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+
+function tuyenlongbao()
+local szTitle =  AONAM_016.."Ph∂i hao s¯c cÒa 100 ng≠Íi thÓ rÃn lµm trong m≠Íi n®m"
+		local tbOpt =
+	{
+		{"TrÎ v“",trangke2},		
+		{"Tho∏t"},
+	}
+		CreateNewSayEx(szTitle, tbOpt)	
+	return 1				
+end
+-------------------------
+
+
+--nId = pEventType:Reg("Ch≠Îng ß®ng Cung N˜", "Thay ßÊi Ngoπi Trang", tbFeatureNpc.Dialog,{tbFeatureNpc})
+--pEventType:Reg("Ch≠Îng ß®ng Cung N˜", "Thay ßÊi Ngoπi Trang", platina_main);

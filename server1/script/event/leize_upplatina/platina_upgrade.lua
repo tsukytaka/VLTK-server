@@ -1,15 +1,16 @@
 Include("\\script\\event\\leize_upplatina\\platina_head.lua");
 Include("\\script\\lib\\basic.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-local nOpenLevel = nLevelThienTu
---local nOpenLevel = 7
+Include("\\script\\dailogsys\\dailogsay.lua")
+Include("\\script\\misc\\eventsys\\type\\npc.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
+local nOpenLevel = 7
 function platina_main()
 	local aryDescribe = {
 	"<dec><npc>Tr­íc kia, ta tõng gióp quan phñ dïng c¸c <color=yellow>m¶nh Bæ Thiªn Th¹ch<color> ®Ó chÕ t¹o ra thÇn binh lîi khİ. NÕu nh­ <sex>cã thÓ t×m ra<color=yellow>m¶nh Bæ Thiªn Th¹ch<color> nµy, ta cã thÓ gióp ng­¬i chÕ t¹o trang bŞ B¹ch Kim, nhÊt ®Şnh kh«ng thÓ thiÕu vËt liÖu nµy.",
 	"Ta muèn th¨ng cÊp cho trang bŞ B¹ch Kim nµy/upgrade_paltinaequip",
 	"Ta muèn chÕ t¹o trang bŞ Hoµng Kim thµnh trang bŞ B¹ch Kim/upgrade_goldformplatina",
-	"C¸ch thu thËp m¶nh Bæ Thiªn Th¹ch/about_aerolite",
-	"Trang bŞ B¹ch Kim lµ g×/about_platina",
+	--"C¸ch thu thËp m¶nh Bæ Thiªn Th¹ch/about_aerolite",
+	--"Trang bŞ B¹ch Kim lµ g×/about_platina",
 	"§Ó ta suy nghÜ kü l¹i xem/no",
 	};
 	CreateTaskSay(aryDescribe);
@@ -189,12 +190,12 @@ function do_upgradeequip_process(nItemCount, nStep, bPreview)
 				return
 			end
 			
-			if (tb_tempUpgrade.nItemQuality == 4 and GetPlatinaLevel(nCurItemIdx) >= %nOpenLevel) then
-				CreateTaskSay(	{"<dec><npc>Víi søc hiÖn t¹i cña ta chØ cã thÓ gióp ng­¬i c­êng hãa trang bŞ nµy ®Õn cÊp nµy th«i, nh­ng mµ sau nµy ta cã thÓ gióp ng­¬i tu luyÖn tiÕp. Cø tin ta ®i råi sÏ cã mét ngµy ta sÏ gióp ng­¬i c­êng hãa mãn ®å nµy lªn, ®Õn lóc ®ã ng­¬i h·y quay l¹i gÆp ta nhĞ!",
-									"Thö mãn trang bŞ kh¸c/".."#"..szContinueFunc.."("..bPreview..")",
-									"ThËt ng¹i qu¸, ta sÏ quay l¹i sau./cancel"	}	);
-				return
-			end;
+			--if (tb_tempUpgrade.nItemQuality == 4 and GetPlatinaLevel(nCurItemIdx) >= %nOpenLevel) then
+				--CreateTaskSay(	{"<dec><npc>Víi søc hiÖn t¹i cña ta chØ cã thÓ gióp ng­¬i c­êng hãa trang bŞ nµy ®Õn cÊp nµy th«i, nh­ng mµ sau nµy ta cã thÓ gióp ng­¬i tu luyÖn tiÕp. Cø tin ta ®i råi sÏ cã mét ngµy ta sÏ gióp ng­¬i c­êng hãa mãn ®å nµy lªn, ®Õn lóc ®ã ng­¬i h·y quay l¹i gÆp ta nhĞ!",
+									--"Thö mãn trang bŞ kh¸c/".."#"..szContinueFunc.."("..bPreview..")",
+									--"ThËt ng¹i qu¸, ta sÏ quay l¹i sau./cancel"	}	);
+				--return
+			--end;
 			if (tb_tempUpgrade.nItemQuality == 4 and GetPlatinaLevel(nCurItemIdx) >= 10) then
 				CreateTaskSay(	{	"<dec><npc>Trang bŞ nµy ®· ®¹t ®¼ng cÊp cao nhÊt, kh«ng cÇn ph¶i th¨ng cÊp n÷a.",
 									"Thö mãn trang bŞ kh¸c/".."#"..szContinueFunc.."("..bPreview..")",
@@ -400,3 +401,6 @@ end;
 function about_platina()
 	CreateTaskSay({"<dec><npc>Thuéc tİnh cña trang bŞ B¹ch Kim sÏ do thuéc tİnh cña trang bŞ Hoµng Kim chÕ t¹o quyÕt ®Şnh. Thuéc tİnh trang bŞ Hoµng Kim cµng tèt th× trang bŞ B¹ch Kim t¹o thµnh sÏ cµng tèt. NÕu kh«ng hµi lßng víi trang bŞ Hoµng Kim hiÖn t¹i, ta kiÕn nghŞ h·y t×m trang bŞ Hoµng Kim kh¸c.", "KÕt thóc ®èi tho¹i/no"});
 end;
+if EpTrangBiBachKim == 1 then
+pEventType:Reg("Thî RÌn ThÇn Bİ", "Trang bŞ B¹ch Kim", platina_main);
+end

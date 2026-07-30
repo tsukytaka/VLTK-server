@@ -19,7 +19,7 @@ function fenglingdu_main()
 		SetMissionV(MS_STATE, 1)
 	end
 	SubWorld = orgworld
-	str = "Cuéc ®ua thuyÒn ë Phong L¨ng §é chuÈn bŞ khai cuéc, h·y mau ®Õn Bê Nam Phong L¨ng §é gÆp ThuyÒn phu nép Phong L¨ng §é lÖnh bµi ®Ó ®¨ng kı thuyÒn!"
+	str = "Cuéc ®ua thuyÒn ë Phong L¨ng §é chuÈn bŞ khai cuéc, h·y mau ®Õn bê phİa Nam ë Phong L¨ng §é gÆp ThuyÒn phu nép LÖnh bµi Phong L¨ng §é hoÆc 200 quyÓn MËt ®å thÇn bİ ®Ó tham gia lªn thuyÒn!"
 	AddGlobalCountNews(str, 3)
 	
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));		-- by bel ¿ª´¬Ç°10·ÖÖÓ·¢³öÏûÃğË®Ôô»î¶¯µÄ¹«¸æ

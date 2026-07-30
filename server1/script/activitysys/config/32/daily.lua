@@ -41,7 +41,7 @@ function pActivity:CompletKillTask()
 		--Phong v©n l÷nh bµi - ghi nhÀn sË l«n hoµn thµnh nhi÷m vÙ V‚ l©m minh chÒ - Modified by DinhHQ - 20110920
 		G_ACTIVITY:OnMessage("FinishVLMC_VNG", "KillTask");
 		--Thay ÆÊi ph«n th≠Îng nhi÷m vÙ gi’t qu∏i hµng ngµy - Modified By DinhHQ - 20110810
-		tbAwardTemplet:GiveAwardByList({nExp = 15000000}, format("Hoµn thµnh nhi÷m vÙ hµng ngµy(%s) nhÀn Æ≠Óc %d c∏i %s", "Nhi÷m vÙ S∏t qu∏i ", 15000000, "kinh nghi÷m "));
+		tbAwardTemplet:GiveAwardByList({nExp = 1500000}, format("Hoµn thµnh nhi÷m vÙ hµng ngµy(%s) nhÀn Æ≠Óc %d c∏i %s", "Nhi÷m vÙ S∏t qu∏i ", 15000000, "kinh nghi÷m "));
 		Talk(1,"",format("%s, Ng≠¨i qu∂ lµ mÈt vﬁ Æπi hi÷p. ß©y lµ m„n quµ nh· ta t∆ng cho ng≠¨i, mong h∑y nhÀn l y. Ngµy mai g∆p lπi nh–.", GetSex() == 1 and "Chﬁ " or "Ca Ca"));
 		
 	end
@@ -56,7 +56,7 @@ function pActivity:CompletTalkTask()
 		--Phong v©n l÷nh bµi - ghi nhÀn sË l«n hoµn thµnh nhi÷m vÙ V‚ l©m minh chÒ - Modified by DinhHQ - 20110920
 		G_ACTIVITY:OnMessage("FinishVLMC_VNG", "TalkTask");
 		--Thay ÆÊi ph«n th≠Îng nhi÷m vÙ ÆËi thoπi hµng ngµy - Modified By DinhHQ - 20110810
-		tbAwardTemplet:GiveAwardByList({nExp = 15000000}, format("Hoµn thµnh nhi÷m vÙ hµng ngµy(%s) nhÀn Æ≠Óc %d c∏i %s", "Nhi÷m vÙ ßËi thoπi ", 15000000, "kinh nghi÷m "));
+		tbAwardTemplet:GiveAwardByList({nExp = 1500000}, format("Hoµn thµnh nhi÷m vÙ hµng ngµy(%s) nhÀn Æ≠Óc %d c∏i %s", "Nhi÷m vÙ ßËi thoπi ", 15000000, "kinh nghi÷m "));
 		Talk(1,"",format("%s, Ng≠¨i qu∂ lµ mÈt vﬁ Æπi hi÷p. ß©y lµ m„n quµ nh· ta t∆ng cho ng≠¨i, mong h∑y nhÀn l y. Ngµy mai g∆p lπi nh–.", GetSex() == 1 and "Chﬁ " or "Ca Ca"));
 		
 	end
@@ -71,7 +71,7 @@ function pActivity:CompletGatherTask()
 		--Phong v©n l÷nh bµi - ghi nhÀn sË l«n hoµn thµnh nhi÷m vÙ V‚ l©m minh chÒ - Modified by DinhHQ - 20110920
 		G_ACTIVITY:OnMessage("FinishVLMC_VNG", "GatherTask");
 		--Thay ÆÊi ph«n th≠Îng nhi÷m vÙ thu thÀp hµng ngµy - Modified By DinhHQ - 20110810
-		tbAwardTemplet:GiveAwardByList({nExp = 10000000}, format("Hoµn thµnh nhi÷m vÙ hµng ngµy(%s) nhÀn Æ≠Óc %d c∏i %s", "Nhi÷m vÙ thu thÀp", 10000000, "kinh nghi÷m "));
+		tbAwardTemplet:GiveAwardByList({nExp = 1000000}, format("Hoµn thµnh nhi÷m vÙ hµng ngµy(%s) nhÀn Æ≠Óc %d c∏i %s", "Nhi÷m vÙ thu thÀp", 10000000, "kinh nghi÷m "));
 		Talk(1,"",format("%s, Ng≠¨i qu∂ lµ mÈt vﬁ Æπi hi÷p. ß©y lµ m„n quµ nh· ta t∆ng cho ng≠¨i, mong h∑y nhÀn l y. Ngµy mai g∆p lπi nh–.", GetSex() == 1 and "Chﬁ " or "Ca Ca"));
 		
 	end

@@ -167,4 +167,4 @@ function main(sel)
 end
 
 --Më nhiÖm vô nhËn kü n¨ng 150 - Modified By NgaVN - 20121207
-if login_add then login_add(CheckIsCanGet150SkillTask, 2) end
+-- if login_add then login_add(CheckIsCanGet150SkillTask, 2) end

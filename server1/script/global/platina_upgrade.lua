@@ -1,7 +1,6 @@
 Include("\\script\\global\\platina_head.lua");
 Include("\\script\\lib\\basic.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-local nOpenLevel = nLevelThienTu
+local nOpenLevel = 7
 function platina_main()
 	local aryDescribe = {
 	"<dec><npc>Tr­íc kia, ta tõng gióp quan phñ dïng c¸c <color=yellow>m¶nh Bæ Thiªn Th¹ch<color> ®Ó chÕ t¹o ra thÇn binh lîi khİ. NÕu nh­ <sex>cã thÓ t×m ra<color=yellow>m¶nh Bæ Thiªn Th¹ch<color> nµy, ta cã thÓ gióp ng­¬i chÕ t¹o trang bŞ B¹ch Kim, nhÊt ®Şnh kh«ng thÓ thiÕu vËt liÖu nµy.",

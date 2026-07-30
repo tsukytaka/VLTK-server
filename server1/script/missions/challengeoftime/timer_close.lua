@@ -10,10 +10,7 @@ end
 
 function OnTimer()
 	timeout();
-	-- 关闭自己
 	close_close_timer();
-	-- 结束比赛
 	close_match();
-	-- 关闭公告定时器
 	close_board_timer();
 end

@@ -2,7 +2,6 @@ Include("\\script\\lib\\string.lua");
 Include("\\script\\lib\\awardtemplet.lua")
 Include("\\script\\event\\newyear_2009\\taskctrl.lua");
 Include("\\script\\lib\\gb_taskfuncs.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 yanhua_gbtask	= "newyear0901";
 
@@ -194,7 +193,7 @@ end
 
 function newyear0901_yanhua_IsActDate()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_newyear_2009	==	0) then
+	if (nDate < 20090116 or nDate > 20090215) then
 		return 0;
 	else
 		return 1;

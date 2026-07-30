@@ -41,7 +41,7 @@ end;
 
 function CheckAndJoin(Camp)
 	if (GetTongName() == GetMissionS(Camp)) then  --ÊôÓÚ¸Ã°ï»áÔò±íÊ¾Íæ¼ÒÎªÕý¹æ¾ü£¬ÔÊÐí½øÈë
-		if (GetJoinTongTime() >= 7200) then
+		if (GetJoinTongTime() >= 1440) then
 			if (GetTask(TV_TASKKEY) ~= GetMissionV(MS_KEY)) then
 				BT_SetData(PL_KEYNUMBER, 0)
 				BT_SetData(PL_TOTALPOINT, 0)
@@ -55,7 +55,7 @@ function CheckAndJoin(Camp)
 			JoinCamp(Camp, 1);
 		else
 			if (JoinWithCard(Camp, 0) == 0) then 
-				Say("Thêi gian b¹n gia nhËp bang héi qu¸ ng¾n, kh«ng thÓ tham gia chiÕn ®Êu!", 0);
+				Say("Thêi gian b¹n gia nhËp bang héi qu¸ ng¾n (ch­a h?t 1 ngµy), kh«ng thÓ tham gia chiÕn ®Êu!", 0);
 			end;
 		end;
 	else

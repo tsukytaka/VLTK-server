@@ -982,3 +982,6 @@ passerby389_huo	pneuma_huo.spr	pneuma_huo.spr	pneuma_huo.spr	pneuma_huo.spr	pneu
 passerby389_tu	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr	pneuma_tu.spr
 passerby389	passerby389_st01.spr	passerby389_st01.spr	passerby389_st01.spr											
 passerby390	passerby390_st01.spr	passerby390_st01.spr	passerby390_st01.spr											
+passerby394	passerby394_st01.spr	passerby394_st01.spr	passerby394_st01.spr											
+passerby395	passerby395_st01.spr	passerby395_st01.spr	passerby395_st01.spr											
+passerby397	passerby397_st01.spr	passerby397_st01.spr	passerby397_st01.spr											

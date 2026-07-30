@@ -176,7 +176,6 @@ end
 
 function RunMission()
 	SetMissionV(MS_STATE,2);
-	if simTK then simTK:markWarStarted(BT_GetGameData(GAME_MAPID)) end   -- [2026-06-26] khai chien -> co tkWarStarted=1 -> bot march+danh (worldInfo, scope-safe)
 	
 	local idx = 0;
 	local pidx = 0;

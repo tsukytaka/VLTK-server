@@ -1,6 +1,6 @@
--- Â·ÈË_Éò¾Ô ÄÏÔÀÕò ÂôÌØÊâÂí(80¼¶Âí)µÄNPC½Å±¾
--- By Dan_Deng(2003-11-10)
+-- ThÈm Cöu ë Nam Nh¹c TrÊn - Editor by AloneScript (Linh Em)
 
+Include("\\script\\lib\\alonelib.lua");
 Include("\\script\\tong\\tong_header.lua");
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\dailogsys\\g_dialog.lua")
@@ -24,10 +24,10 @@ function main()
 	local szNpcName = GetNpcName(nNpcIndex);
 	if NpcName2Replace then szNpcName = NpcName2Replace(szNpcName); end
 	local tbDailog = DailogClass:new(szNpcName);
-	tbDailog.szTitleMsg = "<#><npc>T¹i h¹ nu«i ngùa rÊt nhiÒu n¨m, chØ cÇn xem qua lµ biÕt tèt hay kh«ng!"
+	tbDailog.szTitleMsg = "<npc>T¹i h¹ nu«i ngùa rÊt nhiÒu n¨m, chØ cÇn xem qua lµ biÕt tèt hay kh«ng!"..Note("thamcuu_namnhactran")
 	
 	G_ACTIVITY:OnMessage("ClickNpc", tbDailog, nNpcIndex);
-	tbDailog:AddOptEntry("Lóc n·y ng­¬i gäi ta?", horse_get);
+	-- tbDailog:AddOptEntry("Lóc n·y ng­¬i gäi ta?", horse_get);
 
 	tbDailog:Show();
 end

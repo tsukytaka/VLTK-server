@@ -6,8 +6,8 @@ TB_LOGIN_FUN = {}	--用这个数组来记录所有要加载的Login函数
 --	n_time	何时运行，0、Login时；1、第一次延时同步时；2、第二次延时同步时；……
 function login_add(fun, n_time)
 	if (not fun) then
-		return
-	end
+	return end
+	
 	if (not n_time) then
 		n_time = 0
 	end
@@ -18,8 +18,7 @@ function login_add(fun, n_time)
 		local count = getn(tb)
 		for i = 1, count do
 			if (tb[i] == fun) then
-				return
-			end
+			return end
 		end
 		tb[count + 1] = fun
 	end
@@ -36,11 +35,9 @@ function IsLoginFileFunction(script, func)
 	for i = 1, getn(TB_LOGIN_FILEFUN) do
 		local tb = TB_LOGIN_FILEFUN[i]
 		if (tb[1] == script and tb[2] == func) then
-			return 1
-		end
+		return 1 end
 	end
-	return 0
-end
+return 0 end
 
 function AddLoginFileFunction(script, func)
 	local tb = {}

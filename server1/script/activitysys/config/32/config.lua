@@ -7,7 +7,7 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	szName = "§èi tho¹i Vâ L©m Minh Chñ",
 	nStartDate = nil,
 	nEndDate  = nil,
-	tbMessageParam = {"Minh Chñ - ThÈmTh¨ngY"},
+	tbMessageParam = {"Vâ L©m Minh Chñ"},
 	tbCondition = 
 	{
 		{"ThisActivity:IsOpen",	{nil} },

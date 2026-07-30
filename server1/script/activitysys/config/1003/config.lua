@@ -27,7 +27,7 @@ tbConfig[2] =
 	tbCondition = 
 	{	
 		{"NpcFunLib:CheckInMap",	{"321,322,75,227,340,93"} },
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -46,7 +46,7 @@ tbConfig[3] = --Tèng kim 1000 ®iÓm
 	{
 		{"PlayerFunLib:CheckBT_PL_BATTLEPOINT",	{1000,">="} },
 		{"PlayerFunLib:CheckBT_PL_BATTLEPOINT",	{3000,"<"} },
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -65,7 +65,7 @@ tbConfig[4] = --Tèng kim 3000 ®iÓm
 	tbCondition = 
 	{
 		{"PlayerFunLib:CheckBT_PL_BATTLEPOINT",	{3000,">="} },
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -83,7 +83,7 @@ tbConfig[5] =
 	tbMessageParam = {"17"},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -101,7 +101,7 @@ tbConfig[6] =
 	tbMessageParam = {"28"},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -120,7 +120,7 @@ tbConfig[7] = --Thñy tÆc ®Çu lÜnh
 	tbCondition = 
 	{
 		{"NpcFunLib:CheckBoatBoss",	{nil} },
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -138,7 +138,7 @@ tbConfig[8] = --thuû tÆc ®¹i ®Çu lÜnh
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 		{"NpcFunLib:CheckId",	{"1692"} },
 		{"NpcFunLib:CheckInMap",	{"337,338,339"} },
 	},
@@ -158,7 +158,7 @@ tbConfig[9] = --Viªm ®Õ
 	tbMessageParam = {10},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -177,7 +177,7 @@ tbConfig[10] = --Boss thÕ giíi
 	tbCondition = 
 	{
 		{"NpcFunLib:CheckWorldBoss",	{nil} },
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 	},
 	tbActition = 
 	{
@@ -195,7 +195,7 @@ tbConfig[11] = --boss s¸t thñ
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 		{"NpcFunLib:CheckKillerdBoss",	{90} },
 	},
 	tbActition = 
@@ -232,7 +232,7 @@ tbConfig[13] = --®æi Cöu Tiªn Ngù YÕn
 	tbMessageParam = {"<npc>Cöu Tiªn Ngù YÕn",1,1,1,0.02},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
 		{"AddOneMaterial",	{"Nô Hoa Hång §á",{tbProp={6,1,30132,-1,-1,-1},nExpiredTime=nItemExpiredTime,},1} },
 	},
 	tbActition = 
@@ -268,7 +268,7 @@ tbConfig[15] = --®æi Thóy Tùu Hå Tiªn
 	tbMessageParam = {"<npc>Thóy Tùu Hå Tiªn",1,1,1,0.02},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
 		{"AddOneMaterial",	{"Hoa Hång §á",{tbProp={6,1,30131,-1,-1,-1},nExpiredTime=nItemExpiredTime,},5} },
 		{"AddOneMaterial",	{"Cöu Tiªn Ngù YÕn",{tbProp={6,1,30128,-1,-1,-1},nExpiredTime=nItemExpiredTime,},1} },
 		{"AddOneMaterial",	{"H¶i VÞ Bång Lai",{tbProp={6,1,30129,-1,-1,-1},nExpiredTime=nItemExpiredTime,},1} },
@@ -289,7 +289,7 @@ tbConfig[16] = --tÆng hoa hång
 	tbMessageParam = {"<npc>TÆng Hoa Hång §á",1,1,1,0.02},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
 		{"AddOneMaterial",	{"Hoa Hång §á",{tbProp={6,1,30131,-1,-1,-1},nExpiredTime=nItemExpiredTime,},1} },
 		{"ThisActivity:CheckGiveRedRoseLimit", {nil}},
 	},
@@ -308,7 +308,7 @@ tbConfig[17] = --sö dông Thóy Tùu Hå Tiªn
 	tbMessageParam = {{tbProp={6,1,30130,1,0,0},}},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, kh«ng thÓ sö dông vËt phÈm",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, kh«ng thÓ sö dông vËt phÈm",">="} },
 		{"PlayerFunLib:VnCheckInCity", {"default"}},
 		{"PlayerFunLib:CheckFreeBagCell",	{1,"default"} },
 		{"ThisActivity:TTHT_Limit", {nil}},
@@ -328,7 +328,7 @@ tbConfig[18] = --tÆng Cöu Tiªn Ngù YÕn
 	tbMessageParam = {"<npc>TÆng Cöu Tiªn Ngù YÕn",1,1,1,0.02},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
+		--{"PlayerFunLib:CheckTotalLevel",	{150,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
 		{"ThisActivity:GiveCuuTienLimit", {nil}},
 		{"AddOneMaterial",	{"Cöu Tiªn Ngù YÕn",{tbProp={6,1,30128,-1,-1,-1},nExpiredTime=nItemExpiredTime,},1} },		
 	},

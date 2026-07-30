@@ -1,11 +1,10 @@
 Include("\\script\\item\\newyear_2009\\head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 function main()
 	newyear0901_resettask();
 	
 	local n_date	= tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_newyear_2009	==	0) then
+	if (n_date >= 20090216) then
 		Say("VËt phÈm nµy ®· qu¸ h¹n.", 0);
 		return 0;
 	end

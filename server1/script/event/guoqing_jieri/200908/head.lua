@@ -6,9 +6,9 @@ IncludeLib("SETTING")
 local tbActData = 
 {
 	nStartDate			= 20090821,
-	nEndDate			= 20500906,
-	nComposeEndDate		= 20500907,
-	nItemExpiredTime	= 20500913,
+	nEndDate			= 20090906,
+	nComposeEndDate		= 20090907,
+	nItemExpiredTime	= 20090913,
 	
 	nMinLevel	= 50,
 	bIsCharged	= 1,

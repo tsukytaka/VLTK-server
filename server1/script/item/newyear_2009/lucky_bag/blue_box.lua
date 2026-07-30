@@ -1,6 +1,5 @@
 Include("\\script\\lib\\awardtemplet.lua");
 Include("\\script\\item\\newyear_2009\\head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 tb_bluebox_item	=
 {
@@ -10,7 +9,7 @@ tb_bluebox_item	=
 
 function main()
 	local ndate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_newyear_2009	==	0) then
+	if (ndate >= newyear0901_item_expiredtime) then
 		Msg2Player("VËt phÈm nµy ®· qu¸ h¹n.");
 		return 0;
 	end
@@ -24,7 +23,7 @@ end
 
 function IsPickable( nItemIndex, nPlayerIndex )
 	local ndate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_newyear_2009	==	0) then
+	if (ndate > newyear0901_item_expiredtime) then
 		return 0;
 	end
 	if( IsMyItem( nItemIndex ) ) then

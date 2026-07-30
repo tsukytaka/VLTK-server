@@ -1,5 +1,2 @@
--- Ö°ÄÜ_Ò©··×Ó.lua ÂôÒ©µÄĞ¡··NPC¡¡´óÀí
--- By: Dan_Deng(2003-11-27)
--- Update: Dan_Deng(2004-09-10) Ò©··×Ó¸ÄÎªÁã··£¬ÂôÍ­Ç®ÉÌÆ·
-
-Include("\\script\\global\\Áã··¹¦ÄÜ.lua") 
+Include("\\script\\global\\pgaming\\npc\\hangrong.lua")
+--Hµng Rong §¹i Lı

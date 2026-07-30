@@ -47,5 +47,5 @@ function bbdead()
 end
 
 function open_battle()
-	RemoteExecute("\\script\\test.lua", "open_battle", 0)
+	-- RemoteExecute("\\script\\test.lua", "open_battle", 0)
 end

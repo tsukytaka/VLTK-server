@@ -18,12 +18,12 @@ TB_FORBIDWORD = {
 	"<enter",
 }
 function main(nIndex)
-	--if (gb_GetModule("ThiÖp th«ng b¸o chóc mõng mµu") == 1) then
+	if (gb_GetModule("ThiÖp th«ng b¸o chóc mõng mµu") == 1) then
 		Say("§©y lµ 1 Nh­ ý ThiÕp. Tr­íc tiªn h·y nhËp ®èi t­îng cÇn chóc phóc råi sau ®ã míi nhËp néi dung cÇn chóc.", 
 			2, 
 			"B¾t ®Çu chóc phóc/want2bless",
 			"L¸t n÷a míi gëi/OnCancel")
-	--end
+	end
 	return 1
 end
 

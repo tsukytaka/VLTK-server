@@ -78,6 +78,16 @@ end
 
 end
 
+function citywar_tbLadder:Ctc3tru_GetInfo()
+	local szList = {}
+	for i = 1, 10 do
+		local szName, nValue = Ladder_GetLadderInfo(self.nLadderId, i);
+		if (szName ~= nil and szName ~= "") then
+			szList[i] = {szName = szName, nValue = nValue}
+		end
+	end
+	return szList
+end
 
 function citywar_tbLadder:Reset()
 	Ladder_ClearLadder(self.nLadderId)

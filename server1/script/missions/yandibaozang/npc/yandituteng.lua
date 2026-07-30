@@ -56,7 +56,6 @@ function YDBZ_SureDoTradeLingQi(n_sel)
 			[2] = {
 						tbMaterial = {
 							{tbProp = {6,1,1606, -1}, szName = "Viªm §Õ §å §»ng", nCount = 2},
-							{tbProp = {4,417,1, -1}, szName = "TiÒn ®ång", nCount = 1},
 						},
 						tbProduct = {tbProp = {6,1,2532,1,0,0}, szName = "Viªm §Õ LÖnh Kú"},
 			},
@@ -104,7 +103,7 @@ function YDBZ_tradeXuanYuanLing()
 	local n_count = CalcItemCount(3, 6, 1, 2532, -1);
 	if (n_count >= 100) then
 		ConsumeItem(3, 100, 6,1,2532, -1);
-		tbAwardTemplet:GiveAwardByList({tbProp = {6,1,2351,1,0,0}, szName = "HuyÒn Viªn LÖnh"}, "yandi_tradeXuanyuan");
+		tbAwardTemplet:GiveAwardByList({tbProp = {6,1,1606,1,0,0}, szName = "Viªm §Õ §å §»ng"}, "yandi_tradeXuanyuan");
 	else
 		CreateTaskSay({format("<dec>%s cÇn: <enter>%s", "§æi HuyÒn Viªn lÖnh" ,format("%d %s", 100, "Viªm §Õ LÖnh Kú")), "Ta biÕt råi!/NoChoice"});
 	end

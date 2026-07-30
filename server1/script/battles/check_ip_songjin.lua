@@ -1,6 +1,6 @@
 Include("\\script\\dailogsys\\dailogsay.lua")
 Include("\\script\\battles\\inc.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 
 battlesSongJinCheck = {
 	battles_sImg = "<link=image:\\spr\\skill\\christmas\\star2.spr><link><color><color=orange>Anti Post: <color>",

@@ -15,9 +15,10 @@ function main()
 	
 	G_ACTIVITY:OnMessage("ClickNpc", tbDailog, nNpcIndex)
 	--µ¯³ö¶Ô»°¿ò
-	if FreedomEvent2010:IsActive1() == 1 then
+--Më l¹i c¸c chøc n¨ng cña npc BÐ long - modified by DinhHQ - 20110427
+--	if FreedomEvent2010:IsActive1() == 1 then
 		tbDailog:AddOptEntry("§æi ®¹o cô", FreedomEvent2010.LongerEventItemDlg, {FreedomEvent2010})
-	end
+--	end
 	
 	tbDailog:Show()
 end

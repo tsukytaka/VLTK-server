@@ -79,6 +79,5 @@ function AddGoldItem(index)
 	elseif (index == 174) then
 	elseif (index == 175) then
 	elseif (index == 176) then
-
 	end
 end;

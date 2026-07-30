@@ -23,9 +23,9 @@ function main()
 	local MemberCount =GetMissionV(MS_MAXMEMBERCOUNT)
 	ms_state = GetMissionV(MS_STATE);
 	if (ms_state == 0) then 
-		Say("§©y lµ ®Êu tr­êng thi ®Êu l«i ®µi, n¬i cho c¸c nh©n sÜ trªn giang hå ®¬n ®Êu hoÆc tæ chøc ®éi thi ®Êu, hiÖn t¹i ch­a ai b¸o danh thi ®Êu, c¸c h¹ cã muèn b¸o danh kh«ng? <color=yellow>HiÖn t¹i l«i ®µi ®ang më cöa miÔn phÝ<color>", 3, "§­îc th«i/OnRegister", "Quy t¾c thi ®Êu ra sao?/OnHelp", "§Ó ta suy nghÜ c¸i ®·!/OnCancel");
+		Say("§©y lµ ®Êu tr­êng thi ®Êu l«i ®µi, n¬i c¸c nh©n sÜ trªn giang hå ®¬n ®Êu hoÆc tæ chøc thi ®Êu ®éi. HiÖn t¹i ch­a cã ai b¸o danh thi ®Êu, c¸c h¹ cã muèn b¸o danh kh«ng<color=yellow>HiÖn t¹i më miÔn phÝ l«i ®µi<color>", 3, "§­îc th«i/OnRegister", "Quy t¾c thi ®Êu ra sao?/OnHelp", "§Ó suy nghÜ c¸i ®·!/OnCancel");
 	elseif (ms_state == 1) then
-		Say("§©y lµ diÔn vâ tr­êng, §éi <color=yellow>"..szCaptainName[1].."<color> cïng ®éi <color=yellow>"..szCaptainName[2].."<color> tranh tµi <color=yellow>"..MemberCount.." vs "..MemberCount.."<color>, Ng­¬i cã yªu cÇu g×?",4,"Ta lµ tuyÓn thñ, muèn th­îng l«i ®µi./OnEnterMatch", "Ta lµ kh¸n gi¶, muèn vµo xem thi ®Êu./OnShowKey", "Ta muèn xem thi ®Êu./OnLook", "Ta kh«ng cã høng thó./OnCancel")
+		Say("§©y lµ diÖn vâ tr­êng, §éi<color=yellow>"..szCaptainName[1].."<color>cïng ®éi<color=yellow>"..szCaptainName[2].."<color> tranh tµi<color=yellow>"..MemberCount.." vs "..MemberCount.."<color>, Ng­¬i cã yªu cÇu g×?",4,"Ta lµ tuyÓn thñ, muèn th­îng l«i ®µi./OnEnterMatch", "Ta lµ kh¸n gi¶, muèn vµo xem thi ®Êu./OnShowKey", "Ta muèn xem thi ®Êu./OnLook", "Ta kh«ng cã høng thó./OnCancel")
 	elseif (ms_state == 2) then 
 		OnFighting();
 	else
@@ -37,7 +37,7 @@ end;
 function OnRegister()
 	--±¨·û
 	if (GetTeamSize()  ~= 2) then
-		Say("Muèn b¸o danh thi ®Êu cÇn ph¶i lµ <color=yellow>§éi tr­ëng<color> cña hai bªn, ®éi ngò cña c¸c h¹ kh«ng ®ñ <color=yellow>2<color> ng­êi.", 0);
+		Say("Muèn ghi danh ph¶i lµ<color=yellow>§éi tr­ëng<color> §éi cña c¸c h¹ kh«ng ®ñ<color=yellow>2<color>ng­êi.", 0);
 		return
 	end;
 
@@ -124,7 +124,7 @@ end;
 
 
 function OnHelp()
-	Talk(5, "",	"L«i ®µi thi ®Êu lµ n¬i ®Ó c¸c cao thñ thi thè tµi nghÖ víi nhau vµ còng lµ n¬i thi ®Êu c«ng b»ng nhÊt cho ®«i bªn.",	"Muèn tham gia l«i ®µi thi ®Êu, tr­íc tiªn ph¶i ®Õn chç ta xin b¸o danh.",	"Sau khi ®¨ng ký xong, b¸o danh tham gia l«i ®µi sÏ hoµn tÊt. Lý do ®Êu tr­êng cã giíi h¹n nªn trong lóc ng­êi kh¸c ®ang thi ®Êu, ng­êi kh¸c kh«ng thÓ b¸o danh!",	format("Sau khi ®¨ng ký thµnh c«ng, hai bªn cã thÓ vµo khu vùc chuÈn bÞ, thêi gian chuÈn bÞ lµ <color=yellow>%d<color> phót, sau khi thêi gian chuÈn bÞ kÕt thóc, trËn ®Êu sÏ chÝnh thøc b¾t ®Çu!", floor(GO_TIME/3)) , 	format("Thêi gian cho trËn ®Êu lµ <color=yellow>%d<color> phót, nÕu trong thêi gian ®ã mµ hai bªn ch­a ph©n th¾ng b¹i, hÖ thèng sÏ tù ph©n ®Þnh bªn chiÕn th¾ng.", floor(TIMER_2/(60*FRAME2TIME))-floor(GO_TIME/3)));
+	Talk(5, "",	"L«i ®µi lµ n¬i ®Ó häc hái kinh nghiÖm lÉn nhau.",	"Muèn tham gia l«i ®µi, tr­íc hÕt ph¶i ®Õn chç ta ghi danh.",	"ghi danh tham gia l«i ®µi tranh tµi liÒn hoµn thµnh , bëi v× cuéc so tµi cã giíi h¹n , ®ang cã ng­êi thi ®Êu, c¸c h¹ kh«ng thÓ ghi danh!",	format("Ghi danh sau thµnh c«ng, cã thÓ ®Õn chuÈn bÞ khu , chuÈn bÞ thêi gian lµ <color=yellow>%d<color> ·Ö, ×¼±¸Ê±¼ä½áÊøºó£¬±ÈÈü½«ÕýÊ½¿ªÊ¼!", floor(GO_TIME/3)) , 	format("¹«Æ½Ë¾: ±ÈÈüÊ±¼äÊÇ<color=yellow>%d<color> ·Ö, Èç¹ûÔó %d·ÖÖÓ»¹·»ÓÐÈ·¶¨Ó®µÄ¶Ó£¬±ÈÈüÎªºÝ¾Ö.", floor(TIMER_2/(60*FRAME2TIME))-floor(GO_TIME/3), floor(TIMER_2/(60*FRAME2TIME))-floor(GO_TIME/3) ));
 end;
 
 function OnEnterMatch()

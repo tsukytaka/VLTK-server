@@ -1,0 +1,199 @@
+2026-07-30 00:00:29	VÖ quèc Phong Háa liªn thµnhThñ thµnh phe Tèng	 vµo giai ®o¹n b¸o danh 	 b¶n ®åi d	580	 thêi gian 	00:00
+2026-07-30 01:00:29	Battle Start :1rule16Issue1
+2026-07-30 01:02:29	marshal battle is entering fight state. now member count=0:0
+2026-07-30 01:42:29	[Battle Log] Ending Misson Begin
+2026-07-30 01:42:29	[Battle Log] battle is ending. now member count=0:0
+2026-07-30 01:42:29	[Battle Log] Sorting World Ladder
+2026-07-30 01:42:29	[Battle Log] Awarding Activity
+2026-07-30 01:42:29	[Battle Log] Awarding Single Player
+2026-07-30 01:42:29	[Battle Log] Awarding by Result
+2026-07-30 01:42:29	Khu vùc Cao cÊp ChiÕn sù ®· kÕt thóc, phe Tèng giµnh ®­îc th¾ng lîi!
+2026-07-30 01:42:29	Do phe b¹i kh«ng cã ng­êi ch¬i, phe th¾ng kh«ng ®­îc tÆng th­ëng!
+2026-07-30 01:42:29	[Battle Log] Ready for kick Out
+2026-07-30 01:42:29	[Battle Log] Ending Misson End
+2026-07-30 02:00:29	VÖ quèc Phong Háa liªn thµnhThñ thµnh phe Tèng	 vµo giai ®o¹n b¸o danh 	 b¶n ®åi d	580	 thêi gian 	02:00
+2026-07-30 03:00:29	Battle Start :1rule16Issue1
+2026-07-30 03:02:29	marshal battle is entering fight state. now member count=0:0
+2026-07-30 03:50:49	[1970-01-01 00:00:00] Register [ThÝ LuyÖn §­êng] dungeon, templet mapid is [925].
+2026-07-30 03:50:52	[UseItemSucc]	1970-01-01 00:00	Account:ScriptAutoTest	Name:testname	ItemName:testItem.
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:51:02	70730-03:51: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:13	[1970-01-01 00:00:00] Register [ThÝ LuyÖn §­êng] dungeon, templet mapid is [925].
+2026-07-30 03:56:15	[UseItemSucc]	1970-01-01 00:00	Account:ScriptAutoTest	Name:testname	ItemName:testItem.
+2026-07-30 03:56:23	[1970-01-01 00:00:00] Register [ThÝ LuyÖn §­êng] dungeon, templet mapid is [925].
+2026-07-30 03:56:23	[UseItemSucc]	1970-01-01 00:00	Account:ScriptAutoTest	Name:testname	ItemName:testItem.
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 03:56:30	800730-03:56: B¾t ®Çu treo m¸y!
+2026-07-30 04:00:18	VÖ quèc Phong Háa liªn thµnhThñ thµnh phe Tèng	 vµo giai ®o¹n b¸o danh 	 b¶n ®åi d	580	 thêi gian 	04:00
+2026-07-30 05:00:18	Battle Start :1rule16Issue1
+2026-07-30 05:02:18	marshal battle is entering fight state. now member count=0:0
+2026-07-30 05:42:18	[Battle Log] Ending Misson Begin
+2026-07-30 05:42:18	[Battle Log] battle is ending. now member count=0:0
+2026-07-30 05:42:18	[Battle Log] Sorting World Ladder
+2026-07-30 05:42:18	[Battle Log] Awarding Activity
+2026-07-30 05:42:18	[Battle Log] Awarding Single Player
+2026-07-30 05:42:18	[Battle Log] Awarding by Result
+2026-07-30 05:42:18	Khu vùc Cao cÊp ChiÕn sù ®· kÕt thóc, phe Tèng giµnh ®­îc th¾ng lîi!
+2026-07-30 05:42:18	Do phe b¹i kh«ng cã ng­êi ch¬i, phe th¾ng kh«ng ®­îc tÆng th­ëng!
+2026-07-30 05:42:18	[Battle Log] Ready for kick Out
+2026-07-30 05:42:18	[Battle Log] Ending Misson End
+2026-07-30 06:00:18	VÖ quèc Phong Háa liªn thµnhThñ thµnh phe Tèng	 vµo giai ®o¹n b¸o danh 	 b¶n ®åi d	580	 thêi gian 	06:00
+2026-07-30 07:00:18	Battle Start :1rule16Issue1
+2026-07-30 07:02:18	marshal battle is entering fight state. now member count=0:0
+2026-07-30 07:42:18	[Battle Log] Ending Misson Begin
+2026-07-30 07:42:18	[Battle Log] battle is ending. now member count=0:0
+2026-07-30 07:42:18	[Battle Log] Sorting World Ladder
+2026-07-30 07:42:18	[Battle Log] Awarding Activity
+2026-07-30 07:42:18	[Battle Log] Awarding Single Player
+2026-07-30 07:42:18	[Battle Log] Awarding by Result
+2026-07-30 07:42:18	Khu vùc Cao cÊp ChiÕn sù ®· kÕt thóc, phe Tèng giµnh ®­îc th¾ng lîi!
+2026-07-30 07:42:18	Do phe b¹i kh«ng cã ng­êi ch¬i, phe th¾ng kh«ng ®­îc tÆng th­ëng!
+2026-07-30 07:42:18	[Battle Log] Ready for kick Out
+2026-07-30 07:42:18	[Battle Log] Ending Misson End
+2026-07-30 08:00:18	VÖ quèc Phong Háa liªn thµnhThñ thµnh phe Tèng	 vµo giai ®o¹n b¸o danh 	 b¶n ®åi d	580	 thêi gian 	08:00
+2026-07-30 08:07:59	[Thiªn Tr× MËt C¶nh][4tÇng]	2026-07-30 08:07			Boss Hoµng Nhan Qu¶ng D­¬ng ë tÇng 4 Thiªn Tr× MËt C¶nh xuÊt hiÖn.
+2026-07-30 09:00:18	Battle Start :1rule16Issue1
+2026-07-30 09:02:18	marshal battle is entering fight state. now member count=0:0
+2026-07-30 09:42:18	[Battle Log] Ending Misson Begin
+2026-07-30 09:42:18	[Battle Log] battle is ending. now member count=0:0
+2026-07-30 09:42:18	[Battle Log] Sorting World Ladder
+2026-07-30 09:42:18	[Battle Log] Awarding Activity
+2026-07-30 09:42:18	[Battle Log] Awarding Single Player
+2026-07-30 09:42:18	[Battle Log] Awarding by Result
+2026-07-30 09:42:18	Khu vùc Cao cÊp ChiÕn sù ®· kÕt thóc, phe Tèng giµnh ®­îc th¾ng lîi!
+2026-07-30 09:42:18	Do phe b¹i kh«ng cã ng­êi ch¬i, phe th¾ng kh«ng ®­îc tÆng th­ëng!
+2026-07-30 09:42:18	[Battle Log] Ready for kick Out
+2026-07-30 09:42:18	[Battle Log] Ending Misson End
+2026-07-30 10:00:18	VÖ quèc Phong Háa liªn thµnhThñ thµnh phe Tèng	 vµo giai ®o¹n b¸o danh 	 b¶n ®åi d	580	 thêi gian 	10:00
+2026-07-30 11:00:18	Battle Start :1rule16Issue1
+2026-07-30 11:02:18	marshal battle is entering fight state. now member count=0:0
+2026-07-30 11:42:18	[Battle Log] Ending Misson Begin
+2026-07-30 11:42:18	[Battle Log] battle is ending. now member count=0:0
+2026-07-30 11:42:18	[Battle Log] Sorting World Ladder
+2026-07-30 11:42:18	[Battle Log] Awarding Activity
+2026-07-30 11:42:18	[Battle Log] Awarding Single Player
+2026-07-30 11:42:18	[Battle Log] Awarding by Result
+2026-07-30 11:42:18	Khu vùc Cao cÊp ChiÕn sù ®· kÕt thóc, phe Tèng giµnh ®­îc th¾ng lîi!
+2026-07-30 11:42:18	Do phe b¹i kh«ng cã ng­êi ch¬i, phe th¾ng kh«ng ®­îc tÆng th­ëng!
+2026-07-30 11:42:18	[Battle Log] Ready for kick Out
+2026-07-30 11:42:18	[Battle Log] Ending Misson End
+2026-07-30 12:00:18	VÖ quèc Phong Háa liªn thµnhThñ thµnh phe Tèng	 vµo giai ®o¹n b¸o danh 	 b¶n ®åi d	580	 thêi gian 	12:00
+2026-07-30 12:00:29	BaiRenLeiTai	CallNPC_GuShou:960,56384,102016
+2026-07-30 12:30:28	BaiRenLeiTai	CallNPC_GuShou:960,56512,98624
+2026-07-30 12:47:24	long	HoaThan1	ThÇn Hµnh Phï	10	0	award	ThÇn Hµnh Phï	AddItemEx(4,1800170885,0,6,1,1266,0,0,0,0,0,0,0,0,0,0)	1		53
+2026-07-30 12:47:24	long	HoaThan1	Thæ §Þa Phï VÜnh ViÔn	10	0	award	Thæ ®Þa phï (sö dông v« h¹n) 	AddItemEx(4,-59305282,0,6,1,438,0,0,0,0,0,0,0,0,0,0)	1		53
+2026-07-30 12:47:24	long	HoaThan1	CÈm Nang §ång Hµnh	10	0	award	CÈm Nang §ång Hµnh	AddItemEx(4,2001685243,0,6,1,4903,0,0,0,0,0,0,0,0,0,0)	1		53
+2026-07-30 12:47:24	long	HoaThan1	Héi Qu¸n Th¶o D­îc §¬n	10	0	award	Héi Qu¸n Th¶o D­îc §¬n	AddItemEx(4,-472187188,0,6,1,4916,0,0,0,0,0,0,0,0,0,0)	1		53
+2026-07-30 12:47:26	clean HoaThan1(Level:10) Tong Contribution old value is 0 new value is 0
+2026-07-30 12:48:02	574168: DelNpcSafe:96860
+2026-07-30 12:48:02	574168: DelNpcSafe:97067
+2026-07-30 12:48:02	574168: DelNpcSafe:96904
+2026-07-30 12:48:02	574168: DelNpcSafe:97125
+2026-07-30 12:48:02	574168: DelNpcSafe:97208
+2026-07-30 12:48:02	574168: DelNpcSafe:97058
+2026-07-30 12:48:02	574168: DelNpcSafe:97077
+2026-07-30 12:48:02	574168: DelNpcSafe:96834
+2026-07-30 12:48:02	574168: DelNpcSafe:97173
+2026-07-30 12:48:02	574168: DelNpcSafe:96870
+2026-07-30 12:48:02	574168: DelNpcSafe:97107
+2026-07-30 12:48:02	574168: DelNpcSafe:97172
+2026-07-30 12:48:02	574168: DelNpcSafe:97080
+2026-07-30 12:48:02	574168: DelNpcSafe:96955
+2026-07-30 12:48:02	574168: DelNpcSafe:96864
+2026-07-30 12:48:02	574168: DelNpcSafe:97235
+2026-07-30 12:48:02	574168: DelNpcSafe:96915
+2026-07-30 12:48:02	574168: DelNpcSafe:96991
+2026-07-30 12:48:02	574168: DelNpcSafe:96919
+2026-07-30 12:48:02	574168: DelNpcSafe:97167
+2026-07-30 12:48:02	574168: DelNpcSafe:97110
+2026-07-30 12:48:02	574168: DelNpcSafe:96867
+2026-07-30 12:48:02	574168: DelNpcSafe:97237
+2026-07-30 12:48:02	574168: DelNpcSafe:96952
+2026-07-30 12:48:02	574168: DelNpcSafe:96982
+2026-07-30 12:48:02	574168: DelNpcSafe:97095
+2026-07-30 12:48:02	574168: DelNpcSafe:97156
+2026-07-30 12:48:02	574168: DelNpcSafe:96997
+2026-07-30 12:48:02	574168: DelNpcSafe:96900
+2026-07-30 12:48:02	574168: DelNpcSafe:96861
+2026-07-30 12:48:02	574168: DelNpcSafe:96937
+2026-07-30 12:48:02	574168: DelNpcSafe:96949
+2026-07-30 12:48:02	574168: DelNpcSafe:97072
+2026-07-30 12:48:02	574168: DelNpcSafe:96983
+2026-07-30 12:48:02	574168: DelNpcSafe:96910
+2026-07-30 12:48:02	574168: DelNpcSafe:96891
+2026-07-30 12:48:02	574168: DelNpcSafe:97234
+2026-07-30 12:48:02	574168: DelNpcSafe:96869
+2026-07-30 12:48:02	574168: DelNpcSafe:97019
+2026-07-30 12:48:02	574168: DelNpcSafe:96884
+2026-07-30 12:48:02	574168: DelNpcSafe:96984
+2026-07-30 12:48:02	574168: DelNpcSafe:96934
+2026-07-30 12:48:02	574168: DelNpcSafe:97250
+2026-07-30 12:48:02	574168: DelNpcSafe:97007
+2026-07-30 12:48:02	574168: DelNpcSafe:97023
+2026-07-30 12:48:02	574168: DelNpcSafe:96971
+2026-07-30 12:48:02	574168: DelNpcSafe:97111
+2026-07-30 12:48:02	574168: DelNpcSafe:97100
+2026-07-30 12:48:02	574168: DelNpcSafe:96966
+2026-07-30 12:48:02	574168: DelNpcSafe:96907
+2026-07-30 12:48:02	574168: DelNpcSafe:97258
+2026-07-30 12:48:02	574168: DelNpcSafe:97150
+2026-07-30 12:48:02	574168: DelNpcSafe:97259
+2026-07-30 12:48:02	574168: DelNpcSafe:96963
+2026-07-30 12:48:02	574168: DelNpcSafe:96896
+2026-07-30 12:48:02	574168: DelNpcSafe:97094
+2026-07-30 12:48:02	574168: DelNpcSafe:96954
+2026-07-30 12:48:02	574168: DelNpcSafe:96922
+2026-07-30 12:48:02	574168: DelNpcSafe:97118
+2026-07-30 12:48:02	574168: DelNpcSafe:96969
+2026-07-30 12:48:02	574168: DelNpcSafe:97224
+2026-07-30 12:48:02	574168: DelNpcSafe:97076
+2026-07-30 12:48:02	574168: DelNpcSafe:97086
+2026-07-30 12:48:02	574168: DelNpcSafe:97046
+2026-07-30 12:48:02	574168: DelNpcSafe:97276
+2026-07-30 12:48:02	574168: DelNpcSafe:97280
+2026-07-30 12:48:02	574168: DelNpcSafe:97123
+2026-07-30 12:48:02	574168: DelNpcSafe:97165
+2026-07-30 12:48:02	574168: DelNpcSafe:97261
+2026-07-30 12:48:02	574168: DelNpcSafe:96986
+2026-07-30 12:48:02	574168: DelNpcSafe:96943
+2026-07-30 12:48:02	574168: DelNpcSafe:97263
+2026-07-30 12:48:02	574168: DelNpcSafe:97265
+2026-07-30 12:48:02	574168: DelNpcSafe:96835
+2026-07-30 12:48:02	574168: DelNpcSafe:97050
+2026-07-30 12:48:02	574168: DelNpcSafe:96909
+2026-07-30 12:48:02	574168: DelNpcSafe:97268
+2026-07-30 12:48:02	574168: DelNpcSafe:96851
+2026-07-30 12:48:02	574168: DelNpcSafe:96920
+2026-07-30 12:48:02	574168: DelNpcSafe:97093
+2026-07-30 12:48:02	574168: DelNpcSafe:97160
+2026-07-30 12:48:02	574168: DelNpcSafe:96942
+2026-07-30 12:48:02	574168: DelNpcSafe:96882
+2026-07-30 12:48:02	574168: DelNpcSafe:96960
+2026-07-30 12:48:02	574168: DelNpcSafe:97134
+2026-07-30 12:48:02	574168: DelNpcSafe:97047
+2026-07-30 12:48:02	574168: DelNpcSafe:97005
+2026-07-30 12:48:02	574168: DelNpcSafe:97232
+2026-07-30 12:48:02	574168: DelNpcSafe:96880
+2026-07-30 12:48:02	574168: DelNpcSafe:97052
+2026-07-30 12:48:02	574168: DelNpcSafe:96875
+2026-07-30 12:48:02	574168: DelNpcSafe:97120
+2026-07-30 12:48:02	574168: DelNpcSafe:97048
+2026-07-30 13:00:18	Battle Start :1rule16Issue1
+2026-07-30 13:00:28	BaiRenLeiTai	CallNPC_GuShou:960,57696,98528
+2026-07-30 13:02:18	marshal battle is entering fight state. now member count=0:0

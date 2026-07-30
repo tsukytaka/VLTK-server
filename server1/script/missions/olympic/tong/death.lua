@@ -1,41 +1,41 @@
 Include("\\script\\missions\\olympic\\tong\\head.lua");
 
-function OnDeath(Launcher)
-	curcamp = GetCurCamp();
-	DelMSPlayer(MISSIONID,curcamp);
+function OnDeath(Launcher) 
+curcamp = GetCurCamp(); 
+DelMSPlayer(MISSIONID,curcamp); 
 
-	PlayerIndex1 = NpcIdx2PIdx(Launcher); -- murderĞ×ÊÖ
-	OrgPlayer  = PlayerIndex; --ËÀÕß
-	DeathName = GetName();
+PlayerIndex1 = NpcIdx2PIdx(Launcher); -- script viet hoa By http://tranhba.com  murder hung thñ 
+OrgPlayer = PlayerIndex; -- script viet hoa By http://tranhba.com  ng­êi chÕt 
+DeathName = GetName(); 
 
-	SetFightState(0)
-	if (PlayerIndex1 > 0) then
-		PlayerIndex = PlayerIndex1;
-		LaunName = GetName();
+SetFightState(0) 
+if (PlayerIndex1 > 0) then 
+PlayerIndex = PlayerIndex1; 
+LaunName = GetName(); 
 
-		pkcount = GetTaskTemp(MS_TOTALPK) + 1; --¼ÆËãµ±Ç°µÄpkÈËÊı
-		SetTask(MS_TOTALPK, GetTask(MS_TOTALPK) + 1); --Í³¼Æ×Ü¹²µÄpkÈËÊı
-		SetTaskTemp(MS_TOTALPK, pkcount);
+		pkcount = GetTaskTemp(MS_TOTALPK) + 1; -- script viet hoa By http://tranhba.com ¼ÆËãµ±Ç°µÄpkÈËÊı
+		SetTask(MS_TOTALPK, GetTask(MS_TOTALPK) + 1); -- script viet hoa By http://tranhba.com Í³¼Æ×Ü¹²µÄpkÈËÊı
+SetTaskTemp(MS_TOTALPK, pkcount); 
 
-		if (curcamp == 3) then
-			str  = GetMissionS(2).."<#>ÕÊÏÂ"..LaunName.."<#>ÖØÉËÁË["..DeathName.."<#>]£¬PKÈËÊıÔöÎª"..pkcount;
---			SetMissionV(MS_TONG2VALUE, GetMissionV(MS_TONG2VALUE) + 1);
-		elseif (curcamp == 2) then
-			str  = GetMissionS(1).."<#>ÕÊÏÂ"..LaunName.."<#>ÖØÉËÁË["..DeathName.."<#>]£¬PKÈËÊıÔöÎª"..pkcount;
---			SetMissionV(MS_TONG1VALUE, GetMissionV(MS_TONG1VALUE) + 1);
-		end;
-		
-		Msg2MSAll(MISSIONID, str);
-		PlayerIndex = OrgPlayer;
-	end;
+if (curcamp == 3) then 
+str = GetMissionS(2).."<#> d­íi tr­íng "..LaunName.."<#> bŞ th­¬ng nÆng ["..DeathName.."<#>] , PK nh©n sè t¨ng v× "..pkcount; 
+-- script viet hoa By http://tranhba.com 			SetMissionV(MS_TONG2VALUE, GetMissionV(MS_TONG2VALUE) + 1);
+elseif (curcamp == 2) then 
+str = GetMissionS(1).."<#> d­íi tr­íng "..LaunName.."<#> bŞ th­¬ng nÆng ["..DeathName.."<#>] , PK nh©n sè t¨ng v× "..pkcount; 
+-- script viet hoa By http://tranhba.com 			SetMissionV(MS_TONG1VALUE, GetMissionV(MS_TONG1VALUE) + 1);
+end; 
 
-	SetCurCamp(GetCamp())
-	SetPunish(1)--ÉèÖÃPK³Í·£
-	SetPKFlag(0)--¹Ø±ÕPK¿ª¹Ø
-	ForbidChangePK(0);
-	ForbitTrade(0);
-	SetLogoutRV(0)
-	SetCreateTeam(1);
-	SetDeathScript("");--ÉèÖÃËÀÍö½Å±¾Îª¿Õ
-	SetTaskTemp(JOINSTATE, 0);
-end;
+Msg2MSAll(MISSIONID, str); 
+PlayerIndex = OrgPlayer; 
+end; 
+
+SetCurCamp(GetCamp()) 
+SetPunish(1)-- script viet hoa By http://tranhba.com  thiÕt trİ PK trõng ph¹t 
+SetPKFlag(0)-- script viet hoa By http://tranhba.com  t¾t PK chèt më 
+ForbidChangePK(0); 
+ForbitTrade(0); 
+SetLogoutRV(0) 
+SetCreateTeam(1); 
+SetDeathScript("");-- script viet hoa By http://tranhba.com  thiÕt trİ tö vong ch©n vèn v× v« İch 
+SetTaskTemp(JOINSTATE, 0); 
+end; 

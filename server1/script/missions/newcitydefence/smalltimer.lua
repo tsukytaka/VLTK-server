@@ -9,7 +9,7 @@
 Include("\\script\\missions\\newcitydefence\\head.lua")
 tbAddNpcCount = {750, 100, 50, 10}
 tbNpcAddRadio = {40/100, 30/100, 20/100, 10/100}
-TOTALNPCCOUNT = 100  -- So luong goi npc trong 1 lan 
+TOTALNPCCOUNT = 300  -- So luong goi npc trong 1 lan 
 tbGuaiWu = {
 	"\\settings\\maps\\newcitydefence\\guai001.txt",
 	"\\settings\\maps\\newcitydefence\\guai002.txt",
@@ -56,12 +56,12 @@ function OnTimer()
 		
 		local total_npc = restnpc_1 + restnpc_2 + restnpc_3 + restnpc_4 + restnpc_5
 		local nCountPlayers = GetMSPlayerCount(MISSIONID, 0)
-		if nCountPlayers <= 1 then
+		if nCountPlayers <= 4 then
 			nCountPlayers = 1
 		end
-		local nMaxNpcCount = (nCountPlayers * 5) + MAX_NPC_COUNT
-		local nMaxVanguardCount = (nCountPlayers * 2) + MAX_VANGUARD_COUNT
-		local nMaxGeneralCount = (nCountPlayers * 2) + MAX_GENERAL_COUNT
+		local nMaxNpcCount = (nCountPlayers * 3) + MAX_NPC_COUNT
+		local nMaxVanguardCount = (nCountPlayers * 1) + MAX_VANGUARD_COUNT
+		local nMaxGeneralCount = (nCountPlayers * 1) + MAX_GENERAL_COUNT
 		-- In ra console thông tin NPC
 		-- print("=== MISSION STATUS ===")
 		-- print(format("Players: %d | Defense Guards: %d | Defense Points: %d", 

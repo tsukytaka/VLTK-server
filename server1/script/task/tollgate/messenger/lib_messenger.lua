@@ -23,7 +23,7 @@ function SetMessengerPlayer(messengertask1,messengertask2,taskgiveexp,MapId) --´
 			myMemberTaskTwo = GetTask(messengertask2) + 1
 			nt_setTask(messengertask1,myMemberTask )
 			nt_setTask(messengertask2,myMemberTaskTwo )
-			if ( nt_getTask(1273) < 14000000 ) then
+			if ( nt_getTask(1273) < 140000000 ) then
 				AddOwnExp(taskgiveexp)
 				local today_exp = nt_getTask(1273)
 				nt_setTask(1273,today_exp+taskgiveexp)
@@ -39,7 +39,7 @@ function SetMessengerPlayer(messengertask1,messengertask2,taskgiveexp,MapId) --´
 					myMemberTaskTwo = GetTask(messengertask2) + 1
 					nt_setTask(messengertask1,myMemberTask )
 					nt_setTask(messengertask2,myMemberTaskTwo )
-					if ( nt_getTask(1273) < 14000000 ) then
+					if ( nt_getTask(1273) < 140000000 ) then
 						AddOwnExp(taskgiveexp)
 						local today_exp = nt_getTask(1273)
 						nt_setTask(1273,today_exp+taskgiveexp)
@@ -50,7 +50,7 @@ function SetMessengerPlayer(messengertask1,messengertask2,taskgiveexp,MapId) --´
 			return
 		end
 		
-	if ( nt_getTask(1273) >= 14000000 ) then
+	if ( nt_getTask(1273) >= 140000000 ) then
 		Msg2Player("Xin lçi! §iÓm kinh nghiÖm h«m nay b¹n nhËn ®­îc trong ¶i TÝn sø ®· v­ît qu¸ giíi h¹n. Ngµy mai h·y ®Õn, c¸m ¬n!")
 	end
 end;
@@ -60,7 +60,7 @@ function messenger_killbugbear_inteam(taskgiveexp,BMapId)  --Ð¡¹Ö¹Òµôºóµ÷ÓÃµÄ¸ø¶
 	local nMemCount = GetTeamSize()
 	local nTaskExp = taskgiveexp * greatnight_huang_event(2)
 	
-	if ( nt_getTask(1273) < 14000000 ) then
+	if ( nt_getTask(1273) < 140000000 ) then
 		if (nMemCount == 0 ) then
 			AddOwnExp(nTaskExp)	
 			AddExp_Skill_Extend(taskgiveexp)
@@ -72,7 +72,7 @@ function messenger_killbugbear_inteam(taskgiveexp,BMapId)  --Ð¡¹Ö¹Òµôºóµ÷ÓÃµÄ¸ø¶
 			for i = 1, nMemCount do
 				PlayerIndex = GetTeamMember(i)
 				local prize_mapid,prize_mapx,prize_mapy= GetWorldPos() --»ñµÃµ±Ç°Íæ¼ÒËùÔÚÎ»ÖÃ
-				if ( BMapId == prize_mapid ) and ( nt_getTask(1201) == 20 or nt_getTask(1202) == 20 or nt_getTask(1203) == 20 ) and (nt_getTask(1273) < 14000000) then   --ÅÐ¶ÏÊÇ·ñÔÚÉ±ËÀ¹ÖÎïµÄÍæ¼ÒµÄËùÔÚµØÍ¼
+				if ( BMapId == prize_mapid ) and ( nt_getTask(1201) == 20 or nt_getTask(1202) == 20 or nt_getTask(1203) == 20 ) and (nt_getTask(1273) < 140000000) then   --ÅÐ¶ÏÊÇ·ñÔÚÉ±ËÀ¹ÖÎïµÄÍæ¼ÒµÄËùÔÚµØÍ¼
 					AddOwnExp(nTaskExp)
 					AddExp_Skill_Extend(taskgiveexp)
 					local today_exp = nt_getTask(1273)
@@ -82,7 +82,7 @@ function messenger_killbugbear_inteam(taskgiveexp,BMapId)  --Ð¡¹Ö¹Òµôºóµ÷ÓÃµÄ¸ø¶
 			PlayerIndex = nPreservedPlayerIndex;
 			return
 		end
-	elseif ( nt_getTask(1273) >= 14000000 ) then
+	elseif ( nt_getTask(1273) >= 140000000 ) then
 		Msg2Player("Xin lçi! §iÓm kinh nghiÖm h«m nay b¹n nhËn ®­îc trong ¶i TÝn sø ®· v­ît qu¸ giíi h¹n. Ngµy mai h·y ®Õn, c¸m ¬n!")
 	end
 end;
@@ -90,7 +90,7 @@ end;
 function messenger_killnpc_jifen(realjifen,BMapId)
 	local nPreservedPlayerIndex = PlayerIndex
 	local nMemCount = GetTeamSize()
-	local Uworld1205 = nt_getTask(1205)
+	local Uworld1205 = nt_getTask(3000)
 	local Uworld1274 = nt_getTask(1274)
 	local nOrgRealjifen = realjifen;
 	local nBeishu = greatnight_huang_event(2);
@@ -103,7 +103,7 @@ function messenger_killnpc_jifen(realjifen,BMapId)
 	
 	if ( nt_getTask(1274) < xianzhijifen ) then
 		if (nMemCount == 0 ) then
-			nt_setTask(1205,Uworld1205+realjifen)
+			nt_setTask(3000,Uworld1205+realjifen)
 			nt_setTask(1274,Uworld1274+realjifen)
 			if ( nt_getTask(1224) == 0 ) then
 				nt_setTask(1223,nt_getTask(1223)+realjifen)
@@ -117,11 +117,11 @@ function messenger_killnpc_jifen(realjifen,BMapId)
 		else
 			local i = random(1,nMemCount)
 			PlayerIndex = GetTeamMember(i)
-			local Uworld1205 = nt_getTask(1205)
+			local Uworld1205 = nt_getTask(3000)
 			local Uworld1274 = nt_getTask(1274)
 			local prize_mapid,prize_mapx,prize_mapy= GetWorldPos() --»ñµÃµ±Ç°Íæ¼ÒËùÔÚÎ»ÖÃ
 			if ( BMapId == prize_mapid ) and ( nt_getTask(1201) == 20 or nt_getTask(1202) == 20 or nt_getTask(1203) == 20 ) and ( nt_getTask(1274) < xianzhijifen ) then   --ÅÐ¶ÏÊÇ·ñÔÚÉ±ËÀ¹ÖÎïµÄÍæ¼ÒµÄËùÔÚµØÍ¼
-				nt_setTask(1205,Uworld1205+realjifen)
+				nt_setTask(3000,Uworld1205+realjifen)
 				nt_setTask(1274,Uworld1274+realjifen)
 				if ( nt_getTask(1224) == 0 ) then
 					nt_setTask(1223,nt_getTask(1223)+realjifen)

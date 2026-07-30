@@ -1,5 +1,4 @@
 Include("\\script\\lib\\awardtemplet.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 --Start_Date = 20090623;
 BNCQ_End_Date = 20200220;	--结束活动
@@ -20,7 +19,7 @@ BNCQ_TASKID_BNCQ_USE_TIMES = 2782
 
 function OnlineAward_StartDate() --检查活动时间，在线领奖
 	local nCurDate = tonumber(GetLocalDate("%Y%m%d"))
-	if (CFG_OnlineNhanThuong	== 1) then
+	if (nCurDate >= BNCQ_Start_Date and nCurDate < BNCQ_End_Date) then
 		return 1
 	else
 		return 0

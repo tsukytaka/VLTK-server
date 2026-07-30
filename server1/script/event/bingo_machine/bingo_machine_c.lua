@@ -11,7 +11,7 @@ function BingoMachine:RecvResult(nResult, nRefiningCount, nType, nLevel)
 	if nResult == ROTATE_ERROR_STATUS then
 		Msg2Player("Ng­¬i vÉn ch­a lÜnh th­ëng kh«ng thÓ ®Æt c­îc")
 	elseif nResult == ROTATE_ERROR_PRINING then
-		Msg2Player("Hçn Nguyªn Linh Lé cña ng­¬i kh«ng ®ñ")
+		Msg2Player("TiÒn ®ång cña ng­¬i kh«ng ®ñ") -- Thay B»ng G× Tïy ThÝch
 	end
 	ResultAwardInfo(nResult, nRefiningCount, nType, nLevel);
 end

@@ -59,12 +59,12 @@ G_PLAYER_3	Kü n¨ng %s cña b¹n ®· ®Õn cùc h¹n, kh«ng thÓ th¨ng cÊp thªm n÷a
 G_PLAYER_4	Kü n¨ng chiÕn ®Êu cña B¹n ph¶i ®¹t ®Õn cÊp %d míi cã thÓ th¨ng cÊp %s kü n¨ng. 
 G_PLAYER_5	Kim Hoµn B¶o, chuyÓn nhËp ®iÓm sè thµnh c«ng! 
 G_PLAYER_6	Kim Hoµn B¶o, lÇn sau sÏ chuyÓn nhËp ®iÓm sè 
-G_PLAYER_7	Kim Hoµn B¶o, chuyÓn nhËp 28 ngµy thµnh c«ng! 
-G_PLAYER_8	Kim Hoµn B¶o, lÇn sau sÏ chuyÓn nhËp 28 ngµy
-G_PLAYER_9	Nguyªn b¶o chuyÓn thµnh c«ng 20 giê ch¬i!
-G_PLAYER_10	Nguyªn b¶o sÏ chuyÓn thµnh 20 giê ch¬i vµo ®ît b¶o tr× tíi
-G_PLAYER_11	Nguyªn b¶o chuyÓn thµnh c«ng 10 ngµy ch¬i!
-G_PLAYER_12	Nguyªn b¶o sÏ chuyÓn thµnh 10 ngµy ch¬i vµo ®ît b¶o tr× tíi
+G_PLAYER_7	Kim Hoµn B¶o, chuyÓn nhËp 25 ngµy thµnh c«ng! 
+G_PLAYER_8	Kim Hoµn B¶o, lÇn sau sÏ chuyÓn nhËp 25 ngµy
+G_PLAYER_9	Nguyªn b¶o chuyÓn thµnh c«ng 25 giê ch¬i!
+G_PLAYER_10	Nguyªn b¶o sÏ chuyÓn thµnh 25 giê ch¬i vµo ®ît b¶o tr× tíi
+G_PLAYER_11	Nguyªn b¶o chuyÓn thµnh c«ng 7 ngµy ch¬i!
+G_PLAYER_12	Nguyªn b¶o sÏ chuyÓn thµnh 7 ngµy ch¬i vµo ®ît b¶o tr× tíi
 G_PLAYER_13	HÖ thèng hñy bá 
 G_PLAYER_14	TiÕp tôc
 G_PLAYER_15	Hoµn thµnh
@@ -405,8 +405,8 @@ G_STR_TO	®Õn:
 G_STR_SELL_BEGIN_DATE	Thêi gian b¸n tõ:
 G_STR_ABATE_END	gi¶m gi¸ ®Õn:
 G_STR_SELL_END	Thêi gian b¸n ®Õn:
-G_STR_TEAMSHAREITEM_MODEPUNISH1	Thµnh viªn nhãm %s nhÆt ®­îc vËt phÈm %s
-G_STR_TEAMSHAREITEM_MODEPUNISH2	NhËn ®­îc vËt phÈm chung cña tæ ®éi: %s
+G_STR_TEAMSHAREITEM_MODEPUNISH1	<color=green>Thµnh viªn nhãm: <color=yellow>%s<color> nhÆt ®­îc vËt phÈm: <color=yellow>%s<color>
+G_STR_TEAMSHAREITEM_MODEPUNISH2	<color=green>NhËn ®­îc vËt phÈm chung cña tæ ®éi: <color=yellow>%s<color>
 
 K_S_GOLD	Kim
 K_S_WOOD	Méc

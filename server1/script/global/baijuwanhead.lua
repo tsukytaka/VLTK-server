@@ -43,8 +43,7 @@ AEXP_TEMPOFFLINETASKID 			= 170;				--使用白驹丸时的任务变量
 AEXP_120SKILL_UPGRADE_EXP = 137500;					--120技能熟练度提升为定值
 
 --离线挂技能各技能级别对应的熟练度提升比例
-ARY_UPGRADE_SKILL_EXP_PERCENT = {	0.0775,	0.0388,	0.0258,	0.0194,	0.0155,	0.013,	0.0111,	0.0097,	0.0086,	0.0039,
-									0.0035,	0.0032,	0.0030,	0.0028,	0.0026,	0.0024,	0.0023,	0.0022,	0.0020	};
+ARY_UPGRADE_SKILL_EXP_PERCENT = {	0.0775,	0.0388,	0.0258,	0.0194,	0.0155,	0.013,	0.0111,	0.0097,	0.0086,	0.0039,	0.0035,	0.0032,	0.0030,	0.0028,	0.0026,	0.0024,	0.0023,	0.0022,	0.0020	};
 --离线挂技能可提升的技能ID
 ARY_UPGRADE_SKILL = { 318, 319, 321, 322, 323, 325, 339, 302, 342, 353, 355, 328, 380, 336, 337, 357, 359, 362, 361, 368, 365, 375, 372, 709, 708, 710, 711, 712, 713, 714, 715, 716, 717 };
 
@@ -91,15 +90,15 @@ function get_left_time()
 	local nTianxingExpSpareTime_Hours, nTianxingExpSpareTime_Minutes = getFrame2MinAndSec(nTianxingExpSpareTime);
 	
 
-if (GetProductRegion() == "cn_ib") then
-	--摆摊
-	local restStall = GetTask(AEXP_STALL_TIME_TASKID)
-	local nStall_Hour, nStall_Min = getFrame2MinAndSec(restStall)
+	if (GetProductRegion() == "cn_ib") then
+		--摆摊
+		local restStall = GetTask(AEXP_STALL_TIME_TASKID)
+		local nStall_Hour, nStall_Min = getFrame2MinAndSec(restStall)
 
-	--蓬莱仙草露
-	local nXianCaoTime = GetTask(AEXP_XIANCAO_TIME_TASKID);
-	local nXianCao_Hour, nXianCao_Min = getFrame2MinAndSec(nXianCaoTime);
-end	
+		--蓬莱仙草露
+		local nXianCaoTime = GetTask(AEXP_XIANCAO_TIME_TASKID);
+		local nXianCao_Hour, nXianCao_Min = getFrame2MinAndSec(nXianCaoTime);
+	end	
 
 	local nSkillExpID = GetTask(AEXP_SKILL_ID_TASKID);
 	local szSkillExpName = "";

@@ -1,8 +1,6 @@
 Include("\\script\\lib\\awardtemplet.lua")
 Include ("\\script\\lib\\pay.lua")
 Include("\\script\\event\\pingzi\\200805\\head.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 ruyijixiangdangao_tbItemList= 
 
 {
@@ -16,7 +14,7 @@ function main(nItemIndex)
 	local nItemData	= 20080731;	
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
 	local nCurExp = GetTask(pingzi0805.TSK_ExpLimit)
-	if (CFG_pingzi	== 0) then
+	if nDate > nItemData then
 		Msg2Player("VËt phÈm qu¸ h¹n sö dông, tù ®éng mÊt ®i.")
 		return 0;
 	end
@@ -42,7 +40,7 @@ function GetDesc(nItemIndex)
 	local nYear		= 2008
 	local nMonth	= 07
 	local nDay		= 31
-	if (CFG_pingzi	== 0) then
+	if nYear == 0 and nMonth == 0 and nDay == 0 then
 		return "<color=red>VËt phÈm nµy ®· qu¸ h¹n sö dông<color>"
 	end
 	return format("<color=green>Thêi h¹n sö dông: %d-%d-%d<color>",nDay, nMonth, nYear)

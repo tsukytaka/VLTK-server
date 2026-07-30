@@ -209,8 +209,7 @@ function branch_longzhuiwu()
 		end
 	elseif ( Uworld1057 >= 90 ) then
 		Talk(1,"","§õng giÕt ta! Ta chØ lµ ®å ®Ö cña Long Truy Vò, gi¶ d¹ng h¾n g¹t ng­¬i mµ th«i.")
-	else
-		Talk(1,"","§õng cã suèt ngµy phiÒn ta.")
+
 	end
 end
 

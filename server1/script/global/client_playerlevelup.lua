@@ -3,14 +3,14 @@
 --Comm:¿Í»§¶ËÉı¼¶ÌáÊ¾ĞÅÏ¢
 
 STRTAB_LEVELUP={
-	[2]="<#> Chóc mõng b¹n ®· lªn cÊp 2, b¹n ®· cã thÓ ®i t×m Vâ s­ ®Ó häc Khinh c«ng",
-	[5]="<#> Chóc mõng b¹n ®· lªn ®Õn cÊp 5! B¹n ®· cã thÓ ®i xem thÕ giíi bªn ngoµi råi!.",
-	[10]="<#> Chóc mõng b¹n ®· lªn ®Õn cÊp 10! B¹n ®· cã thÓ gia nhËp m«n ph¸i, PK víi ng­êi kh¸c, tham gia bÊt cø ho¹t ®éng nµo cña Vâ l©m!",
-	[20]="<#> Chóc mõng b¹n ®· lªn ®Õn cÊp 20! B©y giê b¹n ®· cã thÓ t×m ng­êi t©m ®Çu ı hîp ®Ó kÕt b¹n tr¨m n¨m, hoÆc tiÕp tôc con ®­êng giang hå cña m×nh",
-	[30]="<#> Chóc mõng b¹n ®· lªn ®Õn cÊp 30!H·y quay vÒ m«n ph¸i, cã rÊt nhiÒu nhiÖm vô tr«ng chê b¹n!",
-	[40]="<#> Chóc mõng b¹n ®· lªn ®Õn cÊp 40! B¹n ®· cã thÓ  tham gia chiÕn tr­êng Tèng  Kim. §õng quªn quay vÒ m«n ph¸i, cã rÊt nhiÒu nhiÖm vô tr«ng chê b¹n!",
-	[50]="<#> Chóc mõng b¹n ®· lªn ®Õn cÊp 50! B¹n ®· cã thÓ ®i ®¶o TÈy Tñy, n¬i ®ã b¹n cã v« sè lÇn thö nghiÖm hiÖu qu¶ tÈy ®iÓm cña m×nh/ hoÆc ®Õn §µo hoa ®¶o ®Ó th­ëng chø? ch¸o L¹p B¸t t¨ng kinh nghiÖm! C¸c thuyÒn phu vµ Xa phu ®Òu cã thÓ ®­a b¹n ®i! Nhí vÒ m«n ph¸i lµm nhiÖm vŞu xuÊt s­ ®Ó häc ®­îc tuyÖt kü trÊn ph¸i",
-	[60]="<#> B¹n cã thÓ nhËn nhiÖm vô Håi s­, hoµn thµnh sÏ häc ®­îc tuyÖt häc trÊn ph¸i! ",
+	[2]=		"Chóc mõng b¹n ®· lªn cÊp 2, b¹n ®· cã thÓ ®i t×m Vâ s­ ®Ó häc Khinh c«ng",
+	[5]=		"Chóc mõng b¹n ®· lªn ®Õn cÊp 5! B¹n ®· cã thÓ ®i xem thÕ giíi bªn ngoµi råi!.",
+	[10]=	"Chóc mõng b¹n ®· lªn ®Õn cÊp 10! B¹n ®· cã thÓ gia nhËp m«n ph¸i, PK víi ng­êi kh¸c, tham gia bÊt cø ho¹t ®éng nµo cña Vâ l©m!",
+	[20]=	"Chóc mõng b¹n ®· lªn ®Õn cÊp 20! B©y giê b¹n ®· cã thÓ t×m ng­êi t©m ®Çu ı hîp ®Ó kÕt b¹n tr¨m n¨m, hoÆc tiÕp tôc con ®­êng giang hå cña m×nh",
+	[30]=	"Chóc mõng b¹n ®· lªn ®Õn cÊp 30!H·y quay vÒ m«n ph¸i, cã rÊt nhiÒu nhiÖm vô tr«ng chê b¹n!",
+	[40]=	"Chóc mõng b¹n ®· lªn ®Õn cÊp 40! B¹n ®· cã thÓ  tham gia chiÕn tr­êng Tèng  Kim. §õng quªn quay vÒ m«n ph¸i, cã rÊt nhiÒu nhiÖm vô tr«ng chê b¹n!",
+	[50]=	"Chóc mõng b¹n ®· lªn ®Õn cÊp 50! B¹n ®· cã thÓ ®i ®¶o TÈy Tñy, n¬i ®ã b¹n cã v« sè lÇn thö nghiÖm hiÖu qu¶ tÈy ®iÓm cña m×nh/ hoÆc ®Õn §µo hoa ®¶o ®Ó th­ëng chø? ch¸o L¹p B¸t t¨ng kinh nghiÖm! C¸c thuyÒn phu vµ Xa phu ®Òu cã thÓ ®­a b¹n ®i! Nhí vÒ m«n ph¸i lµm nhiÖm vŞu xuÊt s­ ®Ó häc ®­îc tuyÖt kü trÊn ph¸i",
+	[60]=	"B¹n cã thÓ nhËn nhiÖm vô Håi s­, hoµn thµnh sÏ häc ®­îc tuyÖt häc trÊn ph¸i! ",
 }
 
 function main(lvl)

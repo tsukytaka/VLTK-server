@@ -2,8 +2,6 @@ Include("\\script\\event\\jiefang_jieri\\200904\\taskctrl.lua");
 Include("\\script\\lib\\awardtemplet.lua")
 --Phong v©n lÖnh bµi - hoµn thµnh 1 lÇn nhiÖm vô thu thËp c«ng tr¹ng lÖnh - Modified by DinhHQ - 20110920
 Include("\\script\\activitysys\\g_activity.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 tbjf0904_shuizei_exp =
 {
 	[1]	= {nExp = 10, 	nRate = 0.3},
@@ -15,7 +13,7 @@ tbjf0904_shuizei_exp =
 
 
 function join_shuizei_act()
-	if (CFG_jiefang_jieri2009	== 0) then
+	if (0 == jf0904_shuizei_IsActtime()) then
 		Say("Kh«ng ph¶i lµ trong thêi gian ho¹t ®éng.", 0);
 		return
 	end
@@ -97,7 +95,7 @@ function give_shuizei_award_exp()
 		ncurstep = ncurstep + tbjf0904_shuizei_exp[i].nRate * 100000;
 	end
 	
-	AddOwnExp(naddedexp * 1000000);
+	AddOwnExp(100000);
 	
 end
 

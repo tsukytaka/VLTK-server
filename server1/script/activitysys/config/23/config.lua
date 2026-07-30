@@ -16,7 +16,8 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy ®· hoµn thµnh 10 nhiÖm vô D· TÈu"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy ®· hoµn thµnh 10 nhiÖm vô D· TÈu"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,417,1,0,0},nBindState = -2},1,"Trong ngµy ®· hoµn thµnh 10 nhiÖm vô D· TÈu"} },		
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_YeSou,2} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,2} },
 	},
@@ -37,7 +38,8 @@ tbConfig[2] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy cã trËn liªn ®Êu th¾ng ®Çu tiªn"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy cã trËn liªn ®Êu th¾ng ®Çu tiªn"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,417,1,0,0},nBindState = -2},1,"Trong ngµy cã trËn liªn ®Êu th¾ng ®Çu tiªn"} },		
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_LeagueMatch,2} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,2} },
 	},
@@ -59,7 +61,7 @@ tbConfig[3] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy lÇn ®Çu tiªn ®­îc 3000 ®iÓm tÝch lòy Tèng Kim"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy lÇn ®Çu tiªn ®­îc 3000 ®iÓm tÝch lòy Tèng Kim"} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_SongJin,2} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,2} },
 	},
@@ -67,7 +69,7 @@ tbConfig[3] = --Ò»¸öÏ¸½Ú
 tbConfig[4] = --Ò»¸öÏ¸½Ú
 {
 	nId = 4,
-	szMessageType = "nil",
+	szMessageType = "FinishMail",
 	szName = "Trong ngµy lÇn ®Çu tiªn hoµn thµnh tÝn sø Phong Chi Kú",
 	nStartDate = nil,
 	nEndDate  = nil,
@@ -95,7 +97,7 @@ tbConfig[5] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy lÇn ®Çu tiªn hoµn thµnh Phong L¨ng §é"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy lÇn ®Çu tiªn hoµn thµnh Phong L¨ng §é"} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_FengLingDu,2} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,2} },
 	},
@@ -118,7 +120,7 @@ tbConfig[6] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},1,"Trong ngµy giÕt ®­îc 3 con qu¸i xanh ®Çu tiªn cÊp 95"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},1,"Trong ngµy giÕt ®­îc 3 con qu¸i xanh ®Çu tiªn cÊp 95"} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_LanGuai,1} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,1} },
 	},
@@ -139,7 +141,7 @@ tbConfig[7] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy hoµn thµnh 1 lÇn v­ît ¶i ®Çu tiªn"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Trong ngµy hoµn thµnh 1 lÇn v­ît ¶i ®Çu tiªn"} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_ChuangGuan,2} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,2} },
 	},
@@ -205,7 +207,7 @@ tbConfig[11] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},1,"Trong ngµy 3 lÇn v­ît ¶i Tµng B¶o §å ®Çu tiªn"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},1,"Trong ngµy 3 lÇn v­ît ¶i Tµng B¶o §å ®Çu tiªn"} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_CangBaoTu,1} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,1} },
 	},
@@ -257,7 +259,7 @@ tbConfig[14] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Mçi ngµy lªn m¹ng lÜnh th­ëng"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,2566,1,0,0},},2,"Mçi ngµy lªn m¹ng lÜnh th­ëng"} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_GetEveryDay,2} },
 		{"PlayerFunLib:AddTaskDaily",	{TaskVarIdx_XinXiaLinMax,2} },
 	},

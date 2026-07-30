@@ -23,7 +23,7 @@ function TaskShedule()
 	
 	TaskCountLimit(0)
 	
-	local szMsg = format("=====> %s BAT DAU %d:%d VA %d PHUT SE KET THUC<=====", "shensuanzi",nNextHour, nNextMinute, nInterval)
+	local szMsg = format("=====%s ## %d:%d ### %d # ###=======", "shensuanzi",nNextHour, nNextMinute, nInterval)
 	OutputMsg(szMsg);
 end
 
@@ -31,7 +31,7 @@ function TaskContent()
 	
 	local nDate = tonumber(date("%Y%m%d"))
 	
-	if  20100709 <= nDate and nDate < 20190816 then
+	if  20100709 <= nDate and nDate < 20100816 then
 		RemoteExecute("\\script\\event\\other\\shensuanzi\\class.lua",	"tbShenSuanZi:RoundStart_gc", 0)
 		OutputMsg("[shensuanzi]start signup")
 	end

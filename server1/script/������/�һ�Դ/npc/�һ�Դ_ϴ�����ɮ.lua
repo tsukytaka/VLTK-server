@@ -1,11 +1,13 @@
---Ï´¼¼ÄÜµãµÄÅÑÉ®
+-- V« Danh T¨ng ë §µo Hoa Nguyªn - Editor by AloneScript (Linh Em)
+
+Include("\\script\\lib\\alonelib.lua");
 -- By: Dan_Deng(2003-08-29)
 -- Update: Dan_Deng(2004-02-04) Ï´µãĞŞ¸ÄÎª¿ÉÒÔÏ´255´Î
 -- Update: Dan_Deng(2004-05-27) Ğ¡¶ùÊ§×ÙÈÎÎñ (Uworld42 = GetTask(42))
 -- ÁÙÊ±±äÁ¿Éè¶¨: ³õ´Î¼¼ÄÜ(1),³õ´ÎË®¾§(257),¶à´ÎË®¾§(10),Ãâ·Ñ(1024)
 Include("\\script\\dailogsys\\dailogsay.lua")
 Include("\\script\\vng_event\\tochieukynang150\\head.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 
 function main()
 --	Uworld137 = GetTask(137)
@@ -36,16 +38,18 @@ function main()
 --		end
 	else		
 		-- È±Ê¡¶Ô»°£¨½âÊÍÏ´µã¸Ä±ä£©
-		local szTitle = "B©y giê ng­êi chØ cÇn t×m mét ng­êi Xa phu nµo ®ã, ®Òu cã thÓ ®­a ng­¬i ®i 'TÈy Tñy ®¶o', bÇn t¨ng gióp ng­¬i tÈy tñy!"
-		szTitle = szTitle .. "Cã ®iÒu ta cã thÓ ®­a c¸c ng­¬i ®i <color=yellow> Vo Danh MËt C¶nh <color>, t¹i ®ã cã thÓ sö dông kinh nghiÖm ®Ó ®æi lÊy ®é tu luyÖn cña kü n¨ng."
+		local szTitle = "B©y giê ng­êi chØ cÇn t×m mét ng­êi xa phu nµo ®ã, ®Òu cã thÓ ®­a ng­¬i ®i “TÈy Tñy ®¶o”, bÇn t¨ng gióp ng­¬i tÈy tñy!"
+		szTitle = szTitle .. " Cã ®iÒu ta cã thÓ ®­a c¸c ng­¬i ®i <color=yellow>V« Danh MËt C¶nh<color>, t¹i ®ã cã thÓ sö dông kinh nghiÖm ®Ó ®æi lÊy ®é tu luyÖn cña kü n¨ng."..Note("vodanhtang_daohoanguyen")
 		
 		local tbOpt = {}
 		--- Thªm Nép vËt phÈm t¨ng ®é tu luyªn skill 150 -- Modified By NgaVN - 20121207
-		tinsert(tbOpt, {"Nép vËt phÈm Tu ch©n yÕu quyÕt", tbTrainSkill150.LoadItem, {tbTrainSkill150}})
+		-- tinsert(tbOpt, {"Nép vËt phÈm Tu ch©n yÕu quyÕt", tbTrainSkill150.LoadItem, {tbTrainSkill150}})
 		-- ½øÈ¥Ö®Ç°ĞèÒªÅĞ¶Ï ÊÇ·ñ¾ßÓĞ150¼¶¼¼ÄÜ£¬·ñÔò²»ËÍ
 		
 		-- Më tİnh n¨ng ®­a ta ®i V« Danh MËt C¶nh - - Modified By NgaVN - 20121207
-		tinsert(tbOpt, {"§­a ta ®i V« Danh MËt C¶nh", toWumingmijin})	
+		if VoDanhTangHocSkill150 == 1 then
+		tinsert(tbOpt, {"§­a ta ®i V« Danh MËt C¶nh", toWumingmijin})
+		end	
 		tinsert(tbOpt, {"§Ó ta suy nghÜ l¹i", no})
 		
 		CreateNewSayEx(szTitle, tbOpt)

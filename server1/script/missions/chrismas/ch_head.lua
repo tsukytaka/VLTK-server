@@ -1,5 +1,3 @@
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 if (not CHRISMAS_HEAD) then
 	CHRISMAD_HEAD = 1;
 	
@@ -314,11 +312,12 @@ if (not CHRISMAS_HEAD) then
 end;
 
 function isXmasTime(bAward)
+	local nDate = tonumber(GetLocalDate("%y%m%d"));
 	if (bAward == 1) then
-		if (CFG_xmas2006	== 1) then
+		if (nDate >= 061222 and nDate <= 070114) then
 			return 1;
 		end;
-	elseif (CFG_xmas2006	== 1) then
+	elseif (nDate >= 061222 and nDate <= 070114) then
 		return 1;
 	end;
 	return 0;

@@ -1,10 +1,4 @@
 Include("\\script\\lib\\unittest.lua")
-
-
-
-
-
-
 tbItemList = 
 {
 	["Méc ChÕ B¶o H¹p"] = {tbProp={6,1,2318,1,0,0},},
@@ -50,14 +44,9 @@ function tbTestAward:GiveAwardByList(tbItem, szLogTitle, nAwardCount)
 	self.tbItem = tbItem
 	self.szLogTitle = szLogTitle
 	self.nAwardCount = nAwardCount
-	
-	
 end
 
-
 suite = TestSuite:new("§¹o cô hÖ thèng ho¹t ®éng tù ®éng test")
-
-
 
 ItemCase = {}
 

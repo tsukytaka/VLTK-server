@@ -6,6 +6,7 @@ Include("\\script\\event\\change_destiny\\mission.lua");	-- ÄæÌì¸ÄÃü
 Include("\\script\\lib\\log.lua")
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
+
 IncludeLib("SETTING");
 
 MISSIONID = 20
@@ -186,19 +187,10 @@ function sf_winbouns(n_camp)
 		
 		--print(format("%d %d",player_total_point,JG_T_Value))
 		if(player_total_point >= 1000 and JG_T_Value < jg_ndate) then
-			local ItemIdx = AddItem(6,1,JUNGONGPAI,1,0,0);
-			
-			local Tdate=FormatTime2Number(GetCurServerTime()+24*60*60)--ÁìÈ¡µÄµÚ¶şÌì
-			Tdate=floor(Tdate/10000) --È¡Äê,ÔÂ,ÈÕ
-			nEndYear=floor(Tdate/10000)+2000
-			nEndMonthDay=floor(mod(Tdate,10000))
-			SetSpecItemParam(ItemIdx, 1,nEndYear);--ÉèÖÃÎïÆ·Äê
-			SetSpecItemParam(ItemIdx, 2,nEndMonthDay);--ÉèÖÃÎïÆ·ÔÂÈÕ
-			SyncItem(ItemIdx)
-			SetItemBindState(ItemIdx, -2);-- °ó¶¨
-			Msg2Player("B¹n nhËn ®­îc 1 Hu©n c«ng bµi Tèng Kim")
-			WriteLog(format("[ChiÕn tr­êng Tèng Kim]\t%s\tName:%s\tAccount:%s\t 1000 ®iÓm tİch lòy trë lªn sÏ nhËn ®­îc 1 Hu©n c«ng bµi Tèng Kim",
-					GetLocalDate("%y%m%d %X"), GetName(), GetAccount()));
+		
+---------------------------------------------------------
+---------------------------------------------------------
+
 			if(JG_T_Value == (jg_ndate-1)) then --ÁìÈ¡ÁË2´Î	
 				SetTask(JUNGONGPAI_Task_ID,jg_ndate);
 			elseif(JG_T_Value ~= jg_ndate) then --ÁìÈ¡ÁË1´Î	
@@ -230,8 +222,12 @@ function sf_winbouns(n_camp)
 			Msg2Player("B¹n nhËn ®­îc "..n_bonuscff1.." ®iÓm tİch lòy")
 			--Storm Ê¤·½½áÊøÌôÕ½£¬²¢¼ÇÂ¼»ñÊ¤Õß
 			Say("Chóc mõng phe b¹n giµnh th¾ng lîi! Danh väng cña b¹n t¨ng thªm <color=yellow>"..repute.."<color>! Vµ nhËn thªm <color=yellow>"..n_bonuscff1.."<color> ®iÓm tİch lòy", 1, "KÕt thóc ®èi tho¹i/#storm_end(1)")
-			tb_storm_winner[PlayerIndex] = 1
+			
+			------------------------------------------------------------------------------------------------------
 
+			------------------------------------------------------------------------------------------------------
+			
+			tb_storm_winner[PlayerIndex] = 1
 			
 			randitem = random(1, sf_itemcount);
 			if (randitem > 0) then
@@ -470,11 +466,8 @@ function sf_join(camp)
 			return
 		end
 	end
-
-if (result == 0) then
-		if (CalcItemCount(-1, 6, 1, 30083, -1) >= 1 and ConsumeEquiproomItem(1, 6, 1, 30083, 1) == 1) then		
-		--if (GetCash() >= SONGJIN_SIGNUP_FEES) then
-		--Pay(SONGJIN_SIGNUP_FEES)
+--L2TH dieu chinh tai day
+if (result == 0) then	
 		BT_LeaveBattle() -- Çå³ıÍæ¼Ò¿Í»§¶Ëµ±Ç°µÄÅÅÃûÊı¾İ
 		BT_ClearPlayerData()
 		SetTask(2435, 0);--±¾³¡ËÎ½ğÒÑ¾­ÁìÈ¡µÄ°ï»á¹±Ï×¶ÈÇåÁã--by ÁÎÖ¾É½
@@ -484,12 +477,25 @@ if (result == 0) then
 		local nlevel = BT_GetGameData(GAME_LEVEL)
 		G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nlevel)
 		tbLog:PlayerActionLog("TinhNangKey","BaoDanhTongKim")
-	else
-		local szMsg = "Xin lçi, tham gia ®ît Tèng Kim ®¹i chiÕn nµy, cÇn ph¶i nép 1 TK chiªu binh lÖnh"
-		Say(szMsg, 0)
-		return 
-	end
+
 end
+-- if (result == 0) then
+		-- if (CalcItemCount(-1, 6, 1, 30083, -1) >= 1 and ConsumeEquiproomItem(1, 6, 1, 30083, 1) == 1) then		
+		-- BT_LeaveBattle() -- Çå³ıÍæ¼Ò¿Í»§¶Ëµ±Ç°µÄÅÅÃûÊı¾İ
+		-- BT_ClearPlayerData()
+		-- SetTask(2435, 0);--±¾³¡ËÎ½ğÒÑ¾­ÁìÈ¡µÄ°ï»á¹±Ï×¶ÈÇåÁã--by ÁÎÖ¾É½
+		-- Msg2Player("Nh¾c nhë: cã thÓ Ên phİm ~ ë gãc tr¸i phİa trªn bµn phİm ®Ó xem tin tøc chiÕn sù!");
+		-- BT_SetData(PL_ROUND,BT_GetGameData(GAME_ROUND))
+		-- tbLog:PlayerActionLog("EventChienThang042011","BaoDanhTongKim")	-- ±¨ÃûÈÕÖ¾
+		-- local nlevel = BT_GetGameData(GAME_LEVEL)
+		-- G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nlevel)
+		-- tbLog:PlayerActionLog("TinhNangKey","BaoDanhTongKim")
+	-- else
+		-- local szMsg = %BATTLE_STR_2
+		-- Say(szMsg, 0)
+		-- return 
+	-- end
+-- end
 
 gametime = floor(GetMSRestTime(MISSIONID, 40) / 18);
 AddMSPlayer(MISSIONID,camp);

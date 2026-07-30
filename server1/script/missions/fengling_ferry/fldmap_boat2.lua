@@ -10,7 +10,7 @@ function main()
 	end
 	SubWorld = boatidx
 	OpenMission(MISSIONID)
-	str = "Cuéc ®ua thuyÒn ë Phong L¨ng §é chuÈn bŞ khai cuéc, h·y mau ®Õn Bê Nam Phong L¨ng §é gÆp ThuyÒn phu Êt nép Phong L¨ng §é lÖnh bµi ®Ó ®¨ng kı thuyÒn!"
+	str = "Cuéc ®ua thuyÒn ë Phong L¨ng §é chuÈn bŞ khai cuéc, h·y mau ®Õn bê phİa Nam Phong L¨ng §é gÆp ThuyÒn phu Êt nép LÖnh bµi Phong L¨ng §é hoÆc 200 quyÓn MËt ®å thÇn bİ ®Ó tham gia lªn thuyÒn!"
 	AddGlobalCountNews(str, 3)
 	SetMissionV(MS_STATE, 2)
 	SubWorld = orgworld

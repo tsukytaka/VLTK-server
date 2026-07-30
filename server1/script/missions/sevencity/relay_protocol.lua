@@ -1,5 +1,5 @@
 Include("\\script\\missions\\sevencity\\war.lua")
-Include("\\script\\missions\\sevencity\\simsevencity.lua")  
+
 RelayProtocol = {m_Step = 0}
 
 function RelayProtocol:StartSignup(param, result)
@@ -26,9 +26,6 @@ end
 function RelayProtocol:Start(param, result)
 	if (self.m_Step == 3) then
 		BattleWorld:Start()
-		if (SimThatThanh and SimThatThanh.OnWarStart) then
-            SimThatThanh:OnWarStart()
-        end
 		self.m_Step = 4
 	end
 end
@@ -36,9 +33,6 @@ end
 function RelayProtocol:Close(param, result)
 	WriteLog(format("[SEVENCITY]Notify to close, step(%d)", self.m_Step))
 	BattleWorld:Close()
-	if (SimThatThanh and SimThatThanh.OnWarClose) then
-        SimThatThanh:OnWarClose()
-    end
 	if (self.m_Step == 4) then
 		self.m_Step = 0
 	end
@@ -80,15 +74,15 @@ function RelayProtocol:SyncViceroy(param, result)
 	local msg = nil
 	local city = MAP_INFO[mapid].CityName
 	if (flag == 1 and tong ~= "") then
-		msg = format("Bang héi <color=green>%s<color> ®· chiÕm lÜnh thµnh c«ng <color=green>%s<color> !",
+		msg = format("Bang héi <color=red>%s<color> ®· chiÕm lÜnh thµnh c«ng <color=red>%s<color> !",
 					tong,
 					city)
 	elseif (tong ~= "") then
-		msg = format("<color=green>%s<color> thñ thµnh thµnh c«ng, tiÕp tôc chiÕm lÜnh <color=green>%s<color>!",
+		msg = format("<color=red>%s<color> thñ thµnh thµnh c«ng, tiÕp tôc chiÕm lÜnh <color=red>%s<color>!",
 					tong,
 					city)
 	else
-		msg = format("<color=green>%s<color> kh«ng ng­êi chiÕm lÜnh.", city)
+		msg = format("<color=red>%s<color> kh«ng ng­êi chiÕm lÜnh.", city)
 	end
 	AddGlobalCountNews(msg, 3)
 end

@@ -1,5 +1,4 @@
 --越南教师节活动头文件
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 if (not __H_V_TEACHER__) then
 	__H_V_TEACHER__ = 1;
@@ -15,7 +14,7 @@ tab_material = {
 VT06_EXPLIMIT = 50000000;
 TK_EXPLIMIT = 1780;
 VT06_DATEBEGIN = 20061118;
-VT06_DATEEND = 20061118;
+VT06_DATEEND = 50000000;
 	
 --增加一字为师卡
 function vt06_addzi()
@@ -43,7 +42,8 @@ end;
 
 --活动时间判断(所有掌门人)
 function vt06_isactive()
-	if (CFG_teachersday06	== 0) then
+	local nDate = tonumber(GetLocalDate("%Y%m%d"));
+	if (nDate > 20061231 or nDate < VT06_DATEBEGIN or gb_GetTask("teacherday2006_all", 1) ~= 0) then
 		return 0;
 	end;
 	return 1;
@@ -51,7 +51,8 @@ end;
 
 --活动时间判断（给字）
 function vt06_item_isactive()
-	if (CFG_teachersday06	== 0) then
+	local nDate = tonumber(GetLocalDate("%Y%m%d"));
+	if (nDate > 20061125 or nDate < VT06_DATEBEGIN or gb_GetTask("teacherday2006_all", 1) ~= 0) then
 		return 0;
 	end;
 	return 1;
@@ -59,7 +60,8 @@ end;
 
 --活动时间判断（给师父送礼）
 function vt06_shifu_isactive()
-	if (CFG_teachersday06	== 0) then
+	local nDate = tonumber(GetLocalDate("%Y%m%d"));
+	if (nDate > 20061231 or nDate < VT06_DATEBEGIN or gb_GetTask("teacherday2006_all", 1) ~= 0) then
 		Say("Ho箃 ng  k誸 th骳.", 0);
 		return 0;
 	end;

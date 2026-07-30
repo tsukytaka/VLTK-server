@@ -1,7 +1,6 @@
 -- ƒœ¬˘¿œ»À.lua ( •µÆªÓ∂Ø)
 Include([[\script\missions\chrismas\ch_head.lua]]);
 Include([[\script\missions\chrismas\xmas_day.lua]]);
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 tabExp = {
 2000000,
@@ -30,7 +29,8 @@ tabRate = {
 };
 
 function main()
-	if (CFG_xmas2006	== 0) then
+	local nDate = tonumber(GetLocalDate("%Y%m%d"));
+	if (nDate < 20061222) then
 		Describe(DescLink_LiGuan.."ChÛc gi∏ng sinh vui vŒ!", 1, "K’t thÛc ÆËi thoπi/oncancel");
 	else
 		Describe(DescLink_LiGuan.."Ha ha, chÛc gi∏ng sinh vui vŒ! C„ muËn bi’t gi∏ng sinh n®m nay c„ hoπt ÆÈng g◊ kh´ng?", 5, 

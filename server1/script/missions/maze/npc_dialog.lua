@@ -10,7 +10,7 @@ Include("\\script\\activitysys\\playerfunlib.lua")
 LEVEL_MIN = 120
 
 LIMITS = {
-	MIN_TEAMSIZE = 6,
+	MIN_TEAMSIZE = 4,
 	FLAG_CHECKTIME = 1,
 }
 
@@ -97,7 +97,7 @@ NpcXiaozhuzhu = {
 	m_Options = {
 		"GiÌi thi÷u v“ Ph„ B∂n Ki’m Gia",
 		"B∏o danh vµo Ki’m Gia",
-		--"Ki”m tra sË l«n h´m nay ta c„ th” Æi vµo Ki’m Gia",
+		"Ki”m tra sË l«n h´m nay ta c„ th” Æi vµo Ki’m Gia",
 		"Ta chÿ gh– th®m",
 	}
 }
@@ -121,7 +121,7 @@ end
 function NpcXiaozhuzhu:CheckTeam(player)
 	local count = player:GetTeamSize()
 	if (count < LIMITS.MIN_TEAMSIZE) then
-		player:Say("Tı 6-8 ng≠Íi c p 120 trÎ l™n cÔng nhau tÊ ÆÈi mÌi Æ≠Óc Æi vµo.")
+		player:Say("Tı 4-8 ng≠Íi c p 120 trÎ l™n cÔng nhau tÊ ÆÈi mÌi Æ≠Óc Æi vµo.")
 		return 0
 	elseif (self:CheckTime() == 0) then
 		player:Say("Chÿ c„ th” b∏o danh sau Æ«u mÁi giÍ vµ tr≠Ìc 30 phÛt.")
@@ -187,7 +187,7 @@ end
 function NpcXiaozhuzhu:OnAnswer(player, sel)
 	if (sel == 1) then
 		player:Describe(
-			"TÊ ÆÈi tı 6-8 ng≠Íi c p 120 trÎ l™n, vµo Æ«u mÁi giÍ vµ tr≠Ìc 30 phÛt c„ th” Æ’n chÁ cÒa ta Æ” b∏o danh, sau khi b∏o danh ti’n vµo ph„ b∂n. Sau khi ti’n vµo ph„ b∂n ng≠¨i sœ Æ≠Óc chuy”n Æ’n mÈt c®n phﬂng trong Ki’m Gia, chÿ c«n hoµn thµnh s˘ ki÷n cÒa c®n phﬂng nµy, ng≠¨i vµ tÊ ÆÈi cÒa ng≠¨i sœ ti’p tÙc tham gia vµo mÈt c®n phﬂng ti’p theo, nh˜ng cao thÒ c„ th” thµnh c´ng Æi vµo c®n phﬂng cuËi cÔng th◊ c„ th” g∆p Æ≠Óc trang chÒ cÒa Ng‰c Long S¨n Trang vµ nhÀn Æ≠Óc t≠ c∏ch th› luy÷n cuËi cÔng. N’u nh≠ trong lÛc chi’n Æ u Î trong c®n phﬂng ph∏t sinh s˘ ki÷n cÒa Ki’m Gia mµ bﬁ tr‰ng th≠¨ng, ng≠¨I c„ th” Æ’n Vπn Hoa Tr◊ Æ” trﬁ th≠¨ng, sau khi trﬁ th≠¨ng thµnh c´ng sœ Æ≠Óc quay trÎ lπi trong c®n phﬂng Æ∑ tong Æ≠Óc v≠Ót qua tr≠Ìc Æ„, Æ≠¨ng nhi™n ng≠¨i cÚng c„ th” sˆ dÙng PhÙc Sﬁnh PhÔ c„ Î tr™n K˙ Tr©n C∏c Æ” quay trÎ lπi c®n phﬂng mµ tÊ ÆÈi ng≠¨i Æang chi’n Æ u Æ” ti’p tÙc t∏c chi’n. MÁi ng≠Íi mÁi l«n tham gia ph„ b∂n sœ c„ 3 l«n c¨ hÈi Æi vµo vµo Vπn Hoa Tr◊ Æ” trﬁ th≠¨ng. MÁi l«n tham gia ph„ b∂n nhi“u nh t lµ 30 phÛt. ChÛc ng≠¨i may mæn",
+			"TÊ ÆÈi tı 4-8 ng≠Íi c p 120 trÎ l™n, vµo Æ«u mÁi giÍ vµ tr≠Ìc 30 phÛt c„ th” Æ’n chÁ cÒa ta Æ” b∏o danh, sau khi b∏o danh ti’n vµo ph„ b∂n. Sau khi ti’n vµo ph„ b∂n ng≠¨i sœ Æ≠Óc chuy”n Æ’n mÈt c®n phﬂng trong Ki’m Gia, chÿ c«n hoµn thµnh s˘ ki÷n cÒa c®n phﬂng nµy, ng≠¨i vµ tÊ ÆÈi cÒa ng≠¨i sœ ti’p tÙc tham gia vµo mÈt c®n phﬂng ti’p theo, nh˜ng cao thÒ c„ th” thµnh c´ng Æi vµo c®n phﬂng cuËi cÔng th◊ c„ th” g∆p Æ≠Óc trang chÒ cÒa Ng‰c Long S¨n Trang vµ nhÀn Æ≠Óc t≠ c∏ch th› luy÷n cuËi cÔng. N’u nh≠ trong lÛc chi’n Æ u Î trong c®n phﬂng ph∏t sinh s˘ ki÷n cÒa Ki’m Gia mµ bﬁ tr‰ng th≠¨ng, ng≠¨I c„ th” Æ’n Vπn Hoa Tr◊ Æ” trﬁ th≠¨ng, sau khi trﬁ th≠¨ng thµnh c´ng sœ Æ≠Óc quay trÎ lπi trong c®n phﬂng Æ∑ tong Æ≠Óc v≠Ót qua tr≠Ìc Æ„, Æ≠¨ng nhi™n ng≠¨i cÚng c„ th” sˆ dÙng PhÙc Sﬁnh PhÔ c„ Î tr™n K˙ Tr©n C∏c Æ” quay trÎ lπi c®n phﬂng mµ tÊ ÆÈi ng≠¨i Æang chi’n Æ u Æ” ti’p tÙc t∏c chi’n. MÁi ng≠Íi mÁi l«n tham gia ph„ b∂n sœ c„ 3 l«n c¨ hÈi Æi vµo vµo Vπn Hoa Tr◊ Æ” trﬁ th≠¨ng. MÁi l«n tham gia ph„ b∂n nhi“u nh t lµ 30 phÛt. ChÛc ng≠¨i may mæn",
 			1,
 			"Bi’t rÂi/Cancel")
 	elseif (sel == 2) then	

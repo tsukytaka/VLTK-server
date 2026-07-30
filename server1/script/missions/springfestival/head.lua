@@ -6,7 +6,6 @@ Include([[\script\lib\coordinate.lua]]);
 Include("\\script\\lib\\gb_taskfuncs.lua") --
 Include("\\script\\lib\\common.lua")
 Include("\\script\\lib\\pay.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 
 --常值部分
@@ -90,7 +89,7 @@ Include([[\script\missions\libfestival\head.lua]]);
 --	是否在活动时间
 function sf06_isactive()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_springfestival07	== 0 or gb_GetTask("shut_springfestival07", 1) == 1) then
+	if (nDate < CO_DATE_BEGIN or nDate > CO_DATE_END or gb_GetTask("shut_springfestival07", 1) == 1) then
 		return 0
 	end;
 	return 1;

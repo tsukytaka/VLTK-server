@@ -19,7 +19,6 @@ QY_GOLDBOSS_DPOS_INFO = {
 					[1366]	= {"ß≠Íng Phi Y’n", 	1366, 	95, 342, 	1, 	"\\settings\\maps\\Ω≠ƒœ«¯\\Œ˜…Ω”Ï\\big_goldboss.txt"},
 					[1367]	= {"Tı ßπi Nhπc", 	1367,	95, 342,	4, 	"\\settings\\maps\\Ω≠ƒœ«¯\\Œ˜…Ω”Ï\\big_goldboss.txt"},
 }
-ACTIVE_BIGBOSS_LIST = ACTIVE_BIGBOSS_LIST or {}
 ---------------------------------------------------------------------------------------------
 function QY_MakeBoss_RandInCity(bossid, bosslvl, series, mapid, posx, posy, bossname, str)
 	local mapidx = SubWorldID2Idx(mapid)
@@ -29,11 +28,9 @@ function QY_MakeBoss_RandInCity(bossid, bosslvl, series, mapid, posx, posy, boss
 	local npcindex = AddNpcEx(bossid, bosslvl, series, mapidx, posx*32, posy*32, 1, bossname, 1)
 	if (npcindex > 0) then
 		SetNpcDeathScript(npcindex, "\\script\\missions\\boss\\bossdeath.lua");
-		SetNpcParam(npcindex,1,bossid); 
-		SetNpcTimer(npcindex, 30*60*18)
 		WriteLog(date("%H:%M")..","..bossid..","..bosslvl..","..series..","..SubWorldIdx2ID(mapidx)..","..posx..","..posy..","..bossname)
 		AddGlobalNews(str)
-		tinsert(ACTIVE_BIGBOSS_LIST, npcindex)
+
 		local nHour = tonumber(GetLocalDate("%H"));
 		if (nHour == 19) then
 			-- ª∆ΩBOSSº∆ ˝
@@ -43,17 +40,6 @@ function QY_MakeBoss_RandInCity(bossid, bosslvl, series, mapid, posx, posy, boss
 	end
 	
 end
-
-function Xoa_BigBoss_Cu()
-    for i = getn(ACTIVE_BIGBOSS_LIST), 1, -1 do
-        local nIndex = ACTIVE_BIGBOSS_LIST[i]
-        if nIndex then
-            DelNpc(nIndex)
-        end
-        tremove(ACTIVE_BIGBOSS_LIST, i)
-    end
-end
-
 
 function CallBossDown_Outter(bossid, str)
 	local mapid = QY_GOLDBOSS_DPOS_INFO[bossid][4]
@@ -80,20 +66,20 @@ end
 
 QY_NEWBOSS_FIXURE_INFO = {
 	[1] = {
-					--Name					ID,LEVEL,SERVERS,MAPID,X,Y,	NORMALX,NORMALY,SZMSG
-					{"¬“ ¿”¢∫¿§≤èù",	1194,95,0,	181,1635*32,3077*32,	1632*32,3065*32,"Cao thÒ Thi’u L©m - Loπn Th’ Anh Hµo - xu t hi÷n tπi L≠Ïng ThÒy ßÈng!"},
-					{"◊∑√¸æ” ø",			1195,95,1,	319,1671*32,3761*32,	1666*32,3747*32,"Cao thÒ ß≠Íng M´n - Truy M÷nh C≠ S¸ - xu t hi÷n tπi L©m Du Quan!"},
-					{"∫˚µ˚±¥±¥",			1198,95,2,	167,1571*32,3107*32,	1559*32,3116*32,"Cao thÒ ThÛy Y™n -HÂ ßi÷p BËi BËi - xu t hi÷n tπi ßi”m Th≠¨ng S¨n!"},
-					{"”Ò∫£¬•§ŒŒÕ¸Œ“",1199,95,3,	123,1621*32,3329*32,	1620*32,3343*32,"Cao thÒ C∏i Bang - Ng‰c H∂i V‰ng Ng∑ - xu t hi÷n tπi L∑o HÊ ßÈng!"},
-					{"π≈µ¿∑Á",				1201,95,4,	 90,1789*32,3391*32,	1789*32,3376*32,"Cao thÒ V‚ ßang - CÊ ßπo Phong - xu t hi÷n tπi PhÙc Ng≠u S¨n!"},
-									},
+	--Name					ID,LEVEL,SERVERS,MAPID,X,Y,	NORMALX,NORMALY,SZMSG
+		{"Loπn Th’ Anh Hµo",	1194,95,0,	181,1635*32,3077*32,	1632*32,3065*32,"Cao thÒ Thi’u L©m - Loπn Th’ Anh Hµo - xu t hi÷n tπi L≠Ïng ThÒy ßÈng!"},
+		{"Truy M÷nh C≠ S¸",			1195,95,1,	319,1671*32,3761*32,	1666*32,3747*32,"Cao thÒ ß≠Íng M´n - Truy M÷nh C≠ S¸ - xu t hi÷n tπi L©m Du Quan!"},
+		{"HÂ ßi÷p BËi BËi",			1198,95,2,	167,1571*32,3107*32,	1559*32,3116*32,"Cao thÒ ThÛy Y™n -HÂ ßi÷p BËi BËi - xu t hi÷n tπi ßi”m Th≠¨ng S¨n!"},
+		{"Ng‰c H∂i V‰ng Ng∑",1199,95,3,	123,1621*32,3329*32,	1620*32,3343*32,"Cao thÒ C∏i Bang - Ng‰c H∂i V‰ng Ng∑ - xu t hi÷n tπi L∑o HÊ ßÈng!"},
+		{"CÊ ßπo Phong",				1201,95,4,	 90,1789*32,3391*32,	1789*32,3376*32,"Cao thÒ V‚ ßang - CÊ ßπo Phong - xu t hi÷n tπi PhÙc Ng≠u S¨n!"},
+	},
 	[2] = {
-					{"»«ªµƒ≈Æ»À",		1202,95,4,	 41,2042*32,2911*32,	2037*32,2896*32,"Cao thÒ C´n Lu©n - Nh∑ H·a N˜ Nh©n - xu t hi÷n tπi PhÙc Ng≠u S¨n T©y!"},
-					{"°·«Âœ„°©°∫ÃÏ»Ã°ª",1200,95,3,  21,2527*32,4197*32,	2518*32,4205*32,"Cao thÒ Thi™n Nh…n - Hoa Ph n Thanh H≠¨ng - xu t hi÷n tπi Thanh Thµnh S¨n!"},
-					{"∂Ï’Ω—™",				1197,95,2,	  9,2288*32,5762*32,	2278*32,5747*32,"Cao thÒ Nga Mi - Nga Chi’n Huy’t - xu t hi÷n tπi Tr≠Íng Giang Nguy™n ß«u!"},
-					{"…Òœ…“≤≤ªπ˝»Á¥À",1196,95,1,	 93,1626*32,3187*32,	1620*32,3181*32,"Cao thÒ NgÚ ßÈc - Th«n Ti™n - xu t hi÷n tπi Ti’n CÛc ßÈng!"},
-					{"%ÃÏÕı%",				1193,95,0,	 70,1798*32,3153*32,	1781*32,3153*32,"Cao thÒ Thi™n V≠¨ng - Thi™n V≠¨ng Qu«n Anh - xu t hi÷n tπi V‚ Di S¨n!"},
-									},
+		{"Nh∑ H·a N˜ Nh©n",		1202,95,4,	 41,2042*32,2911*32,	2037*32,2896*32,"Cao thÒ C´n Lu©n - Nh∑ H·a N˜ Nh©n - xu t hi÷n tπi PhÙc Ng≠u S¨n T©y!"},
+		{"Hoa Ph n Thanh H≠¨ng",1200,95,3,  21,2527*32,4197*32,	2518*32,4205*32,"Cao thÒ Thi™n Nh…n - Hoa Ph n Thanh H≠¨ng - xu t hi÷n tπi Thanh Thµnh S¨n!"},
+		{"Nga Chi’n Huy’t",				1197,95,2,	  9,2288*32,5762*32,	2278*32,5747*32,"Cao thÒ Nga Mi - Nga Chi’n Huy’t - xu t hi÷n tπi Tr≠Íng Giang Nguy™n ß«u!"},
+		{"Th«n Ti™n",1196,95,1,	 93,1626*32,3187*32,	1620*32,3181*32,"Cao thÒ NgÚ ßÈc - Th«n Ti™n - xu t hi÷n tπi Ti’n CÛc ßÈng!"},
+		{"Thi™n V≠¨ng Qu«n Anh",				1193,95,0,	 70,1798*32,3153*32,	1781*32,3153*32,"Cao thÒ Thi™n V≠¨ng - Thi™n V≠¨ng Qu«n Anh - xu t hi÷n tπi V‚ Di S¨n!"},
+	},
 
 }
 QY_NORMALBOSS_INFO	=
@@ -109,39 +95,21 @@ QY_NORMALBOSS_INFO	=
 	[9]	= {n_level = 90,	n_series = 4, 	n_npcid = 1364,	n_mapid = 131,	tb_coords = {{173,208},{202,190}}, 	sz_name = "Thanh Y Tˆ"},
 	[10]= {n_level = 90,	n_series = 0, 	n_npcid = 1355,	n_mapid = 103,	tb_coords = {{180,220},{199,180}}, 	sz_name = "Tﬁnh Th´ng"},
 };
-IncludeLib("TASKSYS");
-
-ACTIVE_SMALLBOSS_LIST = ACTIVE_SMALLBOSS_LIST or {}
 
 function CallBossDown_Fixure()
-	for i = getn(ACTIVE_SMALLBOSS_LIST), 1, -1 do
-		local nIndex = ACTIVE_SMALLBOSS_LIST[i]
-		if nIndex then
-			DelNpc(nIndex)
-		end
-		tremove(ACTIVE_SMALLBOSS_LIST, i)
-	end
-
-
 	for i = 1, getn(QY_NORMALBOSS_INFO) do
 		local nlvl, nseries, nid, nmap, tb_coords, szname	= 	QY_NORMALBOSS_INFO[i].n_level, QY_NORMALBOSS_INFO[i].n_series,
 																QY_NORMALBOSS_INFO[i].n_npcid, QY_NORMALBOSS_INFO[i].n_mapid,
 																QY_NORMALBOSS_INFO[i].tb_coords, QY_NORMALBOSS_INFO[i].sz_name;
-		
 		local nworldidx = SubWorldID2Idx(nmap);
-		local strMapName = SubWorldName(nworldidx)
+		
 		if (nworldidx >= 0) then
 			local nIdx		= random(getn(tb_coords));
 			local nx, ny	= tb_coords[nIdx][1] * 8 * 32, tb_coords[nIdx][2] * 16 * 32;
 			
 			local npcindex = AddNpcEx(nid, nlvl, nseries, nworldidx, nx, ny, 1, szname, 1);
-			SetNpcTimer(npcindex, 30*60*18)
-			SetNpcParam(npcindex,1, nid); 
-			SetNpcDeathScript(npcindex, "\\script\\missions\\boss\\bossdeath_tieu.lua");
-			tinsert(ACTIVE_SMALLBOSS_LIST, npcindex)
+			SetNpcDeathScript(npcindex, "\\script\\missions\\boss\\smallbossdeath.lua");
 			WriteBossLog(format("%s:%s,%d,%d,%d", "BOSS ti”u Hoµng Kim", szname, nmap, nx, ny));
-			str = format("<color=yellow>%s<color> Æ∑ xu t hi÷n tπi <color=yellow>%s %s/%s<color>", szname,strMapName,tb_coords[nIdx][1], tb_coords[nIdx][2]);
-			Msg2SubWorld(str);
 		end
 	end
 	SubWorld = nOldSubWorld;

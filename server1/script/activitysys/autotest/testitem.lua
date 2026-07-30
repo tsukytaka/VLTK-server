@@ -4,9 +4,7 @@ Include("\\script\\activitysys\\activity.lua")
 Include("\\script\\activitysys\\detailtype\\itemscript.lua")
 Include("\\script\\lib\\pfunction.lua")
 
-
 pItemScript = ActivityDetailClass:Create("ItemScript", pActivity)
-
 pItemScript.tbItem = {tbProp={999,99,9999,1,0,0},}
 
 function TestCondition()
@@ -17,26 +15,19 @@ function TestAction()
 	pItemScript.bIsTestOk = 1
 end
 
-pItemScript.tbCondition = 
-{
+pItemScript.tbCondition = {
 	FunctionClass:new("TestCondition", {});
 }
-
-pItemScript.tbAction = 
-{
+pItemScript.tbAction = {
 	FunctionClass:new("TestAction", {});
 }
-
 pItemScript:RegisteMessage(G_ACTIVITY)
-
-
 
 local _MakeItem = function (...)
 	return {tbProp= arg}
 end
 
 function TestItem(tbItem, bValue)
-	
 	local pScript = G_ACTIVITY:GetItemScript(tbItem)
 	if pScript then
 		pScript:UseItem(nItemIndex)
@@ -45,10 +36,8 @@ function TestItem(tbItem, bValue)
 		end
 	else
 		return bValue == -1
-		
 	end	
 end
-
 
 function GetAccount()
 	return "ScriptAutoTest"
@@ -69,43 +58,37 @@ function TestCondition2()
 	return 1
 end
 
-pItemScript.tbCondition = 
-{
+pItemScript.tbCondition = {
 	FunctionClass:new("TestCondition2", {});
 }
 
 pItemScript.bIsTestOk = nil
 local bTestCaseRet2 = TestItem(pItemScript.tbItem, 1)
-
-
-
 G_ACTIVITY:UnRegisteItemScript(pItemScript.tbItem)
-
-
 local bTestCaseRet3 = TestItem(pItemScript.tbItem, -1)
 
 if bTestCaseRet1 == 1 and bTestCaseRet1 == 1 and bTestCaseRet3 == 1 then
-------------------------------------- Th«ng Tin B¶n QuyÒn Cña Ng­êi Ph¸t TriÓn ------------------------------------------------
-	print("\n#############################################################################")
-	print("#---------------------------------------------------------------------------#")
-	print("#----------------VVVV-----VVVV-----DDDDDDDD------KKKK---KKKK----------------#")
-	print("#----------------VVVV-----VVVV-----DDD---DDDD----KKKK--KKKK-----------------#")
-	print("#-----------------VVVV---VVVV------DDD----DDDD---KKKKKKKK-------------------#")
-	print("#------------------VVVV-VVVV-------DDD---DDDD----KKKK--KKKK-----------------#")
-	print("#--------------------VVVVV---------DDDDDDDD------KKKK---KKKK----------------#")
-	print("#---------------------------------------------------------------------------#")
-	print("#############################################################################\n")
------------------------------------------------------------------------------------------------------------------------------------------------
+	print("\n\n**********************************************************************")
+	print("                                                                      ")
+	print("     ###   #   #       ###   #####  #####  #       ###  #   #  #####  ")
+	print("      #     # #       #   #  #      #      #        #   ##  #  #      ")
+	print("      #      #    ##  #   #  ####   ####   #        #   # # #  ####   ")
+	print("  #   #     # #       #   #  #      #      #        #   #  ##  #      ")
+	print("   ###     #   #       ###   #      #      ######  ###  #   #  #####  ")
+	print("                                                                      ")
+	print("                              Edit by MEL                             ")
+	print("                                                                      ")
+	print("**********************************************************************\n\n")
 else 
-------------------------------------- Th«ng Tin B¶n QuyÒn Cña Ng­êi Ph¸t TriÓn ------------------------------------------------
-	print("\n#############################################################################")
-	print("#---------------------------------------------------------------------------#")
-	print("#----------------VVVV-----VVVV-----DDDDDDDD------KKKK---KKKK----------------#")
-	print("#----------------VVVV-----VVVV-----DDD---DDDD----KKKK--KKKK-----------------#")
-	print("#-----------------VVVV---VVVV------DDD----DDDD---KKKKKKKK-------------------#")
-	print("#------------------VVVV-VVVV-------DDD---DDDD----KKKK--KKKK-----------------#")
-	print("#--------------------VVVVV---------DDDDDDDD------KKKK---KKKK----------------#")
-	print("#---------------------------------------------------------------------------#")
-	print("#############################################################################\n")
------------------------------------------------------------------------------------------------------------------------------------------------
+	print("\n\n**********************************************************************")
+	print("                                                                      ")
+	print("     ###   #   #       ###   #####  #####  #       ###  #   #  #####  ")
+	print("      #     # #       #   #  #      #      #        #   ##  #  #      ")
+	print("      #      #    ##  #   #  ####   ####   #        #   # # #  ####   ")
+	print("  #   #     # #       #   #  #      #      #        #   #  ##  #      ")
+	print("   ###     #   #       ###   #      #      ######  ###  #   #  #####  ")
+	print("                                                                      ")
+	print("                              Edit by MEL                             ")
+	print("                                                                      ")
+	print("**********************************************************************\n\n")
 end

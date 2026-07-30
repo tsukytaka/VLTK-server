@@ -1,233 +1,232 @@
---µü´úº¯Êý£¬ÓÃÓÚ¼ÆËã¼¼ÄÜÊìÁ·¶È
---¾ßÌå·½·¨£º
---¸ù¾Ý1¼¶ÊìÁ·¶È£¬Éý¼¶¼ÓËÙ¶È£¬¼¶Êý£¬ÖØ¸´ÉËº¦´ÎÊý£¬·¶Î§£¬¼ÆËã³öÏàÓ¦µÈ¼¶ÊìÁ·¶È
--- SkillExp(i) = Exp1*a^(i-1)*time*range
 function SkillExpFunc(Exp0,a,Level,Time,Range)
-	return floor(Exp0*(a^(Level-1))*Time*Range/1)
+	return floor(Exp0*(a^(Level-1))*Time*Range/2) -- Tèc ®é luyÖn Kü N¨ng 90 (MÆc ®Þnh /2)
 end
 
+----------------------------------------------------------------------------------------------------
+--										   Kü n¨ng Nga My										  --
+----------------------------------------------------------------------------------------------------
 SKILLS={
-	--¶ëáÒ
-	piaoyun_chuanxue={ --Æ®ÔÆ´©Ñ©
-		physicsdamage_v={
-			[1]={{1,10},{20,120}},
-			[3]={{1,10},{20,120}},
-		},
-		seriesdamage_p={{{1,1},{20,10}}},
-		colddamage_v={
+	piaoyun_chuanxue={ -- Phiªu TuyÕt Xuyªn V©n - Ch­ëng 10
+		seriesdamage_p={{{1,1},{20,10}}}, -- Ngò hµnh t­¬ng kh¾c %
+		colddamage_v={ -- B¨ng s¸t
 			[1]={{1,15},{20,275}},
 			[3]={{1,25},{20,415}}
 		},
-		addskilldamage2={
-			[1]={{1,380},{2,380}},
-			[3]={{1,1},{20,75}}
-		},
-		addskilldamage1={
-			[1]={{1,91},{2,91}},
-			[3]={{1,1},{20,35}}
-		},
---		addskilldamage3={
---			[1]={{1,1062},{2,1062}},
---			[3]={{1,1},{20,63}}
---		},
-		missle_speed_v={{{1,20},{20,24}}},
-		skill_attackradius={{{1,320},{20,384}}},
-		skill_cost_v={{{1,10},{20,10}}}
-	},
-	emei_jianfa={ --¶ëáÒ½£·¨
-		addphysicsdamage_p={{{1,15},{20,215}},{{1,-1},{2,-1}},{{1,0},{2,0}}},
-		deadlystrikeenhance_p={{{1,6},{20,36}},{{1,-1},{2,-1}}}
-	},
-	emei_zhangfa={ --¶ëáÒÕÆ·¨
-		addcoldmagic_v={{{1,15},{20,515}},{{1,-1},{2,-1}}}
-	},
-	sixiang_tonggui={ --ËÄÏàÍ¬¹é
-		seriesdamage_p={{{1,5},{20,30}}},
-		colddamage_v={
-			[1]={{1,35},{20,315}},
-			[3]={{1,45},{20,450}}
-		},
-		addskilldamage1={
-			[1]={{1,331},{2,331}},
-			[3]={{1,1},{20,76}}
-		},
---		addskilldamage2={
---			[1]={{1,1062},{2,1062}},
---			[3]={{1,1},{20,20}}
---		},
-		skill_attackradius={{{1,384},{20,416}}},
-		skill_cost_v={{{1,25},{20,35}}}
-	},
-	yiye_zhiqiu={ --Ò»Ò¶ÖªÇï
-		seriesdamage_p={{{1,1},{20,10}}},
-		physicsenhance_p={{{1,30},{20,75}}},
-		colddamage_v={
-			[1]={{1,10},{20,80}},
-			[3]={{1,10},{20,80}}
-		},
-		deadlystrike_p={{{1,10},{20,20}}},
-		addskilldamage1={
-			[1]={{1,328},{2,328}},
-			[3]={{1,1},{20,60}}
-		},
-		addskilldamage2={
-			[1]={{1,88},{2,88}},
-			[3]={{1,1},{20,35}}
-		},
---		addskilldamage3={
---			[1]={{1,1061},{2,1061}},
---			[3]={{1,1},{20,50}}
---		},
---		addskilldamage4={
---			[1]={{1,1091},{2,1091}},
---			[3]={{1,50},{20,50}}
---		},
-		missle_speed_v={{{1,20},{20,24}}},
-		skill_attackradius={{{1,320},{20,384}}},
-		skill_cost_v={{{1,25},{20,25}}}
-	},
-	liushui={--Á÷Ë®
-		fastwalkrun_p={{{1,9},{20,66}},{{1,18},{2,18}}}
-	},
-	bumie_bujue={ --²»Ãð²»¾ø
-		physicsenhance_p={{{1,80},{20,385}}},
-		seriesdamage_p={{{1,10},{20,50},{21,52}}},
-		colddamage_v={
-			[1]={{1,10},{20,282}},
-			[3]={{1,10},{20,282}}
-		},
-		deadlystrike_p={{{1,15},{20,54}}},
-		addskilldamage1={
-			[1]={{1,328},{2,328}},
-			[3]={{1,1},{20,70}}
-		},
---		addskilldamage2={
---			[1]={{1,1061},{2,1061}},
---			[3]={{1,1},{20,60}}
---		},
-		missle_speed_v={{{1,28},{20,32},{21,32}}},
-		skill_attackradius={{{1,448},{20,512},{21,512}}},
-		skill_cost_v={{{1,30},{20,35}}}
-	},
-	mengdie={ --ÃÎµû
-		lifereplenish_v={{{1,1},{20,15}},{{1,18},{2,18}}},
-		manareplenish_v={{{1,1},{20,10}},{{1,18},{2,18}}},
-	},
-	foguang_puzhao={ --·ð¹âÆÕÕÕ
-		colddamage_v={
-			[1]={{1,70},{20,787}},
-			[3]={{1,80},{20,1287}}
-		},
-		seriesdamage_p={{{1,10},{20,50},{21,52}}},
-		addskilldamage2={
+		addskilldamage2={ -- % Kü n¨ng Phong S­¬ng To¸i ¶nh - Ch­ëng 90
 			[1]={{1,380},{2,380}},
 			[3]={{1,1},{20,80}}
 		},
---		addskilldamage3={
---			[1]={{1,1062},{2,1062}},
---			[3]={{1,1},{20,65}}
---		},
-		skill_cost_v={{{1,30},{20,60}}}
+		addskilldamage1={ -- % Kü n¨ng PhËt Quang Phæ ChiÕu - Ch­ëng 60
+			[1]={{1,91},{2,91}},
+			[3]={{1,1},{20,50}}
+		},
+		missle_speed_v={{{1,20},{20,24}}}, -- Tèc ®é xuÊt chiªu khÝ c«ng
+		skill_attackradius={{{1,320},{20,384}}}, -- Ph¹m vi hiÖu qu¶
+		skill_cost_v={{{1,10},{20,10}}} -- Tiªu hao néi lùc
 	},
-	cihang_pudu={ --´Èº½ÆÕ¶É
-		lifereplenish_v={{{1,275},{20,750}},{{1,36},{2,36}}},
-		skill_cost_v={{{1,100},{20,100}}}
+
+	emei_jianfa={ -- Nga My KiÕm Ph¸p - Hç trî KiÕm 10
+		addphysicsdamage_p={{{1,15},{20,250}},{{1,-1},{2,-1}},{{1,0},{2,0}}}, -- S¸t th­¬ng vËt lý - ngo¹i c«ng %
+		deadlystrikeenhance_p={{{1,6},{20,45}},{{1,-1},{2,-1}}} -- T¨ng tÊn c«ng chÝ m¹ng %
 	},
-	fofa_wubian={ --·ð·¨ÎÞ±ß
-		addcoldmagic_v={{{1,30},{30,315}},{{1,-1},{2,-1}}},
-		addcolddamage_v={{{1,70},{30,315}},{{1,-1},{2,-1}}},
-		attackspeed_v={{{1,12},{30,65},{33,70},{35,90},{38,95},{41,100}},{{1,-1},{2,-1}}},
-		castspeed_v={{{1,12},{30,65},{33,70},{35,90},{38,95},{41,100}},{{1,-1},{2,-1}}},
-		coldenhance_p={{{1,8},{30,37}},{{1,-1},{2,-1}}},
-		--lifemax_yan_p={{{1,21},{35,50},{36,50}},{{1,-1},{30,-1}}}
+
+	emei_zhangfa={ -- Nga My Ch­ëng Ph¸p - Hç trî Ch­ëng 10
+		addcoldmagic_v={{{1,15},{20,550}},{{1,-1},{2,-1}}} -- B¨ng s¸t - néi c«ng
 	},
-	foxin_ciyou={ --·ðÐÄ´ÈÓÓ
-		lifemax_p={{{1,30},{20,125}},{{1,18*8},{2,18*8}}},
-		--lifemax_yan_p={{{1,30},{25,100},{26,100}},{{1,18*8},{2,18*8}}}
+
+	sixiang_tonggui={ -- Tø T­îng §ång Quy - Ch­ëng 30
+		seriesdamage_p={{{1,5},{20,30}}}, -- Ngò hµnh t­¬ng kh¾c %
+		colddamage_v={ -- B¨ng s¸t
+			[1]={{1,35},{20,335}},
+			[3]={{1,45},{20,500}}
+		},
+		addskilldamage1={ -- % Kü n¨ng Kim §Ønh PhËt Quang - TÇng 2 Phong S­¬ng To¸i ¶nh - Ch­ëng 90
+			[1]={{1,331},{2,331}},
+			[3]={{1,1},{20,100}}
+		},
+		skill_attackradius={{{1,384},{20,416}}}, -- Ph¹m vi hiÖu qu¶
+		skill_cost_v={{{1,25},{20,35}}} -- Tiªu hao néi lùc
 	},
-	tuichuang_wangyue={ --ÍÆ´°ÍûÔÂ
-		physicsenhance_p={{{1,40},{20,175}}},
-		seriesdamage_p={{{1,5},{20,30}}},
-		colddamage_v={
+
+	yiye_zhiqiu={ -- NhÊt DiÖp Tri Thu - KiÕm 10
+		seriesdamage_p={{{1,1},{20,10}}}, -- Ngò hµnh t­¬ng kh¾c %
+		physicsenhance_p={{{1,30},{20,100}}}, -- S¸t th­¬ng vËt lý %
+		colddamage_v={ -- B¨ng s¸t
+			[1]={{1,10},{20,80}},
+			[3]={{1,10},{20,80}}
+		},
+		deadlystrike_p={{{1,10},{20,20}}}, -- TÊn c«ng chÝ m¹ng %
+		addskilldamage1={ -- % Kü n¨ng Tam Nga TÒ TuyÕt - KiÕm 90
+			[1]={{1,328},{2,328}},
+			[3]={{1,1},{20,150}}
+		},
+		addskilldamage2={ -- % Kü n¨ng BÊt DiÖt BÊt TuyÖt - KiÕm 60
+			[1]={{1,88},{2,88}},
+			[3]={{1,1},{20,80}}
+		},
+		missle_speed_v={{{1,20},{20,24}}}, -- Tèc ®é xuÊt chiªu khÝ c«ng
+		skill_attackradius={{{1,320},{20,384}}}, -- Ph¹m vi hiÖu qu¶
+		skill_cost_v={{{1,25},{20,25}}} -- Tiªu hao néi lùc
+	},
+
+	liushui={ -- L­u Thñy - Hç trî bÞ ®éng 40 (Aura)
+		fastwalkrun_p={{{1,9},{20,66}},{{1,18*8},{2,18*8}}} -- Tèc ®é di chuyÓn %
+	},
+
+	bumie_bujue={ -- BÊt DiÖt BÊt TuyÖt - KiÕm 60
+		physicsenhance_p={{{1,80},{20,385}}}, -- S¸t th­¬ng vËt lý %
+		seriesdamage_p={{{1,10},{20,50},{21,52}}}, -- Ngò hµnh t­¬ng kh¾c %
+		colddamage_v={ -- B¨ng s¸t
+			[1]={{1,10},{20,282}},
+			[3]={{1,10},{20,282}}
+		},
+		deadlystrike_p={{{1,15},{20,54}}}, -- TÊn c«ng chÝ m¹ng %
+		addskilldamage1={ -- % Kü n¨ng Tam Nga TÒ TuyÕt - KiÕm 90
+			[1]={{1,328},{2,328}},
+			[3]={{1,1},{20,180}}
+		},
+		missle_speed_v={{{1,28},{20,32},{21,32}}},  -- Tèc ®é xuÊt chiªu khÝ c«ng
+		skill_attackradius={{{1,448},{20,512},{21,512}}}, -- Ph¹m vi hiÖu qu¶
+		skill_cost_v={{{1,30},{20,35}}} -- Tiªu hao néi lùc
+	},
+
+	mengdie={ -- Méng §iÖp - Hç trî bÞ ®éng 30 (Aura)
+		lifereplenish_v={{{1,1},{20,20}},{{1,18*8},{2,18*8}}}, -- Phôc håi sinh lùc mçi nöa gi©y
+		manareplenish_v={{{1,1},{20,20}},{{1,18*8},{2,18*8}}}, -- Phôc håi néi lùc mçi nöa gi©y
+	},
+
+	foguang_puzhao={ -- PhËt Quang Phæ ChiÕu - Ch­ëng 60
+		colddamage_v={ -- B¨ng s¸t
+			[1]={{1,80},{20,800}},
+			[3]={{1,80},{20,1300}}
+		},
+		seriesdamage_p={{{1,10},{20,50},{21,52}}}, -- Ngò hµnh t­¬ng kh¾c %
+		addskilldamage2={ -- % Kü n¨ng Phong S­¬ng To¸i ¶nh - Ch­ëng 90
+			[1]={{1,380},{2,380}},
+			[3]={{1,1},{20,120}}
+		},
+		skill_cost_v={{{1,30},{20,60}}} -- Tiªu hao néi lùc
+	},
+
+	cihang_pudu={ -- Tõ Hµng Phæ §é - Hç trî chñ ®éng 20
+		lifereplenish_v={{{1,275},{20,750}},{{1,36},{2,36}}}, -- Phôc håi sinh lùc mçi nöa gi©y
+		skill_cost_v={{{1,100},{20,100}}} -- Tiªu hao néi lùc
+	},
+
+	fofa_wubian={ -- PhËt Ph¸p V« Biªn - TrÊn ph¸i 60
+		addcoldmagic_v={{{1,30},{30,315}},{{1,-1},{2,-1}}}, -- B¨ng s¸t - néi c«ng
+		addcolddamage_v={{{1,70},{30,315}},{{1,-1},{2,-1}}}, -- B¨ng s¸t - ngo¹i c«ng
+		attackspeed_v={{{1,12},{30,65},{33,70},{35,90},{38,95},{41,100}},{{1,-1},{2,-1}}}, -- Tèc ®é ®¸nh - ngo¹i c«ng %
+		castspeed_v={{{1,12},{30,65},{33,70},{35,90},{38,95},{41,100}},{{1,-1},{2,-1}}}, -- Tèc ®é ®¸nh - néi c«ng %
+		coldenhance_p={{{1,8},{30,37}},{{1,-1},{2,-1}}}, -- Thêi gian tr× ho·n %
+	},
+
+	foxin_ciyou={ -- PhËt T©m Tõ H÷u - Hç trî bÞ ®éng 50 (Aura)
+		lifemax_p={{{1,30},{20,125}},{{1,18*8},{2,18*8}}}, -- Sinh lùc tèi ®a %
+	},
+
+	tuichuang_wangyue={ -- Th«i Song Väng NguyÖt - KiÕm 30
+		physicsenhance_p={{{1,40},{20,175}}}, -- S¸t th­¬ng vËt lý %
+		seriesdamage_p={{{1,5},{20,30}}}, -- Ngò hµnh t­¬ng kh¾c %
+		colddamage_v={ -- B¨ng s¸t
 			[1]={{1,10},{20,120}},
 			[3]={{1,10},{20,120}}
 		},
-		deadlystrike_p={{{1,10},{20,30}}},
-		addskilldamage1={
+		deadlystrike_p={{{1,10},{20,30}}}, -- TÊn c«ng chÝ m¹ng %
+		addskilldamage1={ -- % Kü n¨ng Ngäc TuyÒn TÈy TrÇn - TÇng 2 Tam Nga TÒ TuyÕt - KiÕm 90
 			[1]={{1,329},{2,329}},
-			[3]={{1,1},{20,49}}
+			[3]={{1,1},{20,150}}
 		},
---		addskilldamage2={
---			[1]={{1,1091},{2,1091}},
---			[3]={{1,1},{20,40}}
---		},
-		missle_speed_v={{{1,24},{20,28}}},
-		skill_attackradius={{{1,384},{20,448}}},
-		skill_cost_v={{{1,20},{20,20}}}
+		addskilldamage2={
+			[1]={{1,1091},{2,1091}},
+			[3]={{1,1},{20,40}}
+		},
+		missle_speed_v={{{1,24},{20,28}}}, -- Tèc ®é xuÊt chiªu khÝ c«ng
+		skill_attackradius={{{1,384},{20,448}}}, -- Ph¹m vi hiÖu qu¶
+		skill_cost_v={{{1,20},{20,20}}} -- Tiªu hao néi lùc
 	},
-	qingyin_fanchang={ --ÇåÒôèó³ª
-		fasthitrecover_v={{{1,1},{20,20},{31,31},{32,31}},{{1,18},{2,18}}},
-		fatallystrikeres_p={{{1,1},{20,20}},{{1,18},{2,18}}},
-		freezetimereduce_p={{{1,1},{20,30}},{{1,18},{2,18}}},
-		poisontimereduce_p={{{1,1},{20,30}},{{1,18},{2,18}}},
-		stuntimereduce_p={{{1,1},{20,30}},{{1,18},{2,18}}}
+
+	qingyin_fanchang={ -- Thanh ¢m Ph¹n X­íng - Hç trî bÞ ®éng 60 (Aura)
+		fasthitrecover_v={{{1,1},{20,20},{31,31},{32,31}},{{1,18*8},{2,18*8}}}, -- Thêi gian phôc håi
+		fatallystrikeres_p={{{1,1},{20,20}},{{1,18*8},{2,18*8}}}, -- Kh¸ng ®ßn chÝ m¹ng %
+		freezetimereduce_p={{{1,1},{20,30}},{{1,18*8},{2,18*8}}}, -- Thêi gian lµm chËm %
+		poisontimereduce_p={{{1,1},{20,30}},{{1,18*8},{2,18*8}}}, -- Thêi gian tróng ®éc %
+		stuntimereduce_p={{{1,1},{20,30}},{{1,18*8},{2,18*8}}} -- Thêi gian cho¸ng %
 	},
-	pudu_zhongsheng={ --ÆÕ¶ÉÖÚÉú
-		lifereplenish_v={{{1,1},{20,15}},{{1,18},{2,18}}},
-		manareplenish_v={{{1,1},{20,10}},{{1,18},{2,18}}},
---		fasthitrecover_yan_v={{{1,1},{20,10},{21,10}},{{1,18},{2,18}}},
-		allres_p={{{1,1},{20,40}},{{1,18},{2,18}}}
+
+	pudu_zhongsheng={ -- Phæ §é Chóng Sinh - Hç trî bÞ ®éng 90 (Aura)
+		lifereplenish_v={{{1,2},{20,40}},{{1,18*8},{2,18*8}}}, -- Phôc håi sinh lùc mçi nöa gi©y
+		manareplenish_v={{{1,2},{20,40}},{{1,18*8},{2,18*8}}}, -- Phôc håi néi lùc mçi nöa gi©y
+		allres_p={{{1,1},{20,40}},{{1,18*8},{2,18*8}}} -- Kh¸ng tÊt c¶ %
 	},
-	sane_jixue={ --Èý¶ëö«Ñ©
-		physicsenhance_p={{{1,10},{15,100},{20,237}}},
-		seriesdamage_p={{{1,20},{15,20},{20,60},{21,62}}},
-		colddamage_v={
+
+	sane_jixue={ -- Tam Nga TÒ TuyÕt - KiÕm 90
+		physicsenhance_p={{{1,10},{15,100},{20,237}}}, -- S¸t th­¬ng vËt lý %
+		seriesdamage_p={{{1,20},{15,20},{20,60},{21,62}}}, -- Ngò hµnh t­¬ng kh¾c %
+		colddamage_v={ -- B¨ng s¸t
 			[1]={{1,10},{20,111}},
 			[3]={{1,10},{20,111}}
 		},
-		deadlystrike_p={{{1,10},{20,54}}},
-		missle_speed_v={{{1,28},{20,32},{21,32}}},
-		skill_attackradius={{{1,448},{20,512},{21,512}}},
-		skill_cost_v={{{1,35},{20,35}}},
-		skill_eventskilllevel={{{1,1},{20,20}}},
-		skill_startevent={
+		deadlystrike_p={{{1,10},{20,54}}}, -- TÊn c«ng chÝ m¹ng %
+		missle_speed_v={{{1,28},{20,32},{21,32}}}, -- Tèc ®é xuÊt chiªu khÝ c«ng
+		skill_attackradius={{{1,448},{20,512},{21,512}}}, -- Ph¹m vi hiÖu qu¶
+		skill_cost_v={{{1,35},{20,35}}}, -- Tiªu hao néi lùc
+		skill_eventskilllevel={{{1,1},{20,20}}}, -- Kü n¨ng tÇng 2: Ngäc TuyÒn TÈy TrÇn
+		skill_startevent={ -- Kü n¨ng tÇng 2: Ngäc TuyÒn TÈy TrÇn
 			[1]={{1,0},{10,0},{10,1},{20,1}},
 			[3]={{1,329},{20,329}}
 		},
---		addskilldamage1={
---			[1]={{1,1061},{2,1061}},
---			[3]={{1,1},{20,25}}
---		},
-		skill_showevent={{{1,0},{10,0},{10,1},{20,1}}},
-		addskillexp1={{{1,0},{2,0}},{{1,1},{20,1}},{{1,0},{2,0}}},
-		skill_skillexp_v={{	{1,SkillExpFunc(5000,1.25,1,3,1)},
-							{2,SkillExpFunc(5000,1.15,2,3,1)},
-							{3,SkillExpFunc(5000,1.16,3,3,1)},
-							{4,SkillExpFunc(5000,1.17,4,3,1)},
-							{5,SkillExpFunc(5000,1.18,5,3,1)},
-							{6,SkillExpFunc(5000,1.19,6,3,1)},
-							{7,SkillExpFunc(5000,1.20,7,3,1)},
-							{8,SkillExpFunc(5000,1.21,8,3,1)},
-							{9,SkillExpFunc(5000,1.22,9,3,1)},
-							{10,SkillExpFunc(5000,1.23,10,3,1)},
-							{11,SkillExpFunc(5000,1.24,11,3,1)},
-							{12,SkillExpFunc(5000,1.23,12,3,1)},
-							{13,SkillExpFunc(5000,1.22,13,3,1)},
-							{14,SkillExpFunc(5000,1.21,14,3,1)},
-							{15,SkillExpFunc(5000,1.20,15,3,1)},
-							{16,SkillExpFunc(5000,1.19,16,3,1)},
-							{17,SkillExpFunc(5000,1.18,17,3,1)},
-							{18,SkillExpFunc(5000,1.17,18,3,1)},
-							{19,SkillExpFunc(5000,1.16,19,3,1)},
-							{20,SkillExpFunc(5000,1.15,20,3,1)},
-							}},
+		skill_showevent={{{1,0},{10,0},{10,1},{20,1}}}, -- Kü n¨ng tÇng 2: Ngäc TuyÒn TÈy TrÇn
+		addskillexp1={{{1,0},{2,0}},{{1,1},{20,1}},{{1,0},{2,0}}}, -- Kinh nghiÖm luyÖn kü n¨ng
+		skill_skillexp_v={  -- Kinh nghiÖm luyÖn kü n¨ng
+			{
+				{1,SkillExpFunc(5000,1.25,1,3,1)},
+				{2,SkillExpFunc(5000,1.15,2,3,1)},
+				{3,SkillExpFunc(5000,1.16,3,3,1)},
+				{4,SkillExpFunc(5000,1.17,4,3,1)},
+				{5,SkillExpFunc(5000,1.18,5,3,1)},
+				{6,SkillExpFunc(5000,1.19,6,3,1)},
+				{7,SkillExpFunc(5000,1.20,7,3,1)},
+				{8,SkillExpFunc(5000,1.21,8,3,1)},
+				{9,SkillExpFunc(5000,1.22,9,3,1)},
+				{10,SkillExpFunc(5000,1.23,10,3,1)},
+				{11,SkillExpFunc(5000,1.24,11,3,1)},
+				{12,SkillExpFunc(5000,1.23,12,3,1)},
+				{13,SkillExpFunc(5000,1.22,13,3,1)},
+				{14,SkillExpFunc(5000,1.21,14,3,1)},
+				{15,SkillExpFunc(5000,1.20,15,3,1)},
+				{16,SkillExpFunc(5000,1.19,16,3,1)},
+				{17,SkillExpFunc(5000,1.18,17,3,1)},
+				{18,SkillExpFunc(5000,1.17,18,3,1)},
+				{19,SkillExpFunc(5000,1.16,19,3,1)},
+				{20,SkillExpFunc(5000,1.15,20,3,1)},
+			}
+		},
 	},
-	yuquan_xichen={ --ÓñÈªÏ´³¾
-		physicsenhance_p={{{1,30},{20,148}}},
-		seriesdamage_p={{{1,20},{20,60},{21,62}}},
-		deadlystrike_p={{{1,10},{20,20}}},
+	
+	yuquan_xichen={ -- Ngäc TuyÒn TÈy TrÇn - TÇng 2 Tam Nga TÒ TuyÕt - KiÕm 90
+		physicsenhance_p={{{1,30},{20,150}}}, -- S¸t th­¬ng vËt lý %
+		seriesdamage_p={{{1,20},{20,60},{21,62}}}, -- Ngò hµnh t­¬ng kh¾c %
+		deadlystrike_p={{{1,10},{20,20}}}, -- TÊn c«ng chÝ m¹ng %
+		skill_eventskilllevel={{{1,1},{20,20}}}, -- Kü n¨ng tÇng 3: TuyÖt §Ønh Thiªn KiÕm
+		skill_startevent={ -- Kü n¨ng tÇng 3: TuyÖt §Ønh Thiªn KiÕm
+			[1]={{1,0},{10,0},{10,1},{20,1}},
+			[3]={{1,1245},{20,1245}}
+		},
+		skill_showevent={{{1,0},{10,0},{10,1},{20,1}}}, -- Kü n¨ng tÇng 3: TuyÖt §Ønh Thiªn KiÕm
 	},
-	jianemei150={ --½£¶ëÃ¼150
+
+	tuyetdinhthienkiem={ -- TuyÖt §Ønh Thiªn KiÕm
+		colddamage_v={ -- B¨ng s¸t
+			[1]={{1,10},{20,50}},
+			[3]={{1,10},{20,50}},
+		},
+		seriesdamage_p={{{1,20},{20,60},{21,62}}}, -- Ngò hµnh t­¬ng kh¾c %
+		missle_speed_v={{{1,24},{20,28},{21,28}}}, -- Tèc ®é xuÊt chiªu khÝ c«ng
+		skill_misslenum_v={{{1,1},{10,1},{20,3},{29,3},{30,4},{31,4}}}, -- Sè l­îng Missle
+	},
+
+	jianemei150={ -- Kü n¨ng 150 - KiÕm
 		physicsenhance_p={{{1,12},{15,120},{20,285},{23,483},{26,582}}},
 		seriesdamage_p={{{1,40},{15,40},{20,80},{21,82}}},
 		colddamage_v={
@@ -244,29 +243,38 @@ SKILLS={
 			[3]={{1,1089},{20,1089}}
 		},
 		skill_showevent={{{1,0},{10,0},{10,1},{20,1}}},
-		skill_skillexp_v={{	{1,300},
-												{2,600},
-												{3,1000},
-												{4,1500},
-												{5,2100},
-												{6,2800},
-												{7,3600},
-												{8,4500},
-												{9,5500},
-												{10,6600},
-												{11,7800},
-												{12,9100},
-												{13,10500},
-												{14,12000},
-												{15,13600},
-												{16,15300},
-												{17,17100},
-												{18,19000},
-												{19,21400},
-												{20,21000},
-												}},	
+		skill_skillexp_v={
+			{
+				{1,300},
+				{2,600},
+				{3,1000},
+				{4,1500},
+				{5,2100},
+				{6,2800},
+				{7,3600},
+				{8,4500},
+				{9,5500},
+				{10,6600},
+				{11,7800},
+				{12,9100},
+				{13,10500},
+				{14,12000},
+				{15,13600},
+				{16,15300},
+				{17,17100},
+				{18,19000},
+				{19,21400},
+				{20,90000},
+				{21,120000},
+				{22,150000},
+				{23,200000},
+				{24,250000},
+				{25,300000},
+			}
+		},	
 	},
-	jianemei150_2={ --½£¶ëÃ¼150µÚ2Ê½
+
+	jianemei150_2={ -- TÇng 2 Kü n¨ng 150 - KiÕm
 		physicsenhance_p={{{1,36},{20,175},{23,218},{26,240}}},
 		seriesdamage_p={{{1,40},{20,80},{21,82}}},
 		deadlystrike_p={{{1,12},{20,24},{23,27}}},
@@ -275,7 +283,8 @@ SKILLS={
 			[3]={{1,10},{20,110},{23,141},{26,157}}
 		},
 	},
-	qianfo_qianye={ --Ç§·ðÇ§Ò¶
+
+	qianfo_qianye={ -- Thiªn PhËt Thiªn DiÖp - Ch­ëng
 		colddamage_v={
 			[1]={{1,45},{20,100}},
 			[3]={{1,45},{20,100}}
@@ -292,85 +301,101 @@ SKILLS={
 		addskillexp1={{{1,0},{2,0}},{{1,1},{20,10}},{{1,0},{2,0}}},
 		skill_skillexp_v={{{1,20000},{20,100000000,Conic}}},
 	},
-	fengshuang_suiying={ --·çËªËéÓ°
-		seriesdamage_p={{{1,20},{15,20},{20,60},{21,62}}},
-		colddamage_v={
-			[1]={{1,20},{15,350},{20,770}},
+
+	fengshuang_suiying={ -- Phong S­¬ng To¸i ¶nh - Ch­ëng 90
+		seriesdamage_p={{{1,20},{15,20},{20,60},{21,62}}}, -- Ngò hµnh t­¬ng kh¾c %
+		colddamage_v={ -- B¨ng s¸t
+			[1]={{1,30},{15,400},{20,1000}},
 			[3]={{1,30},{15,400},{20,1000}}
 		},
-		skill_eventskilllevel={{{1,1},{20,20}}},
-		skill_cost_v={{{1,30},{20,65}}},
-		skill_startevent={
+		skill_eventskilllevel={{{1,1},{20,20}}}, -- Kü n¨ng tÇng 2: Kim §Ønh PhËt Quang
+		skill_cost_v={{{1,30},{20,65}}}, -- Tiªu hao néi lùc
+		skill_startevent={ -- Kü n¨ng tÇng 2: Kim §Ønh PhËt Quang
 			[1]={{1,0},{10,0},{10,1},{20,1}},
 			[3]={{1,331},{20,331}}
 		},
---		addskilldamage1={
---			[1]={{1,1062},{2,1062}},
---			[3]={{1,1},{20,25}}
---		},
-		skill_showevent={{{1,0},{10,0},{10,1},{20,1}}},
-		addskillexp1={{{1,0},{2,0}},{{1,1},{20,1}},{{1,0},{2,0}}},
-		skill_skillexp_v={{	{1,SkillExpFunc(6260,1.25,1,3,1)},
-							{2,SkillExpFunc(6260,1.15,2,3,1)},
-							{3,SkillExpFunc(6260,1.16,3,3,1)},
-							{4,SkillExpFunc(6260,1.17,4,3,1)},
-							{5,SkillExpFunc(6260,1.18,5,3,1)},
-							{6,SkillExpFunc(6260,1.19,6,3,1)},
-							{7,SkillExpFunc(6260,1.20,7,3,1)},
-							{8,SkillExpFunc(6260,1.21,8,3,1)},
-							{9,SkillExpFunc(6260,1.22,9,3,1)},
-							{10,SkillExpFunc(6260,1.23,10,3,1)},
-							{11,SkillExpFunc(6260,1.24,11,3,1)},
-							{12,SkillExpFunc(6260,1.23,12,3,1)},
-							{13,SkillExpFunc(6260,1.22,13,3,1)},
-							{14,SkillExpFunc(6260,1.21,14,3,1)},
-							{15,SkillExpFunc(6260,1.20,15,3,1)},
-							{16,SkillExpFunc(6260,1.19,16,3,1)},
-							{17,SkillExpFunc(6260,1.18,17,3,1)},
-							{18,SkillExpFunc(6260,1.17,18,3,1)},
-							{19,SkillExpFunc(6260,1.16,19,3,1)},
-							{20,SkillExpFunc(6260,1.15,20,3,1)},
-							}},
+		skill_showevent={{{1,0},{10,0},{10,1},{20,1}}}, -- Kü n¨ng tÇng 2: Kim §Ønh PhËt Quang
+		addskillexp1={{{1,0},{2,0}},{{1,1},{20,1}},{{1,0},{2,0}}}, -- Kinh nghiÖm luyÖn kü n¨ng
+		skill_skillexp_v={ -- Kinh nghiÖm luyÖn kü n¨ng
+			{
+				{1,SkillExpFunc(6260,1.25,1,3,1)},
+				{2,SkillExpFunc(6260,1.15,2,3,1)},
+				{3,SkillExpFunc(6260,1.16,3,3,1)},
+				{4,SkillExpFunc(6260,1.17,4,3,1)},
+				{5,SkillExpFunc(6260,1.18,5,3,1)},
+				{6,SkillExpFunc(6260,1.19,6,3,1)},
+				{7,SkillExpFunc(6260,1.20,7,3,1)},
+				{8,SkillExpFunc(6260,1.21,8,3,1)},
+				{9,SkillExpFunc(6260,1.22,9,3,1)},
+				{10,SkillExpFunc(6260,1.23,10,3,1)},
+				{11,SkillExpFunc(6260,1.24,11,3,1)},
+				{12,SkillExpFunc(6260,1.23,12,3,1)},
+				{13,SkillExpFunc(6260,1.22,13,3,1)},
+				{14,SkillExpFunc(6260,1.21,14,3,1)},
+				{15,SkillExpFunc(6260,1.20,15,3,1)},
+				{16,SkillExpFunc(6260,1.19,16,3,1)},
+				{17,SkillExpFunc(6260,1.18,17,3,1)},
+				{18,SkillExpFunc(6260,1.17,18,3,1)},
+				{19,SkillExpFunc(6260,1.16,19,3,1)},
+				{20,SkillExpFunc(6260,1.15,20,3,1)},
+			}
+		},
 	},
-	jinding_foguang={ --½ð¶¥·ð¹â
-		colddamage_v={
+
+	jinding_foguang={ -- Kim §Ønh PhËt Quang - TÇng 2 Phong S­¬ng To¸i ¶nh - Ch­ëng 90
+		colddamage_v={ -- B¨ng s¸t
 			[1]={{1,10},{20,585},{21,600}},
 			[3]={{1,10},{20,585},{21,600}},
 		},
-		seriesdamage_p={{{1,20},{20,60},{21,62}}},
-		missle_speed_v={{{1,24},{20,28},{21,28}}},
-		skill_misslenum_v={{{1,1},{10,1},{20,3},{21,3}}},
+		seriesdamage_p={{{1,20},{20,60},{21,62}}}, -- Ngò hµnh t­¬ng kh¾c %
+		missle_speed_v={{{1,24},{20,28},{21,28}}}, -- Tèc ®é xuÊt chiªu khÝ c«ng
+		skill_misslenum_v={{{1,1},{10,1},{20,3},{29,3},{30,4},{31,4}}}, -- Sè l­îng Missle
+		skill_eventskilllevel={{{1,1},{20,20}}}, -- Kü n¨ng tÇng 2: Tø T­îng §ång Quy
+		skill_startevent={ -- Kü n¨ng tÇng 2: Tø T­îng §ång Quy
+			[1]={{1,0},{15,0},{15,1},{20,1}},
+			[3]={{1,82},{20,82}}
+		},
+		skill_showevent={{{1,0},{15,0},{15,1},{20,1}}}, -- Kü n¨ng tÇng 2: Tø T­îng §ång Quy
 	},
-	zhangemei150={ --ÕÆ¶ëÃ¼150
+
+	zhangemei150={ -- Kü n¨ng 150 - Ch­ëng
 		seriesdamage_p={{{1,40},{15,40},{20,80},{21,82}}},
 		colddamage_v={
 			[1]={{1,24},{15,420},{20,930},{23,1542},{26,1848}},
 			[3]={{1,36},{15,480},{20,1200},{23,2064},{26,2496}}
 		},
 		skill_cost_v={{{1,36},{20,78},{23,91}}},
-		skill_skillexp_v={{	{1,300},
-												{2,600},
-												{3,1000},
-												{4,1500},
-												{5,2100},
-												{6,2800},
-												{7,3600},
-												{8,4500},
-												{9,5500},
-												{10,6600},
-												{11,7800},
-												{12,9100},
-												{13,10500},
-												{14,12000},
-												{15,13600},
-												{16,15300},
-												{17,17100},
-												{18,19000},
-												{19,21400},
-												{20,21000},
-												}},	
+		skill_skillexp_v={
+			{
+				{1,300},
+				{2,600},
+				{3,1000},
+				{4,1500},
+				{5,2100},
+				{6,2800},
+				{7,3600},
+				{8,4500},
+				{9,5500},
+				{10,6600},
+				{11,7800},
+				{12,9100},
+				{13,10500},
+				{14,12000},
+				{15,13600},
+				{16,15300},
+				{17,17100},
+				{18,19000},
+				{19,21400},
+				{20,90000},
+				{21,120000},
+				{22,150000},
+				{23,200000},
+				{24,250000},
+				{25,300000},
+			}
+		},	
 	},
-	zhangemei150_2={ --ÕÆ¶ëÃ¼150µÚ2Ê½
+	zhangemei150_2={ -- TÇng 2 Kü n¨ng 150 - Ch­ëng
 		colddamage_v={
 			[1]={{1,10},{20,585},{21,600}},
 			[3]={{1,10},{20,585},{21,600}},
@@ -379,47 +404,56 @@ SKILLS={
 		missle_speed_v={{{1,24},{20,28},{21,28}}},
 		skill_misslenum_v={{{1,1},{10,1},{20,3},{21,3}}},
 	},
-	emei120={ --¶ëáÒ120¼¶¼¼ÄÜ
+
+	emei120={ -- Kü n¨ng 120: BÕ NguyÖt PhÊt TrÇn
 		skill_appendskill={{{1,86},{20,86}},{{1,1},{19,19},{20,40},{21,40}}},
 		skill_desc=
 			function(level)
 				return "§¼ng cÊp kü n¨ng nµy sÏ lÊy theo kü n¨ng hç trî cã cÊp thÊp nhÊt \n"
 			end,
-		skill_skillexp_v={{	{1,17851239},
-							{2,19487603},
-							{3,22760330},
-							{4,27669421},
-							{5,34214875},
-							{6,42396694},
-							{7,52214875},
-							{8,63669421},
-							{9,76760330},
-							{10,91487603},
-							{11,107851239},
-							{12,135669421},
-							{13,174942148},
-							{14,225669421},
-							{15,274418181},
-							{16,344618181},
-							{17,425738181},
-							{18,517778181},
-							{19,620738181},
-							{20,620738181},
-							}},	
+		skill_skillexp_v={
+			{
+				{1,17851239},
+				{2,19487603},
+				{3,22760330},
+				{4,27669421},
+				{5,34214875},
+				{6,42396694},
+				{7,52214875},
+				{8,63669421},
+				{9,76760330},
+				{10,91487603},
+				{11,107851239},
+				{12,135669421},
+				{13,174942148},
+				{14,225669421},
+				{15,274418181},
+				{16,344618181},
+				{17,425738181},
+				{18,517778181},
+				{19,620738181},
+				{20,620738181},
+			}
+		},	
 	},
-	emei120_1={ --¶ëáÒ120¼¶¼¼ÄÜ
+
+	emei120_1={ -- Kü n¨ng 120: BÕ NguyÖt PhÊt TrÇn
 		skill_appendskill={{{1,89},{20,89}},{{1,1},{19,19},{20,40},{21,40}}},
 	},
-	emei120_2={ --¶ëáÒ120¼¶¼¼ÄÜ
+
+	emei120_2={ -- Kü n¨ng 120: BÕ NguyÖt PhÊt TrÇn
 		skill_appendskill={{{1,92},{20,92}},{{1,1},{19,19},{20,40},{21,40}}},
 	},
-	emei120_3={ --¶ëáÒ120¼¶¼¼ÄÜ
+
+	emei120_3={ -- Kü n¨ng 120: BÕ NguyÖt PhÊt TrÇn
 		skill_appendskill={{{1,282},{20,282}},{{1,1},{19,19},{20,40},{21,40}}},
 	},
-	emei120_4={ --¶ëáÒ120¼¶¼¼ÄÜ
+
+	emei120_4={ -- Kü n¨ng 120: BÕ NguyÖt PhÊt TrÇn
 		skill_appendskill={{{1,332},{20,332}},{{1,1},{19,19},{20,40},{21,40}}},
 	},
-	fuzhuemei150={ --¸¨Öú150
+
+	fuzhuemei150={ -- Kü n¨ng 150 - Hç trî chñ ®éng
 		seriesdamage_p={{{1,20},{15,20},{20,60},{21,62}}},
 		colddamage_v={
 			[1]={{1,20},{15,200},{20,400},{23,640},{26,760}},
@@ -433,40 +467,39 @@ SKILLS={
 			[3]={{1,1115},{20,1115}}
 		},
 		skill_showevent={{{1,0},{10,0},{10,2},{20,2}}},
-		skill_skillexp_v={{	{1,300},
-												{2,600},
-												{3,1000},
-												{4,1500},
-												{5,2100},
-												{6,2800},
-												{7,3600},
-												{8,4500},
-												{9,5500},
-												{10,6600},
-												{11,7800},
-												{12,9100},
-												{13,10500},
-												{14,12000},
-												{15,13600},
-												{16,15300},
-												{17,17100},
-												{18,19000},
-												{19,21400},
-												{20,21000},
-												}},	
+		skill_skillexp_v={
+			{
+				{1,300},
+				{2,600},
+				{3,1000},
+				{4,1500},
+				{5,2100},
+				{6,2800},
+				{7,3600},
+				{8,4500},
+				{9,5500},
+				{10,6600},
+				{11,7800},
+				{12,9100},
+				{13,10500},
+				{14,12000},
+				{15,13600},
+				{16,15300},
+				{17,17100},
+				{18,19000},
+				{19,21400},
+				{20,90000},
+				{21,120000},
+				{22,150000},
+				{23,200000},
+				{24,250000},
+				{25,300000},
+			}
+		},	
 	},
 }
------------------------------------------------
---Create by yfeng 2004-05-20
------------------------------------------------
 
------------------------------------------------
---¸ù¾Ý2¸öµã£¬ÇóÏßÐÎº¯Êýf(x)=k*x+b
---y= (y2-y1)*(x-x1)/(x2-x1)+y1
---µ±x2=x1, ÓÐx=c,¸ÃÖ±ÏßÊÇÒ»Ìõ´¹Ö±ÓÚxÖáµÄÖ±Ïß
---ÕâÊÇ¿ÉÒÔÈ¡µÃy=ÈÎÒâÖµ
---Òò´Ë£¬Èç¹ûÒÑÖªÁ½µã(x1,y1),(x2,y2)¿ÉÇóµÃ¹ý´Ë2µãµÄ
---º¯ÊýÎª£º
+----------------------------------------------------------------------------------------------------
 function Line(x,x1,y1,x2,y2)
 	if(x2==x1) then
 		return y2
@@ -474,14 +507,6 @@ function Line(x,x1,y1,x2,y2)
 	return (y2-y1)*(x-x1)/(x2-x1)+y1
 end
 
------------------------------------------------
---¸ù¾Ý2¸öµã£¬Çó2´ÎÐÎº¯Êýf(x)=a*x2+c
---y= (y2-y1)*x*x/(x2*x2-x1*x1)-(y2-y1)*x1*x1/(x2*x2-x1*x1)+y1
---µ±x1»òÕßx2 < 0 ,y =0
---µ±x2=x1, ÓÐx=c,ÊÇÒ»Ìõ´¹Ö±ÓÚxÖáµÄÖ±Ïß
---ÕâÊÇ¿ÉÒÔÈ¡µÃy=ÈÎÒâÖµ
---Òò´Ë£¬Èç¹ûÒÑÖªÁ½µã(x1,y1),(x2,y2)¿ÉÇóµÃ¹ý´Ë2µãµÄ
---º¯ÊýÎª£ºextrac
 function Conic(x,x1,y1,x2,y2)
 	if((x1 < 0) or (x2<0))then 
 		return 0
@@ -492,14 +517,6 @@ function Conic(x,x1,y1,x2,y2)
 	return (y2-y1)*x*x/(x2*x2-x1*x1)-(y2-y1)*x1*x1/(x2*x2-x1*x1)+y1
 end
 
------------------------------------------------
---¸ù¾Ý2¸öµã£¬Çó-2´ÎÐÎº¯Êýf(x)=a*sqrt(x2)+c
---y=(y2-y1)*x/(sqrt(x2)-sqrt(x1))+y1-(y2-y1)/((sqrt(x2)-sqrt(x1))
---µ±x2»òÕßx1<0, y=0,
---µ±x1=x2,ÓÐx=c,ÊÇÒ»Ìõ´¹Ö±ÓÚxÖáµÄÖ±Ïß
---ÕâÊÇ¿ÉÒÔÈ¡µÃy=ÈÎÒâÖµ
---Òò´Ë£¬Èç¹ûÒÑÖªÁ½µã(x1,y1),(x2,y2)¿ÉÇóµÃ¹ý´Ë2µãµÄ
---º¯ÊýÎª£ºextrac
 function Extrac(x,x1,y1,x2,y2)
 	if((x1 < 0) or (x2<0))then 
 		return 0
@@ -510,13 +527,6 @@ function Extrac(x,x1,y1,x2,y2)
 	return (y2-y1)*(x-x1)/(x2-x1)+y1
 end
 
------------------------------------------------
---Ãè»æÁ¬½ÓÏß:Link(x,points)
---¸ù¾ÝpointsÌá¹©µÄÒ»ÏµÁÐµã£¬ÓÃÏàÁÚµÄÁ½¸öµãÃè»æÇúÏß
---return yÖµ
---x ÊäÈëÖµ
---points µã¼¯ºÏ
---ÐÎÈç£ºpointsÊÇÐÎÈç{{x1,y1,func=xxx},{x2,y2,func=xxx},...{xn,yn,func=xxx}}µÄÓ³Éä
 function Link(x,points)
 	num = getn(points)
 	if(num<2) then
@@ -533,7 +543,6 @@ function Link(x,points)
 	if(x > points[num][1]) then
 		return points[num][3](x,points[num-1][1],points[num-1][2],points[num][1],points[num][2])
 	end
-	
 	c = 2
 	for i=2,num do
 		if((x >= points[i-1][1]) and (x <= points[i][1])) then
@@ -544,59 +553,6 @@ function Link(x,points)
 	return points[c][3](x,points[c-1][1],points[c-1][2],points[c][1],points[c][2])
 end
 
-------------------------------------------------------
---¼¼ÄÜÉè¶¨¸ñÊ½ÈçÏÂ£º
---SKILLS={
---	¼¼ÄÜÃû³Æ=	{
---		Ä§·¨ÊôÐÔ=	{
---			[1]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[2]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[3]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬	
---		}£¬
---		Ä§·¨ÊôÐÔ=	{
---			[1]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[2]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[3]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬	
---		}£¬
---		¡£¡£¡£¡£¡£
---	}£¬
---	¼¼ÄÜÃû³Æ=	{
---		Ä§·¨ÊôÐÔ=	{
---			[1]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[2]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[3]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬	
---		}£¬
---		Ä§·¨ÊôÐÔ=	{
---			[1]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[2]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬
---			[3]={{¼¶±ð,ÊýÖµ£¬ÇúÏß}£¬{¼¶±ð£¬ÊýÖµ£¬ÇúÏß}£¬¡£¡£¡£¡£}£¬	
---		}£¬
---		¡£¡£¡£¡£¡£
---	}£¬
---	¡£¡£¡£¡£¡£
---}
---Èç£º
---SKILLS={
---	Sanhuan-taoyue={
---		physicsenhance_p={
---			[1]={{1,50},{20,335}},--Ä§·¨ÊôÐÔphysicsenhance_p²ÎÊý1£¬1¼¶Ê±Îª35£¬20¼¶Ê±Îª335£¬ÇúÏß²»Ìî£¬Ä¬ÈÏÏßÐÎ
---			[2]={{1,0},{20,0}},
---		},--Ã»ÓÐ[3]£¬±íÊ¾Ä§·¨ÊôÐÔphysicsenhance_p²ÎÊý2£¬Ä¬ÈÏÎªÈÎºÎÊ±ºò¶¼ÊÇ0
---		lightingdamage_v={
---			[1]={{1,65},{20,350}},
---			[3]={{1,65},{20,350}},
---		}
---	}
---}
---ÒÔÉÏÃèÊö¼¼ÄÜ¡°Èý»·Ì×ÔÂ¡±µÄÄ§·¨ÊôÐÔºÍÊýÖµ
------------------------------------------------------------
---º¯ÊýGetSkillLevelData(levelname, data, level)
---levelname£ºÄ§·¨ÊôÐÔÃû³Æ
---data£º¼¼ÄÜÃû³Æ
---level£º¼¼ÄÜµÈ¼¶
---return£ºµ±¼¼ÄÜÃû³ÆÎªdata£¬¼¼ÄÜµÈ¼¶Îªlevel
---			Ê±µÄÄ§·¨ÊôÐÔlevelnameËùÐèÇóµÄÈý¸ö²ÎÊýµÄ¾ßÌåÖµ
------------------------------------------------------------
 function GetSkillLevelData(levelname, data, level)
 	if(data==nil) then
 		return ""
@@ -626,10 +582,8 @@ function GetSkillLevelData(levelname, data, level)
 	p2=floor(Link(level,SKILLS[data][levelname][2]))
 	p3=floor(Link(level,SKILLS[data][levelname][3]))
 	return Param2String(p1,p2,p3)
-end;
-
+end
 
 function Param2String(Param1, Param2, Param3)
-return Param1..","..Param2..","..Param3
-end;
-
+	return Param1..","..Param2..","..Param3
+end

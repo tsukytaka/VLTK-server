@@ -27,10 +27,6 @@ tbHuoYueDu.tbAward =
 }
 
 function tbHuoYueDu:GetTaskDailyBit(nTaskId, nBit)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	local nTaskValue = GetTask(nTaskId)
 	local nCurDate = tonumber(GetLocalDate("%y%m%d"))
 	if nCurDate ~= floor(nTaskValue / 256) then
@@ -40,10 +36,6 @@ function tbHuoYueDu:GetTaskDailyBit(nTaskId, nBit)
 end
 
 function tbHuoYueDu:SetTaskDailyBit(nTaskId, nBit, nValue)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	local nTaskValue = GetTask(nTaskId)
 	local nCurDate = tonumber(GetLocalDate("%y%m%d"))
 	if nCurDate ~= floor(nTaskValue / 256) then
@@ -54,10 +46,6 @@ function tbHuoYueDu:SetTaskDailyBit(nTaskId, nBit, nValue)
 end
 
 function tbHuoYueDu:GiveAward(nAwardIndex)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	if PlayerFunLib:CheckTaskDaily(self.TSK_TotalHuoYueDu, self.tbAward[nAwardIndex].nValue, "", ">=") ~= 1 then
 		return
 	end

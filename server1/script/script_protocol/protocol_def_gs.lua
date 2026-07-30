@@ -71,12 +71,6 @@ local Def =
 		{OBJTYPE_NUMBER, OBJTYPE_TABLE},
 		
 	},
-	{
-		"emSCRIPT_PROTOCOL_TASKTRACE",
-		"\\script\\tasktrace\\protocol_gs.lua",
-		"proc_tasktrace",
-		{OBJTYPE_NUMBER, OBJTYPE_NUMBER}
-	},	
 }
 
 ScriptProtocol:RegProtocolSet(Def)

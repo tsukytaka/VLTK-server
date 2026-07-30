@@ -7,10 +7,10 @@ NewYear2008_cailu = {}
 NewYear2008_cailu.tbdate = 
 {
 	nstart = 080202,
-	nend = 500302,
+	nend = 200302,
 	ndate = { 
 		nstart = 080205,
-		nend = 500211,
+		nend = 200211,
 		common =
 		{
 			{2,3},

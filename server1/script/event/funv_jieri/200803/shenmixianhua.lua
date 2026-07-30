@@ -6,8 +6,8 @@ if tbclassname == nil then
 	tbclassname = {}
 end
 funv_jieri_shenmi = tbclassname
-funv_jieri_shenmi.ndatestart = 08030800
-funv_jieri_shenmi.ndateend = 50033124
+funv_jieri_shenmi.ndatestart = 8030800
+funv_jieri_shenmi.ndateend = 8033124
 funv_jieri_shenmi.ntask = 1878
 funv_jieri_shenmi.LIMIT_LEVEL = 50
 funv_jieri_shenmi.tbitem =

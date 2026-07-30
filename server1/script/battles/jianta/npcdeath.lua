@@ -71,12 +71,8 @@ function OnDeath(nNpcIndex)
 		return
 	end
 	if (rank == 7) then
-		pointnpc = bt_addtotalpoint(BT_GetTypeBonus(PL_KILLRANK7, GetCurCamp()));	-- 打下箭塔的玩家获得500点积分
-			if (pointnpc == nil or pointnpc == 0 ) then
-		Msg2Player("B筺 nh薾 頲 <color=yellow>0<color> 甶觤 t輈h l騳!")
-	else
-		Msg2Player("B筺 nh薾 頲 <color=yellow>"..pointnpc .."<color> 甶觤 t輈h l騳!")
-	end
+		bt_addtotalpoint(BT_GetTypeBonus(PL_KILLRANK7, GetCurCamp()));	-- 打下箭塔的玩家获得500点积分
+		
 		local n_gamelvl			= BT_GetGameData(GAME_LEVEL);
 		local tb_npclvl 		= {50, 75, 90};
 		local n_jianta_index	= GetNpcParam(nNpcIndex, 1);	-- 箭塔的序号

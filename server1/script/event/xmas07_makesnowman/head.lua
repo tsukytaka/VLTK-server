@@ -3,7 +3,7 @@
 -- 创建时间：2007-11-23 10:56:53
 
 xmas07_makeSnowMan_S = 07120800
-xmas07_makeSnowMan_E = 50011324
+xmas07_makeSnowMan_E = 18011324
 xmas07_makeSnowMan_UseTime = 08013124 --合成雪人 使用雪人
 xmas07_makeSnowMan_ActName = "Ho箃 ng t筼 ngi tuy誸";
 

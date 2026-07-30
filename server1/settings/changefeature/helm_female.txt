@@ -1,19 +1,30 @@
 Name	Feature	Price
-ThÝch Ni M·o	0	500
-Thiªn Thanh M·o	1	500
-XÝch ¶nh ph¸t Qu¸n	2	500
-B×Trô 	6	500
-Thó Cèt Tr©m	7	500
-HuyÒn Tª DiÖn Tr¸o	8	500
-Th« ThiÕt §Çu Hoµn	9	500
-Kª VÜ Thoa	10	500
-Long HuyÕt §Çu hoµn	11	500
-Viªn M·o	12	500
-Song Phông TriÒu Thiªn Qu¸n	13	500
-Long L©n Kh«i	14	500
-Bè M·o	15	500
-L­u Ly Thoa	16	500
-Thanh Tinh Thoa	17	500
-Hoµng Bè Ph¸t §¸i	18	500
-Thanh L­u Ly Ph¸t Xoa	19	500
-Kim Phông TriÓn SÝ 	20	500
+Nga My 	30	50
+Thóy Yªn 	31	50
+Ngò §éc 	32	50
+§­êng M«n 	33	50
+C¸i Bang 	34	50
+Thiªn NhÉn 	35	50
+Vâ §ang 	36	50
+C«n L«n 	37	50
+Long T­¬ng 	40	50
+Vò LiÖt 	42	50
+H¾c ThÇn 	38	50
+ThÝch Ni M·o	0	50
+Thiªn Thanh M·o	1	50
+XÝch ¶nh ph¸t Qu¸n	2	50
+B×Trô 	6	50
+Thó Cèt Tr©m	7	50
+HuyÒn Tª DiÖn Tr¸o	8	50
+Th« ThiÕt §Çu Hoµn	9	50
+Kª VÜ Thoa	10	50
+Long HuyÕt §Çu hoµn	11	50
+Viªn M·o	12	50
+Song Phông TriÒu Thiªn Qu¸n	13	50
+Long L©n Kh«i	14	50
+Bè M·o	15	50
+L­u Ly Thoa	16	50
+Thanh Tinh Thoa	17	50
+Hoµng Bè Ph¸t §¸i	18	50
+Thanh L­u Ly Ph¸t Xoa	19	50
+Kim Phông TriÓn SÝ 	20	50

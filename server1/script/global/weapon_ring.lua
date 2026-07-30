@@ -25,8 +25,6 @@ function weapon_ring_Confirm( nCount )
 			local nItemIndex = GetGiveItemUnit( i )		--get itemindex
 			ItemGenre, DetailType, ParticularType, Level, nSeries, Luck = GetItemProp(nItemIndex)
 			magictype , p1, p2, p3 = GetItemMagicAttrib(nItemIndex, 1)	--get magic attrib
---			Msg2Player("nSeries = "..nSeries)
---			Msg2Player("magictype = "..magictype)
 			if ( ItemGenre ~= 0 ) then
 				Say("Xin kiÓm tra kü, vò khÝ b¹n ®­a ta kh«ng phï hîp yªu cÇu!",0)
 				return 0

@@ -13,12 +13,12 @@ Id	Title	Time	EVENT_MOVE	EVENT_ATTACK	EVENT_SITE	EVENT_RIDE	EVENT_USEITEM	EVENT_
 12	§ang më…	0	1	0	1	1	0	0	0	0	0	0	0	1	1	0	0	0	Bao Hçn Nguyªn Linh Lé
 13	§ang nhÆt…	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	Thu thËp 3 gi©y
 14	§ang th¨ng cÊp…	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2 gi©y th¨ng cÊp
-15	§ang n©ng cÊp…	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	N©ng cÊp AB DQ
-16	§ang trung luyÖn…	8	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	Trïng luyÖn trang bÞ
-17	§ang t¸ch…	4	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	T¸ch trang bÞ AB DQ
-18	§ang më r­¬ng…	20	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	Më r­¬ng thÇn bÝ
-19	§ang më …	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	ÑÌ»¨±¬Öñ
-20	§ang thao t¸c …	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	ÑÌ»¨±¬Öñ
-21	§ang c©u c¸...	8	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	C©u c¸
-22	§ang ®µo...	2	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	§µo b¶o vËt
+15	§ang nhÆt…	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	Kim tiÒn v« sè
+16	§ang më …	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	ÑÌ»¨±¬Öñ
+17	§ang thao t¸c …	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	ÑÌ»¨±¬Öñ
+18	§ang c©u c¸...	1.5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	C©u c¸
+19	§ang ®µo...	2	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	§µo b¶o vËt
+20	§ang ®µo giun...	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	C©u c¸
+21	§ang c©u c¸...	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	C©u c¸
+22	§ang bña l­íi...	3	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	C©u c¸
 1000	§ang thu ho¹ch…	5	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	ho¹t ®éng thu thËp Ng«i Sao H¹nh Phóc

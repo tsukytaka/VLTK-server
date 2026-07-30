@@ -1,4 +1,4 @@
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 
 SCRIPT_WARRIORDEATH = "\\script\\missions\\sevencity\\warrior_death.lua"	-- 玩家死亡脚本
 SCRIPT_MONSTERDEATH	= "\\script\\missions\\sevencity\\monster_death.lua"	-- 龙柱死亡脚本
@@ -35,8 +35,8 @@ PARAM_LIST = {
 	FIELD_TONGMEMBER 	= 100, 			-- 每个场地每个帮会最大人数限制
 	WORLD_TONGMEMBER 	= 200,			-- 整个城战每个帮会最大人数限制
 	EXPTIMER_INTERVAL	= 1 * 60 * 18,	-- 给经验奖励的间隔（帧数）
-	TIMEOUT_MONSTER		= 16 * 60 * 18,	-- 龙柱无敌时间（帧数）
-	TIMEOUT_SCORE		= 60 * 18,		-- 龙柱积分奖励时间（帧数）
+	TIMEOUT_MONSTER		= 35 * 60 * 18,	-- 龙柱无敌时间（帧数）
+	TIMEOUT_SCORE		= 300 * 18,		-- 龙柱积分奖励时间（帧数）
 }
 
 CAMP_MONSTER 				= 1

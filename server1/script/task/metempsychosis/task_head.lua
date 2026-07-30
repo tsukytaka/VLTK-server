@@ -1,18 +1,6 @@
 IncludeLib("FILESYS")
--- ====================== ÎÄ¼şĞÅÏ¢ ======================
 
--- ½£ÏÀÇéÔµÍøÂç°æÔ½ÄÏ°æ - ¶à´Î×ªÉúÍ·ÎÄ¼ş
--- ÎÄ¼şÃû¡¡£ºtask_head.lua
--- ´´½¨Õß¡¡£º×Ó·Çô~
--- ´´½¨Ê±¼ä£º2009-02-04 16:21:20
-
--- ======================================================
---print(10e6)
-
-
-TB_LEVEL_REMAIN_PROP = {
-		--[µÈ¼¶level] = { {magicpoint, prop, resist}<,{}>};
-			}
+TB_LEVEL_REMAIN_PROP = {}
 
 function Load_TransLifeSetting()
 	
@@ -24,109 +12,112 @@ function Load_TransLifeSetting()
 	local nRowCount = TabFile_GetRowCount("TransLifeSetting", "LEVEL")
 	
 	for y = 2, nRowCount do
-		local n_level = tonumber(TabFile_GetCell("TransLifeSetting", y, "LEVEL"));
+		local n_level = tonumber(TabFile_GetCell("TransLifeSetting", y, "LEVEL"))
 		
-		local tb = {};
+		local tb = {}
 		
 		for z = 1, 5 do
 			
-			local n_magicpoint = tonumber(TabFile_GetCell("TransLifeSetting", y, "MAGICPOINT"..z));
-			local n_prop = tonumber(TabFile_GetCell("TransLifeSetting", y, "PROP"..z));
-			local n_resist = tonumber(TabFile_GetCell("TransLifeSetting", y, "RESIST"..z));
-			local n_addskilll = tonumber(TabFile_GetCell("TransLifeSetting", y, "SKILLLIMIT"..z));
+			local n_magicpoint = tonumber(TabFile_GetCell("TransLifeSetting", y, "MAGICPOINT"..z))
+			local n_prop = tonumber(TabFile_GetCell("TransLifeSetting", y, "PROP"..z))
+			local n_resist = tonumber(TabFile_GetCell("TransLifeSetting", y, "RESIST"..z))
+			local n_addskilll = tonumber(TabFile_GetCell("TransLifeSetting", y, "SKILLLIMIT"..z))
 			
 			if (n_magicpoint) then
-				tb[getn(tb) + 1] = {n_magicpoint, n_prop, n_resist, n_addskilll};
+				tb[getn(tb) + 1] = {n_magicpoint, n_prop, n_resist, n_addskilll}
 			end
 			
 		end
 		
 		if (n_level ~= nil) then
-			TB_LEVEL_REMAIN_PROP[n_level] = tb;
+			TB_LEVEL_REMAIN_PROP[n_level] = tb
 		end
 	end	
 end
 
 Load_TransLifeSetting()
 
-TB_LEVEL_LIMIT = {160, 170, 180, 200, 200};
-TB_TRANSTIME_LIMIT = {0, 0, 0, 0, 0};
--- 4×ªĞèÒªµÄÆäËûµÀ¾ß
+TB_LEVEL_LIMIT = {200, 200, 200, 200, 200}
+TB_TRANSTIME_LIMIT = {0, 0, 0, 0, 0}
 TBITEMNEED_4 = {
-	[1] = {szName = "Tİch LŞch ®¬n", tbProb = {6,1,2973}, nCount = 999},	-- Åùö¨µ¯
-	[2] = {szName = "<B¾c §Èu Tr­êng Sinh ThuËt—§¹i Thõa T©m Ph¸p>", tbProb = {6,1,2974}, nCount = 1},  -- ±±¶·³¤ÉúÊõ¡ª´ó³ËĞÄ·¨
-	}
-
-TB_TRANSLIFE_ERRORMSG = {
-	[1] = "<dec><npc>Tu luyÖn B¾c §Èu Tr­êng Sinh ThuËt cÇn ph¶i cëi bá tÊt c¶  trang bŞ trªn ng­êi!",
-	[2] = "<dec><npc>H×nh nh­ tiÒn vÉn ch­a ®ñ <color=red>100000000<color>.",
-	[3] = "<dec><npc>Tu luyÖn B¾c §Èu Tr­êng Sinh ThuËt cÇn ph¶i bá quan hÖ S­ §å",
-	[4] = "<dec><npc>VŞ thiÕu hiÖp nµy vÉn ch­a häc <B¾c §Èu Tr­êng Sinh ThuËt - C¬ Së Thiªn>, vËt nµy ë Kú Tr©n C¸c cã b¸n.",
-	[5] = "<dec><npc>VŞ thiÕu hiÖp nµy vÉn ch­a ®ñ cÊp ®Ó tu luyÖn, h·y vÒ tu luyÖn thªm ®i nhĞ.",
-	[6] = "<dec><npc>Tu luyÖn B¾c §Èu Tr­êng Sinh ThuËt cÇn ph¶i bá quan hÖ chiÕn ®éi vâ l©m liªn ®Êu",
-	[7] = "<dec><npc><B¾c §Èu Tr­êng Sinh ThuËt - T©m Ph¸p Thiªn> nhiÒu nhÊt chØ cã thÓ tu luyÖn 5 tÇng, ng­¬i ®· häc ®ñ råi.",
-	[8] = "<dec><npc>NhiÖm vô s¸t thñ vÉn ch­a hoµn thµnh! H·y hoµn tÊt nhiÖm vô råi quay l¹i nhĞ.",
-	[9] = "<dec><npc>NhiÖm vô tİn sø vÉn ch­a hoµn thµnh! H·y hoµn tÊt nhiÖm vô råi quay l¹i nhĞ.",
-	[10]= "<dec><npc>NhiÖm vô d· tÈu vÉn ch­a hoµn thµnh! H·y hoµn tÊt nhiÖm vô råi quay l¹i nhĞ.",
-	[11]= "<dec><npc>D· tÈu thu ®­îc c¬ héi hñy bá nhiÖm vô! H·y hoµn tÊt nhiÖm vô nµy råi quay l¹i nhĞ.",
-	[12]= "<dec><npc>Kho¶ng c¸ch 2 lÇn trïng sinh ph¶i lµ %d ngµy.",
-	[13]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=red> 200 v¹n <color> l­îng, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
-	[14]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=red> 999 <color> c¸i Tİch LŞch §¬n, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
-	[15]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=red> «B¾c §Èu Tr­êng Sinh ThuËt—§¹i Thõa T©m Ph¸p»<color>, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
+	[1] = {szName = "Vâ L©m LÖnh", tbProb = {6,1,4905}, nCount = 1000},
+	[2] = {szName = "Tèng Kim LÖnh", tbProb = {6,1,4906}, nCount = 500},
+	[3] = {szName = "Phong Háa LÖnh", tbProb = {6,1,4907}, nCount = 1000},
+	[4] = {szName = "Hoµng Kim LÖnh", tbProb = {6,1,4908}, nCount = 100},
+	[5] = {szName = "TuyÖt §Ønh Tri Thøc", tbProb = {4,2054,1}, nCount = 100},
 }
 
--- ÎåĞĞÈËÎïµÄÌìÉúÊôĞÔÖµ
-TB_BASE_STRG = {35,20,25,30,20};
-TB_BASE_DEX = {25,35,25,20,15};
-TB_BASE_VIT = {25,20,25,30,25};
-TB_BASE_ENG = {15,25,25,20,40};
+TB_TRANSLIFE_ERRORMSG = {
+	[1] = "<dec><npc>Trïng Sinh cÇn ph¶i cëi bá tÊt c¶   trang bŞ trªn ng­êi",
+	[2] = "<dec><npc>H×nh nh­ tiÒn vÉn ch­a ®ñ <color=green>10.000 v¹n l­îng<color>",
+	[3] = "<dec><npc>Tu luyÖn B¾c §Èu Tr­êng Sinh ThuËt cÇn ph¶i bá quan hÖ S­ §å",
+	[4] = "<dec><npc>H×nh nh­ nhµ ng­¬i vÉn ch­a häc<enter><color=green>B¾c §Èu Tr­êng Sinh ThuËt - C¬ Së Thiªn<color>",
+	[5] = "<dec><npc>VŞ thiÕu hiÖp nµy vÉn ch­a ®ñ cÊp ®Ó tu luyÖn, h·y vÒ tu luyÖn thªm ®i nhĞ.",
+	[6] = "<dec><npc>Tu luyÖn B¾c §Èu Tr­êng Sinh ThuËt cÇn ph¶i bá quan hÖ chiÕn ®éi vâ l©m liªn ®Êu",
+	[7] = "<dec><npc>B¾c §Èu Tr­êng Sinh ThuËt - T©m Ph¸p Thiªn nhiÒu nhÊt chØ cã thÓ tu luyÖn 5 tÇng, ng­¬i ®· häc ®ñ råi.",
+	[8] = "<dec><npc>NhiÖm vô S¸t Thñ vÉn ch­a hoµn thµnh! H·y hoµn tÊt nhiÖm vô råi quay l¹i nhĞ.",
+	[9] = "<dec><npc>NhiÖm vô Tİn Sø vÉn ch­a hoµn thµnh! H·y hoµn tÊt nhiÖm vô råi quay l¹i nhĞ.",
+	[10]= "<dec><npc>NhiÖm vô D· TÈu vÉn ch­a hoµn thµnh! H·y hoµn tÊt nhiÖm vô råi quay l¹i nhĞ.",
+	[11]= "<dec><npc>D· tÈu thu ®­îc c¬ héi hñy bá nhiÖm vô! H·y hoµn tÊt nhiÖm vô nµy råi quay l¹i nhĞ.",
+	[12]= "<dec><npc>Kho¶ng c¸ch 2 lÇn trïng sinh ph¶i lµ %d ngµy.",
+	[13]= "<dec><npc>ChuyÓn sinh 4 cÇn <color=green>20.000 v¹n l­îng<color>, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
+	[14]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=green>1000<color> c¸i Vâ L©m LÖnh, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
+	[15]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=green>500<color> c¸i Tèng Kim LÖnh, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
+	[16]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=green>1000<color> c¸i Phong Háa LÖnh, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
+	[17]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=green>100<color> c¸i Hoµng  Kim LÖnh, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
+	[18]= "<dec><npc>ChuyÓn sinh 4 cÇn cã <color=green>100<color> cuèn TuyÖt §Ønh Tri Thøc, xin h·y chuÈn bŞ ®ñ råi ®Õn ®©y.",
+}
 
-ZHUANSHENG_DESC		= "METEMPSYCHOSIS";
-ZHUANSHENG_TUITION	= 100000000;	-- ×ªÉúËùĞèJXB
-ZHUANSHENG_XIANDAN_MINEXP	= 2*10e8;	-- ±±¶·ÏÉµ¤ÖÁÉÙÒª20ÒÚ
-ZHUANSHENG_XIANDAN_BASEEXP		= 10e6;	-- ±±¶·ÏÉµ¤µ¥Î»ÊÇ 1000w
-ZHUANSHENG_ITEM_BEGIN	= 20090420---20090420;		-- ÖÆ×÷ÏÉµ¤¿ªÊ¼Ê±¼ä 0µã
-ZHUANSHENG_ITEM_ENDLE	= 20090503;		-- ÖÆ×÷ÏÉµ¤½áÊøÊ±¼ä 24µã
-ZHUANSHENG_ITEM_EXTIME	= 20090601;		-- ÏÉµ¤ÓĞĞ§Ê¹ÓÃÊ±¼ä
+TB_BASE_STRG = {35,20,25,30,20}
+TB_BASE_DEX = {25,35,25,20,15}
+TB_BASE_VIT = {25,20,25,30,25}
+TB_BASE_ENG = {15,25,25,20,40}
 
-LG_SHITULEAGUE = 1;				-- Ê¦Í½Õ½¶Ó
-LG_WLLSLEAGUE = 5;				-- ÎäÁÖÁªÈüÕ½¶Ó
+ZHUANSHENG_DESC		= "METEMPSYCHOSIS"
+ZHUANSHENG_TUITION	= 100000000
+ZHUANSHENG_XIANDAN_MINEXP	= 2*10e8
+ZHUANSHENG_XIANDAN_BASEEXP		= 10e6
+ZHUANSHENG_ITEM_BEGIN	= 20090420
+ZHUANSHENG_ITEM_ENDLE	= 20090503
+ZHUANSHENG_ITEM_EXTIME	= 20090601
 
-TSK_ZHUANSHENG_FLAG = 2547;
-TSK_ZHUANSHENG_1 = 2548;	-- ×ªÉú ÓÃÀ´±£´æ×î´ó¿¹ĞÔµÄÈÎÎñ±äÁ¿£¬´ÓµÍ×Ö½Ú¿ªÊ¼ÒÀ´Î±£´æ»ğ¡¢±ù¡¢¶¾¡¢µçµÄ×î´ó¿¹ĞÔ
-TSK_ZHUANSHENG_2 = 2549;			-- ×ªÉú ÓÃÀ´±£´æ×î´ó¿¹ĞÔµÄÈÎÎñ±äÁ¿£¬×îµÍ×Ö½Ú±£´æ×î´óÎïÀí¿¹ĞÔ£¬ÆäÓà×Ö½ÚÎ´Ê¹ÓÃ
-TSK_ZHUANSHENG_XIANDAN	= 2581;		-- ÖÆ×÷±±¶·ÏÉµ¤
-TSK_ZHUANSHENG_AWARD	= 2582;		-- byte1:3×ªÇ°10ÃûÁìÈ¡·­Óğ;1:Î´Áì,255:ÒÑÁìÈ¡
+LG_SHITULEAGUE = 1
+LG_WLLSLEAGUE = 5
+
+TSK_ZHUANSHENG_FLAG = 2547
+TSK_ZHUANSHENG_1 = 2548
+TSK_ZHUANSHENG_2 = 2549
+TSK_ZHUANSHENG_XIANDAN	= 2581
+TSK_ZHUANSHENG_AWARD	= 2582
 
 
-TSK_KILLER_ID = 1082;
-TSK_MESSENGER_FENG = 1201;
-TSK_MESSENGER_SHAN = 1202;
-TSK_MESSENGER_QIAN = 1203;
-TSK_TASKLINK_STATE = 1028;
-TSK_TASKLINK_CancelTaskLevel = 2571;
-TSK_TASKLINK_CancelTaskExp1 = 2570;
-TSK_TASKLINK_CancelTaskExp2 = 2575;
+TSK_KILLER_ID = 1082
+TSK_MESSENGER_FENG = 1201
+TSK_MESSENGER_SHAN = 1202
+TSK_MESSENGER_QIAN = 1203
+TSK_TASKLINK_STATE = 1028
+TSK_TASKLINK_CancelTaskLevel = 2571
+TSK_TASKLINK_CancelTaskExp1 = 2570
+TSK_TASKLINK_CancelTaskExp2 = 2575
 
-TSK_ZHUANSHENG_GRE = {2577, 2578, 2579}	-- Ã¿´Î×ªÉúËùÑ¡µÈ¼¶ºÍ¿¹ĞÔ
-TSK_ZHUANSHENG_LASTTIME = 2580;			-- ±£´æ×îºó´Î×ªÉúµÄServerTime ÒÔÃë¼Ç£¨Ïà¶Ô1700-0-0µ½Ä¿Ç°µÄÃèÊö£©
-TSKM_ZHUANSHENG_RESISTID = 199;			-- ÁÙÊ±´æ·ÅÑ¡ÔñÔö¼ÓµÄ¿¹ĞÔ
---¿¹ĞÔ±àºÅ£¬0£º»ğ£¬1£º±ù£¬2:¶¾£¬3:µç£¬4:ÎïÀí
+TSK_ZHUANSHENG_GRE = {2577, 2578, 2579}
+TSK_ZHUANSHENG_LASTTIME = 2580
+TSKM_ZHUANSHENG_RESISTID = 199
 TB_BASE_RESIST = {
-	[0] = "<Kh¸ng háa>",
-	[1] = "<Kh¸ng b¨ng>",
-	[2] = "<Kh¸ng ®éc>",
-	[3] = "<Kh¸ng l«i>",
-	[4] = "<Phßng thñ vËt lı>",
+	[0] = "Chän 1 dßng, chøc n¨ng gièng nhau",
+	[1] = "Chän 1 dßng, chøc n¨ng gièng nhau",
+	[2] = "Chän 1 dßng, chøc n¨ng gièng nhau",
+	[3] = "Chän 1 dßng, chøc n¨ng gièng nhau",
+	[4] = "Chän 1 dßng, chøc n¨ng gièng nhau",
 	}
 
-TSK_TRANSLIFE_4 = 2908		-- ±£´æÊÇ·ñ½ÓÊÜÁË4×ªÈÎÎñ	
-TSK_LEAVE_SKILL_POINT_4 = 2909		-- ±£´æÊ£ÓàµÄ4×ª¼¼ÄÜµÄÊ£Óà¼¼ÄÜµã	
-TSK_USED_SKILL_POINT_4 = 2899		-- ±£´æÒÑ¾­Ê¹ÓÃÁË¶àÉÙ¼¼ÄÜµã
-TSK_LAST_UP_LEVEL_4 = 2910		-- ±£´æ×îºóÒ»´Î¸üĞÂ4×ª¼¼ÄÜµÄÊ£Óà¼¼ÄÜµãµÄµÈ¼¶ 
-ZHUANSHENG_TUITION_4	= 200000000;	-- µÚ4´Î×ªÉúËùĞèJXB
-CLEAR_SKILL_4_PRICE = 10000000	-- 4×ª¼¼ÄÜµãÏ´µãµÄ¼Û¸ñ
-TB_SKILL_4 = {{1123,0},{1124,0},{1125,0},{1126,0},{1127,0},{1128,0},{1129,0},{1130,0}}		-- ±£´æ4×ª¼¼ÄÜµÄÏà¹Øid
+TSK_TRANSLIFE_4 = 2908	
+TSK_LEAVE_SKILL_POINT_4 = 2909
+TSK_USED_SKILL_POINT_4 = 2899
+TSK_LAST_UP_LEVEL_4 = 2910
+ZHUANSHENG_TUITION_4	= 200000000
+CLEAR_SKILL_4_PRICE = 10000000
+TB_SKILL_4 = {{1123,0},{1124,0},{1125,0},{1126,0},{1127,0},{1128,0},{1129,0},{1130,0}}
 
-NSTARTLEVEL_4 = 105		-- 4×ª¼¼ÄÜ´Ó105¼¶¿ªÊ¼»ñµÃ¼¼ÄÜµã
-NPERPOINTNEEDLEVEL = 5  -- Ã¿5¼¶»ñµÃÒ»¸ö¼¼ÄÜµã
+NSTARTLEVEL_4 = 105
+NPERPOINTNEEDLEVEL = 5

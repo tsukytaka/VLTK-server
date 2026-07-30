@@ -5,7 +5,7 @@
 Include("\\script\\global\\timerhead.lua")
 Include("\\script\\missions\\autohang\\function.lua")
 Include("\\script\\config\\cfg_features.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 function main()
 	--Uworld137 = GetTask(137)
 	--if (Uworld137 == 0) then						-- µÚÒ»´Î¶Ô»°£¬ÐèÒª¼ì²â¼¼ÄÜ¸üÐÂ
@@ -38,8 +38,10 @@ function main()
 		Say(strNeedLevel, 0);
 	else
 		local tbSay = {}
+		if UongChaoLapBat == 1 then
 		tinsert(tbSay,"§­îc! ta uèng! /buy_yes")
 		tinsert(tbSay,"Xin hái: Thø ch¸o nµy, uèng vµo bao l©u sau míi cã c«ng hiÖu? /check_time")
+		end
 		if CFG_HONNGUYENLINHLO == 1 then
 			tinsert(tbSay,"Ta muèn chÕ t¹o Hçn Nguyªn Linh Lé/refine")
 		end

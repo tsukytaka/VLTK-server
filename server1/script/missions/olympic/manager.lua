@@ -1,387 +1,387 @@
-IncludeLib("SETTING");
+IncludeLib("SETTING"); 
 Include("\\script\\missions\\olympic\\head.lua");
 
-function main()
+function main() 
 
-	--ÉèÖÃ·µ»Øµã
-	x,y,z = GetWorldPos();
-	SetTask(300, x);
-	SetTask(301, y);
-	SetTask(302, z);
+-- script viet hoa By http://tranhba.com  thiÕt trİ trë vÒ ®iÓm 
+x,y,z = GetWorldPos(); 
+SetTask(300, x); 
+SetTask(301, y); 
+SetTask(302, z); 
 
-	idx = SubWorldID2Idx(MapTab);
-	if (idx == -1) then
-		ErrorMsg(3) 
-		return
-	end;
+idx = SubWorldID2Idx(MapTab); 
+if (idx == -1) then 
+ErrorMsg(3) 
+return 
+end; 
 
-	OldSubWorld = SubWorld;
-	SubWorld = idx;
-	ms_state = GetMissionV(MS_STATE);
-	fs = GetMissionS(FACTIONS);
+OldSubWorld = SubWorld; 
+SubWorld = idx; 
+ms_state = GetMissionV(MS_STATE); 
+fs = GetMissionS(FACTIONS); 
 
-	if (ms_state == 0) then 
-		Say("½ûÎÀÍ³Áì£ºÏÖÔÚÃ»ÓĞÈÎºÎ±ÈÈü£¬ÄãĞèÒªÆô¶¯±ÈÈüÂğ£¿", 4, "Æô¶¯±ÈÈüµ¥ÌôÅÅÎ»Èü/StartReady","Æô¶¯°ï»á×Ê¸ñÈü/StartTong","²é¿´ÉÏÒ»½×¶ÎµÄ±ÈÈü½á¹û/Result", "²»ĞèÒªÁË/OnCancel");
-	elseif (ms_state == 1) then
-		Say("½ûÎÀÍ³Áì£ºÕâÀïÊÇÍ¬ÃÅÅÉ¸ßÊÖÅÅÎ»ÈüµÄÈü³¡£¬ÏÖÔÚÕı¾ÙĞĞ"..fs.."ÅÅÎ»±ÈÈü£¬¸óÏÂÊÇ·ñÓĞĞËÈ¤²Î¼Ó£¿", 3, "ºÃÑ½£¬ÎÒ²Î¼Ó/OnRegister", "ÅÅÎ»ÈüµÄ¹æÔòÊÇÊ²Ã´£¿/OnHelp", "ÎÒÔÙ×¼±¸Ò»ÏÂ/OnCancel");
-	elseif (ms_state == 2) then
-		OnReady();	-- ×¼±¸Èë³¡
-	elseif (ms_state == 3) then 
-		ErrorMsg(1)
-	elseif (ms_state == 4) then
-		Result()
-	elseif (ms_state == 5) then 
-		Say("½ûÎÀÍ³Áì£ºÕâÀïÕı¾ÙĞĞ°ÂÔËÔ¤Ñ¡ÈüÖ®°ï»á×Ê¸ñÈü£¬¹ó°ïÊÇ·ñÓĞĞËÈ¤²Î¼Ó£¿", 4, "ºÃÑ½£¬ÎÒ²Î¼Ó/OnRegister1", "±ÈÈüµÄ¹æÔòÊÇÊ²Ã´£¿/OnHelp1", "²éÑ¯Ò»ÏÂÓĞÄÄĞ©°ïÅÉ±¨ÃûÁË/LookRegister", "ÎÒÔÙ×¼±¸Ò»ÏÂ/OnCancel");
-	elseif (ms_state == 6) then
-		OnEntry()	-- °ï»áÈë³¡
-	elseif (ms_state == 7) then
-		ErrorMsg(1)	-- °ï»áÕ½¶·ÖĞ
-	elseif (ms_state == 8) then
-		TongWait()	-- °ï»á°ï»áÏÂÒ»ÂÖ
-	elseif (ms_state == 9) then
-		EndTong()	-- °ï»á½áÊø
-	else
-		ErrorMsg(3)
-	end;
-	SubWorld = OldSubWorld;
-end;
+if (ms_state == 0) then 
+Say("Thèng lÜnh cÊm vÖ # b©y giê kh«ng cã bÊt kú tranh tµi , ng­¬i cÇn khëi ®éng tranh tµi sao ? ", 4,"Khëi ®éng tranh tµi mét m×nh ®Êu ®øng hµng vŞ cuéc so tµi /StartReady","Khëi ®éng bang héi t­ c¸ch cuéc so tµi /StartTong","Tra xĞt th­îng cÊp mét ®o¹n ®İch tranh tµi kÕt qu¶ /Result","Kh«ng cÇn /OnCancel"); 
+elseif (ms_state == 1) then 
+Say("Thèng lÜnh cÊm vÖ # n¬i nµy lµ ®ång m«n ph¸i cao thñ ®øng hµng vŞ cuéc so tµi ®İch cuéc so tµi trµng , b©y giê ®ang cö hµnh "..fs.." ®øng hµng vŞ tranh tµi , c¸c h¹ lµ hay kh«ng cã høng thó tham gia ? ", 3,"H¶o nha , ta tham gia /OnRegister","§øng hµng vŞ cuéc so tµi ®İch quy t¾c lµ c¸i g× ? /OnHelp","Ta n÷a chuÈn bŞ mét chót /OnCancel"); 
+elseif (ms_state == 2) then 
+OnReady(); -- script viet hoa By http://tranhba.com  chuÈn bŞ vµo trµng 
+elseif (ms_state == 3) then 
+ErrorMsg(1) 
+elseif (ms_state == 4) then 
+Result() 
+elseif (ms_state == 5) then 
+Say("Thèng lÜnh cÊm vÖ # n¬i nµy ®ang cö hµnh ¸o vËn dù chän cuéc so tµi chi bang héi t­ c¸ch cuéc so tµi , ®¾t gióp cã hay kh«ng cã høng thó tham gia ? ", 4,"H¶o nha , ta tham gia /OnRegister1","So tµi quy t¾c lµ c¸i g× ? /OnHelp1","TuÇn tra mét c¸i cã nh÷ng bang ph¸i b¸o danh /LookRegister","Ta n÷a chuÈn bŞ mét chót /OnCancel"); 
+elseif (ms_state == 6) then 
+OnEntry() -- script viet hoa By http://tranhba.com  bang héi vµo trµng 
+elseif (ms_state == 7) then 
+ErrorMsg(1) -- script viet hoa By http://tranhba.com  bang héi vßng chiÕn 
+elseif (ms_state == 8) then 
+TongWait() -- script viet hoa By http://tranhba.com  bang héi bang héi vßng kÕ tiÕp 
+elseif (ms_state == 9) then 
+EndTong() -- script viet hoa By http://tranhba.com  bang héi kÕt thóc 
+else 
+ErrorMsg(3) 
+end; 
+SubWorld = OldSubWorld; 
+end; 
 
-function LookRegister()
-	str = "°ï»á×Ê¸ñÈüÒÑ¾­±¨ÃûµÄÃûµ¥ÈçÏÂ£º<enter><enter>";
-	maxn = TableSDD_Search("olympictab","") - 1;
-	for i = 1,maxn do
-		qname,qx,qy = TableSDD_GetValue("olympictab",i);
-		str = str.."  "..qname
-	end;
-	Say(str,0);
-end;
+function LookRegister() 
+str = " bang héi t­ c¸ch cuéc so tµi ®· ghi danh ®İch danh s¸ch nh­ sau #<enter><enter>"; 
+maxn = TableSDD_Search("olympictab","") - 1; 
+for i = 1,maxn do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+str = str.." "..qname 
+end; 
+Say(str,0); 
+end; 
 
-function EndTong()
-	qname,qx,qy = TableSDD_GetValue("olympictab",1);
-	if (GetTong() == qname) and (GetName() == GetTongMaster()) then
-		SetTask(OLYMPICFLAG,30);
-		Say("ÄãÒÑ¾­È¡µÃÁì¶ÓµÄ×Ê¸ñ£¬ĞèÒªÁìÈ¡ÆäËû¶ÓÔ±µÄÈë³¡È¯Âğ£¿",0);
-		CloseMission(MISSIONID);
-	else
-		Say("°ï»á"..qname.."ÒÑ¾­È¡µÃÁËÁì¶ÓµÄ×Ê¸ñ¡£",0)
-	end;
-end;
+function EndTong() 
+qname,qx,qy = TableSDD_GetValue("olympictab",1); 
+if (GetTong() == qname) and (GetName() == GetTongMaster()) then 
+SetTask(OLYMPICFLAG,30); 
+Say("Ng­¬i ®· lÊy ®­îc lÜnh ®éi ®İch t­ c¸ch , cÇn nhËn lÊy nh÷ng ®éi viªn kh¸c ®İch vµo trµng kho¸n sao ? ",0); 
+CloseMission(MISSIONID); 
+else 
+Say("Bang héi "..qname.." ®· lÊy ®­îc lÜnh ®éi ®İch t­ c¸ch . ",0) 
+end; 
+end; 
 
-function StartTong()
-	OldSubWorld = SubWorld;
-	idx = SubWorldID2Idx(MapTab);
-	SubWorld = idx;
-	ms_state = GetMissionV(MS_STATE);
+function StartTong() 
+OldSubWorld = SubWorld; 
+idx = SubWorldID2Idx(MapTab); 
+SubWorld = idx; 
+ms_state = GetMissionV(MS_STATE); 
 
-	if (ms_state == 0) then
-		OpenMission(MISSIONID);
+if (ms_state == 0) then 
+OpenMission(MISSIONID); 
 
-		str = "ÏÖÔÚ°ÂÔËÔ¤Ñ¡Èü°ï»á×Ê¸ñÈü¿ªÊ¼±¨Ãû£¬»¶Ó­ËùÓĞ°ï»áµÄ°ïÖ÷Ç°À´ÁÙ°²»Ê¹¬ÃÅ¿Ú±¨Ãû²ÎÈü£¬±¨Ãû·Ñ100Íò¡£";
-		AddGlobalNews(str);
-		SetMissionV(MS_STATE,5);
-		StartMissionTimer(MISSIONID, TIME_NO2, TIMER_5);  --¿ªÊ¼±¨Ãû¼ÆÊ±
-	end;
+str = " b©y giê ¸o vËn dù chän cuéc so tµi bang héi t­ c¸ch cuéc so tµi b¾t ®Çu ghi danh , hoan nghªnh tÊt c¶ bang héi ®İch bang chñ tíi tr­íc tr­íc khi an cöa hoµng cung ghi danh dù thi , tiÒn ghi danh 100 v¹n . "; 
+AddGlobalNews(str); 
+SetMissionV(MS_STATE,5); 
+StartMissionTimer(MISSIONID, TIME_NO2, TIMER_5); -- script viet hoa By http://tranhba.com  b¾t ®Çu ghi danh tİnh giê 
+end; 
 
-	SubWorld = OldSubWorld;
-end;
+SubWorld = OldSubWorld; 
+end; 
 
-function TongWait()
-	str = "°ï»á×Ê¸ñÈü½øÈëÏÂÒ»ÂÖ±ÈÈüÃûµ¥ÈçÏÂ£º<enter><enter>";
-	maxn = TableSDD_Search("olympictab","") - 1;
-	for i = 1,maxn do
-		qname,qx,qy = TableSDD_GetValue("olympictab",i);
-		if (qy == 0) then
-			str = str.."    "..qname.."£ºÂÖ¿Õ<enter>"
-		elseif (mod(qy,2) == 0) then
-			str = str.."    "..qname.."   VS"
-		else
-			str = str.."  "..qname.."<enter>"
-		end;
-	end;
-	Say(str,0);
-end;
+function TongWait() 
+str = " bang héi t­ c¸ch cuéc so tµi tiÕn vµo vßng kÕ tiÕp tranh tµi danh s¸ch nh­ sau #<enter><enter>"; 
+maxn = TableSDD_Search("olympictab","") - 1; 
+for i = 1,maxn do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+if (qy == 0) then 
+str = str.." "..qname.."# ®æi phiªn v« İch <enter>" 
+elseif (mod(qy,2) == 0) then 
+str = str.." "..qname.." VS" 
+else 
+str = str.." "..qname.."<enter>" 
+end; 
+end; 
+Say(str,0); 
+end; 
 
-function Result()
-	if (GetMissionV(FIGHT_MODE) == 0) then
-		maxn = TableSDD_Search("olympictab","");
-		maxn = maxn - 1;
-		if (maxn > 16) then
-			maxn = 16
-		end;
-		str = "ÏÖ½×¶ÎÅÅÎ»ÈüÇ°"..maxn.."Ãû»ı·ÖÈçÏÂ£º<enter><enter>";
-	else
-		str = "ÏÖ½×¶ÎÌÔÌ­Èü½øÈëÏÂÂÖ±ÈÈüÃûµ¥¼°»ı·ÖÈçÏÂ£º<enter><enter>";
-		maxn = GetMissionV(TOTALNUMBER1);
-	end;
-	if (maxn < 2) then
-		str = "ÏÖÔÚ»¹Ã»ÓĞÈÎºÎ±ÈÈüµÄ»ı·Ö¡£"
-	else
---		Msg2Player("maxn="..maxn);
+function Result() 
+if (GetMissionV(FIGHT_MODE) == 0) then 
+maxn = TableSDD_Search("olympictab",""); 
+maxn = maxn - 1; 
+if (maxn > 16) then 
+maxn = 16 
+end; 
+str = " hiÖn giai ®o¹n ®øng hµng vŞ cuéc so tµi tr­íc "..maxn.." tªn tİch ph©n nh­ sau #<enter><enter>"; 
+else 
+str = " hiÖn giai ®o¹n cuéc thi vßng lo¹i tiÕn vµo h¹ ®æi phiªn tranh tµi danh s¸ch cïng tİch ph©n nh­ sau #<enter><enter>"; 
+maxn = GetMissionV(TOTALNUMBER1); 
+end; 
+if (maxn < 2) then 
+str = " b©y giê cßn kh«ng cã bÊt kú so tµi tİch ph©n . " 
+else 
+-- script viet hoa By http://tranhba.com  Msg2Player("maxn="..maxn); 
 
-		for i = 1,maxn do
-			qname,qx,qy = TableSDD_GetValue("olympictab",i);
-			px = floor(qx / 256);
-			px = mod(px,256);
-			if (qy == 0) then
-				px = px - FIGHTS * 3
-				str = str.."µÚ"..i.."Ãû£º"..qname.."£º"..px.."·Ö£¬ÂÖ¿Õ<enter>"
-			else
-				str = str.."µÚ"..i.."Ãû£º"..qname.."£º"..px.."·Ö<enter>"
-			end;
-		end;
-		m = TableSDD_Search("olympictab","") - 1;
-		if (GetMissionV(FIGHT_MODE) ~= 0) and (maxn < m) then
+for i = 1,maxn do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+px = floor(qx / 256); 
+px = mod(px,256); 
+if (qy == 0) then 
+px = px - FIGHTS * 3 
+str = str.." thø "..i.." tªn #"..qname.."#"..px.." ph©n , ®æi phiªn v« İch <enter>" 
+else 
+str = str.." thø "..i.." tªn #"..qname.."#"..px.." ph©n <enter>" 
+end; 
+end; 
+m = TableSDD_Search("olympictab","") - 1; 
+if (GetMissionV(FIGHT_MODE) ~= 0) and (maxn < m) then 
 			for i = maxn+1,m do
-				qname,qx,qy = TableSDD_GetValue("olympictab",i);
-				px = floor(qx / 256);
-				px = mod(px,256);
-				str = str.."µÚ"..i.."Ãû£º"..qname.."£º"..px.."·Ö£¬½áÊø<enter>"
-			end;
-		end;
-	end;
-	Say(str,0);
-end;
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+px = floor(qx / 256); 
+px = mod(px,256); 
+str = str.." thø "..i.." tªn #"..qname.."#"..px.." ph©n , kÕt thóc <enter>" 
+end; 
+end; 
+end; 
+Say(str,0); 
+end; 
 
-function OnHelp1()
-	Talk(7, "","½ûÎÀÍ³Áì£º°ÂÔËÔ¤Ñ¡Èü°ï»á×Ê¸ñÈüÊÇÎªÁË²Î¼ÓÈ«ÇøÈ«·şËù¾ÙĞĞµÄ´óĞÍ±ÈÈü¶ø½øĞĞµÄÔ¤Ñ¡Èü£¬Ô¤Ñ¡ÈüÍ¨¹ı°ï»áµÄĞÎÊ½Í³Ò»²Î¼Ó¡£", "½ûÎÀÍ³Áì£ºÒª²Î¼ÓÔ¤Ñ¡Èü£¬Ê×ÏÈÔÚÎÒÕâ±ß½øĞĞ±¨Ãû£¬±¨Ãû·ÑÎª100Íò¡£±¨ÃûÏŞ¶îÎª×î¶à16¸ö°ï»á£¬±¨Ãû½ØÖ¹Ê±¼äµ½ÖĞÎç12µã½áÊø¡£", "½ûÎÀÍ³Áì£ºÃ¿¸ö°ï»áÔÊĞíÓĞ16¸öÈË²Î¼Ó±ÈÈü£¬µ«ÊÇÈë°ïÊ±¼ä±ØĞëÒªÂú1ÌìÒÔÉÏ¡£", "½ûÎÀÍ³Áì£º±¨Ãû½áÊøÖ®ºó£¬¼´¿ªÊ¼±ÈÈüÈë³¡Ê±¼ä£¬Èë³¡Ê±¼äÎª5·ÖÖÓ£¬´ıÈë³¡×¼±¸Ê±¼ä½áÊøºó£¬±ÈÈü±ãÕıÊ½¿ªÊ¼¡£" , 	"½ûÎÀÍ³Áì£º±ÈÈüÊ±¼äÎª10·ÖÖÓ£¬²ÉÓÃÌÔÌ­ÖÆ£¬±ÈÈüÊ±¼ä½áÊøÖ®ºó¿´Ë«·½Ê£ÏÂÈËÊı¶àÉÙÅĞ¶¨Ê¤¸º¡£Ê¤·½½øÈëÏÂÒ»ÂÖ±ÈÈü¡£",	"½ûÎÀÍ³Áì£ºÁíÍâ£¬Èç¹û±ÈÈü½×¶ÎÖĞÈÎºÎÊ±¿ÌÄ³Ò»·½µôÏß»òÕß»Ø³Ç¼´ÅĞÎªËÀÍö£¡","½ûÎÀÍ³Áì£º±ÈÈü×îÖÕÈ¡Ê¤µÄ°ï»á°ïÖ÷½«×÷ÎªÁì¶ÓÁíÍâÔÙÌôÑ¡29ÃûÆäËûÈÎºÎ¶ÓÔ±´øÁìÊ®´ó¸ßÊÖ¼°ÆäËûµ¥Ïî±ÈÈüÇ°4Ãû´ú±í±¾·ş²Î¼ÓÈ«ÇøÈ«·şµÄ°ÂÔË»á¡£");
-end;
+function OnHelp1() 
+Talk(7, "","Thèng lÜnh cÊm vÖ # ¸o vËn dù chän cuéc so tµi bang héi t­ c¸ch cuéc so tµi lµ v× tham gia toµn khu toµn dïng/uèng së cö hµnh ®İch ®¹i h×nh tranh tµi mµ vµo ®­îc dù chän cuéc so tµi , dù chän cuéc so tµi th«ng qua bang héi ®İch h×nh thøc thèng nhÊt tham gia . ","Thèng lÜnh cÊm vÖ # muèn tham gia dù chän cuéc so tµi , ®Çu tiªn t¹i ta bªn nµy tiÕn hµnh ghi danh , tiÒn ghi danh v× 100 v¹n . ghi danh h¹n ng¹ch v× nhiÒu nhÊt 16 c¸ bang héi , ghi danh chÆn chØ ®· ®Õn giê buæi tr­a 12 ®iÓm kÕt thóc . ","Thèng lÜnh cÊm vÖ # mçi bang héi cho phĞp cã 16 ng­êi tham gia tranh tµi , nh­ng lµ vµo gióp thêi gian nhÊt ®Şnh ph¶i m·n 1 ngµy trë lªn . ","Thèng lÜnh cÊm vÖ # ghi danh sau khi kÕt thóc , tøc b¾t ®Çu tranh tµi vµo trµng thêi gian , vµo trµng thêi gian lµ 5 phót , ®îi vµo trµng chuÈn bŞ thêi gian sau khi kÕt thóc , tranh tµi liÒn chİnh thøc b¾t ®Çu . " ,"Thèng lÜnh cÊm vÖ # tranh tµi thêi gian lµ 10 phót , ¸p dông ®µo th¶i chÕ , tranh tµi thêi gian sau khi kÕt thóc nh×n song ph­¬ng cßn d­ l¹i nh©n sè bao nhiªu ph¸n ®Şnh th¾ng b¹i . th¾ng ph­¬ng tiÕn vµo vßng kÕ tiÕp tranh tµi . ","Thèng lÜnh cÊm vÖ # kh¸c , nÕu nh­ tranh tµi giai ®o¹n trung bÊt kú thêi kh¾c mét ph­¬ng r¬i tuyÕn hoÆc lµ trë vÒ thµnh tøc xö v× tö vong #","Thèng lÜnh cÊm vÖ # tranh tµi cuèi cïng thñ th¾ng bang héi bang chñ ®em lµm lÜnh ®éi kh¸c n÷a chän lùa 29 tªn nh÷ng kh¸c bÊt kú ®éi viªn mang thËp ®¹i cao thñ cËp kú h¾n ®an h¹ng tranh tµi tr­íc 4 tªn ®¹i biÓu vèn dïng/uèng tham gia toµn khu toµn dïng/uèng ®İch ¸o vËn héi . "); 
+end; 
 
-function OnHelp()
-	Talk(6, "","½ûÎÀÍ³Áì£ºÅÅÎ»ÈüÊÇÎªËùÓĞ81¼¶ÒÔÉÏµÄÍ¬ÃÅÅÉµÄÎäÁÖÈËÊ¿¾ÙĞĞ´óĞÍµ¥Ìô±ÈÈüµÄµØ·½£¬ÅÅÎ»Èü×Ü¹²¾ÙĞĞ10ÂÖ£¬ÔÚÃ¿Ò»ÂÖÖĞÏµÍ³½«Ëæ»ú·ÖÅä¶ÔÊÖ¡£",	"½ûÎÀÍ³Áì£ºÒª½øĞĞÅÅÎ»Èü£¬Ê×ÏÈÔÚÎÒÕâ±ß½øĞĞ±¨Ãû£¬±¨Ãû·ÑÎª100Íò¡£±¨Ãû½ØÖ¹Ê±¼äµ½ÖĞÎç12µã½áÊø¡£",	"½ûÎÀÍ³Áì£º±¨Ãû½áÊøÖ®ºó£¬¼´¿ªÊ¼±ÈÈüÈë³¡Ê±¼ä£¬Èë³¡Ê±¼äÎª5·ÖÖÓ£¬´ıÈë³¡×¼±¸Ê±¼ä½áÊøºó£¬±ÈÈü±ãÕıÊ½¿ªÊ¼¡£" , 	"½ûÎÀÍ³Áì£º±ÈÈüµÄÊ±¼äÎª10·ÖÖÓ£¬Èç¹ûÔÚ10·ÖÖÓÖ®ÄÚË«·½Î´·ÖÊ¤¸º£¬ÔòÅĞÎªÆ½ÊÖ¡£",	"½ûÎÀÍ³Áì£ºÁíÍâ£¬Èç¹û±ÈÈü½×¶ÎÖĞÈÎºÎÊ±¿ÌÄ³Ò»·½µôÏß»òÕß»Ø³Ç¼´ÅĞÎªÊ§°Ü£¡","½ûÎÀÍ³Áì£º±ÈÈü¼Æ·Ö¹æÔò£ºÊ¤·½µÃ3·Ö£¬¸º·½µÃ0·Ö£¬Æ½¾Ö¸÷µÃ1·Ö¡£´ı10ÂÖ±ÈÈüÈ«²¿½áÊøÖ®ºó½«¸ø³ö×ÜÅÅÃû¡£");
-end;
+function OnHelp() 
+Talk(6, "","Thèng lÜnh cÊm vÖ # ®øng hµng vŞ cuéc so tµi lµ v× tÊt c¶ 81 cÊp trë lªn ®ång m«n ph¸i ®İch vâ l©m nh©n sÜ cö hµnh ®¹i h×nh mét m×nh ®Êu so tµi ®Şa ph­¬ng , ®øng hµng vŞ cuéc so tµi tæng céng cö hµnh 10 ®æi phiªn , ë mçi mét vßng trung hÖ thèng ®em ngÉu nhiªn ph©n phèi ®èi thñ . ","Thèng lÜnh cÊm vÖ # muèn tiÕn hµnh ®øng hµng vŞ cuéc so tµi , ®Çu tiªn t¹i ta bªn nµy tiÕn hµnh ghi danh , tiÒn ghi danh v× 100 v¹n . ghi danh chÆn chØ ®· ®Õn giê buæi tr­a 12 ®iÓm kÕt thóc . ","Thèng lÜnh cÊm vÖ # ghi danh sau khi kÕt thóc , tøc b¾t ®Çu tranh tµi vµo trµng thêi gian , vµo trµng thêi gian lµ 5 phót , ®îi vµo trµng chuÈn bŞ thêi gian sau khi kÕt thóc , tranh tµi liÒn chİnh thøc b¾t ®Çu . " ,"Thèng lÜnh cÊm vÖ # so tµi thêi gian lµ 10 phót , nÕu nh­ ë 10 phót bªn trong song ph­¬ng ch­a ph©n th¾ng b¹i , lµ xö v× ngang tay . ","Thèng lÜnh cÊm vÖ # kh¸c , nÕu nh­ tranh tµi giai ®o¹n trung bÊt kú thêi kh¾c mét ph­¬ng r¬i tuyÕn hoÆc lµ trë vÒ thµnh tøc xö v× thÊt b¹i #","Thèng lÜnh cÊm vÖ # tranh tµi kÕ ph©n quy t¾c # th¾ng ph­¬ng ®¾c 3 ph©n , bŞ/cha/chŞu ph­¬ng ®¾c 0 ph©n , b×nh côc c¸c ph¶i 1 ph©n . ®îi 10 ®æi phiªn tranh tµi toµn bé sau khi kÕt thóc ®em cho ra tæng ®øng hµng . "); 
+end; 
 
 
-function StartReady()
-	OldSubWorld = SubWorld;
-	idx = SubWorldID2Idx(MapTab);
-	SubWorld = idx;
-	ms_state = GetMissionV(MS_STATE);
+function StartReady() 
+OldSubWorld = SubWorld; 
+idx = SubWorldID2Idx(MapTab); 
+SubWorld = idx; 
+ms_state = GetMissionV(MS_STATE); 
 
-	if (GetLevel() > 80) and (GetLastFactionNumber() ~= -1) and (ms_state == 0) then
-		OpenMission(MISSIONID);
-		n = GetLastFactionNumber();
+if (GetLevel() > 80) and (GetLastFactionNumber() ~= -1) and (ms_state == 0) then 
+OpenMission(MISSIONID); 
+n = GetLastFactionNumber(); 
 		str1 = FACTIONTAB[n+1];
-		SetMissionV(FACTIONS,n);
-		SetMissionS(FACTIONS,str1);
+SetMissionV(FACTIONS,n); 
+SetMissionS(FACTIONS,str1); 
 
-		str = "ÏÖÔÚ"..str1.."ÅÅÎ»Èü¿ªÊ¼±¨Ãû£¬»¶Ó­ËùÓĞ81¼¶ÒÔÉÏµÄ"..str1.."¸ßÊÖÇ°À´ÁÙ°²»Ê¹¬ÃÅ¿Ú±¨Ãû²ÎÈü£¬±¨Ãû·Ñ100Íò¡£";
-		AddGlobalNews(str);
-	end;
+str = " b©y giê "..str1.." ®øng hµng vŞ cuéc so tµi b¾t ®Çu ghi danh , hoan nghªnh tÊt c¶ 81 cÊp trë lªn "..str1.." cao thñ tíi tr­íc tr­íc khi an cöa hoµng cung ghi danh dù thi , tiÒn ghi danh 100 v¹n . "; 
+AddGlobalNews(str); 
+end; 
 
-	SubWorld = OldSubWorld;
-end;
+SubWorld = OldSubWorld; 
+end; 
 
-function OnRegister()
+function OnRegister() 
 
-	OldSubWorld = SubWorld;
-	SubWorld = SubWorldID2Idx(MapTab);
-	factionx = GetMissionV(FACTIONS);
-	r = GetMissionV(OL_KEY);
-	SubWorld = OldSubWorld;
+OldSubWorld = SubWorld; 
+SubWorld = SubWorldID2Idx(MapTab); 
+factionx = GetMissionV(FACTIONS); 
+r = GetMissionV(OL_KEY); 
+SubWorld = OldSubWorld; 
 
-	if (GetLevel() < 81) or (GetLastFactionNumber() ~= factionx) then
-		ErrorMsg(5)
-		return
-	end;
+if (GetLevel() < 81) or (GetLastFactionNumber() ~= factionx) then 
+ErrorMsg(5) 
+return 
+end; 
 
-	if GetTask(TASKFLAG) == r then
-		ErrorMsg(4)
-		return
-	end;
+if GetTask(TASKFLAG) == r then 
+ErrorMsg(4) 
+return 
+end; 
 
-	n = TableSDD_Search("olympictab","");
-	if (n == 0) or (n > MAX_MEMBER_COUNT) then 
-		ErrorMsg(7)
-		return
-	end;
+n = TableSDD_Search("olympictab",""); 
+if (n == 0) or (n > MAX_MEMBER_COUNT) then 
+ErrorMsg(7) 
+return 
+end; 
 
-	if GetCash() < 1000000 then 
-		ErrorMsg(2)
-		return
-	end;
+if GetCash() < 1000000 then 
+ErrorMsg(2) 
+return 
+end; 
 
-	Pay(1000000);
-	SetTask(TASKFLAG,r);
-	SetTask(SCORE,0);
-	SetTask(OLYMPICFLAG,0);
-	x = GetName();
-	TableSDD_SetValue("olympictab",n,x,0,0)
+Pay(1000000); 
+SetTask(TASKFLAG,r); 
+SetTask(SCORE,0); 
+SetTask(OLYMPICFLAG,0); 
+x = GetName(); 
+TableSDD_SetValue("olympictab",n,x,0,0) 
 
-	SubWorld = OldSubWorld;
-	Msg2Player("ÄãÒÑ¾­±¨ÃûÁË±ÈÈü£¬ÇëÄÍĞÄµÈºòÈë³¡Í¨Öª¡£");
-	Say("½ûÎÀÍ³Áì£ºÄãÒÑ¾­±¨ÃûÁË±ÈÈü£¬ÇëÄÍĞÄµÈºòÈë³¡Í¨Öª¡£",0);
-end;
+SubWorld = OldSubWorld; 
+Msg2Player("Ng­¬i ®· b¸o danh tranh tµi , xin/mêi kiªn nhÉn chê vµo trµng th«ng b¸o . "); 
+Say("Thèng lÜnh cÊm vÖ # ng­¬i ®· b¸o danh tranh tµi , xin/mêi kiªn nhÉn chê vµo trµng th«ng b¸o . ",0); 
+end; 
 
 
 
-function OnRegister1()			-- °ï»á±¨Ãû
-	if (GetName() ~= GetTongMaster()) then
-		ErrorMsg(9)
-		return
-	end
+function OnRegister1() -- script viet hoa By http://tranhba.com  bang héi ghi danh 
+if (GetName() ~= GetTongMaster()) then 
+ErrorMsg(9) 
+return 
+end 
 
-	OldSubWorld = SubWorld;
+OldSubWorld = SubWorld; 
 
---	if GetTask(TASKFLAG) == r then
---		ErrorMsg(4)
---		return
---	end;
+-- script viet hoa By http://tranhba.com  if GetTask(TASKFLAG) == r then 
+-- script viet hoa By http://tranhba.com  ErrorMsg(4) 
+-- script viet hoa By http://tranhba.com  return 
+-- script viet hoa By http://tranhba.com  end; 
 
-	tname,tt = GetTong();
-	if (TableSDD_Search("olympictab",tname) ~= 0) then 
-		ErrorMsg(4)
-		return
-	end;
+tname,tt = GetTong(); 
+if (TableSDD_Search("olympictab",tname) ~= 0) then 
+ErrorMsg(4) 
+return 
+end; 
 
-	n = TableSDD_Search("olympictab","");
-	if (n == 0) or (n > 16) then 
-		ErrorMsg(7)
-		return
-	end;
+n = TableSDD_Search("olympictab",""); 
+if (n == 0) or (n > 16) then 
+ErrorMsg(7) 
+return 
+end; 
 
-	if GetCash() < 1000000 then 
-		ErrorMsg(2)
-		return
-	end;
+if GetCash() < 1000000 then 
+ErrorMsg(2) 
+return 
+end; 
 
-	Pay(1000000);
-	TableSDD_SetValue("olympictab",n,tname,0,0)
+Pay(1000000); 
+TableSDD_SetValue("olympictab",n,tname,0,0) 
 
-	SubWorld = OldSubWorld;
-	Msg2Player("ÄãµÄ°ï»áÒÑ¾­±¨ÃûÁË±ÈÈü£¬ÇëÄÍĞÄµÈºòÈë³¡Í¨Öª¡£");
-	Say("½ûÎÀÍ³Áì£ºÄãµÄ°ï»áÒÑ¾­±¨ÃûÁË±ÈÈü£¬ÇëÄÍĞÄµÈºòÈë³¡Í¨Öª¡£",0);
-end;
+SubWorld = OldSubWorld; 
+Msg2Player("Ng­¬i bang héi ®· b¸o danh tranh tµi , xin/mêi kiªn nhÉn chê vµo trµng th«ng b¸o . "); 
+Say("Thèng lÜnh cÊm vÖ # ng­¬i bang héi ®· b¸o danh tranh tµi , xin/mêi kiªn nhÉn chê vµo trµng th«ng b¸o . ",0); 
+end; 
 
-function OnReady()
+function OnReady() 
 
-	OldSubWorld = SubWorld;
-	SubWorld = SubWorldID2Idx(MapTab);
-	r = GetMissionV(OL_KEY);
-	SubWorld = OldSubWorld
+OldSubWorld = SubWorld; 
+SubWorld = SubWorldID2Idx(MapTab); 
+r = GetMissionV(OL_KEY); 
+SubWorld = OldSubWorld 
 
-	if GetTask(TASKFLAG) == r then 
-		OnJoin()
-	else
-		ErrorMsg(8)
-	end;
-end;
+if GetTask(TASKFLAG) == r then 
+OnJoin() 
+else 
+ErrorMsg(8) 
+end; 
+end; 
 
-function OnEntry()		-- °ï»áÈë³¡
+function OnEntry() -- script viet hoa By http://tranhba.com  bang héi vµo trµng 
 
-	tname,tt = GetTong();
-	n = TableSDD_Search("olympictab",tname)
-	if (n == 0) then 
-		str = "ÄãµÄ°ï»áÃ»ÓĞ±¨Ãû²ÎÈü»òÕßÒÑ±»ÌÔÌ­£¬ÏÖÔÚ°ï»á×Ê¸ñÈü²ÎÈüÃûµ¥ÈçÏÂ£º<enter><enter>";
-		maxn = TableSDD_Search("olympictab","") - 1;
-		for i = 1,maxn do
-			qname,qx,qy = TableSDD_GetValue("olympictab",i);
-			if (qy == 0) then
-				str = str.."    "..qname.."£ºÂÖ¿Õ<enter>"
-			elseif (mod(qy,2) == 0) then
-				str = str.."    "..qname.."   VS"
-			else
-				str = str.."  "..qname.."<enter>"
-			end;
-		end;
-		Say(str,0);
-		return
-	end
+tname,tt = GetTong(); 
+n = TableSDD_Search("olympictab",tname) 
+if (n == 0) then 
+str = " ng­¬i bang héi kh«ng cã ghi danh dù thi hoÆc lµ ®· bŞ ®µo th¶i , b©y giê bang héi t­ c¸ch cuéc so tµi dù thi danh s¸ch nh­ sau #<enter><enter>"; 
+maxn = TableSDD_Search("olympictab","") - 1; 
+for i = 1,maxn do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+if (qy == 0) then 
+str = str.." "..qname.."# ®æi phiªn v« İch <enter>" 
+elseif (mod(qy,2) == 0) then 
+str = str.." "..qname.." VS" 
+else 
+str = str.." "..qname.."<enter>" 
+end; 
+end; 
+Say(str,0); 
+return 
+end 
 
-	ny,n1,n2 = TableSDD_GetValue("olympictab",n)
-	if (n2 == 0) then 
-		str = "ÄãµÄ°ï»á±¾ÂÖ±ÈÈüÂÖ¿Õ£¬ÏÖÔÚ°ï»á×Ê¸ñÈü²ÎÈüÃûµ¥ÈçÏÂ£º<enter><enter>";
+ny,n1,n2 = TableSDD_GetValue("olympictab",n) 
+if (n2 == 0) then 
+str = " ng­¬i bang héi vèn ®æi phiªn tranh tµi ®æi phiªn v« İch , b©y giê bang héi t­ c¸ch cuéc so tµi dù thi danh s¸ch nh­ sau #<enter><enter>"; 
 
-		maxn = TableSDD_Search("olympictab","") - 1;
-		for i = 1,maxn do
-			qname,qx,qy = TableSDD_GetValue("olympictab",i);
-			if (qy == 0) then
-				str = str.."    "..qname.."£ºÂÖ¿Õ<enter>"
-			elseif (mod(qy,2) == 0) then
-				str = str.."    "..qname.."   VS"
-			else
-				str = str.."  "..qname.."<enter>"
-			end;
-		end;
-		Say(str,0);
-		return
-	end;
+maxn = TableSDD_Search("olympictab","") - 1; 
+for i = 1,maxn do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+if (qy == 0) then 
+str = str.." "..qname.."# ®æi phiªn v« İch <enter>" 
+elseif (mod(qy,2) == 0) then 
+str = str.." "..qname.." VS" 
+else 
+str = str.." "..qname.."<enter>" 
+end; 
+end; 
+Say(str,0); 
+return 
+end; 
 
-	if (GetJoinTongTime() < JOINTONGTIME) then 
-		ErrorMsg(12)
-		return
-	end;
+if (GetJoinTongTime() < JOINTONGTIME) then 
+ErrorMsg(12) 
+return 
+end; 
 
-	SetTask(300, 334);
-	SetTask(301, 1480);
-	SetTask(302, 3048);
-	SetTask(AREAID,n2);
+SetTask(300, 334); 
+SetTask(301, 1480); 
+SetTask(302, 3048); 
+SetTask(AREAID,n2); 
 	n3 = floor(n2/2) + 212;
-	NewWorld(n3,1633,3292);
-end;
+NewWorld(n3,1633,3292); 
+end; 
 
 
-function ErrorMsg(ErrorId)
---	Msg2Player("ErrorId="..ErrorID)
+function ErrorMsg(ErrorId) 
+-- script viet hoa By http://tranhba.com  Msg2Player("ErrorId="..ErrorID) 
 if (ErrorId == 1) then 
-	Say("½ûÎÀÍ³Áì£ºÏÖÔÚ±ÈÈüÕıÔÚ½øĞĞÖĞ£¬²»ÄÜÈë³¡¡£",0)
-elseif (ErrorId == 2) then
-	Say("½ûÎÀÍ³Áì£ºÄãÉíÉÏËù´øµÄÒøÁ½²»¹»¡£",0)
+Say("Thèng lÜnh cÊm vÖ # b©y giê tranh tµi ®ang tiÕn hµnh trung , kh«ng thÓ vµo trµng . ",0) 
+elseif (ErrorId == 2) then 
+Say("Thèng lÜnh cÊm vÖ # trªn ng­êi ng­¬i mang ng©n l­îng kh«ng ®ñ . ",0) 
 elseif (ErrorId == 3) then 
-	Say("½ûÎÀÍ³Áì£º±¨Ãû³öÏÖÎÊÌâ£¬ÇëÓë¹Ù·½ÁªÏµ£¡",0);
+Say("Thèng lÜnh cÊm vÖ # ghi danh x¶y ra vÊn ®Ò , xin/mêi cïng quan ph­¬ng liªn l¹c #",0); 
 elseif (ErrorId == 4) then 
-	Say("½ûÎÀÍ³Áì£ºÄãÒÑ¾­±¨ÃûÁË±ÈÈü£¬ÇëÄÍĞÄµÈºòÈë³¡Í¨Öª¡£", 0);
+Say("Thèng lÜnh cÊm vÖ # ng­¬i ®· b¸o danh tranh tµi , xin/mêi kiªn nhÉn chê vµo trµng th«ng b¸o . ", 0); 
 elseif (ErrorId == 5) then 
-	Say("½ûÎÀÍ³Áì£ºÄãµÄÃÅÅÉ²»·ûºÏÒªÇó»òÕßµÈ¼¶²»¹»81¼¶¡£",0);
+Say("Thèng lÜnh cÊm vÖ # m«n ph¸i cña ng­¬i kh«ng phï hîp yªu cÇu hoÆc lµ cÊp bËc kh«ng ®ñ 81 cÊp . ",0); 
 elseif (ErrorId == 6) then 
-	Say("½ûÎÀÍ³Áì£ºÏÖÔÚÏÂÒ»ÂÖ±ÈÈüÂíÉÏ¾ÍÒª¿ªÊ¼£¬ÇëµÈºòÆ¬¿Ì¡£",0);
+Say("Thèng lÜnh cÊm vÖ # b©y giê vßng kÕ tiÕp tranh tµi lËp tøc sÏ ph¶i b¾t ®Çu , xin chê chèc l¸t . ",0); 
 elseif (ErrorId == 7) then 
-	Say("½ûÎÀÍ³Áì£º¶Ô²»Æğ£¬±¨ÃûÃû¶îÒÑÂú¡£",0);
-elseif (ErrorId == 8) then
-	Say("½ûÎÀÍ³Áì£ºÄãÃ»ÓĞ±¨Ãû±ÈÈü£¬Òò´Ë²»ÄÜ½øÈë±ÈÈü³¡µØ¡£",0);
+Say("Thèng lÜnh cÊm vÖ # thËt xin lçi , ghi danh danh ng¹ch ®· ®Çy . ",0); 
+elseif (ErrorId == 8) then 
+Say("Thèng lÜnh cÊm vÖ # ng­¬i kh«ng cã ghi danh tranh tµi , v× vËy kh«ng thÓ vµo n¬i so tµi . ",0); 
 elseif (ErrorId == 9) then 
-	Say("½ûÎÀÍ³Áì£º°ï»á±ÈÈü±ØĞëÊÇ°ïÖ÷²ÅÄÜ±¨Ãû¡£",0);
-elseif (ErrorId == 10) then
-	Say("½ûÎÀÍ³Áì£ºÄãµÄ°ï»áÃ»ÓĞ±¨Ãû²Î¼Ó±ÈÈü¡£",0)
-elseif (ErrorId == 11) then
-	Say("½ûÎÀÍ³Áì£ºÄãµÄ°ï»á±¾ÂÖ±ÈÈüÂÖ¿Õ¡£",0)
-elseif (ErrorId == 12) then
-	Say("½ûÎÀÍ³Áì£ºÄã¼ÓÈë°ï»áµÄÊ±¼ä²»¹»1Ìì£¬²»ÄÜ²Î¼Ó±ÈÈü¡£",0)
-elseif (ErrorId == 13) then
-	Say("½ûÎÀÍ³Áì£ºÄã±¾ÂÖ±ÈÈüÂÖ¿Õ»òÒÑ±»±ÈÈüÌÔÌ­¡£",0)
-else
-	
-end;
-return
-end;
+Say("Thèng lÜnh cÊm vÖ # bang héi tranh tµi ph¶i lµ bang chñ míi cã thÓ ghi danh . ",0); 
+elseif (ErrorId == 10) then 
+Say("Thèng lÜnh cÊm vÖ # ng­¬i bang héi kh«ng cã ghi danh tham gia tranh tµi . ",0) 
+elseif (ErrorId == 11) then 
+Say("Thèng lÜnh cÊm vÖ # ng­¬i bang héi vèn ®æi phiªn tranh tµi ®æi phiªn v« İch . ",0) 
+elseif (ErrorId == 12) then 
+Say("Thèng lÜnh cÊm vÖ # ng­¬i gia nhËp bang héi ®İch thêi gian kh«ng ®ñ 1 ngµy , kh«ng thÓ tham gia tranh tµi . ",0) 
+elseif (ErrorId == 13) then 
+Say("Thèng lÜnh cÊm vÖ # ng­¬i vèn ®æi phiªn tranh tµi ®æi phiªn v« İch hoÆc ®· bŞ tranh tµi ®µo th¶i . ",0) 
+else 
+
+end; 
+return 
+end; 
 
 
-function OnJoin()
-	idx = SubWorldID2Idx(MapTab);
-	
-	OldSubWorld = SubWorld;
-	SubWorld = idx;
+function OnJoin() 
+idx = SubWorldID2Idx(MapTab); 
 
---	DisplayMsg();
+OldSubWorld = SubWorld; 
+SubWorld = idx; 
 
-	nx = GetName();
-	n = TableSDD_Search("olympictab",nx);
-	if n ~= 0 then 
-		ny,n1,n2 = TableSDD_GetValue("olympictab",n)
-		if (n2 == 0) then
-			ErrorMsg(13)
-		else
-			if (n1 > 65536) then
-				SetTask(OLYMPICFLAG,1);
-				Msg2Player("¹§Ï²Äã£¬ÄãÒÑ¾­È¡µÃÁË²Î¼ÓÈ«ÇøÈ«·ş°ÂÔË»á±ÈÈüµÄ×Ê¸ñ¡£",0)
-			end
-			JoinCamp(n2)
-		end
-	else
-		ErrorMsg(3)
-	end;
-	SubWorld=OldSubWorld;
-end;
+-- script viet hoa By http://tranhba.com  DisplayMsg(); 
+
+nx = GetName(); 
+n = TableSDD_Search("olympictab",nx); 
+if n ~= 0 then 
+ny,n1,n2 = TableSDD_GetValue("olympictab",n) 
+if (n2 == 0) then 
+ErrorMsg(13) 
+else 
+if (n1 > 65536) then 
+SetTask(OLYMPICFLAG,1); 
+Msg2Player("Chóc mõng ng­¬i , ng­¬i ®· lÊy ®­îc tham gia toµn khu toµn dïng/uèng ¸o vËn héi so tµi t­ c¸ch . ",0) 
+end 
+JoinCamp(n2) 
+end 
+else 
+ErrorMsg(3) 
+end; 
+SubWorld=OldSubWorld; 
+end; 
 
 
-function OnCancel()
-end;
+function OnCancel() 
+end; 

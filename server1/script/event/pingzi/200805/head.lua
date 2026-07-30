@@ -1,5 +1,3 @@
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 if pingzi0805 == nil then
 
 
@@ -7,7 +5,7 @@ pingzi0805 =
 {
 	szClassName			= "pingzi0805",
 	ActTime_S			= 20080611,
-	ActTime_E			= 20500713,
+	ActTime_E			= 20080713,
 	TSK_Version			= 1976,
 	TSK_Recipe1Count	= 1977,
 	TSK_ExpLimit		= 1978,
@@ -19,7 +17,7 @@ pingzi0805 =
 function pingzi0805:ResetTask()
 	local nDateH = tonumber(GetLocalDate("%Y%m%d"))
 	--活动开始，到兑奖结束
-	if (CFG_pingzi	== 1) then
+	if nDateH >= self.ActTime_S and nDateH <= self.ActTime_E then
 		 
 		if GetTask(self.TSK_Version) ~= self.ActTime_S then
 			SetTask(self.TSK_Version, self.ActTime_S)

@@ -22,13 +22,11 @@ tbEquipTryOn.nCountPerPage = 5
 tbEquipTryOn.szType = ""
 tbEquipTryOn.tbData_Male = 
 {
-	--{nFeature = 0, szName = "1", nPrice = 1},
 }
 tbEquipTryOn.tbData_Female = 
 {
-	--{nFeature = 0, szName = "1", nPrice = 1},
 }
---¶Ô»°²Ëµ¥
+
 function tbEquipTryOn:DailogMenu(nPage)
 	
 	local tbData = self.tbData_Male
@@ -89,7 +87,7 @@ function tbEquipTryOn:TryOnDailog(nIdx)
 	
 	self:TryOn(tbData[nIdx].nFeature)
 	
-	local szTitle = format("C¸c h¹ c¶m thÊy thÕ nµo? Cã võa lßng kh«ng? Muèn luyÖn ngo¹i h×nh nµy cÇn <color=yellow>%d<color> tinh lùc.", tbData[nIdx].nPrice)
+	local szTitle = format("C¸c h¹ c¶m thÊy thÕ nµo? Cã võa lßng kh«ng? Muèn luyÖn ngo¹i h×nh nµy cÇn <color=yellow>%d<color> tiÒn ®ång.", tbData[nIdx].nPrice)
 	local nPage = ceil(nIdx/self.nCountPerPage)
 	local tbOpt = 
 	{
@@ -119,17 +117,15 @@ function tbEquipTryOn:ChangeFeature(nNewHelmType, nNewArmorType, nNewWeaponType,
 	
 	ChangeOwnFeature( 0, -1, nSettingsIdx,  nNewHelmType, nNewArmorType, nNewWeaponType, nNewHorseType)
 end
---ÐèÒªÖØÔØÊÔ´©
+
 function tbEquipTryOn:TryOn(nNo)
 	
 end
 
---×¢ÈëµÀ¾ßÀï
 function tbEquipTryOn:InjectToItem(nItemIndex, nNo)
 	SetItemNewFeature(nItemIndex, nNo)
 end
 
---»¹Ô­
 function tbEquipTryOn:RestoreItem(nItemIndex)
 	SetItemNewFeature(nItemIndex, -1)
 end
@@ -137,6 +133,13 @@ end
 function tbEquipTryOn:GiveEquip(nIdx)
 	
 	g_GiveItemUI("Thay ®æi ngo¹i h×nh trang bÞ", "Xin h·y bá vµo trang bÞ cÇn thay ®æi ngo¹i h×nh", {self.Proc, {self, nIdx}})
+	
+end
+
+function tbEquipTryOn:GiveEquip2(nIdx)
+	local nIdx = 1
+	
+	g_GiveItemUI("Trë vÒ ngo¹i h×nh ban ®Çu", "Xin h·y bá vµo trang bÞ cÇn thay ®æi ngo¹i h×nh", {self.Proc2, {self, nIdx}})
 	
 end
 
@@ -162,27 +165,56 @@ function tbEquipTryOn:Proc(nIdx, nCount)
 	if self:CheckEquip(nItemIndex) ~= 1 then
 		return 
 	end
-	--local tbItem = {szName="¾«Á¶Ê¯", tbProp={6, 1, 2280, -1}}
-	--local tbProp = tbItem.tbProp
 	local nCount = pData.nPrice
---	--¼ì²éÊ¯Í·
---	if CalcEquiproomItemCount(tbProp[1], tbProp[2], tbProp[3], tbProp[4]) < nCount then
---		Talk(1, "", format("ÄãÃ»ÓÐ´ø¹»¾«Á¶Ê¯°¡£¬ÐèÒª%d¸ö", nCount))
---		return 
---	end
-
-	if GetEnergy() < nCount then
-		Talk(1, "", format("C¸c h¹ vÉn ch­a mang ®ñ tinh lùc, cÇn %d tinh lùc", nCount))
+	if CalcEquiproomItemCount(4, 417, 1, 1) < nCount then
+		Talk(1, "", format("C¸c h¹ vÉn ch­a mang ®ñ tiÒn ®ång, cÇn %d tiÒn ®ång", nCount))
 		return
 	end
-	
-	--¿ÛÊ¯Í·
-	ReduceEnergy(nCount)
+
+	ConsumeEquiproomItem(nCount, 4, 417, 1, 1)
 	
 	
 	if pData.nFeature then
 		self:InjectToItem(nItemIndex, pData.nFeature)
 		Msg2Player(format("Ngo¹i h×nh trang bÞ %s ®· ®­îc ®æi", GetItemName(nItemIndex)))
+	end
+	
+end
+
+function tbEquipTryOn:Proc2(nIdx, nCount)
+	if nCount ~= 1 then
+		Talk(1, "", "ChØ ®­îc bá 1 mãn trang bÞ cÇn thay ®æi ngo¹i h×nh.")
+		return
+	end
+	
+	local tbData = self.tbData_Male
+	if GetSex() == 1 then
+		tbData = self.tbData_Female
+	end
+	
+	local pData =  tbData[nIdx]
+	if not pData then
+		Talk(1, "", "Chän ngo¹i h×nh lçi.")
+		return 
+	end
+	
+	local nItemIndex = GetGiveItemUnit(1)
+	
+	if self:CheckEquip(nItemIndex) ~= 1 then
+		return 
+	end
+	local nCount = pData.nPrice
+	if CalcEquiproomItemCount(4, 417, 1, 1) < nCount then
+		Talk(1, "", format("C¸c h¹ vÉn ch­a mang ®ñ tiÒn ®ång, cÇn %d tiÒn ®ång", nCount))
+		return
+	end
+
+	ConsumeEquiproomItem(nCount, 4, 417, 1, 1)
+	
+	
+	if pData.nFeature then
+		self:RestoreItem(nItemIndex, pData.nFeature)
+		Msg2Player(format("Ngo¹i h×nh trang bÞ %s ®· ®­îc ®æi l¹i nh­ ban ®Çu", GetItemName(nItemIndex)))
 	end
 	
 end
@@ -200,6 +232,17 @@ function tbEquipTryOn:AskFeatureNo()
 	
 	local nMaxCount = getn(tbData)
 	g_AskClientNumberEx(1, nMaxCount, "Xin h·y chän sè hiÖu ngo¹i h×nh", {self.GiveEquip, {self}})
+end
+
+function tbEquipTryOn:AskFeatureNo2()
+	local tbData = self.tbData_Male
+	if GetSex() == 1 then
+		tbData = self.tbData_Female
+	end
+	
+	
+	local nMaxCount = getn(tbData)
+	g_AskClientNumberEx(1, nMaxCount, "Xin h·y chän sè hiÖu ngo¹i h×nh", {self.GiveEquip2, {self}})
 end
 
 

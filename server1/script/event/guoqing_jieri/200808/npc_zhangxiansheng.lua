@@ -12,8 +12,8 @@ Include("\\script\\event\\guoqing_jieri\\200808\\head.lua");	-- 活动相关信息文件
 Include("\\script\\lib\\common.lua");							-- 
 Include("\\script\\lib\\awardtemplet.lua")						-- 奖励共用函数集
 
-function guoqing_jieri_2008_main()
---function main()
+
+function main()
 	zxmp_reset_vertsk();
 	
 	-- 不在活动期间内

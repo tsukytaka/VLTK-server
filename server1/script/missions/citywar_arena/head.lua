@@ -27,9 +27,9 @@ MS_ARENAID = 15;
 PKWINBONUS = 3;
 LOSEBONUS = 1;
 
-TIMER_1 = 20 * FRAME2TIME; --20Ãë¹«²¼Ò»ÏÂÕ½¿ö
-TIMER_2 = 25 * 60  * FRAME2TIME; -- ½»Õ½×ÜÊ±¼äÎª1Hour
-GO_TIME =  480 * FRAME2TIME  / TIMER_1; -- ±¨ÃûÊ±¼äÎª10
+TIMER_1 = 20 * FRAME2TIME; 			--20 gi©y
+TIMER_2 = 25 * 60  * FRAME2TIME; 		-- 25 diÔn ra trËn ®Êu
+GO_TIME =  8 * 60 * FRAME2TIME  / TIMER_1; 	--8 phót b¾t ®Çu trËn ®Êu
 
 MS_NEWSVALUE = 9; --ÈÎÎñÖÐ´æ·ÅÐÂÎÅ±äÁ¿µÄµØ·½
 JOINSTATE = 242;
@@ -115,11 +115,11 @@ function JoinCamp(Camp)
 	--ÉèÖÃÏÂ´ÎËÀÍöµÄÔÝÊ±ÖØÉúµã
 	if (Camp == 1) then
 		SetTempRevPos(GetLeavePos());
-		str = GetName().."<#> ®· vµo"..GetMissionS(1).."<#> 1 bªn, sè thµnh viªn hiÖn t¹i"..GetMSPlayerCount(MISSIONID,1);
+		str = GetName().." ®· vµo <color=yellow>"..GetMissionS(1).."<color> 1 bªn, sè thµnh viªn hiÖn t¹i <color=yellow>"..GetMSPlayerCount(MISSIONID,1);
 		SetPos(CampPos1[1], CampPos1[2])
 	elseif (Camp == 2) then
 		SetTempRevPos(GetLeavePos());
-		str = GetName().."<#> ®· vµo"..GetMissionS(2).."<#> 1 bªn, sè thµnh viªn hiÖn t¹i"..GetMSPlayerCount(MISSIONID,2);
+		str = GetName().." ®· vµo <color=yellow>"..GetMissionS(2).."<color> 1 bªn, sè thµnh viªn hiÖn t¹i <color=yellow>"..GetMSPlayerCount(MISSIONID,2);
 		SetPos(CampPos2[1], CampPos2[2])
 	else 
 		return
@@ -132,9 +132,9 @@ end;
 -------------------------------------------------------------------------
 -----½«Ãë´«»»³É·ÖÓëÃë£¬±ÈÈç62s = 1m2s
 function GetMinAndSec(nSec)
-nRestMin = floor(nSec / 60);
-nRestSec = mod(nSec,60)
-return nRestMin, nRestSec;
+	nRestMin = floor(nSec / 60);
+	nRestSec = mod(nSec,60)
+	return nRestMin, nRestSec;
 end;
 ---------------------------------------------------------------------------
 --Ê¤Àû·½»ñµÃ1800Íò½ðÇ®£¬»ñµÃ12000°ï»á¾­Ñé£»Ê§°Ü·½¼õÉÙ14000°ï»á¾­Ñé

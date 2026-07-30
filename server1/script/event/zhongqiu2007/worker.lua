@@ -4,10 +4,10 @@
 Include("\\script\\event\\zhongqiu2007\\head.lua");
 
 function main()
-	--if ( check_zhongqiu2007_date() == 0 ) then
-	--	Say(tb_content["sztalk1"],0)
-	--	return 1
-	--end
+	if ( check_zhongqiu2007_date() == 0 ) then
+		Say(tb_content["sztalk1"],0)
+		return 1
+	end
 	Describe(tb_content["sztalk2"],6,
 					 tb_content["szgetlvdou"],
 					 tb_content["szgetlianzi"],

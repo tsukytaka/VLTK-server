@@ -20,15 +20,15 @@ function main()
 	game_spreader()
 end
 function game_spreader()
-	--if (SWITCH_SPREADER ~= 1) then
-	--	Talk(1, "", "<color=green>Th«ng c¸o<color>: chøc n¨ng nµy ch­a ®­îc më, xin xem th«ng b¸o cña trang web!");
-		--return 0;
-	--end
+	if (SWITCH_SPREADER ~= 1) then
+		Talk(1, "", "<color=green>Th«ng c¸o<color>: chøc n¨ng nµy ch­a ®­îc më, xin xem th«ng b¸o cña trang web!");
+		return 0;
+	end
 	local szOp = 
 	{
 		"NhËp cd-key kÝch ho¹t tµi kho¶n/gsp_input_cdkey",
 		"NhËn ®­îc phÇn th­ëng! /gsp_phase_prize",
-		"NhËn s­ ®å thiÕp hoµng kim ng­êi míi/gsp_accept_goldcard", 
+		-- "ÁìÈ¡»Æ½ðÊ¦Í½¿¨/gsp_accept_goldcard",
 		"Liªn quan Th«ng c¸o.../gsp_about",
 		"Båi th­êng cho bang héi ®ang chiÕm thµnh/about_castellan_remedy",
 		"§Æt l¹i tªn cho nh©n vËt/about_rename_role",
@@ -49,16 +49,9 @@ function game_spreader()
 			szOp[8]);
 	elseif (SYSCFG_REGION_VERSION	== SC_REGION_VER_VN) then -- Ô½ÄÏ°æ±¾
 		Say("Xin hái cã thÓ gióp g× cho quý kh¸ch?", 3,
-			szOp[1],
-			szOp[2],
-			szOp[3],
-			szOp[4],
-			szOp[5],
-			szOp[6],
 			szOp[7],
-			szOp[8],
-			szOp[10],
-			szOp[9]);
+			szOp[9],
+			szOp[8]);
 	else
 		Say("Xin hái cã thÓ gióp g× cho quý kh¸ch?", 1,
 			szOp[8]);	

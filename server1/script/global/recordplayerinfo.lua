@@ -12,6 +12,4 @@ end
 
 
 
-if login_add then
-	login_add(_SetPlayerLoginTime, 0)
-end
+if login_add then login_add(_SetPlayerLoginTime, 0) end

@@ -1,0 +1,103 @@
+2026-07-28 14:19:31	Node[0] connect: Ip(127.0.0.1 : 33802), Identity(0)
+2026-07-28 14:19:31	ClientConnectCreate:[0]127.0.0.1 : 33802
+2026-07-28 14:19:31	Bishop claim from Node[0]!
+2026-07-28 14:19:31	Node[0] disconnect: Ip(127.0.0.1 : 33802), Identity(0)
+2026-07-28 14:19:31	ClientConnectClose:[0]
+
+2026-07-28 14:19:34	Node[1] connect: Ip(127.0.0.1 : 33814), Identity(1)
+2026-07-28 14:19:34	ClientConnectCreate:[1]127.0.0.1 : 33814
+2026-07-28 14:19:34	Bishop claim from Node[1]!
+2026-07-28 14:19:34	Node[1] disconnect: Ip(127.0.0.1 : 33814), Identity(1)
+2026-07-28 14:19:34	ClientConnectClose:[1]
+
+2026-07-28 14:19:38	Node[2] connect: Ip(127.0.0.1 : 41882), Identity(2)
+2026-07-28 14:19:38	ClientConnectCreate:[2]127.0.0.1 : 41882
+2026-07-28 14:19:38	Node[2] disconnect: Ip(127.0.0.1 : 41882), Identity(2)
+2026-07-28 14:19:38	ClientConnectClose:[2]
+
+2026-07-28 14:19:41	Node[3] connect: Ip(127.0.0.1 : 41886), Identity(3)
+2026-07-28 14:19:41	ClientConnectCreate:[3]127.0.0.1 : 41886
+2026-07-28 14:19:41	Bishop claim from Node[3]!
+2026-07-28 14:19:41	Node[3] disconnect: Ip(127.0.0.1 : 41886), Identity(3)
+2026-07-28 14:19:41	ClientConnectClose:[3]
+
+2026-07-28 14:19:44	Node[4] connect: Ip(127.0.0.1 : 41892), Identity(4)
+2026-07-28 14:19:44	ClientConnectCreate:[4]127.0.0.1 : 41892
+2026-07-28 14:19:44	Bishop claim from Node[4]!
+2026-07-28 14:19:50	Node[5] connect: Ip(127.0.0.1 : 33397), Identity(5)
+2026-07-28 14:19:50	ClientConnectCreate:[5]127.0.0.1 : 33397
+2026-07-28 14:22:37	Node[0] connect: Ip(127.0.0.1 : 45914), Identity(0)
+2026-07-28 14:22:37	ClientConnectCreate:[0]127.0.0.1 : 45914
+2026-07-28 14:22:37	Bishop claim from Node[0]!
+2026-07-28 14:22:37	Node[0] disconnect: Ip(127.0.0.1 : 45914), Identity(0)
+2026-07-28 14:22:37	ClientConnectClose:[0]
+
+2026-07-28 14:22:39	Node[1] connect: Ip(127.0.0.1 : 59681), Identity(1)
+2026-07-28 14:22:39	ClientConnectCreate:[1]127.0.0.1 : 59681
+2026-07-28 14:22:39	Node[1] disconnect: Ip(127.0.0.1 : 59681), Identity(1)
+2026-07-28 14:22:39	ClientConnectClose:[1]
+
+2026-07-28 14:22:40	Node[2] connect: Ip(127.0.0.1 : 45916), Identity(2)
+2026-07-28 14:22:40	ClientConnectCreate:[2]127.0.0.1 : 45916
+2026-07-28 14:22:40	Bishop claim from Node[2]!
+2026-07-28 14:22:47	Node[3] connect: Ip(127.0.0.1 : 41511), Identity(3)
+2026-07-28 14:22:47	ClientConnectCreate:[3]127.0.0.1 : 41511
+2026-07-28 14:22:47	Node[3] disconnect: Ip(127.0.0.1 : 41511), Identity(3)
+2026-07-28 14:22:47	ClientConnectClose:[3]
+
+2026-07-28 14:22:55	Node[4] connect: Ip(127.0.0.1 : 60289), Identity(4)
+2026-07-28 14:22:55	ClientConnectCreate:[4]127.0.0.1 : 60289
+2026-07-28 14:45:00	CreateRoleData(HoaThan) OK: Account(long), datalen(575)
+2026-07-28 14:45:00	EnterGame(HoaThan) OK: Move from Node[2] to Node[4]
+2026-07-28 14:51:38	Node[2] disconnect: Ip(127.0.0.1 : 45916), Identity(2)
+2026-07-28 14:51:38	ClientConnectClose:[2]
+
+2026-07-28 14:51:39	Node[5] connect: Ip(127.0.0.1 : 46996), Identity(5)
+2026-07-28 14:51:39	ClientConnectCreate:[5]127.0.0.1 : 46996
+2026-07-28 14:51:39	Bishop claim from Node[5]!
+2026-07-28 14:51:44	Node[0] connect: Ip(127.0.0.1 : 46222), Identity(0)
+2026-07-28 14:51:44	ClientConnectCreate:[0]127.0.0.1 : 46222
+2026-07-28 14:51:44	Bishop claim from Node[0]!
+2026-07-28 14:51:49	GetRoleInfo(HoaThan) OK: Enter Node[0](127.0.0.1 : 46222)
+2026-07-28 14:51:49	GetRoleData(HoaThan) OK: datalen(575)
+2026-07-28 14:51:49	LeaveBishop[HoaThan] OK: Leave Node[0]
+2026-07-28 14:51:57	GetRoleInfo(HoaThan) OK: Enter Node[0](127.0.0.1 : 46222)
+2026-07-28 14:51:57	GetRoleData(HoaThan) OK: datalen(575)
+2026-07-28 14:51:57	LeaveBishop[HoaThan] OK: Leave Node[0]
+2026-07-28 14:52:01	Node[1] connect: Ip(127.0.0.1 : 59067), Identity(1)
+2026-07-28 14:52:01	ClientConnectCreate:[1]127.0.0.1 : 59067
+2026-07-28 14:55:06	GetRoleInfo(HoaThan) OK: Enter Node[0](127.0.0.1 : 46222)
+2026-07-28 14:55:06	GetRoleData(HoaThan) OK: datalen(575)
+2026-07-28 14:55:06	EnterGame(HoaThan) OK: Move from Node[0] to Node[1]
+2026-07-28 14:56:00	QuitSave[HoaThan] OK: Leave Node[1]
+2026-07-28 14:56:00	SaveRoleData(HoaThan) OK: datalen(1245)
+2026-07-28 15:14:15	Node[0] connect: Ip(127.0.0.1 : 59688), Identity(0)
+2026-07-28 15:14:15	ClientConnectCreate:[0]127.0.0.1 : 59688
+2026-07-28 15:14:15	Bishop claim from Node[0]!
+2026-07-28 15:14:19	Node[1] connect: Ip(127.0.0.1 : 40981), Identity(1)
+2026-07-28 15:14:19	ClientConnectCreate:[1]127.0.0.1 : 40981
+2026-07-28 15:14:19	Node[1] disconnect: Ip(127.0.0.1 : 40981), Identity(1)
+2026-07-28 15:14:19	ClientConnectClose:[1]
+
+2026-07-28 15:14:27	Node[2] connect: Ip(127.0.0.1 : 39255), Identity(2)
+2026-07-28 15:14:27	ClientConnectCreate:[2]127.0.0.1 : 39255
+2026-07-28 15:14:27	Node[2] disconnect: Ip(127.0.0.1 : 39255), Identity(2)
+2026-07-28 15:14:27	ClientConnectClose:[2]
+
+2026-07-28 15:14:36	Node[3] connect: Ip(127.0.0.1 : 50185), Identity(3)
+2026-07-28 15:14:36	ClientConnectCreate:[3]127.0.0.1 : 50185
+2026-07-28 15:16:09	GetRoleInfo(HoaThan) OK: Enter Node[0](127.0.0.1 : 59688)
+2026-07-28 15:16:09	GetRoleData(HoaThan) OK: datalen(1245)
+2026-07-28 15:16:09	EnterGame(HoaThan) OK: Move from Node[0] to Node[3]
+2026-07-28 15:16:13	QuitSave[HoaThan] OK: Leave Node[3]
+2026-07-28 15:16:13	SaveRoleData(HoaThan) OK: datalen(1245)
+2026-07-28 15:16:32	GetRoleInfo(HoaThan) OK: Enter Node[0](127.0.0.1 : 59688)
+2026-07-28 15:16:32	GetRoleData(HoaThan) OK: datalen(1245)
+2026-07-28 15:16:32	EnterGame(HoaThan) OK: Move from Node[0] to Node[3]
+2026-07-28 15:18:29	QuitSave[HoaThan] OK: Leave Node[3]
+2026-07-28 15:18:29	SaveRoleData(HoaThan) OK: datalen(1245)
+2026-07-28 17:14:15	Deliver statdata: 0 bytes
+2026-07-28 19:14:15	Deliver statdata: 0 bytes
+2026-07-28 21:14:15	Deliver statdata: 0 bytes
+2026-07-28 23:14:11	[QuitBackup]is_quit:0
+2026-07-28 23:14:15	Deliver statdata: 0 bytes

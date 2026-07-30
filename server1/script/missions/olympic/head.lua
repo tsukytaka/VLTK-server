@@ -1,311 +1,310 @@
-IncludeLib("SETTING");
+IncludeLib("SETTING"); 
 
---ÕÀ≥ˆ”Œœ∑∫Ûµƒ÷ÿ…˙µ„ID,“≤æÕ «±®√˚µƒƒ«∏ˆµÿ∑Ω∞…
-CS_RevId = 176;
-CS_RevData = 67;
+-- script viet hoa By http://tranhba.com  thËi lui ra trﬂ ch¨i sau Æ›ch sËng lπi Æi”m ID, cÚng ch›nh lµ ghi danh Æ›ch chÁ Æ„ Æi 
+CS_RevId = 176; 
+CS_RevData = 67; 
 
-FACTIONTAB = {"…Ÿ¡÷","ÃÏÕı","Ã∆√≈","ŒÂ∂æ","∂Î·“","¥‰—Ã","ÿ§∞Ô","ÃÏ»Ã","Œ‰µ±","¿•¬ÿ"}
+FACTIONTAB = {"Thi’u L©m ","Thi™n v≠¨ng ","ß≠Íng m´n ","N®m ÆÈc ","Nga Mi ","ThÛy kh„i ","C∏i Bang ","Ngµy nh…n ","V‚ ß≠¨ng ","C´n L´n "} 
 
-MapTab = 335;
+MapTab = 335; 
 
-FRAME2TIME = 18;
---”Œœ∑µƒ◊Ó¥Û»À ˝
-MAX_MEMBER_COUNT = 200;
-FIGHTS = 3;		-- ±»»¸¬€ ˝
-JOINTONGTIME = 1;	-- »Î∞Ô ±º‰œﬁ÷∆
-
-
-MS_STATE = 1;
-MS_LUN = 2; 		-- µ⁄∂‡…Ÿ¬÷µƒ±»»¸
-TOTALNUMBER = 3 	-- ≤Œ»¸»À‘±◊‹ ˝
-FACTIONS = 4; 		-- √≈≈…ID
-FIGHT_MODE = 5;		-- 0 ª˝∑÷ƒ£ Ω£¨1 Ã‘Ã≠ƒ£ Ω
-TOTALNUMBER1 = 6;
-
-OL_KEY = 7; 		-- 0-100000000µƒÀÊª˙ ˝
-MS_NEWSVALUE = 9; 	-- »ŒŒÒ÷–¥Ê∑≈–¬Œ≈±‰¡øµƒµÿ∑Ω
-
-TIME_NO1 = 23;		-- ∂® ±¥•∑¢∆˜
-TIME_NO2 = 24;		-- ∞Ôª·∂® ±¥•∑¢∆˜
-
-TIMER_1 = 60 * FRAME2TIME; -- 1∑÷÷”Ã· æ“ª¥Œ±®√˚
-TIMER_2 = 20 * FRAME2TIME; -- 20√ÎÃ· æ“ª¥Œ±»»¸ ±º‰
-TIMER_3 = 20 * FRAME2TIME; -- 20√ÎÃ· æ“ª¥Œ»Î≥°
-TIMER_4 = 60 * FRAME2TIME; -- 1∑÷÷”µ»¥˝ ±º‰
-TIMER_5 = 60 * FRAME2TIME; -- 1∑÷÷”Ã· æ“ª¥Œ∞Ôª·±®√˚ ±º‰
+FRAME2TIME = 18; 
+-- script viet hoa By http://tranhba.com  trﬂ ch¨i lÌn nh t nh©n sË 
+MAX_MEMBER_COUNT = 200; 
+FIGHTS = 3; -- script viet hoa By http://tranhba.com  tranh tµi bµn v“ Æ’m 
+JOINTONGTIME = 1; -- script viet hoa By http://tranhba.com  vµo giÛp thÍi gian hπn ch’ 
 
 
-END_TIME = 1 ; 		-- ±®√˚ ±º‰Œ™1∑÷÷”
-GO_TIME = 6 ; 		-- »Î≥° ±º‰2∑÷÷”
-FIGHT_TIME = 6;		-- ±»»¸ ±º‰2∑÷÷”
-END_TONG_TIME = 1;	-- ∞Ôª·±®√˚ ±º‰1∑÷÷”
+MS_STATE = 1; 
+MS_LUN = 2; -- script viet hoa By http://tranhba.com  th¯ bao nhi™u ÆÊi phi™n Æ›ch tranh tµi 
+TOTALNUMBER = 3 -- script viet hoa By http://tranhba.com  d˘ thi nh©n vi™n tÊng sË 
+FACTIONS = 4; -- script viet hoa By http://tranhba.com  m´n ph∏i ID 
+FIGHT_MODE = 5; -- script viet hoa By http://tranhba.com  0 t›ch ph©n m´ th¯c , 1 Æµo th∂i m´ th¯c 
+TOTALNUMBER1 = 6; 
 
-JOINSTATE = 242;
-MISSIONID = 12;
+OL_KEY = 7; -- script viet hoa By http://tranhba.com  0-100000000 Æ›ch ng…u nhi™n Æ’m 
+MS_NEWSVALUE = 9; -- script viet hoa By http://tranhba.com  nhi÷m vÙ trung c t gi˜ tin t¯c thay ÆÊi l≠Óng Æ›ch Æﬁa ph≠¨ng 
 
-TASKFLAG = 623;		-- »ŒŒÒ±‰¡ø£¨±Ì æ“—æ≠±®√˚
-SCORE = 624;   		-- ¥Ê∑≈≥…º®
-TONGSCORE = 625;	-- ¥Ê∑≈∞Ôª·±»»¸µƒΩ·π˚
-AREAID = 626;		-- Ω¯»¸≥°µƒ±Íº«
-OLYMPICFLAG = 630;	-- ≤Œ»¸◊ ∏Ò
+TIME_NO1 = 23; -- script viet hoa By http://tranhba.com  Æﬁnh lÛc xÛc ph∏t kh› 
+TIME_NO2 = 24; -- script viet hoa By http://tranhba.com  bang hÈi Æﬁnh lÛc xÛc ph∏t kh› 
 
-
-function GetLeavePos()
-	return GetTask(300), GetTask(301), GetTask(302);
-end;
+TIMER_1 = 60 * FRAME2TIME; -- script viet hoa By http://tranhba.com  1 phÛt Æ“ k˙ mÈt l«n ghi danh 
+TIMER_2 = 20 * FRAME2TIME; -- script viet hoa By http://tranhba.com  20 gi©y Æ“ k˙ mÈt l«n tranh tµi thÍi gian 
+TIMER_3 = 20 * FRAME2TIME; -- script viet hoa By http://tranhba.com  20 gi©y Æ“ k˙ mÈt l«n vµo trµng 
+TIMER_4 = 60 * FRAME2TIME; -- script viet hoa By http://tranhba.com  1 phÛt chÍ ÆÓi thÍi gian 
+TIMER_5 = 60 * FRAME2TIME; -- script viet hoa By http://tranhba.com  1 phÛt Æ“ k˙ mÈt l«n bang hÈi ghi danh thÍi gian 
 
 
--------------------------------------------------------------------------
---ÕÊº““™«Û¿Îø™”Œœ∑
-function LeaveGame(leavetype)
---leavetype = 0±Ì æ£¨Ω´Œª÷√…Ë‘⁄µÿÕºµƒ≥°Õ‚«¯”Ú£®∑«’Ω∂∑«¯”Ú£©
---leavetype = 1±Ì æ£¨Ω´Œª÷√…Ë‘⁄¡Ì“ª∏ˆµÿÕº£¨º¥≥πµ◊¿Îø™’Ω≥°
-	camp = GetCamp();--ª÷∏¥‘≠ º’Û”™
-	SetRevPos(CS_RevId, CS_RevData);
+END_TIME = 1 ; -- script viet hoa By http://tranhba.com  ghi danh thÍi gian lµ 1 phÛt 
+GO_TIME = 6 ; -- script viet hoa By http://tranhba.com  vµo trµng thÍi gian 2 phÛt 
+FIGHT_TIME = 6; -- script viet hoa By http://tranhba.com  tranh tµi thÍi gian 2 phÛt 
+END_TONG_TIME = 1; -- script viet hoa By http://tranhba.com  bang hÈi ghi danh thÍi gian 1 phÛt 
 
-	SetFightState(0);
-	SetPunish(1); --…Ë÷√PK≥Õ∑£
-	SetPKFlag(0); --πÿ±’PKø™πÿ
---	SetTaskTemp(JOINSTATE, 0);
-	ForbidChangePK(0);
-	ForbitTrade(0);
-	SetCurCamp(camp);
-	SetLogoutRV(0);--…Ë÷√÷ÿ…˙µ„
-	SetCreateTeam(1);
-	SetDeathScript("");--…Ë÷√À¿ÕˆΩ≈±æŒ™ø’
-	NewWorld(GetLeavePos());
-end;
+JOINSTATE = 242; 
+MISSIONID = 12; 
 
-function CalcScore()
-	OldPlayer = PlayerIndex;
+TASKFLAG = 623; -- script viet hoa By http://tranhba.com  nhi÷m vÙ thay ÆÊi l≠Óng , bµy t· Æ∑ ghi danh 
+SCORE = 624; -- script viet hoa By http://tranhba.com  c t gi˜ thµnh t›ch 
+TONGSCORE = 625; -- script viet hoa By http://tranhba.com  c t gi˜ bang hÈi k’t qu∂ cÒa cuÈc so tµi 
+AREAID = 626; -- script viet hoa By http://tranhba.com  vµo cuÈc so tµi trµng Æ›ch d u hi÷u 
+OLYMPICFLAG = 630; -- script viet hoa By http://tranhba.com  t≠ c∏ch d˘ thi 
+
+
+function GetLeavePos() 
+return GetTask(300), GetTask(301), GetTask(302); 
+end; 
+
+
+-- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com - 
+-- script viet hoa By http://tranhba.com  nhµ ch¨i y™u c«u rÍi Æi trﬂ ch¨i 
+function LeaveGame(leavetype) 
+-- script viet hoa By http://tranhba.com leavetype = 0 bµy t· , Æem vﬁ tr› thi’t tr™n Æ t ÆÂ Æ›ch b™n ngoµi s©n khu v˘c # kh´ng ph∂i lµ chi’n Æ u khu v˘c # 
+-- script viet hoa By http://tranhba.com leavetype = 1 bµy t· , Æem vﬁ tr› thi’t Î mÈt chÁ kh∏c ÆÂ , t¯c hoµn toµn rÍi Æi chi’n tr≠Íng 
+camp = GetCamp();-- script viet hoa By http://tranhba.com  kh´i phÙc nguy™n thÒy trÀn doanh 
+SetRevPos(CS_RevId, CS_RevData); 
+
+SetFightState(0); 
+SetPunish(1); -- script viet hoa By http://tranhba.com  thi’t tr› PK trıng phπt 
+SetPKFlag(0); -- script viet hoa By http://tranhba.com  tæt PK chËt mÎ 
+-- script viet hoa By http://tranhba.com  SetTaskTemp(JOINSTATE, 0); 
+ForbidChangePK(0); 
+ForbitTrade(0); 
+SetCurCamp(camp); 
+SetLogoutRV(0);-- script viet hoa By http://tranhba.com  thi’t tr› sËng lπi Æi”m 
+SetCreateTeam(1); 
+SetDeathScript("");-- script viet hoa By http://tranhba.com  thi’t tr› tˆ vong ch©n vËn v◊ v´ ›ch 
+NewWorld(GetLeavePos()); 
+end; 
+
+function CalcScore() 
+OldPlayer = PlayerIndex; 
 	maxn = floor((GetMissionV(TOTALNUMBER) + 1) / 2);
-	for i = 1,maxn do
-		j = i*2
-		idx , pidx = GetNextPlayer(MISSIONID, 0, j-1);
-		idy , pidy = GetNextPlayer(MISSIONID, 0, j);
+for i = 1,maxn do 
+j = i*2 
+idx , pidx = GetNextPlayer(MISSIONID, 0, j-1); 
+idy , pidy = GetNextPlayer(MISSIONID, 0, j); 
 
-		if (pidx > 0) and (pidy > 0) then
-			if (GetMissionV(FIGHT_MODE) == 0) then
-			   	PlayerIndex = pidx;
-				AddScore(1);
-			   	PlayerIndex = pidy;
-				AddScore(1);
-			else
-			   	PlayerIndex = pidx;
-				lv1 = GetLevel();
-			   	PlayerIndex = pidy;
-				lv2 = GetLevel();
-				if (lv2 > lv1) then 
-					AddScore(3);
-				else
-			   		PlayerIndex = pidx;
-					AddScore(3);
-				end
-			end
-		elseif (pidx > 0) then
-		   	PlayerIndex = pidx;
-			AddScore(3);
-		elseif (pidy > 0) then
-		   	PlayerIndex = pidy;
-			AddScore(3);
-		end;	
-	end;
-	SortScore();
-end;
+if (pidx > 0) and (pidy > 0) then 
+if (GetMissionV(FIGHT_MODE) == 0) then 
+PlayerIndex = pidx; 
+AddScore(1); 
+PlayerIndex = pidy; 
+AddScore(1); 
+else 
+PlayerIndex = pidx; 
+lv1 = GetLevel(); 
+PlayerIndex = pidy; 
+lv2 = GetLevel(); 
+if (lv2 > lv1) then 
+AddScore(3); 
+else 
+PlayerIndex = pidx; 
+AddScore(3); 
+end 
+end 
+elseif (pidx > 0) then 
+PlayerIndex = pidx; 
+AddScore(3); 
+elseif (pidy > 0) then 
+PlayerIndex = pidy; 
+AddScore(3); 
+end; 
+end; 
+SortScore(); 
+end; 
 
--- ∞¥≥…º®≈≈–Ú
+-- script viet hoa By http://tranhba.com  theo nh≠ thµnh t›ch sæp x’p th¯ t˘ 
 
-function SortScore()
---	maxn = GetMissionV(TOTALNUMBER) - 1;
-	maxn = TableSDD_Search("olympictab","") - 1;
-	for i = 1,maxn do
-		pname,px,py = TableSDD_GetValue("olympictab",i);
+function SortScore() 
+-- script viet hoa By http://tranhba.com  maxn = GetMissionV(TOTALNUMBER) - 1; 
+maxn = TableSDD_Search("olympictab","") - 1; 
+for i = 1,maxn do 
+pname,px,py = TableSDD_GetValue("olympictab",i); 
 		for j = i+1,maxn+1 do
-			qname,qx,qy = TableSDD_GetValue("olympictab",j);
-			if (px < qx) then 
-				TableSDD_SetValue("olympictab",i,qname,qx,qy);
-				TableSDD_SetValue("olympictab",j,pname,px,py);
-				px = qx;
-			end;
-		end;
-	end;
-	PlayerIndex = OldPlayer;
-end;
+qname,qx,qy = TableSDD_GetValue("olympictab",j); 
+if (px < qx) then 
+TableSDD_SetValue("olympictab",i,qname,qx,qy); 
+TableSDD_SetValue("olympictab",j,pname,px,py); 
+px = qx; 
+end; 
+end; 
+end; 
+PlayerIndex = OldPlayer; 
+end; 
 
-function AddScore(pscore)
-	if (GetMissionV(FIGHT_MODE) ~= 0) then
-		pscore = FIGHTS * pscore
-	end;
-	k = GetTask(SCORE);
+function AddScore(pscore) 
+if (GetMissionV(FIGHT_MODE) ~= 0) then 
+pscore = FIGHTS * pscore 
+end; 
+k = GetTask(SCORE); 
 	SetTask(SCORE,k+pscore);
-	pname = GetName();
-	Msg2Player("ƒ„‘⁄±æ¬÷±»»¸÷–µ√∑÷"..pscore.."∑÷£¨œ÷‘⁄¿€º∆◊‹∑÷"..GetTask(SCORE).."∑÷°£")
-	pn = TableSDD_Search("olympictab",pname);
-	pname,px,py = TableSDD_GetValue("olympictab",pn);
+pname = GetName(); 
+Msg2Player("Ng≠¨i Î Æ©y vËn ÆÊi phi™n tranh tµi trung ph∂i ph©n "..pscore.." ph©n , b©y giÍ m÷t m·i k’ tÊng ph©n "..GetTask(SCORE).." ph©n . ") 
+pn = TableSDD_Search("olympictab",pname); 
+pname,px,py = TableSDD_GetValue("olympictab",pn); 
 	px = pscore * 256 + px
-	TableSDD_SetValue("olympictab",pn,pname,px,py);
-	LeaveGame(1);
-end;
+TableSDD_SetValue("olympictab",pn,pname,px,py); 
+LeaveGame(1); 
+end; 
 
--------------------------------------------------------------------------
+-- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com - 
 
-function JoinCamp(Camp)
-	
-	LeaveTeam()
-	
-	AddMSPlayer(MISSIONID, Camp);
---	SetTaskTemp(JOINSTATE, 1);
+function JoinCamp(Camp) 
 
-	Camp1 = Camp - 1;
+LeaveTeam() 
+
+AddMSPlayer(MISSIONID, Camp); 
+-- script viet hoa By http://tranhba.com  SetTaskTemp(JOINSTATE, 1); 
+
+Camp1 = Camp - 1; 
 	Camp1 = mod(Camp1,2) + 2;
-	SetCurCamp(Camp1);
-	
-	--…Ë÷√”Î∞Ôª·”–πÿµƒ±‰¡ø£¨≤ª‘ –Ì‘⁄æ∫ºº≥°’Ω∏ƒ±‰ƒ≥∏ˆ∞Ôª·’Û”™µƒ≤Ÿ◊˜
-	SetTaskTemp(200,1);
+SetCurCamp(Camp1); 
 
-	--…Ë÷√’Ω∂∑◊¥Ã¨
-	SetFightState(0);
+-- script viet hoa By http://tranhba.com  thi’t tr› cÔng bang hÈi c„ li™n quan thay ÆÊi l≠Óng , kh´ng cho ph–p Î s©n Æ u chi’n sˆa ÆÊi mÈt bang hÈi trÀn doanh Æ›ch thao t∏c 
+SetTaskTemp(200,1); 
 
-	--ÕÊº“ÕÀ≥ˆ ±£¨±£¥ÊRV≤¢£¨‘⁄œ¬¥Œµ»»Î ±”√RV(≥« –÷ÿ…˙µ„£¨∑«ÕÀ≥ˆµ„)
-	SetLogoutRV(1);
+-- script viet hoa By http://tranhba.com  thi’t tr› trπng th∏i chi’n Æ u 
+SetFightState(0); 
 
-	--ŒﬁÀ¿Õˆ≥Õ∑£
-	SetPunish(0);
-	
-	--πÿ±’◊È∂”π¶ƒ‹
-	SetCreateTeam(0);
-	
-	--¥Úø™PKø™πÿ ≤ª◊ºΩª“◊
-	SetPKFlag(1)
-	ForbidChangePK(1);
-	
-	--…Ë÷√÷ÿ…˙µ„£¨“ª∞„ «—°‘ÒΩ¯»Î∏√«¯µƒ≥« –
-	SetRevPos(CS_RevId, CS_RevData);
-	
-	--…Ë÷√µ±«∞ÕÊº“µƒÀ¿ÕˆΩ≈±æ
+-- script viet hoa By http://tranhba.com  nhµ ch¨i thËi lui ra lÛc , b∂o tÂn RV cÚng , tπi hπ l«n chÍ vµo lÛc dÔng RV( thµnh phË sËng lπi Æi”m , kh´ng ph∂i lµ thËi lui ra Æi”m ) 
+SetLogoutRV(1); 
+
+-- script viet hoa By http://tranhba.com  v´ tˆ vong trıng phπt 
+SetPunish(0); 
+
+-- script viet hoa By http://tranhba.com  tæt h‰p thµnh ÆÈi ch¯c n®ng 
+SetCreateTeam(0); 
+
+-- script viet hoa By http://tranhba.com  mÎ ra PK chËt mÎ kh´ng cho ph–p giao dﬁch 
+SetPKFlag(1) 
+ForbidChangePK(1); 
+
+-- script viet hoa By http://tranhba.com  thi’t tr› sËng lπi Æi”m , mÈt loπi lµ l˘a ch‰n ti’n vµo n™n khu Æ›ch thµnh phË 
+SetRevPos(CS_RevId, CS_RevData); 
+
+-- script viet hoa By http://tranhba.com  thi’t tr› tr≠Ìc m∆t nhµ ch¨i Æ›ch tˆ vong ch©n vËn 
 	SetDeathScript("\\script\\missions\\olympic\\death.lua");
-	
-	--…Ë÷√œ¬¥ŒÀ¿Õˆµƒ÷ÿ…˙µ„
 
-	x = GetTask(300);
-	y = GetTask(301);
-	z = GetTask(302);
-	SetTempRevPos(x, y * 32, z * 32);
+-- script viet hoa By http://tranhba.com  thi’t tr› l«n sau tˆ vong sËng lπi Æi”m 
 
-	--»Î≥°
-	Camp1 = floor((Camp - 1) / 2);
+x = GetTask(300); 
+y = GetTask(301); 
+z = GetTask(302); 
+SetTempRevPos(x, y * 32, z * 32); 
+
+-- script viet hoa By http://tranhba.com  vµo trµng 
+Camp1 = floor((Camp - 1) / 2); 
 	nx = floor(Camp1 / 10) + 1;
 	ny = mod(Camp1,10) + 1;
-	GotoMap(nx,ny);
+GotoMap(nx,ny); 
 
-	str = GetName().."<#>“—æ≠Ω¯»Î¡À±»»¸»¸≥°°£";
-	Msg2MSAll(MISSIONID, str);
-end;
+str = GetName().."<#> Æ∑ ti’n vµo tranh tµi cuÈc so tµi trµng . "; 
+Msg2MSAll(MISSIONID, str); 
+end; 
 
 
----------------------------------------------------------------------------
+-- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com -- script viet hoa By http://tranhba.com - 
 
-function GotoMap(nx,ny)
+function GotoMap(nx,ny) 
 	nnx = (nx + ny) * 43 + 1187;
 	nny = (ny - nx) * 44 + 3465;
-	NewWorld(MapTab,nnx,nny);
-end;
+NewWorld(MapTab,nnx,nny); 
+end; 
 
-function RandomCamp()
-	Ptab = {};
-	maxn = GetMissionV(TOTALNUMBER);
-	if (GetMissionV(FIGHT_MODE) == 1) then
-		if (maxn > 16) then
-			maxn = 16
-			k1 = 0
-		elseif (maxn > 8) then
-			k1 = 16 - maxn
-		elseif (maxn > 4) then
-			k1 = 8 - maxn
-		elseif (maxn > 2) then
-			k1 = 4 - maxn
-		else
-			k1 = 0
-		end;
+function RandomCamp() 
+Ptab = {}; 
+maxn = GetMissionV(TOTALNUMBER); 
+if (GetMissionV(FIGHT_MODE) == 1) then 
+if (maxn > 16) then 
+maxn = 16 
+k1 = 0 
+elseif (maxn > 8) then 
+k1 = 16 - maxn 
+elseif (maxn > 4) then 
+k1 = 8 - maxn 
+elseif (maxn > 2) then 
+k1 = 4 - maxn 
+else 
+k1 = 0 
+end; 
 
-		for i = 1,k1 do
-			qname,qx,qy = TableSDD_GetValue("olympictab",i);
+for i = 1,k1 do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
 			qx = qx + FIGHTS * 256 * 3;
-			TableSDD_SetValue("olympictab",i,qname,qx,0);
-		end;
-		n = maxn - k1;
+TableSDD_SetValue("olympictab",i,qname,qx,0); 
+end; 
+n = maxn - k1; 
 
-	elseif (GetMissionV(FIGHT_MODE) > 1) then
-		k1 = 0;
-		if (GetMissionV(TOTALNUMBER) == GetMissionV(TOTALNUMBER1)) then
-			maxn = maxn / 2;
-		end;
-		n = maxn;
-	else
-		n = maxn;
-		k1 = 0;
-	end;
+elseif (GetMissionV(FIGHT_MODE) > 1) then 
+k1 = 0; 
+if (GetMissionV(TOTALNUMBER) == GetMissionV(TOTALNUMBER1)) then 
+maxn = maxn / 2; 
+end; 
+n = maxn; 
+else 
+n = maxn; 
+k1 = 0; 
+end; 
 
-	SetMissionV(TOTALNUMBER1,maxn);
-	if (n == maxn) then
-		SetMissionV(TOTALNUMBER,n);
-	else
-		SetMissionV(TOTALNUMBER,maxn - n / 2);
-	end;
+SetMissionV(TOTALNUMBER1,maxn); 
+if (n == maxn) then 
+SetMissionV(TOTALNUMBER,n); 
+else 
+SetMissionV(TOTALNUMBER,maxn - n / 2); 
+end; 
 
-	for i = 1,n do
-		Ptab[i] = i
-	end;
+for i = 1,n do 
+Ptab[i] = i 
+end; 
 
-	for i = 1,n do
+for i = 1,n do 
 		x = random(n-i+1);
-		m = Ptab[x];
+m = Ptab[x]; 
 		Ptab[x] = Ptab[n-i+1];
 		qname,qx,qy = TableSDD_GetValue("olympictab",k1+i);
 		TableSDD_SetValue("olympictab",k1+i,qname,qx,m);
-	end;
-end;
+end; 
+end; 
 
-function DisplayMsg()
-	for i = 1,16 do
-		qname,qx,qy = TableSDD_GetValue("olympictab",i);
-		Msg2Player(qname..","..qx..","..qy);
-	end;
-end;
+function DisplayMsg() 
+for i = 1,16 do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+Msg2Player(qname..","..qx..","..qy); 
+end; 
+end; 
 
-function SortTong()
-	qname,qx,qy = TableSDD_GetValue("olympictab",2);
-	if (qname == "") then 
-		qname,qx,qy = TableSDD_GetValue("olympictab",1);
-		str = "∞¬‘À‘§—°»¸∞Ôª·◊ ∏Ò»¸±»»¸÷¡¥À“—æ≠»´≤øΩ· ¯£¨∞Ôª·"..qname.."◊Ó÷’ªÒµ√◊ÈΩ®¥˙±Ì∂”◊ ∏Ò£¨«Î"..qname.."∞Ô÷˜æ°øÏµΩ¡Ÿ∞≤ª π¨√≈ø⁄ªÒ»°◊ ∏Ò÷§°£";
-		AddGlobalNews(str);
-		SetMissionV(MS_STATE,9);
-		StopMissionTimer(MISSIONID, TIME_NO2);
---		CloseMission(MISSIONID);
-	else
-		maxn = TableSDD_Search("olympictab","") - 1;
-		if (maxn > 8) then
-			k1 = 16 - maxn
-		elseif (maxn > 4) then
-			k1 = 8 - maxn
-		elseif (maxn > 2) then
-			k1 = 4 - maxn
-		else
-			k1 = 0
-		end
-		if (k1 > 0) then
-			for i = 1,k1 do
-				qname,qx,qy = TableSDD_GetValue("olympictab",i);
-				TableSDD_SetValue("olympictab",i,qname,1,0);
-			end
-		end
---		k2 = maxn - 1;
-		j = 2;
+function SortTong() 
+qname,qx,qy = TableSDD_GetValue("olympictab",2); 
+if (qname == "") then 
+qname,qx,qy = TableSDD_GetValue("olympictab",1); 
+str = " ∏o vÀn d˘ ch‰n cuÈc so tµi bang hÈi t≠ c∏ch cuÈc so tµi tranh tµi Æ’n Æ©y Æ∑ toµn bÈ k’t thÛc , bang hÈi "..qname.." cuËi cÔng Æπt Æ≠Óc x©y d˘ng Æπi bi”u ÆÈi t≠ c∏ch , xin/mÍi "..qname.." bang chÒ mau sÌm Æ’n tr≠Ìc khi an cˆa hoµng cung l y Æ≠Óc t≠ c∏ch ch¯ng . "; 
+AddGlobalNews(str); 
+SetMissionV(MS_STATE,9); 
+StopMissionTimer(MISSIONID, TIME_NO2); 
+-- script viet hoa By http://tranhba.com  CloseMission(MISSIONID); 
+else 
+maxn = TableSDD_Search("olympictab","") - 1; 
+if (maxn > 8) then 
+k1 = 16 - maxn 
+elseif (maxn > 4) then 
+k1 = 8 - maxn 
+elseif (maxn > 2) then 
+k1 = 4 - maxn 
+else 
+k1 = 0 
+end 
+if (k1 > 0) then 
+for i = 1,k1 do 
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+TableSDD_SetValue("olympictab",i,qname,1,0); 
+end 
+end 
+-- script viet hoa By http://tranhba.com  k2 = maxn - 1; 
+j = 2; 
 		for i = k1+1,maxn do
-			qname,qx,qy = TableSDD_GetValue("olympictab",i);
-			TableSDD_SetValue("olympictab",i,qname,0,j);
+qname,qx,qy = TableSDD_GetValue("olympictab",i); 
+TableSDD_SetValue("olympictab",i,qname,0,j); 
 			j = j + 1;
-		end;
-	end;
-end;
-
+end; 
+end; 
+end; 

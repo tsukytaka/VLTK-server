@@ -20,7 +20,7 @@ tab_light = {
 --ÖÐÇï»î¶¯Èë¿Úº¯Êý
 function main(sel)
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (nDate >= AU06_ENDDATE or nDate < AU06_BEGINDATE or gb_GetTask("midautumn2006_city_all", 1) ~= 0) then --
+	if (nDate >= 20061021 or nDate < AU06_BEGINDATE or gb_GetTask("midautumn2006_city_all", 1) ~= 0) then --
 		Say("Ho¹t ®éng ®· kÕt thóc, kh«ng thÓ sö dông.", 0);
 		return 1;
 	end;

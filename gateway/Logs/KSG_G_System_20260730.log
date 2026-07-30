@@ -1,0 +1,68 @@
+2026-07-30 01:14:15	Deliver statdata: 0 bytes
+2026-07-30 03:14:15	Deliver statdata: 0 bytes
+2026-07-30 03:50:35	Node[0] connect: Ip(127.0.0.1 : 40632), Identity(0)
+2026-07-30 03:50:35	ClientConnectCreate:[0]127.0.0.1 : 40632
+2026-07-30 03:50:35	Bishop claim from Node[0]!
+2026-07-30 03:50:35	Node[0] disconnect: Ip(127.0.0.1 : 40632), Identity(0)
+2026-07-30 03:50:35	ClientConnectClose:[0]
+
+2026-07-30 03:50:38	Node[1] connect: Ip(127.0.0.1 : 40638), Identity(1)
+2026-07-30 03:50:38	ClientConnectCreate:[1]127.0.0.1 : 40638
+2026-07-30 03:50:38	Bishop claim from Node[1]!
+2026-07-30 03:50:38	Node[1] disconnect: Ip(127.0.0.1 : 40638), Identity(1)
+2026-07-30 03:50:38	ClientConnectClose:[1]
+
+2026-07-30 03:50:41	Node[2] connect: Ip(127.0.0.1 : 40642), Identity(2)
+2026-07-30 03:50:41	ClientConnectCreate:[2]127.0.0.1 : 40642
+2026-07-30 03:50:41	Bishop claim from Node[2]!
+2026-07-30 03:50:41	Node[2] disconnect: Ip(127.0.0.1 : 40642), Identity(2)
+2026-07-30 03:50:41	ClientConnectClose:[2]
+
+2026-07-30 03:50:45	Node[3] connect: Ip(127.0.0.1 : 43296), Identity(3)
+2026-07-30 03:50:45	ClientConnectCreate:[3]127.0.0.1 : 43296
+2026-07-30 03:50:45	Bishop claim from Node[3]!
+2026-07-30 03:50:45	Node[3] disconnect: Ip(127.0.0.1 : 43296), Identity(3)
+2026-07-30 03:50:45	ClientConnectClose:[3]
+
+2026-07-30 03:50:48	Node[4] connect: Ip(127.0.0.1 : 43312), Identity(4)
+2026-07-30 03:50:48	ClientConnectCreate:[4]127.0.0.1 : 43312
+2026-07-30 03:50:48	Bishop claim from Node[4]!
+2026-07-30 03:50:48	Node[4] disconnect: Ip(127.0.0.1 : 43312), Identity(4)
+2026-07-30 03:50:48	ClientConnectClose:[4]
+
+2026-07-30 03:50:51	Node[5] connect: Ip(127.0.0.1 : 43318), Identity(5)
+2026-07-30 03:50:51	ClientConnectCreate:[5]127.0.0.1 : 43318
+2026-07-30 03:50:51	Bishop claim from Node[5]!
+2026-07-30 03:50:55	Node[6] connect: Ip(127.0.0.1 : 43575), Identity(6)
+2026-07-30 03:50:55	ClientConnectCreate:[6]127.0.0.1 : 43575
+2026-07-30 03:55:11	Node[6] disconnect: Ip(127.0.0.1 : 43575), Identity(6)
+2026-07-30 03:55:11	ClientConnectClose:[6]
+
+2026-07-30 03:55:14	Node[5] disconnect: Ip(127.0.0.1 : 43318), Identity(5)
+2026-07-30 03:55:14	ClientConnectClose:[5]
+
+2026-07-30 03:56:14	Node[0] connect: Ip(127.0.0.1 : 59784), Identity(0)
+2026-07-30 03:56:14	ClientConnectCreate:[0]127.0.0.1 : 59784
+2026-07-30 03:56:14	Bishop claim from Node[0]!
+2026-07-30 03:56:14	Node[0] disconnect: Ip(127.0.0.1 : 59784), Identity(0)
+2026-07-30 03:56:14	ClientConnectClose:[0]
+
+2026-07-30 03:56:16	Node[1] connect: Ip(127.0.0.1 : 44403), Identity(1)
+2026-07-30 03:56:16	ClientConnectCreate:[1]127.0.0.1 : 44403
+2026-07-30 03:56:16	Node[1] disconnect: Ip(127.0.0.1 : 44403), Identity(1)
+2026-07-30 03:56:16	ClientConnectClose:[1]
+
+2026-07-30 03:56:17	Node[2] connect: Ip(127.0.0.1 : 59792), Identity(2)
+2026-07-30 03:56:17	ClientConnectCreate:[2]127.0.0.1 : 59792
+2026-07-30 03:56:17	Bishop claim from Node[2]!
+2026-07-30 03:56:24	Node[3] connect: Ip(127.0.0.1 : 39071), Identity(3)
+2026-07-30 03:56:24	ClientConnectCreate:[3]127.0.0.1 : 39071
+2026-07-30 05:56:17	Deliver statdata: 0 bytes
+2026-07-30 07:56:17	Deliver statdata: 0 bytes
+2026-07-30 09:56:17	Deliver statdata: 0 bytes
+2026-07-30 11:56:11	[QuitBackup]is_quit:0
+2026-07-30 11:56:17	Deliver statdata: 0 bytes
+2026-07-30 12:47:23	CreateRoleData(HoaThan1) OK: Account(long), datalen(575)
+2026-07-30 12:47:23	EnterGame(HoaThan1) OK: Move from Node[2] to Node[3]
+2026-07-30 12:47:52	QuitSave[HoaThan1] OK: Leave Node[3]
+2026-07-30 12:47:52	SaveRoleData(HoaThan1) OK: datalen(1245)

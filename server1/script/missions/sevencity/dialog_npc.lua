@@ -1,6 +1,6 @@
 Include("\\script\\missions\\sevencity\\war.lua")
 Include("\\script\\missions\\citywar_global\\infocenter_head.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 Include("\\script\\lib\\log.lua")
 --VNG_TSK_AWARD_LIMIT_TIME = 2747
 --VNG_TSK_EXP_LIMIT_TIME = 2743
@@ -32,7 +32,7 @@ AWARD_GUARD = {
 QUERY_TABLE = {}
 
 function main()
-if CFG_ThatThanhDaiChien ~= 1 then
+if ThatThanhDaiChien ~= 1 then
 		return Talk(1, "", "<color=Orange>C«ng Thµnh Quan: <color>ThÊt thµnh ®¹i chiÕn t¹m ®ãng, c¸c h¹ h·y quay l¹i sau")	
 	end
 	Say("§©y lµ n¬i nghÞ sù c«ng thµnh chiÕn, ng­¬i ®Õn cã viÖc g×?",
@@ -58,7 +58,7 @@ function dlg_signup()
 	elseif (state == STATE_CLOSEWAR) then
 		Say("ThÊt thµnh ®¹i chiÕn ®· kÕt thóc")
 	elseif (state == STATE_STARTSIGNUP) then
-		Say("ThÊt thµnh ®¹i chiÕn ®ang vµo giai ®o¹n b¸o danh, ch­ vÞ bang chñ h·y ®¹i diÖn bæn bang ®Ó b¸o danh tham gia, phÝ b¸o danh <color=red>"..SoTienBaoDanhCanNop.." v¹n ng©n l­îng<color> vµ<color=red> "..SoKhieuChienLenhCanNop.." khiªu chiÕn lÖnh<color>. \nBang héi chiÕm thµnh kh«ng cÇn b¸o danh vµ cã thÓ trùc tiÕp vµo",
+		Say("ThÊt thµnh ®¹i chiÕn ®ang vµo giai ®o¹n b¸o danh, ch­ vÞ bang chñ h·y ®¹i diÖn bæn bang ®Ó b¸o danh tham gia, phÝ b¸o danh <color=red>2000 v¹n ng©n l­îng<color> vµ<color=red> 2000 khiªu chiÕn lÖnh<color>. \nBang héi chiÕm thµnh kh«ng cÇn b¸o danh vµ cã thÓ trùc tiÕp vµo",
 			2,
 			"Ta muèn b¸o danh tham gia/action_signup",
 			"§Ó ta suy nghÜ l¹i/Cancel")
@@ -86,25 +86,25 @@ end
 
 function dlg_query()
 	--Change request 14/06/2011 - Modified by DinhHQ
---	local nWeekDay = tonumber(GetLocalDate("%w"))
---	local nHour = tonumber(GetLocalDate("%H%M"))
---	if nWeekDay ~= 0  or nHour < 2305 or nHour > 2350 then
---		Talk(1, "", "Vµo ngµy<color=red> CN <color>, tõ <color=red>23h05<color> ®Õn <color=red>23h50<color> míi lµ thêi gian nhËn th­ëng, xin ®¹i hiÖp h·y quay l¹i sau.")
---	return
---	end
+	local nWeekDay = tonumber(GetLocalDate("%w"))
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if nWeekDay ~= 5  or nHour < 2145 or nHour > 2350 then
+		Talk(1, "", "Thø <color=red>6<color>, tõ <color=red>21h45<color> ®Õn <color=red>23h50<color> míi lµ thêi gian nhËn th­ëng, xin ®¹i hiÖp h·y quay l¹i sau.")
+		return
+	end
 	
 	--Avoid dupe exp award - Modified by DinhHQ - 20110428
---	local nTime = GetCurServerTime();
+	local nTime = GetCurServerTime();
 	local name = GetName()
---	if tbVngLimitTime[name] then
---		local nLastAwardTime = tbVngLimitTime[name]
---		local nRestTime =(nTime - nLastAwardTime)
---		if nRestTime < 60*2  then
---			Talk(1, "", format("Mçi lÇn nhËn th­ëng ph¶i c¸ch nhau <color=red>2<color> phót. VÞ §¹i hiÖp nµy <color=red>%d<color> gi©y n÷a h·y thö l¹i.", (60*2 - nRestTime)))
---			return
---		end	
---	end	
---	tbVngLimitTime[name] = nTime
+	if tbVngLimitTime[name] then
+		local nLastAwardTime = tbVngLimitTime[name]
+		local nRestTime =(nTime - nLastAwardTime)
+		if nRestTime < 60*2  then
+			Talk(1, "", format("Mçi lÇn nhËn th­ëng ph¶i c¸ch nhau <color=red>2<color> phót. VÞ §¹i hiÖp nµy <color=red>%d<color> gi©y n÷a h·y thö l¹i.", (60*2 - nRestTime)))
+			return
+		end	
+	end	
+	tbVngLimitTime[name] = nTime
 	
 	local state = BattleWorld.m_State
 	if (state == STATE_PREPARING or state == STATE_STARTWAR) then
@@ -174,7 +174,7 @@ function process_award(param, result)
 		player:Say("Ng­¬i ®· nhËn qua phÇn th­ëng nµy råi.")
 		return
 	end
-	local caption = format("Ng­¬i cßn cã <color=red>%d<color> C«ng Thµnh LÔ Bao, <color=red>%d<color> VÖ Trô LÔ Bao vµ <color=red>%d<color> phÇn th­ëng kinh nghiÖm ch­a nhËn.",
+	local caption = format("Ng­¬i cßn cã<color=red>%d<color> C«ng Thµnh LÔ Bao, <color=red>%d<color> VÖ Trô LÔ Bao vµ <color=red>%d<color> phÇn th­ëng kinh nghiÖm ch­a nhËn.",
 						info.BoxCount,
 						info.GuardAwardCount,
 						info.ExpAward)
@@ -194,12 +194,12 @@ end
 
 function action_expaward(exp)
 	--Change request 14/06/2011 - Modified by DinhHQ
---	local nWeekDay = tonumber(GetLocalDate("%w"))
---	local nHour = tonumber(GetLocalDate("%H%M"))
---	if nWeekDay ~= 0  or nHour < 2305 or nHour > 2350 then
---		Talk(1, "", "Vµo ngµy<color=red> CN <color>, tõ <color=red>23h05<color> ®Õn <color=red>23h50<color> míi lµ thêi gian nhËn th­ëng, xin ®¹i hiÖp h·y quay l¹i sau.")
---		return
---	end
+	local nWeekDay = tonumber(GetLocalDate("%w"))
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if nWeekDay ~= 5  or nHour < 2145 or nHour > 2350 then
+		Talk(1, "", "Thø <color=red>6<color>, tõ <color=red>21h45<color> ®Õn <color=red>23h50<color> míi lµ thêi gian nhËn th­ëng, xin ®¹i hiÖp h·y quay l¹i sau.")
+		return
+	end
 	StackExp(exp)
 	local buff = ObjBuffer:New()
 	buff:Push(GetName())
@@ -227,14 +227,14 @@ end
 function action_awarditem(count, award, max_count)
 --[DinhHQ]
 --20110318:Fix bug nhËn c«ng thµnh chiÕn lÔ bao	
---	local nWeekDay = tonumber(GetLocalDate("%w"))
---	local nHour = tonumber(GetLocalDate("%H%M"))
---	if nWeekDay ~= 0  or nHour < 2305 or nHour > 2350 then
---		Talk(1, "", "Vµo ngµy<color=red> CN <color>, tõ <color=red>23h05<color> ®Õn <color=red>23h50<color> míi lµ thêi gian nhËn th­ëng, xin ®¹i hiÖp h·y quay l¹i sau.")
---		return
---	end
-	if (CalcFreeItemCellCount() < 50) then
-		Say("Hµnh trang Ýt nhÊt ph¶i cã <color=red>50<color> « trèng míi nhËn ®­îc phÇn th­ëng.")
+	local nWeekDay = tonumber(GetLocalDate("%w"))
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if nWeekDay ~= 5  or nHour < 2145 or nHour > 2350 then
+		Talk(1, "", "Thø <color=red>6<color>, tõ <color=red>21h45<color> ®Õn <color=red>23h50<color> míi lµ thêi gian nhËn th­ëng, xin ®¹i hiÖp h·y quay l¹i sau.")
+		return
+	end
+	if (CalcFreeItemCellCount() < 60) then
+		Say("Hµnh trang Ýt nhÊt ph¶i cã <color=red>60<color> « trèng míi nhËn ®­îc phÇn th­ëng.")
 		return
 	end
 	local actual_count = 0

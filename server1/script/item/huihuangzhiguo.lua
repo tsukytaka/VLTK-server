@@ -14,7 +14,7 @@ function main(ItemIndex)
 	local nPlayerLevel = GetLevel();	
 	if (nPlayerLevel < 90) then
 		nGetSeedLevel = 1;
-		szfruitlevel = "cÊp thÊp"
+		szfruitlevel = "S¬ cÊp"
 	elseif (nPlayerLevel >= 90 and nPlayerLevel < 120) then
 		nGetSeedLevel = 2;
 		szfruitlevel = "Trung cÊp"
@@ -24,7 +24,7 @@ function main(ItemIndex)
 	end
 	
 	if (nGetSeedLevel ~= huihuangzhiguo_level) then
-		Say(format("<#>B¹n chØ cã thÓ ¨n qu¶ Huy hoµng %s.",szfruitlevel), 0)
+		Say(format("B¹n chØ cã thÓ ¨n Qu¶ Huy Hoµng (%s).",szfruitlevel), 0)
 		return 1
 	end;
 	local nDate = tonumber(GetLocalDate("%m%d"))
@@ -41,18 +41,18 @@ function main(ItemIndex)
 	end
 	
 	if ( GetTask(2313) >= MX_LANTERN_COUNT ) then
-		local szMsg = format("<#>H«m nay b¹n ®· ¨n %d qu¶ Huy hoµng, vâ c«ng th¨ng tiÕn qu¸ nhanh dÔ g©y t¸c dông ph¶n nghÞch, ngµy mai h·y tiÕp tôc vËy.",MX_LANTERN_COUNT);
+		local szMsg = format("H«m nay b¹n ®· ¨n %d Qu¶ Huy Hoµng, vâ c«ng th¨ng tiÕn qu¸ nhanh dÔ g©y t¸c dông ph¶n nghÞch, ngµy mai h·y tiÕp tôc vËy.",MX_LANTERN_COUNT);
 		Say(szMsg, 0)
 		return 1
 	end
 	
 	local award_exp = 0
 	if (huihuangzhiguo_level == 1) then
-		award_exp = 500000
+		award_exp = 50000
 	elseif (huihuangzhiguo_level == 2) then
-		award_exp = 2000000
+		award_exp = 100000
 	elseif (huihuangzhiguo_level == 3) then
-		award_exp = 5000000
+		award_exp = 200000
 	end
 	AddOwnExp(award_exp)
 	SetTask(2313, GetTask(2313) + 1)

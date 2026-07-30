@@ -3,7 +3,7 @@ Include("\\script\\event\\newyear_2009\\lucky_bag\\wuguohecheng.lua");
 Include("\\script\\event\\newyear_2009\\xinnianyanhua\\xinnianyanhua.lua");
 Include("\\script\\event\\qingren_jieri\\200902\\event.lua");
 
-function main_newyear_2009()
+function main()
 	local arytalk = {"<dec><npc>HiÖn t¹i ®ang ë thêi gian tÕt, ®¹i hiÖp cßn chÇn chõ g× n÷a?"};
 	
 	if (newyear0901_hongbao_IsActDate() == 1) then

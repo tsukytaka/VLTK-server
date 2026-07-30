@@ -87,7 +87,7 @@ function main()
 	local n_type = GetGlbValue(GLB_WLLS_TYPE)
 	local n_maxmem = WLLS_TAB[n_type].max_member
 	if (n_count < n_maxmem) then
-		Msg2Player("Nhãm cña b¹n hiÖn chØ cßn <color=yellow>"..n_count.."<color> thµnh viªn, chiÕn ®éi cña b¹n cã thÓ gia nhËp nhiÒu nhÊt <color=yellow>"..n_maxmem.."<color> thµnh viªn.")
+		Msg2Player("Nhãm cña b¹n hiÖn chØ cßn<color=yellow>"..n_count.."<color>thµnh viªn, chiÕn ®éi cña b¹n cã thÓ gia nhËp nhiÒu nhÊt<color=yellow>"..n_maxmem.."<color>thµnh viªn.")
 	end
 end
 

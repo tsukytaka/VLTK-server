@@ -1,7 +1,6 @@
 IncludeLib("TONG")
 Include("\\script\\tong\\tong_header.lua")
 
---function letter_main()
 function main()
 	local szTongName, nTongID = GetTongName();
 	local GREADSEED_SEEDID_TASKID = 2310;

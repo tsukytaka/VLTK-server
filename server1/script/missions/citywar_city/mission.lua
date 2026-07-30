@@ -1,5 +1,6 @@
 Include("\\script\\missions\\citywar_city\\head.lua")
 Include("\\script\\missions\\citywar_city\\camper.lua");
+Include("\\script\\missions\\citywar_city\\ctc3tru.lua");
 
 function InitMission()
 	WriteLog(GetLoop()..": b¾t ®Çu thi ®Êu")
@@ -110,9 +111,12 @@ function InitMission()
 end;
 
 function RunMission()
+	local Ctc3tru_GameCity = Ctc3tru_GetNameCityWarWithnCan1to7(GetWarOfCity());
 	SetMissionV(MS_STATE, 2)
-	str = format("%s c«ng thµnh chiÕn chÝnh thøc b¾t ®Çu! Bªn thñ thµnh lµ %s, bªn khiªu chiÕn lµ %s. Ai sÏ giµnh th¾ng lîi chung cuéc ®©y?", GetGameCity(), GetGamerName(1), GetGamerName(2));
+	str = format("C«ng thµnh chiÕn %s chÝnh thøc b¾t ®Çu! Bªn thñ thµnh lµ %s, bªn khiªu chiÕn lµ %s. Ai sÏ giµnh th¾ng lîi chung cuéc ®©y?", Ctc3tru_GameCity, GetGamerName(1), GetGamerName(2));
+	str4SubW = format("C«ng thµnh chiÕn <color=yellow>%s<color> chÝnh thøc b¾t ®Çu! Bªn thñ thµnh lµ <color=green>%s<color>, bªn c«ng thµnh lµ <color=green>%s<color>. Ai sÏ giµnh th¾ng lîi chung cuéc ®©y?", Ctc3tru_GameCity, GetGamerName(1), GetGamerName(2));
 	AddGlobalNews(str);
+	Msg2SubWorld(str4SubW);
 end;
 
 function EndMission()

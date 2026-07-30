@@ -5,11 +5,11 @@ Include("\\script\\task\\system\\task_string.lua");	-- ¶Ô»°´¦ÀíÍ·ÎÄ¼ş
 
 -- COMMON ³£Á¿ --
 ZingPlay_Start_Date	= 20081018;		-- »î¶¯ÆğÊ¼Ê±¼ä
-ZingPlay_End_Date	= 20281102;		-- ÁìÈ¡ÏŞÆÚ
+ZingPlay_End_Date	= 20081102;		-- ÁìÈ¡ÏŞÆÚ
 
 function main()
 	local n_date = tonumber(GetLocalDate("%Y%m%d"));
-	local tb_Msg = {"<dec><npc>Tõ 18-10-2012 ®Õn 31-10-2014, TÊt c¶ nh©n sÜ vâ l©m khi tham gia c¸c trß ch¬i cña ZingPlay, khi ®ñ c¸c yªu cÇn thiÕt (tham kh¶o t¹i trang chñ cña ZingPlay) cã thÓ ®Õn gÆp Sø Gi¶ ZingPlay ®Ó nhËn phÇn th­ëng Bao L× X× ZingPlay. Thêi gian nhËn th­ëng ®Õn hÕt ngµy 02-11-2014."};
+	local tb_Msg = {"<dec><npc>Tõ 18-10-2008 ®Õn 31-10-2008, TÊt c¶ nh©n sÜ vâ l©m khi tham gia c¸c trß ch¬i cña ZingPlay, khi ®ñ c¸c yªu cÇn thiÕt (tham kh¶o t¹i trang chñ cña ZingPlay) cã thÓ ®Õn gÆp Sø Gi¶ ZingPlay ®Ó nhËn phÇn th­ëng Bao L× X× ZingPlay. Thêi gian nhËn th­ëng ®Õn hÕt ngµy 02-11-2008."};
 	
 	if (n_date >= ZingPlay_Start_Date and n_date <= ZingPlay_End_Date) then
 		tinsert(tb_Msg, "Ta ®Õn nhËn bao l× x× ZingPlay./take_zingplay_bag");

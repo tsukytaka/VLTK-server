@@ -1,5 +1,6 @@
 
 function OnDeath()
+--AddEnergy(1000)
 end
 
 function OnTimer(nNpcIndex, nTimeOut) 

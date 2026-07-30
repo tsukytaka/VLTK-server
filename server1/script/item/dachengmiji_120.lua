@@ -35,7 +35,7 @@ function main(nItemIdx)
 	for i = 1, getn(tb_90skill[n_fac]) do
 		local skill = HaveMagic(tb_90skill[n_fac][i]);
 		if (skill ~= -1 and skill ~= 20) then
-			tinsert(tb_Desc, format("N©ng cÊp".."%s/#upgrade_skilllevel(%d)", GetSkillName(tb_90skill[n_fac][i]), tb_90skill[n_fac][i]));
+			tinsert(tb_Desc, format("N©ng cÊp ".."%s/#upgrade_skilllevel(%d)", GetSkillName(tb_90skill[n_fac][i]), tb_90skill[n_fac][i]));
 		end
 	end
 	
@@ -57,6 +57,7 @@ function upgrade_skilllevel(n_skillid)
 	
 	if (ConsumeItem(3, 1, 6, 1, 2425, -1) == 1) then
 		AddMagic(n_skillid, 20);
+		Msg2Player(format("N©ng cÊp kü n¨ng <color=yellow>%s<color> thµnh c«ng.", GetSkillName(n_skillid)));
 		WriteLog(format("[%s]\t%s\tAccount:%s\tName:%s\tUpGrade Skill:%d", 
 				"§¹i Thµnh BÝ KÝp 120", 
 				GetLocalDate("%Y-%m-%d %X"),

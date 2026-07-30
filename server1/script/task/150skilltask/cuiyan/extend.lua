@@ -10,7 +10,7 @@ function pTask:CheckMissionCondition()
 	end
 	---ChØnh söa nhËn nv kü n¨ng 150 ph¶i trïng sinh 2 trë lªn - Modified By NgaVN - 20121207
 	local nTransLife = ST_GetTransLifeCount()	
-	if nTransLife < 2  then
+	if nTransLife < 6  then
 		return
 	end
 	

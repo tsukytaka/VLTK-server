@@ -1,0 +1,40 @@
+2026-07-28 14:19:21	heaven(version 2.02) log start....
+2026-07-28 14:19:21	heaven log close....
+2026-07-28 14:19:24	heaven(version 2.02) log start....
+2026-07-28 14:19:24	heaven log close....
+2026-07-28 14:19:28	heaven(version 2.02) log start....
+2026-07-28 14:19:28	heaven log close....
+2026-07-28 14:19:31	heaven(version 2.02) log start....
+2026-07-28 14:19:31	Allocate Connectionidx:0, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:19:31	Callback Connectionidx:0, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 10
+2026-07-28 14:19:34	Allocate Connectionidx:1, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:19:34	Callback Connectionidx:1, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 10
+2026-07-28 14:19:38	Allocate Connectionidx:2, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:19:38	Callback Connectionidx:2, CloseReason:5, IP:127.0.0.1, LeftFreeCount: 10
+2026-07-28 14:19:41	Allocate Connectionidx:3, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:19:41	Callback Connectionidx:3, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 10
+2026-07-28 14:19:44	Allocate Connectionidx:4, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:19:50	Allocate Connectionidx:5, IP:127.0.0.1, LeftFreeCount:8
+2026-07-28 14:22:30	heaven(version 2.02) log start....
+2026-07-28 14:22:30	heaven log close....
+2026-07-28 14:22:34	heaven(version 2.02) log start....
+2026-07-28 14:22:37	Allocate Connectionidx:0, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:22:37	Callback Connectionidx:0, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 10
+2026-07-28 14:22:39	Allocate Connectionidx:1, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:22:39	Callback Connectionidx:1, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 10
+2026-07-28 14:22:40	Allocate Connectionidx:2, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:22:47	Allocate Connectionidx:3, IP:127.0.0.1, LeftFreeCount:8
+2026-07-28 14:22:47	Callback Connectionidx:3, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 9
+2026-07-28 14:22:55	Allocate Connectionidx:4, IP:127.0.0.1, LeftFreeCount:8
+2026-07-28 14:51:38	Callback Connectionidx:2, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 9
+2026-07-28 14:51:39	Allocate Connectionidx:5, IP:127.0.0.1, LeftFreeCount:8
+2026-07-28 14:51:39	heaven(version 2.02) log start....
+2026-07-28 14:51:44	Allocate Connectionidx:0, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 14:52:01	Allocate Connectionidx:1, IP:127.0.0.1, LeftFreeCount:8
+2026-07-28 15:14:11	heaven(version 2.02) log start....
+2026-07-28 15:14:15	Allocate Connectionidx:0, IP:127.0.0.1, LeftFreeCount:9
+2026-07-28 15:14:19	Allocate Connectionidx:1, IP:127.0.0.1, LeftFreeCount:8
+2026-07-28 15:14:19	Callback Connectionidx:1, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 9
+2026-07-28 15:14:27	Allocate Connectionidx:2, IP:127.0.0.1, LeftFreeCount:8
+2026-07-28 15:14:27	Callback Connectionidx:2, CloseReason:2, IP:127.0.0.1, LeftFreeCount: 9
+2026-07-28 15:14:36	Allocate Connectionidx:3, IP:127.0.0.1, LeftFreeCount:8

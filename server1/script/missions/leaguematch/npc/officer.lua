@@ -1,5 +1,5 @@
-Include("\\script\\global\\nobitaxd\\shop\\shopliendau\\shopliendau.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\shop\\shopliendau\\shopliendau.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 Include( "\\script\\missions\\leaguematch\\head.lua" )
 Include( "\\script\\missions\\leaguematch\\npc\\head.lua" )
 Include("\\script\\lib\\log.lua")
@@ -199,7 +199,7 @@ function wlls_wantaward_title()
 		RemoveSkillState(1500)
 	end
 		
-	Title_AddTitle(n_title, 1, nTime)
+	Title_AddTitle(n_title, 2, nTime)
 	Title_ActiveTitle(n_title)
 	
 	

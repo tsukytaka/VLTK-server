@@ -11,11 +11,10 @@
 --2556	越南南方解放活动 记录赛跑报名的地图Id
 --2557	越南南方解放活动占用
 --2333	越南南方解放活动占用
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 
 jiefang_0804_ActTimeH_S = 2008120500
-jiefang_0804_ActTimeH_E = 2050010424
+jiefang_0804_ActTimeH_E = 2009010424
 
 jiefang_0804_TSK_Version		= 2473
 jiefang_0804_TSK_FlagCount		= 2474
@@ -29,7 +28,7 @@ jiefang_0804_TSKV_FlagExpLimit	= 1200000000
 function jiefang_0804_ResetTask()
 	local nDateH = tonumber(GetLocalDate("%Y%m%d%H"))
 	--活动开始，到兑奖结束
-	if (CFG_jiefang_jieri2008	==	1) then
+	if nDateH >= jiefang_0804_ActTimeH_S and nDateH <= jiefang_0804_ActTimeH_E then
 		
 		if GetTask(jiefang_0804_TSK_Version) ~= jiefang_0804_ActTimeH_S then
 			SetTask(jiefang_0804_TSK_Version, jiefang_0804_ActTimeH_S)

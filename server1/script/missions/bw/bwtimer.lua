@@ -32,14 +32,14 @@ function ReportMemberState(V)
 	local str1;
 
 	if (RestMin > 0) and (RestSec == 0) then
-		str1 = "Th­îng l«i ®µi, thêi gian b¾t ®Çu thi ®Êu<#> cßn: <color=yellow>"..RestMin.." phót<color><#>, xin h·y chuÈn bÞ s½n sµng."
+		str1 = "Th­îng l«i ®µi, thêi gian b¾t ®Çu thi ®Êu<#> cßn: <color=yellow>"..RestMin.."<color><#> xin h·y chuÈn bÞ."
 		Msg2MSAll(BW_MISSIONID, str1);
 		if ((GO_TIME - V) == 3) then 
-			str1 = GetMissionS(CITYID).."Th­îng l«i ®µi, thêi gian b¾t ®Çu thi ®Êu<#> chØ cßn<color=yellow>1<color>, xin h·y chuÈn bÞ s½n sµng."
+			str1 = GetMissionS(CITYID).."Th­îng l«i ®µi, thêi gian b¾t ®Çu thi ®Êu<#> chØ cßn<color=yellow>1<color> xin h·y chuÈn bÞ s½n sµng."
 			--AddGlobalCountNews(str1)
 		end
 	elseif (RestMin == 0) then
-		str1 = "Th­îng l«i ®µi tranh tµi<#> cßn: <color=yellow>" ..RestSec.. "<color><#> gi©y."
+		str1 = "Th­îng l«i ®µi tranh tµi<#> cßn: <color=yellow>" ..RestSec.. "<color><#>gi©y."
 		Msg2MSAll(BW_MISSIONID, str1);
 	end;
 	return str1;
@@ -65,7 +65,7 @@ function bw_noticecaptainkey(str1)
 			szName = GetMissionS(MSS_CAPTAIN[i]);
 			nKey = GetMissionV(MS_TEAMKEY[i]);
 			nCount = GetMissionV(MS_MAXMEMBERCOUNT);
-			str = "C¸c thµnh viªn <color=yellow> "..GetMissionS(CITYID).."<color> <#>cña ®éi <color=yellow> "..nCount.."<color> thi ®Êu víi <color=yellow> "..nCount.."<color>, <#> vµo l«i ®µi sè<color=yellow> ["..nKey.."]<color>. Xin h·y dÉn ®éi vµo l«i ®µi.";
+			str = "C¸c thµnh viªn<color=yellow> "..GetMissionS(CITYID).."<color> <#>cña ®éi<color=yellow> "..nCount.."<color>thi ®Êu víi<color=yellow> "..nCount.."<color>, <#> vµo l«i ®µi sè<color=yellow> ["..nKey.."]<color>.Xin h·y dÉn ®éi vµo l«i ®µi.";
 			Msg2Player(str);
 		end
 	end;

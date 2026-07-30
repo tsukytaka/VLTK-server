@@ -1,10 +1,9 @@
 Include("\\script\\event\\qingren_jieri\\200902\\head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 -- 是否处于活动时间
 function valentine2009_isCarryon()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_qingren_jieri_2009	== 1) then
+	if (VALENTINE2009_START <= nDate and nDate <= VALENTINE2009_END) then
 		return 1;
 	else
 		return 0;
