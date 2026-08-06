@@ -136,7 +136,8 @@ function StarterGuide_Main(nSkipReload)
 	return 1
 end
 function main()
-	return StarterGuide_Main(1)
+        Talk(1, "", "Vật phẩm này đã bị vô hiệu hóa.")
+        return 1
 end
 
 -- Mo khoa truc tiep trang thai -2 tren instance, giu nguyen option va cap trang bi.

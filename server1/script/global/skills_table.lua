@@ -366,7 +366,8 @@ function update_kl()			-- 刷新技能
 	SetTask(137,29)
 end
 
-function add_tw(lvl)			-- 根据任务等级加相应的天王技能
+function add_tw(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的天王技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(34) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(34)		--惊雷斩[34]  （入门）
@@ -436,7 +437,8 @@ function add_tw(lvl)			-- 根据任务等级加相应的天王技能
 	end
 end
 
-function add_sl(lvl)			-- 根据任务等级加相应的少林技能
+function add_sl(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的少林技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(14) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(14)		-- 行龙不雨[14]
@@ -497,7 +499,8 @@ function add_sl(lvl)			-- 根据任务等级加相应的少林技能
 	end
 end
 
-function add_tm(lvl)			-- 根据任务等级加相应的唐门技能
+function add_tm(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的唐门技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(45) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(45)		--霹雳弹[45 ]（入门）
@@ -566,7 +569,8 @@ function add_tm(lvl)			-- 根据任务等级加相应的唐门技能
 	end
 end
 
-function add_wu(lvl)			-- 根据任务等级加相应的五毒技能
+function add_wu(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的五毒技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(63) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(63)		--毒砂掌  [63]（入门）
@@ -643,7 +647,8 @@ function add_wu(lvl)			-- 根据任务等级加相应的五毒技能
 	end
 end
 
-function add_em(lvl)			-- 根据任务等级加相应的峨嵋技能
+function add_em(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的峨嵋技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(85) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(85)		--一叶知秋[85]（入门）
@@ -711,7 +716,8 @@ function add_em(lvl)			-- 根据任务等级加相应的峨嵋技能
 	end
 end
 
-function add_cy(lvl)			-- 根据任务等级加相应的翠烟技能
+function add_cy(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的翠烟技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(99) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(99)		--风花雪月[99 ]（入门）
@@ -768,7 +774,8 @@ function add_cy(lvl)			-- 根据任务等级加相应的翠烟技能
 	end
 end
 
-function add_tr(lvl)			-- 根据任务等级加相应的天忍技能
+function add_tr(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的天忍技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(135) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(135)		--残阳如血[135]（入门）
@@ -836,7 +843,8 @@ function add_tr(lvl)			-- 根据任务等级加相应的天忍技能
 	end
 end
 
-function add_gb(lvl)			-- 根据任务等级加相应的丐帮技能
+function add_gb(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的丐帮技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(122) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(122)		--见人伸手[122]（入门）
@@ -893,7 +901,8 @@ function add_gb(lvl)			-- 根据任务等级加相应的丐帮技能
 	end
 end
 
-function add_wd(lvl)			-- 根据任务等级加相应的武当技能
+function add_wd(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的武当技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(153) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(153)		--怒雷指  [153]（入门）
@@ -950,7 +959,8 @@ function add_wd(lvl)			-- 根据任务等级加相应的武当技能
 	end
 end
 
-function add_kl(lvl)			-- 根据任务等级加相应的昆仑技能
+function add_kl(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的昆仑技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(169) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(169)		--呼风法  [169]（入门）
@@ -1029,7 +1039,8 @@ function add_kl(lvl)			-- 根据任务等级加相应的昆仑技能
 		end
 	end
 end
-function add_hs(lvl)			-- 根据任务等级加相应的华山技能
+function add_hs(lvl)
+        if (lvl < 90) and (GetLevel() >= 90) then lvl = 90 end			-- 根据任务等级加相应的华山技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(1347) == -1) then		-- 必须没有技能的才给技能
 			AddMagic(1347)		--白虹贯日（入门）

@@ -9,7 +9,7 @@
 	--[CÊp §é T¹o Nh©n VËt]
 		CapKhiLoginVaoServer = 1 --CÊp §é T¹o Nh©n VËt [0: §ãng, 1: Më]
 			-- 0: §ãng, 1: Më
-		CapDo = 10 --CÊp khi khëi t¹o nh©n vËt lÇn ®Çu 
+		CapDo = 90 --CÊp khi khëi t¹o nh©n vËt lÇn ®Çu 
 			-- §¨ng nhËp lÇn ®Çu sÏ nhËn cÊp CapDo
 	--[Giíi H¹n IP]
 		GioiHanLoginIP = 0 -- Giíi H¹n IP [0: §ãng, 1: Më]
