@@ -31,3 +31,7 @@ gateway/goddess.cfg
 gateway/s3relay/relay_config.ini
 server1/servercf0.ini
 server1/servercfg.ini
+
+# Backup files
+*.bak
+*.bak_*
