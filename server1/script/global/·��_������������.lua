@@ -1,27 +1,30 @@
---ÒÔ¸£Ôµ³öÊÛÎïÆ·µÄNPC
---2004.8.5
-
+Include( "\\script\\lib\\alonelib.lua" )
+Include( "\\script\\dailogsys\\dailogsay.lua" )
 Include( "\\script\\global\\fuyuan.lua" )
 Include([[\script\event\mid_autumn06\head.lua]]);
 Include("\\script\\vng_feature\\thuongnhanthanbi\\moruongfour\\openchestfour.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 function main()
-	local tab_Content = {
-		"Giao dŞch/OnBuy", 
-		"Kh«ng giao dŞch/OnCancel", 
-		"Xin h·y ®­a ta ®Õn ngän nói Tr­êng B¹ch/GotoHuanZhuan",
-		"Liªn quan ®Õn phóc duyªn/OnAbout"
-	};
-	if (CFG_mid_autumn06 == 1) then
-		tinsert(tab_Content, "Ho¹t ®éng Trung Thu 2006/au06_lpaw_entrance");
+	local tbContent = {"<color=green><npc><color>Kh¸ch quan muèn mua g×? Bæn tiÖm kh«ng thiÕu mãn g× c¶!"};
+		tinsert(tbContent, "Giao dŞch/OnBuy");
+		tinsert(tbContent, NOTTRADE);
+		if DiDenNgonNuiTruongBachThanBiThuongNhan == 1 then
+		tinsert(tbContent, "§i ®Õn ngän nói Tr­êng B¹ch/GotoHuanZhuan");
+		end
+		tinsert(tbContent, "Liªn quan ®Õn phóc duyªn/OnAbout");
+	if (au06_is_inperiod() == 1) then
+		tinsert(tbContent, "Ho¹t ®éng Trung Thu/au06_lpaw_entrance");
 	end;
-		tinsert(tab_Content, "Më r­¬ng 4/#tbChectfour:main()");
-	Say ( "Kh¸ch quan muèn mua g×? Bæn tiÖm kh«ng thiÕu mãn g×!", getn(tab_Content), tab_Content);
+		tinsert(tbContent, "Më r­¬ng 4/#tbChectfour:main()");
+	CreateTaskSay(tbContent)
 end
 
 function OnBuy()
-	Sale( 93, 2 );
+	if OpenShopThanBiThuongNhan == 1 then
+		Sale( 93, 2 );
+	else
+		Msg2Player("<color=yellow>Cöa hµng ThÇn bİ th­¬ng nh©n hiÖn ®ang ®ãng, khi nµo më l¹i sÏ cã th«ng b¸o!")
+	end
 end
 
 function OnAbout()
@@ -33,7 +36,7 @@ function au06_lpaw_entrance()
 		Say("ChØ cã ng­êi ch¬i n¹p thÎ míi cã thÓ tham gia ho¹t ®éng Trung thu", 0);
 		return
 	end;
-	Say("NÕu ng­¬i cã <color=yellow> 10 Th­¬ng Cæ lÖnh bµi<color> ta sÏ ®æi cho 1  <color=yellow>Phông NguyÖt Qu¶ Dung<color> t¨ng ®iÓm kü n¨ng hoÆc 1 <color=yellow>Cèng NguyÖt Phï Dung<color> t¨ng ®iÓm tiÒm n¨ng.", 3, "§æi 10 Th­¬ng Cæ lÖnh bµi lÊy Phông NguyÖt Qu¶ Dung/#shangjialingpai(1)", "§æi 10 Th­¬ng Cæ lÖnh bµi lÊy Cèng NguyÖt Phï Dung/#shangjialingpai(2)", "Nh©n tiÖn ghĞ qua th«i/oncancel");
+	Say("NÕu ng­¬i cã <color=yellow>10 Th­¬ng Cæ lÖnh bµi<color> ta sÏ ®æi cho 1  <color=yellow>Phông NguyÖt Qu¶ Dung<color> t¨ng ®iÓm kü n¨ng hoÆc 1 <color=yellow>Cèng NguyÖt Phï Dung<color> t¨ng ®iÓm tiÒm n¨ng.", 3, "§æi 10 Th­¬ng Cæ lÖnh bµi lÊy Phông NguyÖt Qu¶ Dung/#shangjialingpai(1)", "§æi 10 Th­¬ng Cæ lÖnh bµi lÊy Cèng NguyÖt Phï Dung/#shangjialingpai(2)", "Nh©n tiÖn ghĞ qua th«i/oncancel");
 end;
 
 function shangjialingpai(nIndex)

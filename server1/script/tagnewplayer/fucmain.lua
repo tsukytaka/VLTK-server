@@ -10,7 +10,7 @@ Include("\\script\\tagnewplayer\\func_quest180.lua");
 
 
 function NWP_main()
---do return end
+do return end
 	if (IsCode()~=1) then
 		Talk(1, "", "§¹i hiÖp kh«ng thuéc ®èi t­îng tham gia An Bang Hoµng Kim LÖnh bµi ! .");
 		return

@@ -7,7 +7,7 @@ function main()
 	--Say("Ò×ÈİÊõÊ¿£ºÕâÎ»¿Í¹Ù£¬ÏëÒªÊ²Ã´ºÃ¶«Î÷Ö±½ÓÈ¥<color=yellow>ÆæÕä¸ó<color>ÀïÌô¾ÍÊÇÁË£¬ÀÏ·òÖÕÓÚ¿ÉÒÔÇåÏĞÇåÏĞÁËÄØ£¡Ê²Ã´£¿²»¶®ÔõÃ´È¥<color=yellow>ÆæÕä¸ó<color>£¿Ö±½Óµã»÷<color=green>ÓÒÏ¢½ÇµÄÄÇ¸öÔ²ĞÎµÄÍ¼±ê<color>¾ÍÊÇÁË¡£", 0);
 	--return
 	
-	 Say ( "DŞch Dung ThuËt SÜ : Muèn häc thuËt dŞch dung ? ThËt ra th× rÊt ®¬n gi¶n, ë ta ®©y mua mét ®Æc chÕ dŞch dung mÆt n¹ ta liÒn cã thÓ d¹y ng­¬i. BÊt ®ång mÆt n¹ cã thÓ dŞch dung ®­îc kh«ng cïng ®İch d¸ng vÎ , ®¹i hiÖp cã muèn hay kh«ng nh×n mét chót ? ", 1, "Liªn quan tíi dŞch dung mÆt n¹/OnAbout" );
+	 Say ( "DŞch Dung ThuËt SÜ : Muèn häc thuËt dŞch dung ? ThËt ra th× rÊt ®¬n gi¶n, ë ta ®©y mua mét ®Æc chÕ dŞch dung mÆt n¹ ta liÒn cã thÓ d¹y ng­¬i. BÊt ®ång mÆt n¹ cã thÓ dŞch dung ®­îc kh«ng cïng ®İch d¸ng vÎ , ®¹i hiÖp cã muèn hay kh«ng nh×n mét chót ? ", 3, "Mua/OnBuy", "T¹m thêi kh«ng mua /OnCancel", "Liªn quan tíi dŞch dung mÆt n¹/OnAbout" );
 end
 
 function OnBuy()

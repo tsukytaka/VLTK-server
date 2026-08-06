@@ -42,8 +42,28 @@ tbVNEquiptInfo =
 		},
 	[8] =
 		{
-			strType = "Kim ¤ (Max Option)",
-			nStartIndex = 3235,
+			strType = "XÝch L©n",
+			nStartIndex = 2515,
+		},
+	[9] =
+		{
+			strType = "Minh Ph­îng",
+			nStartIndex = 2745,
+		},
+	[10] =
+		{
+			strType = "§»ng Long",
+			nStartIndex = 2975,
+		},
+	[11] =
+		{
+			strType = "Tinh S­¬ng",
+			nStartIndex = 5379,
+		},
+	[12] =
+		{
+			strType = "NguyÖt KhuyÕt",
+			nStartIndex = 5670,
 		},
 }
 --chän nh¸nh kü tÊn c«ng chñ ®¹o

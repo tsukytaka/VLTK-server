@@ -9,6 +9,7 @@ Include("\\script\\lib\\log.lua")
 
 
 function pActivity:DropMaterialBagInRandom(nNpcIndex)
+	Msg2Player("ok")
 	tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, %tbKillMonstorAward, "Drop Material Bag", 1)
 end
 

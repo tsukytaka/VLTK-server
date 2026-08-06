@@ -5,6 +5,8 @@ Include("\\script\\nationalwar\\head.lua")
 Include( "\\script\\lib\\say.lua" )
 Include("\\script\\item\\tianziyuxi.lua")
 IncludeLib("ITEM")
+Include("\\script\\lib\\awardtemplet.lua")
+Include("\\script\\lib\\log.lua")
 
 function main()
 	Say("Néi c¸c th­îng th­ hÇu chØ",
@@ -192,20 +194,25 @@ end
 
 -- ÁìÈ¡/ÁìÈ¡Ìì×Ó½±Àø
 function nw_accept_empirering()
-		
+	local day = tonumber(date("%w"))		
 	local nWeek = tonumber(GetLocalDate("%w"));	 
 	local nTime = tonumber(GetLocalDate("%H%M%S"));
 	local nHour = tonumber(GetLocalDate("%H"));		
-	
+	if (GetTask(5735) ~= nWeek) then
+		SetTask(5735, nWeek)
+		SetTask(NW_TASKNO_GETEMPIRERING, 0)
+	end
 	city = GetCityArea()
 	if (city ~= CITYIDX_LINAN and city ~= CITYIDX_BIANJING) then
 		Say("N¬i ®©y lÏ nµo kh«ng thuéc khu vùc tèng kim?")
 	elseif (NW_IsEmperor() ~= 1) then
 		Say("<color=red>PhÇn th­ëng cña thiªn tö<color> chØ cã thÓ Thiªn Tö míi nhËn ®­îc, ng­¬i lµ ai mµ d¸m m¹o danh Thiªn Tö!")
-	elseif (NW_GetTask(NW_TASKNO_GETEMPIRERING) ~= 0) then
+	elseif (GetTask(NW_TASKNO_GETEMPIRERING) ~= 0) then
 		Say("BÖ h¹ ®· nhËn th­ëng råi.")
-	elseif (nWeek == 1 and nTime >= 120000 and nTime <= 223000) then
-		Say("ChiÕn sù cÊp b¸o, xin mêi bÖ h¹ chuÈn bÞ nghªnh chiÕn.")
+	--elseif (nWeek == 1 and nTime >= 120000 and nTime <= 223000) then
+	--	Say("ChiÕn sù cÊp b¸o, xin mêi bÖ h¹ chuÈn bÞ nghªnh chiÕn.")
+	elseif day == 0 or day == 1 or day == 3 or day == 4 or day == 5 or day == 6 then 
+		Say("ChØ cã thÓ nhËn th­ëng vµo thø 3 h»ng tuÇn.")
 	else
 		local free = FindFreeRoomByWH(2, 4)
 		if (free ~= 1) then
@@ -216,41 +223,30 @@ function nw_accept_empirering()
 		if nWeek == 0 then	nWeek = 7;	end
 		if nWeek == 1 and	nHour < 21	then	nWeek = 8;	end
 		local nExpiredDate = FormatTime2Date((8 - nWeek) * 24 * 60 *60 + GetCurServerTime());
+
+		tbAwardTemplet:GiveAwardByList({tbProp = {0,10,6,1,0,0},nExpiredTime=10080,nCount=2}, "test", 1);
+		SetTask(NW_TASKNO_GETEMPIRERING, 1) 
+		--local itemBeijin = AddGoldItem(0,142)
+		--if (itemBeijin == 0) then
+		--	WriteLog(format("[NW]Failed to give emperor-ring[AddGoldItem(0,142)] to %s", GetName()))
+		--	Say("Cã ®iÒu g× ®ã kh«ng æn, b¶o vËt t¹m thêi kh«ng thÓ giao cho ng­¬i ®­îc.")
+		--	return
+		--end
+		--WriteLog(format("[NW]Give king-ring[AddGoldItem(0,142)] to %s", GetName()))
+		--ITEM_SetExpiredTime(itemBeijin, nExpiredDate, 120000)
+		--SyncItem(itemBeijin)
 		
-		local itemHorse = AddItem(0,10,7,1,0,0)
-		if (itemHorse == 0) then
-			WriteLog(format("[NW]Failed to give emperor-ring[AddItem(0,10,7,1,0,0)] to %s", GetName()))
-			Say("Cã ®iÒu g× ®ã kh«ng æn, b¶o vËt t¹m thêi kh«ng thÓ giao cho ng­¬i ®­îc.")
-			return
-		end
-		WriteLog(format("[NW]Give king-ring[AddItem(0,10,7,1,0,0)] to %s", GetName()))
-		ITEM_SetExpiredTime(itemHorse, nExpiredDate, 120000)
-		SyncItem(itemHorse)
-		
-		-- ÒÑ¾­³É¹¦ÁìÈ¡µ½²¿·ÖÎïÆ·
-		NW_SetTask(NW_TASKNO_GETEMPIRERING, 1) 
-		
-		local itemBeijin = AddGoldItem(0,142)
-		if (itemBeijin == 0) then
-			WriteLog(format("[NW]Failed to give emperor-ring[AddGoldItem(0,142)] to %s", GetName()))
-			Say("Cã ®iÒu g× ®ã kh«ng æn, b¶o vËt t¹m thêi kh«ng thÓ giao cho ng­¬i ®­îc.")
-			return
-		end
-		WriteLog(format("[NW]Give king-ring[AddGoldItem(0,142)] to %s", GetName()))
-		ITEM_SetExpiredTime(itemBeijin, nExpiredDate, 120000)
-		SyncItem(itemBeijin)
-		
-		local itemYaDian = AddGoldItem(0,141)
+		local itemYaDian = AddStackItem(100,4,417,1,1,0,0,0)
 		if (itemYaDian == 0) then
-			WriteLog(format("[NW]Failed to give emperor-ring[AddGoldItem(0,141)] to %s", GetName()))
+			WriteLog(format("[NW]Failed to give emperor-ring[AddStackItem(100,4,417,1,1,0,0,0)] to %s", GetName()))
 			Say("Cã ®iÒu g× ®ã kh«ng æn, b¶o vËt t¹m thêi kh«ng thÓ giao cho ng­¬i ®­îc.")
 			return
 		end
-		WriteLog(format("[NW]Give king-ring[AddGoldItem(0,141)] to %s", GetName()))
-		ITEM_SetExpiredTime(itemYaDian, nExpiredDate, 120000)
-		SyncItem(itemYaDian)
+		WriteLog(format("[NW]Give king-ring[AddStackItem(100,4,417,1,1,0,0,0)] to %s", GetName()))
+		--ITEM_SetExpiredTime(itemYaDian, nExpiredDate, 120000)
+		--SyncItem(itemYaDian)
 		
-		Say("PhÇn th­ëng cña bÖ h¹ lµ <color=red>V« danh giíi chØ, v« danh chØ hoµn, phiªn vò<color>.")
+		Say("PhÇn th­ëng cña bÖ h¹ lµ <color=red>100 tiÒn ®ång vµ b«n tiªu<color>.")
 	end
 end
 

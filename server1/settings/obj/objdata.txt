@@ -469,10 +469,7 @@ C©y trµ	467	Item		\spr\item\mayday07\obj_chashu.spr	\sound\sound_i008.wav	1080	0
 LÔ vËt Trung Thu	468	Item		\spr\obj\item\obj_zhongqiulihe.spr	\sound\sound_i008.wav	1080	0	4	Cycle_Image_Static	0	0	0	0	0	0	0	0	0	0	0	8	0	1	0	17	60	113	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	\spr\obj\item\obj_zhongqiulihe_fall.spr	10	0	1	0	30	60	113	0	0	0
 ÕÏ°­2	469	Obstacle		\spr\obj\item\yandihuoyan.spr		0	0	100	Cycle_Image_Static	4	0	0	0	0	0	0	0	0	0	0	22	0	1	0	1	11	12	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0									0	1	0
 Tói mõng xu©n	470	Item		\spr\obj\item\obj_yingchundai.spr	\sound\sound_i008.wav	1080	0	4	Cycle_Image_Static	0	0	0	0	0	0	0	0	0	0	0	8	0	1	0	17	60	109	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	\spr\obj\item\obj_yingchundai_fall.spr	10	0	1	0	22	60	109	0	0	
-µôÂäÏûÊ§µÄ	471	Item		\spr\obj\item\quest.spr	\sound\sound_i008.wav	0	0	2	Cycle_Image_Static	0	0	0	0	0	0	0	0	0	0	0	8	0	1	0	16	160	195	0	0	0	0	5	4	0	1	2	0	0	0	0	0	0	\spr\obj\item\quest_fall.spr	10	0	1	0	20	160	195	0	0	0
+Tu luyÖn ch©u	471	Item		\spr\obj\item\kuangshi.spr	\sound\sound_i006.wav	1	0	4	Cycle_Image_Static	0	0	0	0	0	0	0	0	0	0	0	8	0	1	0	20	60	128	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	\spr\obj\item\kuangshi_fall.spr	9	0	1	0	24	60	128	0	0	0
 C©y §µo	472	Item		\spr\npcres\passerby\passerby238\passerby238.spr		1080	0	150	Cycle_Image_Static	0	0	0	0	0	0	0	0	0	0	0	8	0	1	0	16	150	150	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0											
 C©y Mai	473	Item		\spr\npcres\passerby\passerby239\passerby239.spr		1080	0	150	Cycle_Image_Static	0	0	0	0	0	0	0	0	0	0	0	8	0	1	0	16	150	150	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0											
 Ð¡±ùÖù	474	Obstacle		\spr\skill\´äÑÌ\mag_cy_08_±ùÇ½_b.spr		0	0	100	Cycle_Image_Static	4	0	0	0	0	0	0	0	0	0	0	7	0	1	0	20	11	12	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0									0	1	0
-gate 1	475	Obstacle		\spr\vng\obj\batphuongtranhba\gateright.spr		0	0	100	Cycle_Image_Static	4	0	0	0	0	0	0	0	0	0	0	22	0	1	0	1	11	12	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0									0	1	0
-gate 2	476	Obstacle		\spr\vng\obj\batphuongtranhba\gateup.spr		0	0	100	Cycle_Image_Static	4	0	0	0	0	0	0	0	0	0	0	22	0	1	0	1	11	12	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0									0	1	0
-transport	477	Obstacle		\spr\vng\obj\batphuongtranhba\trap2.spr		0	0	100	Cycle_Image_Static	0	0	0	0	0	0	0	0	0	0	0	15	0	1	0	32	329	295	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	0	0	0	1	0	0	0	0	0	0	0

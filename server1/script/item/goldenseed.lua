@@ -7,7 +7,7 @@ TASKMAXEAT = 2314;
 TASKEATCOUNT = 2322;
 
 function main(ItemIndex)
-	if (GetLevel() < 120) then
+	if (GetLevel() < 90) then
 		Say("<#> §é rÌn luyÖn cña ng­¬i ch­a ®ñ ®Ó ¨n qu¶ nµy.", 0)
 		return 1
 	end
@@ -40,7 +40,7 @@ function main(ItemIndex)
 	
 	SetTask(TASKMAXEAT, GetTask(TASKMAXEAT) + 1)	--ÈçºÎ±£Ö¤´Ó1¿ªÊ¼¼ÆÊýÄØ£¿£¿
 	SetTask(TASKEATCOUNT, GetTask(TASKEATCOUNT) + 1)
-	local award_exp = 50000000
+	local award_exp = 10000000
 	AddOwnExp(award_exp)
 	return 0
 end

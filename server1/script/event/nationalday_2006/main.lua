@@ -24,11 +24,11 @@ Include("\\script\\task\\system\\task_string.lua");
 function nationalday_2006_main()
 
 	local aryTalk = {
-			"<dec><npc>µ±½ñÎäÁÖ£¬ÈË½Ü±²³ö£¬¸÷´óÃÅÅÉíÂ¾«Í¼Ç¿¡£µ±´ËÂÒÊÀ£¬¸÷Î»ÈÔÎªÎäÁÖÃË¾¡ĞÄ½ßÁ¦¡£Ç¡·ê¼Ñ½Ú£¬¶À¹ÂÃËÖ÷ÌØÎª¸÷Î»ÏÀÊ¿ÏÀÅ®ËÍÉÏ½ÚÈÕºØÀñ£¬´ó¼Ò¿ÉÒÔÔÚ<color=yellow>01 th¸ng 10 ®Õn ngµy 03 th¸ng 10<color>ÁìÈ¡£¬×îºó×£ºÏ¼Ò°²¿µ£¬ÍòÊÂÈçÒâ£¡",
-			"NhËn phÇn th­ëng kinh nghiÖm hµng ngµy/getMoreExp_Confirm",
-			"T×m hiÓu vÒ viÖc t¨ng tû lÖ kİch ho¹t nhiÖm vô ngÉu nhiªn/getRandomTaskInfo",
-			"Tin tøc vÒ hiÖu qu¶ gÊp ®«i c¸c lo¹i thuèc/getBaijuInfo",
-			"KÕt thóc ®èi tho¹i/OnExit",
+			"<dec><npc>µ±½ñÎäÁÖ£¬ÈË½Ü±²³ö£¬¸÷´óÃÅÅÉíÂ¾«Í¼Ç¿¡£µ±´ËÂÒÊÀ£¬¸÷Î»ÈÔÎªÎäÁÖÃË¾¡ĞÄ½ßÁ¦¡£Ç¡·ê¼Ñ½Ú£¬¶À¹ÂÃËÖ÷ÌØÎª¸÷Î»ÏÀÊ¿ÏÀÅ®ËÍÉÏ½ÚÈÕºØÀñ£¬´ó¼Ò¿ÉÒÔÔÚ<color=yellow>10ÔÂ01ÈÕÖÁ10ÔÂ03ÈÕ<color>ÁìÈ¡£¬×îºó×£ºÏ¼Ò°²¿µ£¬ÍòÊÂÈçÒâ£¡",
+			"ÁìÈ¡Ã¿ÈÕµÄ¾­Ñé½±Àø/getMoreExp_Confirm",
+			"¹ØÓÚËæ»úÈÎÎñ´¥·¢¸ÅÂÊ·­±¶µÄÏûÏ¢/getRandomTaskInfo",
+			"¹ØÓÚ¸÷ÖÖ°×¾ÔÍèĞ§ÓÃ·­±¶µÄÏûÏ¢/getBaijuInfo",
+			"½áÊø¶Ô»°/OnExit",
 		};
 	
 	CreateTaskSay(aryTalk);

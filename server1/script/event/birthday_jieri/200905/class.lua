@@ -3,7 +3,6 @@ Include("\\script\\lib\\baseclass.lua")
 Include("\\script\\lib\\pay.lua")
 Include("\\script\\lib\\awardtemplet.lua")
 Include("\\script\\event\\birthday_jieri\\200905\\taskctrl.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 
 if not tbBirthday0905 then
@@ -13,8 +12,8 @@ end
 local tbActData = 
 {
 	nStartDate			= 20090619,--20090619,
-	nEndDate			= 20500719,
-	nComposeEndDate		= 20500719,
+	nEndDate			= 20090719,
+	nComposeEndDate		= 20090719,
 	
 	nMinLevel	= 50,
 	bIsCharged	= 1,
@@ -49,10 +48,8 @@ function tbBirthday0905:_init(tbActData)
 end
 
 function tbBirthday0905:IsActDate()
-	if (CFG_birthday_jieri_2009 == 0) then
-		return 0;
-	end;
-	return 1;
+	local nCurDate = tonumber(GetLocalDate("%Y%m%d"))
+	return self.nStartDate <= nCurDate and nCurDate <= self.nEndDate
 end
 
 

@@ -6,7 +6,7 @@ Include( "\\script\\missions\\leaguematch\\npc\\head.lua" )
 function main()
 	local mm = ceil(( WLLS_TIMER_PREP_TOTAL - GetGlbValue(GLB_WLLS_TIME)) * WLLS_TIMER_PREP_FREQ / 60 )
 	local tb_option = wlls_add_option({"ß” ta chu»n bﬁ Æ∑!/wlls_want2leave"}, "Ti’p tÙc thi Æ u")
-	Say("Thﬁ v÷ hÈi tr≠Íng: thÍi gian bæt Æ«u thi Æ u cﬂn <color=yellow>"..mm.." phÛt<color>, ng≠¨i chu»n bﬁ xong ch≠a?", getn(tb_option), tb_option)
+	Say("Thﬁ v÷ hÈi tr≠Íng: thÍi gian bæt Æ«u thi Æ u cﬂn"..mm.."phÛt, ng≠¨i chu»n bﬁ xong ch≠a?", getn(tb_option), tb_option)
 end
 
 function wlls_want2leave()

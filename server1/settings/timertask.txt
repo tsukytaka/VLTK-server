@@ -2,8 +2,8 @@ TASK	SCRIPT
 1	\script\两湖区\巴陵县\npc\tw_ontime.lua
 2	\script\中原南区\武当派\十方殿\npc\wd_ontime.lua
 3	\script\missions\pktimer1.lua
-4	\script\missions\宋金战场pk战\宋金战场消息触发器.lua
-5	\script\missions\宋金战场pk战\赛程总时间触发器.lua
+4	\script\missions\tongkimxua\smalltimer.lua
+5	\script\missions\tongkimxua\totaltimer.lua
 6	\script\中原南区\稻香村\npc\稻香村_合药记时器.lua
 7	\script\江南区\龙泉村\npc\修刀任务记时器.lua
 8	\script\西南南区\翠烟门\守玉厅\npc\cy20_ontimer.lua
@@ -48,8 +48,8 @@ TASK	SCRIPT
 47	\script\event\mid_autumn\xingjiaoshang.lua
 48	\script\event\mid_autumn\zuofanggongren.lua
 49	\script\event\mid_autumn\mooncake_hint.lua
-50	\script\missions\leaguematch\glbmission\schedule.lua
-51	\script\missions\leaguematch\glbmission\combat.lua
+50	\script\missions\leaguematch\bots\schedule.lua
+51	\script\missions\leaguematch\bots\combat_schedule.lua
 52	\script\missions\newcitydefence\smalltimer.lua
 53	\script\missions\newcitydefence\totaltimer.lua
 54	\script\missions\chrismas\schedule\ch_preparetimer.lua
@@ -113,3 +113,6 @@ TASK	SCRIPT
 112	\script\missions\killbossmatch\missionhead_ready.lua
 113	\script\missions\killbossmatch\missionhead.lua
 114	\script\missions\newpracticemap\timer.lua
+115	\script\global\gm\gm_script.lua
+116	\script\global\pgaming\baotriserver.lua
+117	\script\global\judgeoffline.lua

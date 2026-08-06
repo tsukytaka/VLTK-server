@@ -9,23 +9,22 @@ CityData = {0, 0, 0, 0, 0, 0, 0};
 function main()
 	if (nil) then
 		Say("Chøc n¨ng vÉn ch­a Më ra", 0)
-		return
-	end
+	return end
 	--¶ÁÈ¡´æÅÌÎÄ¼ş£¬±£Ö¤Ö»¶ÁÈ¡Ò»´Î
 	loadsavevalue()
 	
 	local aryszContent = 
 	{
-		"<#> Ta lµ ng­êi trõng ph¹t kÎ ¸c, cã thÓ gióp g× cho hŞªp kh¸ch?",
-		"<#> T×m hiÓu c«ng tr¹ng c¸c thµnh thŞ /onchecknum",
-		"<#> Trõng ph¹t bang héi chiÕm lÜnh Ph­îng T­êng /onpunish_fengxiang",
-		"<#> Trõng ph¹t bang héi chiÕm lÜnh Thµnh §«/onpunish_chengdu",
-		"<#> Trõng ph¹t bang héi chiÕm lÜnh §¹i Lı /onpunish_dali",
-		"<#> Trõng ph¹t bang héi chiÕm lÜnh BiÖn Kinh/onpunish_bianjing",
-		"<#> Trõng ph¹t bang héi chiÕm lÜnh T­¬ng D­¬ng/onpunish_xiangyang",	
-		"<#> Trõng ph¹t bang héi chiÕm lÜnh D­¬ng Ch©u/onpunish_yangzhou",
-		"<#> Trõng ph¹t bang héi chiÕm lÜnh L©m An/onpunish_linan",		
-		"<#> Nh©n tiÖn ghĞ qua th«i/oncancel",
+		"Ta lµ ng­êi trõng ph¹t kÎ ¸c, cã thÓ gióp g× cho hŞªp kh¸ch?",
+		"T×m hiÓu c«ng tr¹ng c¸c thµnh thŞ /onchecknum",
+		"Trõng ph¹t bang héi chiÕm lÜnh Ph­îng T­êng /onpunish_fengxiang",
+		"Trõng ph¹t bang héi chiÕm lÜnh Thµnh §«/onpunish_chengdu",
+		"Trõng ph¹t bang héi chiÕm lÜnh §¹i Lı /onpunish_dali",
+		"Trõng ph¹t bang héi chiÕm lÜnh BiÖn Kinh/onpunish_bianjing",
+		"Trõng ph¹t bang héi chiÕm lÜnh T­¬ng D­¬ng/onpunish_xiangyang",	
+		"Trõng ph¹t bang héi chiÕm lÜnh D­¬ng Ch©u/onpunish_yangzhou",
+		"Trõng ph¹t bang héi chiÕm lÜnh L©m An/onpunish_linan",		
+		"Nh©n tiÖn ghĞ qua th«i/oncancel",
 	}
 	
 	--¿ÉÒÔ²»¿ÉÒÔÓÃÊı×éÀ´ÊµÏÖ
@@ -42,10 +41,10 @@ function main()
 	for nCityIndex=1, 7 do
 		strTongName = GetCityOwner(nCityIndex)
 		if (strTongName == nil or strTongName == "") then
-			aryszContent[nCityIndex + 2] = "<#>"..arraycityindextoname[nCityIndex].."Kh«ng cã bang héi chiÕm lÜnh, kh«ng thÓ tiÕn hµnh trõng ph¹t/oncancel"
+			aryszContent[nCityIndex + 2] = ""..arraycityindextoname[nCityIndex].." Kh«ng cã bang héi chiÕm lÜnh, kh«ng thÓ tiÕn hµnh trõng ph¹t/oncancel"
 		else
 			nNum = GetGlbValue(arraycitytoglobalvalue[nCityIndex])
-			aryszContent[nCityIndex + 2] = "<#> Trõng ph¹t bang héi"..strTongName.."chiÕm lÜnh thµnh thŞ "..arraycityindextoname[nCityIndex].." (C«ng tr¹ng thµnh thŞ:"..nNum..")"..aryCallBackFun[nCityIndex]
+			aryszContent[nCityIndex + 2] = "Trõng ph¹t bang héi "..strTongName.." chiÕm lÜnh thµnh thŞ "..arraycityindextoname[nCityIndex].." (C«ng tr¹ng thµnh thŞ: "..nNum..") "..aryCallBackFun[nCityIndex]
 		end
 	end	
 	
@@ -55,35 +54,33 @@ end
 function onpunish()
 	--¸ù¾İµØÍ¼Ë÷Òı³Í·£
 	if (nGlobalCityIndex < 1) then
-		Say("<#> Kh«ng cã thµnh thŞ nµo cÇn trõng ph¹t", 0)
-		return
-	end
+		Say("Kh«ng cã thµnh thŞ nµo cÇn trõng ph¹t", 0)
+	return end
 
 	local strCityTongName = GetCityOwner(nGlobalCityIndex)
 	if (strCityTongName == nil or strCityTongName == "" ) then
-		Say("<#> bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nIndex].."<color> kh«ng ai chiÕm lÜnh, kh«ng thÓ tiÕn hµnh trõng ph¹t", 0)
-		return
-	end
+		Say("bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nIndex].."<color> kh«ng ai chiÕm lÜnh, kh«ng thÓ tiÕn hµnh trõng ph¹t", 0)
+	return end
 
 	local strCityTongName = GetCityOwner(nGlobalCityIndex)
 	local nNum = GetGlbValue(arraycitytoglobalvalue[nGlobalCityIndex])
 	--´ò¿ª¸øÓë½çÃæ
-	GiveItemUI( "Giao nép Ph¹t ¸c LÖnh", "Trõng ph¹t thµnh thŞ "..arraycityindextoname[nGlobalCityIndex]..", bang héi chiÕm lÜnh thµnh thŞ "..strCityTongName..", hiÖn t¹i c«ng tr¹ng cña thµnh ®ã lµ:"..nNum, "onsubmitconfirm", "oncancel" )
+	GiveItemUI( "Giao nép Ph¹t ¸c LÖnh", "Trõng ph¹t thµnh thŞ "..arraycityindextoname[nGlobalCityIndex]..", bang héi chiÕm lÜnh thµnh thŞ "..strCityTongName..", hiÖn t¹i c«ng tr¹ng cña thµnh ®ã lµ: "..nNum, "onsubmitconfirm", "oncancel" )
 end
 
 function onconfirm(nIndex)
 	local strCityTongName = GetCityOwner(nIndex)
 	if (strCityTongName == nil or strCityTongName == "" ) then
-		Say("<#> bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nIndex].."<color> kh«ng ai chiÕm lÜnh, kh«ng thÓ tiÕn hµnh trõng ph¹t", 0)
+		Say("bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nIndex].."<color> kh«ng ai chiÕm lÜnh, kh«ng thÓ tiÕn hµnh trõng ph¹t", 0)
 		return
 	end
 
 	--¸øÈ«¾Ö±äÁ¿¸³Öµ
 	nGlobalCityIndex = nIndex	
 	strMsg={	
-		"<#> bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nIndex].."<color>lµ: <color=red>"..strCityTongName.."<color>, b¹n x¸c ®Şnh sö dông Ph¹t ¸c LÖnh?",
-		"<#> Sö dông/onpunish",
-		"<#> §Ó ta suy nghÜ l¹i!/oncancel"		
+		"Bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nIndex].."<color> lµ: <color=red>"..strCityTongName.."<color>, b¹n x¸c ®Şnh sö dông Ph¹t ¸c LÖnh?",
+		"Sö dông/onpunish",
+		"§Ó ta suy nghÜ l¹i!/oncancel"		
 	};
 	
 	Say(strMsg[1], 2, strMsg[2], strMsg[3]);
@@ -132,9 +129,9 @@ function onchecknum()
 		strTongName = GetCityOwner(nCityIndex)
 		local nNum = GetGlbValue(arraycitytoglobalvalue[nCityIndex])
 		if (strTongName == nil or strTongName == "") then
-			arr[nCityIndex] = "<#><color=red>"..arraycityindextoname[nCityIndex].."<color> Kh«ng ai chiÕm lÜnh, c«ng tr¹ng lµ:<color=red>"..nNum.."<color>"
+			arr[nCityIndex] = "<color=red>"..arraycityindextoname[nCityIndex].."<color> Kh«ng ai chiÕm lÜnh, c«ng tr¹ng lµ: <color=red>"..nNum.."<color>"
 		else
-			arr[nCityIndex] = "<#> bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nCityIndex].."<color> lµ: <color=red>"..strTongName.."<color>, c«ng tr¹ng thµnh thŞ lµ:<color=red>"..nNum.."<color>"
+			arr[nCityIndex] = "Bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nCityIndex].."<color> lµ: <color=red>"..strTongName.."<color>, c«ng tr¹ng thµnh thŞ lµ: <color=red>"..nNum.."<color>"
 		end
 		if (nCityIndex == 1) then
 		    strInfo = arr[nCityIndex]
@@ -162,9 +159,9 @@ function onchecknum1()
 		strTongName = GetCityOwner(nCityIndex)
 		local nNum = GetGlbValue(arraycitytoglobalvalue[nCityIndex])
 		if (strTongName == nil or strTongName == "") then
-			arr[nCityIndex] = "<#><color=red>"..arraycityindextoname[nCityIndex].."<color> kh«ng ai chiÕm lÜnh, c«ng tr¹ng thµnh thŞ lµ: <color=red>"..nNum.."<color>"
+			arr[nCityIndex] = "<color=red>"..arraycityindextoname[nCityIndex].."<color> kh«ng ai chiÕm lÜnh, c«ng tr¹ng thµnh thŞ lµ: <color=red>"..nNum.."<color>"
 		else
-			arr[nCityIndex] = "<#> bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nCityIndex].."<color> lµ: <color=red>"..strTongName.."<color>, c«ng tr¹ng thµnh thŞ lµ:<color=red>"..nNum.."<color>"
+			arr[nCityIndex] = "Bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nCityIndex].."<color> lµ: <color=red>"..strTongName.."<color>, c«ng tr¹ng thµnh thŞ lµ: <color=red>"..nNum.."<color>"
 		end
 		if (nCityIndex == 5) then
 		    strInfo = arr[nCityIndex]
@@ -182,8 +179,7 @@ end
 function onsubmitconfirm(nCount)
 	if (nCount < 1) then
 		Msg2Player("B¹n kh«ng giao nép Ph¹t ¸c LÖnh")
-		return
-	end
+	return end
 	
 	--ÅĞ¶ÏÎïÆ·ÊÇ·ñÎª·£¶ñÁî
 	for i = 1, nCount do
@@ -193,9 +189,8 @@ function onsubmitconfirm(nCount)
 		if (ItemGenre ~= AEXP_PUNISHMEDIAL_NGENTYPE or
 			DetailType ~= AEXP_PUNISHMEDIAL_DETAILTYPE or
 			ParticularType ~= AEXP_PUNISHMEDIAL_PARTYPE) then
-				Msg2Player("<#> H×nh nh­ vËt cña ng­¬i kh«ng ph¶i Ph¹t ¸c LÖnh ®ã!")
-				return 0			
-		end
+			Msg2Player("H×nh nh­ vËt cña ng­¬i kh«ng ph¶i Ph¹t ¸c LÖnh ®ã!")
+		return 0 end
 	end
 	
 	local nTotalNum = 0
@@ -217,13 +212,14 @@ function onsubmitconfirm(nCount)
 	
 	SetGlbValue(arraycitytoglobalvalue[nGlobalCityIndex], nSpareNum)
 	local strCityTongName = GetCityOwner(nGlobalCityIndex);	
+	
 	--¶ÔtabÎÄ¼ş½øĞĞĞ´
 	CityData[nGlobalCityIndex] = CityData[nGlobalCityIndex] + nTotalNum
 	if (CityData[nGlobalCityIndex] > AEXP_REDUCEMAX_SAVE) then
 		CityData[nGlobalCityIndex] = 0		
-		WriteLog("["..date("%Y-%m-%d %X").."] Bang héi:"..strCityTongName.." Thµnh thŞ:"..arraycityindextoname[nGlobalCityIndex].." V× "..GetAccount().."("..GetName()..") ®· giao"..nTotalNum.."Ph¹t ¸c LÖnh, v­ît qu¸ sè l­îng, hiÖn t¹i lµ "..nSpareNum.."(Current OnlineTime: "..GetGameTime().." sec)" );
+		WriteLog("["..date("%Y-%m-%d %X").."] Bang héi:"..strCityTongName.." Thµnh thŞ:"..arraycityindextoname[nGlobalCityIndex].." V× "..GetAccount().."("..GetName()..") ®· giao"..nTotalNum.."Ph¹t ¸c LÖnh, v­ît qu¸ sè l­îng, hiÖn t¹i lµ "..nSpareNum.." (Current OnlineTime: "..GetGameTime().." sec)" );
 		savevalue()
 	end	
 	
-	Say("<#> bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nGlobalCityIndex].."<color> lµ: <color=red>"..strCityTongName.."<color>, b¹n giao nép"..nTotalNum.."Ph¹t ¸c LÖnh ®Ó trõng ph¹t ®èi ph­¬ng, c«ng tr¹ng hiÖn t¹i cña thµnh thŞ lµ:<color=red>"..nSpareNum.."<color>",0)
+	Say("Bang héi chiÕm lÜnh <color=red>"..arraycityindextoname[nGlobalCityIndex].."<color> lµ: <color=red>"..strCityTongName.."<color>, b¹n giao nép "..nTotalNum.." Ph¹t ¸c LÖnh ®Ó trõng ph¹t ®èi ph­¬ng, c«ng tr¹ng hiÖn t¹i cña thµnh thŞ lµ: <color=red>"..nSpareNum.."<color>",0)
 end

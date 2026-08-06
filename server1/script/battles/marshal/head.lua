@@ -27,7 +27,7 @@ sf_aryItems = {
 
 BOSS_TIME = (BAOMING_TIME + 15) * 60 * FRAME2TIME / TIMER_1;
 BOSS_TIME2 = (BAOMING_TIME + 20) * 60 * FRAME2TIME / TIMER_1;
--- [2026-06-28] tran 30p: phe THUA Nguyen Soai @phut 10 (BOSS_TIME), phe THANG @phut 15 (BOSS_TIME2, sau 5p) -> con 15p danh tiep.	--战争开始后30分钟出现元帅
+-- [2026-06-28] tran 30p: phe THUA Nguyen Soai @phut 10 (BOSS_TIME), phe THANG @phut 15 (BOSS_TIME2, sau 5p) -> con 15p danh tiep.	--战斗开始后30分钟出现元帅
 VANISHGAME_TIME = (BAOMING_TIME + FIGHTING_TIME - 20) * 60 * FRAME2TIME/ TIMER_1; --战斗最后20分钟时，必须所有Npc全部产生
 
 
@@ -397,7 +397,7 @@ function GameOver()
 	 		break
 	 	end;
 	end 	
- 	
+ 	local nday = 7 * 18*60*60*24 
  	for i= 1, getn(tbPlayer) do 
 	 	PlayerIndex = tbPlayer[i];
 	 	branchTask_JoinSJend1();
@@ -419,11 +419,22 @@ function GameOver()
 		if (not tb_storm_winner[PlayerIndex]) then
 			storm_end(1)
 		end
-		
+		local nPointTKPerDay = tonumber(GetTask(TASK_ID_POINT_TK_PER_DAY)) or 0
+		if nPointTKPerDay >= 100000 and isCuoiTuan() ==1 and isGioCaoDiem() == 1 then
+			--AddSkillState(1235, 1, 1, nday,1) -- danh hieu bach chien bach thang
+			local bonus = nPointTKPerDay * 1.5
+			SetTask(747, GetTask(747) + bonus)
+		end
 		if (l_curcamp == 1) then
+			if nFinalWiner == 1 and isCuoiTuan() ==1 and isGioCaoDiem() == 1 then
+				--AddSkillState(1236, 1, 1, nday,1) -- vong sang chien thang TK
+			end
 			SetRevPos(tbGAME_SIGNMAP[game_level], 1)
 			NewWorld(bt_getsignpos(1))
-		else	
+		else
+			if nFinalWiner == 2 and isCuoiTuan() ==1 and isGioCaoDiem() == 1 then
+				--AddSkillState(1236, 1, 1, nday,1) -- vong sang chien thang TK
+			end	
 			SetRevPos(tbGAME_SIGNMAP[game_level], 2)
 			NewWorld(bt_getsignpos(2))
 		end;

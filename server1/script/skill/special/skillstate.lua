@@ -137,6 +137,19 @@ function skillLevelData(magicName,skillLevel)
 		paras = {skillLevel*100,180*18,0}
 		return join(paras)
 	end
+	if(magicName == "lifemax_yan_v") then
+		paras = {skillLevel*100,180*18,0}
+		return join(paras)
+	end
+	if(magicName == "allres_yan_p") then
+		paras = {skillLevel*2,180*18,0}
+		return join(paras)
+	end
+	if(magicName == "skill_enhance") then
+		paras = {skillLevel*5,180*18,0}
+		return join(paras)
+	end
+	
 end
 
 function GetSkillLevelData(levelname, data, level)

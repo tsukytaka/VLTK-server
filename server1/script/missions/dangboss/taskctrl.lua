@@ -23,7 +23,7 @@ function tbDangBossTaskCtrl:_init()
 	
 	
 	self.nStartDate = 090117
-	self.nEndDate = 090217
+	self.nEndDate = 200217
 end
 
 

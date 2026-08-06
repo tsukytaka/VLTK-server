@@ -4,7 +4,7 @@
 -- 文件名　：taskmanager.lua
 -- 创建者　：钟朝龙
 -- 创建时间：2010-01-13 10:39:47
--- Include("\\script\\misc\\taskmanager.lua") 自己
+-- Include("\\script\\misc\\taskmanager.lua") 
 -- ======================================================
 --请勿直接使用该文件，尽量通过活动系统来调用
 --迫不得已必须使用时，请用 TaskGroup

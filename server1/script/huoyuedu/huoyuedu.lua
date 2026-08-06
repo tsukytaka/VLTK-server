@@ -33,10 +33,6 @@ tbActivity2ID = {
 	}
 
 function tbHuoYueDu:LoadTable(szPath)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	if (TabFile_Load(szPath, szPath) == 0) then
 		print("Load TabFile Error!"..szPosPath)
 		return
@@ -59,10 +55,6 @@ function tbHuoYueDu:LoadTable(szPath)
 end
 
 function tbHuoYueDu:AddHuoYueDu(szActivity)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	local nActivityId = tbActivity2ID[szActivity]
 	if not nActivityId then
 		return 
@@ -92,10 +84,6 @@ function tbHuoYueDu:AddHuoYueDu(szActivity)
 end
 
 function tbHuoYueDu:AddTaskDaily(nActivityId)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	if self.tbActivity[nActivityId] == nil then
 		return
 	end
@@ -103,10 +91,6 @@ function tbHuoYueDu:AddTaskDaily(nActivityId)
 end
 
 function tbHuoYueDu:GetTaskDailyCount(nActivityId)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	if self.tbActivity[nActivityId] == nil then
 		return
 	end
@@ -115,20 +99,12 @@ function tbHuoYueDu:GetTaskDailyCount(nActivityId)
 end
 
 function tbHuoYueDu:AddHuoYueDuAll(tbPlayer, szActivity)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	for i=1,getn(tbPlayer) do
 		CallPlayerFunction(tbPlayer[i], self.AddHuoYueDu, self, szActivity)
 	end
 end
 
 function tbHuoYueDu:CheckTimes(nActivityId)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	if STATE ~= OPENED then
 		return 
 	end
@@ -153,10 +129,6 @@ function tbHuoYueDu:CheckTimes(nActivityId)
 end
 
 function tbHuoYueDu:ClearAll()
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	for _,value in tbActivity2ID do
 		local nTaskId = self.tbActivity[value]["nTaskId"]
 		SetTask(nTaskId,0);

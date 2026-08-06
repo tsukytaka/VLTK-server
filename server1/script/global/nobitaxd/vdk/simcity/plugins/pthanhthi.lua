@@ -59,7 +59,7 @@ function SimCityThanhThi:_createSingle(id, Map, config)
 		if (not pp) or (getObjectKeys and getn(getObjectKeys(pp)) == 0) then npcConfig.walkMode = "random" end
 	end
 
-	if (config.ngoaitrang and config.ngoaitrang == 1 and random(1, 100) <= 50 and npcConfig.camp ~= 4
+	if (config.ngoaitrang and config.ngoaitrang == 1 and random(1, 100) <= (SIMCITY_GUILD_CHANCE or 50) and npcConfig.camp ~= 4
 	    and g_TK_BangNames and getn(g_TK_BangNames) > 0) then
 		local cityBang = g_TK_BangNames[random(1, getn(g_TK_BangNames))]
 		if (g_TK_BangRanks and getn(g_TK_BangRanks) > 0) then
@@ -67,7 +67,7 @@ function SimCityThanhThi:_createSingle(id, Map, config)
 		end
 		npcConfig.bangKeoxe = cityBang
 	end
-	SimCitizen:New(objCopy(npcConfig))
+	return SimCitizen:New(objCopy(npcConfig))
 end
 
 function SimCityThanhThi:_createTeamPatrol(nW, thonglinh, linh, N, pathName)
@@ -430,11 +430,17 @@ function SimCityThanhThi:countMap(nW)
 end
 
 function SimCityThanhThi:onPlayerEnterMap()
+	if SimCity_StartLoops then SimCity_StartLoops() end
+	if SimCity_EnsureInitialized then SimCity_EnsureInitialized() end
 	local nW, pX, pY = GetWorldPos()
 	local worldInfo = SimCityWorld:Get(nW)
+	if not worldInfo or not worldInfo.worldId then return 1 end
 	local camp = GetCurCamp()
+	worldInfo.playerTracker = worldInfo.playerTracker or {}
+	if not worldInfo.playerTracker[PlayerIndex] then
+		worldInfo.playerTrackerCount = (worldInfo.playerTrackerCount or 0) + 1
+	end
 	worldInfo.playerTracker[PlayerIndex] = {pX, pY, camp}
-	worldInfo.playerTrackerCount = worldInfo.playerTrackerCount + 1
 	if self.autoAddThanhThi ~= 1 then
 		return 1
 	end
@@ -458,8 +464,13 @@ end
 function SimCityThanhThi:onPlayerExitMap()
 	local nW, _, _ = GetWorldPos()
 	local worldInfo = SimCityWorld:Get(nW)
-	worldInfo.playerTracker[PlayerIndex] = nil
-	worldInfo.playerTrackerCount = worldInfo.playerTrackerCount - 1
+	if not worldInfo or not worldInfo.worldId then return 1 end
+	worldInfo.playerTracker = worldInfo.playerTracker or {}
+	if worldInfo.playerTracker[PlayerIndex] then
+		worldInfo.playerTracker[PlayerIndex] = nil
+		worldInfo.playerTrackerCount = (worldInfo.playerTrackerCount or 1) - 1
+		if worldInfo.playerTrackerCount < 0 then worldInfo.playerTrackerCount = 0 end
+	end
  
 	if SimCityWorld:IsTongKimMap(nW) ~= 1 and self.autoAddThanhThi ~= 1 then
 		return 1
@@ -476,14 +487,22 @@ end
 
 
 function SimCityThanhThi:autoCreateNpc(nW)
+	if SimCity_StartLoops then SimCity_StartLoops() end
+	if SimCity_EnsureInitialized then SimCity_EnsureInitialized() end
 	local worldInfo = SimCityWorld:Get(nW)
+	if not worldInfo or not worldInfo.worldId then
+		self.playerTimerIdsByMap[nW] = nil
+		return 1
+	end
 
 	if (SimCityWorld:IsTongKimMap(nW) ~= 1 and worldInfo.name ~= "" and worldInfo.playerTrackerCount >= 1 and self:countMap(nW) == 0) then
 		self:createNpcSoCapByMap(nW)
 	end
 
 	-- If enabled but no one left, clean it
-	if worldInfo.playerTrackerCount == 0 and worldInfo.isTrainMap ~= 1 then  
+	local isLeagueHall = SimCityLeague and SimCityLeague.hallMap == nW
+	if worldInfo.playerTrackerCount == 0 and worldInfo.isTrainMap ~= 1
+		and not isLeagueHall then
 		if SimCityWorld:IsTongKimMap(nW) ~= 1 then
 			self:removeAll(nW)
 		else
@@ -628,9 +647,13 @@ function SimCityThanhThi:createNpcSoCapByMap(worldId)
 			end
 			local tableStall = {}
 			-- STALL bot CHI spawn o THANH (IsThanhThiMap) + 8 THON. Map khac (mon phai/luyen cong/...) = ko ban.
-			local stallOK = (SimCityWorld:IsThanhThiMap(nW) == 1) or nW == 53 or nW == 20 or nW == 99 or nW == 100 or nW == 101 or nW == 121 or nW == 153 or nW == 174
+			local _stallCity = SimCityWorld:IsThanhThiMap(nW) == 1
+			local stallOK = (SIMCITY_STALL_ENABLED or 1) == 1 and (_stallCity or nW == 53 or nW == 20 or nW == 99 or nW == 100 or nW == 101 or nW == 121 or nW == 153 or nW == 174)
 			if stallOK then
-				local _stallN = (SimCityWorld:IsThanhThiMap(nW) == 1) and random(45, 65) or random(20, 30)  
+				local _stallMin = _stallCity and (SIMCITY_STALL_CITY_MIN or 45) or (SIMCITY_STALL_VILLAGE_MIN or 20)
+				local _stallMax = _stallCity and (SIMCITY_STALL_CITY_MAX or 65) or (SIMCITY_STALL_VILLAGE_MAX or 30)
+				local _stallN = 0
+				if _stallMax > 0 then _stallN = random(_stallMin, _stallMax) end
 				for i = 1, _stallN do
 					tinsert(tableStall, {tmpFound[random(1, N)], nW, {
 						ngoaitrang = 1,
@@ -643,7 +666,11 @@ function SimCityThanhThi:createNpcSoCapByMap(worldId)
 			end
 			-- [2026-06-20] CHO DA TAU: them stall tu tap quanh Da Tau (daTau=1 -> sim.entity dung daTauNodes)
 			if worldInfo.daTauNodes and getn(worldInfo.daTauNodes) > 0 then
-				for i = 1, random(20, 30) do
+				local _daTauMin = SIMCITY_STALL_DATAU_MIN or 20
+				local _daTauMax = SIMCITY_STALL_DATAU_MAX or 30
+				local _daTauN = 0
+				if _daTauMax > 0 then _daTauN = random(_daTauMin, _daTauMax) end
+				for i = 1, _daTauN do
 					tinsert(tableStall, {tmpFound[random(1, N)], nW, { ngoaitrang = 1, stall = 1, isStanding = 1, daTau = 1, level = level or 95, capHP = capHP, walkMode = "random" }})
 				end
 			end
@@ -666,7 +693,7 @@ function SimCityThanhThi:createNpcSoCapByMap(worldId)
 			N = getn(tmpFound)
 			worldInfo.allowFighting = 1
 			worldInfo.isTrainMap = 1   
-			total = 10
+			total = SIMCITY_TRAIN_SIZE or 10
 			local everything = {}
 			local _spNodes = {}  
 			for _k, _v in worldInfo.nodes do

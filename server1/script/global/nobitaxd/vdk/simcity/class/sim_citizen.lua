@@ -135,7 +135,7 @@ end
 
 
 -- ===== TEN BANG NGAU NHIEN cho bot Tong Kim. Sua list ten tuy y 
-g_TK_BangChance = 50   -- %% bot co ten bang (0-100)
+g_TK_BangChance = SIMCITY_GUILD_CHANCE or 50   -- %% bot co ten bang (0-100)
 g_TK_BangRanks = g_TK_BangRanks or { "Bang Chñ", "Tr­ëng l·o", "§­êng Chñ", "§Ö Tö" }   -- Bang Chu/Truong Lao/Duong Chu/De Tu
 g_TK_BangNames = g_TK_BangNames or {
 	"AnhEm", "BèGiµ", "ThÝchPK", "Ph¸Thiªn", "Thiªn§Þa",
@@ -282,7 +282,7 @@ function SimCitizen:FastCastTick()
                 if _tgt > 0 then
                     local sk = SimPickSkill(ca.ft)
                     if sk and sk[1] and sk[1] > 0 then
-                        if SetNpcAtkSpeed then SetNpcAtkSpeed(ca.id, 250) end
+                        if SetNpcAtkSpeed then SetNpcAtkSpeed(ca.id, SIMBOT_ATTACK_SPEED or 250) end
                         if SetNpcCombat then SetNpcCombat(ca.id, 1, (ca.ft.skillCastBua and ca.ft.skillCastBua[1]) or 0) end  
                         if SetNpcFightTarget then SetNpcFightTarget(ca.id, _tgt) end   
                         BotDoSkill(ca.id, sk[1], sk[2] or 20, _tgt); _ncast = _ncast + 1

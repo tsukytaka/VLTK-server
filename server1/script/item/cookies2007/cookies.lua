@@ -4,10 +4,9 @@
 --Î´ÊìµÄÉÕ±ý	6,1,1397,1,0,0
 
 Include("\\script\\event\\cookies2007\\head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 function main(nItemIdx)
-	if (CFG_cookies2007	== 0) then
+	if (checkcookies2007Date(20070506) ~= 1) then
 		Say("B¸nh nµy ®· qu¸ h¹n sö dông, h·y nhanh chãng vøt bá.", 0);
 		return 0;
 	end;

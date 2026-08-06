@@ -249,103 +249,203 @@ L¹c L«i V¨n C­¬ng- Gi¸p [CÊp 7]	8	1	247	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	V¨n C
 L¹c L«i V¨n C­¬ng- Gi¸p [CÊp 8]	8	1	248	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	V¨n C­¬ng thİ luyÖn tõ Tinh ThiÕt Kho¸ng cã thÓ gia t¨ng søc m¹nh trang bŞ.	0	0	1	0	8	3394	1	4	8				0
 L¹c L«i V¨n C­¬ng- Gi¸p [CÊp 9]	8	1	249	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	V¨n C­¬ng thİ luyÖn tõ Tinh ThiÕt Kho¸ng cã thÓ gia t¨ng søc m¹nh trang bŞ.	0	0	1	0	9	3395	1	4	8				0
 L¹c L«i V¨n C­¬ng- Gi¸p [CÊp 10]	8	1	250	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	V¨n C­¬ng thİ luyÖn tõ Tinh ThiÕt Kho¸ng cã thÓ gia t¨ng søc m¹nh trang bŞ.	0	0	1	0	10	3396	1	4	8				0
-ÎåĞĞÎÆ¸Ö¡¤½ğ[1¼¶]	8	1	251	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3444	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[2¼¶]	8	1	252	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3445	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[3¼¶]	8	1	253	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3446	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[4¼¶]	8	1	254	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3447	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[5¼¶]	8	1	255	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3448	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[6¼¶]	8	1	256	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3449	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[7¼¶]	8	1	257	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3450	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[8¼¶]	8	1	258	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3451	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[9¼¶]	8	1	259	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3452	13						1
-ÎåĞĞÎÆ¸Ö¡¤½ğ[10¼¶]	8	1	260	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3453	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[1¼¶]	8	1	261	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3504	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[2¼¶]	8	1	262	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3505	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[3¼¶]	8	1	263	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3506	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[4¼¶]	8	1	264	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3507	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[5¼¶]	8	1	265	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3508	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[6¼¶]	8	1	266	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3509	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[7¼¶]	8	1	267	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3510	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[8¼¶]	8	1	268	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3511	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[9¼¶]	8	1	269	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3512	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ä¾[10¼¶]	8	1	270	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3513	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[1¼¶]	8	1	271	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3484	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[2¼¶]	8	1	272	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3485	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[3¼¶]	8	1	273	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3486	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[4¼¶]	8	1	274	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3487	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[5¼¶]	8	1	275	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3488	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[6¼¶]	8	1	276	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3489	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[7¼¶]	8	1	277	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3490	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[8¼¶]	8	1	278	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3491	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[9¼¶]	8	1	279	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3492	13						1
-ÎåĞĞÎÆ¸Ö¡¤Ë®[10¼¶]	8	1	280	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3493	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[1¼¶]	8	1	281	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3424	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[2¼¶]	8	1	282	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3425	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[3¼¶]	8	1	283	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3426	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[4¼¶]	8	1	284	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3427	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[5¼¶]	8	1	285	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3428	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[6¼¶]	8	1	286	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3429	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[7¼¶]	8	1	287	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3430	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[8¼¶]	8	1	288	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3431	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[9¼¶]	8	1	289	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3432	13						1
-ÎåĞĞÎÆ¸Ö¡¤»ğ[10¼¶]	8	1	290	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3433	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[1¼¶]	8	1	291	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3464	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[2¼¶]	8	1	292	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3465	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[3¼¶]	8	1	293	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3466	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[4¼¶]	8	1	294	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3467	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[5¼¶]	8	1	295	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3468	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[6¼¶]	8	1	296	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3469	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[7¼¶]	8	1	297	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3470	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[8¼¶]	8	1	298	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3471	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[9¼¶]	8	1	299	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3472	13						1
-ÎåĞĞÎÆ¸Ö¡¤ÍÁ[10¼¶]	8	1	300	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3473	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[1¼¶]	8	1	301	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3454	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[2¼¶]	8	1	302	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3455	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[3¼¶]	8	1	303	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3456	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[4¼¶]	8	1	304	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3457	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[5¼¶]	8	1	305	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3458	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[6¼¶]	8	1	306	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3459	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[7¼¶]	8	1	307	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3460	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[8¼¶]	8	1	308	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3461	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[9¼¶]	8	1	309	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3462	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤½ğ[10¼¶]	8	1	310	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3463	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[1¼¶]	8	1	311	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3514	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[2¼¶]	8	1	312	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3515	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[3¼¶]	8	1	313	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3516	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[4¼¶]	8	1	314	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3517	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[5¼¶]	8	1	315	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3518	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[6¼¶]	8	1	316	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3519	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[7¼¶]	8	1	317	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3520	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[8¼¶]	8	1	318	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3521	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[9¼¶]	8	1	319	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3522	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ä¾[10¼¶]	8	1	320	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3523	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[1¼¶]	8	1	321	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3494	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[2¼¶]	8	1	322	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3495	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[3¼¶]	8	1	323	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3496	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[4¼¶]	8	1	324	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3497	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[5¼¶]	8	1	325	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3498	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[6¼¶]	8	1	326	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3499	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[7¼¶]	8	1	327	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3500	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[8¼¶]	8	1	328	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3501	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[9¼¶]	8	1	329	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3502	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤Ë®[10¼¶]	8	1	330	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3503	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[1¼¶]	8	1	331	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3434	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[2¼¶]	8	1	332	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3435	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[3¼¶]	8	1	333	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3436	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[4¼¶]	8	1	334	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3437	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[5¼¶]	8	1	335	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3438	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[6¼¶]	8	1	336	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3439	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[7¼¶]	8	1	337	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3440	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[8¼¶]	8	1	338	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3441	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[9¼¶]	8	1	339	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3442	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤»ğ[10¼¶]	8	1	340	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3443	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[1¼¶]	8	1	341	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	1	3474	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[2¼¶]	8	1	342	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	2	3475	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[3¼¶]	8	1	343	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	3	3476	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[4¼¶]	8	1	344	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	4	3477	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[5¼¶]	8	1	345	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	5	3478	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[6¼¶]	8	1	346	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	6	3479	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[7¼¶]	8	1	347	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	7	3480	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[8¼¶]	8	1	348	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	8	3481	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[9¼¶]	8	1	349	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	9	3482	13						1
-ÄæÎåĞĞÎÆ¸Ö¡¤ÍÁ[10¼¶]	8	1	350	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	ÎåĞĞ¿óÖĞÌáÁ¶¶ø³öµÄÎåĞĞÎÆ¸Ö£¬ÄÜ¼ÓÇ¿×°±¸µÄÄÜÁ¦¡£	0	0	1	0	10	3483	13						1
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 1]	8	1	251	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3444	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 2]	8	1	252	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3445	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 3]	8	1	253	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3446	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 4]	8	1	254	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3447	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 5]	8	1	255	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3448	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 6]	8	1	256	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3449	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 7]	8	1	257	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3450	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 8]	8	1	258	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3451	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 9]	8	1	259	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3452	13						0
+Ngò hµnh v¨n c­¬ng - Kim [CÊp 10]	8	1	260	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3453	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 1]	8	1	261	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3504	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 2]	8	1	262	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3505	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 3]	8	1	263	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3506	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 4]	8	1	264	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3507	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 5]	8	1	265	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3508	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 6]	8	1	266	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3509	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 7]	8	1	267	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3510	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 8]	8	1	268	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3511	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 9]	8	1	269	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3512	13						0
+Ngò hµnh v¨n c­¬ng - Méc [CÊp 10]	8	1	270	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3513	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 1]	8	1	271	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3484	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 2]	8	1	272	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3485	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 3]	8	1	273	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3486	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 4]	8	1	274	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3487	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 5]	8	1	275	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3488	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 6]	8	1	276	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3489	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 7]	8	1	277	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3490	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 8]	8	1	278	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3491	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 9]	8	1	279	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3492	13						0
+Ngò hµnh v¨n c­¬ng - Thñy [CÊp 10]	8	1	280	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3493	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 1]	8	1	281	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3424	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 2]	8	1	282	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3425	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 3]	8	1	283	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3426	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 4]	8	1	284	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3427	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 5]	8	1	285	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3428	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 6]	8	1	286	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3429	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 7]	8	1	287	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3430	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 8]	8	1	288	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3431	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 9]	8	1	289	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3432	13						0
+Ngò hµnh v¨n c­¬ng - Háa [CÊp 10]	8	1	290	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3433	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 1]	8	1	291	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3464	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 2]	8	1	292	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3465	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 3]	8	1	293	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3466	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 4]	8	1	294	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3467	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 5]	8	1	295	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3468	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 6]	8	1	296	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3469	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 7]	8	1	297	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3470	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 8]	8	1	298	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3471	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 9]	8	1	299	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3472	13						0
+Ngò hµnh v¨n c­¬ng - Thæ [CÊp 10]	8	1	300	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3473	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 1]	8	1	301	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3454	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 2]	8	1	302	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3455	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 3]	8	1	303	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3456	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 4]	8	1	304	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3457	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 5]	8	1	305	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3458	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 6]	8	1	306	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3459	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 7]	8	1	307	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3460	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 8]	8	1	308	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3461	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 9]	8	1	309	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3462	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Kim [CÊp 10]	8	1	310	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3463	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 1]	8	1	311	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3514	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 2]	8	1	312	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3515	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 3]	8	1	313	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3516	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 4]	8	1	314	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3517	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 5]	8	1	315	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3518	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 6]	8	1	316	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3519	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 7]	8	1	317	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3520	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 8]	8	1	318	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3521	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 9]	8	1	319	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3522	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Méc [CÊp 10]	8	1	320	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3523	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 1]	8	1	321	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3494	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 2]	8	1	322	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3495	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 3]	8	1	323	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3496	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 4]	8	1	324	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3497	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 5]	8	1	325	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3498	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 6]	8	1	326	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3499	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 7]	8	1	327	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3500	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 8]	8	1	328	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3501	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 9]	8	1	329	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3502	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thñy [CÊp 10]	8	1	330	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3503	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 1]	8	1	331	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3434	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 2]	8	1	332	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3435	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 3]	8	1	333	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3436	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 4]	8	1	334	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3437	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 5]	8	1	335	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3438	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 6]	8	1	336	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3439	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 7]	8	1	337	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3440	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 8]	8	1	338	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3441	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 9]	8	1	339	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3442	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Háa [CÊp 10]	8	1	340	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3443	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 1]	8	1	341	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	3474	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 2]	8	1	342	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	3475	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 3]	8	1	343	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	3476	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 4]	8	1	344	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	3477	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 5]	8	1	345	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	3478	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 6]	8	1	346	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	3479	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 7]	8	1	347	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	3480	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 8]	8	1	348	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	3481	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 9]	8	1	349	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	3482	13						0
+NghŞch ngò hµnh v¨n c­¬ng - Thæ [CÊp 10]	8	1	350	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	3483	13						0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 1]	8	1	351	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4075	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 2]	8	1	352	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4076	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 3]	8	1	353	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4077	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 4]	8	1	354	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4078	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 5]	8	1	355	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4079	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 6]	8	1	356	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4080	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 7]	8	1	357	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4081	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 8]	8	1	358	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4082	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 9]	8	1	359	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4083	1	4	8				0
+Bµn Long V¨n C­¬ng - Bİnh [CÊp 10]	8	1	360	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4084	1	4	8				0
+Kim Long V¨n C­¬ng - Êt [CÊp 1]	8	1	361	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4085	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 2]	8	1	362	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4086	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 3]	8	1	363	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4087	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 4]	8	1	364	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4088	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 5]	8	1	365	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4089	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 6]	8	1	366	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4090	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 7]	8	1	367	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4091	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 8]	8	1	368	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4092	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 9]	8	1	369	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4093	2	3	9				0
+Kim Long V¨n C­¬ng - Êt [CÊp 10]	8	1	370	\spr\item\fusion\ÁúÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4094	2	3	9				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 1]	8	1	371	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4095	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 2]	8	1	372	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4096	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 3]	8	1	373	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4097	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 4]	8	1	374	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4098	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 5]	8	1	375	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4099	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 6]	8	1	376	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4100	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 7]	8	1	377	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4101	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 8]	8	1	378	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4102	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 9]	8	1	379	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4103	1	4	8				0
+Thanh Méc V¨n C­¬ng - Bİnh [CÊp 10]	8	1	380	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4104	1	4	8				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 1]	8	1	381	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4105	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 2]	8	1	382	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4106	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 3]	8	1	383	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4107	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 4]	8	1	384	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4108	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 5]	8	1	385	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4109	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 6]	8	1	386	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4110	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 7]	8	1	387	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4111	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 8]	8	1	388	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4112	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 9]	8	1	389	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4113	2	3	9				0
+Thanh Méc V¨n C­¬ng - Êt [CÊp 10]	8	1	390	\spr\item\fusion\Ä¾ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4114	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 1]	8	1	391	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4115	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 2]	8	1	392	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4116	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 3]	8	1	393	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4117	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 4]	8	1	394	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4118	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 5]	8	1	395	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4119	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 6]	8	1	396	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4120	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 7]	8	1	397	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4121	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 8]	8	1	398	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4122	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 9]	8	1	399	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4123	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Bİnh [CÊp 10]	8	1	400	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4124	1	4	8				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 1]	8	1	401	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4125	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 2]	8	1	402	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4126	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 3]	8	1	403	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4127	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 4]	8	1	404	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4128	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 5]	8	1	405	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4129	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 6]	8	1	406	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4130	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 7]	8	1	407	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4131	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 8]	8	1	408	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4132	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 9]	8	1	409	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4133	2	3	9				0
+M¹c Thñy V¨n C­¬ng - Êt [CÊp 10]	8	1	410	\spr\item\fusion\Ë®ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4134	2	3	9				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 1]	8	1	411	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4135	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 2]	8	1	412	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4136	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 3]	8	1	413	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4137	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 4]	8	1	414	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4138	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 5]	8	1	415	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4139	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 6]	8	1	416	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4140	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 7]	8	1	417	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4141	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 8]	8	1	418	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4142	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 9]	8	1	419	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4143	1	4	8				0
+Xİch Háa V¨n C­¬ng - Bİnh [CÊp 10]	8	1	420	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4144	1	4	8				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 1]	8	1	421	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4145	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 2]	8	1	422	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4146	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 3]	8	1	423	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4147	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 4]	8	1	424	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4148	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 5]	8	1	425	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4149	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 6]	8	1	426	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4150	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 7]	8	1	427	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4151	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 8]	8	1	428	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4152	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 9]	8	1	429	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4153	2	3	9				0
+Xİch Háa V¨n C­¬ng - Êt [CÊp 10]	8	1	430	\spr\item\fusion\»ğÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4154	2	3	9				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 1]	8	1	431	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4155	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 2]	8	1	432	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4156	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 3]	8	1	433	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4157	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 4]	8	1	434	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4158	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 5]	8	1	435	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4159	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 6]	8	1	436	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4160	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 7]	8	1	437	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4161	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 8]	8	1	438	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4162	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 9]	8	1	439	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4163	1	4	8				0
+L¹c L«i V¨n C­¬ng - Bİnh [CÊp 10]	8	1	440	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4164	1	4	8				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 1]	8	1	441	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	1	4165	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 2]	8	1	442	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	2	4166	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 3]	8	1	443	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	3	4167	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 4]	8	1	444	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	4	4168	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 5]	8	1	445	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	5	4169	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 6]	8	1	446	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	6	4170	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 7]	8	1	447	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	7	4171	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 8]	8	1	448	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	8	4172	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 9]	8	1	449	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	9	4173	2	3	9				0
+L¹c L«i V¨n C­¬ng - Êt [CÊp 10]	8	1	450	\spr\item\fusion\À×ÎÆ¸Ö.spr	41	1	1	Ngò hµnh v¨n c­¬ng ®­îc luyÖn tõ ngò hµnh kho¸ng, cã thÓ n©ng cao n¨ng lùc trang bŞ	0	0	1	0	10	4174	2	3	9				0

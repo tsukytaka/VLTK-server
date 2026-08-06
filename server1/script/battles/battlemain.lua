@@ -2,14 +2,14 @@ IncludeLib("BATTLE");
 Include("\\script\\battles\\battlehead.lua");
 
 function main(battleid, mapid, ruleid, level, seriesid)
-oldSubWorld = SubWorld
+	local oldSubWorld = SubWorld
 	if (GetGlbValue(GLB_FORBIDBATTLE) == 1) then 
 		print("any battle would be forbided, so this battle is ignored.");
 		return
 	end
 
 	SetGlbValue(GLB_BATTLESTATE, 1) --设置该全局变量为1，标志当前服务器正处于宋金战役阶段，此时襄阳或朱仙镇的出口点自动设在宋金战役的报名点，否则则设在原宋金战场地图
-	idx = SubWorldID2Idx(mapid);
+	local idx = SubWorldID2Idx(mapid);
 	if (idx == -1) then 
 		return
 	end;
@@ -17,11 +17,11 @@ oldSubWorld = SubWorld
 		print("battle level must 1 to 3, but now is "..level..", so it is error!");
 		return
 	end;
-	battlekey = random(100000)
-	signidx = SubWorldID2Idx(tbGAME_SIGNMAP[level]);
+	local battlekey = random(100000)
+	local signidx = SubWorldID2Idx(tbGAME_SIGNMAP[level]);
 
 	SubWorld = idx
-	round = BT_GetGameData(GAME_ROUND)
+	local round = BT_GetGameData(GAME_ROUND)
 
 	if (signidx >= 0) then
 		SubWorld = signidx
@@ -32,6 +32,10 @@ oldSubWorld = SubWorld
 		BT_SetGameData(GAME_LEVEL, level)
 		BT_SetGameData(GAME_BATTLESERIES, seriesid)
 		BT_SetGameData(GAME_ROUND, round)
+		WriteLog(format("[BattleSignSync] Level:%d SignMap:%d BattleID:%d BattleMap:%d Rule:%d Series:%d",
+			level, tbGAME_SIGNMAP[level], BT_GetGameData(GAME_BATTLEID),
+			BT_GetGameData(GAME_MAPID), BT_GetGameData(GAME_RULEID),
+			BT_GetGameData(GAME_BATTLESERIES)))
 	end
 		
 	SubWorld = idx;

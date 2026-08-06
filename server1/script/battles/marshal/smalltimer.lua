@@ -128,8 +128,12 @@ function OnTimer()
 	-- off dac tham
 	-- (DOI 2026-06-18) SPAWN BOT TRUOC KHAI CHIEN cho dep: 60 giay truoc RUNGAME_TIME.
 	--   Doi so 60 (giay) de bot xuat hien som/muon hon. Spawn qua som -> bot danh nhau truoc khai chien.
-	--   Chi Cao cap (lsf_level==3) nhu cu. == nen chi ban 1 lan dung luc.
-	if (lsf_level == 3 and t == 1) then
+	--   Cac cap Tong Kim tham gia do webconfig.lua quyet dinh; moi tran chi spawn mot lan.
+	local simTKLevelEnabled =
+		(lsf_level == 1 and (SIMCITY_TK_LEVEL_BEGINNER or 0) == 1) or
+		(lsf_level == 2 and (SIMCITY_TK_LEVEL_INTERMEDIATE or 0) == 1) or
+		(lsf_level == 3 and (SIMCITY_TK_LEVEL_ADVANCED or 1) == 1)
+	if t == 1 and (SIMCITY_TK_ENABLED or 1) == 1 and simTKLevelEnabled then
 		simTK:add_npc_simcity(BT_GetGameData(GAME_MAPID))
 	end
 	--if (t >= RUNGAME_TIME) then

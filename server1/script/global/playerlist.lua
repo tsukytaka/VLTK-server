@@ -16,3 +16,5 @@ end
 function PlayerList:GetPlayer(index)
 	return self.m_Map[index]
 end
+
+Include("\\script\\global\\mel\\item\\thanhanhphu_phonglangdo.lua")

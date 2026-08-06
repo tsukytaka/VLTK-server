@@ -9,13 +9,11 @@
 
 Include("\\script\\event\\birthday_jieri\\200905\\class.lua");
 Include("\\script\\lib\\awardtemplet.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 function main(nItemIdx)
 	local n_item_date = tonumber(FormatTime2String("%Y%m%d%H%M",ITEM_GetExpiredTime(nItemIdx)));
 	local n_cur_date = tonumber(GetLocalDate("%Y%m%d%H%M"));
-	--if n_cur_date > n_item_date then
-	if (CFG_birthday_jieri_2009 == 0) then
+	if n_cur_date > n_item_date then
 		Msg2Player("VËt phÈm qu¸ h¹n sö dông, tù ®éng mÊt ®i.")
 		return 0;
 	end

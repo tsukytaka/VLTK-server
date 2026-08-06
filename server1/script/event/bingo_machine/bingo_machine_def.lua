@@ -31,52 +31,52 @@ AWARD_TYPE =
 
 ODDS2COIN = 
 {
-	[1] = {1, 2},
-	[2] = {5, 10},
-	[3] = {10, 20},
+	[1] = {1, 2}, --- 2 xu sÏ x1 vËt phÈm tróng th­ëng
+	[2] = {5, 10}, ---- 10 xu sÏ x5 vËt phÈm tróng th­ëng
+	[3] = {10, 20}, ---- 20 xu sÏ x10 vËt phÈm tróng th­ëng
 }
 
 tbBingoMachineAward = { 
-	[1] = {szName = "Long LÖnh Kú", 
+	[1] = {szName = "HuyÒn Tinh 2", 
 		[1] = {	
-			[1]={szName="Long LÖnh Kú",tbProp={6,1,3056,1,0,0}, nCount=1},
-			[2]={szName="Long LÖnh Kú",tbProp={6,1,3056,1,0,0}, nCount=3},
-			[3]={szName="Long LÖnh Kú",tbProp={6,1,3056,1,0,0}, nCount=10},
-			[4]={szName="Long LÖnh Kú",tbProp={6,1,3056,1,0,0}, nCount=35},
-			[5]={szName="Long LÖnh Kú",tbProp={6,1,3056,1,0,0}, nCount=120},
-	  	[6]={szName="Long LÖnh Kú",tbProp={6,1,3056,1,0,0}, nCount=400},}, 
+			[1]={szName="HuyÒn Tinh 2",tbProp={6,1,147,2,0,0,0}, tbParam={60}, nCount=1}, ---nCount=1 sè l­îng vËt phÈm x víi sè xu ®Æt c­îc ë phÝa trªn (nÕu nhËn xu sÏ kh«ng nhËn vËt phÈm)
+			[2]={szName="HuyÒn Tinh 2",tbProp={6,1,147,2,0,0,0}, tbParam={60}, nCount=3},
+			[3]={szName="HuyÒn Tinh 2",tbProp={6,1,147,2,0,0,0}, tbParam={60}, nCount=10},
+			[4]={szName="HuyÒn Tinh 2",tbProp={6,1,147,2,0,0,0}, tbParam={60}, nCount=35},
+			[5]={szName="HuyÒn Tinh 2",tbProp={6,1,147,2,0,0,0}, tbParam={60}, nCount=120},
+	  	[6]={szName="HuyÒn Tinh 2",tbProp={6,1,147,2,0,0,0}, tbParam={60}, nCount=400},}, 
+		[2] = {1, 3, 10, 35, 120, 400}}, --- sè xu x víi sè xu ®Æt c­îc phÝa trªn (nÕu nh©n vËt phÈm sÏ kh«ng nhËn xu)
+	[2] = {szName = "HuyÒn Tinh 3", 
+		[1] = {	
+			[1]={szName="HuyÒn Tinh 3",tbProp={6,1,147,3,0,0,0}, tbParam={60}, nCount=1},
+			[2]={szName="HuyÒn Tinh 3",tbProp={6,1,147,3,0,0,0}, tbParam={60}, nCount=3},
+			[3]={szName="HuyÒn Tinh 3",tbProp={6,1,147,3,0,0,0}, tbParam={60}, nCount=10},
+			[4]={szName="HuyÒn Tinh 3",tbProp={6,1,147,3,0,0,0}, tbParam={60}, nCount=35},
+			[5]={szName="HuyÒn Tinh 3",tbProp={6,1,147,3,0,0,0}, tbParam={60}, nCount=120},
+	  	[6]={szName="HuyÒn Tinh 3",tbProp={6,1,147,3,0,0,0}, tbParam={60}, nCount=400},}, 
 		[2] = {1, 3, 10, 35, 120, 400}},
-	[2] = {szName = "L©n LÖnh Kú", 
+	[3] ={szName = "HuyÒn Tinh 4", 
 		[1] = {	
-			[1]={szName="L©n LÖnh Kú",tbProp={6,1,3057,1,0,0}, nCount=1},
-			[2]={szName="L©n LÖnh Kú",tbProp={6,1,3057,1,0,0}, nCount=3},
-			[3]={szName="L©n LÖnh Kú",tbProp={6,1,3057,1,0,0}, nCount=10},
-			[4]={szName="L©n LÖnh Kú",tbProp={6,1,3057,1,0,0}, nCount=35},
-			[5]={szName="L©n LÖnh Kú",tbProp={6,1,3057,1,0,0}, nCount=120},
-	  	[6]={szName="L©n LÖnh Kú",tbProp={6,1,3057,1,0,0}, nCount=400},}, 
+			[1]={szName="HuyÒn Tinh 4",tbProp={6,1,147,4,0,0,0}, tbParam={60}, nCount=1},
+			[2]={szName="HuyÒn Tinh 4",tbProp={6,1,147,4,0,0,0}, tbParam={60}, nCount=3},
+			[3]={szName="HuyÒn Tinh 4",tbProp={6,1,147,4,0,0,0}, tbParam={60}, nCount=10},
+			[4]={szName="HuyÒn Tinh 4",tbProp={6,1,147,4,0,0,0}, tbParam={60}, nCount=35},
+			[5]={szName="HuyÒn Tinh 4",tbProp={6,1,147,4,0,0,0}, tbParam={60}, nCount=120},
+	  	[6]={szName="HuyÒn Tinh 4",tbProp={6,1,147,4,0,0,0}, tbParam={60}, nCount=400},}, 
 		[2] = {1, 3, 10, 35, 120, 400}},
-	[3] ={szName = "Phông LÖnh Kú", 
+	[4] ={szName = "Phóc Duyªn §¹i", 
 		[1] = {	
-			[1]={szName="Phông LÖnh Kú",tbProp={6,1,3058,1,0,0}, nCount=1},
-			[2]={szName="Phông LÖnh Kú",tbProp={6,1,3058,1,0,0}, nCount=3},
-			[3]={szName="Phông LÖnh Kú",tbProp={6,1,3058,1,0,0}, nCount=10},
-			[4]={szName="Phông LÖnh Kú",tbProp={6,1,3058,1,0,0}, nCount=35},
-			[5]={szName="Phông LÖnh Kú",tbProp={6,1,3058,1,0,0}, nCount=120},
-	  	[6]={szName="Phông LÖnh Kú",tbProp={6,1,3058,1,0,0}, nCount=400},}, 
-		[2] = {1, 3, 10, 35, 120, 400}},
-	[4] ={szName = "Quy LÖnh Kú", 
-		[1] = {	
-			[1]={szName="Quy LÖnh Kú",tbProp={6,1,3059,1,0,0}, nCount=1},
-			[2]={szName="Quy LÖnh Kú",tbProp={6,1,3059,1,0,0}, nCount=3},
-			[3]={szName="Quy LÖnh Kú",tbProp={6,1,3059,1,0,0}, nCount=10},
-			[4]={szName="Quy LÖnh Kú",tbProp={6,1,3059,1,0,0}, nCount=35},
-			[5]={szName="Quy LÖnh Kú",tbProp={6,1,3059,1,0,0}, nCount=120},
-	  	[6]={szName="Quy LÖnh Kú",tbProp={6,1,3059,1,0,0}, nCount=400},}, 
+			[1]={szName="Phóc Duyªn §¹i",tbProp={6,1,124,1,0,0}, nCount=1},
+			[2]={szName="Phóc Duyªn §¹i",tbProp={6,1,124,1,0,0}, nCount=3},
+			[3]={szName="Phóc Duyªn §¹i",tbProp={6,1,124,1,0,0}, nCount=10},
+			[4]={szName="Phóc Duyªn §¹i",tbProp={6,1,124,1,0,0}, nCount=35},
+			[5]={szName="Phóc Duyªn §¹i",tbProp={6,1,124,1,0,0}, nCount=120},
+	  	[6]={szName="Phóc Duyªn §¹i",tbProp={6,1,124,1,0,0}, nCount=400},}, 
 		[2] = {1, 3, 10, 35, 120, 400}},
 	[5] = {szName = "KindBox", 
 		[1] = {	
-			[1]={szName="Quý Träng B¶o R­¬ng",tbProp={6,1,3053,1,0,0}, nCount=1},
-			[2]={szName="Tinh Mü B¶o R­¬ng",tbProp={6,1,3054,1,0,0}, nCount=1},},
+			[1]={szName="Tö Thñy Tinh",tbProp={4,239,1,1,0,0}, tbParam={60}, nCount=3},
+			[2]={szName="ChiÕu d¹ ngäc s­ tö",tbProp={0,10,5,10,0,0},nQuality = 1, nCount=1},},
 		[2] = {20, 80}},		
 }
 tbBingoMachineAwardSpace = {

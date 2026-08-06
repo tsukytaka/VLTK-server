@@ -20,7 +20,7 @@ tbAwardTK =
 TASK_RESET_DAILY_AWARD_TK	= 2776
 TASK_INDEX_AWARD_TK				= 2777
 
-nEndDate = 20501107
+nEndDate = 20101107
 
 function Start_Date()
 	local nCurDate = tonumber(GetLocalDate("%Y%m%d"))

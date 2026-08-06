@@ -32,12 +32,12 @@ ITEM_DETAIL = 1
 ITEM_PARTI = 1053
 
 function main()
-	--if (gb_GetModule("ThiÖp th«ng b¸o chóc mõng mµu") == 1) then
+	if (gb_GetModule("ThiÖp th«ng b¸o chóc mõng mµu") == 1) then
 		Say("§©y lµ tÊm thiÖp mµu thÓ hiÖn nh÷ng lêi chóc gëi ®i. Mêi b¹n nhËp tªn ng­êi cÇn chóc, sau ®ã chän mµu cho nÒn ch÷ cÇn chóc", 
 			2, 
 			"B¾t ®Çu chóc phóc/want2bless",
 			"L¸t n÷a míi gëi/OnCancel")
-	--end
+	end
 	return 1
 end
 function want2bless(nIndex)
@@ -74,10 +74,10 @@ function ColorSelect(nSel)
 end
 
 function BlessPlayer(szBless)
-	--if (ST_CheckTextFilter(szBless) ~= 1) then
-	--	Say("Xin lçi! Lêi chóc phóc cña b¹n cã ch÷ kh«ng hîp lÖ, h·y thö l¹i lÇn n÷a!", 0)
-	--	return
-	--end
+	if (ST_CheckTextFilter(szBless) ~= 1) then
+		Say("Xin lçi! Lêi chóc phóc cña b¹n cã ch÷ kh«ng hîp lÖ, h·y thö l¹i lÇn n÷a!", 0)
+		return
+	end
 	
 	for i = 1, getn(TB_FORBIDWORD) do
 		local bp = strfind(szBless, TB_FORBIDWORD[i])

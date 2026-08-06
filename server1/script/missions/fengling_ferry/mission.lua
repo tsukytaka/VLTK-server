@@ -2,7 +2,9 @@ Include("\\script\\missions\\fengling_ferry\\fld_head.lua")
 Include("\\script\\event\\jiefang_jieri\\200904\\taskctrl.lua");
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
-
+-------------PhÇn Th­ëng Ho¹t §éng-----------------------
+Include("\\script\\global\\pgaming\\configserver\\phanthuonghoatdong.lua")
+----------------------------------------------------------
 function InitMission()
 	for i = 1, 100 do 
 		SetMissionV(i , 0);
@@ -18,7 +20,7 @@ end
 function RunMission()
 	for i=1, 30 do
 		posx, posy = fld_getadata(npcthiefpos)
-		local npcindex	= AddNpc(724, 95, SubWorld, posx, posy, 0, "Thñy TÆc ");
+		local npcindex	= AddNpc(724, 95, SubWorld, posx, posy, 0, "Thñy TÆc");
 		SetNpcDeathScript(npcindex, "\\script\\missions\\fengling_ferry\\shuizeideath.lua");
 	end
 	idx = 0
@@ -30,7 +32,7 @@ function RunMission()
  		end
 		--´ËÊ±ÎªGM·¢²¼ÃüÁî
 		SetFightState(1)
-		PutMessage("ThuyÒn ®i råi! 30 phót sau sÏ ®Õn bê B¾c Phong L¨ng §é.")
+		PutMessage("ThuyÒn ®i råi! "..ThoiGianDiThuyenPLD.." phót sau sÏ ®Õn bê B¾c Phong L¨ng §é.")
 		if (idx == 0) then 
  			break
  		end 
@@ -57,26 +59,28 @@ function EndMission()
 	Landing()
 	for i = 1, 100 do 
 		SetMissionV(i , 0);
-	end	
-	RemoteExecute("\\script\\startmissions.lua", "PLDAutoEnd", 0)
+	end
 end
 
 function OnLeave(RoleIndex)
 	oldPlayerIndex = PlayerIndex
 	PlayerIndex = RoleIndex
-	Msg2MSAll(MISSIONID, GetName().."B¹n kh«ng may tö vong trong lóc ®i thuyÒn.")
+	Msg2MSAll(MISSIONID, GetName().." kh«ng may tö vong trong lóc ®i thuyÒn.")
 	SetCreateTeam(1)
 	ForbidEnmity(0);
 --	SetTaskTemp(200,0);
 	SetDeathScript("")
 	SetFightState(0)		
 	ForbidChangePK(0)
+	SetCurCamp(GetCamp())
+	SetRevPos(GetPlayerRev())
+	DisabledUseTownP(0)
 	SetPKFlag(0)
 	PlayerIndex = oldPlayerIndex
 end
 
 function Landing()
-	Msg2MSAll(MISSIONID, "®· ®Õn bê B¾c Phong L¨ng §é.")
+	Msg2MSAll(MISSIONID, "§· ®Õn bê B¾c Phong L¨ng §é.")
 	
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));		-- by bel µ½°¶ÒÔºó·¢³ö¡°ÏûÃðË®Ôô¡±»î¶¯µÄÁì½±¹«¸æ
 	if (nDate >= jf0904_act_dateS and nDate < jf0904_act_dateE) then
@@ -111,30 +115,51 @@ function Landing()
 		SetDeathScript("")
 --		SetTaskTemp(200, 0)
 		ForbidEnmity(0);
-		
+--============PhÇn th­ëng khi sö dông lÖnh bµi thñy tÆc lªn thuyÒn, ë c¸c khung giê: 10:00, 14:00, 16:00, 18:00, 20:00===================================================================================			
 		if (check_new_shuizeitask() == 1) then
-			tbAwardTemplet:GiveAwardByList({tbProp={6,1,2743,1,0,0},}, "fenglingdu_shuizeicaibao", 2)
+		local nRuong = CalcFreeItemCellCount() 
+		if nRuong < SoLuongRuongTrongNhanThuong then
+			Talk(1,"","Kh«ng §ñ "..SoLuongRuongTrongNhanThuong.." r­¬ng chøa ®å, kh«ng thÓ nhËn th­ëng")
+			return 1
+		else
+			for i = 1,getn(TAB_LBTT) do
+			tbAwardTemplet:GiveAwardByList(TAB_LBTT[i], "PhÇn th­ëng Kim Bµi Phong L¨ng §é");
+			end
 		end
-		
+		end
+--===============================================================================================	
+		local nRuong = CalcFreeItemCellCount() 
+			if nRuong < SoLuongRuongTrongNhanThuong then
+				Talk(1,"","Kh«ng §ñ "..SoLuongRuongTrongNhanThuong.." r­¬ng chøa ®å, kh«ng thÓ nhËn th­ëng")
+				return 1
+			else
+				for i = 1,getn(TAB_LBPLD) do
+				tbAwardTemplet:GiveAwardByList(TAB_LBPLD[i], "PhÇn th­ëng Kim Bµi Phong L¨ng §é");
+				end
+			end	
+--===============================================================================================		
 		local mapid = SubWorldIdx2ID(SubWorld)
 		if (mapid == 337) then
 			SetLogoutRV(0)
 			NewWorld(fld_landingpos(1))
 			SetFightState(1)
-			DisabledUseTownP(1) -- ÏÞÖÆÆä½øÈë·çÁê¶É±±°¶Ê¹ÓÃ»Ø³Ç·û
-			SetRevPos(175,1)	--Éè¶¨ËÀÍöÖØÉúµãÎªÎ÷É½´å
+			SetRevPos(GetPlayerRev())
+			SetCurCamp(GetCamp())
+			DisabledUseTownP(0)	--Éè¶¨ËÀÍöÖØÉúµãÎªÎ÷É½´å
 		elseif (mapid == 338) then
 			SetLogoutRV(0)
 			NewWorld(fld_landingpos(2))
 			SetFightState(1)
-			DisabledUseTownP(1) -- ÏÞÖÆÆä½øÈë·çÁê¶É±±°¶Ê¹ÓÃ»Ø³Ç·û
-			SetRevPos(175,1)	--Éè¶¨ËÀÍöÖØÉúµãÎªÎ÷É½´å
+			SetRevPos(GetPlayerRev())
+			SetCurCamp(GetCamp())
+			DisabledUseTownP(0)	--Éè¶¨ËÀÍöÖØÉúµãÎªÎ÷É½´å
 		elseif (mapid == 339) then
 			SetLogoutRV(0)
 			NewWorld(fld_landingpos(3))
 			SetFightState(1)
-			DisabledUseTownP(1) -- ÏÞÖÆÆä½øÈë·çÁê¶É±±°¶Ê¹ÓÃ»Ø³Ç·û
-			SetRevPos(175,1)	--Éè¶¨ËÀÍöÖØÉúµãÎªÎ÷É½´å
+			SetRevPos(GetPlayerRev())
+			SetCurCamp(GetCamp())
+			DisabledUseTownP(0)	--Éè¶¨ËÀÍöÖØÉúµãÎªÎ÷É½´å
 		else
 			print("error:i don't know why")
 		end

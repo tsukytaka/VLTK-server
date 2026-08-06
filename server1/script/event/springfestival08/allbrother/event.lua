@@ -23,10 +23,10 @@ function allbrother_0801_main()
 	local nDate = tonumber(GetLocalDate("%y%m%d"))
 	
 	
-	--if allbrother_0801_IsAct() ~= 1 then
-	--	Say(format("Xin lçi, <color=yellow>%s<color> ho¹t ®éng ®· kÕt thóc, ®a t¹ ®· tham gia ho¹t ®éng.",allbrother_0801_szActName), 0)
-	--	return 0;
-	--end
+	if allbrother_0801_IsAct() ~= 1 then
+		Say(format("Xin lçi, <color=yellow>%s<color> ho¹t ®éng ®· kÕt thóc, ®a t¹ ®· tham gia ho¹t ®éng.",allbrother_0801_szActName), 0)
+		return 0;
+	end
 	
 	local szTitle = "Xin chµo, t¹i h¹ lµ truyÒn nh©n cña B¾c §Èu M«n, ch¼ng hay c¸c h¹ cÇn g×?";
 	local tbOpt = 

@@ -9,7 +9,6 @@
 
 Include("\\script\\event\\birthday_jieri\\200905\\class.lua");
 Include("\\script\\lib\\awardtemplet.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 local tbItem = 
 {
@@ -21,8 +20,7 @@ local tbItem =
 
 function main(nItemIndex)
 		
-	--if GetItemParam(nItemIndex, 1) == 0 or GetItemParam(nItemIndex, 1) <= tonumber(GetLocalDate("%Y%m%d")) then
-	if (CFG_birthday_jieri_2009 == 0) then
+	if GetItemParam(nItemIndex, 1) == 0 or GetItemParam(nItemIndex, 1) <= tonumber(GetLocalDate("%Y%m%d")) then
 		Talk(1,"", "VÀt ph»m nµy Æ∑ h’t hπn")
 		return 0
 	end
@@ -37,8 +35,7 @@ end
 function IsPickable(nItemIndex)
 	
 	local nExpiredTime = tbBirthday0905.tbTask.item_expiredtime1;
-	--if tonumber(GetLocalDate("%Y%m%d")) >= nExpiredTime then
-	if (CFG_birthday_jieri_2009 == 0) then
+	if tonumber(GetLocalDate("%Y%m%d")) >= nExpiredTime then
 		Msg2Player("VÀt ph»m nµy Æ∑ h’t hπn");
 		return 0
 	end

@@ -19,6 +19,7 @@
 Include("\\script\\missions\\citywar_arena\\head.lua");
 Include("\\script\\lib\\common.lua")
 function main()
+	dofile("script/missions/citywar_arena/camper.lua")
 	ms_state = GetMissionV(MS_STATE);
 	if (ms_state == 0) then 
 		WorldID = SubWorldIdx2ID(SubWorld);
@@ -27,7 +28,8 @@ function main()
 			Tong1, Tong2 = GetArenaBothSides(ArenaID);
 			Tong1 = safeshow(Tong1)
 			Tong2 = safeshow(Tong2)
-			Say(Tong1.."vµ"..Tong2.."LËp tøc chuÈn bÞ chiÕn ®Êu, ®Êu tr­êng ®ang chuÈn bÞ, mäi ng­êi h·y s½n sµng ", 0);
+
+			Say("<color=yellow>"..Tong1.."<color> vµ <color=yellow>"..Tong2.."<color>. LËp tøc chuÈn bÞ chiÕn ®Êu, ®Êu tr­êng ®ang chuÈn bÞ, mäi ng­êi h·y s½n sµng ", 0);
 		else
 			Say("Thêi gian chiÕn ®Êu vÉn ch­a ®Õn!", 1, "BiÕt råi, ta ®i tr­íc ®©y /OnCancel");
 		end;
@@ -54,7 +56,7 @@ function OnReady()
 	
 	RestMin, RestSec = GetMinAndSec(RestTime);
 
-	str = "<#> N¬i nµy ®ang diÔn ra tranh ®Êu"..GetMissionS(3).."<#> c«ng thµnh khiªu chiÕn, hiÖn t¹i bang héi thi ®Êu lµ:"..GetMissionS(1).."<#> víi"..GetMissionS(2).."<#>, thêi gian nhËp tr­êng cßn l¹i"..RestMin.."<#> phót "..RestSec.."<#> gi©y.";
+	str = " N¬i nµy ®ang diÔn ra tranh ®Êu <color=yellow>"..GetMissionS(3).."<color> c«ng thµnh khiªu chiÕn, hiÖn t¹i bang héi thi ®Êu lµ: <color=yellow>"..GetMissionS(1).."<color> víi <color=yellow>"..GetMissionS(2).."<color>, thêi gian nhËp tr­êng cßn l¹i <color=yellow>"..RestMin.." phót "..RestSec.." gi©y.";
 	Say(str, 2, "Ta thÝch hîp víi ®iÒu kiÖn, ta muèn vµo ®Êu tr­êng /OnJoin", "ta kh«ng muèn vµo ®Êu tr­êng /OnCancel");
 end;
 
@@ -78,17 +80,17 @@ end;
 
 function OnJoin()
 	if (GetTongName() == GetMissionS(1)) then 
-		if (GetJoinTongTime() >= 7200) then
+		--if (GetJoinTongTime() >= 7200) then
 			JoinCamp(1);
-		else
+		--else
 			Say("Thêi gian b¹n gia nhËp bang héi qu¸ ng¾n, kh«ng thÓ tham gia chiÕn ®Êu!", 0);
-		end;
+		--end;
 	elseif (GetTongName() == GetMissionS(2)) then 
-		if (GetJoinTongTime() >= 7200) then
+		--if (GetJoinTongTime() >= 7200) then
 			JoinCamp(2);
-		else
-			Say("Thêi gian b¹n gia nhËp bang héi qu¸ ng¾n, kh«ng thÓ tham gia chiÕn ®Êu!", 0);
-		end;
+		--else
+		--	Say("Thêi gian b¹n gia nhËp bang héi qu¸ ng¾n, kh«ng thÓ tham gia chiÕn ®Êu!", 0);
+		--end;
 	else
 		ErrorMsg(4)
 	end;
@@ -97,8 +99,8 @@ end;
 function OnFighting()
 	gametime = (floor(GetMSRestTime(MISSIONID,17)/18));
 	RestMin, RestSec = GetMinAndSec(gametime);
-	str1 = "<#> nh©n sè 2 bªn hiÖn t¹i lµ:"..GetMSPlayerCount(MISSIONID, 1).."<#> "..GetMSPlayerCount(MISSIONID, 2).."<#>. Thêi gian cßn d­ "..RestMin.."<#> phót "..RestSec.."<#> gi©y.";
-	str = "<#> hiÖn t¹i bang héi"..GetMissionS(1).."<#> víi"..GetMissionS(2).."<#> ®ang tiÕn hµnh";
+	str1 = "nh©n sè 2 bªn hiÖn t¹i lµ: <color=yellow>"..GetMSPlayerCount(MISSIONID, 1).." : "..GetMSPlayerCount(MISSIONID, 2).."<color>. Thêi gian cßn d­ <color=yellow>"..RestMin.." phót "..RestSec.." gi©y.<color>";
+	str = "HiÖn t¹i bang héi <color=yellow>"..GetMissionS(1).." víi "..GetMissionS(2).."<color> ®ang tiÕn hµnh, ";
 	Say(str..str1, 0);
 end;
 

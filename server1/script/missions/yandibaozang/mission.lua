@@ -77,9 +77,9 @@ function OnLeave(index)
 	local szstr = format("<color=yellow>%s<color> rêi khái b¶n ®å b¶o tµng viªm ®Õ.",GetName())
 
 	SetTempRevPos(world,pos_x*32,pos_y*32)
-	Msg2MSAll(YDBZ_MISSION_MATCH,str);
-	Msg2Player(szstr)
 	YDBZ_restore(PlayerIndex,YDBZ_MISSION_MATCH,nteams)
+	Msg2MSAll(YDBZ_MISSION_MATCH,szstr);
+	Msg2Player(szstr)
 	SubWorld = oldworld
 
 	if GetMSPlayerCount(YDBZ_MISSION_MATCH,nteams) == 0 then

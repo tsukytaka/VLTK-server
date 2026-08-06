@@ -1,7 +1,6 @@
 Include("\\script\\lib\\composeex.lua")
 Include("\\script\\global\\itemset.lua")
 Include("\\script\\item\\class\\virtualitem.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 if (FreedomEvent2010 == nil) then
 	FreedomEvent2010 = {}
@@ -353,23 +352,26 @@ FreedomEvent2010.tbClothAwardNormal =
 }
 
 function FreedomEvent2010:IsActive()
-	if (CFG_jiefang_jieri2010	== 0) then
+	local now = tonumber(GetLocalDate("%Y%m%d"));
+	if (now >= self.END_DATE or now < self.START_DATE) then
 		return 0;
 	end
 	return 1;
 end
 
 function FreedomEvent2010:IsActive1()
-	if (CFG_jiefang_jieri2010	== 0) then
+	local now = tonumber(GetLocalDate("%Y%m%d"));
+	if (now >= self.END_DATE1 or now < self.START_DATE) then
 		return 0;
 	end
 	return 1;
 end
 
 function FreedomEvent2010:LingFanSoldierItemDlg()
+	local now = tonumber(GetLocalDate("%Y%m%d"));
 	local tbSay = {};
 	tbSay[1] = "Chµo mõng ngµy ®Êt n­íc ®­îc gi¶i phãng!";
-	if (CFG_jiefang_jieri2010	== 1) then
+	if (now < self.END_DATE1) then
 		tinsert(tbSay, format("Mua [%s]/#FreedomEvent2010:BuyItem('%s')","Cuén V¶i H¶o H¹ng","Cuén V¶i H¶o H¹ng"));
 	end
 	tinsert(tbSay, format("§æi [%s]/#FreedomEvent2010:BuyCotDlg()","ChiÕc vâng Tr­êng S¬n"));
@@ -379,9 +381,10 @@ function FreedomEvent2010:LingFanSoldierItemDlg()
 end
 
 function FreedomEvent2010:LingFanPlantItemDlg()
+	local now = tonumber(GetLocalDate("%Y%m%d"));
 	local tbSay = {};
 	tbSay[1] = "Chµo mõng ngµy ®Êt n­íc ®­îc gi¶i phãng!";
-	if (CFG_jiefang_jieri2010	== 1) then
+	if (now < self.END_DATE1) then
 		tinsert(tbSay, format("Mua [%s]/#FreedomEvent2010:BuyItem('%s')","H¹t Thiªn TuÕ","H¹t Thiªn TuÕ"));
 		tinsert(tbSay, format("Mua [%s]/#FreedomEvent2010:BuyItem('%s')","Tói Ph©n Bãn","Tói Ph©n Bãn"));
 		tinsert(tbSay, format("Mua [%s]/#FreedomEvent2010:BuyItem('%s')","Thïng N­íc","Thïng N­íc"));
@@ -393,9 +396,10 @@ function FreedomEvent2010:LingFanPlantItemDlg()
 end
 
 function FreedomEvent2010:LiGuanEventItemDlg()
+	local now = tonumber(GetLocalDate("%Y%m%d"));
 	local tbSay = {};
 	tbSay[1] = "Chµo mõng ngµy ®Êt n­íc ®­îc gi¶i phãng!";
-	if (CFG_jiefang_jieri2010	== 1) then
+	if (now < self.END_DATE1) then
 		tinsert(tbSay, format("§æi [%s]/#FreedomEvent2010:BuyItem('%s')","ChiÕc Mò ChiÕn SÜ","ChiÕc Mò ChiÕn SÜ"));
 		tinsert(tbSay, format("§æi [%s]/#FreedomEvent2010:BuyItem('%s')","§«i Giµy Bé §éi","§«i Giµy Bé §éi"));
 		tinsert(tbSay, format("§æi [%s]/#FreedomEvent2010:BuyItem('%s')","TÊm ¸o ChiÕn SÜ","TÊm ¸o ChiÕn SÜ"));

@@ -5,6 +5,14 @@ Include("\\script\\battles\\battlehead.lua")
 Include("\\script\\battles\\marshal\\head.lua")
 
 function OnDeath(Launcher)
+	local plus_point = 2
+	local msg_str=""
+	if isCuoiTuan() == 1 then
+		msg_str = " (Cuèi tuÇn x2)"
+	end
+	-- if isGioCaoDiem() == 1 then
+	-- 	msg_str = msg_str.." (Giê cao ®iÓm x2)"
+	-- end
 	State = GetMissionV(MS_STATE) ;
 	if (State ~= 2) then
 		return
@@ -26,25 +34,21 @@ function OnDeath(Launcher)
 			--¸üÐÂÉ±NpcÊýÄ¿ºÍÅÅÐÐ°ñ
 			BT_SetData(PL_KILLPLAYER, BT_GetData(PL_KILLPLAYER) + 1); --¼ÇÂ¼Íæ¼ÒÉ±ÆäËüÍæ¼ÒµÄ×ÜÊý
 			serieskill = BT_GetData(PL_SERIESKILL) + 1;
-			BT_SetData(PL_SERIESKILL, serieskill); --¼ÇÂ¼Íæ¼Òµ±Ç°µÄÁ¬Õ¶Êý
-			
-		if (TAB_SERIESKILL[launchrank][currank] == 1) then
-			serieskill_r = GetTask(TV_SERIESKILL_REALY) 
+			BT_SetData(PL_SERIESKILL, serieskill); 
+			serieskill_r = GetTask(TV_SERIESKILL_REALY) or 0
 			serieskill_r = serieskill_r + 1
 			SetTask(TV_SERIESKILL_REALY,serieskill_r)
-
-			if (mod(serieskill_r, 3) == 0) then
+			local npoint_lientram = 0
+			if (serieskill_r >= 3) then
+				if serieskill_r > 10 then
+					serieskill_r = 10
+				end
 				if (deathcamp == 1) then
-					local npoint = bt_addtotalpoint(BT_GetTypeBonus(PL_MAXSERIESKILL, 2))
-					mar_addmissionpoint(BT_GetTypeBonus(PL_MAXSERIESKILL, 2))
-					Msg2Player("<color=yellow> b¹n nhËn ®­îc ®iÓm tÝch lòy Liªn tr¶m "..npoint)
+					npoint_lientram = BT_GetTypeBonus(PL_MAXSERIESKILL, 2) + (serieskill_r * 10)
 				else
-					local npoint = bt_addtotalpoint(BT_GetTypeBonus(PL_MAXSERIESKILL, 1))
-					mar_addmissionpoint(BT_GetTypeBonus(PL_MAXSERIESKILL, 1))
-					Msg2Player("<color=yellow> b¹n nhËn ®­îc ®iÓm tÝch lòy Liªn tr¶m "..npoint)
+					npoint_lientram = BT_GetTypeBonus(PL_MAXSERIESKILL, 1) + (serieskill_r * 10)
 				end
 			end
-		end
 			if (BT_GetData(PL_MAXSERIESKILL) < serieskill) then 
 				BT_SetData(PL_MAXSERIESKILL, serieskill) -- Í³¼ÆÍæ¼ÒµÄ×î´óÁ¬Õ¶Êý
 			end
@@ -58,46 +62,40 @@ function OnDeath(Launcher)
 				rankradio = RANK_PKBONUS[launchrank][currank]
 			end
 			local earnbonus = 0
-			if (deathcamp == 1) then
-				earnbonus = floor(BT_GetTypeBonus(PL_KILLPLAYER, 2) * rankradio)
-			else
-				earnbonus = floor(BT_GetTypeBonus(PL_KILLPLAYER, 1) * rankradio)
+			earnbonus = POINT_TK * rankradio
+			earnbonus = (earnbonus * plus_point) + npoint_lientram
+			local npoint_tmp = earnbonus
+			if isGioCaoDiem() == 1 then
+				local nlastpoint = BT_GetData(PL_BATTLEPOINT) or 0
+				local nfirstpoint = GetTask(TASKID_FIRST_POINT) or 0
+				local ntotalpoint = nlastpoint - nfirstpoint
+				if ntotalpoint <= POINT_TK_MAX then
+					npoint_tmp = bt_addtotalpoint(earnbonus)
+				end				
 			end
-			pointplayer = bt_addtotalpoint(earnbonus)
+			
 			mar_addmissionpoint(earnbonus)
-			Msg2Player("<color=yellow> B¹n h¹ gôc ®èi ph­¬ng nh©n vµ nhËn d­îc <color>"..pointplayer.." <color=yellow>®iÓm tÝch lòy " )
-	
+			
 			local rankname = "";
-			rankname = tbRANKNAME[currank] or ""
+			rankname = tbRANKNAME[currank]
 			launchrank = BT_GetData(PL_CURRANK);
-			launrankname = tbRANKNAME[launchrank] or ""
+			launrankname = tbRANKNAME[launchrank]
 			
 			BT_SortLadder();
 			BT_BroadSelf();
 		
 			if (GetCurCamp()  == 1) then
-				str  = "Ng­êi ch¬i "..launrankname..LaunName.." h¹ träng th­¬ng ng­êi ch¬i "..rankname..DeathName..", tæng PK lµ "..BT_GetData(PL_KILLPLAYER);
+				str  = launrankname.." <color=yellow>"..LaunName.."<color> h¹ gôc "..rankname.." <color=yellow>"..DeathName.."<color>/<color=green>liªn tr¶m "..serieskill_r.."<color>/<color=yellow> tÝch lòy "..npoint_tmp.."<color><color=green>".. msg_str;
 			else
-				str  = "Ng­êi ch¬i "..launrankname..LaunName.." h¹ träng th­¬ng ng­êi ch¬i "..rankname..DeathName..", tæng PK lµ "..BT_GetData(PL_KILLPLAYER);
+				str  = launrankname.." <color=yellow>"..LaunName.."<color> h¹ gôc "..rankname.." <color=yellow>"..DeathName.."<color>/<color=green>liªn tr¶m "..serieskill_r.."<color>/<color=yellow> tÝch lòy "..npoint_tmp.."<color><color=green>".. msg_str;
 			end
-			Msg2Player("<color=pink> Chóc mõng! B¹n ®· h¹ ®­îc:"..rankname..DeathName..", Tæng PK lµ "..BT_GetData(PL_KILLPLAYER));
+			-- Msg2Player("Chóc mõng! B¹n ®· h¹ ®­îc:"..rankname.." <color=yellow>"..DeathName.."<color>, Tæng PK lµ <color=yellow>"..BT_GetData(PL_KILLPLAYER) .. msg_str);
 			Msg2MSAll(MISSIONID, str);
 		end
 		PlayerIndex = OrgPlayer;
 	end;
 
 	BT_SetData(PL_BEKILLED, BT_GetData(PL_BEKILLED) + 1)
-	-- [2026-06-26] bao ket chuoi lien tram khi BI giet (PlayerIndex = nan nhan)
-	local death_serieskill = BT_GetData(PL_SERIESKILL)
-	if (death_serieskill >= 3) then
-			local szVictimSex = "§¹i hiÖp"
-			if GetSex() == 1 then
-				szVictimSex = "N÷ hiÖp"
-			end
-			
-			Msg2Player("<color=pink>Chuçi liªn tr¶m cña <color=cyan>".. szVictimSex.."<color> ®· kÕt thóc! <color=yellow>("..death_serieskill.." liªn tr¶m)<color>")
-	end
-
 	BT_SetData(PL_SERIESKILL, 0)
 	SetTask(TV_SERIESKILL_REALY,0)
 	

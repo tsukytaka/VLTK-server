@@ -1,7 +1,9 @@
--- Î÷É½Óì´¬·ò
+-- HiÖu thuèc ë M¹c B¾c Th¶o Nguyªn - Editor by AloneScript (Linh Em)
+
+Include("\\script\\lib\\alonelib.lua");
 
 function main()
-	Say("Ng­¬i muèn ngåi thuyÒn ®Õn D­¬ng Ch©u µh? 500 l­îng!", 2, "§­îc th«i! §i nµo!/toyangzhou", "Kh«ng ngåi thuyÒn ®©u/no");
+	Say("<color=green>ThuyÒn phu<color>: Ng­¬i muèn ngåi thuyÒn ®Õn D­¬ng Ch©u µh? 500 l­îng!"..Note("xaphu_visondao"), 2, "§­îc th«i! §i nµo!/toyangzhou", "Kh«ng ngåi thuyÒn ®©u./no");
 end
 
 function toyangzhou()

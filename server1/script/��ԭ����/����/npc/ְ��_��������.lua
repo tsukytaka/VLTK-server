@@ -11,7 +11,21 @@ Include("\\script\\event\\act2years_yn\\baibaoxiang.lua")
 
 
 function main()
-	Say("Quªn mang tiÒn µ? Kh«ng sao! Ta ë ®©y ®îi ng­¬i! Nh­ng nhí quay l¹i sím nhĞ!",1,"§­îc!/no")	
+	str=
+	{
+		"<#> Ta tõ T©y Vùc xa x«i ®Õn Trung Nguyªn ®Ó thu thËp Thñy Tinh, Kim Nguyªn B¶o vµ Ng©n phiÕu. Ta s½n sµng ®æi c¸c b¶o vËt ®Ó ®­îc nh÷ng thø ®ã! Kh¸ch quan cã g× ®æi kh«ng?",
+		"<#> Trao ®æi §å phæ vò khİ /get1",
+		"<#> Mua Kú tr©n dŞ b¶o/get2",
+--		"<#>²Î¼ÓÇ§Ææ°Ù¹Ö¶¯ÎïĞã»î¶¯/hello",
+--		"<#>¹ºÂòÊ¥µ®½ÚÈÕÃæ¾ß/chr_buy",
+--		"<#>ÎäÆ÷»»½äÖ¸/weapon_ring",
+		"<#> Ta xem thö tr­íc ®·!/no",
+		"<#>Ta muèn ®æi b¶o r­¬ng/BaiBaoXiang_Give_UI"
+	};
+	local ndate = tonumber(GetLocalDate("%y%m%d%H"))
+	
+	Say(str[1],4,str[5],str[2],str[3],str[4])
+	
 end;
 
 function chr_buy()

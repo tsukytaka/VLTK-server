@@ -13,8 +13,8 @@ TB_QIANQIU_YINGLIE0904 = {
 	-- C --
 	VERSION		= 20090428,--20090428,		-- ½â·Å»î¶¯°æ±¾
 	START		= 20090428,--20090428		-- Ç§ÇïÓ¢ÁÒ¿ªÊ¼Ê±¼ä
-	CLOSE		= 20500531,		-- Ç§ÇïÓ¢ÁÒ½áÊøÊ±¼ä
-	ItemEnd		= 20500601,		-- µÀ¾ß½áÊøÊ¹ÓÃÆÚ
+	CLOSE		= 20090531,		-- Ç§ÇïÓ¢ÁÒ½áÊøÊ±¼ä
+	ItemEnd		= 20090601,		-- µÀ¾ß½áÊøÊ¹ÓÃÆÚ
 	
 	MAX_EXP		= 300000000,	-- ¾­ÑéÉÏÏŞ 3ÒÚ
 	PER_EXP		= 4000000,		-- Ã¿´Î¾­Ñé¸øÓë 4°ÙÍò
@@ -174,7 +174,7 @@ function TB_QIANQIU_YINGLIE0904:add_rank_award(nrank)
 		if CalcFreeItemCellCount() == 0 then
 			break
 		end
-		local n_itemidx = AddItem(6, 1, 2005, 1, 1, 0);
+		local n_itemidx = AddItem(6, 1, 2006, 1, 1, 0);
 		if (n_itemidx > 0) then
 			local nExpiredDate = FormatTime2Date(7 * 24 * 60 *60 + GetCurServerTime());
 			ITEM_SetExpiredTime(n_itemidx, nExpiredDate);
@@ -184,9 +184,9 @@ function TB_QIANQIU_YINGLIE0904:add_rank_award(nrank)
 	end
 	
 	if nLiBaoCount == 3 then
-		Msg2Player(format("NhËn ®­îc %d %s", nLiBaoCount, "Tèng Kim lÔ bao"));
+		Msg2Player(format("NhËn ®­îc %d %s", nLiBaoCount, "Khiªu chiÕn lÔ bao"));
 	else
-		Msg2Player(format("Do v× chç trèng hµnh trang kh«ng ®ñ, chØ nhËn ®­îc %d %s", nLiBaoCount, "Tèng Kim lÔ bao"));
+		Msg2Player(format("Do v× chç trèng hµnh trang kh«ng ®ñ, chØ nhËn ®­îc %d %s", nLiBaoCount, "Khiªu chiÕn lÔ bao"));
 	end
 end
 
@@ -194,7 +194,7 @@ end
 function TB_QIANQIU_YINGLIE0904:add_end_award(tb_player, b_win)
 	local game_level = BT_GetGameData(GAME_LEVEL);
 	local nExpiredDate = FormatTime2Date(7 * 24 * 60 *60 + GetCurServerTime());
-	local tb_award = {tbProp = {6,1,2005,1,1,0}, szName = "Tèng Kim lÔ bao",  nCount = 1+b_win, nExpiredTime = nExpiredDate};
+	local tb_award = {tbProp = {6,1,2006,1,1,0}, szName = "Khiªu chiÕn lÔ bao",  nCount = 1+b_win, nExpiredTime = nExpiredDate};
 	 
 	if (game_level == 3) then
 		local old_player = PlayerIndex;
@@ -204,7 +204,7 @@ function TB_QIANQIU_YINGLIE0904:add_end_award(tb_player, b_win)
 			
 			if (player_total_point >= 6000 and self:check_right() == 1) then
 				tbAwardTemplet:GiveAwardByList(tb_award);
-				Msg2Player(format("Do v× ®iÓm tèng kim trªn 6000, nªn sÏ ®­îc th­ëng %d Tèng Kim lÔ bao", tb_award.nCount))
+				Msg2Player(format("Do v× ®iÓm tèng kim trªn 6000, nªn sÏ ®­îc th­ëng %d Khiªu chiÕn lÔ bao", tb_award.nCount))
 			end
 		end
 		PlayerIndex = old_player;

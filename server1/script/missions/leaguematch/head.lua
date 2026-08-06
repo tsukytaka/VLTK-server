@@ -684,13 +684,13 @@ function wlls_award_pl(nLevel, nWin, nTie, nTotal)
 	--²ÎÈü¼ÆÊı
 	if (nWin > 0) then	SetTask(WLLS_TASKID_WIN, GetTask(WLLS_TASKID_WIN) + nWin) end
 	if (nTie > 0) then	SetTask(WLLS_TASKID_TIE, GetTask(WLLS_TASKID_TIE) + nTie) end
-	--if (nWin > 0 or nTie > 0) then
+	if (nWin > 0 or nTie > 0) then
 		local nPoint	= wlls_GetAddPoint(nLevel, nWin, nTie)
 		SetTask(WLLS_TASKID_POINT, GetTask(WLLS_TASKID_POINT) + nPoint)
 		SetTask(WLLS_TASKID_HONOUR, GetTask(WLLS_TASKID_HONOUR) + nPoint)
 		Msg2Player(format("Chóc mõng b¹n ®· nhËn ®­îc phÇn th­ëng, §iÓm vinh dù lµ <color=yellow>%d<color> ®iÓm", nPoint))
 		wlls_award_log(format("Chóc mõng b¹n ®· nhËn ®­îc phÇn th­ëng liªn ®Êu - §iÓm vinh dù lµ %d ®iÓm. Tæng céng cã %d ®iÓm", nPoint, GetTask(WLLS_TASKID_HONOUR)))
-	--end
+	end
 	SetTask(WLLS_TASKID_TOTAL, GetTask(WLLS_TASKID_TOTAL) + nTotal)
 end
 
@@ -755,13 +755,18 @@ end
 
 
 function wlls_AddMatchCount(str_lgname, nCount)
-    local n_lid = LG_GetLeagueObj(WLLS_LGTYPE, str_lgname)
-    if (FALSE(n_lid)) then
-        wlls_error_log("wlls_award_lg: FALSE(n_lid)")
-        return
-    end
-    -- Offline: khong gioi han 48 tran, tat ca deu vao TOTAL
-    LG_ApplyAppendLeagueTask(WLLS_LGTYPE, str_lgname, WLLS_LGTASK_TOTAL, nCount)
+	local n_lid = LG_GetLeagueObj(WLLS_LGTYPE, str_lgname)
+	if (FALSE(n_lid)) then
+		wlls_error_log("wlls_award_lg: FALSE(n_lid)")
+		return
+	end
+	if LG_GetLeagueTask(n_lid, WLLS_LGTASK_TOTAL) >= 48 then --´óÓÚ48³¡µÄ»°£¬Ôö¼ÓÀ©Õ¹´ÎÊı£¬·ñÔòÔö¼ÓÒ»´Î²Î¼Ó´ÎÊı
+		
+		
+		LG_ApplyAppendLeagueTask(WLLS_LGTYPE, str_lgname, WLLS_LGTASK_TOTAL_EX, nCount)
+	else
+		LG_ApplyAppendLeagueTask(WLLS_LGTYPE, str_lgname, WLLS_LGTASK_TOTAL, nCount)	
+	end
 end
 
 
@@ -785,11 +790,14 @@ function wlls_award_lg(n_level, str_lgname, n_result, n_usedtime)
 	end
 	
 	local n_total = LG_GetLeagueTask(n_lid, WLLS_LGTASK_TOTAL) + 1
-
-	wlls_AddMatchCount(str_lgname, 1)
-
-	-- Offline: moi tran deu tinh diem + ranking
-	wlls_record_one_match_result(n_level, str_lgname, n_result, n_usedtime)
+	local nTotalEx = LG_GetLeagueTask(n_lid, WLLS_LGTASK_TOTAL_EX) + 1
+	local nMaxCountEx = LG_GetLeagueTask(n_lid, WLLS_LGTASK_USE_LingQi_COUNT) * WLLS_LingQi_PerCOUNT
+	
+	wlls_AddMatchCount(str_lgname, 1)--±ØĞë×¢Òâµ÷ÓÃÊ±»ú£¬·ñÔò¿ÉÄÜ³öÏÖÎÊÌâ
+	
+	if n_total <= 48 then
+		wlls_record_one_match_result(n_level, str_lgname, n_result, n_usedtime)
+	end
 	
 	local _, _, n_memcount = LG_GetLeagueInfo(n_lid)
 	local n_oldidx = PlayerIndex
@@ -822,10 +830,10 @@ function wlls_award_lg(n_level, str_lgname, n_result, n_usedtime)
 			
 			SetTask(WLLS_TASKID_ORGCAMP, 0)
 			ST_StopDamageCounter()	-- Í£Ö¹ÉËº¦¼ÆËã
-			--if (n_total > 48 ) then
-			--	local szMsg = format("§· tham gia %d trËn liªn ®Êu më réng vµ cßn %d trËn më réng", nTotalEx, nMaxCountEx - nTotalEx)
-			--	Msg2Player(szMsg)
-		--	end
+			if (n_total > 48 ) then
+				local szMsg = format("§· tham gia %d trËn liªn ®Êu më réng vµ cßn %d trËn më réng", nTotalEx, nMaxCountEx - nTotalEx)
+				Msg2Player(szMsg)
+			end
 		end
 	end
 	PlayerIndex = n_oldidx

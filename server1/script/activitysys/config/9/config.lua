@@ -13,7 +13,7 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"HundredArena.IniEnvironment",	{HundredArena} },
+		{"HundredArena.IniEnvironment",	{HundredArena} },
 	},
 }
 tbConfig[2] = --Ò»¸öÏ¸½Ú
@@ -29,7 +29,7 @@ tbConfig[2] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"AddDialogOpt",	{"L«i §µi Hoµng Thµnh T­",3} },
+		{"AddDialogOpt",	{"L«i §µi Hoµng Thµnh T­",3} },
 	},
 }
 tbConfig[3] = --Ò»¸öÏ¸½Ú
@@ -46,7 +46,7 @@ tbConfig[3] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-	--	{"bairen_dialog",	{nil} },
+		{"bairen_dialog",	{nil} },
 	},
 }
 tbConfig[4] = --Ò»¸öÏ¸½Ú

@@ -2,7 +2,6 @@
 -- edit by Ğ¡ÀË¶à¶à
 
 Include("\\script\\event\\zhongqiu2007\\picture_head.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 Include ("\\script\\event\\springfestival08\\allbrother\\findnpctask.lua")
 function main(sel)
 	if allbrother_0801_CheckIsDialog(183) == 1 then
@@ -10,7 +9,7 @@ function main(sel)
 		return 0;
 	end
 	local ndate = tonumber(GetLocalDate("%y%m%d%H%M"))
-	if (CFG_zhongqiu2007 == 1) then
+	if ndate > 0709220000 and ndate < 0710312400 then
 		SetTaskTemp(TSK_TEMP,2)
 		Describe("Qu¸ch viªn ngo¹i: Trung thu ®· ®Õn, chØ cÇn thu thËp ®ñ 6 <color=red>m¶nh tranh Tiªn Vò<color> ®Ó hîp thµnh 1 bøc tranh hoµn chØnh mang ®Õn cho ta, ta sÏ tÆng l¹i ®¹i hiÖp 1 b¸nh <color=red>Phông NguyÖt Qu¶ Dung<color>.",2,"§æi b¸nh Phông NguyÖt Qu¶ Dung/makeItemUI","Nh©n tiÖn ghĞ qua th«i/NoChoice")
 	else

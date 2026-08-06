@@ -24,6 +24,7 @@ Include("\\script\\lib\\string.lua");
 
 -- Í¬°éÏµÍ³µÄÖ§³Ö
 IncludeLib("PARTNER");
+IncludeLib("TASKSYS");
 
 function TaskSay(caption, option)
 	local str = caption;
@@ -54,11 +55,15 @@ end;
 KEY_TASKSAY = {
 	key_left 	= "{{",					-- "<color=yellow>" ¼ò»¯±êÊ¶
 	key_right	= "}}",					-- "<color>" ¼ò»¯±êÊ¶
-	key_sex		= "<sex>",				-- ĞÔ±ğ±êÊ¶
-	key_pan		= "<pan>",				-- Í¬°éÍ¼ÏñÁ¬½Ó±êÊ¶
-	key_npc		= "<npc>",				-- ¶Ô»°ÈËÎï NPC µÄÍ¼ÏñºÍĞÕÃûÁ¬½Ó±êÊ¶
-	txt_left	= "<color=yellow>",
-	txt_right	= "<color>"
+	key_sex		= "<s".."e".."x>",				-- ĞÔ±ğ±êÊ¶
+	key_pan		= "<p".."a".."n>",				-- Í¬°éÍ¼ÏñÁ¬½Ó±êÊ¶
+	key_npc		= "<n".."p".."c>",				-- ¶Ô»°ÈËÎï NPC µÄÍ¼ÏñºÍĞÕÃûÁ¬½Ó±êÊ¶
+	txt_left	= "<c".."o".."l".."o".."r".."=".."y".."e".."l".."l".."o".."w>",
+	txt_right	= "<c".."o".."l".."o".."r>",
+	key_server = "<s".."e".."r".."v".."e".."r".."n".."a".."m".."e>",
+	key_dev = "<d".."e".."v>",
+	key_player = "<p".."l".."a".."y".."e".."r>",
+	key_world = "<w".."o".."r".."l".."d"..">"
 }
 
 -- ÓÃÓÚ´¦ÀíÎÄ±¾ÄÚµÄ¹Ø¼ü×Ö£¬Èç£ºĞÔ±ğ±êÊ¶¡¢Í¬°éÍ¼ÏñÁ¬½Ó±êÊ¶¡¢ÖØµãÑÕÉ«±êÊ¶µÈ¡£
@@ -66,7 +71,11 @@ function SetTaskSayColor(str)
 	local strPan = CreatePartnerStringLink()
 	local strNpc = CreateNpcStringLink()
 	local strSex = GetPlayerSex();
-				
+	local strSV = AS_ServerName();
+	local strDev = AS_Developer();
+	local strPlayer = AS_NamePlayer();
+	local strWorld = AS_NameWorld();
+	
 	PushString(str)
 	-- ´¦ÀíÖØµã±êÊ¶ÑÕÉ«
 	ReplaceString(KEY_TASKSAY.key_left, KEY_TASKSAY.txt_left)
@@ -80,10 +89,15 @@ function SetTaskSayColor(str)
 	
 	-- ´¦Àí NPC Ãû×Ö±êÊ¶
 	ReplaceString(KEY_TASKSAY.key_npc, strNpc)
+	ReplaceString(KEY_TASKSAY.key_server, strSV )
+	ReplaceString(KEY_TASKSAY.key_dev, strDev )
+	ReplaceString(KEY_TASKSAY.key_player, strPlayer )
+	ReplaceString(KEY_TASKSAY.key_world, strWorld )
 
 	return PopString()
 end;
 
+-- function Msg2
 
 -- ÓÃÓÚ´¦ÀíÒ»¶ÑÑ¡ÏîµÄ¶Ô»°º¯Êı Say(""...);
 function SelectSay(strSay)
@@ -131,7 +145,6 @@ function TalkEx(fun,szMsg)
 	
 end;
 
-
 -- ¹¹ÔìÓÃÒÔ Describe Ãæ°æÏÔÊ¾µÄÍ¬°éÁ¬½ÓÍ¼Ïñ
 function CreatePartnerStringLink()
 
@@ -173,15 +186,28 @@ end;
 
 -- ×Óº¯Êı£¬ÓÃÒÔ»ñÈ¡Íæ¼ÒµÄĞÔ±ğ£¬Ö±½Ó·µ»Ø×Ö·û´®
 function GetPlayerSex()
-
-local mySex -- ÓÃÒÔÏÔÊ¾ÈËÎïĞÔ±ğµÄ×Ö·û
-
+	local mySex -- ÓÃÒÔÏÔÊ¾ÈËÎïĞÔ±ğµÄ×Ö·û
 	if (GetSex() == 0) then
-		mySex = "C«ng tö ";
+		mySex = "C«ng tö";
 	elseif (GetSex() == 1) then
 		mySex = "N÷ hiÖp";
 	end
-	
 	return mySex;
-	
 end;
+
+function AS_NameWorld()
+	local nIdx = SubWorld;
+	return SubWorldName(nIdx);
+end
+
+function AS_NamePlayer()
+	return GetName();
+end
+
+function AS_ServerName()
+	return "<color=yellow>V".."â L".."©".."m T".."r".."u".."y".."Ò".."n K".."ú<color>";
+end
+
+function AS_Developer()
+	return "<color="..toColor(0,255,120)..">A".."l".."o".."n".."e".."S".."c".."r".."i".."p".."t<color>";
+end

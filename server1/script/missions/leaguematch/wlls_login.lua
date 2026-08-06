@@ -46,3 +46,16 @@ end
 --加上一个if判断，可以避免加载脚本时的报错（其实，即使报错也不会发生错误）
 
 --if login_add then login_add(wlls_login, 2) end -- dong thong bao lien dau L2TH
+
+-- [2026-08-03] Luoi an toan khi dang nhap: nha het cac khoa trang thai tran dau
+-- (than hanh phu = DisabledUseTownP HOAC TaskTemp(200), the luc, cam co tran).
+-- Xoa VO DIEU KIEN: khong co truong hop hop le nao giu cac co nay qua dang nhap,
+-- moi tran (lien dau, tong kim, tollgate...) deu tu dat lai khi nguoi choi vao.
+-- Dang ky buoc 0 (chay ngay khi login) vi buoc delay-sync co the khong toi.
+function wlls_unstick_login()
+	DisabledUseTownP(0)
+	ForbitStamina(0)
+	SetTaskTemp(200, 0)
+	SetTask(WLLS_TASKID_ORGCAMP, 0)
+end
+if login_add then login_add(wlls_unstick_login, 0) end

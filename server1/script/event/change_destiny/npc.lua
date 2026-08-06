@@ -2,10 +2,6 @@ IncludeLib("ITEM")
 Include("\\script\\task\\system\\task_string.lua");
 Include("\\script\\event\\change_destiny\\head.lua");
 
-function main_ChangeDestiny()
-	return tbChangeDestiny:talk()
-end
-
 function main()
 	return tbChangeDestiny:talk()
 end

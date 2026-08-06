@@ -19,7 +19,7 @@ tbConfig[1] = --一个细节
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:AddExp",	{"4000000*(mod(GetTask(1926),256)+1)",0,"sonjin"} },
+		{"PlayerFunLib:AddExp",	{"5000000*(mod(GetTask(1926),256)+1)",0,"sonjin"} },
 		{"ThisActivity:ExecActivityDetail",	{4} },
 	},
 }
@@ -38,7 +38,7 @@ tbConfig[2] = --一个细节
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:AddExp",	{"2000000*(mod(GetTask(1926),256)+1)",0,"sonjin"} },
+		{"PlayerFunLib:AddExp",	{"3000000*(mod(GetTask(1926),256)+1)",0,"sonjin"} },
 		{"ThisActivity:ExecActivityDetail",	{4} },
 	},
 }
@@ -57,7 +57,7 @@ tbConfig[3] = --一个细节
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:AddExp",	{"3000000*(mod(GetTask(1926),256)+1)",0,"sonjin"} },
+		{"PlayerFunLib:AddExp",	{"4000000*(mod(GetTask(1926),256)+1)",0,"sonjin"} },
 		{"ThisActivity:ExecActivityDetail",	{4} },
 	},
 }

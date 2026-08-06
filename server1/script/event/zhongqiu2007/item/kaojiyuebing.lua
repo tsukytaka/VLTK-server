@@ -6,10 +6,10 @@ Include("\\script\\event\\zhongqiu2007\\head.lua")
 
 function main(sel)
 	local ndate = tonumber(GetLocalDate("%y%m%d%H%M"))
-	--if ndate > DA_ZHONGQIU2007_END then
-	--	Say("B¸nh Trung Thu gµ n­íng nµy ®· qu¸ h¹n sö dông.",0)
-	--	return 0
-	--end
+	if ndate > 0710312400 then
+		Say("B¸nh Trung Thu gµ n­íng nµy ®· qu¸ h¹n sö dông.",0)
+		return 0
+	end
 	if check_level() == 0 then
 		Say(tb_content["szlevel"],0)
 		return 1

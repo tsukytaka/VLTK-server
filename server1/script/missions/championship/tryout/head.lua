@@ -1,4 +1,5 @@
 Include("\\script\\missions\\championship\\head.lua")
+Include("\\script\\missions\\championship\\simcity_bot.lua")
 MISSIONID = 18;
 MATCH_MS_ID = 19;
 FRAME2TIME = 18;	--18Ö¡ÓÎÏ·Ê±¼äÏàµ±ÓÚ1ÃëÖÓ
@@ -233,6 +234,13 @@ function join_match()
 			str = "Sè ng­êi tham gia vßng nµy kh«ng ®ñ, kh«ng chän ®­îc ®èi thñ cña b¹n, vßng nµy b¹n ®· chiÕn th¾ng, ®­îc 3 ®iÓm th­ëng."
 			for i = 1, getn(playeridx) do
 				PlayerIndex = playeridx[i]
+				local nSimCityStarted = 0
+				if SIMCITY_CHAMPIONSHIP_ENABLED == 1 then
+					local nBotPosX = GetTabFileData(CP_MATCH_POS, fieldtab[1], 1)
+					local nBotPosY = GetTabFileData(CP_MATCH_POS, fieldtab[1], 2)
+					nSimCityStarted = SimCityChampionship:Start(playeridx[i], new_mapid, nBotPosX, nBotPosY, org_mapid)
+				end
+				if nSimCityStarted ~= 1 then
 				enyname = GetName()
 				nt_settask(CP_TASKID_WIN, nt_gettask(CP_TASKID_WIN) + 1)
 				nt_settask(CP_TASKID_ROUND, nt_gettask(CP_TASKID_ROUND) + 1)
@@ -241,6 +249,7 @@ function join_match()
 				Msg2Player(str)
 				WriteLog("Ng­êi ch¬i ["..enyname.."], do kh«ng cã ®èi thñ, chiÕn tÝch hiÖn thêi lµ: th¾ng"..nt_gettask(CP_TASKID_WIN)..", thua"..nt_gettask(CP_TASKID_LOSE)..", hßa"..nt_gettask(CP_TASKID_TIE)..", chung cuéc"..nt_gettask(CP_TASKID_POINT))
 				AddAword(GetLevel(), 20, 2)
+				end
 			end
 		end
 	PlayerIndex = orgplayeridx

@@ -1,3 +1,5 @@
+-- System: Every ever level will run 1 time - Editor by AloneScript (Linh Em)
+
 IncludeLib("SETTING");
 Include("\\script\\task\\newtask\\newtask_head.lua");
 Include( "\\script\\missions\\leaguematch\\wlls_levelup.lua" )
@@ -49,8 +51,9 @@ function levelup_check150skillmission()
 			break
 		end
 	end 
+	local nTransLife = ST_GetTransLifeCount()
 	if nHave150SkillFlag == 0 then
-		if nHave90SkillFlag == 1 and nHave120SkillFlag == 1 and GetLevel() >= 150 then
+		if nHave90SkillFlag == 1 and nHave120SkillFlag == 1 and GetLevel() >= 150 and nTransLife > 2 then
 			Msg2Player("<color=yellow>B©y giê ng­¬i cã thÓ nhËn nhiÖm vô kü n¨ng cÊp 150 <enter>")
 		else
 			local szMsg = "B©y giê ng­¬i cßn ph¶i"
@@ -83,16 +86,6 @@ function levelup_check150skillmission()
 end
 
 function main()
-	if GetLevel() >= 80 then
-		RemoveSkillState(531)	--Ng«i sao
-		RemoveSkillState(461)
-
-		RemoveSkillState(512)
-		RemoveSkillState(527)
-		RemoveSkillState(313)  	--Vong duoi chan
-		RemoveSkillState(314)	 --Vong duoi chan
-		RemoveSkillState(546)		 --Rong bay
-	end
 	local Uworld1001 = nt_getTask(1001)
 	local Uworld1002 = nt_getTask(1002)
 	local Uworld1003 = nt_getTask(1003)
@@ -211,18 +204,16 @@ function main()
 			SendTaskOrder("B¹n nhËn ®­îc nhiÖm vô tµ ph¸i cÊp 50")
 		end
 	elseif( n_level == 150 ) then
-		--Më nhiÖm vô nhËn kü n¨ng 150 - Modified By NgaVN - 20121207
-		levelup_check150skillmission()
+		--T¾t nhiÖm vô nhËn kü n¨ng 150 - Modified By NgaVN - 20121207
+		-- levelup_check150skillmission()
 	end
-	
+
 	if (n_level == 160) then
 		local n_transcount = ST_GetTransLifeCount();
 		if (n_transcount == 3 and GetTask(TSK_ZHUANSHENG_AWARD) == 1) then		-- µ±Ç°ÊÇÈı×ª£¬²¢ÇÒÔÚ190¼¶×ªÉú
-			 		Msg2Player(format("Chóc mõng ®¹i hiÖp sau khi chuyÓn sinh lÇn %d ®· ®¹t ®Õn cÊp %d, cã thÓ ®Õn %s nhËn phÇn th­ëng: %s",
-			 					3, 160, "B¾c §Èu L·o Nh©n", "Phiªn Vò "));
-			 		WriteLog(format("[3rdTransLife]\t%s\tAccount:%s\tName:%s\tRank:%d",
-			 					GetLocalDate("%Y-%m-%d %X"),GetAccount(), GetName(),n_count))
+			Msg2Player(format("Chóc mõng ®¹i hiÖp sau khi chuyÓn sinh lÇn %d ®· ®¹t ®Õn cÊp %d, cã thÓ ®Õn %s nhËn phÇn th­ëng: %s", 3, 160, "B¾c §Èu L·o Nh©n", "Phiªn Vò "));
+			WriteLog(format("[3rdTransLife]\t%s\tAccount:%s\tName:%s\tRank:%d", GetLocalDate("%Y-%m-%d %X"),GetAccount(), GetName(),n_count))
 		end
 	end
---	wlls_leveupcheck()	--ÎäÁÖĞÂĞãÁªÈüÔ½¼¶¼ì²é
+--	wlls_leveupcheck() --Giíi h¹n ®¼ng cÊp tham gia vµo Vâ l©m liªn ®Êu
 end

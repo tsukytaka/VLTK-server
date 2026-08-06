@@ -1,7 +1,6 @@
 --by 廖志山 [2006-09-12]
 --2006中秋活动之做灯笼活动,公共数据
 --Illustration: 灯笼 -- lightcage au06- -- midautumn2006
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 if (not __H_MIDAUTUMN_06__) then
 	__H_MIDAUTUMN_06__ = 1;
@@ -13,7 +12,7 @@ EXP_AWARD_LIMIT = 50000000;
 AU06_TK_EXP = 1776;
 
 AU06_BEGINDATE = 20060930;
-AU06_ENDDATE = 20501013;
+AU06_ENDDATE = 20061013;
 
 AU06_COLORED_LIMITED = 3000;
 
@@ -40,7 +39,8 @@ function au06_is_inperiod()
 	if (gb_GetTask("midautumn2006_city_all", 1) ~= 0) then
 		return 0
 	end;
-	if (CFG_mid_autumn06	== 1) then
+	local nDate = tonumber(GetLocalDate("%Y%m%d"));
+	if (nDate >= AU06_BEGINDATE and nDate <= AU06_ENDDATE) then --
 		return 1;
 	end;
 	return 0;

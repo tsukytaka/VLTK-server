@@ -1,5 +1,5 @@
-Include("\\script\\global\\nobitaxd\\shop\\shopliendau\\shopliendau.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\shop\\shopliendau\\shopliendau.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 Include( "\\script\\missions\\leaguematch\\head.lua" )
 Include( "\\script\\missions\\leaguematch\\npc\\head.lua" )
 Include("\\script\\lib\\log.lua")
@@ -99,7 +99,7 @@ function wlls_wantaward_rank()
 	end
 end
 
---¼ì²éÊÇ·ñ¿ÉÒÔÁìÈ¡ÅÅÃû½±Àø£¬·µ»Ø¿ÉÒÔÁìµÄÀàĞÍ£¬nilÎª²»¿ÉÁì
+--¼ì²éÊÇ·ñ¿ÉÒÔÁìÈ¡ÅÅÃû½±Àø£¬·µ»Ø¿ÉÒÔÁìµÄÀàĞÍ£¬nilÎÔ»¿ÉÁì
 function wlls_checkaward_rank(b_silent)
 	if (GetGlbValue(GLB_WLLS_PHASE) ~= 1) then	--¸ÕºÃÔÚ¿çÈü¼¾µÄÊ±ºòÒªÁì½±
 		if (not b_silent) then
@@ -150,7 +150,7 @@ function wlls_checkaward_rank(b_silent)
 	return n_award, n_level, str_lgname, n_rank
 end
 
---ÁìÈ¡³ÆºÅ½±Àø
+--ÁìÈÀÆºÅ½±Àø
 function wlls_wantaward_title()
 	if (GetGlbValue(GLB_WLLS_PHASE) ~= 1) then
 		Msg2Player("§· tiÕn hµnh cuéc thi ®Êu míi, kh«ng thÓ nhËn gi¶i th­ëng!")
@@ -199,7 +199,7 @@ function wlls_wantaward_title()
 		RemoveSkillState(1500)
 	end
 		
-	Title_AddTitle(n_title, 1, nTime)
+	Title_AddTitle(n_title, 2, nTime)
 	Title_ActiveTitle(n_title)
 	
 	
@@ -226,7 +226,7 @@ function wlls_getaward_rank()
 		wlls_award_log(format("NhËn ®­îc phÇn th­ëng xÕp h¹ng %s: ®iÓm vinh dù %d ®iÓm",
 											str_des, tb_award[2]))
 		if (tb_award[3]) then	--ÓĞ¶Ó³¤¶îÍâ½±Àø
-			--¸ÃÅĞ¶ÏÖ»¶Ô¶Ó³¤²»ÄÜ×ªÒÆµÄÇé¿ö£¨Ê¦Í½Èü£©°²È«
+			--¸ÃÅĞ¶ÏÖ»¶Ô¶Ó³ğ»ÄÜ×ªÒÆµÄÇé¿ö£¨Ê¦Í½Èü£Ç²È«
 			if (LG_GetMemberTask(WLLS_LGTYPE, str_lgname, GetName(), WLLS_LGMTASK_JOB) == 1) then
 				nPoint	= nPoint + tb_award[3]
 				Msg2Player("Chóc mõng b¹n ®¹t ®­îc "..str_des.." PhÇn th­ëng xÕp h¹ng (®éi tr­ëng): ®iÓm vinh dù "..tb_award[3].." ®iÓm")
@@ -399,7 +399,7 @@ function wlls_sure2addmember()
 	end
 end
 
---¼ì²é×é¶Ó¶ÓÔ±ÊÇ·ñ¿ÉÒÔ±»Ìí¼Óµ½µ±Ç°¶ÓÎéÖĞ£¬³É¹¦·µ»Ø×é¶Ó¶ÓÔ±Ãûµ¥¡¢Õ½¶ÓÀàĞÍ¡¢Õ½¶ÓÃû£¬·ñÔò·µ»Ønil
+--¼ì²é×é¶Ó¶ÓÔ±ÊÇ·ñ¿ÉÒÔ±»Ìí¼Óµ½µ±Ç°¶ÓÎéÖĞ£íÉ¹¦·µ»Ø×é¶Ó¶ÓÔ±Ãûµ¥¡¢Õ½¶ÓÀàĞÍ¡¢Õ½¶ÓÃû£¬·ñÔò·µ»Ønil
 function wlls_checkteam()
 	if (IsCaptain() ~= 1) then
 		Say(wlls_npcname().."Xin lçi! B¹n cÇn ph¶i lµ <color=red> ®éi tr­ëng<color> trong <color=red>nhãm<color>, míi cã thÓ ®¨ng kı ®éi viªn gia nhËp chiÕn ®éi.",0)
@@ -535,11 +535,18 @@ function wlls_want2signmap()
 	local n_lid, n_mtype = wlls_check_player(GetName(), n_level)
 	local n_type = GetGlbValue(GLB_WLLS_TYPE)
 	if (FALSE(n_lid)) then
-		local str_des = wlls_get_desc(1)
-		if (WLLS_TAB[n_type].max_member == 1) then
-			wlls_descript("B¹n ch­a cã chiÕn ®éi, nÕu tham gia thi ®Êu, hÖ thèng sÏ lËp cho b¹n 1 chiÕn ®éi. B¹n cã muèn lËp 1 chiÕn ®éi kh«ng?", "Ta muèn lËp chiÕn ®éi!/#wlls_createleague()", "Ta kh«ng muèn thi ®Êu!/OnCancel")
+		local n_single_type = tonumber(SIMCITY_LEAGUE_MATCH_TYPE) or 5
+		-- Dang ky nguoi choi la co che cua Lien Dau, khong phu thuoc vao
+		-- bien bat/tat bot SimCity (bien nay co the nil trong ngu canh NPC).
+		if (n_type == n_single_type
+			and WLLS_TAB[n_type] and WLLS_TAB[n_type].max_member == 1) then
+			WLLS_AUTO_SINGLE_ENTRY = WLLS_AUTO_SINGLE_ENTRY or {}
+			WLLS_AUTO_SINGLE_ENTRY[GetName()] = 1
+			Msg2Player("§ang ®¨ng kı ®¬n ®Êu, xin chê trong gi©y l¸t...")
+			wlls_createleague()
 		else
-			wlls_descript("<enter>  LÇn nµy"..str_des.." ch­a thÊy b¸o danh chiÕn ®éi cña b¹n, cã nhÇm lÉn g× kh«ng? Quy ®Şnh cña Vâ l©m minh chñ nghiªm ngÆt, ta muèn gióp ng­¬i còng kh«ng ®­îc. §¹i hiÖp h·y ®i x¸c nhËn l¹i, råi h·y ®Õn t×m ta!")
+			local str_des = wlls_get_desc(1)
+			wlls_descript("<enter>  LÇn nµy"..str_des.." ch­a thÊy b¸o danh chiÕn ®éi cña b¹n. §¹i hiÖp h·y kiÓm tra l¹i chiÕn ®éi råi quay l¹i!")
 		end
 		return
 	end

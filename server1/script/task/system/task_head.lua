@@ -396,7 +396,7 @@ function PayAwardMain(taskName, nAlliedTask)
 	local nRandom = 0; -- È¡µÄËæ»úÖµ
 	
 	local nIsTaskStart = 0;  -- ÊÇ·ñ¿ªÊ¼ĞÂÈÎÎñ
-	
+
 
 	-- Èç¹û·Ç¿Õ£¬Ôò±íÃ÷ÊÇÓÉË÷Òı½±Àøµ÷ÓÃ´Ë¹ı³ÌÀ´·¢½±
 	if nAlliedTask==nil then
@@ -436,21 +436,6 @@ function PayAwardMain(taskName, nAlliedTask)
 		
 		end;
 		
-		-- ===== DEBUG START =====
-		print("===== DEBUG PayAwardMain =====")
-		print("taskName = "..taskName)
-		print("nAlliedTask = "..nAlliedTask)
-		print("nRow = "..nRow)
-		print("nIsArray = "..nIsArray)
-		print("getn(aryAward) = "..getn(aryAward))
-		for di = 1, getn(aryAward) do
-			print("aryAward["..di.."] count = "..getn(aryAward[di]))
-			for dj = 1, getn(aryAward[di]) do
-				print("  ["..di.."]["..dj.."] row="..aryAward[di][dj][1].." rate="..aryAward[di][dj][2])
-			end
-		end
-		print("===== DEBUG END =====")
-		
 		-- Èç¹û½±Àø±»¶¨ÒåÁËÊı×é£¬Ôòµ÷ÓÃÊı×é·¢½±º¯Êı
 		if nIsArray==1 then
 			CDebug:MessageOut(taskName.."®iÒu chØnh l¹i hµm sè ph¸t th­ëng");
@@ -467,15 +452,9 @@ function PayAwardMain(taskName, nAlliedTask)
 		-- Èç¹ûÈÎÎñ½±ÀøÃ»ÓĞ¿ªÊ¼ĞÂÈÎÎñµÄ»°ÔòÕ¹¿ªÈÎÎñÍê³ÉºóµÄ¶Ô»°
 		if nIsTaskStart==0 then
 			CDebug:MessageOut(taskName.." Ch­a më nhiÖm vô míi. §iÒu chØnh l¹i thêi gian ph¸t th­ëng");
-			-- FIX: chØ t¹o dialog khi kh«ng ph¶i ®Ö quy tõ AlliedAward
-			if nAlliedTask == 0 then
-				local szTalk = TaskTalk(taskName, 1, 5);
-				if szTalk ~= nil and szTalk ~= "" then
-					CreateTaskSay({szTalk,
-								  "KÕt thóc ®èi tho¹i/OnTaskExit"
-								  });
-				end;
-			end;
+			CreateTaskSay({TaskTalk(taskName, 1, 5),
+						  "KÕt thóc ®èi tho¹i/OnTaskExit"
+						  });
 			return 1;
 		end;
 		
@@ -678,9 +657,6 @@ local i=0;
 local RATE_ADD = 100; -- ¸ÅÂÊ¶¼³Ë 100 £¬ÒÔ·ÀÖ¹³öÏÖĞ¡Êı
 
 	-- Èç¹û·Ç¿Õ£¬Ôò±íÃ÷ÊÇÓÉË÷Òı½±Àøµ÷ÓÃ´Ë¹ı³ÌÀ´·¢½±
-	if getn(aryAward) == 0 then
-		return 0;
-	end;
 	if nAlliedTask==nil then
 		nAlliedTask = 0;
 	end;

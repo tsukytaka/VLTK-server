@@ -3,4 +3,3 @@ SkillId	SkillName	ThiefStyle	AttackRadius	MaxLevel	TimePerCast	ThiefPercent	Skil
 401	HiÓn thŞ sinh mÖnh	1	100	1	100	50	0	0	0					\spr\Ui\¼¼ÄÜÍ¼±ê\½Ù¸»¼ÃÆ¶.spr	50	Tªn kü n¨ng: t×m hiÓu tr¹ng th¸i gi¸ trŞ sinh mÖnh hiÖn thêi cña ®èi ph­¬ng
 402	HiÓn thŞ néi lùc	2	100	1	100	50	0	0	0					\spr\Ui\¼¼ÄÜÍ¼±ê\½Ù¸»¼ÃÆ¶.spr	50	Tªn kü n¨ng: t×m hiÓu tr¹ng th¸i gi¸ trŞ néi lùc hiÖn thêi cña ®èi ph­¬ng
 403	HiÓn thŞ sè tiÒn	3	100	1	100	50	0	0	0					\spr\Ui\¼¼ÄÜÍ¼±ê\½Ù¸»¼ÃÆ¶.spr	50	Tªn kü n¨ng: t×m hiÓu tr¹ng th¸i gi¸ trŞ tiÒn b¹c hiÖn thêi cña ®èi ph­¬ng
-

@@ -11,7 +11,7 @@ function ture_killrefresh()
 	
 	local _, _, nMapIndex = GetPos()
 	
-	local Uworld1205 = nt_getTask(1205)  --信使积分
+	--local Uworld1205 = nt_getTask(3000)  --信使积分
 	local Uworld1213 = nt_getTask(1213)  --双倍经验时间
 	local Uworld1215 = nt_getTask(1215)  --boss身边刷怪的打怪开关
 	

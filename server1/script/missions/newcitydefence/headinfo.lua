@@ -11,7 +11,7 @@ IncludeLib("TITLE");
 IncludeLib("RELAYLADDER")
 Include( "\\script\\task\\system\\task_string.lua" );
 Include("\\script\\battles\\battlehead.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 
 --print(date("%w"))				--»ñµÃµ±Ç°·þÎñÆ÷ÐÇÆÚ 1--Monday£»2--Tuesday£»3--Wednesday£»4--Thursday£»5--Frieday£»6--Saturday£»0--Sunday
 GV_TSK_CD_OPEN = 35
@@ -32,9 +32,9 @@ PL_TOTALPOINT = 1
 --LADDER_ID_TEMP = 10255	--ÔÝ´æÅÅÐÐ°ñ
 --LADDER_ID_FANIEL = 10256--×îÖÕÅÅÐÐ
 
-MAX_NPC_COUNT = 30;	--Giíi h¹n sè NPC cïng lóc trªn b¶n ®å
-MAX_VANGUARD_COUNT = 8;	--Giíi h¹n Vanguard cïng lóc(Tiªn phong)
-MAX_GENERAL_COUNT = 2;	--Giíi h¹n General cïng lóc (T­íng qu©n)
+MAX_NPC_COUNT = 400;	--Giíi h¹n sè NPC cïng lóc trªn b¶n ®å
+MAX_VANGUARD_COUNT = 120;	--Giíi h¹n Vanguard cïng lóc(Tiªn phong)
+MAX_GENERAL_COUNT = 20;	--Giíi h¹n General cïng lóc (T­íng qu©n)
 TASKID_COUNT_PHLT = 5961;
 TASKID_DAY_PHLT = 5962;
 TASKID_HOUR_PHLT = 5963;

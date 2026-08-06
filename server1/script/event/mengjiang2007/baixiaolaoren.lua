@@ -1,10 +1,10 @@
 --zero 20070712 ¡Ó≈∆÷∆‘Ï
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+
 Include("\\script\\task\\system\\task_string.lua");
 Include("\\script\\lib\\pay.lua");
 
 function main()
-	if(CFG_mengjiang2007	== 1) then
+	if(tonumber(GetLocalDate("%Y%m%d"))>=20070728 and tonumber(GetLocalDate("%Y%m%d"))<=20070813) then
 		CreateTaskSay({"<dec><npc>Hoan ngh™nh Æ’n vÌi hoπt ÆÈng 'Tri÷u HÂi M∑nh T≠Ìng' di‘n ra tı 28-07-2007 Æ’n 24:00 13-08-2007. Trong thÍi gian hoπt ÆÈng, ng≠Íi ch¨i c p 90 trÎ l™n (bao gÂm c p 90) Æ∑ nπp thŒ c„ th” tham gia ch’ tπo l÷nh bµi. Xem nÈi dung chi ti’t tr™n trang chÒ.",
 			"Ta muËn ch’ tπo MÈc Bµi/#lingpaizhizao_do(1)",
 			"Ta muËn ch’ tπo ßÂng Bµi/#lingpaizhizao_do(2)",
@@ -66,7 +66,7 @@ end
 
 function lingbaizhizao_content()
 	CreateTaskSay({"<dec><npc><enter>ß” ch’ tπo MÈc Bµi c«n c„ 5 V‚ L©m MÀt Th≠ vµ 5000 l≠Óng, n’u ch’ tπo th t bπi sœ tÊn th t 4 V‚ L©m MÀt Th≠ vµ 5000 l≠Óng.<enter><enter>ß” ch’ tπo ßÂng Bµi c«n c„ 5 MÈc Bµi vµ 1 vπn l≠Óng, n’u ch’ tπo th t bπi sœ m t 4 MÈc Bµi vµ 1 vπn l≠Óng.<enter><enter>ß” ch’ tπo Ng©n Bµi c«n c„ 5 ßÂng Bµi vµ 2 vπn l≠Óng, n’u ch’ tπo th t bπi sœ m t 4 ßÂng Bµi vµ 2 vπn l≠Óng.<enter><enter>ß” ch’ tπo Kim Bµi c«n c„ 5 Ng©n Bµi vµ 3 vπn l≠Óng, n’u ch’ tπo th t bπi sœ m t 4 Ng©n Bµi vµ 3 vπn l≠Óng.<enter><enter>ß” ch’ tπo Ng‰c Bµi c«n c„ 5 Kim Bµi vµ 100 vπn l≠Óng. Ch’ tπo Ng‰c Bµi c„ x∏c su t thµnh c´ng lµ 100%.",
-		"TrÎ lπi/mengjiang2007_main",
+		"TrÎ lπi/main",
 		"Bi’t rÂi/OnCancel"
 		});
 end

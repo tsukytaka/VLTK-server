@@ -10,6 +10,7 @@ Include("\\script\\missions\\fengling_ferry\\fld_head.lua")
 ----------------------------------------------------Khëi §éng Ho¹t §éng Game ---------------------------------------------
 
 function goihoatdongmaychu()
+	if (tbItemFeatureConfig:IsEnabled("starter", "activities") ~= 1) then Msg2Player("Chuc nang nay dang tat."); return end
 	dofile("script/global/nobitaxd/item/statgame.lua")
 	tbTitle = "Khëi ®éng hÖ thèng Missions Thñ C«ng"
 	tbSay = {}
@@ -27,6 +28,7 @@ function goihoatdongmaychu()
 	tinsert(tbSay,"Më Lo¹n ChiÕn Cöu Ch©u Cãc/#StartMissions(6)")
 	tinsert(tbSay,"Më §Êu Ng­u/#StartMissions(15)")	
 	tinsert(tbSay,"Tho¸t/OnCancel")
+	tbSay = tbItemFeatureConfig:FilterOptions(tbSay, "starter.activities", {"big_boss","small_boss","battle","seven_city","fengling","hedgehog","gold_fruit","lantern","league","chaos","bullfight",""}, 0);
 	Say(tbTitle, getn(tbSay), tbSay)
 end
 

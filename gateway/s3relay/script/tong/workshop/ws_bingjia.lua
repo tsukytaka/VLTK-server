@@ -175,19 +175,12 @@ end
 
 
 function use_g_1(nTongID, nWorkshopID)
-	local nTime = tonumber(GetLocalDate("%H%M"))
-	if (nTime >= 1230 and nTime <= 2200) then
-			--if (TWS_GetDayOutput(nTongID, nWorkshopID) <= 0) then
-			--	Say("<#>Tæng qu¶n Binh gi¸p ph­êng: TrÊn bang chi th¹ch ngµy h«m nay ®· ph©n ph¸t hÕt råi, ngµy mai h·y ®Õn vËy!", 0)
-			--	return 0;
-			--end
-			local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
-			TWS_ApplyUse(nTongID, nWorkshopID, 1)
-	else
-			Talk(1,"","Thêi gian nhËn vËt phÈm lµ tõ 12h30 ®Õn 22h h»ng ngµy !")
-			return
+	if (TWS_GetDayOutput(nTongID, nWorkshopID) <= 0) then
+		Say("<#>Tæng qu¶n Binh gi¸p ph­êng: TrÊn bang chi th¹ch ngµy h«m nay ®· ph©n ph¸t hÕt råi, ngµy mai h·y ®Õn vËy!", 0)
+		return 0;
 	end
-
+	local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
+	TWS_ApplyUse(nTongID, nWorkshopID, 1)
 end
 
 function use_g_2(nTongID, nWorkshopID)
@@ -260,13 +253,13 @@ function BuyCallBack1(nItemIdx, nPrice, nTongID, nWorkshopID)
 	_dbgMsg("Gi¸ trÞ l­îng cßn l¹i"..nValue)
 	local nLevel = GetItemLevel(nItemIdx)
 	local nOutputValue = aLevelStoneValue[nLevel]
-	--if (nValue < nOutputValue)then
-	--	CloseShop()
-	--	Say("<#>Tæng qu¶n Binh gi¸p ph­êng: TrÊn bang chi th¹ch ngµy h«m nay ®· ph©n ph¸t hÕt råi, ngµy mai h·y ®Õn vËy!", 0)
-	--	return 0
-	--end	
-	--TWS_ApplyAddDayOutput(nTongID, nWorkshopID, -nOutputValue)
-	--TONG_ApplyAddTaskValue(nTongID, TONGTSK_WEEK_WSCONSUME, aLevelStoneValue[nLevel]/10000)
+	if (nValue < nOutputValue)then
+		CloseShop()
+		Say("<#>Tæng qu¶n Binh gi¸p ph­êng: TrÊn bang chi th¹ch ngµy h«m nay ®· ph©n ph¸t hÕt råi, ngµy mai h·y ®Õn vËy!", 0)
+		return 0
+	end	
+	TWS_ApplyAddDayOutput(nTongID, nWorkshopID, -nOutputValue)
+	TONG_ApplyAddTaskValue(nTongID, TONGTSK_WEEK_WSCONSUME, aLevelStoneValue[nLevel]/10000)
 	return 1
 end
 

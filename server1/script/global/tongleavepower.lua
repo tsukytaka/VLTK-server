@@ -17,10 +17,10 @@ function CheckLeaveTongPower()
 				SetTaskTemp(11,need_money[figure])
 				Nrepute = check_repute(figure)		-- Í¨¹ı°ï»áÖĞµÄÖ°Î»ÅĞ¶ÏÓ¦¼õ¶àÉÙÉùÍû
 				SetTaskTemp(12,Nrepute)
-				Msg2Player("C¶nh c¸o: rêi khái bang héi sÏ bŞ trõ tiÒn"..need_money[figure].."Ph¹t tiÒn gÊp ®«i vµ ®iÓm danh väng còng h¹ t­¬ng øng"..Nrepute.."®iÓm!")
+				Msg2Player("C¶nh c¸o: rêi khái bang héi sÏ bŞ trõ tiÒn "..need_money[figure].." Ph¹t tiÒn gÊp ®«i vµ ®iÓm danh väng còng h¹ t­¬ng øng "..Nrepute.." ®iÓm!")
 				return need_money[figure]		--¸ù¾İÉí·İÅĞ¶ÏÊÇ·ñ¹»Ç®
 			else
-				Msg2Player("C¶nh c¸o: rêi khái bang héi sÏ bŞ trõ tiÒn"..need_money[figure].."Ph¹t tiÒn gÊp ®«i, nh­ng b©y giê b¹n ch­a ®ñ tiÒn")
+				Msg2Player("C¶nh c¸o: rêi khái bang héi sÏ bŞ trõ tiÒn "..need_money[figure].." Ph¹t tiÒn gÊp ®«i, nh­ng b©y giê b¹n ch­a ®ñ tiÒn")
 				return 0
 			end
 		end

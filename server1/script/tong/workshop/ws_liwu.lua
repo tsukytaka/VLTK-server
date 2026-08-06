@@ -107,11 +107,11 @@ function use_g_1_ok(nTongID, nWorkshopID)
 	if (nTime >= 1230 and nTime <= 2200) then
 			local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
 			_dbgMsg("Sè nhËp vµo cßn l¹i *100: "..TWS_GetDayOutput(nTongID, nWorkshopID))
-			--if (TWS_GetDayOutput(nTongID, nWorkshopID) < 100) then
-			--	Say("<#>Tæng qu¶n LÔ phÈm ph­êng: ThËt ®¸ng tiÕc, h«m nay lÔ phÈm ®· ph¸t xong, ngµy mai h·y ®Õn vËy!", 0)
-			--	return 0;
-			--end
-			Say("<#>Tæng qu¶n LÔ phÈm ph­êng: CÇn sö dông <color=yellow>"..aLevelHongBaoPrice[nLevel].."<color> ®iÓm cèng hiÕn ®Ó ®æi lÊy 1 ®¹i hång bao", 2, 
+			if (TWS_GetDayOutput(nTongID, nWorkshopID) < 100) then
+				Say("<#>Tæng qu¶n LÔ phÈm ph­êng: ThËt ®¸ng tiÕc, h«m nay lÔ phÈm ®· ph¸t xong, ngµy mai h·y ®Õn vËy!", 0)
+				return 0;
+			end
+			Say("<#>Tæng qu¶n LÔ phÈm ph­êng: CÇn sö dông <color=yellow>"..aLevelHongBaoPrice[nLevel].."<color> ®iÓm cèng hiÕn ®Ó ®æi lÊy 1 hång bao", 2, 
 			"§­îc. /#use_g_1_ok2".."("..nTongID..","..nWorkshopID..")", "Kh«ng muèn/cancel");
 	else
 		Talk(1,"","Thêi gian nhËn vËt phÈm lµ tõ 12h30 ®Õn 22h h»ng ngµy !")
@@ -125,16 +125,16 @@ function use_g_1_ok2(nTongID, nWorkshopID)
 		Say("<#>Tæng qu¶n LÔ phÈm ph­êng: ThËt ®¸ng tiÕc, ®iÓm cèng hiÕn kh«ng ®ñ, kh«ng thÓ nhËn ®¹i hång bao!", 0)
 		return
 	end
-	--if (GetTaskTemp(196) ~= 0)then
-	--	Say("<#>Tæng qu¶n LÔ phÈm ph­êng: VËt phÈm nµy ch­a cã, h·y ®îi khi kh¸c!", 0)
-	--	return
-	--end
+	if (GetTaskTemp(196) ~= 0)then
+		Say("<#>Tæng qu¶n LÔ phÈm ph­êng: VËt phÈm nµy ch­a cã, h·y ®îi khi kh¸c!", 0)
+		return
+	end
 	if CalcFreeItemCellCount() < 2 then
 		Talk(1, "", "Hµnh trang ph¶i cã hai « trèng.");
 		return 
 	end
-	--SetTaskTemp(196, 1)
-	USE_G_2(nTongID, nWorkshopID);
+	SetTaskTemp(196, 1)
+	TWS_ApplyUse(nTongID, nWorkshopID);
 end
 
 function USE_G_2(nTongID, nWorkshopID)
@@ -144,8 +144,8 @@ function USE_G_2(nTongID, nWorkshopID)
 		return
 	end
 	AddContribution(-aLevelHongBaoPrice[nLevel]);
-	Msg2Player("B¹n tiªu tèn "..aLevelHongBaoPrice[nLevel].."®iÓm cèng hiÕn, nhËn ®­îc 1 ®¹i hång bao!");
-	AddItem(6,1,1021,0,0,0);
+	Msg2Player("B¹n tiªu tèn "..aLevelHongBaoPrice[nLevel].."®iÓm cèng hiÕn, nhËn ®­îc 1 c¸i bang héi thÇn bİ hång bao!");
+	AddItem(6, 1, 1021, 1, 0, 0, 0);
 end
 function cancel()
 end

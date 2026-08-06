@@ -1,6 +1,6 @@
 Include("\\script\\event\\tongwar\\event.lua");
 
-TONGWAR_NAME = "=====> Thien Ha De Nhat Bang ( Dai Chien Bang Hoi)"
+TONGWAR_NAME = "Thien Ha De Nhat Bang ( Dai Chien Bang Hoi)"
 LEAGUE_NUMBER = 7
 TONGWAR_STATETIME = 2000
 TONGWAR_ENDTIME = 2130

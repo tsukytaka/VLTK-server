@@ -1,14 +1,26 @@
---½­ÄÏÇø Ê¯¹ÄÕò Õ½¶·×´Ì¬ÇĞ»»Trap
---Trap Id 59
---By ËÕÓî 2003Äê10ÔÂ16ÈÕ
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
+--Th¹ch Cæ TrÊn
 function main(sel)
-
-if ( GetFightState() == 0 ) then	-- Íæ¼Ò´¦ÓÚ·ÇÕ½¶·×´Ì¬£¬¼´ÔÚ³ÇÄÚ
-	SetPos(1647, 3166)		-- ÉèÖÃ×ß³öTrapµã£¬Ä¿µÄµãÔÚ³ÇÍâ	
-	SetFightState(1)		-- ×ª»»ÎªÕ½¶·×´Ì¬
-else			       		-- Íæ¼Ò´¦ÓÚÕ½¶·×´Ì¬£¬¼´ÔÚ³ÇÍâ
-	SetPos(1642, 3174)		-- ÉèÖÃ×ß³öTrapµã£¬Ä¿µÄµãÔÚ³ÇÄÚ	
-	SetFightState(0)		-- ×ª»»Îª·ÇÕ½¶·×´Ì¬
+local nDate = tonumber(GetLocalDate("%Y%m%d%H%M"))
+if nDate < ThoiGianOpenServer then
+if ( GetFightState() == 0 ) then	
+	SetPos(1642, 3174)	
+	Msg2Player(""..ThoiGianOpenServerText.."")			
+else
+	SetPos(1642, 3174)
+	Msg2Player(""..ThoiGianOpenServerText.."")	
 end;
+	AddStation(10)			
+	SetProtectTime(18*3)
+	AddSkillState(963, 1, 0, 18*3) 
+else
+if ( GetFightState() == 0 ) then	
+	SetPos(1647, 3166)
+	SetFightState(1)		
+else
+	SetPos(1642, 3174)
+	SetFightState(0)		
+end;
+
+end
 end;

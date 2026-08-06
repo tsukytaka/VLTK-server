@@ -23,7 +23,7 @@ partner_parserby = {
 {947,512,1670,3271,"\\script\\task\\partner\\education\\partner_luqing.lua","L« Thanh"}, 
 {948,512,1762,3228,"\\script\\task\\partner\\education\\partner_heisha.lua","H¾c S¸t"}, 
 {949,512,1701,3302,"\\script\\task\\partner\\education\\partner_baisha.lua","B¹ch S¸t"}, 
-{950,512,1712,3311,"\\script\\task\\partner\\education\\partner_tangying.lua","§­êng ?nh"}, 
+{950,512,1712,3311,"\\script\\task\\partner\\education\\partner_tangying.lua","§­êng Anh"}, 
 {951,512,1698,3347,"\\script\\task\\partner\\education\\partner_qiuyishui.lua","Thu Thñy"}, 
 {952,512,1604,3359,"\\script\\task\\partner\\education\\partner_moxiaofeng.lua","Th­ Sinh M¹c TiÕu Phong"}, 
 {953,512,1561,3434,"\\script\\task\\partner\\education\\partner_niumanman.lua","Ng­u M·n M·n"}, 

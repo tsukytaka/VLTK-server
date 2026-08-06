@@ -1,13 +1,26 @@
---西南北区 江津村出口1 战斗状态切换Trap
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
+--Giang T﹏ Th玭
 function main(sel)
-
-if ( GetFightState() == 0 ) then	-- 玩家处于非战斗状态，即在城内
-	SetPos(3486, 6248)		-- 设置走出Trap点，目的点在城外	
-	SetFightState(1)		-- 转换为战斗状态
-else			       		-- 玩家处于战斗状态，即在城外
-	SetPos(3490, 6243)		-- 设置走出Trap点，目的点在城内	
-	SetFightState(0)		-- 转换为非战斗状态
+local nDate = tonumber(GetLocalDate("%Y%m%d%H%M"))
+if nDate < ThoiGianOpenServer then
+if ( GetFightState() == 0 ) then	
+	SetPos(3490, 6243)
+	Msg2Player(""..ThoiGianOpenServerText.."")	
+else
+	SetPos(3490, 6243)		       		
+	Msg2Player(""..ThoiGianOpenServerText.."")
 end;
-	AddStation(8)			-- 记录角色曾经到过江津村
+	AddStation(10)			
+	SetProtectTime(18*3)
+	AddSkillState(963, 1, 0, 18*3) 
+else
+if ( GetFightState() == 0 ) then	
+	SetPos(3486, 6248)			
+	SetFightState(1)		
+else
+	SetPos(3490, 6243)		
+	SetFightState(0)		
+end;
+AddStation(8)	
+end
 end;

@@ -7,7 +7,7 @@ Include("\\script\\task\\system\\task_string.lua");
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\dailogsys\\g_dialog.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 function main()
 --	Uworld1064 = nt_getTask(1064)
 --	local name = GetName()
@@ -28,9 +28,9 @@ function main()
 	local tbDailog = DailogClass:new(szNpcName);
 	tbDailog.szTitleMsg = "T©y S¬n tiÓu nhÞ: §¹i hiÖp muèn ®i ®Õn Vi S¬n ®¶o? Tr­íc tiªn h·y giao nép 100 m·nh MËt §å ThÇn BÝ míi cã thÓ ®i ®Õn Vi S¬n ®¶o ®­îc."
 	
-
+	if DiViSonDao == 1 then
 	tbDailog:AddOptEntry("§ång ý! Ta sÏ t×m ngay.", task007, {}); 
-	
+	end
 	G_ACTIVITY:OnMessage("ClickNpc", tbDailog, nNpcIndex);
 	
 	tbDailog:Show();
@@ -88,10 +88,10 @@ function task008(ncount)
 			RemoveItemByIndex(scrollidx[i])
 		end
 	end;
-	--SetFightState(0);
 	NewWorld(342,1178,2412)
 	SetFightState(1);
 end
 
 function no()
+
 end

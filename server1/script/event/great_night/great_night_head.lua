@@ -3,7 +3,7 @@
 Include("\\script\\missions\\basemission\\lib.lua")
 
 Include("\\script\\misc\\eventsys\\type\\map.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 --Include("\\script\\lib\\gb_taskfuncs.lua");	 				-- By ÁÎÖ¾É½»Ô»ÍÖ®ÖÖ;
 --Include("\\script\\lib\\gb_modulefuncs.lua"); 				-- By ÁÎÖ¾É½»Ô»ÍÖ®ÖÖ;
 
@@ -16,9 +16,9 @@ tbFruitData = {
     --Éú³¤»Æ½ðÖ®¹ûµÄÎ»ÖÃ
     TB_FRUIT_POS = 
     {
-   	{959,1437,3057},
-   	{959,1477,3084},
-    	{959,1458,3066},
+--    	{959,1437,3057},
+--    	{959,1477,3084},
+--    	{959,1458,3066},
     },
     --Éú³¤»Æ½ðÖ®¹ûµÄÊ±¼ä
     TB_FRUIT_TIME = {1315, 1335, 1900, 1920},
@@ -207,7 +207,6 @@ function _ShowSeed(worldidx, mapid, seedlevel, count, tbPos ,szMapName, nBatch)
             		--nBeginNumber = nBeginNumber + 1
 					--gb_SetTask("»Ô»ÍÖ®ÖÖ",12,nBeginNumber)
 					SetNpcParam(nNpcIndex, 1, seedlevel);
-					SetNpcTimer(nNpcIndex, 30*60*18)
 					--SetNpcParam(nNpcIndex, 2, nBeginNumber*10000 +  nCurDate ); --  nCurDate --¼ÓÉÏµ±Ç°ÈÕÆÚ
 					if szNpcName == szGoldFruitName or szNpcName == szGoldSeedName then
 						Msg2SubWorld("<color=yellow>"..szNpcName.."<color>".." xuÊt hiÖn t¹i "..szMapName.."("..floor(nPosX / 8)..","..floor(nPosY / 16)..").")
@@ -234,6 +233,10 @@ end
 
 --´«ËÍµ½ÐÂÁ½Ë®¶´µØÍ¼£¨²É¼¯»Æ½ðÖ®¹û£©
 function OnGoToNewLiangShuiDong()
+	if ChienLongDong == 0 then
+			Say("Chøc n¨ng ChiÕn Long §éng t¹m thêi ch­a më")
+			return
+	end
 	if CheckFruitDate() == 1 then
 		local nCount = getn(t.TB_ENTER_POS)
 		local nRand = random(1,nCount)

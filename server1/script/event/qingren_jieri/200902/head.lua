@@ -4,8 +4,8 @@ Include("\\script\\lib\\awardtemplet.lua");
 Include("\\script\\task\\system\\task_string.lua");
 
 VALENTINE2009_START					= 20090213	-- 活动开始日期
-VALENTINE2009_END					= 20500215	-- 活动结束日期
-VALENTINE2009_ITEM_END				= 20500216	-- 物品有效期
+VALENTINE2009_END					= 20090215	-- 活动结束日期
+VALENTINE2009_ITEM_END				= 20090216	-- 物品有效期
 VALENTINE2009_MAX_DRAW_NUM			= 9			-- 最大领取数量
 VALENTINE2009_MAX_USE_NUM			= 9			-- 最大使用数量
 VALENTINE2009_START_TIME			= 200000	-- 活动开始时间

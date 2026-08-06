@@ -32,7 +32,7 @@ function ws_main(nTongID, nWorkshopID)
 	end
 	local aryszContent = {
 		"Söa th«ng th­êng/#repair_ok1".."("..nTongID..","..nWorkshopID..")",
-		"Söa gia cè/#repair_ok2".."("..nTongID..","..nWorkshopID..")",
+		"söa gia cè/#repair_ok2".."("..nTongID..","..nWorkshopID..")",
 		"NhËn ®­îc tói ®å nghÒ/#use_xiulibao("..nTongID..","..nWorkshopID..")",
 		"Kh«ng cÇn ®©u/cancel"
 	}
@@ -124,10 +124,10 @@ function repair_ok1(nTongID, nWorkshopID)
 end
 
 function repair_ok2(nTongID, nWorkshopID)
-	--if (TWS_GetDayOutput(nTongID, nWorkshopID) <= 0) then
-	--	Say("<#>Tæng qu¶n Thiªn c«ng ph­êng: H«m nay bËn viÖc qu¸, kh«ng thÓ gióp ng­¬i söa gia cè trang bÞ, ngµy mai h·y ®Õn nhÐ!", 0)
-	--	return 0;
-	-- end
+	if (TWS_GetDayOutput(nTongID, nWorkshopID) <= 0) then
+		Say("<#>Tæng qu¶n Thiªn c«ng ph­êng: H«m nay bËn viÖc qu¸, kh«ng thÓ gióp ng­¬i söa gia cè trang bÞ, ngµy mai h·y ®Õn nhÐ!", 0)
+		return 0;
+	end
 	local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
 	TWS_ApplyUse(nTongID, nWorkshopID, 2)
 end
@@ -155,9 +155,15 @@ function CommonRepair(nItemIdx, nPrice, nItemPrice, nTongID, nWorkshopID)
 			Say("<#>Tæng qu¶n Thiªn c«ng ph­êng: §¼ng cÊp Thiªn c«ng ph­êng hiÖn t¹i kh«ng thÓ söa chöa trang bÞ nµy.", 0)
 			return
 		end
-	end	
+	end
+	
+	if quality == 4 then
+		Say("<#>Tæng qu¶n thiªn c«ng ph­êng: Trang bÞ b¹ch kim kh«ng thÓ söa ®­îc.", 0)
+		return
+	end
+		
 	-- »Æ½ð×°±¸ÐÞÀí¼Û¸ñ¹«Ê½µ÷ÕûÎª£º100*(×°±¸µÈ¼¶^2)/Ã¿µãÄÍ¾Ã¶È	
-	if (quality == 1 or quality == 4)then
+	if (quality == 1)then
 		local nItemLevel = GetItemLevel(nItemIdx);
 		--Ã¿ÄÍ¾Ã¶ÈµÄ¼Û¸ñ
 		local nDurPrice = 100 * nItemLevel * nItemLevel
@@ -210,6 +216,12 @@ function EnhanceRepair(nItemIdx, nPrice, nItemPrice, nTongID, nWorkshopID)
 			return
 		end
 	end
+	
+	if quality == 4 then
+		Say("<#>Tæng qu¶n thiªn c«ng ph­êng: Trang bÞ b¹ch kim kh«ng thÓ söa ®­îc.", 0)
+		return
+	end
+	
 	local nDurPrice = GetRepairDurPrice(nItemIdx);
 	--Ç¿»¯ÐÞÀí¼Ó³ÉµÄ¼ÛÖµ
 	if (nPrice < 0)then
@@ -231,7 +243,7 @@ function EnhanceRepair(nItemIdx, nPrice, nItemPrice, nTongID, nWorkshopID)
 	local nEnhancePrice = nDurPrice * nFixDur * 1.5
 	nPrice = nPrice + nEnhancePrice
 	-- »Æ½ð×°±¸ÐÞÀí¼Û¸ñ¹«Ê½µ÷ÕûÎª£º100*(×°±¸µÈ¼¶^2)/Ã¿µãÄÍ¾Ã¶È	
-	if (quality == 1 or quality == 4)then
+	if (quality == 1)then
 		nFixDur = nMaxDur - nCurDur
 		if (nFixDur < 0)then
 			nFixDur = 0

@@ -16,8 +16,8 @@ tbaddJinShanDao_NpcAndTrap.tbDialogNpc	=
 	--npcid mapid nx ny script name
 	{199-2, tbaddJinShanDao_NpcAndTrap.nMapId, 44160/32, 89728/32, "\\script\\½­ÄÏÇø\\½ðÉ½µº\\npc\\npc_tiejiang.lua","Thî rÌn"},
 	{627-2, tbaddJinShanDao_NpcAndTrap.nMapId, 44864/32, 90496/32, "\\script\\½­ÄÏÇø\\½ðÉ½µº\\obj\\box.lua","R­¬ng chøa ®å"},
-	{242-2, tbaddJinShanDao_NpcAndTrap.nMapId, 37216/32, 76576/32, "\\script\\½­ÄÏÇø\\½ðÉ½µº\\npc\\boatman.lua","ThuyÒn Phu"},
 	{205-2, tbaddJinShanDao_NpcAndTrap.nMapId, 45408/32, 89504/32, "\\script\\½­ÄÏÇø\\½ðÉ½µº\\npc\\npc_yaofan.lua","Chñ tiÖm thuèc"},	
+	{242-2, tbaddJinShanDao_NpcAndTrap.nMapId, 37216/32, 76576/32, "\\script\\½­ÄÏÇø\\½ðÉ½µº\\npc\\boatman.lua","ThuyÒn Phu"},
 }
 
 function tbaddJinShanDao_NpcAndTrap:AddMons()

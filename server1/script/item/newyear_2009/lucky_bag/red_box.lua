@@ -1,6 +1,5 @@
 Include("\\script\\lib\\awardtemplet.lua");
 Include("\\script\\item\\newyear_2009\\head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 tb_redbox_item	=
 {
@@ -9,7 +8,7 @@ tb_redbox_item	=
 
 function main()
 	local ndate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_newyear_2009	==	0) then
+	if (ndate >= newyear0901_item_expiredtime) then
 		Msg2Player("VÀt ph»m nµy Æ∑ qu∏ hπn.");
 		return 0;
 	end

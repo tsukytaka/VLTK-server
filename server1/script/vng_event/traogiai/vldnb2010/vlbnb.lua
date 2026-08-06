@@ -121,7 +121,6 @@ VLDNB2010 =
 	{szAccount="duongmonmamtrang", nCLBHB=0, nTinhLuc=0, nHVL=25, nPhienVu=3, nHCD=15},
 	{szAccount="gunspeed", nCLBHB=0, nTinhLuc=0, nHVL=25, nPhienVu=2, nHCD=15},
 	{szAccount="vanphuchau", nCLBHB=0, nTinhLuc=0, nHVL=10, nPhienVu=0, nHCD=0},
-	{szAccount="gm01", nCLBHB=5, nTinhLuc=5, nHVL=25, nPhienVu=3, nHCD=15},
 	--{szAccount="tester017", nCLBHB=5, nTinhLuc=5, nHVL=25, nPhienVu=3, nHCD=15},
 }
 

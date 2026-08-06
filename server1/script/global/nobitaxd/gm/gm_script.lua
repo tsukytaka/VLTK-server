@@ -36,60 +36,54 @@ Include("\\script\\global\\translife.lua");
 Include("\\script\\global\\findboss.lua");
 Include("\\script\\global\\nobitaxd\\gm\\gm_lib.lua");
 Include("\\script\\global\\nobitaxd\\gm\\gm_help.lua");
-Include("\\script\\global\\nobitaxd\\npc\\npcthunghiem.lua")
+Include("\\script\\global\\nobitaxd\\gm\\admin_auth.lua");
+Include("\\script\\global\\nobitaxd\\npc\\camnangtanthu.lua")
+Include("\\script\\global\\nobitaxd\\gm\\maxop.lua")
 
 tbAloneScript = {};
 ----------------------------------------------------------------------------------
--- NhËp mËt khÈu tr­íc khi sö dông ®­îc chøc n¨ng GM, ng­êi ch¬i ph¶i nhËp mËt khÈu
+-- NhËp mËt khÈu tr­íc khi s dông ®­îc chøc n¨ng GM, ng­êi ch¬i ph¶i nhËp mËt khÈu
 ----------------------------------------------------------------------------------
 function tbAloneScript:GMPassword()
-	local nResult, nIdx = self:CheckGameMaster()
-	if (nResult == 0) then
-		Talk(1, "", "B¹n kh«ng ph¶i lµ <color=red>GM<color>, kh«ng thÓ sö dông vËt phÈm nµy");
-	return 0 end
-	if (GetLevel() < 10) then
-		Talk(1, "", "§Ó sö dông ®­îc toµn bé chøc n¨ng bªn trong, vui lßng n©ng lªn <color=red>cÊp 10<color> råi h·y sö dông ®Õn nã");
-	return 0 end
-
-	local szName = GetName();
-	local szAccount = GetAccount();
-	local nIsLogin = GetTaskTemp(TASKTEMP_LOGIN_LBGM);
-	if (nIsLogin == 1) then
-		self:DialogMain();
-	return 1 end
-	
-	g_AskClientStringEx("", 1, 50, "NhËp mËt khÈu:", {self.EnterGMPassword, {self, nIdx, szAccount, szName}})
-end
-
-function tbAloneScript:EnterGMPassword(nIdx, szAccount, szName, szPassword)
-	if (TAB_LIST_GAMEMASTER[nIdx]["Password"] ~= szPassword) then
-		Talk(1, "", "MËt khÈu kh«ng ®óng, vui lßng kiÓm tra l¹i!");
+	if (tbAdminAuth:IsAdminAccount(GetAccount()) ~= 1 or tbAdminAuth:IsRoleItemEnabled() ~= 1) then
+		Talk(1, "", "Tµi kho¶n kh«ng cã quyÒn Admin.");
 	return 0 end
 	self:DialogMain();
 	SetTaskTemp(TASKTEMP_LOGIN_LBGM, 1)
-	SetMoveSpeed(100);
-	Msg2Player("B¹n ®· nhËp mËt khÈu ®óng, ®¨ng nhËp thµnh c«ng! B©y giê cã thÓ sö dông ®­îc chøc n¨ng dµnh cho GM.")
+	return 1
 end
+
+
 -----------------------------------------------------------
 -- Mennu GM ver 01 | 22/03/2023
 -----------------------------------------------------------
 function tbAloneScript:DialogMain()	
+	if (tbAdminAuth:IsAdminAccount(GetAccount()) ~= 1 or tbAdminAuth:IsRoleItemEnabled() ~= 1) then
+		Talk(1, "", "Tµi kho¶n kh«ng cã quyÒn Admin.");
+		return 0
+	end
 	local szTitle = format("Chµo mõng <color=red>%s<color> tham gia m¸y chñ <color=red>OffLine S¬n Hµ X· T¾c<color>, <enter>§©y lµ lÖnh bµi hç trî dµnh cho GM ®Ó qu¶n lý, ®iÒu hµnh m¸y chñ cña m×nh.", GetName());
 	local tbOption = {};
-		tinsert(tbOption, {"GM Thö NghiÖm", self.SupportGMTestGame})	-- Done
+		tinsert(tbOption, {"Toµn bé CÈm Nang T©n Thñ", self.OpenItemHotro, {self}})
+		tinsert(tbOption, {"T¹o nhãm qu¸i luyÖn c«ng", SummonMapMonsterGroup})
 		tinsert(tbOption, {"GM Qu¶n Lý M¸y Chñ", self.ManagePlayerSystem, {self}})	-- Done
-		tinsert(tbOption, {"GM Qu¶n Lý Ng­êi Ch¬i", self.ManagePlayerAccountSystem, {self}})	-- Done
 		tinsert(tbOption, {"GM Chøc N¨ng", self.TinhNangGM, {self}})	-- Done
-		tinsert(tbOption, {"GM Di ChuyÓn", self.DiChuyenGM, {self}})	-- Done
 		tinsert(tbOption, {"GM LÊy Item", self.GM_layitem, {self}})	-- Done
-		tinsert(tbOption, {"Reload Files", self.Reloadfiles})	--Done
+		tinsert(tbOption, {"Hñy khãa vØnh viÔn", UnbindPermanentItem_Open})
+		tinsert(tbOption, {"N¹p l¹i tËp tin", self.Reloadfiles})	--Done
 		tinsert(tbOption, {"§ãng."})
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
+
+function tbAloneScript:OpenItemHotro()
+	return StarterGuide_Main(1)
+end
 -----------------------------------------------------------
--- GM Thö NghiÖm - \\script\\global\\NobitaXD\\npc\\npcthunghiem.lua
+-- GM Thö NghiÖm - \script\global\NobitaXD\npc\npcthunghiem.lua
+-----------------------------------------------------------
 -----------------------------------------------------------
 function tbAloneScript:SupportGMTestGame()
+	if (tbItemFeatureConfig:IsEnabled("admin", "test") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
 	local tbSay = {"Mêi GM <color=red>"..GetName().."<color> lùa chän TÝnh n¨ng Thö NghiÖm:\n----------------------------------------\n"};
 		tinsert(tbSay, "NhËn c¸c lo¹i ®iÓm/pointall")
 		tinsert(tbSay, "NhËn tiÒn/moneyall")
@@ -101,12 +95,14 @@ function tbAloneScript:SupportGMTestGame()
 		tinsert(tbSay, "TÈy tñy nhanh/TayTuyNhanh")
 		tinsert(tbSay, "LÊy th«ng tin NPC/LastNpcTalk")
 		tinsert(tbSay, "§ãng./no");
+	tbSay = tbItemFeatureConfig:FilterOptions(tbSay, "admin.test", {"points","money","equipment","support_items","mounts","skills","guild","reset","npc_info",""}, 1);
 	CreateTaskSay(tbSay);
 end
 -----------------------------------------------------------
 -- GM Qu¶n Lý M¸y Chñ
 -----------------------------------------------------------
 function tbAloneScript:ManagePlayerSystem()
+	if (tbItemFeatureConfig:IsEnabled("admin", "server") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
 	local szTitle = format("Mêi GM <color=red>%s<color> lùa chän chøc n¨ng qu¶n trÞ:", GetName());
 	local tbOption = {}
 		tinsert(tbOption, {"CËp nhËt xÕp h¹ng", self.capnhatbangxephang, {self}})
@@ -116,24 +112,28 @@ function tbAloneScript:ManagePlayerSystem()
 		--tinsert(tbOption, {"LÊy vËt phÈm", self.TakeSpecifiedItem, {self}})	-- Done
 		--tinsert(tbOption, {"LÊy th«ng tin NPC", self.LastNpcTalk})	-- Done
 		tinsert(tbOption, {"§ãng."})
+	tbOption = tbItemFeatureConfig:FilterOptions(tbOption, "admin.server", {"rank","boss","notice",""}, 0);
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
 -----------------------------------------------------------
 -- GM Qu¶n Lý Ng­êi Ch¬i
 -----------------------------------------------------------
 function tbAloneScript:ManagePlayerAccountSystem()
+	if (tbItemFeatureConfig:IsEnabled("admin", "players") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
 	local szTitle = format("Mêi GM <color=red>%s<color> lùa chän chøc n¨ng qu¶n trÞ:", GetName());
 	local tbOption = {}
 		tinsert(tbOption, {"Qu¶n lý nh©n vËt", self.ManageSystemGlobal, {self}})	-- Done
 		tinsert(tbOption, {"NhËp tªn nh©n vËt", self.ManipulationOnPlayer, {self}})	-- Done
 		--tinsert(tbOption, {"NhËp tªn tµi kho¶n nh©n vËt", self.ManipulationAccountOnPlayer, {self}})
 		tinsert(tbOption, {"§ãng."})
+	tbOption = tbItemFeatureConfig:FilterOptions(tbOption, "admin.players", {"manage","find",""}, 0);
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
 ----------------------------------------------------------
 -- GM Chøc N¨ng
 ----------------------------------------------------------
 function tbAloneScript:TinhNangGM()
+	if (tbItemFeatureConfig:IsEnabled("admin", "functions") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
 	local szTitle = format("Mêi GM <color=red>%s<color> lùa chän chøc n¨ng GM:", GetName());
 	local tbOption = {}
 		if (GetSkillState(1206) == -1) then
@@ -146,48 +146,301 @@ function tbAloneScript:TinhNangGM()
 		else
 			tinsert(tbOption, {"T¾t ngo¹i h×nh GM", self.RestoreMask, {self}})
 		end
-		if (Title_GetActiveTitle() ~= 5000) then
+		if (tbAdminAuth:IsAdminHaloEnabled() ~= 1) then
 			tinsert(tbOption, {"BËt vßng s¸ng GM", self.HaloGM, {self}})
 		else
 			tinsert(tbOption, {"T¾t vßng s¸ng GM", self.HaloGM, {self}})
 		end
-			tinsert(tbOption, {"Kü n¨ng", self.SkillsSystem, {self}})
-			tinsert(tbOption, {"TÝnh n¨ng hç trî kh¸c", self.SupportFeatureOther, {self}})
 			tinsert(tbOption, {"T×m Boss Hoµng Kim", self.GMHelp, {self}})
 			tinsert(tbOption, {"§ãng."})
+	tbOption = tbItemFeatureConfig:FilterOptions(tbOption, "admin.functions", {"stealth","appearance","halo","boss",""}, 0);
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
+
+function tbAloneScript:AdminSupportFull()
+	if (tbItemFeatureConfig:IsEnabled("admin", "support") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	local tbOpt = {
+		{"Hç trî c¸c lo¹i ®iÓm", pointall},
+		{"Hç trî tiÒn", moneyall},
+		{"NhËn trang bÞ", trangbiall},
+		{"NhËn thó c­ìi", ThuCuoi},
+		{"Häc kü n¨ng m«n ph¸i", HocKyNangMonPhai},
+		{"Häc kü n¨ng 120 m«n ph¸i", choose_faction12x},
+		{"Häc kü n¨ng 150 m«n ph¸i", knang150},
+		{"Häc kü n¨ng 180 m«n ph¸i", knang180},
+		{"TÈy tñy nhanh", TayTuyNhanh},
+		{"§iÒu kiÖn t¹o bang héi", DieuKienTaoBangHoi},
+		{"NhËn s¸ch kü n¨ng", NhanSkill},
+		{"Thay ®æi danh hiÖu", change_title},
+		{"Thay ®æi m«n ph¸i", change_phai},
+		{"Trang tiÕp theo", self.AdminSupportFullMore, {self}},
+		{"Quay l¹i", self.DialogMain, {self}},
+		{"§ãng"},
+	}
+	tbOpt = tbItemFeatureConfig:FilterOptions(tbOpt, "admin.support", {"points","money","equipment","mounts","skills","skill120","skill150","skill180","reset","guild","skill_book","titles","faction","","",""}, 0);
+	CreateNewSayEx("GM Hç trî tæng hîp - Trang 1", tbOpt)
+end
+
+function tbAloneScript:AdminSupportFullMore()
+	if (tbItemFeatureConfig:IsEnabled("admin", "support") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	local tbOpt = {
+		{"LÊy vËt phÈm theo ID", LayDoTheoID},
+		{"NhËn vËt phÈm hç trî", VatPhamHoTro},
+		{"Thî rÌn ®a n¨ng", thorendanang},
+		{"Gäi ho¹t ®éng m¸y chñ", goihoatdongmaychu},
+		{"Gäi SimCity", goisimcity},
+		{"LÊy th«ng tin NPC", LastNpcTalk},
+		{"Di chuyÓn Ba L¨ng HuyÖn", GotoBLH},
+		{"Më shop hç trî", Shop_Support},
+		{"Më réng r­¬ng", moruong},
+		{"Trang tiÕp theo", self.AdminSupportItems, {self}},
+		{"Trang tr­íc", self.AdminSupportFull, {self}},
+		{"§ãng"},
+	}
+	tbOpt = tbItemFeatureConfig:FilterOptions(tbOpt, "admin.support", {"item_id","support_items","forge","activities","simcity","npc_info","teleport","shop","storage","","",""}, 0);
+	CreateNewSayEx("GM Hç trî tæng hîp - Trang 2", tbOpt)
+end
+
+function tbAloneScript:AdminSupportItems()
+	if (tbItemFeatureConfig:IsEnabled("admin", "support") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	local tbOpt = {
+		{"Viªm §Õ", self.AdminViemDeMenu, {self}},
+		{"Trïng sinh", self.AdminTrungSinhMenu, {self}},
+		{"NhËn Håi Thiªn T¸i T¹o LÔ Bao", self.AdminGiveHoiThienTaiTao, {self}},
+		{"T¹o trang bÞ MAXOP", MaxOp_ShowMenu},
+		{"Tói M¸u V« H¹n", TuiMauVoHan},
+		{"Trang tr­íc", self.AdminSupportFullMore, {self}},
+		{"§ãng"},
+	}
+	tbOpt = tbItemFeatureConfig:FilterOptions(tbOpt, "admin.support", {"viem_de","translife","huitian_gift","maxop",""}, 0);
+	CreateNewSayEx("GM Hç trî tæng hîp - Trang 3", tbOpt)
+end
+
+function tbAloneScript:AdminViemDeMenu()
+	if (tbItemFeatureConfig:IsEnabled("admin", "support") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	local tbOpt = {
+		{"KÝch ho¹t Viªm §Õ", self.AdminStartViemDe, {self}},
+		{"NhËn Viªm §Õ LÖnh", self.AdminGiveViemDeLenh, {self}},
+		{"Quay l¹i", self.AdminSupportItems, {self}},
+		{"§ãng"},
+	}
+	tbOpt = tbItemFeatureConfig:FilterOptions(tbOpt, "admin.support.viem_de", {"call","ticket","",""}, 0);
+	CreateNewSayEx("Admin - Viªm §Õ", tbOpt)
+end
+
+function tbAloneScript:AdminStartViemDe()
+	if (tbItemFeatureConfig:IsEnabled("admin", "support") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	RemoteExc("\\script\\startmissions.lua", "ViemDe")
+	Msg2Player("§· kÝch ho¹t Viªm §Õ.")
+end
+
+function tbAloneScript:AdminGiveViemDeLenh()
+	if (CalcFreeItemCellCount() < 1) then Msg2Player("CÇn Ýt nhÊt 1 « trèng."); return end
+	AddItem(6, 1, 1617, 1, 0, 0)
+	Msg2Player("§· nhËn Viªm §Õ LÖnh.")
+end
+
+function tbAloneScript:AdminGiveHoiThienTaiTao()
+	if (CalcFreeItemCellCount() < 1) then Msg2Player("CÇn Ýt nhÊt 1 « trèng."); return end
+	AddItem(6, 1, 2527, 1, 0, 0)
+	Msg2Player("§· nhËn Håi Thiªn T¸i T¹o LÔ Bao.")
+end
+
+function tbAloneScript:AdminTrungSinhMenu()
+	if (tbItemFeatureConfig:IsEnabled("admin", "support") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	local nTrans = self:AdminGetTransLifeCount();
+	local tbOpt = {
+		{"Trïng sinh 1", self.AdminDoTrungSinh, {self, 1}},
+		{"Trïng sinh 2", self.AdminDoTrungSinh, {self, 2}},
+		{"Trïng sinh 3", self.AdminDoTrungSinh, {self, 3}},
+		{"Trïng sinh 4", self.AdminDoTrungSinh, {self, 4}},
+		{"Trïng sinh 5", self.AdminDoTrungSinh, {self, 5}},
+		{"Trïng sinh 6", self.AdminDoTrungSinh, {self, 6}},
+		{"Trïng sinh 7", self.AdminDoTrungSinh, {self, 7}},
+		{"Quay l¹i", self.AdminSupportItems, {self}},
+		{"§ãng"},
+	}
+	tbOpt = tbItemFeatureConfig:FilterOptions(tbOpt, "admin.support.translife", {"trans1","trans2","trans3","trans4","trans5","trans6","trans7","",""}, 0);
+	CreateNewSayEx("Admin - Trïng sinh (hiÖn t¹i: "..nTrans..")", tbOpt)
+end
+
+function tbAloneScript:AdminTransLifeError(szError)
+	SetTaskTemp(198, 0);
+	local szMsg = "Trïng sinh thÊt b¹i: "..tostring(szError);
+	Msg2Player(szMsg);
+	WriteLog(format("[AdminTransLifeError] Account:%s Name:%s Error:%s", GetAccount(), GetName(), tostring(szError)));
+	return 0;
+end
+
+function tbAloneScript:AdminGetTransLifeCount()
+	local nEngineTrans = 0;
+	if (type(ST_GetTransLifeCount) == "function") then
+		nEngineTrans = ST_GetTransLifeCount() or 0;
+	end
+	local nTaskTrans = 0;
+	if (type(zhuansheng_get_gre) == "function") then
+		for i = 1, 7 do
+			local nLevel = zhuansheng_get_gre(i);
+			if (nLevel and nLevel > 0) then
+				nTaskTrans = i;
+			end
+		end
+	end
+	if (nTaskTrans > nEngineTrans) then return nTaskTrans end
+	return nEngineTrans;
+end
+
+
+function tbAloneScript:AdminApplyTransLifeTitle(nTarget)
+	if (not nTarget or nTarget < 1 or nTarget > 7) then return 0 end
+	if (not Title_AddTitle or not Title_ActiveTitle) then return 0 end
+	local nTransTitleId = 5000 + nTarget;
+	SetTask(1122, nTransTitleId);
+	Title_AddTitle(nTransTitleId, 1, 30*24*60*60*18);
+	Title_ActiveTitle(nTransTitleId);
+	if (SyncTaskValue) then SyncTaskValue(1122); end
+	return 1;
+end
+
+
+function tbAloneScript:AdminCheckTransLife(nTarget)
+	if (type(ST_GetTransLifeCount) ~= "function") then return self:AdminTransLifeError("thiÕu API ST_GetTransLifeCount") end
+	if (type(ST_LevelUp) ~= "function") then return self:AdminTransLifeError("thiÕu API ST_LevelUp") end
+	if (type(ST_DoTransLife) ~= "function") then return self:AdminTransLifeError("thiÕu API ST_DoTransLife") end
+	if (type(zhuansheng_set_gre) ~= "function") then return self:AdminTransLifeError("ch­a n¹p task_func.lua") end
+	if (type(zhuansheng_clear_skill) ~= "function" or type(zhuansheng_clear_prop) ~= "function") then
+		return self:AdminTransLifeError("thiÕu hµm xö lý ®iÓm kü n¨ng hoÆc tiÒm n¨ng")
+	end
+	if (type(TB_LEVEL_LIMIT) ~= "table" or type(TB_LEVEL_REMAIN_PROP) ~= "table") then
+		return self:AdminTransLifeError("ch­a n¹p task_head.lua hoÆc translife.txt")
+	end
+	if (nTarget < 1 or nTarget > 7) then return self:AdminTransLifeError("mèc Trïng sinh ph¶i tõ 1 ®Õn 7") end
+	local nRequiredLevel = TB_LEVEL_LIMIT[nTarget];
+	if (not nRequiredLevel) then return self:AdminTransLifeError("thiÕu cÊp yªu cÇu cho mèc "..nTarget) end
+	if (not TB_LEVEL_REMAIN_PROP[nRequiredLevel] or not TB_LEVEL_REMAIN_PROP[nRequiredLevel][nTarget]) then
+		return self:AdminTransLifeError("translife.txt thiÕu d÷ liÖu mèc "..nTarget.." t¹i cÊp "..nRequiredLevel)
+	end
+	if (nTarget == 4) then
+		if (type(TBITEMNEED_4) ~= "table" or getn(TBITEMNEED_4) < 1) then
+			return self:AdminTransLifeError("thiÕu cÊu h×nh nguyªn liÖu Trïng sinh 4")
+		end
+		for i = 1, getn(TBITEMNEED_4) do
+			if (type(TBITEMNEED_4[i]) ~= "table" or type(TBITEMNEED_4[i].tbProb) ~= "table" or not TBITEMNEED_4[i].tbProb[1] or not TBITEMNEED_4[i].tbProb[2] or not TBITEMNEED_4[i].tbProb[3] or not TBITEMNEED_4[i].nCount) then
+				return self:AdminTransLifeError("cÊu h×nh nguyªn liÖu Trïng sinh 4 kh«ng hîp lÖ")
+			end
+		end
+	end
+	return 1;
+end
+
+function tbAloneScript:AdminDoTransLifeDirect(nTarget, nRequiredLevel, nBeforeTrans)
+	local tbRemain = TB_LEVEL_REMAIN_PROP[nRequiredLevel][nTarget];
+	local nmgpoint = tbRemain[1];
+	local nprop = tbRemain[2];
+	local nresist = tbRemain[3];
+	local naddskill = tbRemain[4];
+	LeaveTeam();
+	ST_LevelUp(nRequiredLevel - GetLevel());
+	local nLevel = GetLevel();
+	SetTaskTemp(TSKM_ZHUANSHENG_RESISTID, 0);
+	SetTask(TSK_ZHUANSHENG_FLAG, 1);
+	zhuansheng_set_gre(nTarget, nLevel, 0);
+	if (SyncTaskValue) then
+		SyncTaskValue(2577);
+		SyncTaskValue(2578);
+		SyncTaskValue(2579);
+		SyncTaskValue(2583);
+		SyncTaskValue(1122);
+	end
+	SetTask(144, 0);
+	SetRevPos(121, 55);
+	zhuansheng_clear_skill(nLevel, nmgpoint);
+	zhuansheng_clear_prop(nLevel, nprop);
+	SetSkillMaxLevelAddons(GetSkillMaxLevelAddons() + naddskill);
+	for i = 0, 4 do
+		AddMaxResist(i, nresist);
+	end
+	ST_LevelUp(1 - nLevel);
+	SetTask(TSK_ZHUANSHENG_FLAG, 0);
+	SetTask(TSK_ZHUANSHENG_LASTTIME, GetCurServerTime());
+	PARTNER_CallOutCurPartner(0);
+	local nAfterTrans = self:AdminGetTransLifeCount();
+	WriteLog(format("[AdminTransLifeDirect] Account:%s Name:%s Target:%d Before:%d After:%d Level:%d", GetAccount(), GetName(), nTarget, nBeforeTrans, nAfterTrans, nLevel));
+	if (nAfterTrans ~= nTarget) then
+		return self:AdminTransLifeError(format("tr¹ng th¸i kh«ng t¨ng khi ghi trùc tiÕp (tr­íc=%d, sau=%d)", nBeforeTrans, nAfterTrans));
+	end
+	self:AdminApplyTransLifeTitle(nTarget);
+	Msg2Player("LÜnh héi <B¾c §Èu Tr­êng Sinh ThuËt - T©m Ph¸p Thiªn>");
+	KickOutSelf();
+	Msg2Player("Trïng sinh thµnh c«ng!");
+	return 1;
+end
+
+function tbAloneScript:AdminDoTrungSinh(nTarget)
+	if (tbItemFeatureConfig:IsEnabled("admin", "support") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	if (self:AdminCheckTransLife(nTarget) ~= 1) then return end
+	local nTrans = self:AdminGetTransLifeCount();
+	if (nTrans + 1 ~= nTarget) then
+		Msg2Player(format("Nh©n vËt hiÖn ®ang trïng sinh %d, kh«ng thÓ dïng cho møc %d.", nTrans, nTarget));
+		return
+	end
+	local nRequiredLevel = TB_LEVEL_LIMIT[nTarget];
+	if (not nRequiredLevel or not TB_LEVEL_REMAIN_PROP[nRequiredLevel] or not TB_LEVEL_REMAIN_PROP[nRequiredLevel][nTarget]) then
+		Msg2Player("D÷ liÖu Trïng sinh kh«ng hîp lÖ cho mèc "..nTarget..".");
+		return
+	end
+	local nBeforeTrans = nTrans;
+	if (nTarget >= 6) then
+		return self:AdminDoTransLifeDirect(nTarget, nRequiredLevel, nBeforeTrans);
+	end
+	LeaveTeam();
+	ST_LevelUp(nRequiredLevel - GetLevel());
+	SetTaskTemp(TSKM_ZHUANSHENG_RESISTID, 0);
+	SetTaskTemp(198, 1); -- danh dau luong Admin: bo phi va nguyen lieu
+	SetTask(TSK_ZHUANSHENG_FLAG, 1);
+	WriteLog(format("[AdminTransLife] Account:%s Name:%s Target:%d RequiredLevel:%d", GetAccount(), GetName(), nTarget, nRequiredLevel));
+	local nResult = ST_DoTransLife();
+	local nAfterTrans = self:AdminGetTransLifeCount();
+	if (nAfterTrans ~= nTarget) then
+		return self:AdminTransLifeError(format("tr¹ng th¸i kh«ng t¨ng (tr­íc=%d, sau=%d, kÕt qu¶=%s)", nBeforeTrans, nAfterTrans, tostring(nResult)));
+	end
+	self:AdminApplyTransLifeTitle(nTarget);
+	return 1;
+end
+
 -----------------------------------------------------------
 -- GM Di ChuyÓn
 -----------------------------------------------------------
 function tbAloneScript:DiChuyenGM()
-	local szTitle = format("Chµo mõng <color=red>%s<color> tham gia m¸y chñ <color=red>OffLine S¬n Hµ X· T¾c<color>, <enter>§©y lµ lÖnh bµi hç trî dµnh cho GM ®Ó qu¶n lý, ®iÒu hµnh m¸y chñ cña m×nh.", GetName());
+	if (tbItemFeatureConfig:IsEnabled("admin", "teleport") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	local szTitle = format("GM Di Chuyen - <color=red>%s<color>", GetName());
 	local tbOption = {};
 		tinsert(tbOption, {"§Õn ®Þa ®iÓm kh¸c", GM_dichuyen})
 		tinsert(tbOption, {"DÞch chuyÓn ®Õn vÞ trÝ", self.MoveToPosition, {self}})
-		tinsert(tbOption, {"DÞch chuyÓn ®Õn vÞ trÝ Help", MoveToPosition_help})
+		tinsert(tbOption, {"DÞch chuyÓn ®Õn vÞ trÝ trî gióp", MoveToPosition_help})
 		tinsert(tbOption, {"§ãng."})
+	tbOption = tbItemFeatureConfig:FilterOptions(tbOption, "admin.teleport", {"places","position","position_help",""}, 0);
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
 function GM_dichuyen()
 	local tbOpt =
 	{
-			{"§Õn Thiªn Tö", GMTONGKIM2},
+			{"§Õn Thiªn T", GMTONGKIM2},
 			{"§Õn Tèng Kim", GMTONGKIM},
-			{"VÒ Ba L¨ng HuyÖn", GMBLH},
+			{"V Ba L¨ng HuyÖn", GMBLH},
 			{"C«ng Thµnh ChiÕn", MapCTC},
 			{"Phong L¨ng §é", go_PLD},
 			{"Tho¸t"},
 	}
-	CreateNewSayEx("<color=yellow>NobitaXD:<color><enter>Mêi GM <color=red>"..GetName().."<color> lùa chän TÝnh n¨ng Thö NghiÖm:\n----------------------------------------\n", tbOpt)
+	CreateNewSayEx("<color=yellow>NobitaXD:<color><enter>Mêi GM <color=red>"..GetName().."<color> lùa chän TÝnh n¨ng Th NghiÖm:\n----------------------------------------\n", tbOpt)
 end
 function go_PLD()
 	Say("Mêi GM <color=yellow>"..GetName().."<color> chän n¬i ngµi muèn ®Õn.", 7, 
 		"Phong l¨ng ®é thuyÒn 1/go_PLD1",
 		"Phong l¨ng ®é thuyÒn 2/go_PLD2",
 		"Phong l¨ng ®é thuyÒn 3/go_PLD3",
-		"Phong Bê B¾c/go_PLDquathuyen",
-		"Phong Bê Nam/go_PLDbaodanh",
+		"Phong B B¾c/go_PLDquathuyen",
+		"Phong B Nam/go_PLDbaodanh",
 		"Rêi khái/no"
 		);
 end
@@ -259,14 +512,14 @@ end
 
 
 function MapCTC()
-	Say("ThÇn hµnh phï cã thÓ ®­a ®¹i hiÖp <color=yellow>"..GetName().."<color> ®Õn bÊt cø thµnh thÞ hay th«n trÊn nµo, vui lßng chän n¬i ngµi muèn ®Õn.", 8, 
+	Say("ThÇn hµnh ph c th ®­a ®¹i hiÖp <color=yellow>"..GetName().."<color> ®Õn bÊt c thµnh th hay th«n trÊn nµo, vui lßng chän n¬i ngµi muèn ®Õn.", 8, 
 		"GM go: ChiÕn tr­êng biÖn kinh/MapBK",
 		"GM go: ChiÕn tr­êng l©m an/MapLA",
 		"GM go: ChiÕn tr­êng ph­îng t­êng/MapPT",
 		"GM go: ChiÕn tr­êng t­¬ng d­¬ng/MapTD",
 		"GM go: ChiÕn tr­êng thµnh ®«/MapTDo",
 		"GM go: ChiÕn tr­êng d­¬ng ch©u/MapDC",
-		"GM go: ChiÕn tr­êng ®¹i lý/MapDL",
+		"GM go: ChiÕn tr­êng ®¹i l/MapDL",
 		"Rêi khái/no"
 		);
 end
@@ -317,22 +570,24 @@ end
 -- Reload File
 -----------------------------------------------------------
 function tbAloneScript:Reloadfiles()
+	if (tbItemFeatureConfig:IsEnabled("admin", "reload") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
 	local tbSay = {"Danh s¸ch Script<enter>Link: <color=green>/script/global/nobitaxd/config/cfg_server.lua<color><enter>Link: <color=green>/script/global/nobitaxd/gm/gm_script.lua<color>"};
-		tinsert(tbSay, "Reload Script CFG_server/Reload_CFG_server")
+		tinsert(tbSay, "N¹p l¹i script CFG_server/Reload_CFG_server")
 		tinsert(tbSay, "NhËp ®­êng dÉn Script/Reloadfile")
 		tinsert(tbSay, "§ãng./no");
+	tbSay = tbItemFeatureConfig:FilterOptions(tbSay, "admin.reload", {"server_config","custom_file",""}, 1);
 	CreateTaskSay(tbSay);
 end
 --========================================================--
 ------------------------------------------------------------
--- GM Qu¶n Lý M¸y Chñ
--- GM Qu¶n Lý M¸y Chñ - Gäi Boss Hoµng Kim
+-- GM Qu¶n L M¸y Ch
+-- GM Qu¶n L M¸y Ch - Gäi Boss Hoµng Kim
 ------------------------------------------------------------
 function tbAloneScript:Auto_TestBoss()
 	BossHK(f_bossx,f_bossy)
 end
 	TBBOSS  = 
-	{ --tªn boss,id boss, tû lÖ r¬i ®å,series boss,nLevel
+	{ --tªn boss,id boss, t l r¬i ®å,series boss,nLevel
 		[1]={	szName = "HuyÒn Gi¸c §¹i S­",		nBossId = 740,	nRate = 322,	nSeries = 0,	nLevel = 95},
 		[2]={	szName = "§­êng BÊt NhiÔm",			nBossId = 741,	nRate = 336,	nSeries = 1,	nLevel = 95},
 		[3]={	szName = "B¹ch Doanh Doanh",		nBossId = 742,	nRate = 336,	nSeries = 1,	nLevel = 95},
@@ -342,7 +597,7 @@ end
 		[7]={	szName = "Tõ §¹i Nh¹c",				nBossId = 746,	nRate = 341,	nSeries = 4,	nLevel = 95},
 		[8]={	szName = "TuyÒn C¬ Tö",				nBossId = 747,	nRate = 341,	nSeries = 4,	nLevel = 95},
 		[9]={	szName = "Hµn Ngu Dèt",				nBossId = 748,	nRate = 342,	nSeries = 3,	nLevel = 95},
-		[10]={	szName = "§o¹n Méc DuÖ",			nBossId = 565,	nRate = 227,	nSeries = 3,	nLevel = 95},
+		[10]={	szName = "§oan Méc DuÖ",			nBossId = 565,	nRate = 227,	nSeries = 3,	nLevel = 95},
 		[11]={	szName = "Cæ B¸ch",					nBossId = 566,	nRate = 200,	nSeries = 0,	nLevel = 95},
 		[12]={	szName = "§­êng Phi YÕn",			nBossId = 1366,	nRate = 200,	nSeries = 1,	nLevel = 95},	
 		[13]={	szName = "Hµ Linh Phiªu",			nBossId = 568,	nRate = 200,	nSeries = 2,	nLevel = 95},
@@ -378,7 +633,7 @@ function BossHK(f_bossx,f_bossy)
 	if (f_bossy1 < n_count) then
 		tinsert(tb, "Trang sau/#BossHK( "..(f_bossy1+1)..","..n_count..")");
 	end
-	tinsert(tb,"§Ó ta suy nghÜ ®·/cancel");
+	tinsert(tb,"§Ó ta suy ngh ®·/cancel");
 	CreateTaskSay(tb)
 end
 function PickBoss(nIndex)
@@ -398,13 +653,13 @@ end
 function cancel()
 end
 ------------------------------------------------------------
--- GM Qu¶n Lý M¸y Chñ - Chøc n¨ng th«ng b¸o
+-- GM Qu¶n L M¸y Ch - Chøc n¨ng th«ng b¸o
 ------------------------------------------------------------
 function tbAloneScript:NotificationManage()
-	local szTitle = "HiÖn t¹i cã 2 chøc n¨ng th«ng b¸o chÝnh, ®ã lµ:\n+ <color=red>TÇng sè thÕ giíi<color>: kªnh nµy th«ng b¸o trªn khung ch¸t t¸n gÉu trong giao diÖn ng­êi ch¬i.\n+ <color=red>TÇng sè m¸y chñ<color>: kªnh nµy th«ng b¸o ®Õn ng­êi ch¬i trong toµn m¸y chñ, néi dông ch¹y ch÷ ë phÝa trªn ®Çu nh©n vËt."
+	local szTitle = "HiÖn t¹i c 2 chøc n¨ng th«ng b¸o chÝnh, ®ã l:\n+ <color=red>TÇng s th giíi<color>: kªnh nµy th«ng b¸o trªn khung ch¸t t¸n gÉu trong giao diÖn ng­êi ch¬i.\n+ <color=red>TÇng s m¸y ch<color>: kªnh nµy th«ng b¸o ®Õn ng­êi ch¬i trong toµn m¸y ch, néi dông ch¹y ch  phÝa trªn ®Çu nh©n vËt."
 	local tbOption = {}
-		tinsert(tbOption, {"Th«ng b¸o trªn tÇng sè thÕ giíi", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.EnterNotification, {self, 1}}}})
-		tinsert(tbOption, {"Th«ng b¸o trªn tÇng sè m¸y chñ", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.EnterNotification, {self, 2}}}})
+		tinsert(tbOption, {"Th«ng b¸o trªn tÇng s th giíi", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.EnterNotification, {self, 1}}}})
+		tinsert(tbOption, {"Th«ng b¸o trªn tÇng s m¸y ch", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.EnterNotification, {self, 2}}}})
 		tinsert(tbOption, {"§ãng."})
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
@@ -418,7 +673,7 @@ function tbAloneScript:EnterNotification(nType, szNotices)
 	end
 end
 ------------------------------------------------------------
--- GM Qu¶n Lý M¸y Chñ - DÞch chuyÓn tøc thêi
+-- GM Qu¶n L M¸y Ch - DÞch chuyÓn tøc thêi
 ------------------------------------------------------------
 function tbAloneScript:MoveToPosition()
 	g_AskClientStringEx(GetStringTask(TASK_S_POSITION), 0, 256, "ID=53,X=200,Y=200", {self.EnterPosition, {self}})
@@ -439,39 +694,39 @@ function tbAloneScript:EnterPosition(szPos)
 	AddSkillState(963, 1, 0, 18*3)
 	
 	if nMove ~= 1 then
-		GMMsg2Player("DÞch chuyÓn ®Õn vÞ trÝ","ThÊt b¹i! VÞ trÝ kh«ng hîp lÖ, vui lßng kiÓm tra l¹i.")
+		GMMsg2Player("DÞch chuyÓn ®Õn v tr","ThÊt b¹i! V tr kh«ng hîp l, vui lßng kiÓm tra l¹i.")
 		return
 	end
 	
 	SetStringTask(TASK_S_POSITION, szPos)
-	GMMsg2Player("DÞch chuyÓn ®Õn vÞ trÝ","<color=yellow>Thµnh c«ng!")
+	GMMsg2Player("DÞch chuyÓn ®Õn v tr","<color=yellow>Thµnh c«ng!")
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý M¸y Chñ - LÊy vËt phÈm
+-- GM Qu¶n L M¸y Ch - LÊy vËt phÈm
 -----------------------------------------------------------
 function tbAloneScript:TakeSpecifiedItem()	-- TakeSpecifiedItem
-	g_AskClientStringEx(GetStringTask(TASKS_GETITEM), 0, 256, "Th«ng sè item:", {self.TakeSpecifiedItemParam, {self}})
+	g_AskClientStringEx(GetStringTask(TASKS_GETITEM), 0, 256, "Th«ng s item:", {self.TakeSpecifiedItemParam, {self}})
 end
 function tbAloneScript:TakeSpecifiedItemParam(szParam)
 	if not szParam then
-		Talk(1, "", "GM ch­a nhËp th«ng sè cña mét item bÊt kú, vui lßng thö l¹i.")
+		Talk(1, "", "GM ch­a nhËp th«ng s cña mét item bÊt k, vui lßng th l¹i.")
 		return 0
 	end	
 	local nType, tbParam = self:GetTypeParam(szParam)
 	if (nType == 0) then
-		GMMsg2Player("LÊy vËt phÈm chØ ®Þnh", "ThÊt b¹i! Tèi ®a cho phÐp lµ 16 th«ng sè.")
+		GMMsg2Player("LÊy vËt phÈm ch ®Þnh", "ThÊt b¹i! Tèi ®a cho phÐp l 16 th«ng s.")
 		return 0
 	end
 	local nIsParam = self:IsParamNumber(tbParam[2])
 	if nIsParam ~= 1 then
-		GMMsg2Player("LÊy vËt phÈm chØ ®Þnh", "ThÊt b¹i! ChØ sö dông c¸c ký tù sè tõ 0-9 vµ dÊu phÈy “,”.")
+		GMMsg2Player("LÊy vËt phÈm ch ®Þnh", "ThÊt b¹i! Ch s dông c¸c k t s t 0-9 v dÊu phÈy ,.")
 		return 0
 	end	
 	self:SetCountSpecifiedItem(nType, tbParam)
 end
 function tbAloneScript:SetCountSpecifiedItem(nType, tbParam)
 	local tbOptionSelected = {}
-	g_AskClientNumberEx(1, 500, "NhËp sè l­îng:", {self.CountSpecifiedItem, {self, {nType, tbParam, tbOptionSelected}}})
+	g_AskClientNumberEx(1, 500, "NhËp s l­îng:", {self.CountSpecifiedItem, {self, {nType, tbParam, tbOptionSelected}}})
 end
 function tbAloneScript:CountSpecifiedItem(tbSpecifiedItem, nCount, nOptionSelected)
 	local szTitle = "H·y thiÕt lËp thªm option nÕu muèn.\n\n* Option GM ®· chän:"
@@ -489,9 +744,9 @@ function tbAloneScript:CountSpecifiedItem(tbSpecifiedItem, nCount, nOptionSelect
 		end
 		local nExpired = self:GetTypeOption(tbSpecifiedItem[3], 2)
 		if nExpired ~= 2 then
-			tinsert(tbOpt, {"+ Thªm option thêi h¹n sö dông", self.AddOptionInItem, {self, tbSpecifiedItem, nCount, 3}})
+			tinsert(tbOpt, {"+ Thªm option thêi h¹n s dông", self.AddOptionInItem, {self, tbSpecifiedItem, nCount, 3}})
 		end
-		tinsert(tbOpt, {"§· xong, ta muèn lÊy ngay b©y giê", self.CreateItemSpecified, {self, tbSpecifiedItem, nCount}})
+		tinsert(tbOpt, {"§· xong, ta muèn lÊy ngay b©y gi", self.CreateItemSpecified, {self, tbSpecifiedItem, nCount}})
 		tinsert(tbOpt, {"Chän l¹i option", self.ReselectOption, {self, tbSpecifiedItem, nCount}})
 		tinsert(tbOpt, {"§ãng."})
 	CreateNewSayEx(szTitle, tbOpt)
@@ -609,7 +864,7 @@ function tbAloneScript:AddOptionInItem(tbSpecifiedItem, nCount, nOptionSelected)
 	{
 		[1] = {"Khãa b¶o hiÓm vÜnh viÔn", 1},
 		[2] = {"Khãa b¶o hiÓm", 1},
-		[3] = {"Thêi h¹n sö dông", 2},
+		[3] = {"Thêi h¹n s dông", 2},
 	};
 	if (nOptionSelected == 1) then
 		tbSpecifiedItem[3][nOptionSelected] = {tbListOption[nOptionSelected][1], -2, tbListOption[nOptionSelected][2]};
@@ -622,7 +877,7 @@ function tbAloneScript:AddOptionInItem(tbSpecifiedItem, nCount, nOptionSelected)
 	end
 end
 function tbAloneScript:SetTimeInItem(tbSpecifiedItem, nCount, nOptionSelected, tbListOption)
-	g_AskClientNumberEx(1,999999, "Thêi h¹n sö dông:", {self.SetTimeOptionInItem, {self, tbSpecifiedItem, nCount, nOptionSelected, tbListOption}})
+	g_AskClientNumberEx(1,999999, "Thêi h¹n s dông:", {self.SetTimeOptionInItem, {self, tbSpecifiedItem, nCount, nOptionSelected, tbListOption}})
 end
 function tbAloneScript:SetTimeOptionInItem(tbSpecifiedItem, nCount, nOptionSelected, tbListOption, nTimer)
 	tbSpecifiedItem[3][nOptionSelected] = {tbListOption[1], nTimer, tbListOption[2]};
@@ -660,7 +915,7 @@ function tbAloneScript:IsParamNumber(tbParam)
 	return 1;
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý M¸y Chñ - LÊy th«ng tin NPC
+-- GM Qu¶n L M¸y Ch - LÊy th«ng tin NPC
 -----------------------------------------------------------
 function LastNpcTalk()
 	local nNpcIndex = GetLastDiagNpc()
@@ -674,25 +929,25 @@ function LastNpcTalk()
 	local file  = openfile("npcinfo.lua", "a+")
 	write(file,strchar(34).."Name: "..Name.." ID: "..IdNpc.." Script: "..nScript.." DropFile: "..DropFile.." Life: "..Life.." NguHanh: "..NguHanh.." Kind: "..NpcKind..strchar(34),'\n')
 	closefile(file)
-	Say("<color=green>Th«ng tin ®­îc l­u l¹i ë file server1-npcinfo.lua<color>")
-	Msg2Player("<color=yellow>Th«ng tin ®­îc l­u l¹i ë file server1-npcinfo.lua<color>")
+	Say("<color=green>Th«ng tin ®­îc l­u l¹i  file server1-npcinfo.lua<color>")
+	Msg2Player("<color=yellow>Th«ng tin ®­îc l­u l¹i  file server1-npcinfo.lua<color>")
 end
 ------------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i
--- GM Qu¶n Lý Ng­êi Ch¬i - Qu¶n lý nh©n vËt
+-- GM Qu¶n L Ng­êi Ch¬i
+-- GM Qu¶n L Ng­êi Ch¬i - Qu¶n l nh©n vËt
 ------------------------------------------------------------
 function tbAloneScript:ManageSystemGlobal()
-	local szTitle = "HÖ thèng qu¶n lý toµn m¸y chñ ®­îc sö dông ®Ó khãa, cÊm ch¸t, kick out,… ng­êi ch¬i trong m¸y chñ."
+	local szTitle = "He thong quan ly toan may chu duoc su dung de khoa, cam chat, kick out nguoi choi trong may chu."
 	local tbOption = {}
 		tinsert(tbOption, {"Khãa nh©n vËt ®ang trùc tuyÕn", self.LockPlayerOnline, {self, 1}})
-		tinsert(tbOption, {"Më khãa nh©n vËt", self.UnlockPlayer, {self, 1}})
+		tinsert(tbOption, {"M khãa nh©n vËt", self.UnlockPlayer, {self, 1}})
 		tinsert(tbOption, {"Khãa tµi kho¶n ®ang trùc tuyÕn", self. LockPlayerOnline, {self, 2}})
-		tinsert(tbOption, {"Më khãa tµi kho¶n", self. UnlockPlayer, {self, 2}})
+		tinsert(tbOption, {"M khãa tµi kho¶n", self. UnlockPlayer, {self, 2}})
 		tinsert(tbOption, {"§ãng."})
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
 ------------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - Qu¶n lý nh©n vËt - Khãa nh©n vËt ®ang trùc tuyÕn/Khãa tµi kho¶n ®ang trùc tuyÕn
+-- GM Qu¶n L Ng­êi Ch¬i - Qu¶n l nh©n vËt - Khãa nh©n vËt ®ang trùc tuyÕn/Khãa tµi kho¶n ®ang trùc tuyÕn
 ------------------------------------------------------------
 function tbAloneScript:LockPlayerOnline(nType)
 	g_AskClientStringEx("", 1, 50, "Tªn muèn khãa:", {self.EnterLockPlayerOnline, {self, nType}})
@@ -719,7 +974,7 @@ function tbAloneScript:EnterLockPlayerOnline(nType, szPlayer)
 	end
 end
 function tbAloneScript:LockSystemByNamePlayer(nPlayerIndex)
-	g_AskClientStringEx("", 1, 500, "Lý do bÞ khãa:", {self.EnterLockSystemByNamePlayer, {self, nPlayerIndex}})
+	g_AskClientStringEx("", 1, 500, "L do b khãa:", {self.EnterLockSystemByNamePlayer, {self, nPlayerIndex}})
 end
 function tbAloneScript:EnterLockSystemByNamePlayer(nPlayerIndex, szMsg)
 	local nType = 1;
@@ -729,7 +984,7 @@ function tbAloneScript:EnterLockSystemByNamePlayer(nPlayerIndex, szMsg)
 	local nGMPlayer = PlayerIndex;
 		PlayerIndex = nPlayerIndex;
 			szPlayerName = GetName();
-			Msg2Player(format("<color=yellow>Nh©n vËt nµy ®· bÞ khãa, v× lÝ do: %s", szMsg));
+			Msg2Player(format("<color=yellow>Nh©n vËt nµy ®· b khãa, v l do: %s", szMsg));
 			self:FileSystem_SetData(TAB_LINKFILEDATA[nType][1], TAB_LINKFILEDATA[nType][2], szPlayerName, 1)
 			self:FileSystem_SaveData(TAB_LINKFILEDATA[nType][1])
 			SetTaskTemp(TASKTEMP_KICKOUT, GetCurServerTime());
@@ -740,7 +995,7 @@ function tbAloneScript:EnterLockSystemByNamePlayer(nPlayerIndex, szMsg)
 			SetStringTask(TASKS_LOCKSYSTEM, szPlayerName);
 end
 function tbAloneScript:LockSystemByAccountPlayer(nPlayerIndex)
-	g_AskClientStringEx("", 1, 500, "Lý do bÞ khãa:", {self.EnterLockSystemByAccountPlayer, {self, nPlayerIndex}})
+	g_AskClientStringEx("", 1, 500, "L do b khãa:", {self.EnterLockSystemByAccountPlayer, {self, nPlayerIndex}})
 end
 function tbAloneScript:EnterLockSystemByAccountPlayer(nPlayerIndex, szMsg)
 	local nType = 2;
@@ -750,7 +1005,7 @@ function tbAloneScript:EnterLockSystemByAccountPlayer(nPlayerIndex, szMsg)
 	local nGMPlayer = PlayerIndex;
 		PlayerIndex = nPlayerIndex;
 			szPlayerName = GetAccount();
-			Msg2Player(format("<color=yellow>Nh©n vËt nµy ®· bÞ khãa, v× lÝ do: %s", szMsg));
+			Msg2Player(format("<color=yellow>Nh©n vËt nµy ®· b khãa, v l do: %s", szMsg));
 			self:FileSystem_SetData(TAB_LINKFILEDATA[nType][1], TAB_LINKFILEDATA[nType][2], szPlayerName, 1)
 			self:FileSystem_SaveData(TAB_LINKFILEDATA[nType][1])
 			SetTaskTemp(TASKTEMP_KICKOUT, GetCurServerTime());
@@ -776,7 +1031,7 @@ function tbAloneScript:GameServerKickOut(nPlayerIndex)
 	local nIsPlayer = tonumber(self:FileSystem_GetData(TAB_LINKFILEDATA[1][1], TAB_LINKFILEDATA[1][2], GetName())) or 0;
 		
 		if (nIsPlayer == 1) then
-			Msg2Player("Nh©n vËt nµy cña b¹n hiÖn ®ang bÞ khãa, kh«ng thÓ tham gia vµo game.")
+			Msg2Player("Nh©n vËt nµy cña b¹n hiÖn ®ang b khãa, kh«ng th tham gia vµo game.")
 			SetTaskTemp(TASKTEMP_KICKOUT, GetCurServerTime());
 			SetTimer(1*FRAME2TIME, TIMETASK_ID);
 		end
@@ -784,36 +1039,32 @@ function tbAloneScript:GameServerKickOut(nPlayerIndex)
 		local nIsAccount = tonumber(self:FileSystem_GetData(TAB_LINKFILEDATA[2][1], TAB_LINKFILEDATA[2][2], GetAccount())) or 0;
 		
 		if (nIsAccount == 1) then
-			Msg2Player("Tµi kho¶n nµy cña b¹n hiÖn ®ang bÞ khãa, kh«ng thÓ tham gia vµo game.")
+			Msg2Player("Tµi kho¶n nµy cña b¹n hiÖn ®ang b khãa, kh«ng th tham gia vµo game.")
 			SetTaskTemp(TASKTEMP_KICKOUT, GetCurServerTime());
 			SetTimer(1*FRAME2TIME, TIMETASK_ID);
 		end
 end
 ------------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - Qu¶n lý nh©n vËt - Më khãa nh©n vËt/Më khãa tµi kho¶n
+-- GM Qu¶n L Ng­êi Ch¬i - Qu¶n l nh©n vËt - M khãa nh©n vËt/M khãa tµi kho¶n
 ------------------------------------------------------------
 function tbAloneScript:UnlockPlayer(nType)
-	g_AskClientStringEx("", 1, 50, "Tªn më khãa:", {self.EnterUnlockPlayer, {self, nType}})
+	g_AskClientStringEx("", 1, 50, "Tªn m khãa:", {self.EnterUnlockPlayer, {self, nType}})
 end
 
 function tbAloneScript:EnterUnlockPlayer(nType, szPlayer)
 	self:FileSystem_LoadFile(TAB_LINKFILEDATA[nType][1])
 	local nCount = self:FileSystem_GetData(TAB_LINKFILEDATA[nType][1], TAB_LINKFILEDATA[nType][2], szPlayer)
 	if (tonumber(nCount) ~= 1) then
-		Msg2Player(szPlayer.." kh«ng bÞ khãa")
+		Msg2Player(szPlayer.." kh«ng b khãa")
 	return end
 	self:FileSystem_SetData(TAB_LINKFILEDATA[nType][1], TAB_LINKFILEDATA[nType][2], szPlayer, "");
 	self:FileSystem_SaveData(TAB_LINKFILEDATA[nType][1])
-	Msg2Player(format("B¹n ®· më khãa cho <color=yellow>%s<color> nµy thµnh c«ng!", szPlayer));
+	Msg2Player(format("B¹n ®· m khãa cho <color=yellow>%s<color> nµy thµnh c«ng!", szPlayer));
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt
 -----------------------------------------------------------
 function tbAloneScript:ManipulationOnPlayer()
-	if (GetLevel() < 10) then
-		Talk(1, "", "Nh©n vËt ®¹t cÊp 10 trë lªn míi cã thÓ sö dông tÝnh n¨ng nµy")
-	return end
-	
 	g_AskClientStringEx("", 0, 200, "Tªn nh©n vËt:", {self.SearchPlayerOnline, {self}})
 end
 
@@ -831,12 +1082,12 @@ function tbAloneScript:SearchPlayerOnline(szPlayer)
 		["shaolin"] 		= "ThiÕu L©m ph¸i",
 		["tianwang"] 	= "Thiªn V­¬ng bang",
 		["tangmen"] 	= "§­êng M«n ph¸i",
-		["wudu"] 			= "Ngò §éc gi¸o",
+		["wudu"] 			= "Ng §éc gi¸o",
 		["emei"] 			= "Nga My ph¸i",
 		["cuiyan"] 		= "Thóy Yªn m«n",
 		["gaibang"] 		= "C¸i Bang ph¸i",
 		["tianren"] 		= "Thiªn NhÉn gi¸o",
-		["wudang"] 		= "Vâ §ang ph¸i",
+		["wudang"] 		= "V §ang ph¸i",
 		["kunlun"] 		= "C«n L«n ph¸i",
 		["huashan"] 	= "Hoa S¬n ph¸i",
 	}
@@ -884,7 +1135,7 @@ function tbAloneScript:SearchPlayerOnline(szPlayer)
 		.."\n+ Ingame: %s"
 		.."\n+ ID Account: %s"
 		.."\n+ IP: %s"
-		.."\n+ VÞ trÝ: B¶n ®å: %d - Täa ®é: %d,%d"
+		.."\n+ V tr: B¶n ®å: %d - Täa ®é: %d,%d"
 		.."\n+ M«n ph¸i: %s"
 		.."\n+ Level: %d"
 		.."\n+ TiÒn v¹n: %d"
@@ -899,21 +1150,21 @@ function tbAloneScript:SearchPlayerOnline(szPlayer)
 		.."\n------------------------------------------------"		
 		.."\n+ Sinh lùc: %d"
 		.."\n+ Néi lùc: %d"
-		.."\n+ ThÓ lùc: %d"
-		.."\n+ NÐ tr¸nh: %d"
+		.."\n+ Th lùc: %d"
+		.."\n+ N tr¸nh: %d"
 		
 		.."\n+ Kh¸ng b¨ng: %d"
 		.."\n+ Kh¸ng l«i: %d"
 		.."\n+ Kh¸ng háa: %d"
 		.."\n+ Kh¸ng ®éc: %d"
-		.."\n+ Phßng thñ vËt lý: %d"
+		.."\n+ Phßng th vËt l: %d"
 		
 		.."\n+ Søc m¹nh: %d"
-		.."\n+ Sinh khÝ: %d"
+		.."\n+ Sinh kh: %d"
 		.."\n+ Th©n ph¸p: %d"
 		.."\n+ Néi c«ng: %d"
 		.."\n+ TiÒm n¨ng cßn l¹i: %d"
-		.."\n+ Kü n¨ng cßn l¹i: %d"
+		.."\n+ K n¨ng cßn l¹i: %d"
 		.."\n------------------------------------------------"
 		
 		, szName or ""
@@ -953,15 +1204,15 @@ function tbAloneScript:SearchPlayerOnline(szPlayer)
 		"GM di chuyÓn ®Õn ng­êi ch¬i nµy/#tbAloneScript:GMMoveToPlayer("..nPlayerIndex..")",
 		"Ng­êi ch¬i nµy di chuyÓn ®Õn GM/#tbAloneScript:PlayerMoveToGM("..nPlayerIndex..")",
 		"TÆng ®iÓm cho ng­êi ch¬i nµy/#tbAloneScript:GivePoints("..nPlayerIndex..")",
-		"TÆng vËt phÈm, ®¹o cô, trang bÞ cho ng­êi ch¬i nµy/#tbAloneScript:GiveItemForPlayer("..nPlayerIndex..")",
+		"TÆng vËt phÈm, ®¹o c, trang b cho ng­êi ch¬i nµy/#tbAloneScript:GiveItemForPlayer("..nPlayerIndex..")",
 		"TÆng tiÒn v¹n (v¹n l­îng) cho ng­êi ch¬i ngµy/#tbAloneScript:GiveCash("..nPlayerIndex..")",
 		"TÆng tiÒn ®ång cho ng­êi ch¬i ngµy/#tbAloneScript:GiveCoin("..nPlayerIndex..")",
 		"TÆng KNB cho ng­êi ch¬i ngµy/#tbAloneScript:GiveKNB("..nPlayerIndex..")",
-		"Më chøc n¨ng cho ng­êi ch¬i kh¸c/#tbAloneScript:MoChucNang("..nPlayerIndex..")",
+		"M chøc n¨ng cho ng­êi ch¬i kh¸c/#tbAloneScript:MoChucNang("..nPlayerIndex..")",
 		"§ãng./OnCancel")
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - GM di chuyÓn ®Õn ng­êi ch¬i nµy
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - GM di chuyÓn ®Õn ng­êi ch¬i nµy
 -----------------------------------------------------------
 function tbAloneScript:GMMoveToPlayer(nPlayerIndex)
 	local nWorld, nX, nY;
@@ -979,7 +1230,7 @@ function tbAloneScript:GMMoveToPlayer(nPlayerIndex)
 			GMMsg2Player(szName, "<color=yellow>DÞch chuyÓn ®Õn ng­êi ch¬i nµy thµnh c«ng!")
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - Ng­êi ch¬i nµy di chuyÓn ®Õn GM
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - Ng­êi ch¬i nµy di chuyÓn ®Õn GM
 -----------------------------------------------------------
 function tbAloneScript:PlayerMoveToGM(nPlayerIndex)
 	local nWorld, nX, nY;
@@ -1002,22 +1253,22 @@ function tbAloneScript:PlayerMoveToGM(nPlayerIndex)
 			GMMsg2Player(szPlayerName, "<color=yellow>B¹n ®· triÖu tËp ng­êi ch¬i nµy thµnh c«ng!")
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy
 -----------------------------------------------------------
 function tbAloneScript:GivePoints(nPlayerIndex)
-	local szTitle = "GM muèn tÆng ®iÓm g× cho ng­êi ch¬i nµy?";
+	local szTitle = "GM muèn tÆng ®iÓm g cho ng­êi ch¬i nµy?";
 	local tbOpt = {}
 		tinsert(tbOpt, {"CÊp ®é", g_AskClientNumberEx, {0,200, "NhËp cÊp ®é:", {self.SetLevelPlayer, {self, nPlayerIndex}}}})
-		tinsert(tbOpt, {"Kinh nghiÖm", g_AskClientNumberEx, {0,9999999999, "NhËp sè ®iÓm:", {self.SetExpPlayer, {self, nPlayerIndex}}}})
-		tinsert(tbOpt, {"Danh väng", g_AskClientNumberEx, {0,9999999999, "NhËp sè ®iÓm:", {self.SetReputePlayer, {self, nPlayerIndex}}}})
-		tinsert(tbOpt, {"Phóc duyªn", g_AskClientNumberEx, {0,9999999999, "NhËp sè ®iÓm:", {self.SetFuYuanPlayer, {self, nPlayerIndex}}}})
-		tinsert(tbOpt, {"Tèng kim", g_AskClientNumberEx, {0,9999999999, "NhËp sè ®iÓm:", {self.SetBattlePointPlayer, {self, nPlayerIndex}}}})
-		tinsert(tbOpt, {"Liªn ®Êu", g_AskClientNumberEx, {0,9999999999, "NhËp sè ®iÓm:", {self.SetLeaguePointPlayer, {self, nPlayerIndex}}}})
+		tinsert(tbOpt, {"Kinh nghiÖm", g_AskClientNumberEx, {0,9999999999, "NhËp s ®iÓm:", {self.SetExpPlayer, {self, nPlayerIndex}}}})
+		tinsert(tbOpt, {"Danh väng", g_AskClientNumberEx, {0,9999999999, "NhËp s ®iÓm:", {self.SetReputePlayer, {self, nPlayerIndex}}}})
+		tinsert(tbOpt, {"Phóc duyªn", g_AskClientNumberEx, {0,9999999999, "NhËp s ®iÓm:", {self.SetFuYuanPlayer, {self, nPlayerIndex}}}})
+		tinsert(tbOpt, {"Tèng kim", g_AskClientNumberEx, {0,9999999999, "NhËp s ®iÓm:", {self.SetBattlePointPlayer, {self, nPlayerIndex}}}})
+		tinsert(tbOpt, {"Liªn ®Êu", g_AskClientNumberEx, {0,9999999999, "NhËp s ®iÓm:", {self.SetLeaguePointPlayer, {self, nPlayerIndex}}}})
 		tinsert(tbOpt, {"§ãng."})
 	CreateNewSayEx(szTitle, tbOpt)
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - CÊp ®é
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - CÊp ®é
 -----------------------------------------------------------
 function tbAloneScript:SetLevelPlayer(nPlayerIndex, nLevel)
 	local szPlayerName, szGMName = "", "";
@@ -1031,7 +1282,7 @@ function tbAloneScript:SetLevelPlayer(nPlayerIndex, nLevel)
 		Msg2Player(format("B¹n ®· tÆng cho ng­êi ch¬i %s <color=yellow>%d<color> cÊp ®é", szPlayerName, nLevel))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Kinh nghiÖm
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Kinh nghiÖm
 -----------------------------------------------------------
 function tbAloneScript:SetExpPlayer(nPlayerIndex, nExp)
 	local szPlayerName, szGMName = "", "";
@@ -1045,7 +1296,7 @@ function tbAloneScript:SetExpPlayer(nPlayerIndex, nExp)
 		Msg2Player(format("B¹n ®· tÆng cho ng­êi ch¬i %s <color=yellow>%d<color> ®iÓm kinh nghiÖm", szPlayerName, nExp))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Danh väng
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Danh väng
 -----------------------------------------------------------
 function tbAloneScript:SetReputePlayer(nPlayerIndex, nPoint)
 	local szPlayerName, szGMName = "", "";
@@ -1059,7 +1310,7 @@ function tbAloneScript:SetReputePlayer(nPlayerIndex, nPoint)
 		Msg2Player(format("B¹n ®· tÆng cho ng­êi ch¬i %s <color=yellow>%d<color> danh väng", szPlayerName, nPoint))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Phóc duyªn
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Phóc duyªn
 -----------------------------------------------------------
 function tbAloneScript:SetFuYuanPlayer(nPlayerIndex, nPoint)
 	local szPlayerName, szGMName = "", "";
@@ -1073,7 +1324,7 @@ function tbAloneScript:SetFuYuanPlayer(nPlayerIndex, nPoint)
 		Msg2Player(format("B¹n ®· tÆng cho ng­êi ch¬i %s <color=yellow>%d<color> phóc duyªn", szPlayerName, nPoint))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Tèng kim
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Tèng kim
 -----------------------------------------------------------
 function tbAloneScript:SetBattlePointPlayer(nPlayerIndex, nPoint)
 	local szPlayerName, szGMName = "", "";
@@ -1087,7 +1338,7 @@ function tbAloneScript:SetBattlePointPlayer(nPlayerIndex, nPoint)
 		Msg2Player(format("B¹n ®· tÆng cho ng­êi ch¬i %s <color=yellow>%d<color> ®iÓm Tèng Kim", szPlayerName, nPoint))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Liªn §Êu
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng ®iÓm cho ng­êi ch¬i nµy - Liªn §Êu
 -----------------------------------------------------------
 function tbAloneScript:SetLeaguePointPlayer(nPlayerIndex, nPoint)
 	local szPlayerName, szGMName = "", "";
@@ -1101,7 +1352,7 @@ function tbAloneScript:SetLeaguePointPlayer(nPlayerIndex, nPoint)
 		Msg2Player(format("B¹n ®· tÆng cho ng­êi ch¬i %s <color=yellow>%d<color> ®iÓm Liªn §Êu", szPlayerName, nPoint))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng vËt phÈm, ®¹o cô, trang bÞ cho ng­êi ch¬i nµy
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng vËt phÈm, ®¹o c, trang b cho ng­êi ch¬i nµy
 -----------------------------------------------------------
 function tbAloneScript:GiveItemForPlayer(nPlayerIndex)
 	local GMPlayer = PlayerIndex;
@@ -1110,10 +1361,10 @@ function tbAloneScript:GiveItemForPlayer(nPlayerIndex)
 		PlayerIndex = nPlayerIndex;
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng tiÒn v¹n (v¹n l­îng) cho ng­êi ch¬i nµy
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng tiÒn v¹n (v¹n l­îng) cho ng­êi ch¬i nµy
 -----------------------------------------------------------
 function tbAloneScript:GiveCash(nPlayerIndex)
-	g_AskClientNumberEx(1, 20000, "NhËp sè l­îng:", {self.GiveCashNow, {self, nPlayerIndex}})
+	g_AskClientNumberEx(1, 20000, "NhËp s l­îng:", {self.GiveCashNow, {self, nPlayerIndex}})
 end
 function tbAloneScript:GiveCashNow(nPlayerIndex, nCount)
 	local szPlayer, szGMName = "", "";
@@ -1122,15 +1373,15 @@ function tbAloneScript:GiveCashNow(nPlayerIndex, nCount)
 	PlayerIndex = nPlayerIndex;
 		szPlayer = GetName();
 		Earn(nCount*10000)
-		Msg2Player(format("<color=green>B¹n nhËn ®­îc <color=yellow>%d<color> v¹n l­îng tõ GM %s<color>", nCount, szGMName))
+		Msg2Player(format("<color=green>B¹n nhËn ®­îc <color=yellow>%d<color> v¹n l­îng t GM %s<color>", nCount, szGMName))
 	PlayerIndex = nGMPlayer;
 		Msg2Player(format("<color=green>B¹n ®· tÆng ng­êi ch¬i %s <color=yellow>%d<color> v¹n l­îng<color>", szPlayer, nCount))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng tiÒn ®ång cho ng­êi ch¬i nµy
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng tiÒn ®ång cho ng­êi ch¬i nµy
 -----------------------------------------------------------
 function tbAloneScript:GiveCoin(nPlayerIndex)
-	g_AskClientNumberEx(1, 1000000, "NhËp sè l­îng:", {self.GiveCoinNow, {self, nPlayerIndex}})
+	g_AskClientNumberEx(1, 1000000, "NhËp s l­îng:", {self.GiveCoinNow, {self, nPlayerIndex}})
 end
 function tbAloneScript:GiveCoinNow(nPlayerIndex, nCount)
 	local szPlayer, szGMName = "", "";
@@ -1140,15 +1391,15 @@ function tbAloneScript:GiveCoinNow(nPlayerIndex, nCount)
 		for i = 1, nCount do
 			AddItem(4,417,1,0,0,0)
 		end
-		Msg2Player(format("<color=green>B¹n nhËn ®­îc <color=yellow>%d<color> TiÒn §ång tõ GM %s", nCount, szGMName))
+		Msg2Player(format("<color=green>B¹n nhËn ®­îc <color=yellow>%d<color> TiÒn §ång t GM %s", nCount, szGMName))
 	PlayerIndex = nGMPlayer;
 		Msg2Player(format("<color=green>B¹n ®· tÆng ng­êi ch¬i %s <color=yellow>%d<color> TiÒn §ång.", szPlayer, nCount))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng KNB cho ng­êi ch¬i nµy
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - TÆng KNB cho ng­êi ch¬i nµy
 -----------------------------------------------------------
 function tbAloneScript:GiveKNB(nPlayerIndex)
-	g_AskClientNumberEx(1, 1000000, "NhËp sè l­îng:", {self.GiveKNBNow, {self, nPlayerIndex}})
+	g_AskClientNumberEx(1, 1000000, "NhËp s l­îng:", {self.GiveKNBNow, {self, nPlayerIndex}})
 end
 function tbAloneScript:GiveKNBNow(nPlayerIndex, nCount)
 	local szPlayer, szGMName = "", "";
@@ -1158,12 +1409,12 @@ function tbAloneScript:GiveKNBNow(nPlayerIndex, nCount)
 		for i = 1, nCount do
 			AddItem(4,343,1,0,0,0)
 		end
-		Msg2Player(format("<color=green>B¹n nhËn ®­îc <color=yellow>%d<color> KNB tõ GM %s", nCount, szGMName))
+		Msg2Player(format("<color=green>B¹n nhËn ®­îc <color=yellow>%d<color> KNB t GM %s", nCount, szGMName))
 	PlayerIndex = nGMPlayer;
 		Msg2Player(format("<color=green>B¹n ®· tÆng ng­êi ch¬i %s <color=yellow>%d<color> KNB.", szPlayer, nCount))
 end
 -----------------------------------------------------------
--- GM Qu¶n Lý Ng­êi Ch¬i - NhËp tªn nh©n vËt - Më chøc n¨ng cho ng­êi ch¬i kh¸c
+-- GM Qu¶n L Ng­êi Ch¬i - NhËp tªn nh©n vËt - M chøc n¨ng cho ng­êi ch¬i kh¸c
 -----------------------------------------------------------
 function tbAloneScript:MoChucNang(nPlayerIndex)
 	local szPlayerName, szGMName = "", "";
@@ -1236,12 +1487,14 @@ end
 -- GM LÊy Item
 -----------------------------------------------------------
 function tbAloneScript:GM_layitem()
-	local szTitle = format("<color=yellow>NobitaXD:<color><enter>Mêi GM <color=red>%s<color> lùa chän chøc n¨ng GM:", GetName());
+	if (tbItemFeatureConfig:IsEnabled("admin", "items") ~= 1) then Msg2Player("Chøc n¨ng nµy ®ang t¾t."); return end
+	local szTitle = format("GM Lay Item - <color=red>%s<color>", GetName());
 	local tbOption = {};
-		tinsert(tbOption, {"GM LÊy §å Theo ID", LayDoTheoID})
+		tinsert(tbOption, {"GM LÊy ®å theo ID", LayDoTheoID})
 		--tinsert(tbOption, {"GM LÊy vËt phÈm M·ng", self.TakeSpecifiedItem, {self}})
-		tinsert(tbOption, {"GM Help", TakeSpecifiedItem_help})
+		tinsert(tbOption, {"GM Trî gióp", TakeSpecifiedItem_help})
 		tinsert(tbOption, {"§ãng."})
+	tbOption = tbItemFeatureConfig:FilterOptions(tbOption, "admin.items", {"by_id","help",""}, 0);
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
 
@@ -1255,7 +1508,7 @@ function LayDoTheoID()
 		{"LÊy §å Queskey",LayMenuQueskey},
 		{"LÊy §å Magic",LayMenuMagic},
 		{"LÊy Ngùa",LayMenuNgua},
-		{"LÊy MÆt N¹",LayMenuMatNa},
+		{"LÊy MÆt N",LayMenuMatNa},
 		{"Tho¸t",OnCancel},
 	}
 	CreateNewSayEx(szTitle, tbOpt)
@@ -1269,15 +1522,15 @@ function LayMenuMagic()
 end
 function LayMenuMagic_1(nID)
 	if nID == nil or nID == 0 or nID < 1 or nID > 10000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3355,nID)
-	AskClientForNumber("LayMenuMagic_2",0,5000,"Sè L­îng Nhiu")
+	AskClientForNumber("LayMenuMagic_2",0,5000,"S L­îng Nhiu")
 end
 function LayMenuMagic_2(nSoLuong)
 	if nSoLuong == nil or nSoLuong == 0 or nSoLuong < 1 or nSoLuong > 5000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 		end
 	SetTask(3356,nSoLuong)
@@ -1287,7 +1540,7 @@ function LayMenuMagic_3(nHSD)
 	local nID = GetTask(3355)
 	local nSL = GetTask(3356)
 	if nHSD == nil or nHSD > 365 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	if nHSD == 0 then
@@ -1295,7 +1548,7 @@ function LayMenuMagic_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={6,1,nID,1,0},nCount=nSL,},}, "AD", 1);
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 	if nHSD ~= 0 then
@@ -1303,8 +1556,8 @@ function LayMenuMagic_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={6,1,nID,1,0},nCount=nSL,nExpiredTime=nHSD * 1440},}, "AD", 1);
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.."  [ "..Ten.." ] -  M· M¸y [ %s] - HSD [ "..nHSD.." ]  ngµy".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
-		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.."  [ "..Ten.." ] -  M· M¸y [ %s] - HSD [ "..nHSD.." ]  ngµy".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.."  [ "..Ten.." ] -  M M¸y [ %s] - HSD [ "..nHSD.." ]  ngµy".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.."  [ "..Ten.." ] -  M M¸y [ %s] - HSD [ "..nHSD.." ]  ngµy".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
 		return
 	end
 end
@@ -1317,15 +1570,15 @@ function LayMenuQueskey()
 end
 function LayMenuQueskey_1(nID)
 	if nID == nil or nID == 0 or nID < 1 or nID > 10000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3355,nID)
-	AskClientForNumber("LayMenuQueskey_2",0,9000,"Sè L­îng Nhiu")
+	AskClientForNumber("LayMenuQueskey_2",0,9000,"S L­îng Nhiu")
 end
 function LayMenuQueskey_2(nSoLuong)
 	if nSoLuong == nil or nSoLuong == 0 or nSoLuong < 1 or nSoLuong > 9000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3356,nSoLuong)
@@ -1335,7 +1588,7 @@ function LayMenuQueskey_3(nHSD)
 	local nID = GetTask(3355)
 	local nSL = GetTask(3356)
 	if nHSD == nil or nHSD > 365 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	if nHSD == 0 then
@@ -1343,8 +1596,8 @@ function LayMenuQueskey_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={4,nID,1,1,0},nCount=nSL,},}, "AD", 1);
-		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 	if nHSD ~= 0 then
@@ -1352,8 +1605,8 @@ function LayMenuQueskey_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={4,nID,1,1,0},nCount=nSL,nExpiredTime=nHSD * 1440},}, "AD", 1);
-		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M· M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M· M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 end
@@ -1366,15 +1619,15 @@ function LayMenuHKMP()
 end
 function LayMenuHKMP_1(nID)
 	if nID == nil or nID == 0 or nID < 1 or nID > 10000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3355,nID)
-	AskClientForNumber("LayMenuHKMP_2",0,1000,"Sè L­îng Nhiu")
+	AskClientForNumber("LayMenuHKMP_2",0,1000,"S L­îng Nhiu")
 end
 function LayMenuHKMP_2(nSoLuong)
 	if nSoLuong == nil or nSoLuong == 0 or nSoLuong < 1 or nSoLuong > 1000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3356,nSoLuong)
@@ -1384,7 +1637,7 @@ function LayMenuHKMP_3(nHSD)
 	local nID = GetTask(3355)
 	local nSL = GetTask(3356)
 	if nHSD == nil or nHSD > 365 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	if nHSD == 0 then
@@ -1392,8 +1645,8 @@ function LayMenuHKMP_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={0,nID},nCount=nSL,nQuality=1},}, "AD", 1);
-		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 	if nHSD ~= 0 then
@@ -1401,29 +1654,29 @@ function LayMenuHKMP_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={0,nID},nCount=nSL,nQuality=1,nExpiredTime=nHSD * 1440},}, "AD", 1);
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M· M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
-		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M· M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
 		return
 	end
 end
 
 -----------------------------------------------------------
--- GM LÊy Item - LÊy §å Theo ID - LÊy MÆt N¹
+-- GM LÊy Item - LÊy §å Theo ID - LÊy MÆt N
 -----------------------------------------------------------
 function LayMenuMatNa()
 	AskClientForNumber("LayMenuMatNa_1",0,10000,"LÊy ID Nµo")
 end
 function LayMenuMatNa_1(nID)
 	if nID == nil or nID == 0 or nID < 1 or nID > 10000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3355,nID)
-	AskClientForNumber("LayMenuMatNa_2",0,1000,"Sè L­îng Nhiu")
+	AskClientForNumber("LayMenuMatNa_2",0,1000,"S L­îng Nhiu")
 end
 function LayMenuMatNa_2(nSoLuong)
 	if nSoLuong == nil or nSoLuong == 0 or nSoLuong < 1 or nSoLuong > 1000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3356,nSoLuong)
@@ -1433,7 +1686,7 @@ function LayMenuMatNa_3(nHSD)
 	local nID = GetTask(3355)
 	local nSL = GetTask(3356)
 	if nHSD == nil or nHSD > 365 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	if nHSD == 0 then
@@ -1441,8 +1694,8 @@ function LayMenuMatNa_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={0,11,nID,1,0},nCount=nSL,},}, "AD", 1);
-		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		-- logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),getHWID()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 	if nHSD ~= 0 then
@@ -1450,7 +1703,7 @@ function LayMenuMatNa_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={0,11,nID,1,0},nCount=nSL,nExpiredTime=nHSD * 1440},}, "AD", 1);
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M· M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 end
@@ -1463,15 +1716,15 @@ function LayMenuNgua()
 end
 function LayMenuNgua_1(nID)
 	if nID == nil or nID == 0 or nID < 1 or nID > 10000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3355,nID)
-	AskClientForNumber("LayMenuNgua_2",0,1000,"Sè L­îng Nhiu")
+	AskClientForNumber("LayMenuNgua_2",0,1000,"S L­îng Nhiu")
 end
 function LayMenuNgua_2(nSoLuong)
 	if nSoLuong == nil or nSoLuong == 0 or nSoLuong < 1 or nSoLuong > 1000 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	SetTask(3356,nSoLuong)
@@ -1481,7 +1734,7 @@ function LayMenuNgua_3(nHSD)
 	local nID = GetTask(3355)
 	local nSL = GetTask(3356)
 	if nHSD == nil or nHSD > 365 then
-		Msg2Player("Sè kh«ng hîp lÖ")
+		Msg2Player("S kh«ng hîp l")
 		return
 	end
 	if nHSD == 0 then
@@ -1489,7 +1742,7 @@ function LayMenuNgua_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={0,10,nID,10,0},nCount=nSL,},}, "AD", 1);
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M· M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  M M¸y [ %s] ".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 	if nHSD ~= 0 then
@@ -1497,7 +1750,7 @@ function LayMenuNgua_3(nHSD)
 		local Ten = GetItemName(nItemIdx)
 		RemoveItemByIndex(nItemIdx)
 		tbAwardTemplet:GiveAwardByList({{szName=""..Ten.."",tbProp={0,10,nID,10,0},nCount=nSL,nExpiredTime=nHSD * 1440},}, "AD", 1);
-		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M· M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
+		logplayer("data/log_lay_item_admin.txt",format("TG : %s  - ID [ %s] - NV [ %s] - lÊy "..nSL.." [ "..Ten.." ] -  HSD [ "..nHSD.." ]  ngµy - M M¸y [ %s] -".."",GetLocalDate("%m/%d/%Y_%H:%M:%S"),GetAccount(),GetName(),GetIP()))
 		return
 	end
 end
@@ -1522,28 +1775,19 @@ function tbAloneScript:ChangeMask()
 end
 function tbAloneScript:RestoreMask()
 	RestoreOwnFeature();
-	Msg2Player("Trë l¹i h×nh d¹ng ban ®Çu");
+	Msg2Player("Tr l¹i h×nh d¹ng ban ®Çu");
 end
-----------------------------------------------------------
--- GM Chøc N¨ng - BËt vßng s¸ng GM/T¾t vßng s¸ng GM
+-- GM Chøc N¨ng - TÝnh n¨ng h tr kh¸c
 ----------------------------------------------------------
 function tbAloneScript:HaloGM()
-		if (Title_GetActiveTitle() ~= 5000) then
-			SetTask(1122, 5000)
-			Title_AddTitle(5000, 1, 30*24*60*60*18);
-			Title_ActiveTitle(5000);
-		else
-			Title_RemoveTitle(5000)
-		end
+	return tbAdminAuth:ToggleAdminHalo();
 end
-----------------------------------------------------------
--- GM Chøc N¨ng - TÝnh n¨ng hç trî kh¸c
-----------------------------------------------------------
+
 function tbAloneScript:SupportFeatureOther()
-	local szTitle = format("Chµo mõng <color=red>%s<color> tham gia m¸y chñ <color=red>OffLine S¬n Hµ X· T¾c<color>, <enter>§©y lµ lÖnh bµi hç trî dµnh cho GM ®Ó qu¶n lý, ®iÒu hµnh m¸y chñ cña m×nh.");
+	local szTitle = format("Chµo mõng <color=red>%s<color> tham gia m¸y ch <color=red>OffLine S¬n H X T¾c<color>, <enter>§©y l lÖnh bµi h tr dµnh cho GM ®Ó qu¶n l, ®iÒu hµnh m¸y ch cña m×nh.");
 	local tbOption = {};
 		tinsert(tbOption, {"Thay ®æi tr¹ng th¸i (mµu pk)", self.GMChangeCamp, {self}})
-		tinsert(tbOption, {"Hñy bá vËt phÈm", DisposeItem})
+		tinsert(tbOption, {"Hñy b vËt phÈm", DisposeItem})
 		tinsert(tbOption, {"§ãng."})
 	CreateNewSayEx(szTitle..INFORMATION_DEVELOPER, tbOption)
 end
@@ -1551,12 +1795,12 @@ end
 function tbAloneScript:GMChangeCamp()
 	local szTitle = "GM muèn ®æi sang mµu tr¹ng th¸i nµo d­íi ®©y?";
 	local tbOption = {};
-		tinsert(tbOption, {"LuyÖn c«ng (ch÷ tr¾ng)", self.GMChangeCampOK, {self, 0}})
-		tinsert(tbOption, {"ChÝnh ph¸i (ch÷ vµng)", self.GMChangeCampOK, {self, 1}})
-		tinsert(tbOption, {"Tµ ph¸i (ch÷ tÝm)", self.GMChangeCampOK, {self, 2}})
-		tinsert(tbOption, {"Trung lËp (ch÷ xanh)", self.GMChangeCampOK, {self, 3}})
-		tinsert(tbOption, {"S¸t thñ (ch÷ ®á)", self.GMChangeCampOK, {self, 4}})
-		tinsert(tbOption, {"GM (ch÷ hång)", self.GMChangeCampOK, {self, 5}})
+		tinsert(tbOption, {"LuyÖn c«ng (ch tr¾ng)", self.GMChangeCampOK, {self, 0}})
+		tinsert(tbOption, {"ChÝnh ph¸i (ch vµng)", self.GMChangeCampOK, {self, 1}})
+		tinsert(tbOption, {"T ph¸i (ch tÝm)", self.GMChangeCampOK, {self, 2}})
+		tinsert(tbOption, {"Trung lËp (ch xanh)", self.GMChangeCampOK, {self, 3}})
+		tinsert(tbOption, {"S¸t th (ch ®á)", self.GMChangeCampOK, {self, 4}})
+		tinsert(tbOption, {"GM (ch hång)", self.GMChangeCampOK, {self, 5}})
 		tinsert(tbOption, {"§ãng."})
 	CreateNewSayEx(szTitle, tbOption)
 end
@@ -1576,13 +1820,13 @@ function tbAloneScript:GMHelp()
 	findgoldboss(1,12) 
 end
 -----------------------------------------------------------
--- GM Chøc N¨ng - Kü n¨ng
+-- GM Chøc N¨ng - K n¨ng
 -----------------------------------------------------------
 function tbAloneScript:SkillsSystem()
-	local szTitle = "HÖ thèng kü n¨ng bao gåm thªm kü n¨ng vµ xãa kü n¨ng, b¹n muèn sö dông hÖ thèng kü n¨ng nµo?"
+	local szTitle = "H thèng k n¨ng bao gåm thªm k n¨ng v xãa k n¨ng, b¹n muèn s dông h thèng k n¨ng nµo?"
 	local tbOpt = {}
-		tinsert(tbOpt, {"Thªm kü n¨ng", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.AddSkills, {self}}}})
-		tinsert(tbOpt, {"Xãa kü n¨ng", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.DeleteSkills, {self}}}})
+		tinsert(tbOpt, {"Thªm k n¨ng", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.AddSkills, {self}}}})
+		tinsert(tbOpt, {"Xãa k n¨ng", g_AskClientStringEx, {"", 0,256,"Néi dung th«ng b¸o:", {self.DeleteSkills, {self}}}})
 		tinsert(tbOpt, {"§ãng."})
 	CreateNewSayEx(szTitle, tbOpt)
 end
@@ -1590,18 +1834,18 @@ function tbAloneScript:AddSkills(szSkills)
 	local _,_, nStart, nEnd, _, nPoint = self:GetSplitSkills(szSkills)
 	for i = nStart, nEnd do
 		AddMagic(i, nPoint)
-		GMMsg2Player("Thªm kü n¨ng", "Thªm kü n¨ng “"..GetSkillName(i).."” ®¼ng cÊp "..nPoint.."!")
+		GMMsg2Player("Thªm k n¨ng", "Thªm k n¨ng "..GetSkillName(i).." ®¼ng cÊp "..nPoint.."!")
 	end
 end
 function tbAloneScript:DeleteSkills(szSkills)
 	local tbSkills, nCount, nStart, _, nEnd, _ = self:GetSplitSkills(szSkills)
 	if nCount > 2 then
-		GMMsg2Player("Xãa kü n¨ng", "NhËp th«ng sè bÞ lçi, chØ cã thÓ nhËp tèi ®a 2 th«ng sè trë xuèng.")
+		GMMsg2Player("Xãa k n¨ng", "NhËp th«ng s b lçi, ch c th nhËp tèi ®a 2 th«ng s tr xuèng.")
 		return 0
 	end
 	for i = nStart, nEnd do
 		DelMagic(i)
-		GMMsg2Player("Xãa kü n¨ng", "Kü n¨ng “"..GetSkillName(i).."” ®· ®­îc xãa bá!")
+		GMMsg2Player("Xãa k n¨ng", "K n¨ng "..GetSkillName(i).." ®· ®­îc xãa b!")
 	end
 end
 function tbAloneScript:GetSplitSkills(szString)
@@ -1609,7 +1853,7 @@ function tbAloneScript:GetSplitSkills(szString)
 	local tbString = split(szString, ",")
 	local nType = self:IsParamNumber(tbString)
 	if nType ~= 1 then
-		GMMsg2Player("Thªm kü n¨ng", "NhËp th«ng sè bÞ lçi, chØ sö dông c¸c ký tù sè tõ 0-9 vµ dÊu phÈy “,”.")
+		GMMsg2Player("Thªm k n¨ng", "NhËp th«ng s b lçi, ch s dông c¸c k t s t 0-9 v dÊu phÈy ,.")
 		return 0
 	end
 	if (getn(tbString) == 1) then
@@ -1636,12 +1880,12 @@ function gopos_sevenctc()
 	Say("Ng­¬i muèn ®i chiÕn tr­êng nµo cña ThÊt Thµnh §¹i ChiÕn?", 8,
 		"ChiÕn tr­êng Thµnh §«/#goto_ctc(1)",
 		"ChiÕn tr­êng BiÖn Kinh/#goto_ctc(2)",
-		"ChiÕn tr­êng §¹i Lý/#goto_ctc(3)",
+		"ChiÕn tr­êng §¹i L/#goto_ctc(3)",
 		"ChiÕn tr­êng Ph­îng T­êng/#goto_ctc(4)",
 		"ChiÕn tr­êng L©m An/#goto_ctc(5)",
 		"ChiÕn tr­êng T­¬ng D­¬ng/#goto_ctc(6)",
 		"ChiÕn tr­êng D­¬ng Ch©u/#goto_ctc(7)",
-		"§Ó ta suy nghÜ l¹i/Cancel")
+		"§Ó ta suy ngh l¹i/Cancel")
 end
 function goto_ctc(nIndex)
 	if nIndex == 1 then 	NewWorld(926, 1713,3296)
@@ -1654,11 +1898,11 @@ function goto_ctc(nIndex)
 	end
 end
 -----------------------------------------------------------
--- Reload File - Reload Script CFG_server
+-- Reload File - N¹p l¹i script CFG_server
 -----------------------------------------------------------
 function Reload_CFG_server()
 	LoadScript("\\script\\global\\nobitaxd\\config\\cfg_server.lua");
-	LoadScript("\\script\\global\\nobitaxd\\npc\\npcthunghiem.lua");
+	LoadScript("\\script\\global\\nobitaxd\\npc\\camnangtanthu.lua");
 	LoadScript("\\script\\global\\Â·ÈË_Àñ¹Ù.lua");
 end
 -----------------------------------------------------------
@@ -1667,7 +1911,7 @@ end
 function NhapDuongDanFileCanReLoadOK(Link)
         local ReloadScript = LoadScript(Link);
         --if (FALSE(ReloadScript )) then
-        --    Msg2Player("XuÊt hiÖn lçi hoÆc sai ®­êng dÉn, kh«ng thÓ Reload file!<enter><color=green>"..Link.."");
+        --    Msg2Player("XuÊt hiÖn lçi hoÆc sai ®­êng dÉn, kh«ng th Reload file!<enter><color=green>"..Link.."");
         --else
         --    Msg2Player("<color=green>Reload thµnh c«ng Script<color><enter><color=green>"..Link.."");
         --end
@@ -1678,64 +1922,21 @@ function Reloadfile()
 end 
 
 ----------------------------------------------------
--- LÊy vËt phÈm chØ ®Þnh GM login
+-- LÊy vËt phÈm ch ®Þnh GM login
 ----------------------------------------------------
 function tbAloneScript:GMLoginInGame()
-	if (self:CheckGameMaster() == 2) then
-		if (CalcEquiproomItemCount(6,1,4257,-1) == 0) then
-			local nItemIndex = AddItem(6,1,4257,1,0,0);
-			SetItemBindState(nItemIndex, -1);
-		end;
-		if (CalcEquiproomItemCount(6,1,1266,-1) == 0) then
-			local nItemIndex = AddItem(6,1,1266,1,0,0);
-			SetItemBindState(nItemIndex, -1);
-		end;
-		if (GetLevel() < 10) then
-			ST_LevelUp(10-GetLevel())
-		end;
-		if (Title_GetActiveTitle() ~= 5000) then
-			SetTask(1122, 5000)
-			Title_AddTitle(5000, 1, 30*24*60*60*18);
-			Title_ActiveTitle(5000);
-		end;
-		AddSkillState(1206,1,0,777600);
-		Msg2Player("BËt chøc n¨ng Èn th©n cho GM");
-	end;
+	return tbAdminAuth:ProcessLogin();
 end
 
--- KiÓm tra GM (kiÓm tra xem tµi kho¶n, nh©n vËt nµy cã ph¶i lµ GM hay kh«ng?)
--- Gi¸ trÞ tr¶ vÒ: [-2]: Lçi table - [0]: kh«ng ph¶i GM - [1]: tµi kho¶n lµ GM - [2]: tªn tµi kho¶n vµ nh©n vËt lµ GM
---	Gi¸ trÞ thø 2: sè thø tù cña TK
+-- KiÓm tra GM (kiÓm tra xem tµi kho¶n, nh©n vËt nµy c ph¶i l GM hay kh«ng?)
+-- Gi tr tr v: [-2]: Lçi table - [0]: kh«ng ph¶i GM - [1]: tµi kho¶n l GM - [2]: tªn tµi kho¶n v nh©n vËt l GM
+--	Gi tr th 2: s th t cña TK
 function tbAloneScript:CheckGameMaster()
-	if not (TAB_LIST_GAMEMASTER) then
-		print("Khong tim thay table!")
-	return -2 end
-	
-	for i = 1, getn(TAB_LIST_GAMEMASTER) do
-		if not (TAB_LIST_GAMEMASTER[i]["Account"]) then
-			print("Khong tim thay string [Account] trong danh sach table!!!")
-		return -2 end
-		
-		if not (TAB_LIST_GAMEMASTER[i]["Player"]) then
-			print("Khong tim thay table [Player] trong danh sach table!!!")
-		return -2 end
-		
-		if not (TAB_LIST_GAMEMASTER[i]["Password"]) then
-			print("Khong tim thay string [Password] trong danh sach table!!!")
-		return -2 end
-		
-		if not (TAB_LIST_GAMEMASTER[i]["Rank"]) then
-			print("Khong tim thay string [Rank] trong danh sach table!!!")
-		return -2 end
-		
-		if (TAB_LIST_GAMEMASTER[i]["Account"] == GetAccount()) then
-			for k = 1, getn(TAB_LIST_GAMEMASTER[i]["Player"]) do
-				if (TAB_LIST_GAMEMASTER[i]["Player"][k] == GetName()) then
-				return 2, i end
-			end
-		return 1, i end
+	if (tbAdminAuth:IsAdminAccount(GetAccount()) == 1 and tbAdminAuth:IsRoleItemEnabled() == 1) then
+		return 2, 0
 	end
-return 0 end
+	return 0
+end
 
 function tbAloneScript:StartGameServer()
 	for i = 1, getn(TAB_LINKFILEDATA) do
@@ -1743,11 +1944,11 @@ function tbAloneScript:StartGameServer()
 	end
 end
 
--- ThiÕt lËp d÷ liÖu
+-- ThiÕt lËp d liÖu
 --		+ szLinkFile: ®­êng dÉn file d¹ng "\\data\\log.txt"
 --		+ szSection: "SECTION"
---		+ szKey: Tõ khãa cÇn load
---		+ szValue: Gi¸ trÞ cña tõ khãa ®ã
+--		+ szKey: T khãa cÇn load
+--		+ szValue: Gi tr cña t khãa ®ã
 function tbAloneScript:FileSystem_SetData(szLinkFile, szSection, szKey, szValue)
 	IniFile_SetData(szLinkFile, szSection, szKey, szValue)
 end
@@ -1756,15 +1957,15 @@ function tbAloneScript:FileSystem_SaveData(szLinkFile)
 	IniFile_Save(szLinkFile, szLinkFile)
 end
 
--- LÊy d÷ liÖu
+-- LÊy d liÖu
 --		+ szLinkFile: ®­êng dÉn file d¹ng "\\data\\log.txt"
 --		+ szSection: "SECTION"
---		+ szKey: Tõ khãa cÇn load
+--		+ szKey: T khãa cÇn load
 function tbAloneScript:FileSystem_GetData(szLinkFile, szSection, szKey)
 	return IniFile_GetData(szLinkFile, szSection, szKey)
 end
 
--- Load d÷ liÖu
+-- Load d liÖu
 --		+ szLinkFile: ®­êng dÉn file d¹ng "\\data\\log.txt"
 function tbAloneScript:FileSystem_LoadFile(szLinkFile)
 	File_Create(szLinkFile)
@@ -1774,12 +1975,12 @@ end
 -- LÊy danh s¸ch trong file:
 --		+ szLinkFile: ®­êng dÉn file d¹ng "\\data\\log.txt"
 --		+ szSection = "TABLE"
---> Gi¸ trÞ tr¶ vÒ: Sè l­îng dßng, danh s¸ch table
+--> Gi tr tr v: S l­îng dßng, danh s¸ch table
 function tbAloneScript:FileSystem_GetCount(szLinkFile, szSection)
 	local tbKey = {}
 	local nFile = TabFile_Load(szLinkFile, szSection)
 	if nFile ~= 1 then
-		print("TÖp tin kh«ng tån t¹i hoÆc ch­a cã d÷ liÖu!")
+		print("TÖp tin kh«ng tån t¹i hoÆc ch­a c d liÖu!")
 		return 0
 	end
 	
@@ -1806,16 +2007,16 @@ function OnTimer()
 	--SetChatFlag(1); --CÊm ch¸t
 	--DisabledStall(1); --CÊm bµy b¸n
 	--ForbitTrade(1); --CÊm giao dÞch
-	--DisabledUseTownP(1); --CÊm sö dông THP
+	--DisabledUseTownP(1); --CÊm s dông THP
 	--ForbidEnmity(1); --CÊm cõu s¸t
-	--SetCreateTeam(0); --ThiÕt lËp t¹o tæ ®éi
+	--SetCreateTeam(0); --ThiÕt lËp t¹o t ®éi
 	local nPlayerIndex = PlayerIndex or 0;
 	local szName = GetName() or "";
 	local szAccount = GetAccount() or "";
 	local nTimerOut = GetTaskTemp(TASKTEMP_KICKOUT);
 	local nTime = GetCurServerTime();
 	local nTimeNow = (nTimerOut - nTime) + TIMER_KICKOUT ;
-	Msg2Player("<color=cyan>B¹n cßn "..nTimeNow.." gi©y nöa sÏ bÞ hÖ thèng kick ra khái game.")
+	Msg2Player("<color=cyan>B¹n cßn "..nTimeNow.." gi©y nöa s b h thèng kick ra khái game.")
 	if (nTimeNow == 0) then
 		SetTaskTemp(TASKTEMP_KICKOUT, 0)
 		OfflineLive(nPlayerIndex);
@@ -1836,7 +2037,7 @@ end
 function tbAloneScript:capnhatbangxephang()
 	local tbSay = {"<dec>Mêi GM tr·i nghiÖm chøc n¨ng trong game"};
 		tinsert(tbSay, "CËp nhËt b¶ng xÕp h¹ng/capnhatbangxephang2")		
-		tinsert(tbSay, "§ãng./no");
+	tinsert(tbSay, "§ãng./no");
 	CreateTaskSay(tbSay);
 end
 

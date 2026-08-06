@@ -14,10 +14,23 @@ Include("\\script\\vng_event\\change_request_baoruong\\exp_award.lua")
 
 local tbAward = 
 {
-	[1]={szName="MÆt n¹ Nguyªn so¸i",tbProp={0,11,447,1,0,0},nRate = 0.2,},
-	[2]={szName="B¸ch Niªn Tr©n Lé",tbProp={6,1,2266,1,0,0},nRate = 0.5,},
-	[3]={szName="V¹n Niªn Tr©n Lé",tbProp={6,1,2268,1,0,0},nRate = 0.2,},
-	[4]={szName="Thiªn Niªn Tr©n Lé",tbProp={6,1,2267,1,0,0},nRate = 0.3,},
+	[1]={szName="§å Phæ Tö M·ng Kh«i",tbProp={6,1,2714,1,0,0},nRate = 0.15,},
+	[2]={szName="§å Phæ Tö M·ng Y",tbProp={6,1,2715,1,0,0},nRate = 0.15,},
+	[3]={szName="§å Phæ Tö M·ng Yªu §¸i",tbProp={6,1,2717,1,0,0},nRate = 0.15,},
+	[4]={szName="§å Phæ Tö M·ng Hé UyÓn",tbProp={6,1,2718,1,0,0},nRate = 0.15,},
+	[5]={szName="§å Phæ Tö M·ng H¹ng Liªn",tbProp={6,1,2719,1,0,0},nRate = 0.01,},
+	[6]={szName="§å Phæ Tö M·ng Béi",tbProp={6,1,2720,1,0,0},nRate = 0.15,},
+	[7]={szName="§å Phæ Tö M·ng Hµi",tbProp={6,1,2716,1,0,0},nRate = 0.15,},
+	[8]={szName="§å Phæ Tö M·ng Th­îng Giíi ChØ",tbProp={6,1,2721,1,0,0},nRate = 0.15,},
+	[9]={szName="§å Phæ Tö M·ng KhÝ Giíi",tbProp={6,1,2723,1,0,0},nRate = 0.01,},
+	[10]={szName="§å Phæ Tö M·ng H¹ Giíi ChØ",tbProp={6,1,2722,1,0,0},nRate = 0.01,},
+	[11]={szName="Tö M·ng LÖnh",tbProp={6,1,2350,1,0,0},nRate = 0.1,},
+	[12]={szName="HuyÒn Viªn LÖnh",tbProp={6,1,2351,1,0,0},nRate = 0.2,},
+	[13]={szName="MÆt n¹ Nguyªn so¸i",tbProp={0,11,447,1,0,0},nRate = 0.2,},
+	[14]={szName="B¸ch Niªn Tr©n Lé",tbProp={6,1,2266,1,0,0},nRate = 0.5,},
+	[15]={szName="V¹n Niªn Tr©n Lé",tbProp={6,1,2268,1,0,0},nRate = 0.2,},
+	[16]={szName="Thiªn Niªn Tr©n Lé",tbProp={6,1,2267,1,0,0},nRate = 0.3,},
+	[17]={szName="ThÇn Hµnh Phï",tbProp={6,1,1266,1,0,0},nExpiredTime=20160,nRate = 0.1,},
 --Giíi h¹n ®iÓm kinh nghiÖm mçi ngµy lµ 300triÖu khi sö dông c¸c lo¹i b¶o r­¬ng - Modified by DinhHQ - 20110428
 --	[18]={nExp=1,nRate = 48.72,nCount = 1500000,},
 --	[19]={nExp=1,nRate = 30.0,nCount = 2000000,},

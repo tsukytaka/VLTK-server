@@ -30,6 +30,7 @@ Ngùa sè 13
 ÂíÆ¥29																																																
 ÂíÆ¥30																																																
 ÂíÆ¥31																																																
-ÂíÆ¥32																																																
-ÂíÆ¥33																																																
-ÂíÆ¥34																																																
+Háa Viªm																																							..\man\htfnguatrangxanh_rs01.spr	..\man\htfnguatrangxanh_rw.spr	..\man\htfnguatrangxanh_rr.spr	..\man\htfnguatrangxanh_ra01.spr	..\man\htfnguatrangxanh_ra02.spr	..\man\htfnguatrangxanh_rm.spr	..\man\htfnguatrangxanh_rb.spr	..\man\htfnguatrangxanh_rd.spr	..\man\htfnguatrangxanh_ra02.spr	..\man\htfnguatrangxanh_ra02.spr
+H¾c Tinh 																																							..\man\htfnguatrangxanh_rs01.spr	..\man\htfnguatrangxanh_rw.spr	..\man\htfnguatrangxanh_rr.spr	..\man\htfnguatrangxanh_ra01.spr	..\man\htfnguatrangxanh_ra02.spr	..\man\htfnguatrangxanh_rm.spr	..\man\htfnguatrangxanh_rb.spr	..\man\htfnguatrangxanh_rd.spr	..\man\htfnguatrangxanh_ra02.spr	..\man\htfnguatrangxanh_ra02.spr
+H¾c Hãa																																							..\man\htfnguavang_rs01.spr	..\man\htfnguavang_rw.spr	..\man\htfnguavang_rr.spr	..\man\htfnguavang_ra01.spr	..\man\htfnguavang_ra02.spr	..\man\htfnguavang_rm.spr	..\man\htfnguavang_rb.spr	..\man\htfnguavang_rd.spr	..\man\htfnguavang_ra02.spr	..\man\htfnguavang_ra02.spr
+Giao Phong																																							..\man\htfnguavang_rs01.spr	..\man\htfnguavang_rw.spr	..\man\htfnguavang_rr.spr	..\man\htfnguavang_ra01.spr	..\man\htfnguavang_ra02.spr	..\man\htfnguavang_rm.spr	..\man\htfnguavang_rb.spr	..\man\htfnguavang_rd.spr	..\man\htfnguavang_ra02.spr	..\man\htfnguavang_ra02.spr

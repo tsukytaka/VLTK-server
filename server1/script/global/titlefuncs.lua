@@ -3,7 +3,10 @@ MAX_TITLE_PERPAGE = 5
 TASK_ACTIVE_TITLE = 1122
 
 function change_title()
-	Say("B¹n muèn ta gióp viÖc g×?", 3,  "T×m xem hoÆc kİch ho¹t danh hiÖu ®· cã /#title_ShowTitleList(1)", "Kh«ng kİch ho¹t danh hiÖu hiÖn thêi/#title_choose(0)", "Kh«ng cÇn/OnCancel")
+	Say("B¹n muèn ta gióp viÖc g×?", 3,
+		"Kİch ho¹t danh hiÖu ®· cã/#title_ShowTitleList(1)",
+		"Kh«ng kİch ho¹t danh hiÖu hiÖn thêi/#title_choose(0)",
+	"Kh«ng cÇn/OnCancel")
 end
 
 function title_ShowTitleList(nPage)
@@ -34,7 +37,7 @@ function title_ShowTitleList(nPage)
 			titletab[iter] = Title_GetTitleName(tab[tabiter]).."/#title_choose("..tab[tabiter]..")";
 			iter = iter + 1
 		end
-		titletab[iter] = "Trang kÕ /#title_ShowTitleList("..(nPage + 1)..")"
+		titletab[iter] = "Trang kÕ/#title_ShowTitleList("..(nPage + 1)..")"
 		iter = iter + 1
 	end
 	

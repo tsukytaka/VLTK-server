@@ -2,7 +2,7 @@ Include("\\script\\lib\\awardtemplet.lua")
 local tbItem = 
 {
 	{szName="Kim §¬n Ch©n Kinh", tbProp={6, 1, 2217, 1, 0, 0}, nExpiredTime = 10080},
-	{szName="Hång ¶nh B¶o R­¬ng", tbProp={6, 1, 2218, 1, 0, 0} , nBindState = -2},
+	-- {szName="Hång ¶nh B¶o R­¬ng", tbProp={6, 1, 2218, 1, 0, 0} , nBindState = -2},
 }
 function main()
 	

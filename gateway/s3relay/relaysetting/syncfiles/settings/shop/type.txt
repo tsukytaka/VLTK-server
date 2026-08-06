@@ -1,6 +1,4 @@
 TypeName	SellID
-T¹p hãa	142
-Th­ TÞch	145
-B¶o th¹ch	141
-MÆt n¹	140
-Thó c­ìi	149
+VËt PhÈm	184
+Thuèc	185
+Th¹ch	186

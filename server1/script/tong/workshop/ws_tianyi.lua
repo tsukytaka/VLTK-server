@@ -31,13 +31,12 @@ function ws_main(nTongID, nWorkshopID)
 	if SVR_CheckUse(nTongID, nWorkshopID, "Tæng qu¶n Thiªn ı ph­êng") ~= 1 then
 		return 0
 	end
-	Say("<#>Tæng Qu¶n Thiªn ı Ph­êng:  TÕ ngé di thiªn ı, MÖnh ®å tù b¶ ¸c, thÕ kı , thÕ kı!", 4, 
-		"NhËn nhiÖm vô ngÉu nhiªn/#use_g_1_ok".."("..nTongID..","..nWorkshopID..")",		
+	Say("<#>Tæng Qu¶n Thiªn ı Ph­êng:  TÕ ngé di thiªn ı, MÖnh ®å tù b¶ ¸c, thÕ kı , thÕ kı!", 3, 
+		"NhËn nhiÖm vô ngÉu nhiªn/#use_g_1_ok".."("..nTongID..","..nWorkshopID..")",
 		"LÖnh bµi nhiÖm vô ®Æc biÖt/#use_g_1_ok22".."("..nTongID..","..nWorkshopID..")",
 		"Kh«ng cÇn ®©u/cancel");
 	return 1;
 end
-
 
 ----------------------------------------------------------------------------------------------------
 function MAINTAIN_R(nTongID, nWorkshopID) --ÈÕ³£»î¶¯
@@ -70,24 +69,24 @@ function USE_G_1(nTongID, nWorkshopID)
 end
 
 function use_g_1_ok(nTongID, nWorkshopID)
-	--local nTime = tonumber(GetLocalDate("%H%M"))
-	--if (nTime >= 0000 and nTime <= 2200) then
+	local nTime = tonumber(GetLocalDate("%H%M"))
+	if (nTime >= 1230 and nTime <= 2200) then
 	local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
 	_dbgMsg("Sè lÇn nhËn cßn l¹i * 100: "..TWS_GetDayOutput(nTongID, nWorkshopID))
-	--if (TWS_GetDayOutput(nTongID, nWorkshopID) < 100) then
-	--	Say("<#>Tæng Qu¶n Thiªn ı Ph­êng:  NhiÖm vô ngÉu nhiªn h«m n·y ®· kÕt thóc, h«m sau l¹i ®Õn vËy!", 0)
-	--	return 0;
-	--		end
+	if (TWS_GetDayOutput(nTongID, nWorkshopID) < 100) then
+		Say("<#>Tæng Qu¶n Thiªn ı Ph­êng:  NhiÖm vô ngÉu nhiªn h«m n·y ®· kÕt thóc, h«m sau l¹i ®Õn vËy!", 0)
+		return 0;
+			end
 			Say("<#>Sö dông <color=yellow>"..aLevelRenWuPrice[nLevel].."<color> ®iÓm cèng hiÕn ®æi lÊy 1 lÖnh bµi ngÉu nhiªn, ng­¬i ®ång ı kh«ng?", 2,
-			"Ta muèn ®æi/#use_g_1_ok21".."("..nTongID..","..nWorkshopID..")",
+			"ta muèn ®æi/#use_g_1_ok21".."("..nTongID..","..nWorkshopID..")",
 			"Hñy bá /cancel")
-	--else
-	--	Talk(1,"","Thêi gian nhËn vËt phÈm lµ tõ 12h30 ®Õn 22h h»ng ngµy !")
-	--		return
-	--end
-	--Say("<#>Ng­¬i ph¶i tèn phİ <color=yellow>"..aLevelRenWuPrice[nLevel].."<color>NhÊn ®iÓm cèng hiÕn nhËn ®­îc nhiÖm vu lÖnh bµi ngÉu nhiªn, ®ång ı kh«ng?", 2,
-	--	"ta muèn ®æi/#use_g_1_ok21".."("..nTongID..","..nWorkshopID..")",
-	--	"Hñy bá /cancel")
+	else
+		Talk(1,"","Thêi gian nhËn vËt phÈm lµ tõ 12h30 ®Õn 22h h»ng ngµy !")
+			return
+	end
+	Say("<#>Ng­¬i ph¶i tèn phİ <color=yellow>"..aLevelRenWuPrice[nLevel].."<color>NhÊn ®iÓm cèng hiÕn nhËn ®­îc nhiÖm vu lÖnh bµi ngÉu nhiªn, ®ång ı kh«ng?", 2,
+		"ta muèn ®æi/#use_g_1_ok21".."("..nTongID..","..nWorkshopID..")",
+		"Hñy bá /cancel")
 end
 
 function use_g_1_ok22(nTongID, nWorkshopID)--ÁìÈ¡ÌØÊâÈÎÎñÁîÅÆ
@@ -323,8 +322,8 @@ function use_g_1_ok21(nTongID, nWorkshopID)
 		return 
 	end
 	
-	--SetTaskTemp(196, 1)
-	USE_G_2(nTongID, nWorkshopID);
+	SetTaskTemp(196, 1)
+	TWS_ApplyUse(nTongID, nWorkshopID);
 end
 
 function USE_G_2(nTongID, nWorkshopID)

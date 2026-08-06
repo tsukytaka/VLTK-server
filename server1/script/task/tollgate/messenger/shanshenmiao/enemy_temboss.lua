@@ -15,7 +15,7 @@ function messenger_templego(KillerNpcIndex)
 	local name = GetName()
 	local Uworld1201 = nt_getTask(1202)  --É½ÉñÃíÈÎÎñµÄÈÎÎñ±äÁ¿
 	local Uworld1204 = nt_getTask(1204)  --ËÍÐÅÈÎÎñËùµ½µØµãÈÎÎñ±äÁ¿
-	local Uworld1205 = nt_getTask(1205)  --ÐÅÊ¹»ý·Ö
+	local Uworld3000 = nt_getTask(3000)  --ÐÅÊ¹»ý·Ö
 	local Uworld1206 = nt_getTask(1206)  --ÐÅÊ¹³ÆºÅ
 	local Uworld1207 = nt_getTask(1207)  --ÐÅÊ¹ÈÎÎñµ±Ç°É±¹Ö¼ÇÊýÆ÷
 	local Uworld1208 = nt_getTask(1209)  --É½ÉñÃíÉ±¹Ö¼ÇÊýÆ÷
@@ -48,13 +48,13 @@ function messenger_templego(KillerNpcIndex)
 				Msg2Player("B¹n thµnh c«ng h¹ tªn §ao Yªu.")
 			end
 		elseif ( messenger_choice == 11 ) then  --Ôö¼Ó»ý·Ö10 
-			nt_setTask(1205,Uworld1205+20)
+			nt_setTask(3000,Uworld3000+20)
 			tongaward_message(20);	--by Ð¡É½
 			Msg2Player("§iÓm tÝch lòy trong nhiÖm vô TÝn Sø cña b¹n t¨ng lªn 20 ®iÓm!")
 			AddSkillState( 509, 1, 0, 180)
 		elseif ( messenger_choice == 13 ) then  --¼õÉÙ»ý·Ö10
-			if ( Uworld1205 >= 10 ) then 
-			nt_setTask(1205,Uworld1205-10)
+			if ( Uworld3000 >= 10 ) then 
+			nt_setTask(3000,Uworld3000-10)
 			Msg2Player("§iÓm tÝch lòy trong nhiÖm vô TÝn Sø cña b¹n gi¶m ®i 10 ®iÓm!")
 			AddSkillState( 509, 1, 0, 180)
 			end
@@ -140,7 +140,7 @@ function messenger_templego(KillerNpcIndex)
 	end
 	
 	
-	local Uworld1205 = nt_getTask(1205)
+	local Uworld3000 = nt_getTask(3000)
 	local Uworld1207 = nt_getTask(1207)
 	local Uworld1207 = nt_getTask(1209)
 	

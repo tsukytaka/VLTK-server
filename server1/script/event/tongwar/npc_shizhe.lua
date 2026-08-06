@@ -1,7 +1,7 @@
 --武林第一帮使者
--- 九寓天息第一帮 第一名帮会帮主可以登记自己的队友
+-- 九月天下第一帮 第一名帮会帮主可以登记自己的队友
 
-Include("\\script\\event\\tongwar\\head.lua");		--天息第一帮头文件
+Include("\\script\\event\\tongwar\\head.lua");		--天下第一帮头文件
 Include("\\script\\task\\system\\task_string.lua");	--对话界面头文件
 Include("\\script\\global\\titlefuncs.lua");		-- 称号
 
@@ -13,11 +13,11 @@ _TB_ONETONG_MEMLIST	=	{-1, {}};
 local SZTONGNAME_ONETONG = "BC";
 local N_TTITLE_ID = 199;
 
-ONETONG_START_SIGNUP	= 20120528						-- 天息第一帮开始登记时间
-ONETONG_ENDLE_SIGNUP	= 20200603						-- 天息第一帮结束登记时间
+ONETONG_START_SIGNUP	= 20120528						-- 天下第一帮开始登记时间
+ONETONG_ENDLE_SIGNUP	= 20120603						-- 天下第一帮结束登记时间
 
-ONETONG_START_TITLE		= 20100118						-- 天息一帮领取头衔开始时间
-ONETONG_ENDLE_TITLE		= 20200214						-- 天息一帮领取头衔结束时间
+ONETONG_START_TITLE		= 20100118						-- 天下一帮领取头衔开始时间
+ONETONG_ENDLE_TITLE		= 20100214						-- 天下一帮领取头衔结束时间
 
 ONETONG_MAX_SIGNMEM		= 74
 
@@ -110,7 +110,6 @@ function onetong_managemem(szmem, npos)
 end;
 
 function onetong_delonemem(szmem, npos)
-
 	local n_lid = LG_GetLeagueObjByRole(ONETONG_LGTYPE, szmem);
 	if (FALSE(n_lid)) then
 		return

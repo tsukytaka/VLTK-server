@@ -81,7 +81,7 @@ function DaTuShaClass:OnTime(TIME)
 		self.nState = 1
 	elseif nTime >= PREPARE_TIME and nTime < TOTAL_TIME then
 		if self.nState == 1 then
-			Msg2Map(self.nMapId, "B¸t ®Çu chÝnh thøc tû vâ! X«ng lªn nµo!")
+			Msg2Map(self.nMapId, "B¾t ®Çu chÝnh thøc tû vâ! X«ng lªn nµo!")
 			self:BeginDatusha()
 		end
 		self.nState = 2
@@ -106,7 +106,7 @@ function DaTuShaClass:BeginDatusha()
 		local nPlayerIndex = SearchPlayer(szName)
 		if tbData and nPlayerIndex > 0 then
 			if self.nSurvivorCount < MIN_PLAYER_COUNT then				
-				CallPlayerFunction(nPlayerIndex, tbAwardTemplet.Give, tbAwardTemplet, {nExp_tl = 5e6}, 1, {"Lo¹n ChiÕn Cöu Ch©u Cèc","PhÇn th­ëng an ñi"})
+				CallPlayerFunction(nPlayerIndex, tbAwardTemplet.Give, tbAwardTemplet, {nExp_tl = 500000}, 1, {"Lo¹n ChiÕn Cöu Ch©u Cèc","PhÇn th­ëng an ñi"})
 				CallPlayerFunction(nPlayerIndex, NewWorld, unpack(tbData.tbSignUpPos))
 				CallPlayerFunction(nPlayerIndex, Msg2Player, "Xin l­îng thø, do nh©n sè b¸o danh qu¸ Ýt, cuéc thi lÇn nµy bÞ hñy bá.")
 			else

@@ -1,6 +1,5 @@
 Include("\\script\\lib\\string.lua");
 Include("\\script\\event\\newyear_2009\\taskctrl.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 local wuguo_tbFormulaList = 
 {
@@ -69,7 +68,7 @@ end
 
 function newyear0901_wuguo_IsActDate()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_newyear_2009	==	0) then
+	if (nDate < 20090116 or nDate > 20090215) then
 		return 0;
 	else
 		return 1;

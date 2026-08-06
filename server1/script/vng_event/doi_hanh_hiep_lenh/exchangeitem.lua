@@ -19,7 +19,7 @@ function tbVng_Exchange_HHL:AddDialog(tbDialog)
 	if self:IsActive() ~= 1 then
 		return
 	end
-	tbDialog:AddOptEntry("Phôc håi Hµnh HiÖp LÖnh", tbVng_Exchange_HHL.Recover_Item_UI, {tbVng_Exchange_HHL})
+	-- tbDialog:AddOptEntry("Phôc håi Hµnh HiÖp LÖnh", tbVng_Exchange_HHL.Recover_Item_UI, {tbVng_Exchange_HHL})
 end
 
 function OnCancel() end

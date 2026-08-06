@@ -2,10 +2,9 @@
 -- by£ºDan_Deng(2003-09-16)
 -- edit by Ğ¡ÀË¶à¶à
 Include("\\script\\event\\zhongqiu2007\\picture_head.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 function main()
 	local ndate = tonumber(GetLocalDate("%y%m%d%H%M"))
-	if (CFG_zhongqiu2007 == 1) then
+	if ndate > 0709220000 and ndate < 0710312400 then
 		SetTaskTemp(TSK_TEMP,1)
 		Describe("Hoa viªn ngo¹i: Trung thu ®· ®Õn, chØ cÇn thu thËp ®ñ 6 <color=red>m¶nh tranh V©n Du<color> ®Ó hîp thµnh 1 bøc tranh hoµn chØnh mang ®Õn cho ta, ta sÏ tÆng l¹i ®¹i hiÖp 1 b¸nh <color=red>Cèng NguyÖt Phï Dung<color>.",2,"§æi b¸nh Cèng NguyÖt Phï Dung/makeItemUI","Nh©n tiÖn ghĞ qua th«i/NoChoice")
 	else

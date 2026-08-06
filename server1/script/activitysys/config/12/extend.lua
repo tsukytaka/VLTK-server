@@ -139,7 +139,7 @@ function pActivity:GiveAward()
 	
 	local tbAward = {
 		[1]={nExp_tl=40e6},
-		[2]={szName="Hçn Nguyªn Linh Lé",tbProp={6,1,2312,1,0,0},nCount=1},
+		[2]={szName="Hµnh HiÖp LÖnh",tbProp={6,1,2566,1,0,0},nCount=5},
 	}
 	tbAwardTemplet:Give(tbAward, 1, {%EVENT_LOG_TITLE, "NhËn phÇn th­ëng tõ Th­¬ng Bu«n"})
 	

@@ -41,53 +41,53 @@ WLLS_MAX_COUNT	= 200	--Ã¿¸ö×¼±¸³¡×î¶àÈÝÄÉ¶àÉÙÕ½¶Ó
 
 WLLS_MATCHTIME	= 15	--Ã¿³¡±ÈÈüµÄÊ±¼ä£¨·ÖÖÓ£©
 
-WLLS_LEVEL_DESC = {"Vâ l©m liªn ®Êu", "Vâ l©m liªn ®Êu"}
+WLLS_LEVEL_DESC = {"ÎäÁÖÁªÈü", "ÎäÁÖÁªÈü"}
 WLLS_LingQi_PerCOUNT = 4
 WLLS_TYPE = {
 	{
-		name = "Song ®Êu tù do",	-- ÁªÈüÀàÐÍÃû³Æ
+		name = "Ë«ÈËÈü",	-- ÁªÈüÀàÐÍÃû³Æ
 		max_member = 2,		-- Õ½¶Ó×î´ó³ÉÔ±Êý
 		ladder = 10196,		-- ÅÅÃûÆðÊ¼ID
 		mtypes = 2,			-- ¸ÃÁªÈüÀàÐÍÖÐµÄÕ½¶ÓÀàÐÍÊýÄ¿£¨¼´ÊÇ×îÖÕÅÅÐÐ°ñÊýÁ¿£©
 		groups = 8,			-- Í¬ÀàÐÍµÄÕ½¶Ó¿ÉÒÔ±»·ÖÅäµ½¶àÉÙÌ×²»Í¬µÄ³¡µØ
 	},
 	{
-		name = "§¬n ®Êu m«n ph¸i",
+		name = "µ¥ÈËÈü",
 		max_member = 1, --??n ?¨ºu m?n ph?i
 		ladder = 10201,
 		mtypes = 20,
 		groups = 1,
 	},
 	{
-		name = "Song ®Êu s­ ®å",
+		name = "Ê¦Í½Ë«ÈËÈü",
 		max_member = 2,
 		ladder = 10221,
 		mtypes = 2,
 		groups = 8,
 	},
 	{
-		name = "Tam ®Êu tù do",
+		name = "ÈýÈËÈü",
 		max_member = 3, -- tam ?¨ºu
 		ladder = 10223,
 		mtypes = 2,
 		groups = 8,
 	},
 	{
-		name = "§¬n ®Êu tù do",
+		name = "×ÔÓÉµ¥ÈËÈü",
 		max_member = 1, -- ??n ?¨ºu t¨´ do
 		ladder = 10235,
 		mtypes = 2,
 		groups = 8,
 	},
 	{
-		name = "Song ®Êu cïng hÖ",
+		name = "Ë«ÈËÈü£¨Í¬Ïµ£©",
 		max_member = 2,
 		ladder = 10238,
 		mtypes = 10,
 		groups = 1,
 	},
 	{
-		name = "Song ®Êu tù do",
+		name = "Ë«ÈËÈü",
 		max_member = 2,
 		ladder = 10248,
 		mtypes = 2,
@@ -159,16 +159,16 @@ end
 --¼ì²é²ÎÈü´ÎÊý
 function wlls_CheckMatchCount(n_leagueid, n_sid)
 	
-	--if FALSE(n_leagueid) or WLLS_SEASON_TB[n_sid] == nil then
-	--	return 
-	--end
+	if FALSE(n_leagueid) or WLLS_SEASON_TB[n_sid] == nil then
+		return 
+	end
 	
-	-- if (LG_GetLeagueTask(n_leagueid, WLLS_LGTASK_TOTAL) >= WLLS_SEASON_TB[n_sid][4]) then	--²ÎÈü´ÎÊý´ïµ½ÏÞÖÆ
+	 if (LG_GetLeagueTask(n_leagueid, WLLS_LGTASK_TOTAL) >= WLLS_SEASON_TB[n_sid][4]) then	--²ÎÈü´ÎÊý´ïµ½ÏÞÖÆ
 		
-	--	if LG_GetLeagueTask(n_leagueid, WLLS_LGTASK_TOTAL_EX) >= LG_GetLeagueTask(n_leagueid, WLLS_LGTASK_USE_LingQi_COUNT) * WLLS_LingQi_PerCOUNT then
-	--		return
-	--	end
-	--end
+		if LG_GetLeagueTask(n_leagueid, WLLS_LGTASK_TOTAL_EX) >= LG_GetLeagueTask(n_leagueid, WLLS_LGTASK_USE_LingQi_COUNT) * WLLS_LingQi_PerCOUNT then
+			return
+		end
+	end
 	
 	return 1
 end

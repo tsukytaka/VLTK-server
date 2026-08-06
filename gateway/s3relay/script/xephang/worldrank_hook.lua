@@ -94,7 +94,7 @@ end
 function RankHook:ReadRankFile()
 	local f = openfile(self.RANK_FILE, "r")
 	if not f then
-		print("=====> Loi: Khong Tim Thay File "..self.RANK_FILE)
+		print("=====> Loi: Khong tim thay file "..self.RANK_FILE)
 		return nil
 	end
 	
@@ -133,7 +133,7 @@ end
 function RankHook:ReadPhuHaoFile()
 	local f = openfile(self.PHUHAO_FILE, "r")
 	if not f then
-		print("=====> Loi: Khong Tim Thay File "..self.PHUHAO_FILE)
+		print("=====> Loi: Khong tim thay file "..self.PHUHAO_FILE)
 		return nil
 	end
 
@@ -170,7 +170,7 @@ function RankHook:UpdateRank()
 	-- =============================================
 	local tbData = self:ReadRankFile()
 	if not tbData or getn(tbData) == 0 then
-		print("=====> Khong Co Du Lieu!")
+		print("=====> Khong Cc Du Lieu!")
 		return
 	end	
 	sort(tbData, function(a, b)
@@ -179,17 +179,30 @@ function RankHook:UpdateRank()
 		if a.exp ~= b.exp then return a.exp > b.exp end
 		return a.name < b.name
 	end)	
+	local hasDoubleTrans = nil
+	for i = 1, getn(tbData) do
+		if tbData[i].trans >= 10 then
+			hasDoubleTrans = 1
+			break
+		end
+	end
 	
 	-- Top 10 cao thu tong
 	Ladder_ClearLadder(10287)	
 	for iTop = 1, 10 do
 		if not tbData[iTop] then break end
+		
 		local v = tbData[iTop]
-		local displayName = format("%d %s", iTop, v.name)
+		local displayName = format("%d %s	%d CÊp - TS:", iTop, v.name, v.level)
+		
+		if hasDoubleTrans and v.trans < 10 then
+			displayName = displayName .. " "
+		end
+		
 		if self._nAllowConvertRank == 1 then
 			Ladder_NewLadder(10287, displayName, tonumber("1."..(11-iTop)), 1)
 		else
-			Ladder_NewLadder(10287, displayName, v.level, 1, 0)
+			Ladder_NewLadder(10287, displayName, v.trans, 1, 0)
 		end				
 	end
 	
@@ -198,6 +211,7 @@ function RankHook:UpdateRank()
 	for i = 1, getn(tbData) do
 		local v = tbData[i]
 		local ladderId = self:GetFactionLadderId(v.faction, v.fno)
+		
 		if ladderId then
 			if not perFaction[ladderId] then
 				perFaction[ladderId] = {}
@@ -219,14 +233,27 @@ function RankHook:UpdateRank()
 			if a.displayLevel ~= b.displayLevel then return a.displayLevel > b.displayLevel end
 			return a.exp > b.exp
 		end)
+		local hasDoubleTrans = nil
+		for i = 1, getn(list) do
+			if list[i].trans >= 10 then
+				hasDoubleTrans = 1
+				break
+			end
+		end
 		for i = 1, 10 do
 			if not list[i] then break end
+			
 			local v = list[i]
-			local displayName = format("%d %s", i, v.name)
+			local displayName = format("%d %s	%d CÊp - TS:", i, v.name, v.level)
+
+			if hasDoubleTrans and v.trans < 10 then
+				displayName = displayName .. " "
+			end
+			
 			if self._nAllowConvertRank == 1 then
 				Ladder_NewLadder(ladderId, displayName, tonumber("1."..(11-i)), 1)
 			else
-				Ladder_NewLadder(ladderId, displayName, v.level, 1, v.fno)
+				Ladder_NewLadder(ladderId, displayName, v.trans, 1, v.fno)
 			end
 		end
 	end
@@ -289,9 +316,9 @@ function RankHook:UpdateRank()
 			end
 		end
 
-		print("=====> Xep Hang Phu Hao Hien Tai Co: "..getn(tbPhuHao).." Nguoi.")
+		print("=====> Phu Hao Hien Tai Co: "..getn(tbPhuHao).." Nguoi.")
 	else
-		print("=====> Khong Co Du Lieu Xep Hang Phu Hao Nao!")
+		print("=====> Khong Cc Du Lieu Phu Hao!")
 	end
 end
 

@@ -72,13 +72,9 @@ function OnDeath( nNpcIndex )
 	
 	BT_SetData(PL_KILLNPC, BT_GetData(PL_KILLNPC) + 1);
 	BT_SetData(PL_KILLRANK1 + rank - 1, BT_GetData(PL_KILLRANK1 + rank - 1) + 1);
-	pointnpc = bt_addtotalpoint(BT_GetTypeBonus(PL_KILLRANK1 + rank - 1, GetCurCamp()))
+	bt_addtotalpoint(BT_GetTypeBonus(PL_KILLRANK1 + rank - 1, GetCurCamp()))
 	mar_addmissionpoint(BT_GetTypeBonus(PL_KILLRANK1 + rank - 1, GetCurCamp()))
-	if (pointnpc == nil or pointnpc == 0 ) then
-		Msg2Player("Bπn nhÀn Æ≠Óc <color=yellow>0<color> Æi”m t›ch lÚy!")
-	else
-		Msg2Player("Bπn nhÀn Æ≠Óc <color=yellow>"..pointnpc .."<color> Æi”m t›ch lÚy!")
-	end
+	
 	BT_SortLadder()
 	BT_BroadSelf()
 end;

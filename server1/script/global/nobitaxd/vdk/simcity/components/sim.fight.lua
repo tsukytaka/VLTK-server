@@ -69,7 +69,7 @@ function execCastNormalSkill(self, simInstance, tbNpc)
         else
             NpcCastSkill(tbNpc.finalIndex, skillId, skillLevel, targetX*32, targetY*32)
         end
-        tbNpc.tick_canCast = tbNpc.tick_breath + 2*18/REFRESH_RATE
+        tbNpc.tick_canCast = tbNpc.tick_breath + (SIMBOT_NORMAL_CAST_DELAY or 2)*18/REFRESH_RATE
         return
     end
 
@@ -77,7 +77,7 @@ function execCastNormalSkill(self, simInstance, tbNpc)
     if foundNpcEnemy > 0 then
         local targetX, targetY, targetW = GetNpcPos(foundNpcEnemy)
         NpcCastSkill(tbNpc.finalIndex, skillId, skillLevel, targetX, targetY)
-        tbNpc.tick_canCast = tbNpc.tick_breath + 2*18/REFRESH_RATE
+        tbNpc.tick_canCast = tbNpc.tick_breath + (SIMBOT_NORMAL_CAST_DELAY or 2)*18/REFRESH_RATE
         return
     end
 end
@@ -123,13 +123,13 @@ function execCastOnSelf(self, tbNpc)
 end
 
 SIMBOT_HP_CAP = SIMBOT_HP_CAP or 60000
-SIMBOT_NGAMI_BUFF = 1 
+SIMBOT_NGAMI_BUFF = SIMBOT_NGAMI_BUFF or 1 
 SIMBOT_BUFF_REALCAST = SIMBOT_BUFF_REALCAST or 0
 SIMBOT_DEBUFF = SIMBOT_DEBUFF or 1  
-SIMBOT_TRANPHAI = 1  
+SIMBOT_TRANPHAI = SIMBOT_TRANPHAI or 1  
 SIMBOT_CITY_BUFF_PCT = SIMBOT_CITY_BUFF_PCT or 30 
 function BuffChar(self, simInstance, tbNpc)
-    if SIMBOT_NGAMI_BUFF ~= 1 then return end     
+
     if BotShowAura and not tbNpc.dhSet and tbNpc.tongkim ~= 1 then   
         tbNpc.dhSet = 1        
         g_oldTitleCount = g_oldTitleCount or 0
@@ -153,7 +153,7 @@ function BuffChar(self, simInstance, tbNpc)
         if tbNpc.cityBuffOn == 0 and tbNpc.isFighting ~= 1 and tbNpc.faction ~= "ngami" and tbNpc.faction ~= "caibang" and tbNpc.faction ~= "ngudoc" then return end  
     end
     -- Ho tro
-    if tbNpc.faction == "ngami" then        
+    if tbNpc.faction == "ngami" and SIMBOT_NGAMI_BUFF == 1 then        
         if AddNpcSkillState and (not tbNpc.ngamiAuraTick or tbNpc.ngamiAuraTick <= tbNpc.tick_breath) then
             tbNpc.ngamiAuraTick = tbNpc.tick_breath + 20*18/REFRESH_RATE
             AddNpcSkillState(tbNpc.finalIndex, 86, 20, 1, 24*60*60*18, 1)

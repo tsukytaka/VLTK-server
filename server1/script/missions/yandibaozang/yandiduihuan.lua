@@ -7,31 +7,31 @@ Include("\\script\\lib\\awardtemplet.lua")
 IncludeLib("ITEM")
 yandiduihuan_tbItemList = 
 {
-	{szName="To¹i Nh©n XÝch HuyÕt Nguyªn Vò Gi¸p", nQuality=1, tbProp={0, 442}},
-	{szName="To¹i Nh©n B¸ch LuyÖn Kh«i", nQuality=1, tbProp={0, 443}},
-	{szName="To¹i Nh©n Trôc Thiªn Ngoa", nQuality=1, tbProp={0, 445}},
-	{szName="To¸i Nh©n Kim Lò NhuyÔn Vi Hé UyÓn", nQuality=1, tbProp={0, 446}},
-	{szName="Phôc Hi Hoan ¶nh KÞch", nQuality=1, tbProp={0, 455}},
-	{szName="Phôc Hi V« L­îng TÞch Tµ Thñ", nQuality=1, tbProp={0, 456}},
-	{szName="Phôc Hi To¸i T©m", nQuality=1, tbProp={0, 457}},
-	{szName="N÷ Oa Hång Nhan Ph¸t §¸i", nQuality=1, tbProp={0, 463}},
-	{szName="N÷ Oa Lôc NghÖ Nghª Th­êng Thóc §¸i", nQuality=1, tbProp={0, 464}},
-	{szName="N÷ Oa Hµn T­¬ng", nQuality=1, tbProp={0, 467}},
-	{szName="Chóc Dung LiÖt DiÖm Né Phong Trang", nQuality=1, tbProp={0, 472}},
-	{szName="Chóc Dung Kinh ChÝch BÊt DiÖt Tr¶o", nQuality=1, tbProp={0, 476}},
-	{szName="Chóc Dung Ph¸ NhËt", nQuality=1, tbProp={0, 477}},
-	{szName="ThÇn N«ng Tiªu D­¬ng §Þa Hoµng Y", nQuality=1, tbProp={0, 482}},
-	{szName="ThÇn N«ng Né L«i §Çu Hoµn", nQuality=1, tbProp={0, 483}},
-	{szName="ThÇn N«ng Ngù Phong L÷", nQuality=1, tbProp={0, 485}},
-	{szName="ThÇn N«ng Tr¶m Nh¹c", nQuality=1, tbProp={0, 487}},
+--	{szName="To¹i Nh©n XÝch HuyÕt Nguyªn Vò Gi¸p", nQuality=1, tbProp={0, 442}},
+--	{szName="To¹i Nh©n B¸ch LuyÖn Kh«i", nQuality=1, tbProp={0, 443}},
+--	{szName="To¹i Nh©n Trôc Thiªn Ngoa", nQuality=1, tbProp={0, 445}},
+--	{szName="To¸i Nh©n Kim Lò NhuyÔn Vi Hé UyÓn", nQuality=1, tbProp={0, 446}},
+--	{szName="Phôc Hi Hoan ¶nh KÞch", nQuality=1, tbProp={0, 455}},
+--	{szName="Phôc Hi V« L­îng TÞch Tµ Thñ", nQuality=1, tbProp={0, 456}},
+--	{szName="Phôc Hi To¸i T©m", nQuality=1, tbProp={0, 457}},
+--	{szName="N÷ Oa Hång Nhan Ph¸t §¸i", nQuality=1, tbProp={0, 463}},
+--	{szName="N÷ Oa Lôc NghÖ Nghª Th­êng Thóc §¸i", nQuality=1, tbProp={0, 464}},
+--	{szName="N÷ Oa Hµn T­¬ng", nQuality=1, tbProp={0, 467}},
+--	{szName="Chóc Dung LiÖt DiÖm Né Phong Trang", nQuality=1, tbProp={0, 472}},
+--	{szName="Chóc Dung Kinh ChÝch BÊt DiÖt Tr¶o", nQuality=1, tbProp={0, 476}},
+--	{szName="Chóc Dung Ph¸ NhËt", nQuality=1, tbProp={0, 477}},
+--	{szName="ThÇn N«ng Tiªu D­¬ng §Þa Hoµng Y", nQuality=1, tbProp={0, 482}},
+--	{szName="ThÇn N«ng Né L«i §Çu Hoµn", nQuality=1, tbProp={0, 483}},
+--	{szName="ThÇn N«ng Ngù Phong L÷", nQuality=1, tbProp={0, 485}},
+--	{szName="ThÇn N«ng Tr¶m Nh¹c", nQuality=1, tbProp={0, 487}},
 }
 
 yandiduihuan_Material = 
 {
-	{szName="Ph­îng Minh Chïy", tbProp={6, 1, 1746}},
-	{szName="HuyÒn tinh kho¸ng th¹ch cÊp 8", tbProp={6, 1, 147, 8}},
-	{szName="M¶nh Bæ Thiªn Th¹ch (trung)", tbProp={6, 1, 1309}},
-	{szName="ThÇn bÝ kho¸ng th¹ch", tbProp={6, 1, 398}},
+--	{szName="Ph­îng Minh Chïy", tbProp={6, 1, 1746}},
+--	{szName="HuyÒn tinh kho¸ng th¹ch cÊp 8", tbProp={6, 1, 147, 8}},
+--	{szName="M¶nh Bæ Thiªn Th¹ch (trung)", tbProp={6, 1, 1309}},
+--	{szName="ThÇn bÝ kho¸ng th¹ch", tbProp={6, 1, 398}},
 }
 yandiduihuan_CostMoney = 10000000 --1QW
 

@@ -10,7 +10,7 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	szMessageType = "nil",
 	szName = "Chän dßng chän tÆng v¹n b¶o r­¬ng",
 	nStartDate = 200910150000,
-	nEndDate  = 200911020000,
+	nEndDate  = 202911020000,
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
@@ -69,12 +69,12 @@ tbConfig[4] = --Ò»¸öÏ¸½Ú
 	szName = "BÊm vµo Nam H¶i Kú Nh©n",
 	nStartDate = nil,
 	nEndDate  = nil,
-	tbMessageParam = {"Nam H¶i Kú Nh©n"},
+	tbMessageParam = {"LÔ Quan"},
 	tbCondition = 
 	{
 	},
 	tbActition = 
 	{
-		{"AddDialogOpt",	{"TÆng v¹n b¶o r­¬ng",1} },
+		-- {"AddDialogOpt",	{"TÆng v¹n b¶o r­¬ng",1} },
 	},
 }

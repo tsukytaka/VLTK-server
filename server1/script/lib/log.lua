@@ -3,22 +3,21 @@ IncludeLib("ITEM");
 local tbFactionNumber2Name = 
 {
 -- [-1]="Ng­êi kh«ng tªn",
-[-1]="Ch­a nhËp ph¸i",
- [0]="ThiÕu L©m ph¸i",
- [1]="Thiªn V­¬ng Bang",
- [2]="§­êng M«n",
- [3]="Ngò §éc Gi¸o",
- [4]="Nga My ph¸i",
- [5]="Thóy Yªn m«n",
- [6]="C¸i Bang",
- [7]="Thiªn NhÉn Gi¸o",
- [8]="Vâ §ang ph¸i",
- [9]="C«n L«n ph¸i",
- [10]="Hoa S¬n",
+	[-1]="Ch­a nhËp ph¸i",
+	 [0]="ThiÕu L©m ph¸i",
+	 [1]="Thiªn V­¬ng Bang",
+	 [2]="§­êng M«n",
+	 [3]="Ngò §éc Gi¸o",
+	 [4]="Nga My ph¸i",
+	 [5]="Thóy Yªn m«n",
+	 [6]="C¸i Bang",
+	 [7]="Thiªn NhÉn Gi¸o",
+	 [8]="Vâ §ang ph¸i",
+	 [9]="C«n L«n ph¸i",
+	 [10]="Hoa S¬n",
 }
 
 function _WritePlayerLog(szTitle, szMsg)
-	
 	local szTime = GetLocalDate("%H:%M\t%d/%m/%Y")		
 	local szLog = format("[%s]\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s",
 		szTitle,

@@ -213,22 +213,24 @@ function GiveTiaoZhanLing()
 		return 0;
 	end
 	--**Ìá½»ÌôÕ½Áî
-	GiveItemUI("Giao nép khiªu chiÕn lÖnh", "Khiªu chiÕn lÖnh cã thÓ ®æi 50000 ®iÓm kinh nghiÖm, dïng ®Ó b¸o danh c«ng thµnh chiÕn cho bang héi.", "sure_GiveTiaoZhanLing", "OnCancel");
+	--GiveItemUI("Giao nép khiªu chiÕn lÖnh", "Khiªu chiÕn lÖnh cã thÓ ®æi 50000 ®iÓm kinh nghiÖm, dïng ®Ó b¸o danh c«ng thµnh chiÕn cho bang héi.", "sure_GiveTiaoZhanLing", "OnCancel");
+	local nKhieuChienLenh = CalcEquiproomItemCount(6,1,1499,-1)
+	AskClientForNumber("sure_GiveTiaoZhanLing",0,nKhieuChienLenh, "Mêi nhËp sè l­îng: ")
 end
 
 function sure_GiveTiaoZhanLing(nCount)
-	if nCount <= 0 then
-		Say("ThËt ®¸ng tiÕc, ng­¬i ch­a giao vËt phÈm nhiÖm vô cho ta",2,"Giao l¹i vËt phÈm/GiveTiaoZhanLing","§Ó ta suy nghÜ l¹i/OnCancel");
-		return 0;
-	end
-	for i = 1, nCount do
-		local nItemidx = GetGiveItemUnit(i);
-		local g, d, p = GetItemProp(nItemidx);
-		if (g ~= nCityWar_Item_ID_G or d ~= nCityWar_Item_ID_D or p ~= nCityWar_Item_ID_P) then
-			Say("Ta kh«ng nhËn nh÷ng thø kh¸c, chØ cÇn ®­a ta <color=yellow>Khiªu chiÕn lÖnh<color> lµ ®­îc råi.", 2,"Giao l¹i vËt phÈm/GiveTiaoZhanLing","§Ó ta suy nghÜ l¹i/OnCancel");
-			return 0;
-		end;
-	end;
+	--if nCount <= 0 then
+		--Say("ThËt ®¸ng tiÕc, ng­¬i ch­a giao vËt phÈm nhiÖm vô cho ta",2,"Giao l¹i vËt phÈm/GiveTiaoZhanLing","§Ó ta suy nghÜ l¹i/OnCancel");
+		--return 0;
+	--end
+	--for i = 1, nCount do
+		--local nItemidx = GetGiveItemUnit(i);
+		--local g, d, p = GetItemProp(nItemidx);
+		--if (g ~= nCityWar_Item_ID_G or d ~= nCityWar_Item_ID_D or p ~= nCityWar_Item_ID_P) then
+			--Say("Ta kh«ng nhËn nh÷ng thø kh¸c, chØ cÇn ®­a ta <color=yellow>Khiªu chiÕn lÖnh<color> lµ ®­îc råi.", 2,"Giao l¹i vËt phÈm/GiveTiaoZhanLing","§Ó ta suy nghÜ l¹i/OnCancel");
+			--return 0;
+		--end;
+	--end;
 	local nDate = tonumber(tonumber(GetLocalDate("%y"))..tonumber(GetLocalDate("%m"))..tonumber(GetLocalDate("%d")));
 	local nLibao = GetTask(TIAOZHANLING_TASK_DATE);
 	local nOlddate = tonumber(GetByte(nLibao,1)..GetByte(nLibao,2)..GetByte(nLibao,3));
@@ -245,28 +247,19 @@ function sure_GiveTiaoZhanLing(nCount)
 	end
 	local nCityId = getSigningUpCity(1);
 	local szTongName, nTongID = GetTongName();
-	--local szplayName = GetName()
-	--local nlg = LG_GetLeagueObj(TIAOZHANLING_LGTYPE,TIAOZHANLING_LGName);
-	--local nlid = LG_GetLeagueObjByRole(TIAOZHANLING_LGTYPE, szTongName);
-	--local nCurCount = LG_GetMemberTask(TIAOZHANLING_LGTYPE, szTongName, szplayName, LGTSK_QINGTONGDING_COUNT);
 	local nCurCount = LG_GetMemberTask(TIAOZHANLING_LGTYPE,TIAOZHANLING_LGName,szTongName,LGTSK_TIAOZHANLING_COUNT)
-	--ConsumeEquiproomItem(nCount, nCityWar_Item_ID_G, nCityWar_Item_ID_D, nCityWar_Item_ID_P, -1);
-	for i = 1, nCount do
-		local nItemidx = GetGiveItemUnit(i);
-		RemoveItemByIndex(nItemidx)
-	end;
+	
+	--for i = 1, nCount do
+		--local nItemidx = GetGiveItemUnit(i);
+		--RemoveItemByIndex(nItemidx)	
+	--end;
 	SetTask(TIAOZHANLING_TASK_COUNT,nCountall+nCount);
-	--LG_ApplyAppendMemberTask(LEAGUETYPE_CITYWAR_SIGN, cityid_to_lgname(nCityId), szTongName, LGTSK_CITYWAR_SIGNCOUNT, 1, "", "")
-	
 	LG_ApplyAppendMemberTask(TIAOZHANLING_LGTYPE,TIAOZHANLING_LGName, szTongName, LGTSK_TIAOZHANLING_COUNT, nCount, "", "");
-	
-	
-	--print(TIAOZHANLING_LGTYPE,TIAOZHANLING_LGName, szTongName, LGTSK_TIAOZHANLING_COUNT, nCount, "", "")
-	--Ôö¼Ó¾­Ñé,Ìá½»1¸öÔö¼Ó5Íò¾­Ñé
 	nAddExp = nCount * 50000
 	AddOwnExp(nAddExp)
 	Msg2Player(format("B¹n ®· nép vµo %d khiªu chiÕn lÖnh, nhËn ®­îc %d ®iÓm kinh nghiÖm",nCount,nAddExp))
 	WriteLog(format("[C«ng thµnh chiÕn_giao khiªu chiÕn lÖnh]Date:%s Account:%s Name:%s Tong:%s Count:%d Exp:%d",GetLocalDate("%y-%m-%d %H:%M:%S"),GetAccount(),GetName(),szTongName,nCount,nAddExp))
+	ConsumeEquiproomItem(nCount,6,1,1499,-1)	
 end;
 
 --²éÑ¯ÌôÕ½Áî

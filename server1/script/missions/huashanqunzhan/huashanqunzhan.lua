@@ -1,5 +1,5 @@
 Include("\\script\\missions\\basemission\\class.lua")
-
+IncludeLib("RELAYLADDER");
 Include("\\script\\missions\\huashanqunzhan\\taskctrl.lua")
 
 if huashanqunzhan then
@@ -45,7 +45,7 @@ function huashanqunzhan:_init(tbMissionData, tbRef)
 	self.TSK_Kill			= 1773
 	self.TSK_Winer			= 1774
 	self.TSK_MatchId		= 1775
-	self.nMoney				= 100000
+	self.nMoney				= 200000
 	self.nPlayerCountLimit	= 300
 	self.nMinPlayerCountLimit = 10
 end
@@ -243,9 +243,16 @@ function huashanqunzhan:Judge(tbPlayer)
 	local szWinerName = doFunByPlayer(tbPlayer[1],GetName)
 	local nCurTime = GetMissionV(self.tbMissionV.SECOND_COUNTER)
 	
+	
 	local szMsg = format("B¹n lµ ng­êi chiÕn th¾ng cuèi cïng, trong vßng <color=yellow>%d<color> phót cã thÓ tiÕn hµnh nhËn th­ëng, nÕu qu¸ thêi h¹n sÏ kh«ng nhËn ®­îc n÷a.", self.nLatencyTime-nCurTime)
 	SetMissionS(self.tbMissionS.WINER_INDEX, szWinerName)
 	AddGlobalNews(format("Ng­êi chiÕn th¾ng cuèi cïng cña <color=red>%s<color>: <color=yellow>%s<color>.", self.szMatchName, szWinerName))
+	
+	local bilCountKill = doFunByPlayer(tbPlayer[1], GetTask, self.TSK_Kills)
+	doFunByPlayer(tbPlayer[1], Msg2Player, "B¹n ®· g¹ gôc ®­îc <color=yellow>"..bilCountKill.."<color> ®èi thñ, nhËn ®­îc <color=yellow>"..(bilCountKill * 500000).."<color> ®iÓm kinh nghiÖm!")
+	doFunByPlayer(tbPlayer[1], AddOwnExp, bilCountKill * 500000)
+	doFunByPlayer(tbPlayer[1], SetTask, 5981, doFunByPlayer(tbPlayer[1], GetTask, 5981) + 1)
+	doFunByPlayer(tbPlayer[1], Ladder_NewLadder, 10230, szWinerName, doFunByPlayer(tbPlayer[1], GetTask, 5981), 1)
 	doFunByPlayer(tbPlayer[1], SetTask, self.TSK_Winer, GetMissionV(self.tbMissionV.PLAYER_COUNT))
 	doFunByPlayer(tbPlayer[1], Msg2Player, szMsg)
 end

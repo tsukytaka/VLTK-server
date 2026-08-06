@@ -1,18 +1,11 @@
 IncludeLib("ITEM")
-Include("\\script\\tong\\tong_award_head.lua");-- byÖ¾É½£¬°ï»áÖÜÄ¿±ê¹±Ï×¶È
+Include("\\script\\tong\\tong_award_head.lua");
+Include("\\script\\tong\\tong_award_head.lua");
 Include("\\script\\lib\\progressbar.lua")
 Include("\\script\\lib\\awardtemplet.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua");
-
---	local GREADSEED_SEEDID_TASKID = 2310;
---	local GREADSEED_TIME_TASKID = 2311;
 
 local _Limit = function(nNpcIdx)
 	
-	if (CFG_GreatNight == 0) then
-		Say("HiÖn t¹i tÝnh n¨ng nµy ch­a më ! ! !", 0)
-		return
-	end
 	if (0 == GetCamp()) then
 		Msg2Player("B¹n ch­a gia nhËp m«n ph¸i, kh«ng thÓ h¸i qu¶.")
 		return
@@ -25,17 +18,16 @@ local _Limit = function(nNpcIdx)
 	
 	local nPlayerLevel = GetLevel();
 	local nGetSeedLevel = nil;
-	if (nPlayerLevel < 90) then
+	if (nPlayerLevel < 80) then
 		nGetSeedLevel = 1;
-	elseif (nPlayerLevel >= 90 and nPlayerLevel < 120) then
+	elseif (nPlayerLevel >= 80 and nPlayerLevel < 90) then
 		nGetSeedLevel = 2;
-	elseif (nPlayerLevel >= 120) then
+	elseif (nPlayerLevel >= 90) then
 		nGetSeedLevel = 3;
 	end
 	
-	if (nGetSeedLevel ~= 3) then -- Èç¹û¼¶±ð²»¶Ô,²»ÄÜ½øÐÐÊ°È¡
-		--ÕâÀï¸æËßÍæ¼Ò¼¶±ð²»¶Ô,²»ÄÜÊ°È¡
-		Msg2Player("Lo¹i qu¶ nµy ng­êi ch¬i ph¶i tõ cÊp 120 trë lªn míi cã thÓ h¸i ®­îc ")
+	if (nGetSeedLevel ~= 3) then 
+		Msg2Player("Lo¹i qu¶ nµy ng­êi ch¬i ph¶i tõ cÊp 90 trë lªn míi cã thÓ h¸i ®­îc ")
 		return
 	end;
 	
@@ -57,27 +49,32 @@ local _GetFruit = function(nNpcIdx, dwNpcId)
 	DelNpc(nNpcIdx)
 	
 	tbAwardTemplet:GiveAwardByList({tbProp = {6,1,907,1,0,0,0}, nExpiredTime = 10080}, "§ªm Huy Hoµng", 1);
-	--T¹m ®ãng tÝnh n¨ng ch­a ho¹t ®éng - Modified by DinhHQ - 20110427
-	--tbAwardTemplet:GiveAwardByList({tbProp = {6,1,2804,1,0,0,0}}, "§ªm Huy Hoµng", 30);
-	
-	tongaward_goldenseed();-- byÖ¾É½£¬°ï»áÖÜÄ¿±ê¹±Ï×¶È
-	--Msg2Player("ÄãµÃµ½ÁËÒ»¸ö»Æ½ðÖ®¹û¡£");
+	tongaward_goldenseed();
 	AddGlobalNews(format("§¹i hiÖp %s ®· h¸i ®­îc qu¶ Hoµng Kim!!!",GetName()));
+	Msg2SubWorld("Chóc mõng ®¹i hiÖp <color=green>"..GetName().."<color> ®· nhÆt ®­îc qu¶ Hoµng Kim!!!")
 end
 
 
 local _OnBreak = function()
+	local nNpcIdx = GetLastDiagNpc();
 	Msg2Player("Thu thËp ®øt ®o¹n")
+	SetNpcParam(nNpcIdx, 3, 0)
 end
 
 function main()
 	local nNpcIdx = GetLastDiagNpc();
 	local dwNpcId = GetNpcId(nNpcIdx)
+
+	if  GetNpcParam(nNpcIdx, 3) > 0 then
+	Msg2Player("§ang cã ng­êi h¸i qu¶ nµy råi")
+	return
+	end
 	
 	if %_Limit(nNpcIdx) == nil then
 		return
 	end
-	--¿ªÆô½ø¶ÈÌõ
+	SetNpcParam(nNpcIdx, 3, 1)
 	tbProgressBar:OpenByConfig(2, %_GetFruit, {nNpcIdx, dwNpcId}, %_OnBreak)
+SetPKFlag(1)
 end;
 

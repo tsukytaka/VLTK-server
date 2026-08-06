@@ -5,7 +5,7 @@ tbChangeDestiny =
 {
 	bDeBug		= 0,							-- 是否DeBug版本
 	nStartDate	= 20090828,						-- 活动开始日期
-	nCloseDate	= 20501011, 					-- 活动结束日期
+	nCloseDate	= 20091011, 					-- 活动结束日期
 	nNpcResIdx	= 1446,							-- 活动NPC的模版ID
 	
 	nLimit_DayGive = 6,							-- 一天最多上交6个

@@ -4,6 +4,7 @@ Include("\\script\\tong\\tong_award_head.lua")		--By Liao Zhishan
 Include("\\script\\battles\\battles_award_head.lua")		--By Ð¡ÀË¶à¶à
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
+
 IncludeLib("SETTING");
 MISSIONID = 58;
 FRAME2TIME = 18;	--18Ö¡ÓÎÏ·Ê±¼äÏàµ±ÓÚ1ÃëÖÓ
@@ -213,19 +214,11 @@ function sf_winbouns(wincamp)
 		
 		--print(format("%d %d",player_total_point,JG_T_Value))
 		if(player_total_point >= 1000 and JG_T_Value < jg_ndate) then
-			local ItemIdx = AddItem(6,1,JUNGONGPAI,1,0,0);
+		
+			------------------------------------------------------------------------------------------------------
+
+			------------------------------------------------------------------------------------------------------
 			
-			local Tdate=FormatTime2Number(GetCurServerTime()+24*60*60)--ÁìÈ¡µÄµÚ¶þÌì
-			Tdate=floor(Tdate/10000) --È¡Äê,ÔÂ,ÈÕ
-			nEndYear=floor(Tdate/10000)+2000
-			nEndMonthDay=floor(mod(Tdate,10000))
-			SetSpecItemParam(ItemIdx, 1,nEndYear);--ÉèÖÃÎïÆ·Äê
-			SetSpecItemParam(ItemIdx, 2,nEndMonthDay);--ÉèÖÃÎïÆ·ÔÂÈÕ
-			SyncItem(ItemIdx)
-			SetItemBindState(ItemIdx, -2);-- °ó¶¨
-			Msg2Player("B¹n nhËn ®­îc 1 Hu©n c«ng bµi Tèng Kim")
-			WriteLog(format("[ChiÕn tr­êng Tèng Kim]\t%s\tName:%s\tAccount:%s\t 1000 ®iÓm tÝch lòy trë lªn sÏ nhËn ®­îc 1 Hu©n c«ng bµi Tèng Kim",
-					GetLocalDate("%y%m%d %X"), GetName(), GetAccount()));
 			if(JG_T_Value == (jg_ndate-1)) then --ÁìÈ¡ÁË2´Î	
 				SetTask(JUNGONGPAI_Task_ID,jg_ndate);
 			elseif(JG_T_Value ~= jg_ndate) then --ÁìÈ¡ÁË1´Î	
@@ -256,6 +249,11 @@ function sf_winbouns(wincamp)
 	   		
 			--Storm Ê¤·½½áÊøÌôÕ½£¬²¢¼ÇÂ¼»ñÊ¤Õß
 			Say("Chóc mõng phe b¹n giµnh th¾ng lîi! Danh väng cña b¹n t¨ng thªm <color=yellow>"..repute.."<color>! Vµ nhËn thªm <color=yellow>"..bonuscff1.."<color> ®iÓm tÝch lòy", 1, "KÕt thóc ®èi tho¹i/#storm_end(1)")
+			
+			------------------------------------------------------------------------------------------------------
+
+			------------------------------------------------------------------------------------------------------
+			
 			tb_storm_winner[PlayerIndex] = 1
 			
 			bt_addtotalpoint(bonuscff1)

@@ -36,10 +36,6 @@ end
 function simTK:checkMarshalFallback(idMap)
 	local wi = SimCityWorld:Get(idMap)
 	if not wi then return end
-	wi.fbDbg = (wi.fbDbg or 0) + 1   
-	if Msg2Map and mod(wi.fbDbg, 10) == 0 then
-		Msg2Map(idMap, "<color=yellow>[FB] war="..tostring(wi.tkWarStarted).." mfb="..(wi.tkMFB and "set" or "NIL").." gt="..tostring((GetGameTime and GetGameTime()) or "NONE").." addnpc="..tostring(AddNpc and "ok" or "NIL").." tmplS="..tostring(wi.tkMFB and wi.tkMFB.s and wi.tkMFB.s[3] or "-").." stg="..tostring(wi.tkMFB and wi.tkMFB.stage or "-"))
-	end
 	if wi.tkWarStarted ~= 1 or not wi.tkMFB then return end
 	local fb = wi.tkMFB
 
@@ -111,18 +107,18 @@ function SimCityChienTranh:taoNV_TK(id, camp, worldInfo, walkPathNames, nt, theo
 		noStop = 1,          -- optional: cannot pause any stop (otherwise 90% walk 10% stop)
 		leaveFightWhenNoEnemy = 5, -- optional: leave fight instantly after no enemy, otherwise there's waiting period
 
-		noRevive = 0,        -- optional: 0: keep reviving, 1: dead
+		noRevive = ((SIMCITY_TK_REVIVE or 1) == 1) and 0 or 1,
  
 
 		CHANCE_ATTACK_PLAYER = 1, -- co hoi tan cong nguoi choi neu di ngang qua
 		CHANCE_ATTACK_NPC = 1, -- co hoi bat chien dau khi thay NPC khac phe
 		CHANCE_JOIN_FIGHT = 1, -- co hoi tang cong NPC neu di ngang qua NPC danh nhau
-		RADIUS_FIGHT_PLAYER = 40, -- scan for player around and randomly attack
-		RADIUS_FIGHT_NPC = 40, -- scan for NPC around and start randomly attack,
-		RADIUS_FIGHT_SCAN = 40, -- scan for fight around and join/leave fight it
+		RADIUS_FIGHT_PLAYER = SIMCITY_TK_COMBAT_RADIUS or 40,
+		RADIUS_FIGHT_NPC = SIMCITY_TK_COMBAT_RADIUS or 40,
+		RADIUS_FIGHT_SCAN = SIMCITY_TK_COMBAT_RADIUS or 40,
  
 		kind = 0,          
-		level = 95,        
+		level = SIMCITY_TK_BOT_LEVEL or 95,
 		TIME_FIGHTING_minTs = 6000,
 		TIME_FIGHTING_maxTs = 6000,
 		TIME_RESTING_minTs = 0,
@@ -230,11 +226,12 @@ function simTK:add_npc_simcity_by_camp(nIdMap,nIdNpc,forCamp)
 
 	local fighter = SimCityChienTranh:taoNV_TK(nIdNpc, forCamp, worldInfo, myPath, 1)	
 end
-function simTK:call_npc_simcity(nIdMap,startNPCIndex, stopNPCIndex, nCount ,ngoaitrang)
+function simTK:call_npc_simcity(nIdMap,startNPCIndex, stopNPCIndex, tongCount, kimCount, ngoaitrang)
 	local nIdNpc = startNPCIndex
-	for i = 1, nCount do 
-		self:add_npc_simcity_by_camp(nIdMap,nIdNpc,1)
-		self:add_npc_simcity_by_camp(nIdMap,nIdNpc,2)
+	local total = max(tongCount, kimCount)
+	for i = 1, total do
+		if i <= tongCount then self:add_npc_simcity_by_camp(nIdMap,nIdNpc,1) end
+		if i <= kimCount then self:add_npc_simcity_by_camp(nIdMap,nIdNpc,2) end
 		nIdNpc = nIdNpc + 1
 		if nIdNpc > stopNPCIndex then
 			nIdNpc = startNPCIndex
@@ -243,7 +240,9 @@ function simTK:call_npc_simcity(nIdMap,startNPCIndex, stopNPCIndex, nCount ,ngoa
 
 end
 function simTK:add_npc_simcity(idMap)
-		self:call_npc_simcity(idMap, 2000,2023,100,1)
+	if (SIMCITY_TK_ENABLED or 1) ~= 1 then return end
+	self:call_npc_simcity(idMap, 2000, 2023,
+		SIMCITY_TK_TONG_COUNT or 100, SIMCITY_TK_KIM_COUNT or 100, 1)
 	local _wi = SimCityWorld:Get(idMap)
 	if _wi then _wi.tkWarStarted = 0 end
 end

@@ -1,5 +1,5 @@
 shengdan0811_StartTime = 081205
-shengdan0811_EndTime = 500105
+shengdan0811_EndTime = 290105
 
 function shengdan0811_IsActTime()
 	local nDate = tonumber(GetLocalDate("%y%m%d"))

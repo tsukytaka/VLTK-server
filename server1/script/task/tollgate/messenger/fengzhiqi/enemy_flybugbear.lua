@@ -10,7 +10,7 @@ Include("\\script\\event\\birthday_jieri\\200905\\class.lua");
 
 
 function messenger_killbugbear()
-	local Uworld1205 = nt_getTask(1205)  --信使积分
+	--local Uworld1205 = nt_getTask(3000)  --信使积分
 	local Uworld1213 = nt_getTask(1213)  --双倍经验时间
 	if ( Uworld1213 ~= 0 ) then       --判断是否双倍经验时间
 		if  ( GetGameTime() - Uworld1213 >= 1200 ) then

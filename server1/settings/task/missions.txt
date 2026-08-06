@@ -68,4 +68,4 @@ MISSION	SCRIPT
 67	\script\missions\dungeon\head.lua
 68	\script\missions\killbossmatch\missionhead_ready.lua
 69	\script\missions\killbossmatch\missionhead.lua
-70	\script\global\nobitaxd\battles\tongkimxua\mission.lua
+70	\script\battles\tongkimxua\mission.lua

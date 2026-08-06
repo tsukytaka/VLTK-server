@@ -1,32 +1,25 @@
-
-
+-- Thî rÌn
 Include("\\script\\global\\recoin_goldenequip.lua")
 Include("\\script\\global\\equipenchase_help.lua") 
 Include("\\script\\task\\newtask\\education\\jiaoyutasknpc.lua") 
 Include("\\script\\task\\newtask\\newtask_head.lua")
-Include("\\script\\global\\×ÏÉ«¼°»Æ½ð×°±¸ÖýÔì.lua")
-Include("\\script\\global\\shenmi_chapman.lua");	--ÐÞ×°±¸¹¦ÄÜ
+Include("\\script\\global\\equip_system.lua"); -- TÝnh n¨ng: ChÕ t¹o ®å tÝm vµ hkmp
+Include("\\script\\global\\shenmi_chapman.lua"); 
 Include("\\script\\activitysys\\npcdailog.lua")
 Include("\\script\\misc\\eventsys\\type\\npc.lua")
-Include([[\script\event\mid_autumn06\lightcage_of_midautumn06.lua]]);
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 
 
-
---------¹Ì¶¨¶Ô»° ³ÇÊÐ--------
+----------------------------------------------------	Thî rÌn ë thµnh thÞ	----------------------------------------------------
 function tiejiang_city(...)
-	
 	local nNpcIndex = GetLastDiagNpc();
-	--local szNpcName = GetNpcName(nNpcIndex);
+	local szNpcName = GetNpcName(nNpcIndex);
 	--if NpcName2Replace then szNpcName = NpcName2Replace(szNpcName) end
-	local szNpcName = "Thî rÌn trong thµnh"
+	-- local szNpcName = "Thî rÌn trong thµnh"
 	local tbDailog = DailogClass:new(szNpcName);
 	G_ACTIVITY:OnMessage("ClickNpc", tbDailog, nNpcIndex);
-	
 	EventSys:GetType("AddNpcOption"):OnEvent(szNpcName, tbDailog, nNpcIndex)
-	
 	local aryParam = arg;
-	
 	if (getn(aryParam) == 0) then
 		tbDailog.szTitleMsg = TIEJIANG_DIALOG
 	else
@@ -44,35 +37,22 @@ function tiejiang_city(...)
 	end;
 	
 	tbDailog.szTitleMsg = gsub(tbDailog.szTitleMsg, "<dec>", "")
-
-	if (CFG_CuaHangTinhLuc == 1) then	
-		tbDailog:AddOptEntry("Cöa hµng tinh lùc", energy_sale);
-	end
 	tbDailog:AddOptEntry("Giao dÞch", yes);
-	if (CFG_TrangBiHuyenTinh == 1) or (CFG_DoPhoHoangKim == 1) then	
-		tbDailog:AddOptEntry("VËt phÈm ®óc", onFoundry);
-	end
-	if (CFG_KhamNamDoXanh == 1) then	
-		tbDailog:AddOptEntry("VËt phÈm kh¶m n¹m", jewel_yes);
-	end
+	--tbDailog:AddOptEntry("Cöa hµng tinh lùc", energy_sale);
+	if DucVatPham == 1 then
+	tbDailog:AddOptEntry("VËt phÈm ®óc", OnFoundry);
+	end	
+	tbDailog:AddOptEntry("VËt phÈm kh¶m n¹m", jewel_yes);
 	tbDailog:AddOptEntry("Xö lý <trang bÞ ®· bÞ háng>", deal_brokenequip);
 	tbDailog:AddOptEntry("Ta ®Õn nhËn nhiÖm vô S¬ nhËp", education_tiejiang);	
-	if (CFG_mid_autumn06 == 1) then	
-		tbDailog:AddOptEntry("Ho¹t ®éng trung thu ghÐp lång ®Ìn", au06_entrance);
-	end
-	--tbDailog:AddOptEntry("Nh©n tiÖn ghÐ qua th«i", no, {});
 	tbDailog:Show()
 end;
---------¹Ì¶¨¶Ô»° ÐÂÊÖ´å------
+----------------------------------------------------	Thî rÌn ë th«n trang	----------------------------------------------------
 function tiejiang_village(...)
 	local aryParam = arg;
 	local aryDescribe = {
-		--szDialog,		--Ìú½³µÄËµ»°£¬ÔÚ¸÷³ÇÊÐÌú½³´¦
 		"Giao dÞch/yes",
-		
-		--Change request 04/06/2011, ®ãng chÕ t¹o trang bÞ b¹ch kim - Modified by DinhHQ - 20110605
-		--"VËt phÈm ®óc/onFoundry",
-		
+		--"VËt phÈm ®óc/OnFoundry",
 		"Ta ®Õn nhËn nhiÖm vô S¬ nhËp/tboss",
 		"Nh©n tiÖn ghÐ qua th«i/no",
 	};
@@ -93,7 +73,10 @@ end;
 
 --------ÏâÇ¶--------
 function jewel_yes()
-	CreateTaskSay({"<dec><npc>Thñy tinh kh¶m n¹m liªn quan ®Õn sù c©n b»ng ngò hµnh, ph­¬ng ph¸p chuyÓn linh khÝ tuyÖt nhiªn kh«ng thÓ dïng søc ng­êi ®­îc, kh«ng h¼n nh­ ®¹i hiÖp hi väng thµnh vËt phÈm tuyÖt thÕ nh©n gian, mµ vò khÝ ®å phæ vµ vùc ngoµi kú tr©n chØ gióp chuyÓn ®æi ®¼ng cÊp cña trang bÞ. C¸c h¹ muèn kh¶m n¹m trang bÞ nµy kh«ng?", "B¾t ®Çu kh¶m n¹m/jewel_yes1", "Liªn quan kh¶m n¹m/help", "§Ó ta suy nghÜ kü l¹i xem/no"});
+	CreateTaskSay({"<dec><npc>Thñy tinh kh¶m n¹m liªn quan ®Õn sù c©n b»ng ngò hµnh, ph­¬ng ph¸p chuyÓn linh khÝ tuyÖt nhiªn kh«ng thÓ dïng søc ng­êi ®­îc, kh«ng h¼n nh­ ®¹i hiÖp hi väng thµnh vËt phÈm tuyÖt thÕ nh©n gian, mµ vò khÝ ®å phæ vµ vùc ngoµi kú tr©n chØ gióp chuyÓn ®æi ®¼ng cÊp cña trang bÞ. C¸c h¹ muèn kh¶m n¹m trang bÞ nµy kh«ng?",
+	"B¾t ®Çu kh¶m n¹m/jewel_yes1",
+	"Liªn quan kh¶m n¹m/help",
+	"§Ó ta suy nghÜ kü l¹i xem/no"});
 end
 
 function jewel_yes1()
@@ -147,5 +130,4 @@ function fBuyCallBack(nItemIdx, nPrice)
 		-- Ñ×µÛÁî
 		AddStatData("jlxiaohao_yandilinggoumai", nCount)
 	end											
-	return 1
-end
+return 1 end

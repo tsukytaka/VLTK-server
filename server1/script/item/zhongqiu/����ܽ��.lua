@@ -1,33 +1,33 @@
---Create by mengfan ,2004-9-14
---¹±ÔÂÜ½ÈØ
---×÷ÓÃ£ºÖĞÇï¸ß¼¶ÔÂ±ıÖ®Ò»£¬×÷ÓÃÍ¬Ï´Ëè¾­£¬80¼¶ÒÔÉÏÍæ¼ÒÊ¹ÓÃ£¬Ôö¼Ó5µãÇ±ÄÜµã¡£
---»ñµÃÌõ¼ş£º¼¯Æë»ñµÃ´ËÎïÆ·ËùĞèÒªµÄËùÓĞµ¥×Ö¡£
---ÏŞÖÆËµÃ÷£º¸ÃÎïÆ·ÒªÇóÈËÎïµÈ¼¶80¼¶Ê±Ê¹ÓÃÓĞĞ§£¬Ã¿ÈË×î¶àÊ¹ÓÃ3´Î¡£
---ÈÎÎñ±äÁ¿701µÍ4Î»±íÊ¾Ê¹ÓÃ¸ÃÎïÆ·µÄ´ÎÊı
+-- script viet hoa By http://tranhba.com Create by mengfan ,2004-9-14 
+-- script viet hoa By http://tranhba.com  cèng th¸ng phï dung 
+-- script viet hoa By http://tranhba.com  t¸c dông # trung cuèi thu cÊp b¸nh Trung thu mét trong , t¸c dông cïng TÈy Tñy Kinh , 80 cÊp trë lªn nhµ ch¬i sö dông , gia t¨ng 5 ®iÓm tiÒm n¨ng ®iÓm . 
+-- script viet hoa By http://tranhba.com  ®¹t ®­îc ®iÒu kiÖn # tËp tÒ ®¹t ®­îc vËt nµy phÈm cÇn thiÕt ®İch tÊt c¶ mét ch÷ ®éc nhÊt . 
+-- script viet hoa By http://tranhba.com  h¹n chÕ nãi râ # nªn vËt phÈm yªu cÇu nh©n vËt cÊp bËc 80 cÊp lóc sö dông h÷u hiÖu , mçi ng­êi nhiÒu nhÊt sö dông 3 lÇn . 
+-- script viet hoa By http://tranhba.com  nhiÖm vô thay ®æi l­îng 701 thÊp 4 vŞ bµy tá sö dông nªn vËt phÈm ®İch sè lÇn 
 
 
 
-function main(sel)
-	times = GetTask(701)
-        str ={
-		"<#> B¹n c¾n thö mét miÕng Cèng NguyÖt Phï Dung, kÕt qu¶ kh«ng cã chuyÖn g× x¶y ra.: (",
-		"<#> B¹n c¾n mét miÕng Cèng NguyÖt Phï Dung, c¶m thÊy c¬ thÓ kháe h¼n, kinh m¹ch l­u th«ng.",
-		"<#> B¹n ®· ¨n 3 c¸i Cèng NguyÖt Phï Dung, kh«ng thÓ dïng tiÕp."
-	        }
-	level = GetLevel()
-	if(level < 80) then     --µÈ¼¶Ì«µÍ£¬²»ÈÃÊ¹ÓÃ
-		Msg2Player(str[1])
-		return 1
-	end
-	if(times > 2) then      --Ê¹ÓÃ³¬¹ı´ÎÊı
-		Msg2Player(str[3])
-		return 1
-	end
-	AddProp(5)              --Ç±ÄÜµãÔö¼Ó5µã
-	time=date("%m%d%H%M%S")
-        name=GetName()
-	WriteLog("Ng­êi ch¬i"..name.."T¹i"..time.."¡n hÕt mét c¸i B¸nh Trung thu Cèng NguyÖt Phï Dung")
+function main(sel) 
+times = GetTask(701) 
+str ={ 
+"<#> ng­¬i thö c¾n mét c¸i cèng th¸ng phï dung b¸nh Trung thu , kÕt qu¶ c¸i g× còng kh«ng cã ph¸t sinh . :(", 
+"<#> ng­¬i ¨n råi mét cèng th¸ng phï dung b¸nh Trung thu , c¶m thÊy thÓ tr¹ng nhÑ kú tho¸t tôc , kinh m¹ch chËm h¬i thë thuËn s­íng . ", 
+"<#> ng­¬i ®· ¨n råi 3 c¸ cèng th¸ng phï dung b¸nh Trung thu , b©y giê kh«ng ¨n ®­îc . " 
+} 
+level = GetLevel() 
+if(level < 80) then -- script viet hoa By http://tranhba.com  cÊp bËc qu¸ thÊp , kh«ng ®Ó cho sö dông 
+Msg2Player(str[1]) 
+return 1 
+end 
+if(times > 2) then -- script viet hoa By http://tranhba.com  sö dông v­ît qua sè lÇn 
+Msg2Player(str[3]) 
+return 1 
+end 
+AddProp(5) -- script viet hoa By http://tranhba.com  tiÒm n¨ng ®iÓm gia t¨ng 5 ®iÓm 
+time=date("%m%d%H%M%S") 
+name=GetName() 
+WriteLog("Nhµ ch¬i "..name.." ë "..time.." ¨n hÕt mét cèng th¸ng phï dung b¸nh Trung thu ") 
 	SetTask(701,times+1)
-	Msg2Player(str[2])
-	return 0
-end	
+Msg2Player(str[2]) 
+return 0 
+end

@@ -24,7 +24,7 @@ ID_MEDAL_DATE_NY07              = 1792;  -- 记录玩家上次领取荣誉令的日期
 -- 判断是否元旦日期的主函数
 function ny07_isactive()
 	local nDate  = tonumber(GetLocalDate("%Y%m%d"));
-	if (nDate >= 20070101 and nDate <= 20500103) then
+	if (nDate >= 20070101 and nDate <= 20070103) then
 		return 1;
 	end;
 	return 0;

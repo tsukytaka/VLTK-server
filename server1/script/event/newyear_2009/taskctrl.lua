@@ -18,7 +18,7 @@ newyear0901_TSK_GetSpAwardDate	= 1766;		-- ÊÇ·ñÒÑ¾­ÁìÈ¡¹ıµ±ÈÕµÄÌØ±ğ½±Àø£¨ĞÂÄêÑİ»
 function newyear0901_ResetTask()
 	--Ö»ÔÚ»î¶¯½áÊøÇ°ĞèÒª°Ñ±äÁ¿ÖØÖÃ£¬±ÜÃâÓĞĞÂ»î¶¯ÓëÖ®³åÍ»
 	--£¬ÎªÁË±£ÏÕ¶¨Îª2ÔÂ1ÈÕ£¬Ó¦¸ÃÊÇ»î¶¯Ò»ÇĞÊÂ¼ş°üÀ¨µÀ¾ßÊ¹ÓÃµÈµÄ×îºó×îºóµÄÒ»Ìì
-	if tonumber(GetLocalDate("%Y%m%d")) <= 20500224 then
+	if tonumber(GetLocalDate("%Y%m%d")) <= 20090224 then
 		if (GetTask(newyear0901_TSK_Version) ~= %nACT_VERSION) then
 			SetTask(newyear0901_TSK_Version, %nACT_VERSION);
 			SetTask(newyear0901_TSK_GetExpUpLimit, 150000);

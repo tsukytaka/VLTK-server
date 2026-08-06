@@ -30,7 +30,7 @@ function CityManager:IsViceroy(tong)
 	return 0
 end
 
-WAR_TIME = 1800		-- ∆ﬂ≥«¥Û’Ω ±º‰£®√Î£©
+WAR_TIME = 3600		-- ∆ﬂ≥«¥Û’Ω ±º‰£®√Î£©
 STATE_INIT 			= 0
 STATE_STARTSIGNUP	= 1
 STATE_CLOSESIGNUP	= 2
@@ -107,12 +107,12 @@ function BattleWorld:SignupCost(player, tong, err)
 	if (player:GetTiaozhanlingCount() < SIGNUP_TIAOZHANLINGCOUNT or
 		player:GetCash() < SIGNUP_MONEY) then
 		err.Msg = format(
-			"B∏o danh c«n <color=red>%d<color> vπn ng©n l≠Óng vµ <color=red>%d<color> Khi™u chi’n l÷nh.",
+			"B∏o danh c«n <color=red>%d<color> ng©n l≠Óng vµ <color=red>%d<color> khi™u chi’n l÷nh.",
 			SIGNUP_MONEY,
 			SIGNUP_TIAOZHANLINGCOUNT)
 	elseif (player:ApplyReduceTiaozhanlingCount(SIGNUP_TIAOZHANLINGCOUNT) == 0) then
 		err.Msg = format(
-			"Ng≠¨i c„ chæc Æ∑ mang ÆÒ <color=red>%d<color> Khi™u chi’n l÷nh?",
+			"Ng≠¨i c„ chæc Æ∑ mang ÆÒ <color=red>%d<color> khi™u chi’n l÷nh?",
 			SIGNUP_TIAOZHANLINGCOUNT)
 	else
 		player:Pay(SIGNUP_MONEY)
@@ -488,13 +488,13 @@ function BattleWorld:CheckMapPermission(player, err)
 	if (self.m_State ~= STATE_PREPARING and self.m_State ~= STATE_STARTWAR) then
 		msg = "Hi÷n tπi kh´ng th” vµo chi’n tr≠Íng."
 	elseif (player:GetLevel() < 90) then
-		msg = "<color=red>Ng≠Íi ch¨i c p 90 trÎ l™n<color> mÌi Æ≠Óc tham gia Th t Thµnh ßπi Chi’n."
+		msg = "<color=red>Ng≠Íi ch¨i c p 90 vµ c p 90 trÎ l™n<color> mÌi Æ≠Óc tham gia Th t Thµnh ßπi Chi’n."
 	elseif (tong == nil or tong == "") then
 		msg = "Thµnh vi™n bang hÈi mÌi c„ th” tham gia th t thµnh Æπi chi’n."
 	elseif (self:CheckWarriorTongChange(player:GetName(), tong) == 1) then
 		msg = "Ng≠¨i Æ∑ ph∂n bang kh´ng th” ti’n vµo chi’n tr≠Íng."
-	--elseif (player:GetJoinTongTime() < 1 ) then
-	--	msg = "Gia nhÀp bang hÈi<color=red> 1 ngµy ho∆c 1 ngµy trÎ l™n mÌi Æ≠Óc tham gia Th t Thµnh ßπi Chi’n."
+	elseif (player:GetJoinTongTime() < 24 * 60) then
+		msg = "Gia nhÀp bang hÈi<color=red> 1 ngµy ho∆c 1 ngµy trÎ l™n mÌi Æ≠Óc tham gia Th t Thµnh ßπi Chi’n."
 	elseif (self.m_CityManager:IsViceroy(tong) == 0 and
 			self.m_SignupList[tong] == nil) then
 		msg = "Bang hÈi chi’m thµnh ho∆c Æ∑ b∏o danh mÌi c„ th” tham gia th t thµnh Æπi chi’n"

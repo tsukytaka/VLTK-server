@@ -55,11 +55,11 @@ function TaskShedule()
 	--设定定时期启动时间
 	
 	TaskTime(12, 30);
-	OutputMsg("=====> Boss Tieu Hoang Kim Xuat Hien Vao Luc :  12:30" );
+	
 	--删除从前的数据
 	for i = 1, getn(tb_goldboss) do
 		success = ClearRecordOnShareDB("GoldBoss", tb_goldboss[i].Sid, 0, 1, 0);
-		--OutputMsg("Xoa du lieu thong tin boss Hoang Kim "..tb_goldboss[i].Sid);
+		OutputMsg("Xoa du lieu thong tin boss Hoang Kim "..tb_goldboss[i].Sid);
 	end
 end
 
@@ -68,7 +68,7 @@ function TaskContent()
 		str = tb_goldboss[i].str;
 		GlobalExecute(format("dw AddLocalNews([[%s]])", str));
 	end
-	OutputMsg("=====> Boss Tieu Hoang Kim Xuat Hien Vao Luc :  12:30" );
+	
 	GlobalExecute("dwf \\script\\missions\\boss\\callboss_incity.lua CallBossDown_Fixure()");
 end
 

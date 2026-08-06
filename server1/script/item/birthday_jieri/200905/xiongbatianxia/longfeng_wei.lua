@@ -8,12 +8,10 @@
 -- ======================================================
 
 Include("\\script\\event\\birthday_jieri\\200905\\class.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 function main()
 	local nCurDate = tonumber(GetLocalDate("%Y%m%d"))
-	--if 20090619 > nCurDate or nCurDate > 20090727 then	
-	if (CFG_birthday_jieri_2009 == 0) then
+	if 20090619 > nCurDate or nCurDate > 20090727 then	
 		Talk(1, "", "Ho¹t ®éng ®· kÕt thóc.");
 		return 0;
 	end

@@ -1,48 +1,26 @@
 Include("\\script\\lib\\gb_taskfuncs.lua")
 Include("\\script\\lib\\awardtemplet.lua")
-tsk_rank_lastdate	= 2636	-- Íæ¼Ò×î½üÒ»´Î²Î¼Ó¸ß¼¶´³¹ØµÄÊ±¼ä
-tsk_rank_lastscore 	= 2637	-- Íæ¼Ò×î½üÒ»´Î²Î¼Ó¸ß¼¶´³¹ØµÄ³É¼¨
-tsk_rank_2thdate 	= 2638	-- Íæ¼Ò×î½üµÚ¶ş´Î²Î¼Ó¸ß¼¶´³¹ØµÄÊ±¼ä
-tsk_rank_2thscore 	= 2639	-- Íæ¼Ò×î½üµÚ¶ş´Î²Î¼Ó¸ß¼¶´³¹ØµÄ³É¼¨
+
+tsk_rank_lastdate	= 2636
+tsk_rank_lastscore 	= 2637
+tsk_rank_2thdate 	= 2638
+tsk_rank_2thscore 	= 2639
+
 DailyRankLadderId	= 10235
-nTIMERANK = "challengeoftime_ranklist";	-- Ê±¼äÌôÕ½Ã¿ÌìµÄÅÅÃû
+
+nTIMERANK = "challengeoftime_ranklist";
+
 tbQiannianlingyao = {szName = "Thiªn Niªn Linh D­îc", tbProp = {6, 1, 2116, 1, 1, 0}, nExpiredTime = 24 * 60};
 
-function GetYesterday()
-	local ndate = tonumber(GetLocalDate("%y%m%d"))
-	local yy = floor(ndate / 10000)
-	local mm = floor(mod(ndate, 10000) / 100)
-	local dd = mod(ndate, 100)
-
-	dd = dd - 1
-	if dd < 1 then
-		mm = mm - 1
-		if mm < 1 then
-			mm = 12
-			yy = yy - 1
-		end
-		local days_in_month = {31,28,31,30,31,30,31,31,30,31,30,31}
-		local fullyear = 2000 + yy
-		if mm == 2 then
-			if (mod(fullyear,4)==0 and mod(fullyear,100)~=0) or mod(fullyear,400)==0 then
-				days_in_month[2] = 29
-			end
-		end
-		dd = days_in_month[mm]
-	end
-
-	return yy * 10000 + mm * 100 + dd
-end
-
 function rank_award()
-	--ntime = tonumber(GetLocalDate("%H%M"))
-	--if (ntime < 4 or ntime > 2300) then
-	--	Say("NhiÕp Thİ TrÇn: §Õn nhËn vµo thêi gian chØ ®Şnh", 0);
-	--	return
-	--end
+	ntime = tonumber(GetLocalDate("%H%M"))
+	if (ntime < 4 or ntime > 2300) then
+		Say("NhiÕp Thİ TrÇn: §Õn nhËn vµo thêi gian chØ ®Şnh", 0);
+		return
+	end
 	
 	if (CalcFreeItemCellCount() < 1) then
-		Say("NhiÕp Thİ TrÇn: V× sù an toµn cho ng­¬i, xin h·y chõa hµnh trang trªn 1 « trèng", 0);
+		Say("NhiÕp Thİ TrÇn: V× sù an toµn cho ®¹i hiÖp, xin h·y chõa hµnh trang trªn 1 « trèng", 0);
 		return
 	end
 	
@@ -51,12 +29,13 @@ function rank_award()
 end
 
 function update_gbtask(nTime)
-	local ndate    = tonumber(GetLocalDate("%y%m%d"));
-	local nlastday = GetYesterday();
+	local ndate = tonumber(GetLocalDate("%y%m%d"));
+	local nlastday = floor(FormatTime2Number(GetCurServerTime() - 24 * 60 * 60) / 10000);
 	if (gb_GetTask(nTIMERANK, 1) ~= ndate) then
 		if (gb_GetTask(nTIMERANK, 1) ~= nlastday) then
 			gb_SetTask(nTIMERANK, 3, nlastday);
 			gb_SetTask(nTIMERANK, 4, 0);
+			
 		else
 			gb_SetTask(nTIMERANK, 3, gb_GetTask(nTIMERANK, 1));
 			gb_SetTask(nTIMERANK, 4, gb_GetTask(nTIMERANK, 2));
@@ -71,22 +50,23 @@ function update_gbtask(nTime)
 end
 
 function update_playertask()
-	local nlastday = GetYesterday();
+	local nlastday = floor(FormatTime2Number(GetCurServerTime() - 24 * 60 * 60) / 10000);
 	if (GetTask(tsk_rank_lastdate) ~= nlastday and GetTask(tsk_rank_2thdate) ~= nlastday) then
-		Say("NhiÕp Thİ TrÇn: <enter>§iÒu kiÖn nhËn th­ëng: §· hoµn thµnh nhiÖm vô V­ît ¶i 'Th¸ch Thøc Thêi Gian' h«m nay, qua ngµy h«m sau ®Õn ®©y nhËn th­ëng. Ng­¬i ch­a ®ñ ®iÒu kiÖn.", 0);
+		Say("NhiÕp Thİ TrÇn: §¹i hiÖp vÉn ch­a ®ñ ®iÒu kiÖn nhËn th­ëng", 0);
 		return
 	end
 	
+	local nlastday = floor(FormatTime2Number(GetCurServerTime() - 24 * 60 * 60) / 10000);
 	if (GetTask(tsk_rank_lastdate) == nlastday) then
 		if (GetTask(tsk_rank_lastscore) == 0) then
-			Say("NhiÕp Thİ TrÇn: H«m nay ng­¬i ®· nhËn phÇn th­ëng nµy råi.", 0);
+			Say("NhiÕp Thİ TrÇn: H«m nay ®¹i hiÖp ®· nhËn phÇn th­ëng nµy råi.", 0);
 		else
 			SetTask(tsk_rank_lastscore, 0);
 			tbAwardTemplet:GiveAwardByList(tbQiannianlingyao, "Thiªn Niªn Linh D­îc");
 		end
 	else
 		if (GetTask(tsk_rank_2thscore) == 0) then
-			Say("NhiÕp Thİ TrÇn: H«m nay ng­¬i ®· nhËn phÇn th­ëng nµy råi.", 0);
+			Say("NhiÕp Thİ TrÇn: H«m nay ®¹i hiÖp ®· nhËn phÇn th­ëng nµy råi.", 0);
 		else
 			SetTask(tsk_rank_2thscore, 0);
 			tbAwardTemplet:GiveAwardByList(tbQiannianlingyao, "Thiªn Niªn Linh D­îc");
@@ -103,7 +83,10 @@ function get_top5team()
 			Say("B¶ng xÕp h¹ng t¹m thêi ch­a cã th«ng tin!", 0);
 			return
 		end
-		local szTime = format("%s phót %s gi©y", floor(value/60), floor(mod(value, 60)));
+--		if (RoleName == "") then
+--			break
+--		end
+		local szTime	= format("%s phót %s gi©y", floor(value/60), floor(mod(value, 60)));
 		tinsert(tbRoleName, getn(tbRoleName)+1, format("H¹ng %d: %s\tThµnh tİch: %s\n", i, RoleName, szTime));
 	end
 	tinsert(tbRoleName, getn(tbRoleName)+1, "Ta chØ ®Õn xem!/OnCancel");

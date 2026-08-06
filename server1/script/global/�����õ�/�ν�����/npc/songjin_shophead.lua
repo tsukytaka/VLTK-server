@@ -53,11 +53,34 @@ end
 
 
 function wushuangmengjiang()
-	Say("§Ó biÓu d­¬ng c«ng lao trong chiÕn tr­êng, nÕu nh­ trong tuÇn cã biÓu hiÖn tèt sÏ ®­îc träng th­ëng!", 4, "T×m hiÓu chi tiÕt quy t¾c/getrule", "Xem b¶ng tæng kÕt xÕp h¹ng chiÕn tr­êng/getranklist", "Xem b¶ng xÕp h¹ng chiÕn tr­êng hiÖn t¹i/getcurranklist", "Ta muèn lÜnh th­ëng/guanghuan_sure", "ChØ ghĞ ch¬i th«i./no")
+	Say("V× khen ngîi ng­êi cã c«ng lao ë chiÕn tr­êng, ng­êi nµo cã c«ng ¾t cã th­ëng.", 6, 
+		"Ta muèn xem tr­íc c¸c danh hiÖu vµ vßng s¸ng/battles_PreViewTitle", 
+		"Xem xÕp h¹ng chiÕn tr­êng cña tuÇn tr­íc/getranklist", 
+		"Xem xÕp h¹ng chiÕn tr­êng hiÖn t¹i/getcurranklist", 
+		"Ta ®Õn ®Ó nhËn th­ëng/guanghuan_sure", 
+		"T×m hiÓu quy t¾c chi tiÕt/getrule", 
+		"Ch¼ng qua ta ghĞ ch¬i./no"
+		)
 end
 
 function getrule()
-	Say("Trong vßng 1 tuÇn ®­îc top 10 sÏ ®­îc tõ 1 ®Õn 10 ®iÓm, trong mét tuÇn nÕu nh­ ®¹t ®iÓm cao nhÊt sÏ ®­îc triÒu ®×nh s¾c phong v« song m·nh t­íng vµ ban träng th­ëng!", 2, "Ta muèn t×m hiÓu viÖc kh¸c/wushuangmengjiang", "KÕt thóc ®èi tho¹i/no");
+	Say("Trong 1 tuÇn ph¶i lät vµo Top 10, ng­êi nµo ®¹t ®iÓm cao nhÊt sÏ ®­îc triÒu ®×nh s¾c phong danh hiÖu <color=yellow>V« song m·nh t­íng<color> vµ ®­îc träng th­ëng",2, "Ta muèn t×m hiÓu chuyÖn kh¸c/wushuangmengjiang", "Ch¼ng qua ta ghĞ ch¬i/no");
+end
+
+function battles_PreViewTitle()
+	Say("Xin chän danh hiÖu cÇn xem!", 4, "S¸t ThÇn ChuyÓn ThÕ/#battles_TitleTop(1)", "Lùc ¸p QuÇn Hïng/#battles_TitleTop(2)", "Qu¶n Ngôc Thiªn V­¬ng/#battles_TitleTop(3)", "Th«i, thø nµy kh«ng dµnh cho ta/OnCanel")
+end
+
+function battles_TitleTop(Value)
+	local battlesPreTitle
+	if Value == 1 then
+		battlesPreTitle = "<link=image:\\spr\\skill\\songjin\\weimengwushuang.spr>Danh HiÖu: <link> <color=green>S¸t ThÇn ChuyÓn ThÕ<color>"
+	elseif Value == 2 then
+		battlesPreTitle = "<link=image:\\spr\\skill\\songjin\\liyaqunxiong.spr>Danh HiÖu: <link> <color=green>Lùc ¸p QuÇn Hïng<color>"
+	elseif Value == 3 then
+		battlesPreTitle = "<link=image:\\spr\\skill\\songjin\\dubatianxia.spr>Danh HiÖu: <link> <color=green>Qu¶n Ngôc Thiªn V­¬ng<color>"
+	end
+	CreateNewSayEx(battlesPreTitle, {{"Xem danh hiÖu kh¸c", battles_PreViewTitle}, {"KÕt thóc ®èi tho¹i", OnCanel}})
 end
 
 function getranklist()
@@ -66,13 +89,13 @@ function getranklist()
 	for i = 1, 10 do
 		local szname, nrank, nsect, ngender= Ladder_GetLadderInfo(10251, i);
 		if szname ~= nil and nrank ~= 0 then
-			szranklist = format("%s xÕp h¹ng %s: <%s> %d\n", szranklist, tbNum[i], szname, nrank);
+			szranklist = format("%s ®øng hµng%s: <%s> %d\n", szranklist, tbNum[i], szname, nrank);
 		else
-			szranklist = format("%s xÕp h¹ng %s: <%s> %d\n", szranklist, tbNum[i], "Kh«ng", 0);
+			szranklist = format("%s ®øng hµng %s: <%s> %d\n", szranklist, tbNum[i], "Kh«ng", 0);
 		end
 	end
 	local tbOpt = {}
-	tinsert(tbOpt, {"Ta muèn t×m hiÓu viÖc kh¸c", wushuangmengjiang})
+	tinsert(tbOpt, {"Ta muèn t×m hiÓu chuyÖn kh¸c", wushuangmengjiang})
 	tinsert(tbOpt, {"KÕt thóc ®èi tho¹i"})
 	CreateNewSayEx(szranklist, tbOpt)
 end
@@ -92,12 +115,12 @@ function guanghuan_sure()
 				SetBitTask(2762, 12, 18, nWeek)
 				get_TTTCAward(i)				
 			else
-				Talk(1, "", "Ch¼ng ph¶i §¹i hiÖp ®·  nhËn th­ëng råi sao?")				
+				Talk(1, "", "§¹i hiÖp kh«ng ph¶i lµ ®· nhËn th­ëng råi sao?")				
 			end
 			return		
 		end	
 	end
-	Say("ChØ cã m·nh t­íng ®¹t ®iÓm cao nhÊt trong tuÇn míi ®­îc nhËn phÇn th­ëng! Muèn nhËn phÇn th­ëng th× h·y nç lùc giÕt ®Şch!", 2, "Ta muèn t×m hiÓu viÖc kh¸c/wushuangmengjiang", "KÕt thóc ®èi tho¹i/no")
+	Say("ChØ cã 3 ng­êi ®­îc phĞp nhËn th­ëng, muèn nhËn th­ëng h·y cè g¾ng giÕt giÆc.", 2, "Ta muèn t×m hiÓu chuyÖn kh¸c/wushuangmengjiang", "Ch¼ng qua ta ghĞ ch¬i/no")
 end
 
 function get_wushuangguanghuan(nCutDownTime)
@@ -109,21 +132,21 @@ end
 end
 
 --Change Song Jin Box bind state - Modified By DinhHQ - 20120319
-local tbProduct = {szName="Tèng Kim Bİ B¶o",tbProp={6, 1, 2741, 1, 0, 0},nBindState=-2}	
+local tbProduct = {szName="Tèng kim bİ b¶o",tbProp={6, 1, 2741, 1, 0, 0},nBindState=-2}	
 
 function tetan2mibao()
 	local G = 6
 	local D = 1
 	local P = 2740	-- ÌØÌ½±¦ÏäµÄp
 	if GetTask(751) < 2000 then 
-		Say("§iÓm tİch lòy cña ng­¬i kh«ng ®ñ.", 1, "§ãng/no")
+		Say("§iÓm ngµi tİch lòy kh«ng ®ñ.", 1, "Kh«ng/no")
 		return 
 	end
 	-- ÅĞ¶¨ÊÇ·ñ´æÔÚÌØÌ½±¦Ïä
 	local nCount = CalcItemCount(3, G, D, P, -1) 
 	
 	if nCount == 0 then
-		Say("Kh«ng cã B¶o R­¬ng §Æc Th¸m kh«ng thÓ ®æi.", 1, "§ãng/no")
+		Say("Kh«ng cã b¶o r­¬ng kh«ng thÓ ®æi.", 1, "Kh«ng/no")
 		return
 	end
 	-- ¼õÈ¥±¦Ïä
@@ -136,20 +159,20 @@ function jifen2mibao()
 	local nJifenMark = 500
 	local nEnergy = GetEnergy()
 	if nEnergy < nEnergyMark then
-		Say("Tinh Lùc cña ng­¬i kh«ng ®ñ, lÇn sau l¹i ®Õn nhĞ", 1, "§ãng/no")
+		Say("Ngµi ®İch tinh luyÖn th¹ch kh«ng ®ñ, lÇn sau trë l¹i ®i", 1, "Kh«ng/no")
 		return
 	end
 	
 	local nJifen = nt_getTask(747)
 	if nJifen < nJifenMark then
-		Say("§iÓm tİch lòy cña ng­¬i kh«ng ®ñ.", 1, "§ãng/no")
+		Say("§iÓm ngµi tİch lòy kh«ng ®ñ.", 1, "Kh«ng/no")
 		return
 	end
 	
-	ReduceEnergy(nEnergyMark)	-- ¿Ûµô¾«Á¦
+	ReduceEnergy(nEnergyMark)	-- ¿Ûµô¾«Á¶Ê¯
 	nt_setTask(747, floor(nt_getTask(747) - nJifenMark)) -- ¿Ûµô»ı·Ö
 	tbAwardTemplet:GiveAwardByList(%tbProduct, "jifenjingli2songjingmibao", 1)
-	Jilu_jinglixiaohao(nEnergyMark)	-- Êı¾İÂñµãµÚÒ»ÆÚ
+	Jilu_jinglixiaohao(nEnergyMark)	-- Êı¾İ¢ñµãµÚÒ»ÆÚ
 end
 
 nWidth = 1
@@ -157,16 +180,16 @@ nHeight = 1
 nFreeItemCellLimit = 0.02
 
 function duihuangmibao()
-	local szMsg = format("Chän h×nh thøc ®æi :")
+	local szMsg = format("Lùa chän ®æi lÊy h×nh thøc :")
 	local tbOpt = {}
 	
 	if CountFreeRoomByWH(nWidth, nHeight, nFreeItemCellLimit) < nFreeItemCellLimit then
-		Say(format("§Ó b¶o vÖ sù an toµn vËt phÈm cña ng­¬i, vin h·y b¶o ®¶m hµnh trang cßn d­ 1 %dx%d", nWidth, nHeight))
+		Say(format("V× b¶o vÖ vËt phÈm an toµn, xin mêi b¶o ®¶m trang bŞ cßn l¹i 1 %dx%d", nWidth, nHeight))
 		return 
 	end
 	
-	tinsert(tbOpt, {"§Æc Th¸m B¶o R­¬ng", tetan2mibao})
-	tinsert(tbOpt, {"§iÓm tİch lòy vµ Tinh Lùc", jifen2mibao})
+	tinsert(tbOpt, {"§Æc thï b¶o r­¬ng", tetan2mibao})
+	tinsert(tbOpt, {"§iÓm tİch lòy cïng tinh luyÖn th¹ch", jifen2mibao})
 	CreateNewSayEx(szMsg, tbOpt)	
 end
 
@@ -175,29 +198,58 @@ function Jilu_jinglixiaohao(nCount)
 end
 
 function getcurranklist()
-	local tbNum = {"1", "2 ", "3", "4", "5", "6", "7", "8", "9", "10"}
+	local tbNum = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
 	local szranklist = ""
 	for i = 1, 10 do
 		local szname, nrank, nsect, ngender= Ladder_GetLadderInfo(10250, i);
 		if szname ~= nil and nrank ~= 0 then
-			szranklist = format("%s xÕp h¹ng %s: <%s> %d\n", szranklist, tbNum[i], szname, nrank);
+			szranklist = format("%s ®øng hµng %s: <%s> %d\n", szranklist, tbNum[i], szname, nrank);
 		else
-			szranklist = format("%s xÕp h¹ng %s: <%s> %d\n", szranklist, tbNum[i], "Kh«ng", 0);
+			szranklist = format("%s ®øng hµng %s: <%s> %d\n", szranklist, tbNum[i], "Kh«ng", 0);
 		end
 	end
 	local tbOpt = {}
-	tinsert(tbOpt, {"Ta muèn t×m hiÓu viÖc kh¸c", wushuangmengjiang})
+	tinsert(tbOpt, {"Ta muèn t×m hiÓu chuyÖn kh¸c", wushuangmengjiang})
 	tinsert(tbOpt, {"KÕt thóc ®èi tho¹i"})
 	CreateNewSayEx(szranklist, tbOpt)
 end
 
 function get_TTTCAward(nRank)
+	local battlesAwardTitle
+	if nRank == 1 then
+		battlesAwardTitle = 324
+	elseif nRank == 2 then
+		battlesAwardTitle = 325
+	elseif nRank == 3 then
+		battlesAwardTitle = 326
+	end
+	battles_TitleAwardApply(battlesAwardTitle)
 	local tbExp =
 		 {
-			{nExp =400e6},
-			{nExp =300e6},
-			{nExp =200e6}								
+			-- {nExp =400e6},
+			-- {nExp =300e6},
+			-- {nExp =200e6}
+			
+			-- {nExp =40000000},
+			-- {nExp =30000000},
+			-- {nExp =20000000}		
+			
+			{nExp =6000000},
+			{nExp =4000000},
+			{nExp =2000000}								
 		};
-	local szLog = format("PhÇn th­ëng Tèng Kim Thiªn Tö Tham ChiÕn h¹ng %d", nRank)
+	local szLog = format("Tèng kim thiªn tö tham chiÕn nhËn th­ëng %d", nRank)
 	tbAwardTemplet:GiveAwardByList(tbExp[nRank], szLog)
+end
+
+function battles_TitleAwardApply(TitleID)
+	local nServerTime = GetCurServerTime()+ (7*24*60*60); 
+	local nDate = FormatTime2Number(nServerTime);
+	local nDay = floor(mod(nDate,1000000) / 10000);
+	local nMon = mod(floor(nDate / 1000000) , 100)
+	local nTime = nMon * 1000000 + nDay * 10000 
+	Title_AddTitle(TitleID, 2, nTime)
+	Title_ActiveTitle(TitleID)
+	SetTask(1122, TitleID)
+	Msg2Player("Chóc mõng T­íng qu©n ®· nhËn vµ kİch ho¹t danh hiÖu <color=yellow>"..Title_GetTitleName(TitleID).."<color> trong <color=green>7<color> ngµy")
 end

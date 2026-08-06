@@ -1,36 +1,36 @@
-IncludeLib("SETTING");
+IncludeLib("SETTING"); 
 Include("\\script\\missions\\olympic\\head.lua");
 
-function OnDeath(Launcher)
-	DeathName = GetName();
+function OnDeath(Launcher) 
+DeathName = GetName(); 
 
-	pn = TableSDD_Search("olympictab",DeathName);
-	pname,px,py = TableSDD_GetValue("olympictab",pn);
-	
-	DelMSPlayer(MISSIONID, py);
-	SetLogoutRV(1);
+pn = TableSDD_Search("olympictab",DeathName); 
+pname,px,py = TableSDD_GetValue("olympictab",pn); 
 
-	PlayerIndex1 = NpcIdx2PIdx(Launcher); -- murderĞ×ÊÖ
-	OrgPlayer  = PlayerIndex; --ËÀÕß
+DelMSPlayer(MISSIONID, py); 
+SetLogoutRV(1); 
 
-	if (PlayerIndex1 > 0) then
-		PlayerIndex = PlayerIndex1;
-		LaunName = GetName();
+PlayerIndex1 = NpcIdx2PIdx(Launcher); -- script viet hoa By http://tranhba.com  murder hung thñ 
+OrgPlayer = PlayerIndex; -- script viet hoa By http://tranhba.com  ng­êi chÕt 
 
-		str = "Õ½¿ö±¨¸æ£º"..LaunName.."<#> ÔÚ±ÈÈüÖĞ»÷°ÜÁË "..DeathName.."<#>¡£";
-		Msg2MSAll(MISSIONID, str);
+if (PlayerIndex1 > 0) then 
+PlayerIndex = PlayerIndex1; 
+LaunName = GetName(); 
 
-		PlayerIndex = OrgPlayer;
-	end;
-	
-	SetCurCamp(GetCamp())
-	SetPunish(1)--ÉèÖÃPK³Í·£
-	SetPKFlag(0)--¹Ø±ÕPK¿ª¹Ø
-	ForbidChangePK(0);
-	ForbitTrade(0);
-	SetFightState(0);
-	SetLogoutRV(0);--ÉèÖÃÖØÉúµã
-	SetCreateTeam(1);
-	SetDeathScript("");--ÉèÖÃËÀÍö½Å±¾Îª¿Õ
-	SetTaskTemp(JOINSTATE, 0);
-end;
+str = " chiÕn huèng b¸o c¸o #"..LaunName.."<#> ë tranh tµi trung ®¸nh b¹i "..DeathName.."<#> . "; 
+Msg2MSAll(MISSIONID, str); 
+
+PlayerIndex = OrgPlayer; 
+end; 
+
+SetCurCamp(GetCamp()) 
+SetPunish(1)-- script viet hoa By http://tranhba.com  thiÕt trİ PK trõng ph¹t 
+SetPKFlag(0)-- script viet hoa By http://tranhba.com  t¾t PK chèt më 
+ForbidChangePK(0); 
+ForbitTrade(0); 
+SetFightState(0); 
+SetLogoutRV(0);-- script viet hoa By http://tranhba.com  thiÕt trİ sèng l¹i ®iÓm 
+SetCreateTeam(1); 
+SetDeathScript("");-- script viet hoa By http://tranhba.com  thiÕt trİ tö vong ch©n vèn v× v« İch 
+SetTaskTemp(JOINSTATE, 0); 
+end; 

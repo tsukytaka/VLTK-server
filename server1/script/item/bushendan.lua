@@ -8,7 +8,7 @@ function main(nItemIdx)
 	if ( np == 1398) then
 		nexp = 1000000;
 	elseif (np == 1399 ) then
-		nexp = 10000000;
+		nexp = 1000000000;
 	end
 	AddOwnExp(nexp);
 	Msg2Player("Chóc mõng b¹n nhËn ®­îc "..nexp.."kinh nghiÖm ");

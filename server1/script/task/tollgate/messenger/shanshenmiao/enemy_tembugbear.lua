@@ -11,7 +11,7 @@ Include("\\script\\event\\birthday_jieri\\200905\\class.lua");
 
 function temple_killbugbear()
 	local _, _, nMapIndex = GetPos()
-	local Uworld1205 = nt_getTask(1205)  --信使积分
+	--local Uworld1205 = nt_getTask(3000)  --信使积分
 	local Uworld1213 = nt_getTask(1213)  --双倍经验时间
 	local Uworld1214 = nt_getTask(1214)  --刀妖叛徒剧情变量
 	if ( Uworld1213 ~= 0 ) then       --判断是否双倍经验时间
@@ -31,13 +31,13 @@ function temple_killbugbear()
 		Msg2Player("B筺  ho祅 th祅h t﹎ nguy謓 o Y猽 trc l骳 l﹎ chung, nh薾 頲 t礽 s秐 c馻 anh ta  l筰.")
 		if ( SubWorldIdx2ID( nMapIndex ) == 390 ) then
 			AddOwnExp(50000)
-			nt_setTask(1205,nt_getTask(1205)+16)
+			nt_setTask(3000,nt_getTask(3000)+16)
 		elseif ( SubWorldIdx2ID( nMapIndex ) == 391 ) then
 			AddOwnExp(100000)
-			nt_setTask(1205,nt_getTask(1205)+18)
+			nt_setTask(3000,nt_getTask(3000)+18)
 		elseif ( SubWorldIdx2ID( nMapIndex ) == 392 ) then
 			AddOwnExp(150000)
-			nt_setTask(1205,nt_getTask(1205)+24)
+			nt_setTask(3000,nt_getTask(3000)+24)
 		end
 		nt_setTask(1214,0)
 	end

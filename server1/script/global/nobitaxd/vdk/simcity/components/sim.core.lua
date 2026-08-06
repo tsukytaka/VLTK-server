@@ -1,36 +1,3 @@
--- Generate SimBot parameters by level (1 - 200)
-SIMBOT_STATS_BY_LEVEL = {}
-for lv = 1, 200 do
-    local atkSpeed = 10 + (lv - 1) * (200 - 10) / 199
-    local enforceHp = 50 + (lv - 1) * (1000 - 50) / 199
-    local maxHP = 100 + (lv - 1) * (20000 - 100) / 199
-
-    SIMBOT_STATS_BY_LEVEL[lv] = {
-        AtkSpeed = floor(atkSpeed),
-        EnforceHp = floor(enforceHp),
-        MaxHP = floor(maxHP)
-    }
-end
-
-function GetTop1PlayerLevel()
-    if Ladder_GetLadderInfo then
-        local szName, nLevel = Ladder_GetLadderInfo(1, 1)
-        if nLevel and nLevel > 0 then
-            if nLevel > 200 then return 200 end
-            if nLevel < 1 then return 1 end
-            return nLevel
-        end
-    end
-    return 95 -- default level
-end
-
-function GetSimBotStats(lv)
-    local level = lv or GetTop1PlayerLevel()
-    if level < 1 then level = 1 end
-    if level > 200 then level = 200 end
-    return SIMBOT_STATS_BY_LEVEL[level]
-end
-
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\config.lua")
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\libs\\index.lua")
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\components\\sim.movement.lua")
@@ -64,11 +31,10 @@ function SimCore:initCharConfig(config)
     config.rank = 1
     config.ngoaitrang = config.ngoaitrang or 0
     config.capHP = config.capHP or 1
-    config.level = config.level or GetTop1PlayerLevel()
+    config.level = config.level or 95
     config.isAttackable = config.isAttackable or 0
     if config.capHP and config.capHP ~= "auto" then
-        local stats = GetSimBotStats(config.level)
-        config.maxHP = stats.MaxHP * (config.capHP or 1)
+        config.maxHP = random(SIMBOT_HP_MIN or 60000, SIMBOT_HP_MAX or 120000)  
     end
     config.parentAppointPos = {0, 0}
     config.walkMode = config.walkMode or "random"
@@ -173,10 +139,20 @@ function SimCore:initCharConfig(config)
                 }
             end
             local _sw = SimBotSW[config.faction]
-            local _np = SimBotNpc[config.nNpcId]   
-            local _p = _np or (_sw and _sw[random(1, getn(_sw))])
+            local _np = SimBotNpc[config.nNpcId]
+            local _webPick = nil
+            local _webSkillId = SIMCITY_WEB_SKILLS and SIMCITY_WEB_SKILLS[config.faction]
+            if _webSkillId and _webSkillId > 0 and _sw then
+                for _wi = 1, getn(_sw) do
+                    if _sw[_wi][1] == _webSkillId then
+                        _webPick = _sw[_wi]
+                        break
+                    end
+                end
+            end
+            local _p = _webPick or _np or (_sw and _sw[random(1, getn(_sw))])
             if _p then
-                config.skillCastBua = {_p[1], 20}
+                config.skillCastBua = {_p[1], SIMCITY_SKILL_LEVEL or 20}
                 if config.faction == "duongmon" then config.skill351 = 351 end                  
                 if SimBotDebuff[config.faction] then config.skillDebuffList = SimBotDebuff[config.faction] end
                 if _p[2] ~= "any" then
@@ -207,10 +183,160 @@ function SimCore:initCharConfig(config)
 end
 
 
+g_despawnGuardN = g_despawnGuardN or 0
+function SimDespawnGuardBlocked(tbNpc)
+    if g_despawnGuardN >= 40 or not openfile then return end
+    g_despawnGuardN = g_despawnGuardN + 1
+    local fh = openfile("Logs/simbot_diag.txt", "a")
+    if fh then
+        write(fh, (GetLocalDate and GetLocalDate("[%d-%m-%y %H:%M:%S] ") or "")
+            .. "DESPAWN-GUARD blocked id=" .. tostring(tbNpc.id)
+            .. " map=" .. tostring(tbNpc.nMapId)
+            .. " finalIndex=" .. tostring(tbNpc.finalIndex)
+            .. " duelPlayerId=" .. tostring(tbNpc.duelPlayerId) .. "\n")
+        closefile(fh)
+    end
+end
+
+function SimCore:IsOwnedNpc(tbNpc)
+    if not tbNpc or not tbNpc.finalIndex or tbNpc.finalIndex <= 0 then return 0 end
+    local nNpcIndex = tbNpc.finalIndex
+    if GetNpcKind and GetNpcKind(nNpcIndex) ~= 0 then return 0 end
+    if GetNpcParam then
+        if GetNpcParam(nNpcIndex, 4) ~= 1 then return 0 end
+        if GetNpcParam(nNpcIndex, PARAM_LIST_ID) ~= tbNpc.id then return 0 end
+        local expectedType = (tbNpc.role == "keoxe") and 2 or 1
+        if GetNpcParam(nNpcIndex, PARAM_TYPE) ~= expectedType then return 0 end
+    end
+    return 1
+end
+
+function SimCore:ReleaseListId(nListId)
+    self.removedIdSet = self.removedIdSet or {}
+    if not self.removedIdSet[nListId] then
+        self.removedIdSet[nListId] = 1
+        tinsert(self.removedIds, nListId)
+    end
+end
+
+function SimCore:AcquireListId()
+    local nListId
+    if getn(self.removedIds) > 0 then
+        nListId = tremove(self.removedIds)
+        if self.removedIdSet then self.removedIdSet[nListId] = nil end
+    else
+        nListId = self.counter
+        self.counter = self.counter + 1
+    end
+    return nListId
+end
+
+function SimCore:ScheduleSpawnRetry(tbNpc, immediate)
+    if not tbNpc then return 0 end
+    tbNpc.finalIndex = nil
+    tbNpc.isDead = 0
+    if not tbNpc.goX32 or not tbNpc.goY32 then
+        if tbNpc.lastPos then
+            tbNpc.goX32 = tbNpc.lastPos.nX32
+            tbNpc.goY32 = tbNpc.lastPos.nY32
+        end
+    end
+    if not tbNpc.spawnRetryCount then tbNpc.spawnRetryCount = 0 end
+    local waitTick = SIMBOT_RESPAWN_RETRY_TICKS or 5
+    if immediate == 1 then waitTick = 1 end
+    tbNpc.spawnRetryTick = (tbNpc.tick_breath or 0) + waitTick
+    return 1
+end
+
+function SimCore:RetrySpawn(tbNpc, rate)
+    if not tbNpc or not tbNpc.spawnRetryTick then return 0 end
+    tbNpc.tick_breath = (tbNpc.tick_breath or 0) + (rate or 1)
+    if tbNpc.tick_breath < tbNpc.spawnRetryTick then return 1 end
+
+    local maxRetry = SIMBOT_RESPAWN_MAX_RETRIES or 5
+    if (tbNpc.spawnRetryCount or 0) >= maxRetry then
+        if tbNpc.tongkim == 1 then
+            -- Quan chien tranh khong bi mat vinh vien vi het slot NPC tam thoi.
+            tbNpc.spawnRetryCount = 0
+            tbNpc.spawnRetryTick = tbNpc.tick_breath + 30
+        else
+            tbNpc._ownerRemove = 1
+            self:Remove(tbNpc.id)
+        end
+        return 1
+    end
+
+    tbNpc.spawnRetryCount = (tbNpc.spawnRetryCount or 0) + 1
+    local created = tbNpc.entitySys:CreateChar(self, tbNpc, 0, tbNpc.goX32, tbNpc.goY32)
+    if created and created ~= 0 then
+        tbNpc.spawnRetryTick = nil
+        tbNpc.spawnRetryCount = 0
+        tbNpc.deadWatchCount = 0
+    else
+        tbNpc.spawnRetryTick = tbNpc.tick_breath + (SIMBOT_RESPAWN_RETRY_TICKS or 5)
+    end
+    return 1
+end
+
+function SimCore:RecoverStuck(tbNpc)
+    if SIMBOT_STUCK_ENABLED ~= 1 or not tbNpc.tick_checklag then return 0 end
+    if tbNpc.stall == 1 or tbNpc.isStanding == 1 or tbNpc.isFighting == 1
+       or tbNpc.duelPlayerId or tbNpc.botDuelTarget or tbNpc.partyPlayerId then
+        tbNpc.stuckRetries = 0
+        return 0
+    end
+    if (tbNpc.tick_breath or 0) < tbNpc.tick_checklag then return 0 end
+    if self:IsOwnedNpc(tbNpc) ~= 1 then
+        self:ScheduleSpawnRetry(tbNpc, 1)
+        return 1
+    end
+
+    local x, y = GetNpcPos(tbNpc.finalIndex)
+    if not x or not y then
+        self:ScheduleSpawnRetry(tbNpc, 1)
+        return 1
+    end
+    if not tbNpc.stuckWatchX or not tbNpc.stuckWatchY then
+        tbNpc.stuckWatchX = x
+        tbNpc.stuckWatchY = y
+        tbNpc.tick_checklag = (tbNpc.tick_breath or 0) + (SIMBOT_STUCK_CHECK_TICKS or 30)
+        return 0
+    end
+    local moved = tbNpc.stuckWatchX and tbNpc.stuckWatchY
+        and GetDistanceRadius(floor(x/32), floor(y/32), floor(tbNpc.stuckWatchX/32), floor(tbNpc.stuckWatchY/32)) > 1
+    if moved then
+        tbNpc.stuckRetries = 0
+        tbNpc.stuckWatchX = x
+        tbNpc.stuckWatchY = y
+        tbNpc.tick_checklag = nil
+        return 0
+    end
+
+    tbNpc.stuckRetries = (tbNpc.stuckRetries or 0) + 1
+    if tbNpc.stuckRetries > (SIMBOT_STUCK_MAX_RETRIES or 2) then
+        tbNpc.stuckRetries = 0
+        tbNpc.tick_checklag = nil
+        tbNpc.entitySys:Respawn(self, tbNpc, 4, "simbot stuck")
+        return 1
+    end
+    tbNpc.movementSys:resetPos(self, tbNpc.id)
+    tbNpc.stuckWatchX = x
+    tbNpc.stuckWatchY = y
+    tbNpc.tick_checklag = (tbNpc.tick_breath or 0) + (SIMBOT_STUCK_CHECK_TICKS or 30)
+    return 1
+end
+
 function SimCore:Remove(nListId)
     local tbNpc = self.fighterList[nListId]
     if tbNpc then
-        DelNpcSafe(tbNpc.finalIndex)
+        -- Giu SIM loi dai ton tai khi bo may tam thoi yeu cau despawn.
+        if tbNpc._ownerRemove ~= 1 and tbNpc.isDead ~= 1 and tbNpc.ploidaiBot == 1 then
+            SimDespawnGuardBlocked(tbNpc)
+            return
+        end
+        if tbNpc.finalIndex and tbNpc.finalIndex > 0 and self:IsOwnedNpc(tbNpc) == 1 then
+            DelNpcSafe(tbNpc.finalIndex)
+        end
 
         if tbNpc.children then
             for i = 1, getn(tbNpc.children) do
@@ -219,10 +345,12 @@ function SimCore:Remove(nListId)
         end
 
         self.fighterList[nListId] = nil
-        tinsert(self.removedIds, nListId)
+        self:ReleaseListId(nListId)
         
         -- Decrement total fighters
-        self.totalFighters = self.totalFighters - 1
+        if self.totalFighters and self.totalFighters > 0 then
+            self.totalFighters = self.totalFighters - 1
+        end
     end
 end
 
@@ -265,7 +393,7 @@ function SimBotCastDist(tbNpc)
 end
 
 function SimPickSkill(tbNpc, noDebuff)   
-    if not noDebuff and tbNpc.skillDebuffList and getn(tbNpc.skillDebuffList) > 0 then
+    if (SIMBOT_DEBUFF or 1) == 1 and not noDebuff and tbNpc.skillDebuffList and getn(tbNpc.skillDebuffList) > 0 then
         if not tbNpc.debuffResetTick or tbNpc.debuffResetTick <= tbNpc.tick_breath then
             tbNpc.debuffIdx = 1
             tbNpc.debuffResetTick = tbNpc.tick_breath + 60*18/REFRESH_RATE   
@@ -446,7 +574,7 @@ function SimPartyFollow(simInstance, tbNpc)
             else
                 local _cd = SimBotCastDist(tbNpc)
                 local _td = GetDistanceRadius(myX, myY, tX, tY)
-                if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end
+                if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, 95) end
                 
                 if IsAttackableCamp and GetNpcCurCamp and SetNpcCurCamp then
                     local _tc = GetNpcCurCamp(_tgt) or 0
@@ -469,12 +597,9 @@ function SimPartyFollow(simInstance, tbNpc)
                 elseif _td <= _cd and SimPickSkill and (BotDuelArm or BotDoSkill) and (not tbNpc.partyArmTick or tbNpc.partyArmTick <= tbNpc.tick_breath) then
                     local sk = SimPickSkill(tbNpc)  
                     if sk and sk[1] and sk[1] > 0 then
-                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end
-                        if SetNpcAtkSpeed then
-                            local stats = GetSimBotStats(tbNpc.level)
-                            SetNpcAtkSpeed(tbNpc.finalIndex, stats.AtkSpeed)
-                        end
-                        tbNpc.partyArmTick = tbNpc.tick_breath + 1
+                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end
+                        if SetNpcAtkSpeed then SetNpcAtkSpeed(tbNpc.finalIndex, SIMBOT_ATTACK_SPEED or 250) end
+                        tbNpc.partyArmTick = tbNpc.tick_breath + (SIMBOT_CAST_DELAY or 1)
                         if BotDuelArm then
                             BotDuelArm(tbNpc.finalIndex, _tgt, sk[1], sk[2] or 20) 
                         else
@@ -582,12 +707,9 @@ function SimDuelMove(simInstance, tbNpc)
                 if sk and sk[1] and sk[1] > 0 then
                     local _tn = PIdx2NpcIdx(pID)
                     if _tn and _tn > 0 then
-                        if SetNpcAtkSpeed then
-                            local stats = GetSimBotStats(tbNpc.level)
-                            SetNpcAtkSpeed(tbNpc.finalIndex, stats.AtkSpeed)
-                        end  
-                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end 
-                        tbNpc.duelArmTick = tbNpc.tick_breath + 1  
+                        if SetNpcAtkSpeed then SetNpcAtkSpeed(tbNpc.finalIndex, SIMBOT_ATTACK_SPEED or 250) end  
+                        if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end 
+                        tbNpc.duelArmTick = tbNpc.tick_breath + (SIMBOT_CAST_DELAY or 1)  
                         if BotDuelArm then   
                             BotDuelArm(tbNpc.finalIndex, _tn, sk[1], sk[2] or 20)   
                         else
@@ -681,7 +803,7 @@ function SimBotDuelMove(simInstance, tbNpc)
     local myY = floor(ny32 / 32)
     local dist = GetDistanceRadius(myX, myY, tX, tY)
     local _castDist = SimBotCastDist(tbNpc)
-    if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end  
+    if SetNpcLevel and not tbNpc.botLvSet then tbNpc.botLvSet = 1; SetNpcLevel(tbNpc.finalIndex, 95) end  
     tbNpc.isFighting = 1; tbNpc.botFighting = 1   
     if SetNpcCombat and (not tbNpc.botCombatTick or tbNpc.botCombatTick <= tbNpc.tick_breath) then
         SetNpcCombat(tbNpc.finalIndex, 1, tbNpc.skillCastBua and tbNpc.skillCastBua[1] or 0)   
@@ -712,20 +834,20 @@ function SimBotDuelMove(simInstance, tbNpc)
     if _inBandBV and NpcCastSkill and SimPickSkill and (not tbNpc.botCastTick or tbNpc.botCastTick <= tbNpc.tick_breath) then
         local sk = SimPickSkill(tbNpc, 1)  
         if sk and sk[1] and sk[1] > 0 then
-            if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end   
-            if SetNpcAtkSpeed then
-                local stats = GetSimBotStats(tbNpc.level)
-                SetNpcAtkSpeed(tbNpc.finalIndex, stats.AtkSpeed)
-            end
+            if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end   
+            if SetNpcAtkSpeed then SetNpcAtkSpeed(tbNpc.finalIndex, SIMBOT_ATTACK_SPEED or 250) end
             local _gd = GetNpcDoing and GetNpcDoing(tbNpc.finalIndex) or 1   
             if _gd ~= 6 and _gd ~= 7 and BotDoSkill then BotDoSkill(tbNpc.finalIndex, sk[1], sk[2] or 20, tIdx) end  
-            tbNpc.botCastTick = tbNpc.tick_breath + 1   
+            tbNpc.botCastTick = tbNpc.tick_breath + (SIMBOT_CAST_DELAY or 1)   
         end
     end
     return 1
 end
 
 function SimCore:OnTimer(tbNpc, rate)
+    -- Rollback theo sim.core.lua.bak_simcity_web_20260729_0915 (/home/old/s1):
+    -- khong chan OnTimer bang ownership/retry. Lop nay co the nhan NPC hop le
+    -- la sai va thoat truoc khi chay di chuyen/chien dau.
   
     if (tbNpc.bangKeoxe and SetNpcBang and tbNpc.isDead ~= 1 and tbNpc.finalIndex and tbNpc.finalIndex > 0) then
         tbNpc.bangBcN = (tbNpc.bangBcN or 0) + 1
@@ -757,6 +879,14 @@ function SimCore:OnTimer(tbNpc, rate)
                 tbNpc.tick_canWalk = (tbNpc.tick_breath or 0) + 30
             elseif tbNpc.tick_canWalk and tbNpc.tick_canWalk > (tbNpc.tick_breath or 0) then
                 tbNpc.tick_canWalk = tbNpc.tick_breath or 0  
+            end
+            if tbNpc.worldInfo.tkWarStarted == 1 then
+                tbNpc.isStanding = 0
+                tbNpc.peaceState = 0
+                if SetNpcPeace then SetNpcPeace(tbNpc.finalIndex, 0) end
+                if SetNpcCombat then
+                    SetNpcCombat(tbNpc.finalIndex, 1, tbNpc.skillCastBua and tbNpc.skillCastBua[1] or 0)
+                end
             end
         end
         
@@ -797,7 +927,7 @@ function SimCore:OnTimer(tbNpc, rate)
                                 local _dn = 12  
                                 local _destX = _bx + floor(_dx * _dn / _dd)
                                 local _destY = _by + floor(_dy * _dn / _dd)
-                                if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, tbNpc.level or GetTop1PlayerLevel()) end          
+                                if SetNpcLevel then SetNpcLevel(tbNpc.finalIndex, 95) end          
                                 local _dr = BotDashTo(tbNpc.finalIndex, _destX, _destY, 20)
                                 if _dr and _dr > 0 then tbNpc.dashUntil = tbNpc.tick_breath + 2*18/REFRESH_RATE end   
                             end
@@ -821,8 +951,7 @@ function SimCore:OnTimer(tbNpc, rate)
                     elseif _cl < _ml * 0.9 then
                         if not tbNpc.healStartTick then tbNpc.healStartTick = tbNpc.tick_breath end  
                         if tbNpc.tick_breath < tbNpc.healStartTick + 40*18/REFRESH_RATE then   
-                            local stats = GetSimBotStats(tbNpc.level)
-                            EnforceBotHp(tbNpc.finalIndex, stats.EnforceHp)   
+                            EnforceBotHp(tbNpc.finalIndex, 350)   
                         end
                         
                     end
@@ -863,17 +992,26 @@ function SimCore:OnTimer(tbNpc, rate)
         end
     end
     local tickRate = rate or 1
+    -- Giu dung vong doi bot ban hang cua /home/old/s1: sau khi dong bo
+    -- trang thai NPC/sap o tren, bot dung yen phai ket thuc tick tai day.
+    -- Khong dua stall qua combat, RecoverStuck hay PollTradeStay.
     if tbNpc.isDead == 1 or (tbNpc.isStanding and tbNpc.isStanding == 1) then
         return 0
     end
 
+    if self:RecoverStuck(tbNpc) == 1 then return 0 end
+
     if BOT_VS_BOT == 1 and SimEnemyAround and BotDoSkill and not tbNpc.duelPlayerId and not tbNpc.partyPlayerId
+       and tbNpc.liendauCombatManaged ~= 1
        and tbNpc.tongkim ~= 1 and tbNpc.finalIndex and tbNpc.finalIndex > 0 and (tbNpc.camp or 0) > 0
        and (not SimCityIsPeaceZone or SimCityIsPeaceZone(tbNpc) ~= 1) then
         
         if tbNpc.botDuelTarget or (not tbNpc.botScanTick or tbNpc.botScanTick <= tbNpc.tick_breath) then
-            local _cpn = 0
-            if GetNpcAroundPlayerList and GetPlayerPkMode and PIdx2NpcIdx then
+            -- City/village gate combat must not depend on a nearby player being
+            -- in PK mode.  Keep the old conditional behavior available through
+            -- config, but enable autonomous bot-vs-bot combat by default.
+            local _cpn = (SIMCITY_BOT_COMBAT_ALWAYS == nil or SIMCITY_BOT_COMBAT_ALWAYS == 1) and 1 or 0
+            if _cpn == 0 and GetNpcAroundPlayerList and GetPlayerPkMode and PIdx2NpcIdx then
                 local _pl, _pc = GetNpcAroundPlayerList(tbNpc.finalIndex, 32)
                 for _i = 1, _pc do
                     if _cpn == 0 and GetPlayerPkMode(PIdx2NpcIdx(_pl[_i])) ~= 0 then _cpn = 1 end
@@ -882,7 +1020,7 @@ function SimCore:OnTimer(tbNpc, rate)
             if _cpn == 0 then
                 if tbNpc.botDuelTarget then
                     tbNpc.botDuelTarget = nil
-                    if tbNpc.faction == "ngudoc" and SetNpcAuraSkill then SetNpcAuraSkill(tbNpc.finalIndex, 1, 1) end   
+                    if tbNpc.faction == "ngudoc" and SetNpcAuraSkill then SetNpcAuraSkill(tbNpc.finalIndex, 1, 1) end
                 end
                 tbNpc.botScanTick = tbNpc.tick_breath + 4*18/REFRESH_RATE
             elseif not tbNpc.botScanTick or tbNpc.botScanTick <= tbNpc.tick_breath then
@@ -905,7 +1043,7 @@ function SimCore:OnTimer(tbNpc, rate)
     if _ts == 2 then
         tbNpc.tradeStayDeadline = nil; tbNpc.tradeStayBye = nil; tbNpc.tradeStayByeUntil = nil; tbNpc.tradePostUntil = nil
         if not tbNpc.tradeItemSent then
-            if not tbNpc.tradeItemAt then tbNpc.tradeItemAt = tbNpc.tick_breath + 8*18/REFRESH_RATE end
+            if not tbNpc.tradeItemAt then tbNpc.tradeItemAt = tbNpc.tick_breath + (SIMCITY_TRADE_SEND_DELAY or 8)*18/REFRESH_RATE end
             if tbNpc.tick_breath >= tbNpc.tradeItemAt then
                 if SendTradeItem then SendTradeItem(tbNpc.finalIndex) end
                 tbNpc.tradeItemSent = 1
@@ -915,7 +1053,7 @@ function SimCore:OnTimer(tbNpc, rate)
         return 0
     elseif _ts == 3 then
         tbNpc.tradeItemSent = nil; tbNpc.tradeItemAt = nil
-        if not tbNpc.tradePostUntil then tbNpc.tradePostUntil = tbNpc.tick_breath + 27*18/REFRESH_RATE end
+        if not tbNpc.tradePostUntil then tbNpc.tradePostUntil = tbNpc.tick_breath + (SIMCITY_TRADE_POST_DELAY or 27)*18/REFRESH_RATE end
         if tbNpc.tick_breath < tbNpc.tradePostUntil then
             tbNpc.tick_breath = tbNpc.tick_breath + 1*tickRate
             return 0
@@ -932,13 +1070,13 @@ function SimCore:OnTimer(tbNpc, rate)
             tbNpc.tradeStayBye = nil; tbNpc.tradeStayByeUntil = nil; tbNpc.tradeStayDeadline = nil
             if TradeStayClear then TradeStayClear(tbNpc.finalIndex) end
         else
-            if not tbNpc.tradeStayDeadline then tbNpc.tradeStayDeadline = tbNpc.tick_breath + 38*18/REFRESH_RATE end
+            if not tbNpc.tradeStayDeadline then tbNpc.tradeStayDeadline = tbNpc.tick_breath + (SIMCITY_TRADE_WAIT_DELAY or 38)*18/REFRESH_RATE end
             if tbNpc.tick_breath < tbNpc.tradeStayDeadline then
                 tbNpc.tick_breath = tbNpc.tick_breath + 1*tickRate
                 return 0
             end
             if NpcChat then local _bm = { "ua ban ko chon giao dich, thoi t di nha :)", "chac ban ban roi, luc khac t cho nha :)", "ko thay mo giao dich, t di truoc nha :)", "thoi ban ko mo trade, t di day nha :)", "doi hoai ko thay, thoi t di nha :)", "ban chua chon giao dich kia, t di truoc :)", "chac ban dang ban, hom khac t cho :)", "t cho ma ban ko lay, thoi t di nha :)", "ko mo giao dich ha, thoi t di nha :)", "ban oi mo giao dich di chu, thoi t di :)" }; NpcChat(tbNpc.finalIndex, _bm[mod(tbNpc.tick_breath + tbNpc.finalIndex*7, 10) + 1]) end
-            tbNpc.tradeStayBye = 1; tbNpc.tradeStayByeUntil = tbNpc.tick_breath + 10*18/REFRESH_RATE
+            tbNpc.tradeStayBye = 1; tbNpc.tradeStayByeUntil = tbNpc.tick_breath + (SIMCITY_TRADE_BYE_DELAY or 10)*18/REFRESH_RATE
             tbNpc.tick_breath = tbNpc.tick_breath + 1*tickRate
             return 0
         end
@@ -946,7 +1084,7 @@ function SimCore:OnTimer(tbNpc, rate)
         
         tbNpc.tradeItemSent = nil; tbNpc.tradeItemAt = nil; tbNpc.tradePostUntil = nil
         tbNpc.tradeStayBye = nil; tbNpc.tradeStayByeUntil = nil; tbNpc.tradeStayDeadline = nil
-        if not tbNpc.greetStayDeadline then tbNpc.greetStayDeadline = tbNpc.tick_breath + 54*18/REFRESH_RATE end
+        if not tbNpc.greetStayDeadline then tbNpc.greetStayDeadline = tbNpc.tick_breath + (SIMCITY_TRADE_GREET_DELAY or 54)*18/REFRESH_RATE end
         if tbNpc.tick_breath < tbNpc.greetStayDeadline then
             tbNpc.tick_breath = tbNpc.tick_breath + 1*tickRate
             return 0
@@ -957,7 +1095,7 @@ function SimCore:OnTimer(tbNpc, rate)
         tbNpc.tradeStayDeadline = nil; tbNpc.tradeStayBye = nil; tbNpc.tradeStayByeUntil = nil; tbNpc.greetStayDeadline = nil
         tbNpc.tradeItemSent = nil; tbNpc.tradeItemAt = nil; tbNpc.tradePostUntil = nil
     end
-    
+
     if not tbNpc.duelPlayerId and not tbNpc.botDuelTarget and not tbNpc.partyPlayerId and tbNpc.movementSys:IsActive(self, tbNpc) == 0 then  
         if (not tbNpc.tongkim or tbNpc.tongkim ~= 1) then
             tbNpc.movementSys:MoveInactive(self, tbNpc)
@@ -1044,6 +1182,8 @@ function SimCore:OnTimer(tbNpc, rate)
 end
 
 function SimCore:ATick(rate)       
+    -- Giu dung nhip xu ly cua ban /home/old/s1. Chi chia nhom khi vuot 2000
+    -- bot; quy mo thanh thi/luyen cong thong thuong duoc cap nhat moi nhip.
     if self.totalFighters <= 2000 then
         for _, fighter in self.fighterList do
             self:OnTimer(fighter, rate)

@@ -1,3 +1,5 @@
+--HÖ thèng nh©n ®«i ®iÓm kinh nghiÖm cho c¸c ho¹t ®éng - Edit by AloneScript (Linh Em)
+
 Include("\\script\\activitysys\\config\\41\\head.lua")
 Include("\\script\\activitysys\\config\\41\\variables.lua")
 Include("\\script\\activitysys\\config\\41\\data.lua")
@@ -207,7 +209,7 @@ function pActivity:GetZhuShuaiAward_1()
 end
 
 function pActivity:GetZhuShuaiAward_2(nParam, ResultHandle)
-	local nExp = 50000000
+	local nExp = 5000000
 	local nPlayerIndex,nResult,_ = self:IsZhuShuai(ResultHandle)
 	if nResult == 0 then
 		CallPlayerFunction(nPlayerIndex,Say,format("Ng­¬i kh«ng ph¶i chñ so¸i cña tuÇn nµy, kh«ng thÓ nhËn %s nµy","PhÇn th­ëng"))

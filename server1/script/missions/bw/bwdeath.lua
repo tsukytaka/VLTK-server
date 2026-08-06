@@ -16,7 +16,7 @@ function OnDeath(Launcher)
 		local LaunName = GetName();
 		nLaunGroupID = GetCurCamp();
 		if (nLaunGroupID == 2 or nLaunGroupID == 3) then
-			str  = GetMissionS(CITYID).."<#> L«i ®µi tranh tµi ®ang diÔn ra, <color=yellow>"..szCaptainName[nLaunGroupID - 1].."<color> §éi <color=yellow>"..LaunName.."<color><#> ë l«i ®µi trung ®¸nh b¹i <color=yellow>"..szCaptainName[4 - nLaunGroupID].."<color> ®éi <color=yellow>"..DeathName.."<color><#>.";
+			str  = GetMissionS(CITYID).."<#> L«i ®µi tranh tµi ®ang diÔn ra, <color=yellow>"..szCaptainName[nLaunGroupID - 1].."<color>§éi<color=yellow>"..LaunName.."<color><#>ë l«i ®µi trung ®¸nh b¹i<color=yellow>"..szCaptainName[4 - nLaunGroupID].."<color> ®éi<color=yellow>"..DeathName.."<color><#>.";
 			Msg2MSAll(BW_MISSIONID, str);
 		end
 	end;

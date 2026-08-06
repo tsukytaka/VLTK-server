@@ -47,11 +47,11 @@ function main()
 		Say("ChiÕn tr­êng chØ dµnh cho ng­êi tõ cÊp 40 trë lªn, ng­¬i ch­a ®ñ ®iÒu kiÖn. Cè g¾ng tËp luyÖn thªm ®i!",2, "§­îc!/bt_oncancel", "Ta muèn t×m hiÓu th«ng tin chiÕn dŞch./bt_onbattleinfo");
 		SubWorld = nOldSubWorld
 		return 
-	-- elseif (pl_level < 80) then
-	-- 	bt_level = 1
-	-- elseif (pl_level < 120) then
-	-- 	bt_level = 2
-	elseif (pl_level >= 90) then
+	elseif (pl_level < 80) then
+		bt_level = 1
+	elseif (pl_level < 120) then
+		bt_level = 2
+	else
 		bt_level = 3
 	end;
 	SubWorld = SubWorldID2Idx(nWorld)
@@ -179,7 +179,6 @@ function goMap(nlevel)
 	bt_enterbattle()
 end
 function bt_enterbattle()
-	BT_SetGameData(GAME_LEVEL, 1)
 	if battlesSongJinCheck:FuncCheckIP(bt_ncamp) then return end ---chÆn trïng ip
 	local nWorld,_,_ = GetWorldPos(); --***
 	local nOldSubWorld = SubWorld

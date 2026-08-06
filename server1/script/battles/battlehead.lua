@@ -7,7 +7,7 @@ Include("\\script\\missions\\boss\\bigboss.lua")	-- big boss
 Include("\\script\\battles\\lang.lua")
 Include("\\script\\lib\\common.lua");
 Include("\\script\\battles\\battle_rank_award.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 Include("\\script\\bonusvlmc\\head.lua");
 Include("\\script\\misc\\vngpromotion\\ipbonus\\ipbonus_2_head.lua")
 Include("\\script\\event\\jiefang_jieri\\200904\\qianqiu_yinglie\\head.lua");
@@ -34,7 +34,7 @@ EXPIRED_TIME = 24*60  --宋金军功牌过期
 JUNGONGPAI_Task_ID = 1830 -- --宋金军功牌任务变量
 
 TIME_GAME_LIMIT = 5 * 60	--玩家能够在后营停留的时间，超过时间将退出战场回到报名点
-POINT_TK = 200 -- 甶觤 gi誸 npc or player
+POINT_TK = 500 -- 甶觤 gi誸 npc or player
 TASKID_FIRST_POINT = 5956
 TASKID_LAST_TIME_TK = 5957
 TASK_ID_COUNT_TK = 5958
@@ -368,7 +368,7 @@ end;
 
 --"123,234" -> 123 , 234,将一个字符串写成的坐标数据转化成两个数字变量
 function bt_str2xydata(str)
-	m = strfind(str,",") if not m then return 0, 0 end
+	m = strfind(str,",")
 	x = tonumber(strsub(str,0,m-1))
 	y = tonumber(strsub(str,m+1))
 	return x,y
@@ -1202,7 +1202,7 @@ end
 
 -- 实时显示战场的各种排名信息 by 帛裂七弦 09/07/27
 function bt_announce (lsf_level, n_time)
-	do return end
+	
 	-- 每10分钟(30次*间隔20秒)公布一次信息
 	if (mod(n_time, 30) ~= 0) then
 		return

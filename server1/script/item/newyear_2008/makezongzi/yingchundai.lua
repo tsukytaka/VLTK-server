@@ -1,26 +1,24 @@
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 tbclass_newyear2008_yingchundai = {}
 tbclassname = tbclass_newyear2008_yingchundai
 tbclassname.TITLE = "Më tói mõng xu©n."
 tbclassname.tbdate = {}
-tbclassname.tbdate.nstart = 802020000
-tbclassname.tbdate.nend 	= 803022400
+tbclassname.tbdate.nstart = 1802020000
+tbclassname.tbdate.nend 	= 1803102400
 tbclassname.mareial =
 {
 	ntotalprob = 100,
 	tbitem = {
-			{G=6,D=1,P=1653,szname="L¸ b¸nh",prob=38.80},
-			{G=6,D=1,P=1654,szname="G¹o nÕp",prob=29.10},
-			{G=6,D=1,P=1655,szname="§Ëu xanh",prob=19.40},
-			{G=6,D=1,P=1656,szname="ThÞt heo ",prob=9.70	},
-			{G=6,D=1,P=1657,szname="Phóc"	 ,prob=1.00	},
-			{G=6,D=1,P=1658,szname="Léc"	 ,prob=1.00	},
-			{G=6,D=1,P=1659,szname="Thä"	 ,prob=1.00	},
+			{G=6,D=1,P=1653,szname="L¸ b¸nh",prob=25},
+			{G=6,D=1,P=1654,szname="G¹o nÕp",prob=25},
+			{G=6,D=1,P=1655,szname="§Ëu xanh",prob=25},
+			{G=6,D=1,P=1656,szname="D©y Cãi ",prob=25},
+--			{G=6,D=1,P=1657,szname="Phóc"	 ,prob=1.00	},
+--			{G=6,D=1,P=1658,szname="Léc"	 ,prob=1.00	},
+--			{G=6,D=1,P=1659,szname="Thä"	 ,prob=1.00	},
 		},
 }
 function main(sel)
-	if (CFG_newyear_2008	== 0) then
+	if tbclassname:checkdate() == 0 then
 		Say("Tói mõng xu©n ®· hÕt h¹n, kh«ng thÓ më.",0)
 		return 0
 	end

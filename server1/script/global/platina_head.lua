@@ -65,17 +65,17 @@ tb_gold2planita_material =
 
 tbUpGradeProcess = {
 [1] = {
-				tbUpItemList = tb_gold2planita_material,
-				szErrorMsg = "<dec><npc>Ngoµi <color=yellow>trang bÞ B¹ch Kim<color>, ta cßn cÇn <color=yellow>ThÇn bÝ kho¸ng th¹ch<color>, color=yellow>HuyÒn Tinh Kho¸ng Th¹ch cÊp 8<color> vµ <color=yellow>m¶nh Bæ Thiªn Th¹ch (trung)<color>, xin h·y gi÷ l¹i nh÷ng thø kh¸c.",
-				nItemQuality = 1,
-				szGetEquipIDFunc = "GetGlodEqIndex",
-				szContinueFunc = "want_upgoldeq",
-				szDoProcessFunc = "UpgradePlatinaFromGoldItem"},
+	tbUpItemList = tb_gold2planita_material,
+	szErrorMsg = "<dec><npc>Ngoµi <color=yellow>trang bÞ B¹ch Kim<color>, ta cßn cÇn <color=yellow>ThÇn bÝ kho¸ng th¹ch<color>, color=yellow>HuyÒn Tinh Kho¸ng Th¹ch cÊp 8<color> vµ <color=yellow>m¶nh Bæ Thiªn Th¹ch (trung)<color>, xin h·y gi÷ l¹i nh÷ng thø kh¸c.",
+	nItemQuality = 1,
+	szGetEquipIDFunc = "GetGlodEqIndex",
+	szContinueFunc = "want_upgoldeq",
+	szDoProcessFunc = "UpgradePlatinaFromGoldItem"},
 [3] = {
-				tbUpItemList = tb_upgradematerial,
-				szErrorMsg = "<dec><npc>Ngoµi <color=yellow>trang bÞ B¹ch Kim<color>, ta cßn cÇn  <color=yellow>m¶nh Bæ Thiªn Th¹ch<color> n÷a, xin h·y gi÷ l¹i nh÷ng thø kh¸c.",
-				nItemQuality = 4,
-				szGetEquipIDFunc = "GetPlatinaEquipIndex",
-				szContinueFunc = "want_upplatinaeq",
-				szDoProcessFunc = "UpgradePlatinaItem"},
+	tbUpItemList = tb_upgradematerial,
+	szErrorMsg = "<dec><npc>Ngoµi <color=yellow>trang bÞ B¹ch Kim<color>, ta cßn cÇn  <color=yellow>m¶nh Bæ Thiªn Th¹ch<color> n÷a, xin h·y gi÷ l¹i nh÷ng thø kh¸c.",
+	nItemQuality = 4,
+	szGetEquipIDFunc = "GetPlatinaEquipIndex",
+	szContinueFunc = "want_upplatinaeq",
+	szDoProcessFunc = "UpgradePlatinaItem"},
 }

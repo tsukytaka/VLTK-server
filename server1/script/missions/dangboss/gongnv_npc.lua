@@ -5,6 +5,7 @@ Include("\\script\\dailogsys\\g_dialog.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
 Include("\\script\\activitysys\\answer.lua")
 Include("\\script\\misc\\eventsys\\type\\npc.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 --[DinhHQ]
 	--[20101216]:event ngu thai ket tinh
 	Include("\\script\\vng_event\\ngusackettinh\\npc\\nskt_gongnv.lua")
@@ -29,11 +30,14 @@ function main()
 	tbVNGWD2011_GongNV:addDialog(tbDailog)
 
 	if tbTop10:IsActive() == 1 then
-		tbDailog:AddOptEntry("Danh s¸ch thËp ®¹i cao thñ", tbTop10.MainDialog, {tbTop10})
+		--tbDailog:AddOptEntry("Danh s¸ch thËp ®¹i cao thñ", tbTop10.MainDialog, {tbTop10})
 	end	
 	--end [DinhHQ]
 	EventSys:GetType("AddNpcOption"):OnEvent(szNpcName, tbDailog, nNpcIndex)
+
+	if HoatDongDauNguu == 1 then
 	tbDailog:AddOptEntry("Ho¹t ®éng ®Êu ng­u", tbDangBossDailog.Main, {tbDangBossDailog})
+	end
 	G_ACTIVITY:OnMessage("ClickNpc", tbDailog)
 	tbDailog:Show()
 

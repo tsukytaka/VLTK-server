@@ -47,6 +47,9 @@ function YDBZ_restore(player_index,mission,nteam)
 	SetPKFlag(0)
 	ForbidChangePK(0);
 	SetDeathScript("");
+	SetLogoutRV(0)
+	YDBZ_sdl_setTaskByte(YDBZ_ITEM_YANDILING,2,0)
+	SetTask(YDBZ_MISSIOM_PLAYER_KEY,0)
 	--SetTask(YDBZ_TEAMS_TASKID, 0)
 	DisabledUseTownP(0)
 	ForbitTrade(0)

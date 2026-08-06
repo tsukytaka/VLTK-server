@@ -25,9 +25,9 @@ YDBZ_READY_SIGNUP_POSX	= 6			--报名地图原坐标x
 YDBZ_READY_SIGNUP_POSY	= 7			--报名地图原坐标y
 YDBZ_MISSION_KEY				= 8			--场数key
 YDBZ_READY_BROAD_STATE	= 9			--公告倒计时次数
-YDBZ_TEAM_COUNT_LIMIT		= 4			--每个队伍最少的成员数才能参加
-YDBZ_TEAM_COUNT_MAXLIMIT	= 6			--每个队伍最多的成员数才能参加
-YDBZ_TEAM_START_LIMIT 	= 2			--每张地图必须足够的队伍数才能开放
+YDBZ_TEAM_COUNT_LIMIT		= 1			--每个队伍最少的成员数才能参加
+YDBZ_TEAM_COUNT_MAXLIMIT	= 8			--每个队伍最多的成员数才能参加
+YDBZ_TEAM_START_LIMIT 	= 1			--每张地图必须足够的队伍数才能开放
 
 YDBZ_READY_POS 					= {			----玩家被传送宝藏场准备场坐标。
 {1590,3195},

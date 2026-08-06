@@ -147,11 +147,11 @@ function tbSeed:AddPlantCount()
 end
 
 ---- DEBUG
---function tbSeed:SetPlantCount(Count)
---	local curr_date = tonumber(GetLocalDate("%y%m%d"))
---	TaskManager:SetTask(TASKGROUP_WINTERSWEET, TASKINDEX_DATE, curr_date)
---	TaskManager:SetTask(TASKGROUP_WINTERSWEET, TASKINDEX_COUNT, Count)
---end
+function tbSeed:SetPlantCount(Count)
+	local curr_date = tonumber(GetLocalDate("%y%m%d"))
+	TaskManager:SetTask(TASKGROUP_WINTERSWEET, TASKINDEX_DATE, curr_date)
+	TaskManager:SetTask(TASKGROUP_WINTERSWEET, TASKINDEX_COUNT, Count)
+end
 
 function tbSeed:Check()
 	if (tbSeed:InMapList(tbTreeMap) == 0 or GetFightState() == 1) then
@@ -362,9 +362,9 @@ function tbMaintainState:New(Tree)
 	tb.OpFlag = {}
 	tb.Time = tbMaintainState:Now()
 	tb.Timeout = 30
-	--print(format("[%s]Tree[%d] begin to maintain",
---		GetLocalDate("%Y-%m-%d %H:%M:%S"),
---		Tree.Npc))
+	print(format("[%s]Tree[%d] begin to maintain",
+		GetLocalDate("%Y-%m-%d %H:%M:%S"),
+		Tree.Npc))
 	return tb
 end
 
@@ -376,8 +376,8 @@ function tbMaintainState:Dialog()
 end
 
 function tbMaintainState:NotifyTeam(Team)
---	local msg = tbMaintainInfo[self.Step].Msg
---	Team:BroadCast(msg)
+	local msg = tbMaintainInfo[self.Step].Msg
+	Team:BroadCast(msg)
 end
 
 function tbMaintainState:Now()

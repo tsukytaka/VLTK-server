@@ -6,6 +6,9 @@ function add_npc_vinh()
 end
 
 function simcity_addNpcs()
+	-- Activity 801 la diem khoi dong thuc te. Tao world truoc khi dang ky EnterMap.
+	if SimCity_EnsureInitialized then SimCity_EnsureInitialized() end
+	SIMCITY_REGISTERED_MAPS = SIMCITY_REGISTERED_MAPS or {}
 	-- SimCity: them Trieu Man o 7 thanh
 	--SimCityThanhThi:addNpcs()
 	
@@ -20,9 +23,12 @@ function simcity_addNpcs()
 
 	-- Event sys when user enter/leave map
 	for id, map in SimCityMap do
-		EventSys:GetType("EnterMap"):Reg(id, SimCityThanhThi.onPlayerEnterMap, SimCityThanhThi)
-		EventSys:GetType("LeaveMap"):Reg(id, SimCityThanhThi.onPlayerExitMap, SimCityThanhThi)
-		EventSys:GetType("EnterMap"):Reg(id, SimCityVatNuoi.onPlayerEnterMap, SimCityVatNuoi)		
+		if not SIMCITY_REGISTERED_MAPS[id] then
+			EventSys:GetType("EnterMap"):Reg(id, SimCityThanhThi.onPlayerEnterMap, SimCityThanhThi)
+			EventSys:GetType("LeaveMap"):Reg(id, SimCityThanhThi.onPlayerExitMap, SimCityThanhThi)
+			EventSys:GetType("EnterMap"):Reg(id, SimCityVatNuoi.onPlayerEnterMap, SimCityVatNuoi)
+			SIMCITY_REGISTERED_MAPS[id] = 1
+		end
 	end
 	
 

@@ -12,6 +12,7 @@ TSK_BASE_POINT = 3183
 TSK_AWARD_POINT = 3184
 TSK_PLAY_TIME = 3185
 TSK_DAILY_LIMIT = 3187
+TSK_AWARD_POINT_EXCHANGE = 3423   -- 玩家奖励分兑换量
 
 function tbPlayerHandle:GetBasePoint()
 	return GetTask(%TSK_BASE_POINT)
@@ -23,4 +24,9 @@ end
 
 function tbPlayerHandle:GetPlayTime()
 	return GetTask(%TSK_PLAY_TIME)
+end
+
+-- 获取玩家奖励分的兑换量
+function tbPlayerHandle:GetAwardPointExchange()
+	return GetTask(%TSK_AWARD_POINT_EXCHANGE)
 end

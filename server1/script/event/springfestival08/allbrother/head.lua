@@ -1,5 +1,5 @@
 allbrother_0801_Date_S				= 091113--2008Äê03ÔÂ08ÈÕµ½2008Äê03ÔÂ16ÈÕ24µã
-allbrother_0801_Date_E				= 501129
+allbrother_0801_Date_E				= 091129
 allbrother_0801_szActName			= "Tø h¶i giai huynh ®Ö"
 allbrother_0801_TeamSizeLimit		= 8
 TSK_allbrother_0801_TaskState		= 1958;

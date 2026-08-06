@@ -74,8 +74,8 @@ function Gambler:SetResult(nNewType, nNewLevel)
 end
 
 function Gambler:PayCoin(nCoin)			
-	Msg2Player("Chi tr¶" .. nCoin .. "Hçn Nguyªn Linh Lé")
-	local nRet = ConsumeEquiproomItem(nCoin,6,1,2312,1)
+	Msg2Player("B¹n ®· chi tr¶ " .. nCoin .. " TiÒn §ång") ------------
+	local nRet = ConsumeEquiproomItem(nCoin,4,417,1,1)
 	return nRet
 end
 

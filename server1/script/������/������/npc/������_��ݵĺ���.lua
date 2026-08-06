@@ -1,5 +1,6 @@
--- ½á°İµÄºÍÉĞ
--- By: Dan_Deng(2003-08-22)
+-- TŞnh §èc ThiÒn S­ ë Nam Nh¹c TrÊn - Editor by AloneScript (Linh Em)
+
+Include("\\script\\lib\\alonelib.lua");
 
 function main(sel)
 	if (GetTeamSize() > 1) and (IsCaptain() == 1) then			-- Ö»ÓĞ¶Ó³¤²ÅÄÜÆô¶¯½á°İ
@@ -15,7 +16,7 @@ function Wswear_select()
 	else
 		P_sex = "N÷ hiÖp"
 	end
-	Say("TŞnh §èc ThiÒn S­: Nãi hay l¾m! ChØ cÇn"..P_sex.."®ãng 3000 l­îng ®Ó söa t­îng PhËt, mäi chuyÖn ®Òu dÔ nãi.",2,"Quyªn 3000 l­îng. /Wswear_yes","Kh«ng cÇn!/Wswear_no")
+	Say("<color=green>TŞnh §èc ThiÒn S­<color>: Nãi hay l¾m! ChØ cÇn "..P_sex.." ®ãng 3000 l­îng ®Ó söa t­îng PhËt, mäi chuyÖn ®Òu dÔ nãi.",2,"Quyªn 3000 l­îng. /Wswear_yes","Kh«ng cÇn!/Wswear_no")
 end;
 
 function Wswear_yes()
@@ -24,7 +25,7 @@ function Wswear_yes()
 			Pay(3000)
 			Msg2Team("Chóc mõng hai vŞ ®· kÕt nghÜa Kim Lan. ")
 		else
-			Msg2Team("Trong nhãm cã tån t¹i quan hÖ phu thª, viÖc kÕt b¸i thÊt b¹i. ")
+			Msg2Team("Trong nhãm cã tån t¹i quan hÖ phu thª, viÖc kÕt b¸i thÊt b¹i.")
 		end
 	else
 		Talk(1,"", 11376)

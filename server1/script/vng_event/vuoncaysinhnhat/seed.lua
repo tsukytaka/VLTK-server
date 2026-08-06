@@ -1,7 +1,7 @@
 Include("\\script\\vng_event\\VuonCaySinhNhat\\plant.lua")
 
-DATE_START	= 20110624
-DATE_END	= 20110707
+DATE_START	= 20160624
+DATE_END	= 20180707
 
 function IsAcitve()
 	local now = tonumber(GetLocalDate("%Y%m%d"));

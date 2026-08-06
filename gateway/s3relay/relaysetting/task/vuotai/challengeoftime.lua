@@ -21,7 +21,8 @@ function TaskShedule()
 	-- 设置触发时间
 	local h, m = GetNextTime();
 	TaskTime(h, m);
-	OutputMsg(format("=====> VUOT AI KHIEU CHIEN THOI GIAN BAT DAU %d:%d...", h, m));
+	OutputMsg("==========================================================================================")
+	OutputMsg(format("                       VUOT AI KHIEU CHIEN THOI GIAN BAT DAU %d:%d", h, m));
 	-- 执行无限次
 	TaskCountLimit(0);
 

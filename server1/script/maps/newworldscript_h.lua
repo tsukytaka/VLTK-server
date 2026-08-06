@@ -224,5 +224,3 @@ aryFuncStore["NATIONALWAR"] = nationalwar_mapevent
 aryFuncStore["NEWPRACTICE_A"] = NewPractice_A
 aryFuncStore["NEWPRACTICE_B"] = NewPractice_B
 --aryFuncStore["JINGLI"] = JingliEntrance
-function NOTONGCLAIMWAR(bIn) end
-aryFuncStore["NOTONGCLAIMWAR"] = NOTONGCLAIMWAR

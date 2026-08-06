@@ -4,7 +4,7 @@ Include ("\\script\\shitu\\shitu.lua")
 
 Include("\\script\\task\\newtask\\map_index.lua")
 Include("\\script\\lib\\common.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 tb_teaminfo_master = {"pid","level","name"}
 tb_teamtask_master = {TKID_DICHUAN_APPRENTICE_COUNT}
 
@@ -995,6 +995,7 @@ end;
 
 
 function main()
+	if SuDoThiep ~= 1 then Say("HiÖn t¹i TÝnh n¨ng s­ ®å ®ang t¹m ®ãng, sÏ më l¹i tÝnh n¨ng nµy sau khi cã th«ng b¸o!") return 1 end
 	if (ST_IsTransLife() == 1 and GetLevel() < 80) then
 		Say("LÜnh héi B¾c §Èu Tr­êng Sinh ThuËt - T©m Ph¸p Thiªn xong, ë cÊp 80 vÒ tr­íc kh«ng thÓ sö dông S­ §å ThiÕp.", 0);
 		return 1

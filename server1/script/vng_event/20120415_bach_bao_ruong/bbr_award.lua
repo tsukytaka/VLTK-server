@@ -139,4 +139,4 @@ function tbBBRAward:MakeCompose(strFlag, nProductID)
 	pCompos:ComposeDailog(1);
 end
 
-pEventType:Reg("L‘ Quan", "Ph«n th≠Îng Phong V©n B∂o ßi÷n", tbBBRAward.main, {tbBBRAward})
+-- pEventType:Reg("L‘ Quan", "Ph«n th≠Îng Phong V©n B∂o ßi÷n", tbBBRAward.main, {tbBBRAward})

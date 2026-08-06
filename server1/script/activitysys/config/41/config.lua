@@ -1,3 +1,5 @@
+--HÖ thèng nh©n ®«i ®iÓm kinh nghiÖm cho c¸c ho¹t ®éng - Edit by AloneScript (Linh Em)
+
 Include("\\script\\activitysys\\config\\41\\variables.lua")
 tbConfig = {}
 tbConfig[1] = --Ò»¸öÏ¸½Ú

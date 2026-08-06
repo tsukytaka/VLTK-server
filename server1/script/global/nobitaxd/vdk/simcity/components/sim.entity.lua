@@ -68,7 +68,7 @@ function execCreateChar(self, simInstance, tbNpc, isNew, goX32, goY32)
 			name = tbNpc.hardsetName     
 		end
 
-        local _spawnLv = (tbNpc.level and tbNpc.level >= 1 and tbNpc.level <= 200) and tbNpc.level or GetTop1PlayerLevel()
+        local _spawnLv = (tbNpc.level and tbNpc.level >= 1 and tbNpc.level <= 119) and tbNpc.level or 95
         nNpcIndex = AddNpcEx(tbNpc.nNpcId, _spawnLv, tbNpc.series, nMapIndex, tX32, tY32, 1, name, 0)
 
         if nNpcIndex > 0 then
@@ -107,7 +107,7 @@ function execCreateChar(self, simInstance, tbNpc, isNew, goX32, goY32)
                 end
 			
                 -- Ngoai trang?
-                if (tbNpc.ngoaitrang and tbNpc.ngoaitrang == 1) then
+                if (tbNpc.ngoaitrang and tbNpc.ngoaitrang == 1 and (SIMCITY_OUTFIT_ENABLED or 1) == 1 and random(1, 100) <= (SIMCITY_OUTFIT_CHANCE or 100)) then
                     SimCityNgoaiTrang:makeup(tbNpc, nNpcIndex)
                 end
                 
@@ -124,7 +124,7 @@ function execCreateChar(self, simInstance, tbNpc, isNew, goX32, goY32)
                 end
 				
 				if tbNpc.stall == 1 and NpcSit then
-                    NpcSit(nNpcIndex)
+					NpcSit(nNpcIndex)
                     if SetNpcStall then SetNpcStall(nNpcIndex, 1) end   
                     if tbNpc.daTau == 1 and SetBotStallTier then SetBotStallTier(nNpcIndex, 0, 1) end   
                 end
@@ -159,7 +159,7 @@ function execCreateChar(self, simInstance, tbNpc, isNew, goX32, goY32)
                 end
                 
                 if SetNpcLevel then SetNpcLevel(nNpcIndex, 95) end                
-                if SetNpcAtkSpeed then SetNpcAtkSpeed(nNpcIndex, 250) end
+                if SetNpcAtkSpeed then SetNpcAtkSpeed(nNpcIndex, SIMBOT_ATTACK_SPEED or 250) end
 
                 -- Life?
                 if tbNpc.lastHP then

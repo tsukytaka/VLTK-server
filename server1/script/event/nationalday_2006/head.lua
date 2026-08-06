@@ -13,7 +13,7 @@
 -- 态度有明显的生疏，仿佛想退回到她的世界里去。
 
 -- ======================================================
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+
 
 ID_GETDOUBLEEXP_DATE = 2502;  -- 领取双倍的日期
 ID_GETDOUBLEEXP_NUM  = 2503;  -- 领取双倍的次数
@@ -34,8 +34,7 @@ function isNationalDay()
 local nDate  = tonumber(GetLocalDate("%y%m%d"));
 
 	-- 国庆节活动时间：2006/10/01 ~ 2006/10/03
---	if (nDate==61001 or nDate==61002 or nDate==61003) then
-	if (CFG_nationalday_2006	==	1)	then
+	if (nDate==61001 or nDate==61002 or nDate==61003) then
 		return 1;
 	else
 		return 0;

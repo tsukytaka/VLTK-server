@@ -5,8 +5,7 @@
 --Comment:	Weekend Event: City Defense War
 --			Function: Event header file custom functions
 -----------------------------------------------------------------
---Include("\\script\\global\\pgaming\\missions\\bosshoangkim\\bossdai\\lib\\serverlib.lua")
-Include("\\script\\battles\\battlehead.lua")
+Include("\\script\\global\\pgaming\\missions\\bosshoangkim\\bossdai\\lib\\serverlib.lua")
 Include("\\script\\missions\\newcitydefence\\headinfo.lua")
 Include([[\script\tong\tong_award_head.lua]]);-- Guild weekly goal contribution by Zhi Shan
 --Include("\\script\\lib\\tireddegree.lua")
@@ -263,8 +262,6 @@ function cd_join(camp)
 	SetPKFlag(0);
 	ForbidChangePK(1);
 	SetTempRevPos(mapid, posx * 32, posy * 32);
-	SetTask(TSKID_PLAYER_ZHANGONG, 0)
-	SetTask(TSKID_PLAYER_OLDRANK, 1)
 	SetDeathScript( FILE_PLAYERDEATH );
 	if GetTask(TASKID_HOUR_PHLT) ~= tonumber(GetLocalDate("%m%d%H")) then
 		SetTask(TASKID_HOUR_PHLT, tonumber(GetLocalDate("%m%d%H")))  -- Record hour of participation in City Defense
@@ -360,7 +357,7 @@ function cd_addtotalpoint(point)
 		SetTask(TSKID_PLAYER_ZHANGONG, nZhanGong + point)
 	end
 	local curPointTK = tonumber(GetTask(747)) or 0
-	if curPointTK > 0 then		
+	if curPointTK >= 0 then		
 		SetTask(747, curPointTK + (point * 10))
 	end
 	-- cd_AddSkillTitle()

@@ -6,7 +6,7 @@ tbLANTERNS_NPC = {
 		{ 193, 39, 340, 680,	"\\settings\\event\\zhongqiuhuodong\\wuyi_lantern.txt",			"\\script\\event\\mid_autumn\\lantern.lua", "Vò Di s¬n" },
 }
 LANTERN_OPEN_DATE = 05091618
-LANTERN_END_DATE = 50091824
+LANTERN_END_DATE = 05091824
 --NPCID:1077, 1, 
 -- Éú³ÉµÆÁýNPC
 function create_lanterns()

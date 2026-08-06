@@ -42,21 +42,22 @@ BigBoss.tbKillerReward =
 
 BigBoss.tbNormalDrop = 
 {
-	{tbProp = {6,1,1075,1,0,0}, nCount=3},
-	{tbProp = {4,239,1,1,0,0}, nCount=20},
-	{tbProp = {4,238,1,1,0,0}, nCount=20},
-	{tbProp = {4,240,1,1,0,0}, nCount=20},
-	{tbProp = {4,353,1,1,0,0}, nCount=20},
-	{tbProp = {6,1,1672,1,0,0}, nCount=10},
-	{tbProp = {0,11,450,1,0,0}, nCount=1, nExpiredTime=10080},
-	{tbProp = {6,1,2115,1,0,0}, nCount=10},
-	{tbProp = {6,1,2117,1,0,0}, nCount=10},
-	{tbProp = {6,0,6,1,0,0}, nCount=20},
-	{tbProp = {6,0,3,1,0,0}, nCount=20},
-	{tbProp = {6,1,71,1,0,0}, nCount=20},
-	{tbProp = {6,1,1765,1,0,0}, nCount=10},
-	{tbProp = {6,1,26,1,0,0}, nCount=10},
-	{tbProp = {6,1,22,1,0,0}, nCount=10},
+	{tbProp={6,1,2566,1,0,0}, nCount=200 },
+	-- {tbProp = {6,1,1075,1,0,0}, nCount=3},
+	-- {tbProp = {4,239,1,1,0,0}, nCount=20},
+	-- {tbProp = {4,238,1,1,0,0}, nCount=20},
+	-- {tbProp = {4,240,1,1,0,0}, nCount=20},
+	-- {tbProp = {4,353,1,1,0,0}, nCount=20},
+	-- {tbProp = {6,1,1672,1,0,0}, nCount=10},
+	-- {tbProp = {0,11,450,1,0,0}, nCount=1, nExpiredTime=10080},
+	-- {tbProp = {6,1,2115,1,0,0}, nCount=10},
+	-- {tbProp = {6,1,2117,1,0,0}, nCount=10},
+	-- {tbProp = {6,0,6,1,0,0}, nCount=20},
+	-- {tbProp = {6,0,3,1,0,0}, nCount=20},
+	-- {tbProp = {6,1,71,1,0,0}, nCount=20},
+	-- {tbProp = {6,1,1765,1,0,0}, nCount=10},
+	-- {tbProp = {6,1,26,1,0,0}, nCount=10},
+	-- {tbProp = {6,1,22,1,0,0}, nCount=10},
 }
 
 --DC phÇn th­ëng boss §éc C« - Modified By DinhHQ - 20111010
@@ -72,12 +73,12 @@ BigBoss.tbVngNewDropItem = {
 		[8]={{szName="§å Phæ Tö M·ng Th­îng Giíi ChØ",tbProp={6,1,2721,1,0,0},nCount=1,nRate=8},},
 		[9]={{szName="§å Phæ Tö M·ng H¹ Giíi ChØ",tbProp={6,1,2722,1,0,0},nCount=1,nRate=8},},
 		[10]={{szName="§å Phæ Tö M·ng KhÝ Giíi",tbProp={6,1,2723,1,0,0},nCount=1,nRate=8},},
-		[11]={{szName="Tö M·ng LÖnh",tbProp={6,1,2350,1,0,0},nCount=1,nRate=10},},
+		[11]={{szName="Tö M·ng LÖnh",tbProp={6,1,4871,1,0,0},nCount=1,nRate=10},},
 		[12]={{szName="Ch×a Khãa Nh­ ý",tbProp={6,1,2744,1,0,0},nCount=1,nRate=30},},
 		[13]={{szName="Phi tèc hoµn lÔ bao",tbProp={6,1,2520,1,0,0},nCount=1,nRate=60},},
 		[14]={{szName="§¹i lùc hoµn lÔ bao",tbProp={6,1,2517,1,0,0},nCount=1,nRate=60},},
-		[15]={{szName="Thanh C©u LÖnh",tbProp={6,1,2369,1,0,0},nCount=1,nRate=15},},
-		[16]={{szName="V©n Léc LÖnh",tbProp={6,1,2353,1,0,0},nCount=1,nRate=20},},
+		[15]={{szName="Thanh C©u LÖnh",tbProp={6,1,4867,1,0,0},nCount=1,nRate=15},},
+		[16]={{szName="V©n Léc LÖnh",tbProp={6,1,4868,1,0,0},nCount=1,nRate=20},},
 		[17]={{szName="Tö Thñy Tinh",tbProp={4,239,1,1,0,0},nCount=1,nRate=80},},
 		[18]={{szName="Lam Thñy Tinh",tbProp={4,238,1,1,0,0},nCount=1,nRate=80},},
 		[19]={{szName="Lôc Thñy Tinh",tbProp={4,240,1,1,0,0},nCount=1,nRate=80},},
@@ -308,13 +309,13 @@ function BigBoss:BigBossDeath(nNpcIndex)
 	
 	--tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, self.tbKillerReward, format("%s rít","§éc C« Thiªn Phong"), 1);
 	
-	--tbDropTemplet:GiveAwardByList(nNpcIndex, -1, self.tbNormalDrop, format("%s rít","§éc C« Thiªn Phong"), 1);
+	tbDropTemplet:GiveAwardByList(nNpcIndex, -1, self.tbNormalDrop, format("%s rít","§éc C« Thiªn Phong"), 1);
 	
 	--DC PhÇn th­ëng - Modified By DinhHQ - 20111010
 	--item
 	tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, self.tbVngNewDropItem, format("%s rít","§éc C« Thiªn Phong"), 1);
 	--trang bÞ
-	tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, self.tbVngNewDropEquip, format("%s rít","§éc C« Thiªn Phong"), 1);
+	-- tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, self.tbVngNewDropEquip, format("%s rít","§éc C« Thiªn Phong"), 1);
 	
 	-- BOSS»÷É±Í³¼Æ
 	local nCount = GetTask(self.TSK_PLAYER_BOSSKILLED);

@@ -4,8 +4,8 @@ Include("\\script\\misc\\taskmanager.lua")
 
 -------局部变量定义 开始---------
 local nCloseDate		= 20100816
-local nCloseTime		= 201008160000
-local nItemUseDate		= 20100823
+local nCloseTime		= 201208160000
+local nItemUseDate		= 20120823
 local nTask_LittleWord		= 1
 local nTask_MiddleWord		= 2
 local nTask_FightToken_ChenDu		= 3

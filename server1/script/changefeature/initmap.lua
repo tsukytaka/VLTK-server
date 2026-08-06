@@ -11,7 +11,7 @@ local tbNpcList =
 			
 		nPosX = 50880,
 		nPosY = 102752,
-	},
+	},	
 	{
 		nNpcId = 950, 
 		szName = "Y m·o ®Þnh chÕ trî thñ", 

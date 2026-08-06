@@ -46,7 +46,7 @@ function OnDeath(Launcher)
 	
 	SetRevPos(GetPlayerRev())
 	SetPKFlag(0);		
-	self:DelPlayer(PlayerIndex)
+	HundredArena:DelPlayer(PlayerIndex)
 	local nMapId = GetTask(TSK_LEAVERMAPID);
 	local nX = GetTask(TSK_LEAVERPOSX);
 	local nY = GetTask(TSK_LEAVERPOSY);

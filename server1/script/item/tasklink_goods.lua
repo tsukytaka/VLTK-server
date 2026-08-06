@@ -7,7 +7,7 @@ IncludeLib("BATTLE");
 Include("\\script\\task\\newtask\\newtask_head.lua"); 
 Include("\\script\\task\\newtask\\map_index.lua"); -- ÓÃÓÚ»ñÈ¡µØÍ¼µÄĞÅÏ¢
 Include("\\script\\task\\newtask\\lib_setmembertask.lua"); -- ÓÃÓÚÑ­»·¸Ä±ä¶ÓÓÑµÄÈÎÎñ±äÁ¿
-Include("\\script\\tasktrace\\tasktrace.lua");
+
 function PickUp( nItemIndex, nPlayerIndex )
 
 local nPreservedPlayerIndex = PlayerIndex
@@ -61,9 +61,7 @@ myMapID = SubWorldIdx2ID( SubWorld )
 				
 				myMapNum = myMapNum + 1
 				nt_setTask(1025,myMapNum)
-				nt_setTask(5123,1)
-				open_task_trace()
-				Msg2Player("B¹n nhËn ®­îc mét tÊm "..myMapName.." §Şa §å chİ. HiÖn t¹i b¹n cã tæng céng "..myMapNum.." tÊm.");
+				Msg2Player("B¹n nhËn ®­îc mét tÊm"..myMapName.."§Şa §å chİ! HiÖn t¹i b¹n cã tæng céng"..myMapNum.." tÊm.");
 				
 				return 0
 			end
@@ -72,13 +70,13 @@ myMapID = SubWorldIdx2ID( SubWorld )
 		-- ¸øÍæ¼ÒÔö¼ÓÒ»¸öÉ½ºÓÉçğ¢Í¼²ĞÆ¬
 		nWorldMaps = nWorldMaps + 1
 		nt_setTask(1027,nWorldMaps)
-		Msg2Player("B¹n nhËn ®­îc mét m¶nh b¶n ®å S¬n Hµ X· T¾c! HiÖn t¹i b¹n cã tæng céng "..nWorldMaps.." m¶nh b¶n ®å S¬n Hµ X· T¾c.");
+		Msg2Player("B¹n nhËn ®­îc mét m¶nh b¶n ®å S¬n Hµ X· T¾c! HiÖn t¹i b¹n cã tæng céngt"..nWorldMaps.." m¶nh b¶n ®å S¬n Hµ X· T¾c.");
 		
 	else
 		-- ¸øÍæ¼ÒÔö¼ÓÒ»¸öÉ½ºÓÉçğ¢Í¼²ĞÆ¬
 		nWorldMaps = nWorldMaps + 1
 		nt_setTask(1027,nWorldMaps)
-		Msg2Player("B¹n nhËn ®­îc mét m¶nh b¶n ®å S¬n Hµ X· T¾c! HiÖn t¹i b¹n cã tæng céng "..nWorldMaps.." m¶nh b¶n ®å S¬n Hµ X· T¾c.");
+		Msg2Player("B¹n nhËn ®­îc mét m¶nh b¶n ®å S¬n Hµ X· T¾c! HiÖn t¹i b¹n cã tæng céngt"..nWorldMaps.." m¶nh b¶n ®å S¬n Hµ X· T¾c.");
 	end
 
 end

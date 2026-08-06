@@ -106,10 +106,10 @@ PhongVanLenhBai2011.tbWeekendAward =
 
 function PhongVanLenhBai2011:ShowDialogDaily()
 	--KiÓm tra nhËp m· code Phong Van Lenh Bai
-	if tbPVLB_Check:IsNewPlayer() ~= 1 then
-		Talk(1, "", "C¸c h¹ kh«ng ®ñ ®iÒu kiÖn tham gia ch­¬ng tr×nh.")
-		return
-	end
+	--if tbPVLB_Check:IsNewPlayer() ~= 1 then
+		--Talk(1, "", "C¸c h¹ kh«ng ®ñ ®iÒu kiÖn tham gia ch­¬ng tr×nh.")
+		--return
+	--end
 	local nDay = tonumber(date("%w"))
 	local nTime =tonumber(GetLocalDate("%H%M"))
 	local szTitle = "PhÇn th­ëng hµng ngµy"

@@ -316,6 +316,7 @@ function SimCityTongKim:addTongKimNpcByPlayer(pId)
 	PlayerIndex = pId
 	local pW, pX, pY = GetWorldPos()
 	local worldInfo = SimCityWorld:Get(pW)
+	SimCityChienTranh.nW = pW
 
 	-- Determine camp
 	local myCamp = GetCurCamp() 

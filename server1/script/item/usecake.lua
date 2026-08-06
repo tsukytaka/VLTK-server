@@ -4,15 +4,13 @@
 --
 --2007-06-02
 --edit by Fmz,Ôö¼Ó»ñµÃ¾­ÑéµÄÉÏÏŞ
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
 TSK_ACT2YEARS_EXP_MAX = 1919
 function main(nItemIndex)    
     local nDate = tonumber(GetLocalDate("%y%m%d"))
-    --if nDate > CFG_Act2Years2007_ENDTIME then
-    --    Say("B¸nh nµy ®· qu¸ h¹n, kh«ng dïng ®­îc n÷a!",0)
-    --    return 0
-    --end
+    if nDate > 70731 then
+        Say("B¸nh nµy ®· qu¸ h¹n, kh«ng dïng ®­îc n÷a!",0)
+        return 0
+    end
     local nCurAddExp = GetTask(TSK_ACT2YEARS_EXP_MAX)
     if nCurAddExp >= 400000000 then
         Say("§· ®¹t giíi h¹n tèi ®a, kh«ng thÓ sö dông vËt phÈm nµy n÷a.",0)

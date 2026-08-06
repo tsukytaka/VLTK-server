@@ -1,12 +1,12 @@
 function main(nItemIdx) 
 if (GetPK() == 0) then 
-Say("Ngµi tr­íc mÆt PK trŞ gi¸ ®· v× 0 liÔu , kh«ng cÇn sö dông n÷a triÒu ®×nh x¸ s¸ch . ", 0); 
-Msg2Player("Ngµi tr­íc mÆt PK trŞ gi¸ ®· v× 0 liÔu , kh«ng cÇn sö dông n÷a triÒu ®×nh x¸ s¸ch . "); 
+Say("Ng­¬i kh«ng cã téi tr¹ng g× sao cÇn ph¶i Th­ §Æc X¸.", 0); 
+Msg2Player("HiÖn thêi PK b¹n lµ 0 nªn kh«ng thÓ sö dông Th­ §Æc X¸."); 
 return 1; 
 end; 
 SetPK(0); 
-Say("Ngµi sö dông <color=yellow> triÒu ®×nh x¸ s¸ch <color> , ng­¬i PK trŞ gi¸ b©y giê lµm 0 liÔu . ", 0); 
-Msg2Player("Ngµi sö dông <color=yellow> triÒu ®×nh x¸ s¸ch <color> , ng­¬i PK trŞ gi¸ b©y giê lµm 0 liÔu . "); 
+Say("Ng­¬i ®· sö dông<color=yellow> Th­ §Æc X¸ TriÒu §×nh<color>, Gi¸ trŞ pk ®· trë vÒ 0.", 0); 
+Msg2Player("Ng­¬i ®· sö dông<color=yellow> Th­ §Æc X¸ TriÒu §×nh<color>, Gi¸ trŞ pk ®· trë vÒ 0. "); 
 if (GetWorldPos() == 208) then 
 SetTask(96,100) 
 end; 

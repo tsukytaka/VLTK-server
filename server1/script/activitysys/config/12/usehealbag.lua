@@ -5,7 +5,7 @@ Include("\\script\\activitysys\\config\\12\\carriage.lua")
 Include("\\script\\activitysys\\config\\12\\variables.lua")
 
 local StartDate = 20120402
-local EndDate = 20500430
+local EndDate = 20220430
 
 local tbItem2Skill =
 {
@@ -35,7 +35,7 @@ function main(nItemIndex)
 		return 1
 	end
 	
-	if PlayerFunLib:CheckTotalLevel(80,%szLEVEL_TIP,">=") ~= 1 then
+	if PlayerFunLib:CheckTotalLevel(150,%szLEVEL_TIP,">=") ~= 1 then
 		return 1
 	end
 	

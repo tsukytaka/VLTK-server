@@ -8,7 +8,7 @@ TTID_CityIndex 	= 101;
 function CSP_EnterClearMap(nCityIndex)
 	nLevel = GetLevel();
 	if (nLevel < CSP_NEEDLEVEL) then
-		Talk(1, "", "<#> Tr¸ng sÜ ch­a ®¹t cÊp"..CSP_NEEDLEVEL.."<#>, ch­a thÓ vµo ®¶o TÈy Tñy")
+		Talk(1, "", "Tr¸ng sÜ ch­a ®¹t cÊp "..CSP_NEEDLEVEL..", ch­a thÓ vµo ®¶o TÈy Tñy")
 		return -1;
 	end
 	
@@ -23,20 +23,21 @@ function CSP_EnterClearMap(nCityIndex)
 	-- È¥Ï´ËèµºµÄÃâ·Ñ´ÎÊı
 	nResult = GetTask(CSP_TID_ClearFreeTime);
 	if (nResult < CSP_MAXClearTime) then -- Ãâ·Ñ½øµº
-		Say("<#> C¬ héi vµo ®¶o tÈy Tñy miÔn phİ chØ cã"..CSP_MAXClearTime.."<#> lÇn. Tr¸ng sÜ ®· suy nghÜ kü ch­a?", 2, "§i ®¶o TÈy Tñy/CSP_FreeEnterClearMap", "§Ó nghØ thªm mét chót /gotocsm_no")
+		Say("C¬ héi vµo ®¶o tÈy Tñy miÔn phİ chØ cã <color=red>"..CSP_MAXClearTime.."lÇn<color>. Tr¸ng sÜ ®· suy nghÜ kü ch­a?", 2, "§i ®¶o TÈy Tñy/CSP_FreeEnterClearMap", "§Ó nghØ thªm mét chót /gotocsm_no")
 		return 1;
 	else
 		-- Ã»ÓĞÃâ·Ñ»ú»áÁË£¬ÕÒË®¾§»ò±¦Ê¯
 		strNoFree = 
 		{
-			"<#>Xa phu: LÇn dïng miÔn phİ ®· dïng hÕt, nh­ng c¸c h¹ cã thÓ sö dông <color=blue>thñy tinh (hoÆc b¹ch ngäc) <color> hoÆc <color=blue>tinh hång b¶o th¹ch (hoÆc tö ngäc) <color> ®Ó cã thÓ ®i vµo ®¶o tÈy tñy. Ng­¬i cã ®ång ı nh­ vËy kh«ng?",
-			"<#> ChØ tÈy ®iÓm kü n¨ng [3 viªn Thñy Tinh]/CSP_JEnterClearMap_Skill",
-			"<#>ChØ tÈy ®iÓm kü n¨ng [B¹ch Ngäc]/CSP_JEnterClearMap_Skill2",
-			"<#> ChØ tÈy ®iÓm tiÒm n¨ng [6 viªn Tinh Hång B¶o Th¹ch]/CSP_JEnterClearMap_Prop",
-			"<#>ChØ tÈy ®iÓm tiÒm n¨ng [Tö Ngäc]/CSP_JEnterClearMap_Prop2",
-			"<#> TÈy c¶ ®iÓm tiÒm n¨ng vµ kü n¨ng [3 viªn Thñy Tinh + 6 viªn Tinh Hång B¶o Th¹ch]/CSP_JEnterClearMap_All",
-			"<#>TÈy ®iÓm kü n¨ng tiÒm n¨ng [B¹ch Ngäc + Tö Ngäc]/CSP_JEnterClearMap_All2",
-			"<#> §Ó ra nghÜ l¹i/CSP_Cancel"
+			"Xa phu: Ng­¬i ®· hÕt lÇn tÈy tñy miÔn phİ råi",		
+--			"<#>Xa phu: LÇn dïng miÔn phİ ®· dïng hÕt, nh­ng c¸c h¹ cã thÓ sö dông <color=blue>Thñy Tinh (hoÆc B¹ch Ngäc)<color> hoÆc <color=blue>Tinh Hång B¶o Th¹ch (hoÆc Tö Ngäc) <color> ®Ó cã thÓ ®i vµo ®¶o tÈy tñy. Ng­¬i cã ®ång ı nh­ vËy kh«ng?",
+			"ChØ tÈy ®iÓm kü n¨ng [3 viªn Thñy Tinh]/CSP_JEnterClearMap_Skill",
+			--"ChØ tÈy ®iÓm kü n¨ng [B¹ch Ngäc]/CSP_JEnterClearMap_Skill2",
+			"ChØ tÈy ®iÓm tiÒm n¨ng [6 viªn Tinh Hång B¶o Th¹ch]/CSP_JEnterClearMap_Prop",
+			--"ChØ tÈy ®iÓm tiÒm n¨ng [Tö Ngäc]/CSP_JEnterClearMap_Prop2",
+			"TÈy c¶ ®iÓm tiÒm n¨ng vµ kü n¨ng [3 viªn Thñy Tinh + 6 viªn Tinh Hång B¶o Th¹ch]/CSP_JEnterClearMap_All",
+			--"TÈy ®iÓm kü n¨ng tiÒm n¨ng [B¹ch Ngäc + Tö Ngäc]/CSP_JEnterClearMap_All2",
+			"§Ó ra nghÜ l¹i/CSP_Cancel"
 		};
 		-- Say(strNoFree[1], 7, strNoFree[2], strNoFree[3], strNoFree[4], strNoFree[5], strNoFree[6], strNoFree[7], strNoFree[8]);
 		CreateTaskSay(strNoFree)

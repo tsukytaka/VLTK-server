@@ -16,7 +16,7 @@ function TaskShedule()
 	
 	--设置触发次数，0表示无限次数
 	TaskCountLimit(0)
-	OutputMsg("=====> HOAT DONG HOA SON DAI CHIEN 10H, 15H, 22H ");
+	OutputMsg(" =================HOA SON DAI CHIEN 10H,15H,22H==================");
 end
 
 function TaskContent()
@@ -27,7 +27,7 @@ function TaskContent()
 	
 
 	local bIsStart = 0
-	if nHour == 10 or nHour == 22  then
+	if nHour == 10 or nHour == 22 then
 		bIsStart = 1
 	elseif (nHour == 15 ) and (nWeek == 6 or nWeek == 0) then
 		bIsStart = 1

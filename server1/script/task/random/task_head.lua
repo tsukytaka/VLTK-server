@@ -121,22 +121,16 @@ function createRandomTask()
 
 end;
 
-
-function selectType()
-	local strType = "NhiÖm vô S¸t qu¸i ";
-	CDebug:MessageOut("Lua chän losi nhiÖm vô:"..strType);
-	return strType;
-end;
 	
 -- Ñ¡ÔñÈÎÎñµÄÀàĞÍ
 -- ·µ»ØÀàĞÍ string:strType
---function selectType()
---	local nLevel   = getTaskLevel();
---	local nRow     = tabMainType:countArrayRate("Rate"..nLevel);
---	local strType  = tabMainType:getCell("TaskType", nRow);
---	CDebug:MessageOut("Lùa chän lo¹i nhiÖm vô:"..strType);
---	return strType;
---end;
+function selectType()
+	local nLevel   = getTaskLevel();
+	local nRow     = tabMainType:countArrayRate("Rate"..nLevel);
+	local strType  = tabMainType:getCell("TaskType", nRow);
+	CDebug:MessageOut("Lùa chän lo¹i nhiÖm vô:"..strType);
+	return strType;
+end;
 
 
 -- ¸ù¾İÈÎÎñÀàĞÍÑ¡Ôñ¾ßÌåµÄÈÎÎñ

@@ -7,10 +7,6 @@
 Include("\\script\\huoyuedu\\huoyuedu.lua")
 
 function checkworldtop10(nNpcIndex, nPlayerIndex)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	local szScript = GetNpcScript(nNpcIndex)
 	if szScript and (szScript == "\\script\\missions\\boss\\bossdeath.lua")then
 		--add 10 bosses - Modified By DinhHQ - 20120412
@@ -42,10 +38,6 @@ do return end
 end
 
 function vn_addhuoyuedu(nNpcIndex, nPlayerIndex)
-	do	
-		--Talk(1,"","Chøc n¨ng ®ang t¹m ®ãng !")
-		return
-	end
 	local nOldPlayerIndex = PlayerIndex
 	PlayerIndex = nPlayerIndex
 	local tbRoundPlayer, nCount = GetNpcAroundPlayerList(nNpcIndex, 20);	

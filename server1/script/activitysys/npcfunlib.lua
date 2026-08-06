@@ -1,12 +1,8 @@
---Ä¬ÈÏÈ«¾ÖPlayerIndexÎªÎïÆ·ËùÓÐÕß
---nNpcIndex ËÀÍöµÄnpcµÄµÄNpcIndex
---nAttackerIndex ×îºóÒ»»÷Õß µÄNpcIndex£¬ÈçÊÇÈËÐèÒª×ª»»Index
 IncludeLib("NPCINFO")
 
 Include("\\script\\lib\\droptemplet.lua")
 Include("\\script\\activitysys\\functionlib.lua")
-
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 
 NpcFunLib = {}
 
@@ -107,13 +103,37 @@ function NpcFunLib:CheckNpcPower(nPowerType, nNpcIndex)
 end
 
 
+----------R¬t trang bÞ tÝm Vi S¬n §¶o vµ M¹c B¾c Th¶o Nguyªn---------------
+/*
+function NpcFunLib:DropMonster(nNpcIndex)
+	if RotDoTimViSonDaoVaMacBac == 1 then
+		local szMapIDList = "341, 342";
+		if (NpcFunLib:CheckInMap(szMapIDList, nNpcIndex) == 1) then
+		local nseries = NPCINFO_GetSeries(nNpcIndex)
+		ITEM_DropRateItem(nNpcIndex, TyLeRotTrangBiTim,"\\settings\\droprate\\goldennpc\\goldendroprate_mobeicaoyuan.ini", 0, 60, nseries);
+		return 1
+		end
+	end	
+end
+*/
+
+function NpcFunLib:DropMonster(nNpcIndex)
+	local szMapIDList = "1025"
+	if (NpcFunLib:CheckInMap(szMapIDList, nNpcIndex) == 1) then
+		local nseries = NPCINFO_GetSeries(nNpcIndex)
+		ITEM_DropRateItem(nNpcIndex, 100000,"\\settings\\droprate\\goldennpc\\goldendroprate_mobeicaoyuan.ini", 0, 60, nseries);
+		return 1
+	end
+end
+--------------------------------------------------------------------------
+
 function NpcFunLib:CheckWorldBoss(nNpcIndex)
 	
 	
 	local szScript = GetNpcScript(nNpcIndex)
 	local nSettingIdx = GetNpcSettingIdx(nNpcIndex)
 	
-	if szScript and (szScript == "\\script\\missions\\boss\\bossdeath.lua" or szScript == "\\script\\missions\\boss\\bigboss_npc.lua" or szScript == "\\script\\global\\npc\\huoke.lua")then
+	if szScript and (szScript == "\\script\\missions\\boss\\bossdeath.lua" or szScript == "\\script\\missions\\boss\\bigboss_npc.lua" or szScript == "\\script\\global\\npc\\huoke.lua" or szScript == "\\script\\global\\pgaming\\missions\\bosshoangkim\\bossdai\\goldboss_death.lua")then
 		
 		if self:CheckId("1194,1195,1198,1199,1201,1202,1200,1197,1196,1193,566,740,1366,582,568,744,583,563,562,747,739,1365,741,742,743,567,745,565,1367,1368,1505,1506,1507,1508,1509,1584", nNpcIndex) then
 			return 1
@@ -191,12 +211,12 @@ function NpcFunLib:IsInXinshoucun(nNpcIndex)
 end
 
 function NpcFunLib:IsInCity(nNpcIndex)
-	local szMapList = "11,1,37,,176,162,78,80"
+	local szMapList = "11,1,37,176,162,78,80"
 	return self:CheckInMap(szMapList, nNpcIndex)
 end
 
 function NpcFunLib:IsInXinshouCity(nNpcIndex)
-	local szMapList = "11,1,37,,176,162,78,80,174,121,153,101,99,100,20,53,175"
+	local szMapList = "11,1,37,176,162,78,80,174,121,153,101,99,100,20,53,175"
 	return self:CheckInMap(szMapList, nNpcIndex)
 end
 

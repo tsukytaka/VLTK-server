@@ -14,16 +14,16 @@ TSK_XMASCANDY2007_EXP	=	1861	-- Ê¥µ®ÌÇ¾­ÑéÀÛ¼Æ¼ÇÂ¼±äÁ¿
 function main(nItemIdx)
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
 	
-	--if (nDate > XMASCANDY2007_DATE) then		--Ê¹ÓÃÊ±¼äÅÐ¶Ï
-	--	Msg2Player("§· qu¸ h¹n sö dông, nÕu tiÕp tôc sö dông sÏ g©y h¹i, cÇn ph¶i vøt bá!");
-	--	Say("§· qu¸ h¹n sö dông, nÕu tiÕp tôc sö dông sÏ g©y h¹i, cÇn ph¶i vøt bá!", 0);
-	--	WriteLog(format("[XMASCANDY2007]\t%s\t%s\t%s\t%s",
-	--					GetLocalDate("%Y%m%d %X"),
-	--					GetName(),
-	--					GetAccount(),
-	--					"Delete_Dated_XMASCANDY"	));
-	--	return 0;
-	--end;
+	if (nDate > XMASCANDY2007_DATE) then		--Ê¹ÓÃÊ±¼äÅÐ¶Ï
+		Msg2Player("§· qu¸ h¹n sö dông, nÕu tiÕp tôc sö dông sÏ g©y h¹i, cÇn ph¶i vøt bá!");
+		Say("§· qu¸ h¹n sö dông, nÕu tiÕp tôc sö dông sÏ g©y h¹i, cÇn ph¶i vøt bá!", 0);
+		WriteLog(format("[XMASCANDY2007]\t%s\t%s\t%s\t%s",
+						GetLocalDate("%Y%m%d %X"),
+						GetName(),
+						GetAccount(),
+						"Delete_Dated_XMASCANDY"	));
+		return 0;
+	end;
 	
 	local tb_candy_exp = {
 		[1622]	=	15000,

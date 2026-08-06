@@ -18,13 +18,13 @@ function OnDeath(Launcher)
 		SetTaskTemp(MS_TOTALPK, pkcount);
 
 		if (curcamp == 1) then
-			str  = GetMissionS(2).."<#> k誸 th骳"..LaunName.."<#> tr鋘g thng r錳 ["..DeathName.."<#> ], PK 頲 "..pkcount;
+			str  = GetMissionS(2).." k誸 th骳"..LaunName.." tr鋘g thng r錳 ["..DeathName.." ], PK 頲 "..pkcount;
 			SetMissionV(MS_TONG2VALUE, GetMissionV(MS_TONG2VALUE) + 1);
 		elseif (curcamp == 2) then
-			str  = GetMissionS(1).."<#> k誸 th骳"..LaunName.."<#> tr鋘g thng r錳 ["..DeathName.."<#> ], PK 頲 "..pkcount;
+			str  = GetMissionS(1).." k誸 th骳"..LaunName.." tr鋘g thng r錳 ["..DeathName.." ], PK 頲 "..pkcount;
 			SetMissionV(MS_TONG1VALUE, GetMissionV(MS_TONG1VALUE) + 1);
 		elseif (curcamp == 4) then 
-			str = LaunName.."<#> tr鋘g thng r錳 ["..DeathName.."<#> ], PK 頲 "..pkcount;
+			str = LaunName.." tr鋘g thng r錳 ["..DeathName.." ], PK 頲 "..pkcount;
 		end;
 		
 		--GetBonus(); --该函数由外部填加，用于奖励玩家

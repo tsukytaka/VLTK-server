@@ -14,7 +14,7 @@ function main()
 	EventSys:GetType("AddNpcOption"):OnEvent(szNpcName, tbDailog, nNpcIndex)
 	
 	
-	tbDailog.szTitleMsg = "<#><npc>Xin chóc mõng c¸c ch­ vÞ ®· v­ît qua ®­îc 29 cöa ¶i trong thêi gian qui d?nh, Muèn tiÕp tôc V­ît ¶i chø!"
+	tbDailog.szTitleMsg = "<#><npc>Xin chóc mõng c¸c ch­ vÞ ®· v­ît qua ®­îc 29 cöa ¶i trong thêi gian 13 phót, Muèn tiÕp tôc V­ît ¶i chø!"
 	
 	tbDailog:AddOptEntry("TiÕp tôc V­ît ¶i", gotonewworld); 
 	
@@ -27,7 +27,6 @@ function leave()
 	local world = GetMissionV(VARV_SIGNUP_WORLD);
 	local pos_x = GetMissionV(VARV_SIGNUP_POSX);
 	local pos_y = GetMissionV(VARV_SIGNUP_POSY); 
-	--Say("<color=green>Chóc mõng ®¹i hiÖp ®· v­ît ¶i thµnh c«ng. Qua <color=yellow>0h ngµy mai<color> cã thÓ ®Õn NhiÕp ThÝ TrÇn ®Ó nhËn th­ëng <color=yellow>Thiªn Niªn Linh D­îc<color>. L­u ý ph¶i nhËn tr­íc khi thùc hiÖn c¸c trËn v­ît ¶i míi cña ngµy mai.<color>");
 	DelMSPlayer(MISSION_MATCH,1);
 	SetLogoutRV(0);
 	NewWorld(world, pos_x, pos_y);
@@ -36,16 +35,16 @@ end
 
 function gotonewworld()
 	local ndate = tonumber(GetLocalDate("%H"))
-	--if ndate > 22 and ndate < 10 then
-	--	Say("Trong thêi gian nµy kh«ng thÓ tiÕn hµnh tiÕp tôc V­ît ¶i", 0)
-	--	leave()
-	--	return 
-	--end
+	if ndate > 22 and ndate < 10 then
+		Say("Trong thêi gian nµy kh«ng thÓ tiÕn hµnh tiÕp tôc V­ît ¶i", 0)
+		leave()
+		return 
+	end
 	local nMinute = tonumber(GetLocalDate("%M"))
-	--if nMinute >= 24 then
-	--	Talk(1, "", "Xin l­îng thø, Ng­¬i ®· v­ît qu¸ thêi gian truyÒn tèng") 
-	--	return
-	--end
+	if nMinute >= 24 then
+		Talk(1, "", "Xin l­îng thø, Ng­¬i ®· v­ît qu¸ thêi gian truyÒn tèng") 
+		return
+	end
 	if GetMissionV(VARV_BOARD_TIMER) >= (CHUANGGUAN30_TIME_LIMIT + 60) then
 		Say("Xin l­îng thø, Ng­¬i ®· v­ît qu¸ thêi gian truyÒn tèng!",0)
 		return 

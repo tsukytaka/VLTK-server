@@ -72,11 +72,11 @@ local Def =
 		
 	},
 	{
-		"emSCRIPT_PROTOCOL_TASKTRACE",
-		"\\script\\tasktrace\\protocol_gs.lua",
-		"proc_tasktrace",
-		{OBJTYPE_NUMBER, OBJTYPE_NUMBER}
-	},	
+		"emSCRIPT_PROTOCOL_BUTTONBAR_MENU",
+		"\\script\\global\\buttonbar_menu.lua",
+		"ButtonBarMenu_Main",
+		{},
+	},
 }
 
 ScriptProtocol:RegProtocolSet(Def)

@@ -39,7 +39,7 @@ function execRotDropMoney(tbNpc)
 
     -- Random rot tien
     if random(1, 10000) <= CHANCE_DROP_MONEY then
-        NpcDropMoney(tbNpc.finalIndex, random(1000, 10000), -1)
+        NpcDropMoney(tbNpc.finalIndex, random(SIMCITY_DROP_MONEY_MIN or 1000, SIMCITY_DROP_MONEY_MAX or 10000), -1)
     end
     
     -- Neu gan ban thuoc va TDP thi se quang ra TDP hoac ngu hoa
@@ -80,10 +80,10 @@ function execRestoreLife(tbNpc)
             return tbNpc.fightSys:execCastOnSelf(tbNpc)            
         end 
 
-        -- Binh thuong = 3000 moi 10 giay
+        -- Hoi dung ty le phan tram da cau hinh tren web moi 10 giay.
         if currentLife and maxLife and currentLife < maxLife then
-            -- Calculate life to restore (percentage of max life)
-            local restoreAmount = 3000 --maxLife * LIFE_RESTORE_PERCENT  -- Default 1% if not specified
+            local restoreAmount = floor(maxLife * LIFE_RESTORE_PERCENT / 100)
+            if restoreAmount < 1 then restoreAmount = 1 end
                 
             -- Apply the restoration
             local newLife = currentLife + restoreAmount
@@ -188,8 +188,8 @@ SimFun.Citizen = {
         
         -- Random rot tien khi chet
         elseif tbNpc.mode ~= "chiendau" then
-            if random(1, 1000) <= CHANCE_DROP_MONEY then
-                NpcDropMoney(tbNpc.finalIndex, random(1000, 100000), -1)
+            if random(1, 10000) <= CHANCE_DROP_MONEY then
+                NpcDropMoney(tbNpc.finalIndex, random(SIMCITY_DROP_MONEY_MIN or 1000, SIMCITY_DROP_MONEY_MAX or 10000), -1)
             end
         end
     end

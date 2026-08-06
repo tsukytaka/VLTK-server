@@ -17,10 +17,22 @@ tbCP_STATION = {
 }
 
 function wlls_want2go(stationname)
-	local n_oldidx = SubWorld
-	local SubWorld = SubWorldID2Idx(wlls_get_mapid(3))
-	local n_camp = wlls_findfriend(WLLS_MSID_COMBAT, GetName())
-	SubWorld = n_oldidx
+	local n_camp = nil
+	local n_mtype, n_groupid = nil, nil
+	local n_type = GetGlbValue(GLB_WLLS_TYPE)
+	if (WLLS_TAB and WLLS_TAB[n_type] and WLLS_TAB[n_type].map_index) then
+		n_mtype, n_groupid = wlls_get_mapinfo()
+	end
+	if (n_mtype and n_groupid) then
+		local n_combatmap = wlls_get_mapid(3, n_mtype, n_groupid)
+		local n_combatidx = n_combatmap and SubWorldID2Idx(n_combatmap)
+		if (n_combatidx and n_combatidx >= 0) then
+			local n_oldidx = SubWorld
+			SubWorld = n_combatidx
+			n_camp = wlls_findfriend(WLLS_MSID_COMBAT, GetName())
+			SubWorld = n_oldidx
+		end
+	end
 	if (n_camp) then
 		Say("<#> Xa phu: nhãm cña ng­¬i ®ang thi ®Êu? NÕu nh­ b©y giê rêi khái ®©y sÏ kh«ng nhËn ®­îc gi¶i th­ëng. Ng­¬i x¸c nhËn muèn rêi khái?",
 			2, "§óng vËy!/#cp_station("..stationname..")", "Kh«ng cÇn!/OnCancel")

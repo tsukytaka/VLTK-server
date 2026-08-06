@@ -29,6 +29,8 @@ Include("\\script\\lib\\string.lua")
 
 -- Common Helpers
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\config.lua")
+-- Nap cau hinh web dung mot lan, truoc khi plugin tao cac bang cau hinh runtime.
+Include("\\script\\global\\nobitaxd\\vdk\\simcity\\webconfig.lua")
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\libs\\index.lua")
 
 -- Plugins first
@@ -44,3 +46,6 @@ Include("\\script\\global\\nobitaxd\\vdk\\simcity\\class\\sim_citizen.lua")
 -- Kick start all plugins if needed
 SimCityNgoaiTrang:init()
 SimCityNPCInfo:init()
+
+Include("\\script\\global\\nobitaxd\\vdk\\simcity\\components\\ploidai.lua")
+Include("\\script\\global\\nobitaxd\\vdk\\simcity\\control.lua")

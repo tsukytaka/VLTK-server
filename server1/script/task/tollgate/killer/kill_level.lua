@@ -20,7 +20,7 @@ Include( "\\script\\tong\\contribution_entry.lua" )
 function OnDeath( nNpcIndex )
 local Uworld1082 = nt_getTask(TSKID_KILLTASKID)
 
-	if Uworld1082 and ( Uworld1082 >= 1 ) and ( Uworld1082 <= 160 ) then   -- [2026-06-28] guard nil: bot giet NPC -> nt_getTask nil -> bo qua (kill-task chi tinh cho player)
+	if ( Uworld1082 >= 1 ) and ( Uworld1082 <= 160 ) then
 
 		kill_level20(nNpcIndex)
 	end

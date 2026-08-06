@@ -77,7 +77,7 @@ function real_set_task_temp181(turesureindex, nMapId, nPosX, nPosY)
 	local nSelfMapId, nSelfX, nSelfY = GetWorldPos()
 	if is_near(nMapId, nPosX, nPosY)==1 then
 		SetTaskTemp(181,turesureindex)
-		Msg2Player(format("<color=gold>Ng­¬i cã thÓ më B¶o R­¬ng <color=cyan>Sè %d<color> <color=gold>nµy!<color>",turesureindex));
+		Msg2Player(format("Ng­¬i cã thÓ më B¶o R­¬ng <color=yellow>%d sè<color> Thiªn B¶o Khè",turesureindex));
 	end
 end
 

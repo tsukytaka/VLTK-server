@@ -2,12 +2,11 @@
 --Include("\\script\\misc\\taskmanager.lua")
 Include("\\script\\lib\\awardtemplet.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 tbTriumphDrum = 
 {
 	nStartDate = 20100426,		-- 开始日期（前包）
-	nCloseDate = 20501231, 		-- 结束日期（后闭）
+	nCloseDate = 20201231, 		-- 结束日期（后闭）
 	
 	nStartTime = 1900,			-- 开始时间（前包）
 	nCloseTime = 2000,			-- 结束时间（后包）
@@ -35,7 +34,7 @@ tbTriumphDrum =
 -- 活动是否举行
 function tbTriumphDrum:IsCarryOn()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_jiefang_jieri2010	== 0) then
+	if nDate < self.nStartDate or nDate >= self.nCloseDate then
 		 return 0;
 	else	
 		 return 1;

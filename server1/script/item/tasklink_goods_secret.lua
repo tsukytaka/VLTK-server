@@ -61,8 +61,6 @@ myMapID = SubWorldIdx2ID( SubWorld )
 			
 				myMapNum = myMapNum + 1
 				nt_setTask(1025,myMapNum)
-				nt_setTask(5123,1)
-				open_task_trace()
 				Msg2Player("B¹n nhËn ®­îc mét tÊm"..myMapName.."§Şa §å chİ! HiÖn t¹i b¹n cã tæng céng"..myMapNum.." tÊm.");
 				
 				return 0

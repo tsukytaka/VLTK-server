@@ -21,10 +21,10 @@ function OnDeath()
 	local name = GetName()
 	local Uworld1215 = nt_getTask(1215)  --bossÉí±ßË¢¹ÖµÄ´ò¹Ö¿ª¹Ø
 	if (  messenger_middletime() == 10 ) then --Íæ¼ÒÔÚµØÍ¼ÖĞµÄÊ±¼ä
-		Msg2Player("Xin lçi! "..name.."! B¹n ®· hÕt thêi gian thùc hiÖn nhiÖm vô Tİn sø! NhiÖm vô thÊt b¹i!.")
+		Msg2Player("ThËt xin lçi ! "..name.."! thêi gian nhiÖm vô tİn sø ®· hÕt, nhiÖm vô thÊt b¹i !.")
 		losemessengertask()
 	elseif ( Uworld1215 == 0 ) then  --Ã»ÓĞË¢¹ÖµÄÈÎÎñ
-		Msg2Player("Ng­êi nµy ®· bŞ ng­êi kh¸c c­íp, ng­¬i ®¸nh h¾n ch¾c lµ sÏ kh«ng cã bÊt kú phÇn th­ëng.")
+		Msg2Player("Ng­êi nµy ®· bŞ ng­êi kh¸c lÊy, ng­¬i ®¸nh h¾n ch¾c lµ sÏ kh«ng cã bÊt kú phÇn th­ëng.")
 		return
 	else
 		ture_killrefresh()

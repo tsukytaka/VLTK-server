@@ -164,6 +164,7 @@ function do_recoinplatina(nCount)
 							CreateTaskSay({"<dec><npc>§¼ng cÊp cña trang bÞ"..nCurItemName.." nµy d­êng nh­ kh«ng ®óng.",
 								"Ha ha, ®¹i hiÖp còng cã lóc bÊt cÈn, ®Ó ta ®Æt vµo l¹i./want_recoinplatina",
 								"ThËt ng¹i qu¸, ta sÏ quay l¹i sau./no"	}	);
+
 							return 0;
 						end;
 					end;
@@ -258,3 +259,4 @@ function reloadRecoinPlatinaDate()
 		RECOIN_PLATINA_DATE_RANGE[2] = tb_NewAvailableDate[2];
 	end;
 end;
+

@@ -35,7 +35,7 @@ function birthday0905_addnpc_haozhu(n_count)
 	
 	if (n_count > 0) then
 		
-		local tbNpc = {nNpcId = 1431, nLevel = 30, szName = "NhÝm bÐo ph×", nIsboss = 1,
+		local tbNpc = {nNpcId = 1431, nLevel = 50, szName = "NhÝm BÐo Ph×", nIsboss = 1,
 						szDeathScript = "\\script\\event\\birthday_jieri\\200905\\panghaozhu\\haozhu_death.lua",
 						szScriptPath = "\\script\\event\\birthday_jieri\\200905\\panghaozhu\\haozhu_death.lua"};
 		
@@ -44,7 +44,7 @@ function birthday0905_addnpc_haozhu(n_count)
 			local n_mapid = %tbBD0905_haozhu_pos[i].nMapID;
 			local n_worldidx = SubWorldID2Idx(n_mapid);
 			if (n_worldidx >= 0) then
-				ClearMapNpcWithName(n_mapid, "NhÝm bÐo ph×");
+				ClearMapNpcWithName(n_mapid, "NhÝm BÐo Ph×");
 			
 				for k = 1, n_count do
 					local nPosX, nPosY = GetRandomAData(%tbBD0905_haozhu_pos[i].szPosPath);

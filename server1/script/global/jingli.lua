@@ -21,8 +21,7 @@ HunyuanPotion = {}
 function HunyuanPotion:New(player)
 	local tb = clone(HunyuanPotion)
 	tb.m_Player = player
-	return tb
-end
+return tb end
 
 function HunyuanPotion:EncodeDateTask(count, date)
 	local task = count * 1000000 + date
@@ -33,8 +32,7 @@ function HunyuanPotion:DecodeDateTask()
 	local task = self.m_Player:GetTask(TASK_HUNYUANLINGLU_STARTDATE)
 	local count = floor(task / 1000000)
 	local time = mod(task, 1000000)
-	return count, time
-end
+return count, time end
 
 function HunyuanPotion:EncodeRefiningTask(count, flag, time)
 	local task = count * 100000 + flag * 10000 + time
@@ -47,14 +45,12 @@ function HunyuanPotion:DecodeRefiningTask()
 	local left = mod(task, 100000)
 	local flag = floor(left / 10000)
 	local time = mod(left, 10000)
-	return count, flag, time
-end
+return count, flag, time; end
 
 -- ²éÑ¯ÊÇ·ñÕıÔÚĞŞÁ¶
 function HunyuanPotion:GetRefiningFlag()
 	local _, flag, _ = self:DecodeRefiningTask()
-	return flag
-end
+return flag; end
 
 -- ÉèÖÃÊÇ·ñÕıÔÚĞŞÁ¶
 function HunyuanPotion:SetRefiningFlag(flag)
@@ -99,8 +95,7 @@ end
 -- »ñÈ¡¿ªÊ¼ĞŞÁ¶ÈÕÆÚ
 function HunyuanPotion:GetRefineDate()
 	local count, date = self:DecodeDateTask()
-	return date
-end
+return date end
 
 -- ÉèÖÃ¿ªÊ¼ĞŞÁ¶ÈÕÆÚ
 function HunyuanPotion:SetRefineDate(date)
@@ -111,8 +106,7 @@ end
 -- »ñÈ¡ÒÑ¾­ĞŞÁ¶Íê³ÉµÄÁéÂ¶ÊıÁ¿
 function HunyuanPotion:GetFinishedCount()
 	local count, flag, time = self:DecodeRefiningTask()
-	return count
-end
+return count end
 
 -- Ôö¼ÓÒÑ¾­ĞŞÁ¶Íê³ÉµÄÁéÂ¶ÊıÁ¿
 function HunyuanPotion:AddFinishedCount()
@@ -140,8 +134,7 @@ end
 -- ²éÑ¯ĞŞÁ¶Ê±¼ä£¨·ÖÖÓ£©
 function HunyuanPotion:GetRefiningTime()
 	local _, _, time = self:DecodeRefiningTask()
-	return time
-end
+return time end
 
 -- Ôö¼ÓĞŞÁ¶Ê±¼ä£¨·ÖÖÓ£©
 function HunyuanPotion:AddRefiningTime(minutes)
@@ -168,8 +161,7 @@ function HunyuanPotion:ConsumeYuguan(count)
 			ITEM_YUGUAN[2],
 			ITEM_YUGUAN[3],
 			ITEM_YUGUAN[4]) < count) then
-		return 0
-	end
+	return 0 end
 	local result = self.m_Player:ConsumeEquiproomItem(
 		count,
 		ITEM_YUGUAN[1],
@@ -225,8 +217,7 @@ function HunyuanPotion:Use(nEnergy)
 			self.m_Player:GetEnergy(),
 			nCurAddEnergy))
 		player:Msg2Player(format("T¨ng %d ®iÓm tinh lùc. Th¸ng nµy ®· nhËn ®­îc %d tinh lùc.", nEnergy, nCurAddEnergy))
-		return 1
-	end
+	return 1 end
 end
 
 JingliList = {m_List = {}}
@@ -246,12 +237,10 @@ function JingliList:GetCount()
 			count = count + 1
 		end
 	end
-	return count
-end
+return count end
 
 function JingliList:Find(index)
-	return self.m_List[index]
-end
+return self.m_List[index] end
 
 function JingliList:OnTime(player, id)
 	local jingli = self:Find(player)
@@ -287,10 +276,9 @@ function Jingli:New(player, potion)
 	
 	player:Msg2Player("B¾t ®Çu tu luyÖn hçn nguyªn linh lé")
 	WriteLog(format("%s(%s) begin hunyunlnglu refining",
-		player:GetAccount(),
-		player:GetName()))
-	return tb
-end
+	player:GetAccount(),
+	player:GetName()))
+return tb end
 
 function Jingli:Destroy()
 	if (self.m_TimerId > 0) then
@@ -303,8 +291,7 @@ function Jingli:Destroy()
 end
 
 function Jingli:GetTime()
-	return self.m_Potion:GetRefiningTime()
-end
+return self.m_Potion:GetRefiningTime() end
 
 function Jingli:ClearRefining()
 	self.m_Potion:ClearRefiningTime()
@@ -335,8 +322,7 @@ function Jingli:OnTime()
 		-- ½áÊøÁ¶ÖÆ
 		potion:SetRefiningFlag(0)
 		player:SetTask(TASK_REFININGCOUNT, 0)
-		return 0
-	end
+	return 0 end
 end
 
 function Jingli:Success()
@@ -374,8 +360,7 @@ end
 -- Á¶ÖÆ»ìÔªÁéÂ¶
 function dlg_refine()
 	local player = PlayerList:GetPlayer(PlayerIndex)
-	return JingliDlg:Refine(player)
-end
+return JingliDlg:Refine(player) end
 
 -- ÁìÈ¡»ìÔªÁéÂ¶
 function dlg_get()
@@ -389,11 +374,7 @@ function dlg_inputcount()
 	local potion = HunyuanPotion:New(player)
 	local count = JingliDlg:Check(player, potion, 0)
 	if (count > 0) then
-		player:AskClientForNumber(
-			"callback_inputcount",
-			1,
-			count,
-			"Ng­¬i muèn chÕ luyÖn bao nhiªu c¸i?")
+		player:AskClientForNumber( "callback_inputcount", 1, count, "Ng­¬i muèn chÕ luyÖn bao nhiªu c¸i?")
 	end
 end
 
@@ -423,16 +404,16 @@ function JingliDlg:Check(player, potion, count_input)
 		return 0
 	elseif (potion:GetFinishedCount() > 0) then
 		player:Say("Xin h·y nhËn lÊy hçn nguyªn linh lé ®· chÕ luyÖn hoµn tÊt.")
-		return 0
-	end
+	return 0 end
+	
 	local count_day = potion:GetCurrentDateRefineCount(nil)	-- µ±ÌìÒÑĞŞÁ¶µÄ´ÎÊı
 	local count_cur = player:GetTask(TASK_REFININGCOUNT)	-- Á¬ĞøĞŞÁ¶µÄ´ÎÊı
 	if (count_day >= MAXCOUNT_EVERYDAY) then
 		player:Say(
 			format("H«m nay c¸c h¹ ®· chÕ luyÖn qua <color=red>%d<color> lÇn råi, xin h·y ®îi ngµy mai quay l¹i.",
 			MAXCOUNT_EVERYDAY))
-		return 0
-	end
+	return 0 end
+	
 	local count_ok = MAXCOUNT_EVERYDAY - count_day - count_cur
 	if (count_ok <= 0) then
 		player:Say("Sè lÇn tu luyÖn ®· ®ñ, xin h·y ®îi ngµy mai ®Ó chÕ luyÖn hçn nguyªn linh lé")
@@ -441,14 +422,12 @@ function JingliDlg:Check(player, potion, count_input)
 		player:Say(format("H«m nay nhiÒu nhÊt chØ ®­îc luyÖn thªm %d hçn nguyªn linh lé, xin h·y nhËp sè l­îng cÇn chÕ luyÖn.", count_ok))
 		return 0
 	else
-		return count_ok
-	end
+	return count_ok end
 end
 
 function JingliDlg:Main(player)
 	player:Say(
-		"V¹n vËt trªn thÕ gian ®Òu chøa linh khİ thiªn ®Şa, nÕu nh­ ng­¬i cã 'ngäc qu¸n' th× cã thÓ tiÕn hµnh thu thËp linh khİ ®­îc, sau khi thu thÊp 30 phót linh khİ cã thÓ chÕ luyÖn thµnh 'hçn nguyªn linh lé'! Sau khi sö dông linh lé nµy cã thÓ gia t¨ng tinh khİ néi lùc!? ",
-		3,
+		"V¹n vËt trªn thÕ gian ®Òu chøa linh khİ thiªn ®Şa, nÕu nh­ ng­¬i cã 'ngäc qu¸n' th× cã thÓ tiÕn hµnh thu thËp linh khİ ®­îc, sau khi thu thÊp 30 phót linh khİ cã thÓ chÕ luyÖn thµnh 'hçn nguyªn linh lé'! Sau khi sö dông linh lé nµy cã thÓ gia t¨ng tinh khİ néi lùc!? ", 3,
 		"B¾t ®Çu luyÖn hçn nguyªn linh lé/dlg_inputcount",
 		"NhËn hçn nguyªn linh lé ®· göi./dlg_get",
 		"KÕt thóc ®èi tho¹i/Cancel")
@@ -461,8 +440,8 @@ function JingliDlg:Refine(player, potion, count)
 		player:Say(format(
 			"Kh«ng bét ®è gét nªn hå, ng­¬i vÉn ch­a cã <color=red>%d<color> ngäc qu¸n th× l·o phu còng ®µnh bã tay<enter><color=yellow><Ngäc qu¸n còng ®­îc b¸n ë Kú Tr©n C¸c ®ã, xin h·y bÊm vµo « trßn trßn ë bªn gãc d­íi ph¶i mµn h×nh><color>",
 			count))
-		return 0
-	end
+	return 0 end
+	
 	if (potion:GetRefiningFlag() == 0) then	
 		Jingli:New(player)
 		player:AddTask(TASK_REFININGCOUNT, count - 1)
@@ -474,16 +453,15 @@ function JingliDlg:Refine(player, potion, count)
 		player:GetName(),
 		count))
 	player:Say(format("Ngäc qu¸n ë t¹i ®©y cã d¸n bïa chó, ng­¬i h·y mau ®i thu thËp, sau <color=red>%d phót<color> cã thÓ hoµn thµnh!", TIMEOUT_REFINING))
-	return 1
-end
+return 1 end
 
 function JingliDlg:Draw(player)
 	local potion = HunyuanPotion:New(player)
 	local count = potion:GetFinishedCount()
 	if (count <= 0) then
 		player:Say("Ng­¬i vÉn ch­a göi cho ta hçn nguyªn linh lé.")
-		return
-	end
+	return end
+	
 	local item_count = 0
 	for i = 1, count do
 		local idx = player:AddItemIntoEquipmentBox(
@@ -499,10 +477,11 @@ function JingliDlg:Draw(player)
 			item_count = item_count + 1
 		end
 	end
+	
 	if (item_count == 0) then
 		player:Say("Xin h·y s¾p xÕp l¹i hµnh trang.")
-		return
-	end
+	return end
+	
 	potion:ReduceFinishedCount(item_count)
 	WriteLog(format("%s(%s) receive stored hunyuanlinglu, count(%d)",
 		player:GetAccount(),
@@ -549,7 +528,6 @@ end
 
 function Jiluhunyuan(nCount)
 	if nCount <= 0 then
-		return
-	end
+	return end
 	AddStatData("linluchanchu_lianzhilinlu", nCount)	--Êı¾İÂñµãµÚÒ»ÆÚ
 end

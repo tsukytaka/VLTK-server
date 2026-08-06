@@ -7,7 +7,7 @@
 
 Include("\\script\\task\\tollgate\\killbosshead.lua") --°üº¬ÁËÍ¼Ïóµ÷ÓÃ
 Include("\\script\\task\\newtask\\newtask_head.lua")
-Include("\\script\\task\\tollgate\\messenger\\posthouse.lua") --°üº¬Íæ¼ÒÈÎÎñÊı¾İ±í¸ñµÄÀµ
+Include("\\script\\task\\tollgate\\messenger\\posthouse.lua") --°üº¬Íæ¼ÒÈÎÎñÊı¾İ±í¸ñµÄÀà
 Include("\\script\\event\\birthday_jieri\\200905\\message\\message.lua");
 
 Include("\\script\\task\\tollgate\\messenger\\qianbaoku\\messenger_baoxiangtask.lua")--¿ª±¦Ïä¹¤¾ßº¯Êı
@@ -19,10 +19,10 @@ Include("\\script\\activitysys\\functionlib.lua")--ÒıÓÃlib:DoFunByPlayer
 function main()
 	local tbDialog =
 	{
-		  "TiÕp nhËn nhiÖm vô /ture_gettask", 
-                  "B¾t ®Çu nhiÖm vô /ture_try_starttask", 
-                  "TiÕp tôc nhiÖm vô /ture_continuetask", 
-                 "Rêi khái khu vùc/ture_movecity",
+		--"½ÓÊÜÈÎÎñ/ture_gettask",
+		"B¾t ®Çu nhiÖm vô /ture_try_starttask",
+		"TiÕp tôc nhiÖm vô/ture_continuetask",
+	  	"Rêi khái khu vùc/ture_movecity",
 	  	"L¸t n÷a quay l¹i /no",
 	}
 --	if (tbBirthday0905:IsActDate() == 1) then
@@ -31,44 +31,44 @@ function main()
 	 Describe(DescLink_YiGuan..": Tõ chæ cña ta ®©y b¾t ®Çu ph©n c«ng nhiÖm vô cô thÓ cho ng­¬i, cè lªn nhĞ. Tæ ®éi do ®éi tr­ëng b¾t ®Çu nhiÖm vô th× cµng dÔ hoµn thµnh nhiÖm vô h¬n. B©y giê ng­¬i muèn lµm g× ®©y ?",getn(tbDialog), unpack(tbDialog))
 end
 
-function ture_gettask()
-	local Uworld1204 = nt_getTask(1204)  --¼Ç¢¼Íæ¼ÒµÄÈÎÎñ±äÁ¿£¬Ã¿´ÎÈÎÎñ½áÊøÊ±Çå¿Õ
-	local Uworld1028 = nt_getTask(1028)  --ÈÎÎñÁ´ÈÎÎñ±äÁ¿
+--function ture_gettask()
+--	local Uworld1204 = nt_getTask(1204)  --¼ÇÂ¼Íæ¼ÒµÄÈÎÎñ±äÁ¿£¬Ã¿´ÎÈÎÎñ½áÊøÊ±Çå¿Õ
+--	local Uworld1028 = nt_getTask(1028)  --ÈÎÎñÁ´ÈÎÎñ±äÁ¿
 --
-	if ( GetLevel() < 120 ) then
-		Describe(DescLink_YiGuan..": ThËt xin lçi, ngµi tr­íc mÆt cÊp bËc kh«ng cã ®¹t tíi 120 cÊp yªu cÇu. Xin mêi ®¹t tíi cÊp bËc tíi t×m ta n÷a ®i.",1,"KÕt thóc ®èi tho¹i/no")	
-	elseif ( Uworld1204 ~= 0 )  then
-		Describe(DescLink_YiGuan..": ThËt xin lçi, ngµi tr­íc mÆt nhiÖm vô tİn sø kh«ng hoµn thµnh, kh«ng thÓ nhËn gièng nhau nhiÖm vô, xin mêi hoµn thµnh nhiÖm vô tr­íc, c¸m ¬n.",1,"KÕt thóc ®èi tho¹i/no")
-	elseif (  messenger_givetime() == 10 ) then  --²é¿´½ñÈÕÊÇ·ñ»¹ÓĞ¹Ø¿¨Ê±¼ä
-		Describe(DescLink_YiGuan..": thËt xin lçi, ngµi h«m nay ng­¬i ®· sö dông thêi gian tİn sø ®· hÕt, xin mêi ngµy mai trë l¹i.",1,"KÕt thóc ®èi tho¹i/no")
-	else	
-                nt_setTask( 1204,1 )
-		nt_setTask( 1203,10) --ÉèÖÃĞÅÊ¹ÈÎÎñµÄ²½Öè
-	end
-end
+--	if ( GetLevel() < 120 ) then
+--		Describe(DescLink_YiGuan.."£º¶Ô²»Æğ£¬Äúµ±Ç°µÈ¼¶Ã»ÓĞ´ïµ½×îĞ¡µÄ120¼¶ÒªÇó¡£Çë´ïµ½µÈ¼¶ÔÙÀ´ÕÒÎÒ°É¡£",1,"½áÊø¶Ô»°/no")	
+--	elseif ( Uworld1204 ~= 0 )  then
+--		Describe(DescLink_YiGuan.."£º¶Ô²»Æğ£¬Äúµ±Ç°µÄĞÅÊ¹ÈÎÎñÎ´Íê³É£¬²»ÄÜ½ÓÍ¬ÑùµÄÈÎÎñ£¬ÇëÏÈÍê³É¸ÃÈÎÎñ£¬Ğ»Ğ»¡£",1,"½áÊø¶Ô»°/no")
+--	elseif (  messenger_givetime() == 10 ) then  --²é¿´½ñÈÕÊÇ·ñ»¹ÓĞ¹Ø¿¨Ê±¼ä
+--		Describe(DescLink_YiGuan.."£º¶Ô²»Æğ£¬Äú½ñÌìÔÚĞÅÊ¹ÈÎÎñÖĞµÄÊ±¼äÒÑºÄ¾¡£¬ÇëÃ÷ÈÕÔÙÀ´,Ğ»Ğ»¡£",1,"½áÊø¶Ô»°/no")
+--	else
+--		nt_setTask( 1204,1 )
+--		nt_setTask( 1203,10) --ÉèÖÃĞÅÊ¹ÈÎÎñµÄ²½Öè
+--	end
+--end
 
-function ture_starttask()
-	if ( nt_getTask(1203) == 10 ) then
-		nt_setTask(1211,GetGameTime())              --:ÉèÖÃÈÎÎñ¿ªÊ¼Ê±¼ä
-		nt_setTask(1203,20)
-		DisabledUseTownP(1)			--½ûÓÃ»Ø³Ç·û				--1£º½ûÓÃ	--0£ºÆôÓÃ
-		SetFightState(1);			--´ò¿ªÕ½¶·×´Ì¬				--1£º´ò¿ª	--0£º¹Ø±Õ
-		SetLogoutRV(1);				--¶ÏÏßºÍËÀÍö²»ÎªÒ»¸öÖØÉúµã		--1£º¶ÏÏßºÍËÀÍöÎªÒ»¸öÖØÉúµã	--0£º¶ÏÏßºÍËÀÍö²»ÎªÒ»¸öÖØÉúµã
-		SetPunish(0);				--¹Ø±ÕËÀÍö³Í·£					--1£ºÓĞËÀÍö³Í·£		--0£ºÃ»ÓĞËÀÍö³Í·£
-		SetCreateTeam(1);			--ÔÊĞí×é¶Ó					--1£ºÔÊĞí×é¶Ó		--0£º²»ÔÊĞí×é¶Ó
-		ForbidChangePK(1);   		--²»ÄÜ¸ü¸Äpk×´Ì¬		--1£º²»ÄÜ¸ü¸Äpk×´Ì¬		--0:¿ÉÒÔ¸ü¸Äpk×´Ì¬
-		SetPKFlag(0);               --ÉèÖÃÎªÁ·¹¦Ä£Ê½            
-		SetDeathScript("\\script\\task\\tollgate\\messenger\\playerdead_tollgate.lua");
-		SetPos(1414,3191);
-		Msg2Player("NhiÖm vô b¾t ®Çu tİnh giê.")
-	elseif ( nt_getTask(1203) == 20 ) then
-		Describe(DescLink_YiGuan.."Ng­¬i ®· b¾t ®Çu nhiÖm vô, kh«ng cÇn b¾t ®Çu n÷a",1,"KÕt thóc ®èi tho¹i/no")
-	elseif ( nt_getTask(1203) == 25 or nt_getTask(1203) == 30 ) then
-		Describe(DescLink_YiGuan.."Ng­¬i ®· hoµn thµnh nhiÖm vô, thÕ nµo cßn ph¶i b¾t ®Çu nhiÖm vô ®©y ? mau rêi ®i ®i ",1,"KÕt thóc ®èi tho¹i/no")
-	elseif ( nt_getTask(1203) == 0 ) then
-		Describe(DescLink_YiGuan.."Ng­¬i nhiÖm vô tİn sø ®· thÊt b¹i, xin mau rêi khái ®©y.",1,"KÕt thóc ®èi tho¹i/no")
-	end
-end
+--function ture_starttask()
+--	if ( nt_getTask(1203) == 10 ) then
+--		nt_setTask(1211,GetGameTime())              --:ÉèÖÃÈÎÎñ¿ªÊ¼Ê±¼ä
+--		nt_setTask(1203,20)
+--		DisabledUseTownP(1)			--½ûÓÃ»Ø³Ç·û				--1£º½ûÓÃ	--0£ºÆôÓÃ
+--		SetFightState(1);			--´ò¿ªÕ½¶·×´Ì¬				--1£º´ò¿ª	--0£º¹Ø±Õ
+--		SetLogoutRV(1);				--¶ÏÏßºÍËÀÍö²»ÎªÒ»¸öÖØÉúµã		--1£º¶ÏÏßºÍËÀÍöÎªÒ»¸öÖØÉúµã	--0£º¶ÏÏßºÍËÀÍö²»ÎªÒ»¸öÖØÉúµã
+--		SetPunish(0);				--¹Ø±ÕËÀÍö³Í·£					--1£ºÓĞËÀÍö³Í·£		--0£ºÃ»ÓĞËÀÍö³Í·£
+--		SetCreateTeam(1);			--ÔÊĞí×é¶Ó					--1£ºÔÊĞí×é¶Ó		--0£º²»ÔÊĞí×é¶Ó
+--		ForbidChangePK(1);   		--²»ÄÜ¸ü¸Äpk×´Ì¬		--1£º²»ÄÜ¸ü¸Äpk×´Ì¬		--0:¿ÉÒÔ¸ü¸Äpk×´Ì¬
+--		SetPKFlag(0);               --ÉèÖÃÎªÁ·¹¦Ä£Ê½            
+--		SetDeathScript("\\script\\task\\tollgate\\messenger\\playerdead_tollgate.lua");
+--		SetPos(1414,3191);
+--		Msg2Player("ÈÎÎñ¿ªÊ¼¼ÆÊ±ÁË")
+--	elseif ( nt_getTask(1203) == 20 ) then
+--		Describe(DescLink_YiGuan.."£ºÄãÒÑ¾­¿ªÊ¼ÁËÈÎÎñ£¬ÎŞĞèÔÙ¿ªÊ¼ÀÕ¡£",1,"½áÊø¶Ô»°/no")
+--	elseif ( nt_getTask(1203) == 25 or nt_getTask(1203) == 30 ) then
+--		Describe(DescLink_YiGuan.."£ºÄãÒÑ¾­Íê³ÉÁËÈÎÎñ£¬ÔõÃ´»¹Òª¿ªÊ¼ÈÎÎñÄØ£¿ËÙËÙÀë¿ª°É¡£",1,"½áÊø¶Ô»°/no")
+--	elseif ( nt_getTask(1203) == 0 ) then
+--		Describe(DescLink_YiGuan.."£ºÄãµÄĞÅÊ¹ÈÎÎñÒÑ¾­Ê§°Ü£¬ÇëËÙËÙÀë¿ª¡£",1,"½áÊø¶Ô»°/no")
+--	end
+--end
 
 function ture_try_starttask()
 	if ( nt_getTask(1203) == 10 ) then
@@ -101,7 +101,7 @@ function ture_try_starttask()
     		end
     	end
     	
-   	WriteLog(format("Account:%s[Name:%s] b¾t ®Çu nhiÖm vô Tİn Sø, nh©n sè tæ ®éi lµ [%d]",
+    	WriteLog(format("Account:%s[Name:%s] b¾t ®Çu nhiÖm vô Tİn Sø, nh©n sè tæ ®éi lµ [%d]",
 			GetAccount(),
 			GetName(),
 			nTeamSize
@@ -222,3 +222,4 @@ function ture_continuetask()
 		Describe(DescLink_YiGuan..": NhiÖm vô cña ng­¬i ®· thÊt b¹i, nhanh chãng rêi khái ®©y.",1,"KÕt thóc ®èi tho¹i/no")
 	end
 end
+

@@ -17,9 +17,9 @@ TB_CITYWAR_ARRANGE = {
 function AskDeal()
 	Say("Dông cô hç trî c«ng thµnh chiÕn cùc kú hiÖu dông, chØ cã thÓ dïng Nguyªn b¶o ®Ó mua! Kh¸ch quan nÕu bá lì kh«ng mua th× thËt v« cïng ®¸ng tiÕc!", 4, 
 	--"»ëÊ¯ÁÑ/DealBuy", 
-	"NghiÖt Long Xung Xa/#DealBuy(1)", 
-	"V©n Kú Binh phï /#DealBuy(2)", 
-	"Ngoan Cæ Binh phï /#DealBuy(3)", 
+	"NghiÖt Long Xung Xa (C«ng thµnh - C«ng ph¸ thµnh)/#DealBuy(1)", 
+	"V©n Kú Binh phï (Thñ thµnh - Gäi NPC cÇm cê)/#DealBuy(2)", 
+	"Ngoan Cæ Binh phï (Thñ thµnh - Gäi NPC ®¸nh trèng)/#DealBuy(3)", 
 	"Kh«ng cÇn ®©u/OnCancelBuy");
 end;
 
@@ -121,13 +121,13 @@ TSK_CITYTONG_DATE = 2518
 -- ÁìÈ¡Õ¼³Ç°ï»á½±Àø
 function talk_citytong_award()
 	local city_index = gettongownercity()
-	if (check_award_condition(city_index, 1) == 1) then
-		Say("<#>PhÇn th­ëng bang chiÕm thµnh. Thµnh viªn bang chiÕm thµnh cã thÓ ®i t×m Vâ l©m truyÒn nh©n ®Ó nhËn phÇn th­ëng huyÒn tinh cÊp 5, mçi ng­êi cã thÓ nhËn 1 viªn. Giíi h¹n: §« Thµnh (L©m An vµ BiÖn Kinh) nhËn 300 viªn cÊp 5, Thµnh ThŞ (nh÷ng thµnh thŞ kh¸c) nhËn 200 viªn huyÒn tinh cÊp 5. NÕu sau 18h00 vÉn ch­a nhËn hÕt th× bang chñ tr­íc 20h00 cã thÓ nhËn sè cßn l¹i.",
-			3,
-			"<#>Ta muèn nhËn huyÒn tinh kho¸ng th¹ch/#take_tong_award(1)",
-			"<#>Ta lµ bang chñ, ®Õn ®Ó nhËn phÇn th­ëng cßn l¹i/take_tong_resaward",
-			"<#> T¹m thêi ta kh«ng l·nh ®©u/nothing")
-	end
+	-- if (check_award_condition(city_index, 1) == 1) then
+		-- Say("<#>PhÇn th­ëng bang chiÕm thµnh. Thµnh viªn bang chiÕm thµnh cã thÓ ®i t×m Vâ l©m truyÒn nh©n ®Ó nhËn phÇn th­ëng huyÒn tinh cÊp 5, mçi ng­êi cã thÓ nhËn 1 viªn. Giíi h¹n: §« Thµnh (L©m An vµ BiÖn Kinh) nhËn 300 viªn cÊp 5, Thµnh ThŞ (nh÷ng thµnh thŞ kh¸c) nhËn 200 viªn huyÒn tinh cÊp 5. NÕu sau 18h00 vÉn ch­a nhËn hÕt th× bang chñ tr­íc 20h00 cã thÓ nhËn sè cßn l¹i.",
+			-- 3,
+			-- "<#>Ta muèn nhËn huyÒn tinh kho¸ng th¹ch/#take_tong_award(1)",
+			-- "<#>Ta lµ bang chñ, ®Õn ®Ó nhËn phÇn th­ëng cßn l¹i/take_tong_resaward",
+			-- "<#> T¹m thêi ta kh«ng l·nh ®©u/nothing")
+	-- end
 end
 
 -- ÁìÈ¡ºì°ü
@@ -150,16 +150,16 @@ function take_tong_award(count)
 	end;
 	local today = tonumber(GetLocalDate("%Y%m%d"));
 	local nMydate = GetTask(TSK_CITYTONG_DATE);
-	if (nMydate ~= today) then
-		AddItem(6,1,147,5,1,1);
-		SetTask(TSK_CITYTONG_DATE, today);
-		add_citybonus_task(city_index, CITYINFO_LEAGUETASK_COUNT, 1);
-	local msg =	format("%s %s (%s) nhËn %s huyÒn tinh cÊp 5 tõ Kim s¬n ch­ëng m«n nh©n",GetLocalDate("[%y-%m-%d %H:%M] "),GetAccount(),GetName(),count)
-		WriteLog(msg);
-		Talk(1, "", "<#>§©y lµ phÇn th­ëng cña ng­¬i, h·y nhËn lÊy.")
-	else
-		Talk(1, "", "<#>Ng­¬i ®· nhËn phÇn th­ëng tuÇn nµy råi, ®îi tuÇn sau nhĞ?");
-	end
+	-- if (nMydate ~= today) then
+		-- AddItem(6,1,147,5,1,1);
+		-- SetTask(TSK_CITYTONG_DATE, today);
+		-- add_citybonus_task(city_index, CITYINFO_LEAGUETASK_COUNT, 1);
+	-- local msg =	format("%s %s (%s) nhËn %s huyÒn tinh cÊp 5 tõ Kim s¬n ch­ëng m«n nh©n",GetLocalDate("[%y-%m-%d %H:%M] "),GetAccount(),GetName(),count)
+		-- WriteLog(msg);
+		-- Talk(1, "", "<#>§©y lµ phÇn th­ëng cña ng­¬i, h·y nhËn lÊy.")
+	-- else
+		-- Talk(1, "", "<#>Ng­¬i ®· nhËn phÇn th­ëng tuÇn nµy råi, ®îi tuÇn sau nhĞ?");
+	-- end
 end
 
 function take_tong_resaward()
@@ -187,13 +187,13 @@ function take_tong_resaward()
 	
 	local nCount = get_city_orecount(city_index) - get_citybonus_task(city_index, CITYINFO_LEAGUETASK_COUNT);
 	
-	for i = 1, nCount do
-		AddItem(6,1,147,5,1,1);
-	end;
-	add_citybonus_task(city_index, CITYINFO_LEAGUETASK_COUNT, nCount);
-	local msg =	format("%s %s (%s) nhËn %s huyÒn tinh cÊp 5 tõ Kim s¬n ch­ëng m«n nh©n",GetLocalDate("[%y-%m-%d %H:%M] "),GetAccount(),GetName(),count)
-	WriteLog(msg);
-	Say(format("§©y lµ phÇn th­ëng cña quİ bang, %s viªn huyÒn tinh cßn l¹i!",nCount), 0);
+	-- for i = 1, nCount do
+		-- AddItem(6,1,147,5,1,1);
+	-- end;
+	-- add_citybonus_task(city_index, CITYINFO_LEAGUETASK_COUNT, nCount);
+	-- local msg =	format("%s %s (%s) nhËn %s huyÒn tinh cÊp 5 tõ Kim s¬n ch­ëng m«n nh©n",GetLocalDate("[%y-%m-%d %H:%M] "),GetAccount(),GetName(),count)
+	-- WriteLog(msg);
+	-- Say(format("§©y lµ phÇn th­ëng cña quİ bang, %s viªn huyÒn tinh cßn l¹i!",nCount), 0);
 end;
 
 function get_city_orecount(cityid)

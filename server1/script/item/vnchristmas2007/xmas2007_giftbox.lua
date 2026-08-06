@@ -19,10 +19,10 @@ xmas2007_GiftBox_tbItemList =
 }
 
 function main()
-	--if xmas07_makeSnowMan_isActPeriod() == 0 then
-	--	Msg2Player("VÀt ph»m Æ∑ qu∏ hπn sˆ dÙng, sœ bﬁ m t Æi.")
-	--	return 0;
-	--end
+	if xmas07_makeSnowMan_isActPeriod() == 0 then
+		Msg2Player("VÀt ph»m Æ∑ qu∏ hπn sˆ dÙng, sœ bﬁ m t Æi.")
+		return 0;
+	end
 	xmas2007_SnowManItem_GiveRandomItem(xmas2007_GiftBox_tbItemList);
 end
 

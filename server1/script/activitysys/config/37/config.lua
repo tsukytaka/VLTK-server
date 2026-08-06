@@ -168,6 +168,7 @@ tbConfig[10] = --Ò»¸öÏ¸½Ú
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
+
 		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 		{"NpcFunLib:CheckWorldBoss",	{nil} },
 	},

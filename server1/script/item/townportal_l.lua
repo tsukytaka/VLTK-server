@@ -1,8 +1,10 @@
 Include("\\script\\battles\\battlehead.lua")
+Include("\\script\\missions\\yandibaozang\\travel_cleanup.lua")
 
 TOWNPORTAL_MAXCOUNT = 1000
 
 function main(nItemIdx)
+	YDBZ_ClearStaleTravelLock()
 	if (GetFightState() == 0 or IsDisabledUseTownP() == 1 or GetTaskTemp(200) == 1 ) or ( SubWorldIdx2ID( SubWorld ) >= 387 and SubWorldIdx2ID( SubWorld ) <= 395)then
 		Msg2Player("HiÖn t¹i b¹n kh«ng thÓ sö dông bïa vÒ thµnh!");
 		return 1

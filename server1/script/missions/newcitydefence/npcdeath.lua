@@ -106,7 +106,7 @@ function dropItem( nNpcIndex, nNpcRank, nBelongPlayerIdx )
 	if nNpcRank == 5 then
 		PlayerIndex = nBelongPlayerIdx;
 		local nBaseExp = 1000000 -- 1 million exp
-		local nExpPlayerKillBoss = 50 * nBaseExp
+		local nExpPlayerKillBoss = 10 * nBaseExp
 		local nCountPHL = 1 -- Boss Reward Item PHL count
 		local szName = GetName();
 		local szMonPhai = getMonPhai(PlayerIndex)

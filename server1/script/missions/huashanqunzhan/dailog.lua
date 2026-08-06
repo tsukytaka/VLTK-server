@@ -3,6 +3,8 @@ Include("\\script\\task\\system\\task_string.lua");
 Include("\\script\\missions\\huashanqunzhan\\high_grade\\ready\\readyclass.lua")
 Include("\\script\\missions\\huashanqunzhan\\mid_grade\\ready\\readyclass.lua")
 Include("\\script\\lib\\awardtemplet.lua")
+
+
 function huashanqunzhan_SignUpMain(nStep)
 	local tbSay = nil
 	local nPlayerLevel = GetLevel()
@@ -21,22 +23,14 @@ function huashanqunzhan_SignUpMain(nStep)
 		if nState == 1 then
 			tbSay = 
 			{
-				format("<dec><npc>%s ®· b¾t ®Çu b¸o danh, phÝ b¸o danh lµ 10 v¹n l­îng, ®¹i hiÖp cã ®ång ý kh«ng?",tbReadyMission.tbRef.szMatchName),
+				format("<dec><npc>%s ®· b¾t ®Çu b¸o danh, phÝ b¸o danh lµ 20 v¹n l­îng, ®¹i hiÖp cã ®ång ý kh«ng?",tbReadyMission.tbRef.szMatchName),
 				 "B¸o danh tham gia/#huashanqunzhan_SignUpMain(2)",
 			}
 		elseif nState == 0 or nState == -1 then
 			local tbWorld = 
 			{
 				{"-","-","-"},
-				{"Ngµy", "Sè trËn", "Thêi gian"},
-				{"-","-","-"},
-				{"Thø 2 ®Õn thø 6", "2", "10:00 - 10:45"},
-				{"","", "22:00 - 22:45"},
-				{"-","-","-"},
-				{"","","10:00 - 10:45"},
-				{"Thø 7 vµ Chñ nhËt", "3", "15:00 - 15:45"},
-				{"","","22:00 - 22:45"},
-				{"-","-","-"},
+
 			}
 			local szMsg = nState == 0 and "TrËn ®Êu vÉn ch­a b¾t ®Çu." or "TrËn ®Êu ®ang ®­îc tiÕn hµnh."
 			tbSay = 

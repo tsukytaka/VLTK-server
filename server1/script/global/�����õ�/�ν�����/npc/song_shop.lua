@@ -1,26 +1,21 @@
-
--- ËÎ½ğ±¨Ãûµã	ËÎ¾ü¾üĞè¹Ù
--- lixin 2004-12-13
 IncludeLib("BATTLE")
 Include("\\script\\battles\\battlehead.lua")
 Include("\\script\\task\\system\\task_string.lua");
-
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\dailogsys\\g_dialog.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
-
 Include("\\script\\global\\ÌØÊâÓÃµØ\\ËÎ½ğ±¨Ãûµã\\npc\\head.lua")
 Include("\\script\\global\\ÌØÊâÓÃµØ\\ËÎ½ğ±¨Ãûµã\\npc\\songjin_shophead.lua")
-
 Include("\\script\\global\\global_tiejiang.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
 Include("\\script\\battles\\vngbattlesign.lua")
-Include("\\script\\event\\zhongqiu_jieri\\200808\\zoumadeng\\event.lua")	--zhongqiu_jieri/200808
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
+Include("\\script\\battles\\doi_diem_tong_kim.lua")
+Include("\\script\\global\\pgaming\\shop\\shoptongkim\\banshoptongkim.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 
---§iÒu chØnh ®iÓm kinh nghiÖm giíi h¹n khi ®æi ®iÓm tİch luü - Modified by DinhHQ - 20110810
---Limit_Exp = 550000
---Limit_Exp = 700000
+battlesNpcSongJinShop = "<color=Orange>Qu©n nhu quan<color>: "
+battlesNpcSongJinShopExChangeExp = 1234.5679
+
 tbLimit_Exp = {
 						[0] = 700000,
 						[3] = 800000,
@@ -31,10 +26,6 @@ nState = 0;
 
 function main(sel)
 	local nWorld, _, _ = GetWorldPos()
---	if nWorld ~= 162 then
---		Talk(1, "", "Chøc n¨ng ®· ®ãng.")
---		return
---	end
 	nOldSW = SubWorld
 	SubWorld = SubWorldID2Idx(325)
 	if (nState == 0) then
@@ -42,13 +33,11 @@ function main(sel)
 		nState = 1;
 	end
 	battlemapid = BT_GetGameData(GAME_MAPID);
-	
-	--µ±Ç°Ã»ÓĞÈÎºÎÕ½ÒÛ´òÏì
 	if (battlemapid <= 0) then
 			maintalk()
 			return 
 	end
-	SyncTaskValue(747);--Í¬²½Íæ¼ÒµÄ×Ü»ı·Ö¸ø¿Í»§¶Ë£¬ÓÃÓÚ»ı·Ö¹ºÂò¹¦ÄÜ
+	SyncTaskValue(747);
 	battlemap = SubWorldID2Idx(BT_GetGameData(GAME_MAPID));
 	if (battlemap < 0) then
 		Msg2Player("error"..battlemap)
@@ -64,7 +53,7 @@ function main(sel)
 		SubWorld = tempSubWorld;
 		return
 	else
-		Talk(1,"","Qu©n Nhu quan: ChiÕn tranh ®ang diÔn ra ¸c liÖt phİa tr­íc, c¸c vŞ nªn t¹m l¸nh mét chót!")
+		Talk(1,"",battlesNpcSongJinShop.."Phİa tr­íc chiÕn tr­êng ®ang trong giai ®o¹n tranh ®o¹t quyÕt liÖt, c¸c vŞ vui lßng tr¸nh ®i mét xİu.")
 		SubWorld = tempSubWorld;
 		return
 	end;
@@ -74,113 +63,91 @@ end;
 function no()
 end;
 
-function songshop_sell()
-		Sale(98, 4);			
+function jinshop_sell()
+		Sale(98, 4);
+		-- Sale(196, 4);
 end;
 
---str1 = "ËÎ¾ü¾üĞè¹Ù£º´ó¼ÒÍ¬Îª´óËÎ×ÓÃñ£¬Äã¼ÈÈ»¾ö¶¨±¨Ğ§¹ú¼Ò£¬¿¹»÷½ğ¿Ü£¬±ã¿ÉÒÔÔÚÎÒÕâÀïÓÃËÎ½ğ»ı·Ö<color=yellow>»»È¡¾­Ñé¡¢ÔÀÍõ»êÖ®Ê¯<color>£¬»¹¿ÉÒÔ¹ºÂò<color=yellow>ËÎ½ğ×¨ÓÃµÀ¾ß<color>¡£"
---str2 = "Èç¹û£¬ÄãÓĞÔÀÍõ»êÖ®Ê¯µÄ»°£¬»¹ÄÜÔÚÎÒÕâÀïÁ¶ÔìÔÀÍõ½£Å¶£¡"
 function maintalk()
-	
-	local nNpcIndex = GetLastDiagNpc()
+	local nNpcIndex = GetLastDiagNpc();
 	local szNpcName = GetNpcName(nNpcIndex)
 	if NpcName2Replace then
 		szNpcName = NpcName2Replace(szNpcName)
 	end
-
 	local tbDailog = DailogClass:new(szNpcName)
 	
 	G_ACTIVITY:OnMessage("ClickNpc", tbDailog)
-	--µ¯³ö¶Ô»°¿ò
-	tbDailog.szTitleMsg = "Qu©n Nhu Quan: Tiªu diÖt cµng nhiÒu ®Şch, chiÕn tİch cµng nhiÒu, h·y sö dông nã t¹i ®©y <color=yellow>®æi lÊy kinh nghiÖm, hån th¹ch<color>, còng cã thÓ ®Ó mua <color=yellow>®¹o cô ®Æc biÖt trong Tèng Kim<color><enter>NÕu b¹n cã ®ñ hån th¹ch, còng cã thÓ ®óc Nh¹c V­¬ng KiÕm ë ®©y.<enter>B¹n cã tæng <color=yellow>"..nt_getTask(747).."<color> ®iÓm, b¹n cã cÇn g× kh«ng ?"
-	tbDailog:AddOptEntry("Ta muèn mua ®¹o cô", songshop_sell)
-	tbDailog:AddOptEntry("Ta muèn ®æi ®iÓm kinh nghiÖm", exp_exchange)	
-	--tbDailog:AddOptEntry("Ta muèn xem h×nh ¶nh ®Æc biÖt tèng kim", person_change)	
-	--tbDailog:AddOptEntry("Ta muèn xem hµo quang tèng kim", effect_aura)	
-	tbDailog:AddOptEntry("Sö dông Nh¹c V­¬ng Hån Th¹ch ®Ó ®óc luyÖn Nh¹c V­¬ng KiÕm", yuewang_want)	
-	--tbDailog:AddOptEntry("Ta muèn mua b¶n ®å vµng", goldenitem_menu)	
-	--tbDailog:AddOptEntry("Mua nguyªn kho¸ng c¸c lo¹i", ore)	
-	if (CFG_DoiTrangBiXanhDiemTK == 1) then
-		tbDailog:AddOptEntry("Ta muèn ®æi trang bŞ xanh", trangbi_exchange)	
+	local battlesSongJinszTitleMsg = battlesNpcSongJinShop.."N¬i ®©y lµ chiÕn tr­êng, ng­¬i cÇn ta gióp c¸i g×?"
+	local AddOption = {}
+	if ShopTongKim == 0 and ScriptShopTongKim == 1 then
+	tinsert(AddOption, "Ta muèn mua ®¹o cô/shoptongkim")
+	elseif ShopTongKim == 0 then
+	else
+	tinsert(AddOption, "Ta muèn mua ®¹o cô/jinshop_sell")
 	end
-	if (CFG_TopTuanTongKim == 1) then
-		tbDailog:AddOptEntry("ChiÕn tr­êng v« song m·nh t­íng",wushuangmengjiang)--ÎŞË«ÃÍ½«	
-	end
-	--tbDailog:AddOptEntry("Cöa hµng tinh lùc", energy_sale);
-	--tbDailog:AddOptEntry("§æi Bİ B¶o", duihuangmibao)
-	--T¹m ®ãng kiÕm gia mª cung - Modified by DinhHQ - 20110810
-	--tbDailog:AddOptEntry("Dïng Nh¹c V­¬ng Hån Th¹ch ®æi lÊy Ngäc Long Anh Hïng ThiÕp", talk_yulongtie)
-	if (CFG_zhongqiu_jieri_2008 == 1) then
-		tbDailog:AddOptEntry("§æi C«ng tr¹ng lÖnh bµi", zhongqiu0808_gongxuanlingpai)
-	end
-	tbDailog:Show()
+	tinsert(AddOption, "T¹i h¹ muèn quy ®æi ®iÓm Tİch lòy sang phÇn th­ëng/#SJ_PointExChange:Main()")
+	tinsert(AddOption, "V« song m·nh t­íng chiÕn tr­êng/wushuangmengjiang")
+	tinsert(AddOption, "Sö dông nh¹c v­¬ng hån th¹ch luyÖn nh¹c v­¬ng kiÕm/yuewang_want")
+	tinsert(AddOption, "KÕt thóc ®èi tho¹i/Oncanel")
+	Say(battlesSongJinszTitleMsg, getn(AddOption), AddOption)
 end
 
 function xunzhang_exchange()
 	if( GetLevel() < 40 ) then
-		Talk( 1, "", "Qu©n Nhu Quan: ChØ cã ng­êi ch¬i cÊp tõ 50 trë lªn míi cã thÓ nhËn Huy ch­¬ng .");
+		Talk( 1, "", "Quan TiOp LiÖu : chØ ca 50 cÊp trë lªn ng­êi ch¬i míi ca thÓ nhËn lÊy huy ch­¬ng");
 		return 0
 	elseif ( GetExtPoint(0)==0 ) then
-		Talk( 1, "", "Qu©n Nhu Quan: ChØ cã ng­êi ch¬i ®· n¹p thÎ míi cã thÓ nhËn Huy ch­¬ng .");
+		Talk( 1, "", "Quan TiOp LiÖu : ChØ ca ®· sung tr~ gi¸ ng­êi ch¬i míi ca thÓ nhËn lÊy huy ch­¬ng");
 		return 0
 	elseif ( CalcFreeItemCellCount() < 1 ) then
-		Talk( 1, "", "H·y chuÈn bŞ 1 « trèng ®Ó ®Æt vµo 1 Huy ch­¬ng");
+		Talk( 1, "", "Xin mêi chuÈn b~ mét chç trèng tíi ®Ó 1 c¸i huy ch­¬ng");
 		return 0;
 	else
-		Say("Qu©n Nhu Quan: Ng­êi cã muèn dïng 500 ®iÓm tİch lòy ®Ó ®æi lÊy Huy ch­¬ng kh«ng?", 2,"§æi lÊy Huy ch­¬ng/xunzhang_do", "HiÖn t¹i kh«ng muèn ®æi/no");
+		Say("Quan TiOp LiÖu : Ng­¬i nghÜ dïng 500 tUch ph©n ®æi lÊy huy ch­¬ng sao?", 2,"§æi lÊy huy ch­¬ng/xunzhang_do", "Kh«ng muèn/no");
 	end
 end
 
 function xunzhang_do()
 	if nt_getTask(747) < 500 then
-		Say("§iÓm tİch lòy kh«ng ®ñ 500, kh«ng thÓ nhËn Huy ch­¬ng",0);
+		Say("§iÓm tUch ph©n ch­a ®ñ 500, kh«ng thÓ nhËn lÊy huy ch­¬ng",0);
 		return 0;
 	end
 	nt_setTask(747, floor(nt_getTask(747) - 500));
-	local nidx = AddItem(6,1,1412,1,0,0) --»ñµÃËÎ½ğÑ«ÕÂ
+	local nidx = AddItem(6,1,1412,1,0,0) 
 	WriteLog(format("[GetZhanGongXunZhang]\t date:%s \t Account:%s \t Name:%s \t GetItem:%s Del:500SongJinJiFen\t",GetLocalDate("%Y-%m-%d %H:%M:%S"),GetAccount(),GetName(),GetItemName(nidx)));
-	Say("§· nhËn thµnh c«ng 1 Huy ch­¬ng",0);
+	Say("§· thµnh c«ng nhËn lÊy mét huy ch­¬ng",0);
 end
 
 function exp_exchange()
-	--Say("±¾¹¦ÄÜÔİ²»¿ª·Å£¬¾´ÇëÆÚ´ı£¡", 0 )
 	if( GetLevel() < 40 ) then
-		Talk( 1, "", "Qu©n Nhu quan: B¹n ch­a ®¹t ®­îc cÊp 40, kh«ng thÓ tham gia chiÕn tr­êng, sao cã thÓ lÊy ®iÓm tİch lòy ®æi ®iÓm kinh nghiÖm?");
+		Talk( 1, "", "<color=Orange>Qu©n nhu quan<color>: Ng­¬i kh«ng ca ®¹t tíi 40 cÊp, kh«ng thÓ tham gia.");
 	else
 		if (GetTiredDegree() == 2) then
-			Say("Qu©n Nhu Quan: §ang ë tr¹ng th¸i mÖt mái, kh«ng thÓ ®æi ®iÓm kinh nghiÖm.",0);
+			Say(battlesNpcSongJinShop.."H«m nay ta mÖt råi, khi kh¸c h·y ®Õn nhĞ!",0);
 		else
 			local tbOpt = 
 			{
 				"500 ®iÓm tİch lòy/#wantpay(500)", 
 				"1000 ®iÓm tİch lòy/#wantpay(1000)",
-				 "2000 ®iÓm tİch lòy/#wantpay(2000)",
-				  "5000 ®iÓm tİch lòy/#wantpay(5000)",
-				   "TÊt c¶ ®iÓm tİch lòy/#wantpay(9999)",
-				   "HiÖn t¹i kh«ng muèn ®æi/no"
+				"2000 ®iÓm tİch lòy/#wantpay(2000)",
+				"5000 ®iÓm tİch lòy/#wantpay(5000)",
+				"TÊt c¶ ®iÓm tİch lòy/#wantpay(9999)",
+				"Kh«ng muèn ®æi/no"
 			}
-			local nDate = tonumber(GetLocalDate("%Y%m%d"))
-			local nHM	= tonumber(GetLocalDate("%%H%M"))
-			
-			
-			if  20090925 <= nDate and  nDate <= 20091101 then
-			--	tinsert(tbOpt, 5, format("%dµã»ı·Ö/#wantpayex(%d,%d)",80000,80000,0))
-			end
-			--»î¶¯ÆÚ¼ä(2009/09/25ÖÁ2009/11/01)´Ó12h30 ÖÁ 23h30
-			
-			Say("Qu©n Nhu quan: B¹n muèn tèn bao nhiªu ®iÓm tİch lòy ®Ó ®æi ®iÓm kinh nghiÖm?", getn(tbOpt), tbOpt);
+			Say(battlesNpcSongJinShop.."Ng­¬i muèn ®æi bao nhiªu ®iÓm tİch lòy thµnh kinh nghiÖm", getn(tbOpt), tbOpt);
 		end;
 	end
 end;
 
+
 function wantpayex(mark, nStep)
 	
 	if GetLevel() < 120 then
-		Talk(1, "", format("Yªu cÇu cÇn %d cÊp trë lªn míi cã thÓ ®æi.", 120))
+		Talk(1, "", format("Yªu cÇu cÇn %d cÊp trë lªn míi ca thÓ ®æi lÊy.", 120))
 		return 
 	end
 	
-	if PlayerFunLib:CheckTaskDaily(2645, 1, "PhÇn th­ëng nµy mçi ngµy chØ cã thÓ nhËn 1 lÇn.", "<") ~= 1 then
+	if PlayerFunLib:CheckTaskDaily(2645, 1, "NhËn th­ëng mçi ngµy chØ ca thÓ nhËn lÊy mét lÇn.", "<") ~= 1 then
 		return
 	end
 	local nDate = tonumber(GetLocalDate("%Y%m%d"))
@@ -191,161 +158,155 @@ function wantpayex(mark, nStep)
 	end
 	
 	if gb_GetTask("songjin butianshi2009", 2) >= 10 then
-		Talk(1, "", "Mçi ngµy mçi server, 10 ng­êi nhanh nhÊt míi cã thÓ ®æi phÇn th­ëng nµy.")
+		Talk(1, "", "Mçi ngµy mçi phôc vô khU, nhanh nhÊt m­êi ng­êi míi ca thÓ ®æi lÊy phÇn th­ëng.")
 		return 
 	end
 	
 	if( mark > nt_getTask(747) ) then
-		Say("Qu©n Nhu quan: §iÓm tİch lòy cña b¹n kh«ng ®ñ, muèn nhËn ®­îc ®iÓm kinh nghiÖm", 1, "§ãng/no");
+		Say("Quan TiOp LiÖu : Ngµi tUch l?y ®iÓm ch­a ®ñ, muèn ®¹t ®­îc kinh nghiÖm tr~ gi¸.", 1, "Kh«ng/no");
 	elseif (mark == 0) then
-		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tİch lòy mµ muèn ®æi ®iÓm kinh nghiÖm µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
+		Say("Quan TiOp LiÖu : Kh«ng ca kinh nghiÖm tr~ gi¸ cßn muèn ®æi häc hái kinh nghiÖm nghiÖm tr~ gi¸ a, thËt lµ hoang ®­êng.", 1, "Kh«ng/no");
 	else
 		local level = GetLevel();
 		local bonus = bt_exchangeexp(level, mark)
-		nEXP = mark*100		
-		--local tbItem = {szName="M¶nh Bæ Thiªn Th¹ch (trung)", tbProp={6, 1, 1309, 1, 0, 0}}
+		
+		local tbItem = {szName="Bæ thiªn th¹ch to¸i phiOn ( trung ))", tbProp={6, 1, 1309, 1, 0, 0}}
 		if nStep == 1 then
 			if (expchange_limit(mark) == 1) then
 				nt_setTask(747, floor(nt_getTask(747) - mark))
-				AddOwnExp(nEXP);
+				AddOwnExp( bonus);
 				Add120SkillExp(bonus);
 				
-				--tbAwardTemplet:GiveAwardByList(tbItem, "MidAutumn,GetItemFromSongjin")
+				tbAwardTemplet:GiveAwardByList(tbItem, "MidAutumn,GetItemFromSongjin")
 				gb_AppendTask("songjin butianshi2009", 2, 1)
 				PlayerFunLib:AddTaskDaily(2645, 1)	
-				Msg2Player("<#>B¹n ®· tèn"..mark.."<#>®iÓm tİch lòy, ®æi lÊy"..bonus .."<#>®iÓm kinh nghiÖm.");
-				WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: §· tèn"..mark.."®iÓm tİch lòy, ®æi lÊy "..bonus.." ®iÓm kinh nghiÖm.");
+				Msg2Player("<#>Ngµi ®· tiªu hao"..mark.."<#>tUch ®iÓm, ®æi lÊy"..bonus .."<#>kinh nghiÖm.");
+				WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]:§· tiªu hao"..mark.."tUch ®iÓm, ®æi lÊy"..bonus.."kinh nghiÖm.");
 			end
 			
 			
 			
 		elseif nStep == 0 then
-			Say("Qu©n Nhu quan: B¹n cã thÓ ®æi ®­îc "..bonus.." ®iÓm kinh nghiÖm, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#wantpayex("..mark..",1"..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")	
+			Say("Quan TiOp LiÖu : Ngµi ca thÓ ®æi lÊy"..bonus.."§iÓm kinh nghiÖm, x¸c ®~nh ®æi lÊy ph¶i kh«ng?", 2, "§èi víi ta ph¶i thay ®æi/#wantpayex("..mark..",1"..")", "Uh, ®Ó cho ta suy nghÜ l¹i mét chót/no")	
 		end
 		
 	end	
 end
+
 function wantpay(mark)
-	if (mark == 9999) then		--»»È¡ËùÓĞ»ı·Ö
+	if (mark == 9999) then		
 		mark = nt_getTask(747)
 	end
 	
 	if( mark > nt_getTask(747) ) then
-		Say("Qu©n Nhu quan: §iÓm tİch lòy cña b¹n kh«ng ®ñ, muèn nhËn ®­îc ®iÓm kinh nghiÖm", 1, "§ãng/no");
+		Say(battlesNpcSongJinShop.."Ngµi ch­a ®ñ ®iÓm, kh«ng thÓ ®æi.", 0);
 	elseif (mark == 0) then
-		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tİch lòy mµ muèn ®æi ®iÓm kinh nghiÖm µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
+		Say(battlesNpcSongJinShop.."§· kh«ng cã ®iÓm tİch lòy mµ còng ®æi kinh nghiÖm, thËt lµ hoang ®­êng.", 0);
 	else
-		local level = GetLevel();
-		local bonus = bt_exchangeexp(level, mark)
-		Say("Qu©n Nhu quan: B¹n cã thÓ ®æi ®­îc "..bonus.." ®iÓm kinh nghiÖm, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#paymark("..mark..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")
+		-- local level = GetLevel();
+		-- local bonus = bt_exchangeexp(level, mark)
+		local bonus = battles_SongJinExChangeExp(mark)
+		Say(battlesNpcSongJinShop.."Ngµi cã thÓ ®æi <color=yellow>"..mark.."<color> ®iÓm tİch lòy lÊy <color=green>"..floor(bonus).."<color> §iÓm kinh nghiÖm kh«ng thÓ céng dån, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§ång ı ®æi/#paymark("..mark..")", "Uh, ®Ó cho ta suy nghÜ l¹i mét chót/no")
 	end	
 end
 
 function paymark(mark)
-	if (mark == 9999) then		--»»È¡ËùÓĞ»ı·Ö
+	if (mark == 9999) then
 		mark = nt_getTask(747)
 	end
 	
 	if( mark > nt_getTask(747) ) then
-		Say("Qu©n Nhu quan: §iÓm tİch lòy cña b¹n kh«ng ®ñ, muèn nhËn ®­îc ®iÓm kinh nghiÖm", 1, "§ãng/no");
+		Say(battlesNpcSongJinShop.."Ngµi ch­a ®ñ ®iÓm, kh«ng thÓ ®æi.", 0);
 	elseif (mark == 0) then
-		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tİch lòy mµ muèn ®æi ®iÓm kinh nghiÖm µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
+		Say(battlesNpcSongJinShop.."§· kh«ng cã ®iÓm tıch lòy mµ còng ®æi kinh nghiÖm, thËt lµ hoang ®­êng.", 0);
 	else
-		nEXP = mark*100	
 		local level = GetLevel();
-		local bonus = bt_exchangeexp(level, mark)
+		-- local bonus = bt_exchangeexp(level, mark)
+		local bonus = floor(battles_SongJinExChangeExp(mark))
 		if (expchange_limit(mark) == 1) then
 			nt_setTask(747, floor(nt_getTask(747) - mark))
-			AddOwnExp(nEXP);
-			Add120SkillExp(bonus);
-			Msg2Player("<#>B¹n ®· tèn"..mark.."<#>®iÓm tİch lòy, ®æi lÊy"..bonus .."<#>®iÓm kinh nghiÖm.");
-			WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: §· tèn"..mark.."®iÓm tİch lòy, ®æi lÊy "..bonus.." ®iÓm kinh nghiÖm.");
+			AddOwnExp( bonus);
+			-- Add120SkillExp(bonus);
+			Msg2Player("Ngµi ®· tèn "..mark.."<#> ®iÓm, ®æi lÊy "..bonus .." kinh nghiÖm.");
+			WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: ?ÑÏûºÄ"..mark.."®iÓm, ®æi lÊy"..bonus.." kinh nghiÖm.");
 		end
 	end
 end
 
 
 function expchange_limit(cost)
-	--local ww = tonumber(date("%W"))
-	--local yy = tonumber(date("%Y")) - 2000
 	local nNumber = tbVNG2011_ChangeSign:GetTransLife()	
 	local Limit_Exp = tbLimit_Exp[nNumber]
-	if((nt_getTask(1017) + cost) <= Limit_Exp) then
+	if ( (nt_getTask(1017) + cost) <= Limit_Exp) then
 		nt_setTask(1017, nt_getTask(1017) + cost)
 		return 1
 	else
-		Say("Qu©n Nhu quan: §õng tham lam nh­ vËy, trong mét tuÇn kh«ng thÓ ®æi qu¸ <color=red>"..Limit_Exp.."<color> ®iÓm kinh nghiÖm cña tİch lòy", 0)
+		Say("Quan TiOp LiÖu : kh«ng muèn nh­ vËy tham lam, trong vßng mét tuÇn lÔ kh«ng thÓ ®æi lÊy v­ît qua<color=red>"..Limit_Exp.."<color> tUch ®iÓm kinh nghiÖm", 0)
 		return -1
 	end
 end
 
 function nt_setTask(nTaskID, nTaskValue)
 	SetTask(nTaskID, nTaskValue)
-	SyncTaskValue(nTaskID) -- Í¬²½µ½¿Í»§¶Ë
+	SyncTaskValue(nTaskID) 
 end
 
--- »ñÈ¡ÈÎÎñ×´Ì¬
 function nt_getTask(nTaskID)
 	return GetTask(nTaskID)
 end
 
 function person_change()
-	Say("Qu©n Nhu quan: T¹i<color=yellow> b¶ng b×nh phÈm xÕp h¹ng <color>xÕp h¹ng<color=yellow> 5 tªn<color> ng­êi ch¬i ®Çu tiªn sÏ nhËn ®­îc danh hiÖu ®Æc biÖt vµ h×nh t­îng oai phong", 3, "Xem h×nh t­îng nh©n vËt nam Tèng Kim/title_male","Xem h×nh t­îng nh©n vËt n÷ Tèng Kim/title_female","Kh«ng muèn xem ®©u!/no" )
+	Say("Quan TiOp LiÖu : ? <color=yellow> ®øng hµng b×nh luËn b¶ng th­îng <color> ®øng hµng <color=yellow> 5 tªn <color> thø nhÊt nhµ ch¬i ®em ®¹t ®­îc ®Æc biÖt danh hiÖu cïng uy phong h×nh t­îng", 3, "Xem tèng kim nam nh©n vËt h×nh t­îng/title_male","Xem tèng kim n÷ nh©n vËt h×nh t­îng/title_female","Kh«ng muèn xem !/no" )
 end;
 
 function title_male()
-	Describe("<link=image:\\spr\\npcres\\enemy\\enemy208\\enemy208_at.spr>H×nh t­îng nh©n vËt nam Tèng Kim<link>B×nh phÈm nh©n vËt nam cã tªn 5 ng­êi trong b¶ng xÕp h¹ng sÏ nhËn ®­îc h×nh t­îng t­¬ng øng", 1, "§ãng/no" );
+	Describe("<link=image:\\spr\\npcres\\enemy\\enemy208\\enemy208_at.spr>Tèng kim nam nh©n vËt h×nh t­îng <link> ë ®øng hµng b¶ng trªn ca 5 c¸ tªn ®Uch nam nh©n vËt b×nh luËn ®em ®¹t ®­îc t­¬ng øng h×nh t­îng", 1, "Kh«ng/no" );
 end
 
 function title_female()
-	Describe("<link=image:\\spr\\npcres\\enemy\\enemy207\\enemy207_at.spr>H×nh t­îng nh©n vËt n÷ Tèng Kim<link>B×nh phÈm nh©n vËt n÷ cã tªn 5 ng­êi trong b¶ng xÕp h¹ng sÏ nhËn ®­îc h×nh t­îng t­¬ng øng", 1, "§ãng/no" );
+	Describe("<link=image:\\spr\\npcres\\enemy\\enemy207\\enemy207_at.spr>Tèng kim n÷ nh©n vËt h×nh t­îng <link> ë ®øng hµng b¶ng trªn ca 5 c¸ tªn ®Uch n÷ nh©n vËt b×nh luËn ®em ®¹t ®­îc t­¬ng øng h×nh t­îng", 1, "Kh«ng/no" );
 end
 
 function effect_aura()
-	Say("Qu©n Nhu quan: T¹i<color=yellow> b¶ng b×nh phÈm xÕp h¹ng <color>xÕp h¹ng <color=yellow>5 tªn<color> nh©n vËt ®Çu tiªn sÏ nhËn ®­îc ®Æc hiÖu vßng trßn ®Æc biÖt", 6, "Xem §Şnh Quèc Nguyªn So¸i §Æc HiÖu/aura_dingguo","Xem An Bang §¹i T­íng Qu©n §Æc HiÖu/aura_anbang","Xem Phiªu Kú T­íng Qu©n §Æc HiÖu/aura_biaoji","Xem Vò L©m Trung Lang §Æc HiÖu/aura_yulin","Xem Chiªu Vâ HiÖu óy §Æc HiÖu/aura_zhaowu","Kh«ng muèn xem ®©u!/no" );
+	Say("Quan TiOp LiÖu : ë <color=yellow> ®øng hµng b×nh luËn b¶ng th­îng <color> ®øng hµng <color=yellow>5 tªn <color> ng­êi thø nhÊt vËt t­ëng ®¹t ®­îc ®Æc biÖt vßng trßn ®Æc hiÖu", 6, "Xem ®~nh n­íc Nguyªn so¸i ®Æc hiÖu/aura_dingguo","Xem an bang §¹i t­íng qu©n ®Æc hiÖu/aura_anbang","Xem phiªu kú t­íng qu©n ®Æc hiÖu/aura_biaoji","Xem trong chèn vâ l©m lang ®Æc hiÖu/aura_yulin","Xem chiªu v? gi¸o óy ®Æc hiÖu/aura_zhaowu","Kh«ng!/no" );
 end
 
 function aura_dingguo()
-	Describe("<link=image:\\spr\\skill\\others\\title_dg.spr>§Şnh Quèc Nguyªn So¸i §Æc HiÖu<link>B×nh phÈm nh©n vËt xÕp h¹ng 1 trong b¶ng xÕp h¹ng sÏ nhËn ®­îc ®Æc hiÖu cña vßng trßn", 1, "§ãng/no" );
+	Describe("<link=image:\\spr\\skill\\others\\title_dg.spr>§~nh n­íc Nguyªn so¸i ®Æc hiÖu <link> nh©n vËt b×nh luËn xOp hµng thø nhÊt nai ®¹t ®­îc vßng trßn ®Æc hiÖu", 1, "Kh«ng/no" );
 end
 
 function aura_anbang()
-	Describe("<link=image:\\spr\\skill\\others\\title_ab.spr>An Bang §¹i T­íng Qu©n §Æc HiÖu<link>B×nh phÈm nh©n vËt xÕp h¹ng 2 trong b¶ng xÕp h¹ng sÏ nhËn ®­îc ®Æc hiÖu cña vßng trßn", 1, "§ãng/no" );
+	Describe("<link=image:\\spr\\skill\\others\\title_ab.spr>An bang §¹i t­íng qu©n ®Æc hiÖu <link> nh©n vËt b×nh luËn ®øng hµng thø hai ®em ®¹t ®­îc vßng trßn ®Æc hiÖu", 1, "Kh«ng/no" );
 end
 
 function aura_biaoji()
-	Describe("<link=image:\\spr\\skill\\others\\title_bj.spr>Phiªu Kú T­íng Qu©n §Æc HiÖu<link>B×nh phÈm nh©n vËt xÕp h¹ng 3 trong b¶ng xÕp h¹ng sÏ nhËn ®­îc ®Æc hiÖu cña vßng trßn", 1, "§ãng/no" );
+	Describe("<link=image:\\spr\\skill\\others\\title_bj.spr>Phiªu kú t­íng qu©n ®Æc hiÖu <link> nh©n vËt b×nh luËn ®øng hµng thø ba nai ®¹t ®­îc vßng trßn ®Æc hiÖu", 1, "Kh«ng/no" );
 end
 
 function aura_yulin()
-	Describe("<link=image:\\spr\\skill\\others\\title_yl.spr>Vò L©m Trung Lang §Æc HiÖu<link>B×nh phÈm nh©n vËt xÕp h¹ng 4 trong b¶ng xÕp h¹ng sÏ nhËn ®­îc ®Æc hiÖu cña vßng trßn", 1, "§ãng/no" );
+	Describe("<link=image:\\spr\\skill\\others\\title_yl.spr>Trong chèn vâ l©m lang ®Æc hiÖu <link> nh©n vËt b×nh luËn ®øng hµng thø t­ nai ®¹t ®­îc vßng trßn ®Æc hiÖu", 1, "Kh«ng/no" );
 end
 
 function aura_zhaowu()
-	Describe("<link=image:\\spr\\skill\\others\\title_zw.spr>Chiªu Vâ HiÖu óy §Æc HiÖu<link>B×nh phÈm nh©n vËt xÕp h¹ng 5 trong b¶ng xÕp h¹ng sÏ nhËn ®­îc ®Æc hiÖu cña vßng trßn", 1, "§ãng/no" );
+	Describe("<link=image:\\spr\\skill\\others\\title_zw.spr>Chiªu v? gi¸o óy ®Æc hiÖu <link> nh©n vËt b×nh luËn ®øng hµng thø n¨m nai ®¹t ®­îc vßng trßn ®Æc hiÖu", 1, "Kh«ng/no" );
 end
 
 function yuewang_want()
-	Say("Qu©n Nhu quan: Tõ nh÷ng tinh hoa cã ®­îc trong Nh¹c V­¬ng Hån Th¹ch ta chÕ t¹o ra Nh¹c V­¬ng KiÕm, cÇn ph¶i tèn "..YUEWANGHUN_STONECOUNT.." viªn Nh¹c V­¬ng Hån Th¹ch vµ 30 KNB ng­¬i x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "Muèn/yuewang_change", "§Ó ta xem l¹i/no")
+	Say(battlesNpcSongJinShop.."TËp trung tinh hoa cña Nh¹c v­¬ng hån th¹ch cã thÓ chÕ t¹o ra Nh¹c v­¬ng kiÕm, cÇn "..YUEWANGHUN_STONECOUNT.." nh¹c v­¬ng hån th¹ch nhÊt ®Şnh ®æi ph¶i kh«ng?", 2, "Muèn/yuewang_change", "Kh«ng muèn/no")
 end
 
 function yuewang_change()
-	Say("Qu©n Nhu quan: Nh¹c V­¬ng KiÕm chiÕm kh«ng gian trong hµnh trang lµ <color=yellow>6 (2 X 3)<color>«, ng­¬i x¸c ®Şnh cßn chç trèng trong hµnh trang ch­a?", 2, "Muèn/yuewang_sure", "§Ó ta xÕp gän hµnh trang ®·/no")
+	Say(battlesNpcSongJinShop.."Nh¹c v­¬ng kiÕm chiÕm kh«ng gian <color=yellow>6 (2 X 3)<color> chç trèng, ng­¬i x¸c ®Şnh hµnh trang cßn chç trèng chø?", 2, "Ch¾c råi!/yuewang_sure", "§Ó ta kiÓm tra l¹i/no")
 end
 
 function yuewang_sure()
 	if (CalcEquiproomItemCount(4, 507, 1, -1) >= YUEWANGHUN_STONECOUNT) then
-		if (CalcEquiproomItemCount(4, 343, 1, -1) >= 30) then
-			Say("Qu©n Nhu quan: Ng­¬i kh«ng cã 30 KNB, h·y kiÓm tra l¹i ®i! Thanh Nh¹c V­¬ng KiÕm kh«ng ph¶i ng­êi nµo còng cã ®­îc ®©u.", 0)
-			return
-		end
-		ConsumeEquiproomItem(30, 4, 343, 1, -1)
 		ConsumeEquiproomItem(YUEWANGHUN_STONECOUNT, 4, 507, 1, -1)
 		AddEventItem(195)
-		Say("Qu©n Nhu quan: Thanh Nh¹c V­¬ng KiÕm nµy rÊt quı b¸u, ng­¬i ph¶i biÕt tËn dông tèt ®Êy!", 0)
-		Msg2Player("B¹n nhËn ®­îc Nh¹c V­¬ng KiÕm")
+		Say(battlesNpcSongJinShop.."C¸i nµy lµ Nh¹c v­¬ng kiÕm, mét tİn vËt quan träng cña bang héi ®Êy!", 0)
+		Msg2Player("§· nhËn ®­îc Nh¹c v­¬ng kiÕm!")
 	else
-		Say("Qu©n Nhu quan: Ng­¬i kh«ng cã nhiÒu Nh¹c V­¬ng Hån Th¹ch, h·y kiÓm tra l¹i ®i! Thanh Nh¹c V­¬ng KiÕm kh«ng ph¶i ng­êi nµo còng cã ®­îc ®©u.", 0)
+		Say(battlesNpcSongJinShop.."Ng­¬i kh«ng ®ñ Nh¹c v­¬ng hån th¹ch, mau kiÓm tra l¹i, Nh¹c v­¬ng kiÕm kh«ng ph¶i ai còng cã thÓ së h÷u.", 0)
 	end
 end
 
@@ -356,93 +317,4 @@ end
 function goldenitem_menu()
 	Sale( 103, 4);
 end
---thªm ®æi trang bŞ xanh
-function trangbi_exchange()
-	if( GetLevel() < 40 ) then
-		Talk( 1, "", "Qu©n Nhu quan: B¹n ch­a ®¹t ®­îc cÊp 40, kh«ng thÓ tham gia chiÕn tr­êng, sao cã thÓ lÊy trang bŞ xanh?");
-	else
-		if (GetTiredDegree() == 2) then
-			Say("Qu©n Nhu Quan: §ang ë tr¹ng th¸i mÖt mái, kh«ng thÓ ®æi trang bŞ xanh.",0);
-		else
-			local tbOpt = 
-			{
-				"Vò khİ (3000 ®iÓm tİch lòy)		/#wanttrangbi(3000,1)", 
-				"¸m khİ (3000 ®iÓm tİch lòy)		/#wanttrangbi(3000,7)",
-				"D©y chuyÒn (3000 ®iÓm tİch lòy)	/#wanttrangbi(3000,9)",
-				"¸o gi¸p (2000 ®iÓm tİch lòy)		/#wanttrangbi(2000,2)", 
-				"Nãn (2000 ®iÓm tİch lòy)		/#wanttrangbi(2000,3)",
-				"Giµy (2000 ®iÓm tİch lòy)		/#wanttrangbi(2000,4)",
-				"Th¾t l­ng (2000 ®iÓm tİch lòy)		/#wanttrangbi(2000,5)",
-				"Bao Tay (2000 ®iÓm tİch lòy)		/#wanttrangbi(2000,6)",
-				"Ngäc béi (2000 ®iÓm tİch lòy)		/#wanttrangbi(2000,8)", 
-				"NhÉn (2000 ®iÓm tİch lòy)		/#wanttrangbi(2000,10)", 
-				"HiÖn t¹i kh«ng muèn ®æi/no"
-			}
-			Say("Qu©n Nhu quan: HiÖn b¹n cã <color=yellow>"..nt_getTask(747).."<color> ®iÓm tİch lòy b¹n muèn dïng ®iÓm tİch lòy ®æi trang bŞ xanh nµo?", getn(tbOpt), tbOpt);
-		end;
-	end
-end;
-function wanttrangbi(mark,n)
-	if( mark > nt_getTask(747) ) then
-		Say("Qu©n Nhu quan: §iÓm tİch lòy cña b¹n kh«ng ®ñ, muèn nhËn ®­îc trang bŞ xanh", 1, "§ãng/no");
-	elseif (mark == 0) then
-		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tİch lòy mµ muèn ®æi trang bŞ xanh µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
-	else
-		Say("Qu©n Nhu quan: B¹n cã thÓ ®æi ®­îc trang bŞ xanh, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#paymarkTB("..mark..","..n..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")
-	end	
-end
-function paymarkTB(mark,n)
-	if( mark > nt_getTask(747) ) then
-		Say("Qu©n Nhu quan: §iÓm tİch lòy cña b¹n kh«ng ®ñ, muèn nhËn ®­îc trang bŞ xanh", 1, "§ãng/no");
-	elseif (mark == 0) then
-		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tİch lòy mµ muèn ®æi trang bŞ xanh µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
-	else
-		nt_setTask(747, floor(nt_getTask(747) - mark))
 
-		trangbi(n)
-
-		Msg2Player("B¹n ®· tèn "..mark.." ®iÓm tİch lòy, ®æi lÊy trang bŞ xanh");
-		WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: §· tèn "..mark.." ®iÓm tİch lòy, ®æi lÊy trang bŞ xanh.");
-	end
-end
-function trangbi(nsel)
-	he = random(0,4)
-	gioi = GetSex()
-	tylemm = random(50,100)
-	if nsel == 1 then --vu khi		nam su sai chung
-		q = random(0,5)
-		AddItem(0,0,q,10,he,tylemm,10)
-	elseif nsel == 2 then --ao giap		nam: 0 - 6, Nu: 7 - 13
-		if gioi == 0 then w = random(0,6)
-		else w = random(7,13) end
-		AddItem(0,2,w,10,he,tylemm,10)
-	elseif nsel == 3 then --non		nam: 0 - 6, Nu: 7 - 13
-		if gioi == 0 then w = random(0,6)
-		else w = random(7,13) end
-		AddItem(0,7,w,10,he,tylemm,10)
-	elseif nsel == 4 then --giay		nam: 0 - 1, Nu: 2 - 3
-		if gioi == 0 then w = random(0,1)
-		else w = random(2,3) end
-		AddItem(0,5,w,10,he,tylemm,10)
-	elseif nsel == 5 then	--that lung		nam su sai chung
-		w = random(0,1)
-		AddItem(0,6,w,10,he,tylemm,10)
-	elseif nsel == 6 then --bao tay		nam: 1, Nu: 0
-		if gioi == 0 then w = 1
-		else w = 0 end
-		AddItem(0,8,w,10,he,tylemm,10)
-	elseif nsel == 7 then --am khi		nam su sai chung
-		w = random(0,2)
-		AddItem(0,1,w,10,he,tylemm,10)
-	elseif nsel == 8 then 	--ngoc boi		nam: 1, Nu: 0
-		if gioi == 0 then w = 1
-		else w = 0 end
-		AddItem(0,9,w,10,he,tylemm,10)
-	elseif nsel == 9 then --day chuyen	nam: 1, Nu: 0
-		if gioi == 0 then w = 1
-		else w = 0 end
-		AddItem(0,4,w,10,he,tylemm,10)
-	elseif nsel == 10 then --nhan		nam su sai chung
-		AddItem(0,3,0,10,he,tylemm,10)		
-	end
-end

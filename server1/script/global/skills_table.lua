@@ -433,11 +433,6 @@ function add_tw(lvl)			-- 根据任务等级加相应的天王技能
 		if (HaveMagic(322) <= 0) then AddMagic(322,1) end		--破天斩  [322]（90级）
 		if (HaveMagic(323) <= 0) then AddMagic(323,1) end		--追星逐月[323]（90级）
 		if (HaveMagic(325) <= 0) then AddMagic(325,1) end		--追风诀  [325]（90级）
-		--if (HaveMagic(708) <= 0) then AddMagic(708,1) end		--门派120技能
-		--if (HaveMagic(1058) <= 0) then AddMagic(1058,20) end		--门派150技能
-		--if (HaveMagic(1059) <= 0) then AddMagic(1059,20) end		--门派150技能
-		--if (HaveMagic(1060) <= 0) then AddMagic(1060,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
 	end
 end
 
@@ -499,11 +494,6 @@ function add_sl(lvl)			-- 根据任务等级加相应的少林技能
 		if (HaveMagic(318) <= 0) then AddMagic(318,1) end		--达摩渡江[318]
 		if (HaveMagic(319) <= 0) then AddMagic(319,1) end		--横扫千军[319]（90级）
 		if (HaveMagic(321) <= 0) then AddMagic(321,1) end		--无相斩  [321]（90级）
-		--if (HaveMagic(709) <= 0) then AddMagic(709,1) end		--门派120技能
-		--if (HaveMagic(1055) <= 0) then AddMagic(1055,20) end		--门派150技能
-		--if (HaveMagic(1056) <= 0) then AddMagic(1056,20) end		--门派150技能
-		--if (HaveMagic(1057) <= 0) then AddMagic(1057,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
 	end
 end
 
@@ -568,18 +558,11 @@ function add_tm(lvl)			-- 根据任务等级加相应的唐门技能
 		if (HaveMagic(339) <= 0) then AddMagic(339,1) end		--摄魂月影[339]（90级）
 		if (HaveMagic(302) <= 0) then AddMagic(302,1) end		--暴雨梨花[302]（90级）
 		if (HaveMagic(342) <= 0) then AddMagic(342,1) end		--九宫飞星[342]（90级）
----		if (GetTaskTemp(20) == 351) then					-- 如果发现有该技能则加回，其它90技能未删
----			if (HaveMagic(351) == -1) then		-- 必须没有技能的才给技能
----				AddMagic(351)		--乱环击  [351]（90级）
----			end
----		end
-		if (HaveMagic(351) <= 0) then AddMagic(351) end		--90诅咒辅助技能
-		--if (HaveMagic(710) <= 0) then AddMagic(710,1) end		--门派120技能
-		--if (HaveMagic(1069) <= 0) then AddMagic(1069,20) end		--门派150技能
-		--if (HaveMagic(1070) <= 0) then AddMagic(1070,20) end		--门派150技能
-		--if (HaveMagic(1071) <= 0) then AddMagic(1071,20) end		--门派150技能
-		--if (HaveMagic(1110) <= 0) then AddMagic(1110) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
+		if (GetTaskTemp(20) == 351) then					-- 如果发现有该技能则加回，其它90技能未删
+			if (HaveMagic(351) == -1) then		-- 必须没有技能的才给技能
+				AddMagic(351)		--乱环击  [351]（90级）
+			end
+		end
 	end
 end
 
@@ -652,16 +635,11 @@ function add_wu(lvl)			-- 根据任务等级加相应的五毒技能
 	if (lvl >= 90) then		-- 90级任务（加90级技能）
 		if (HaveMagic(353) <= 0) then AddMagic(353,1) end		--阴风蚀骨[353]（90级）
 		if (HaveMagic(355) <= 0) then AddMagic(355,1) end		--玄阴斩  [355]（90级）
----		if (GetTaskTemp(20) == 390) then					-- 如果发现有该技能则加回，其它90技能未删
----			if (HaveMagic(390) == -1) then		-- 必须没有技能的才给技能
----				AddMagic(390)		-- [390]（90级）
----			end
----		end
-		if (HaveMagic(390) <= 0) then AddMagic(390) end		--90诅咒辅助技能
-		--if (HaveMagic(711) <= 0) then AddMagic(711,1) end		--门派120技能
-		--if (HaveMagic(1066) <= 0) then AddMagic(1066,20) end		--门派150技能
-		--if (HaveMagic(1067) <= 0) then AddMagic(1067,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
+		if (GetTaskTemp(20) == 390) then					-- 如果发现有该技能则加回，其它90技能未删
+			if (HaveMagic(390) == -1) then		-- 必须没有技能的才给技能
+				AddMagic(390)		-- [390]（90级）
+			end
+		end
 	end
 end
 
@@ -725,17 +703,11 @@ function add_em(lvl)			-- 根据任务等级加相应的峨嵋技能
 	if (lvl >= 90) then		-- 90级任务（加90级技能）
 		if (HaveMagic(328) <= 0) then AddMagic(328,1) end		--三峨霁雪[328]（90级）
 		if (HaveMagic(380) <= 0) then AddMagic(380,1) end		--风霜碎影[380]（90级）
----		if (GetTaskTemp(20) == 332) then					-- 如果发现有该技能则加回，其它90技能未删
----			if (HaveMagic(332) == -1) then		-- 必须没有技能的才给技能
----				AddMagic(332)		--普渡众生[332]（90级）
----			end
----		end
-		if (HaveMagic(332) <= 0) then AddMagic(332) end		--90诅咒辅助技能
-		--if (HaveMagic(712) <= 0) then AddMagic(712,1) end		--门派120技能
-		--if (HaveMagic(1061) <= 0) then AddMagic(1061,20) end		--门派150技能
-		--if (HaveMagic(1062) <= 0) then AddMagic(1062,20) end		--门派150技能
-		--if (HaveMagic(1114) <= 0) then AddMagic(1114,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
+		if (GetTaskTemp(20) == 332) then					-- 如果发现有该技能则加回，其它90技能未删
+			if (HaveMagic(332) == -1) then		-- 必须没有技能的才给技能
+				AddMagic(332)		--普渡众生[332]（90级）
+			end
+		end
 	end
 end
 
@@ -793,10 +765,6 @@ function add_cy(lvl)			-- 根据任务等级加相应的翠烟技能
 	if (lvl >= 90) then		-- 90级任务（加90级技能）
 		if (HaveMagic(336) <= 0) then AddMagic(336,1) end		--冰踪无影[336]（90级）
 		if (HaveMagic(337) <= 0) then AddMagic(337,1) end		--冰心仙子[337]（90级）
-		--if (HaveMagic(713) <= 0) then AddMagic(713,1) end		--门派120技能
-		--if (HaveMagic(1063) <= 0) then AddMagic(1063,20) end		--门派150技能
-		--if (HaveMagic(1065) <= 0) then AddMagic(1065,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
 	end
 end
 
@@ -860,16 +828,11 @@ function add_tr(lvl)			-- 根据任务等级加相应的天忍技能
 	if (lvl >= 90) then		-- 90级任务（加90级技能）
 		if (HaveMagic(361) <= 0) then AddMagic(361,1) end		--云龙击  [361]（90级）
 		if (HaveMagic(362) <= 0) then AddMagic(362,1) end		--天外流星[362]（90级）
----		if (GetTaskTemp(20) == 391) then					-- 如果发现有该技能则加回，其它90技能未删
----			if (HaveMagic(391) == -1) then		-- 必须没有技能的才给技能
----				AddMagic(391)		-- [391]（90级）
----			end
----		end
-		if (HaveMagic(391) <= 0) then AddMagic(391) end		--90诅咒辅助技能
-		--if (HaveMagic(715) <= 0) then AddMagic(715,1) end		--门派120技能
-		--if (HaveMagic(1075) <= 0) then AddMagic(1075,20) end		--门派150技能
-		--if (HaveMagic(1076) <= 0) then AddMagic(1076,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
+		if (GetTaskTemp(20) == 391) then					-- 如果发现有该技能则加回，其它90技能未删
+			if (HaveMagic(391) == -1) then		-- 必须没有技能的才给技能
+				AddMagic(391)		-- [391]（90级）
+			end
+		end
 	end
 end
 
@@ -927,10 +890,6 @@ function add_gb(lvl)			-- 根据任务等级加相应的丐帮技能
 	if (lvl >= 90) then		-- 90级任务（加90级技能）
 		if (HaveMagic(357) <= 0) then AddMagic(357,1) end		--飞龙在天[357]（90级）
 		if (HaveMagic(359) <= 0) then AddMagic(359,1) end		--天下无狗[359]（90级）
-		--if (HaveMagic(714) <= 0) then AddMagic(714,1) end		--门派120技能
-		--if (HaveMagic(1073) <= 0) then AddMagic(1073,20) end		--门派150技能
-		--if (HaveMagic(1074) <= 0) then AddMagic(1074,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
 	end
 end
 
@@ -988,10 +947,6 @@ function add_wd(lvl)			-- 根据任务等级加相应的武当技能
 	if (lvl >= 90) then		-- 90级任务（加90级技能）
 		if (HaveMagic(365) <= 0) then AddMagic(365,1) end		--天地无极[365]（90级）
 		if (HaveMagic(368) <= 0) then AddMagic(368,1) end		--人剑合一[368]（90级）
-		--if (HaveMagic(716) <= 0) then AddMagic(716,1) end		--门派120技能
-		--if (HaveMagic(1078) <= 0) then AddMagic(1078,20) end		--门派150技能
-		--if (HaveMagic(1079) <= 0) then AddMagic(1079,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
 	end
 end
 
@@ -1067,19 +1022,13 @@ function add_kl(lvl)			-- 根据任务等级加相应的昆仑技能
 	if (lvl >= 90) then		-- 90级任务（加90级技能）
 		if (HaveMagic(372) <= 0) then AddMagic(372,1) end		--傲雪啸风[372]（90级）
 		if (HaveMagic(375) <= 0) then AddMagic(375,1) end		--雷动九天[375]（90级）
----		if (GetTaskTemp(20) == 394) then
----			if (HaveMagic(394) == -1) then		-- 必须没有技能的才给技能
----				AddMagic(394)		-- [394]（90级）
----			end
----		end
-		if (HaveMagic(394) <= 0) then AddMagic(394) end		--90诅咒辅助技能
-		--if (HaveMagic(717) <= 0) then AddMagic(717,1) end		--门派120技能
-		--if (HaveMagic(1080) <= 0) then AddMagic(1080,20) end		--门派150技能
-		--if (HaveMagic(1081) <= 0) then AddMagic(1081,20) end		--门派150技能
-		--AddItem(6,1,2841,1,0,0)
+		if (GetTaskTemp(20) == 394) then
+			if (HaveMagic(394) == -1) then		-- 必须没有技能的才给技能
+				AddMagic(394)		-- [394]（90级）
+			end
+		end
 	end
 end
-
 function add_hs(lvl)			-- 根据任务等级加相应的华山技能
 	if (lvl >= 10) then			-- 已经入门（加入门技能）
 		if (HaveMagic(1347) == -1) then		-- 必须没有技能的才给技能
@@ -1139,6 +1088,10 @@ function add_hs(lvl)			-- 根据任务等级加相应的华山技能
 		if (HaveMagic(1380) == -1) then
 			AddMagic(1380);		--摩云剑气（60级）
 		end
+	end
+	if (lvl >= 90) then		-- 90级任务（加90级技能）
+		if (HaveMagic(1364) <= 0) then AddMagic(1364,1) end		--飞龙在天[357]（90级）
+		if (HaveMagic(1382) <= 0) then AddMagic(1382,1) end		--天下无狗[359]（90级）
 	end
 end
 
@@ -1439,6 +1392,7 @@ tbAllSkill = {
 		[6] = {11,19,271},
 		[7] = {21,273},
 		[9] = {318,319,321,709},
+--		[9] = {318,319,321,709,1055, 1056, 1057},
 	},
 	tianwang = {
 		[1] = {29,30,34},
@@ -1449,6 +1403,7 @@ tbAllSkill = {
 		[6] = {42},
 		[7] = {32,36,41,324},
 		[9] = {322,323,325,708},
+--		[9] = {322,323,325,708,1058, 1059, 1060},
 	},
 	tangmen = {
 		[1] = {45},
@@ -1458,7 +1413,8 @@ tbAllSkill = {
 		[5] = {345},
 		[6] = {349},
 		[7] = {48,58,249,341},
-		[9] = {302,339,342,351,710},
+		[9] = {302,339,342,710},
+--		[9] = {302,339,342,351,710,1069, 1070, 1071, 1110},
 	},
 	wudu = {
 		[1] = {63,65},
@@ -1468,7 +1424,8 @@ tbAllSkill = {
 		[5] = {73,356},
 		[6] = {72},
 		[7] = {71,74,75},
-		[9] = {353,355,390,711},
+--		[9] = {353,355,390,711,1066, 1067},
+		[9] = {353,355,711},
 	},
 	emei = {
 		[1] = {80,85},
@@ -1478,7 +1435,8 @@ tbAllSkill = {
 		[5] = {86},
 		[6] = {92},
 		[7] = {88,91,252,282},
-		[9] = {328,332,380,712},
+		[9] = {328,380,712},
+--		[9] = {328,332,380,712,1061, 1062, 1114},
 	},
 	cuiyan = {
 		[1] = {99,102},
@@ -1489,6 +1447,7 @@ tbAllSkill = {
 		[6] = {109},
 		[7] = {108,111,114},
 		[9] = {336,337,713},
+--		[9] = {336,337,713,1063, 1065},
 	},
 	gaibang = {
 		[1] = {119,122},
@@ -1499,6 +1458,7 @@ tbAllSkill = {
 		[6] = {125,128},
 		[7] = {130,360},
 		[9] = {357,359,714},
+--		[9] = {357,359,714,1073, 1074},
 	},
 	tianren = {
 		[1] = {135,145},
@@ -1508,7 +1468,8 @@ tbAllSkill = {
 		[5] = {364},
 		[6] = {143},
 		[7] = {142,148,150},
-		[9] = {361,362,391,715},
+--		[9] = {361,362,391,715,1075, 1076},
+		[9] = {361,362,715},
 	},
 	wudang = {
 		[1] = {153,155},
@@ -1519,6 +1480,7 @@ tbAllSkill = {
 		[6] = {157},
 		[7] = {165,166,267},
 		[9] = {365,368,716},
+--		[9] = {365,368,716,1078, 1079},
 	},
 	kunlun = {
 		[1] = {169,179},
@@ -1528,8 +1490,20 @@ tbAllSkill = {
 		[5] = {175,181},
 		[6] = {90,176},
 		[7] = {182,275,630},
-		[9] = {372,375,394,717},
+		[9] = {372,375,717},
+--		[9] = {372,375,394,717,1080, 1081},
 	},
+		huashan = {
+		[1] = {1347,1372},
+		[2] = {1349,1374,1350,1375},
+		[3] = {1351},
+		[4] = {1376,1354,1378,1355},
+		[5] = {1379,1358},
+		[6] = {1360,1380},
+		[7] = {1380},
+		[9] = {1364,1382,1365,1370,1369,1384},
+--		[9] = {372,375,394,717,1080, 1081},
+	},	
 }
 function HoTroSkill()
 	local szFaction = GetFaction()

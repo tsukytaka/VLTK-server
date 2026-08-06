@@ -106,8 +106,8 @@ function OnTimer()
 	
 	if (t == RUNGAME_TIME) then --Èç¹ûµ½ÁËÕıÊ½¿ªÕ½Ê±¿Ì£¬ÔòÍ£Ö¹±¨Ãû£¬ÕıÊ½½øÈëÕ½¶·½×¶Î
 		RunMission(MISSIONID)
-		AddGlobalCountNews(resultstr.."Thêi gian b¸o danh Phong V©n LuËn KiÕm ®· hÕt! ChiÕn ®Êu chİnh thøc khai chiÕn!", 2);
-		Msg2MSAll(MISSIONID, "Phong V©n LuËn KiÕm chİnh thøc khai chiÕn! C¸c chiÕn sÜ! X«ng lªn!");
+		AddGlobalCountNews(resultstr.."Thêi gian b¸o danh Tèng Kim ®· hÕt! ChiÕn ®Êu chİnh thøc khai chiÕn!", 2);
+		Msg2MSAll(MISSIONID, "Tèng Kim chİnh thøc khai chiÕn! C¸c chiÕn sÜ! X«ng lªn!");
 		WriteLog("butcher battle is entering fight state. now member count="..GetMSPlayerCount(MISSIONID, 1)..":"..GetMSPlayerCount(MISSIONID, 2))
 		-- ÈÕ³£ÈÎÎñË¢ĞÂ¶Ô»°NPC
 		%tbTalkDailyTask:AddTalkNpc(BT_GetGameData(GAME_MAPID), BT_GetGameData(GAME_MAPID));
@@ -117,18 +117,18 @@ function OnTimer()
 		RestTime = (RUNGAME_TIME - t) * TIMER_1 / FRAME2TIME
 		RestMin, RestSec = GetMinAndSec(RestTime);
 		if (RestSec == 0) then
-			str1 = resultstr.."<#>Phong V©n LuËn KiÕm ®ang trong giai ®o¹n b¸o danh. C¸c hiÖp kh¸ch muèn tham gia h·y nhanh chãng ®Õn T­¬ng D­¬ng hoÆc Chu Tiªn trÊn ®Ó b¸o danh! (hoÆc dïng Phong V©n Chiªu th­) .Thêi gian b¸o danh cßn l¹i lµ:"..RestMin.." phót. §iÒu kiÖn tham gia: CÊp kh«ng İt h¬n 40, phİ b¸o danh 1 Phong V©n Chiªu Binh LÖnh. Sau khi khai chiÕn nÕu nh­ vÉn ch­a ®Õn giíi h¹n cao nhÊt th× vÉn cã thÓ b¸o danh vµo tiÕp";
+			str1 = resultstr.."<#>Tèng Kim ®ang trong giai ®o¹n b¸o danh. C¸c hiÖp kh¸ch muèn tham gia h·y nhanh chãng ®Õn T­¬ng D­¬ng hoÆc Chu Tiªn trÊn ®Ó b¸o danh! (hoÆc dïng Tèng Kim Chiªu th­) .Thêi gian b¸o danh cßn l¹i lµ:"..RestMin.." phót. §iÒu kiÖn tham gia: CÊp kh«ng İt h¬n 40, phİ b¸o danh 2 v¹n l­îng. Sau khi khai chiÕn nÕu nh­ vÉn ch­a ®Õn giíi h¹n cao nhÊt th× vÉn cã thÓ b¸o danh vµo tiÕp";
 			str2 = "<#>C¸ch thêi gian khai chiÕn chØ cßn:"..RestMin.."phót"
 		else
-			str1 = resultstr.."<#>Phong V©n LuËn KiÕm ®ang trong giai ®o¹n b¸o danh. C¸c hiÖp kh¸ch muèn tham gia h·y nhanh chãng ®Õn T­¬ng D­¬ng hoÆc Chu Tiªn trÊn ®Ó b¸o danh! (hoÆc dïng Phong V©n Chiªu th­) .Thêi gian b¸o danh cßn l¹i lµ:"..RestMin.."phót"..RestSec.." gi©y. §iÒu kiÖn tham gia: CÊp kh«ng İt h¬n 40, phİ b¸o danh 1 Phong V©n Chiªu Binh LÖnh. Sau khi khai chiÕn nÕu nh­ vÉn ch­a ®Õn giíi h¹n cao nhÊt th× vÉn cã thÓ b¸o danh vµo tiÕp";
+			str1 = resultstr.."<#>Tèng Kim ®ang trong giai ®o¹n b¸o danh. C¸c hiÖp kh¸ch muèn tham gia h·y nhanh chãng ®Õn T­¬ng D­¬ng hoÆc Chu Tiªn trÊn ®Ó b¸o danh! (hoÆc dïng  Tèng Kim Chiªu th­) .Thêi gian b¸o danh cßn l¹i lµ:"..RestMin.."phót"..RestSec.." gi©y. §iÒu kiÖn tham gia: CÊp kh«ng İt h¬n 40, phİ b¸o danh 2 v¹n l­îng. Sau khi khai chiÕn nÕu nh­ vÉn ch­a ®Õn giíi h¹n cao nhÊt th× vÉn cã thÓ b¸o danh vµo tiÕp";
 			str2 = "<#>C¸ch thêi gian khai chiÕn chØ cßn:"..RestMin.."phót"..RestSec.." gi©y"
 		end
 		AddGlobalCountNews(str1, 2);
 		Msg2MSAll(MISSIONID,str2);		--Í¨Öª³¡ÄÚÍæ¼Ò¿ªÕ½Ê£ÓàÊ±¼ä
 	end
-	
-	if (t >= RUNGAME_TIME) then
-		AddTeTan(t)  -- Ôö¼ÓËÎ½ğÌØÌ½
+	-- off dac tham
+	--if (t >= RUNGAME_TIME) then
+	--	AddTeTan(t)  -- Ôö¼ÓËÎ½ğÌØÌ½
 
 		--Èç¹û³¡ÉÏÄ³Ò»ÕóÓªÈËÊıµÍÓÚ×îĞ¡ÊıÁ¿£¬Ôò±ÈÈü½áÊø£¬ÈË¶àµÄÕóÓªÖ±½Ó»ñÊ¤
 		local group1count = GetMSPlayerCount(MISSIONID, 1)
@@ -159,7 +159,7 @@ function OnTimer()
 			bt_announce(lsf_level, t);
 			TB_QIANQIU_YINGLIE0904:announce(lsf_level, t);
 		end
-	end
+	--end
 
 end
 

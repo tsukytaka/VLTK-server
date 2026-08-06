@@ -4,7 +4,7 @@
 
 tbclassname = {}
 tbclassname.DA_START = 0803080000	--开始时间
-tbclassname.DA_END 	= 5003162400	--结束时间
+tbclassname.DA_END 	= 0803162400	--结束时间
 tbclassname.LIMIT_LEVEL = 50		--等级限制
 
 tbclassname.tb_content =

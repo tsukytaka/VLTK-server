@@ -1,4 +1,5 @@
 Include( "\\script\\missions\\leaguematch\\head.lua" )
+Include("\\script\\global\\nobitaxd\\vdk\\simcity\\head.lua")
 
 SubWorldLvl1 = {{506, "(1)"},{507, "(2)"},{508, "(3)"},{509, "(4)"},{510, "(5)"},{511, "(6)"},{512, "(7)"},{513, "(8)"},}
 SubWorldLvl2 = {{516, "(1)"},{517, "(2)"},{518, "(3)"},{519, "(4)"},{520, "(5)"},{521, "(6)"},{522, "(7)"},{523, "(8)"},}
@@ -60,6 +61,15 @@ function wlls_gw_say(rolename, str, b_msg, b_sync)
 		end
 		if b_sync then
 			wlls_sync_lginfo(LG_GetLeagueObjByRole(WLLS_LGTYPE, rolename))
+			if WLLS_AUTO_SINGLE_ENTRY and WLLS_AUTO_SINGLE_ENTRY[rolename] == 1 then
+				WLLS_AUTO_SINGLE_ENTRY[rolename] = nil
+				if wlls_want2signmap then
+					wlls_want2signmap()
+				end
+			end
+		elseif WLLS_AUTO_SINGLE_ENTRY and WLLS_AUTO_SINGLE_ENTRY[rolename] == 1 then
+			-- Relay da tra loi nhung khong dong bo: tao chien doi that bai.
+			WLLS_AUTO_SINGLE_ENTRY[rolename] = nil
 		end
 		PlayerIndex = n_old
 	end
@@ -68,7 +78,7 @@ end
 --µ±Ç°±ÈÈü½×¶Îµ÷Õû
 function wlls_setphase(n_sid, n_type, n_phase, n_mid, n_next, tbOpen)
 	_M("wlls_setphase", n_sid, n_type, n_phase, n_mid, n_next, tbOpen)
-	--ÊýÖµ»¯£¬°²È«Æð¼û
+	--ÊýÖµ»¯£ê²È«Æð¼û
 	n_sid = tonumber(n_sid)
 	n_type = tonumber(n_type)
 	n_phase = tonumber(n_phase)
@@ -101,7 +111,7 @@ function wlls_setphase(n_sid, n_type, n_phase, n_mid, n_next, tbOpen)
 		return
 	end
 	
-	--±£´æÐÂÖµ
+	--±ŒæÐÂÖµ
 	SetGlbValue(GLB_WLLS_SID, n_sid)
 	SetGlbValue(GLB_WLLS_TYPE, n_type)
 	SetGlbValue(GLB_WLLS_PHASE, n_phase)
@@ -129,7 +139,7 @@ function wlls_setphase(n_sid, n_type, n_phase, n_mid, n_next, tbOpen)
 			CloseMission(WLLS_MSID_SCHEDULE)
 		end
 		
-		if (n_mid <= 0) then	--Relay¸Õ¸ÕÆô¶¯£¬²»ÄÜ¿ªÊ¼±ÈÈü
+		if (n_mid <= 0) then	--Relay¸Õ¸ÕÆô¶¯£ì»ÄÜ¿ªÊ¼±ÈÈü
 			SetGlbValue(GLB_WLLS_PHASE, 3)	--×èÖ¹¼ÌÐø½øÈë×¼±¸³¡
 			if (n_oldmid > 0) then
 				--Îª¿ÉÄÜÒÑ¾­¿ªÊ¼±ÈÈüµÄÍæ¼Ò»Ö¸´±ÈÈüID

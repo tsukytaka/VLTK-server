@@ -25,6 +25,30 @@ Include("\\script\\bonusvlmc\\killmonster.lua")
 
 Include("\\script\\task\\150skilltask\\g_task.lua")
 Include("\\script\\misc\\eventsys\\eventsys.lua")
+Include("\\script\\global\\nobitaxd\\vdk\\coin_drop_webconfig.lua")
+
+function JX_WebDropCoin(nNpcIndex)
+	local nRate = JX_WEB_COIN_DROP_BP or 0
+	if JX_WEB_COIN_DROP_ENABLED ~= 1 or nRate <= 0 or not PlayerIndex or PlayerIndex <= 0 then
+		return
+	end
+	local nParam4 = GetNpcParam(nNpcIndex, 4)
+	if nParam4 == 1 or nParam4 == 2 then
+		return
+	end
+	local nNpcType = GetNpcPowerType(nNpcIndex)
+	if nNpcType and nNpcType > 1 then
+		return
+	end
+	if random(1, 10000) > nRate then
+		return
+	end
+	local nX32, nY32, nSubWorldIdx = GetNpcPos(nNpcIndex)
+	if nSubWorldIdx then
+		DropItemEx(nSubWorldIdx, nX32, nY32, PlayerIndex, 4, 0, 0,
+			4, 417, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+	end
+end
 
 function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	-- [PARTY XP 2026-07-01] bot trong nhom giet quai -> gan PlayerIndex = chu nhom + cong exp tay
@@ -48,6 +72,7 @@ function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		end
 	end
 	if PlayerIndex and PlayerIndex > 0 then
+		JX_WebDropCoin(nNpcIndex)
 		--PlayerEvent:OnEvent("OnKillNpc", nNpcIndex, nAttackerIndex)
 
 		local szNpcName = GetNpcName(nNpcIndex)

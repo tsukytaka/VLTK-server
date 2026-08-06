@@ -2,7 +2,7 @@ Include("\\script\\item\\shengdan_jieri\\200811\\head.lua");
 
 repute_reward_taskid	= 1865;
 repute_reward_date_s	= 20081205;
-repute_reward_date_e	= 20500104;
+repute_reward_date_e	= 20200104;
 
 function christmas_repute_main()
 	local n_dateD	= tonumber(GetLocalDate("%y%m%d"));

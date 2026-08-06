@@ -72,8 +72,8 @@ ID	DESC	SECT	FightState
 71	YÕn Tö ®éng	74, 2045, 3372	1
 72	YÕn Tö ®éng	74, 2116, 3551	1
 73	YÕn Tö ®éng	74, 1993, 3688	1
-74	Kháa Lang ®éng	75, 1816, 3009	1
-75	Kháa Lang ®éng	75, 1872, 3071	1
+74	Kho¶ Lang ®éng	75, 1816, 3009	1
+75	Kho¶ Lang ®éng	75, 1872, 3071	1
 76	Thanh Loa ®éng	69, 1600, 3207	1
 77	D­íi ®¸y §éng §×nh Hå 	66, 1897, 3107	1
 78	Thiªn V­¬ng ®éng	65, 1596, 3250	1
@@ -193,9 +193,9 @@ ID	DESC	SECT	FightState
 192	Phï Dung ®éng	20, 3701, 6232	1
 193	Phi Thiªn ®éng	100, 1852, 3356	1
 194	D­¬ng Trung ®éng	101, 1767, 2816	1
-195	Sa M¹c Mª Cung	136, 1716, 3144	1
-196	L©m Du Quan	319, 1630,3592	1
-197	Ch©n nói Tr­êng B¹ch 	320, 1146,3130	1
+195	Sa M¹c Mª Cung	224, 1620, 3215	1
+196	L©m Du Quan	319, 1612, 3612	1
+197	Tr­êng B¹ch s¬n 	320, 1137, 3151	1
 198	Tr­êng B¹ch s¬n Nam 	321, 966, 2296	1
 199	Tr­êng B¹ch s¬n Nam 	321, 1573, 3150	1
 200	Tr­êng B¹ch s¬n B¾c	322, 2048,4120	1
@@ -222,9 +222,5 @@ ID	DESC	SECT	FightState
 221	C¸n Viªn ®éng	124, 1672, 3420	1
 222	Hoa S¬n ph¸i	333, 1227, 3346	1
 223	Thiªn Long Tù	332, 1105, 3170	1
-224	Phong L¨ng ®é	336, 1131,3191	1
+224	Phong L¨ng ®é	336, 1112, 3189	1
 225	M¹c Cao QuËt	340, 1853, 3446	1
-226	Sa M¹c 1	225,1472,3264	1
-227	Sa M¹c 2	226,1557,3177	1
-228	Sa M¹c 3	227,1522,3275	1
-229	Sa M¹c §Þa BiÓu	224,1621,3214	1

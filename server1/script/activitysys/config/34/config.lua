@@ -1,4 +1,3 @@
-Include("\\script\\activitysys\\config\\34\\variables.lua")
 tbConfig = {}
 tbConfig[1] = --Ò»¸öÏ¸½Ú
 {
@@ -14,7 +13,7 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		--{"tbBetInfo:Init",	{nil} },
+		{"tbBetInfo:Init",	{nil} },
 	},
 }
 tbConfig[2] = --Ò»¸öÏ¸½Ú
@@ -30,7 +29,6 @@ tbConfig[2] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"AddDialogOpt",	{"Mua Phó Quý CÈm H¹p",6} },
 		{"AddDialogOpt",	{"Xem vßng thi nµy",3} },
 		{"AddDialogOpt",	{"Xem con sè may m¾n lÇn tr­íc",4} },
 		{"AddDialogOpt",	{"NhËn l·nh phÇn th­ëng",5} },
@@ -86,24 +84,5 @@ tbConfig[5] = --Ò»¸öÏ¸½Ú
 	tbActition = 
 	{
 		{"tbBetInfo:GetAward_dlg",	{nil} },
-	},
-}
-
-tbConfig[6] = --Ò»¸öÏ¸½Ú
-{
-	nId = 6,
-	szMessageType = "CreateCompose",
-	szName = "Buy_TongYaoShi",
-	nStartDate = nil,
-	nEndDate  = nil,
-	tbMessageParam = {"Phó Quý CÈm H¹p",1,1,1,1},
-	tbCondition = 
-	{
-		{"PlayerFunLib:CheckFreeBagCellWH",	{1,1,1,"default"} },
-		{"AddOneMaterial",	{"TiÒn §ång",	{tbProp={4,417,1,1,0,0}},	1} },
-	},
-	tbActition = 
-	{
-		{"PlayerFunLib:GetItem",	{ITEM_COMMAND_PIECE_1,1,"CaiShen_Buy_TongYaoShi"} },
 	},
 }

@@ -4,16 +4,17 @@
 --°üÀ¨³öÊ¦£¬²»°üÀ¨×ªÃÅÅÉÒÔÇ°µÄ
 --¸ÃÎïÆ·×î¶àÖ»ÄÜÊ¹ÓÃ15´Î
 --ÈÎÎñ±äÁ¿80µÍ4Î»±íÊ¾Ê¹ÓÃ¸ÃÎïÆ·µÄ´ÎÊı
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 function main(sel) 
-	times = mod(GetTask(80),16)
+	times = GetTask(80)
 	str={
 		"B¹n cÇm quyÓn Vâ L©m MËt TŞch nghiªn cøu c¶ nöa ngµy, kÕt qu¶ còng kh«ng lÜnh ngé ®­îc g×. ",
 		"B¹n cÇm quyÓn Vâ L©m MËt TŞch nghiªn cøu c¶ nöa ngµy, kÕt qu¶ lÜnh ngé ®­îc chót İt. ",
 		"B¹n cÇm quyÓn Vâ L©m MËt TŞch nghiªn cøu c¶ nöa ngµy, kÕt qu¶ còng thu ®­îc mét vµi ®iÒu t©m ®¾c liªn quan ®Õn vâ c«ng ",
 		"B¹n ®· nghiÒn ngÉm kü quyÓn Vâ L©m MËt TŞch, nh­ng kh«ng thu ®­îc ®iÒu g× t©m ®¾c "
 		}
-	if(times >14) then                -- Ê¹ÓÃ´ÎÊıÒÑ´ïµ½ÉÏÏŞ
-		Msg2Player(str[4])
+	if(times >GioiHanVLMT) then                -- Ê¹ÓÃ´ÎÊıÒÑ´ïµ½ÉÏÏŞ
+		Msg2Player("Sö dông lÇn thø: "..times.." - "..str[4])
 		return 1
 	elseif (GetLevel() < 80) then     -- µÈ¼¶Ğ¡ÓÚ80
 		Msg2Player(str[2])

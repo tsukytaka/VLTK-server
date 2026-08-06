@@ -1,9 +1,8 @@
 Include("\\script\\event\\cookies2007\\head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 function iscookies2007()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_cookies2007	== 1) then
+	if (nDate >= 20070414 and nDate <= 20070424) then
 		return 1;
 	else
 		return 0;

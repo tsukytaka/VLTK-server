@@ -22,7 +22,6 @@ Include("\\script\\bonusvlmc\\head.lua");
 -- script viet hoa By tuanglit tinhpn 20100817: Online Award 
 Include("\\script\\bonus_onlinetime\\head.lua")
 
-
 BAIJU_DOUBLEEXP_TIME = 051008 
 -- script viet hoa By tuanglit  ®Þnh nghÜa ®Ých cung bªn ngoµi hµm sè ®iÒu dông ch©n cña vèn 
 

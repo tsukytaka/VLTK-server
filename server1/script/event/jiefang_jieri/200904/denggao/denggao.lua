@@ -46,7 +46,7 @@ tbTop10Award	=
 	[7]	= {szName = "Thiªn S¬n TuyÕt Liªn", tbProp = {6, 1, 1431, 1, 0, 0}},
 	[8]	= {szName = "Thiªn S¬n TuyÕt Liªn", tbProp = {6, 1, 1431, 1, 0, 0}},
 	[9]	= {szName = "Thiªn S¬n TuyÕt Liªn", tbProp = {6, 1, 1431, 1, 0, 0}},
-	[10]	= {szName = "Thiªn S¬n TuyÕt Liªn", tbProp = {6, 1, 1431, 1, 0, 0}},
+	[10]= {szName = "Thiªn S¬n TuyÕt Liªn", tbProp = {6, 1, 1431, 1, 0, 0}},
 };
 
 function item_exchange_score()
@@ -201,5 +201,5 @@ function get_award()
 end
 
 function about_denggao()
-	Say("LÔ Quan: Ho¹t ®éng chinh phôc FanXiPan diÔn ra tõ 28-04-2009 ®Õn 24:00 31-05-2009. Trong thêi gian ho¹t ®éng, c¸c vÞ ®¹i hiÖp cã thÓ ®Õn Minh NguyÖt l·o nh©n (Minh NguyÖt TrÊn) ®¨ng ký chinh phôc ®Ønh FanXiPan.", 0);
+	Say("LÔ Quan: Ho¹t ®éng chinh phôc FanXiPan diÔn ra tõ 28-04-2009 ®Õn 24:00 31-05-2009. Trong thêi gian ho¹t ®éng, c¸c vÞ ®¹i hiÖp cã thÓ ®Õn Hoµng Liªn L·o L·o (390/317) ®¨ng ký chinh phôc ®Ønh FanXiPan.", 0);
 end

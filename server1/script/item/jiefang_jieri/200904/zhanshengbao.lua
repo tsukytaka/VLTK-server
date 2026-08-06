@@ -1,39 +1,55 @@
--- Õ½Ê¤°ü½Å±¾ by bel at 20090408 10£º24
-
-Include("\\script\\lib\\awardtemplet.lua");
-Include("\\script\\event\\jiefang_jieri\\200904\\taskctrl.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
-local tb_zhanshengbao_award	=
+tbclass_newyear2008_yingchundai = {}
+tbclassname = tbclass_newyear2008_yingchundai
+tbclassname.TITLE = "Më tói mõng xu©n."
+tbclassname.tbdate = {}
+tbclassname.tbdate.nstart = 1803210000
+tbclassname.tbdate.nend 	= 1805202400
+tbclassname.mareial =
 {
-	{szName="Bao g¹o",	tbProp={6, 1, 2010, 1, 0, 0},	nRate = 35, nExpiredTime = jf0904_item_expiredtime},
-	{szName="N­íc tinh khiÕt",	tbProp={6, 1, 2011, 1, 0, 0},	nRate = 50, nExpiredTime = jf0904_item_expiredtime},
-	{szName="Men r­îu",		tbProp={6, 1, 2012, 1, 0, 0},	nRate = 15, nExpiredTime = jf0904_item_expiredtime},
-};
-
-function main()
-	if ( CalcFreeItemCellCount() < 1 ) then
-		Say("Hµnh trang kh«ng ®ñ chç, xin h·y ®Ó trèng ra Ýt nhÊt 1 «.",0);
-		return 1;
+	ntotalprob = 100,
+	tbitem = {
+			{G=6,D=1,P=30197,szname="ChiÕc mò tai bÌo",prob=33},
+			{G=6,D=1,P=30198,szname="ChiÕc mò hßa b×nh",prob=33},
+			{G=6,D=1,P=30199,szname="ChiÕc mò tù do",prob=34},
+--			{G=6,D=1,P=1657,szname="Phóc"	 ,prob=1.00	},
+--			{G=6,D=1,P=1658,szname="Léc"	 ,prob=1.00	},
+--			{G=6,D=1,P=1659,szname="Thä"	 ,prob=1.00	},
+		},
+}
+function main(sel)
+	if tbclassname:checkdate() == 0 then
+		Say("Tói mõng xu©n ®· hÕt h¹n, kh«ng thÓ më.",0)
+		return 0
 	end
-	
-	local ndate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_jiefang_jieri2009	== 0) then
-		Msg2Player("VËt phÈm nµy ®· qu¸ h¹n.");
-		return 0;
+	if CalcFreeItemCellCount() < 1 then
+		Say("Kh«ng ®ñ chç trèng, h·y s¾p xÕp l¹i hµnh trang.",0)
+		return 1
 	end
-	
-	tbAwardTemplet:GiveAwardByList(%tb_zhanshengbao_award, "Tói mõng chiÕn th¾ng");
+	tbclassname:getitem()
 end
 
-function IsPickable(nItemIndex, nPlayerIndex)
-	local ndate = tonumber(GetLocalDate("%Y%m%d"));
-	
-	if (CFG_jiefang_jieri2009	== 0) then
-		return 
+function tbclassname:getitem()
+	local tbclass = self.mareial
+	local p = random(1,(tbclass.ntotalprob*100))
+	local nsum = 0
+	for ni,nitem in tbclass.tbitem do
+				nsum = nsum + (nitem.prob*tbclass.ntotalprob)
+				if nsum >= p then
+					AddItem(nitem.G,nitem.D,nitem.P,1,0,0)
+					local szstr = format("Chóc mõng b¹n nhËn ®­îc 1 <color=yellow>%s<color>",nitem.szname)
+					Msg2Player(szstr)
+					self:sdl_writelog(self.TITLE,szstr)
+					return
+				end
 	end
-	
-	ITEM_SetExpiredTime(nItemIndex, jf0904_item_expiredtime);
-	SyncItem(nItemIndex);
-	return 1;
+end
+function tbclassname:checkdate()
+	local ndate = tonumber(GetLocalDate("%y%m%d%H%M"))
+	if ndate >= self.tbdate.nstart and ndate <= self.tbdate.nend then
+		return 1
+	end
+	return 0
+end
+function tbclassname:sdl_writelog(sztitle,szevent)	--¼ÇÂ¼,sztitle=ÊÂ¼þÃû,szevent=ÊÂ¼þÄÚÈÝ
+	WriteLog(format("[%s]\t Date:%s\t Account:%s\t Name:%s\t %s",sztitle,GetLocalDate("%y-%m-%d %H:%M:%S"),GetAccount(),GetName(),szevent));
 end

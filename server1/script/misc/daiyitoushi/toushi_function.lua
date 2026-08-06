@@ -64,9 +64,9 @@ function toushiCheckTransFactState(nFactionNumb, nStage)
 	end
 	
 	if (nStage == 2) then
-		if (check_zhuansheng_league(LG_WLLSLEAGUE) == 1) then
-			return TOUSHI_LGERR;
-		end
+--		if (check_zhuansheng_league(LG_WLLSLEAGUE) == 1) then
+--			return TOUSHI_LGERR;
+--		end
 		
 		if (CalcItemCount(2,0,-1,-1,-1) > 0) then
 			return TOUSHI_EQUIPERR;
@@ -105,10 +105,10 @@ function OnCancel()
 end
 
 function daiyitoushi_main(nFactionNumb)
-	if (gb_GetModule("SWITH_DAIYITOUSHI") ~= 1) then
-		Say("Xin lçi, c«ng n¨ng nµy t¹m thêi ®· bÞ ®ãng, thêi gian më l¹i sÏ ®ùoc th«ng b¸o sau ", 0);
-		return 1;
-	end
+	--if (gb_GetModule("SWITH_DAIYITOUSHI") ~= 1) then
+		--Say("Xin lçi, c«ng n¨ng nµy t¹m thêi ®· bÞ ®ãng, thêi gian më l¹i sÏ ®ùoc th«ng b¸o sau ", 0);
+		--return 1;
+	--end
 	
 	local nFlag	= GetTask(TSK_TOUSHI_FLAG);
 	local tbDes	= {"<dec><npc>Thiªn h¹ ®¹i lo¹n nh­  ngµy h«m nay, c¸c ®¹i m«n ph¸i trong vâ l©m ai còng chØ biÕt lo cho c¸i lîi cña m×nh, tïy theo chiÕn sù mµ bÕ quan,  trung nh©n vâ l©m th× bÞ tæn thÊt h¬n qu¸ nöa. VÞ kÕ vâ l©m h­¬ng háa, trïng t©n chÊn h­ng vâ l©m. T«n mÖnh vâ l©m minh chñ, kÓ tõ h«m nay c¸c ®¹i m«n ph¸i xãa bá c¸c quy t¾c, më réng m«n quy, cho phÐp c¸c ®Ö tö gia nhËp c¸c m«n ph¸i kh¸c, ®Ó cïng nhau Ên chøng vâ häc, s¸ng lËp ra nh÷ng tuyÖt häc vâ c«ng míi l¹, trung h­ng ng· vâ l©m."};

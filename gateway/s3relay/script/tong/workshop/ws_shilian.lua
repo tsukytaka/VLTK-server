@@ -35,7 +35,7 @@ function ws_main(nTongID, nWorkshopID)
 	end
 	local aryszContent = {
 		"Ta muèn nhËn Tu th©n hoµn/#use_g_1_ok".."("..nTongID..","..nWorkshopID..")",
-		"NhËn Méc nh©n/#use_xiulianmuren("..nTongID..","..nWorkshopID..")",
+		"NhËn ®­îc Méc nh©n/#use_xiulianmuren("..nTongID..","..nWorkshopID..")",
 	}
 	-- Ô½ÄÏ°æÈ¡Ïû´ó»¹µ¤
 	if (GetProductRegion() == "cn") then
@@ -49,15 +49,15 @@ function ws_main(nTongID, nWorkshopID)
 end
 
 function use_g_1_ok(nTongID, nWorkshopID)
-	--if (GetTask(TASKID_GET_TIME) == TONG_GetDay(nTongID))then
-	--	Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: H«m nay ng­¬i ®· nhËn råi, ngµy mai h·y ®Õn!", 0)
-	--	return 0;		
-	--end
-	--_dbgMsg("Sè lÇn nhËn cßn l¹i * 100: "..TWS_GetDayOutput(nTongID, nWorkshopID))
-	--if (TWS_GetDayOutput(nTongID, nWorkshopID) < 100) then
-	--	Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: H«m nay Tu th©n hoµn ®· luyÖn thµnh råi, ngµy mai h·y ®Õn t×m ta!", 0)
-	--	return 0;
-	--end
+	if (GetTask(TASKID_GET_TIME) == TONG_GetDay(nTongID))then
+		Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: H«m nay ng­¬i ®· nhËn råi, ngµy mai h·y ®Õn!", 0)
+		return 0;		
+	end
+	_dbgMsg("Sè lÇn nhËn cßn l¹i * 100: "..TWS_GetDayOutput(nTongID, nWorkshopID))
+	if (TWS_GetDayOutput(nTongID, nWorkshopID) < 100) then
+		Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: H«m nay Tu th©n hoµn ®· luyÖn thµnh råi, ngµy mai h·y ®Õn t×m ta!", 0)
+		return 0;
+	end
 	local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
 	Say("<#>Tæng qu¶n LÔ phÈm ph­êng: CÇn sö dông <color=yellow>"..aLevelCost[nLevel].."<color> ®iÓm cèng hiÕn, Tu LuyÖn Hoµn cã thÓ gióp nh©n ®«i kinh nghiÖm trong 30 phót.", 2, 
 		"§­îc. /#use_g_1_ok2".."("..nTongID..","..nWorkshopID..")", "Kh«ng muèn/cancel");
@@ -73,18 +73,12 @@ function use_g_1_ok2(nTongID, nWorkshopID)
 		Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: Kh«ng ®­îc råi, ®iÓm cèng hiÕn cña ng­¬i kh«ng ®ñ!", 0)
 		return
 	end
-	--if (GetTaskTemp(196) ~= 0)then
-	--	Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: VËt phÈm ng­¬i cÇn vÉn ch­a cã, h·y tiÕp tôc chê ®îi!", 0)
-	--	return
-	--end
-	
-	if CalcFreeItemCellCount() < floor(aLevelTime[nLevel] * 2) then
-		Talk(1, "", format("§Ó b¶o ®¶m an toµn tµi s¶n, xin mêi ®Ó trèng %d «.", floor(aLevelTime[nLevel] * 2)));
-		return 
+	if (GetTaskTemp(196) ~= 0)then
+		Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: VËt phÈm ng­¬i cÇn vÉn ch­a cã, h·y tiÕp tôc chê ®îi!", 0)
+		return
 	end
-	
-	--SetTaskTemp(196, 1)
-	USE_G_2(nTongID, nWorkshopID);	
+	SetTaskTemp(196, 1)
+	TWS_ApplyUse(nTongID, nWorkshopID);	
 end
 
 --------------------------------------------------
@@ -124,23 +118,16 @@ function sl_sure2muren(nTongID, nWorkshopID)
 		return
 	end
 	
-	--if (TWS_GetDayOutput(nTongID, nWorkshopID) < (VALUE_MUREN_CONTRIBUTION )) then
-	--	Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: H«m nay Méc Nh©n ®· ph©n ph¸t hÕt råi, ngµy mai h·y ®Õn vËy!", 0)
-	--	return
-	--end
+	if (TWS_GetDayOutput(nTongID, nWorkshopID) < (VALUE_MUREN_CONTRIBUTION )) then
+		Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: H«m nay Méc Nh©n ®· ph©n ph¸t hÕt råi, ngµy mai h·y ®Õn vËy!", 0)
+		return
+	end
 	
 	if (GetContribution() < VALUE_MUREN_CONTRIBUTION or AddContribution(-VALUE_MUREN_CONTRIBUTION) ~= 1)then
 		Say("<#>Tæng qu¶n ThÝ luyÖn ph­êng: Kh«ng ®­îc råi, ®iÓm cèng hiÕn kh«ng ®ñ <color=yellow>"..VALUE_MUREN_CONTRIBUTION.."<color> ®iÓm, kh«ng thÓ ®æi lÊy bang vËt.", 0)
 		Msg2Player("§iÓm cèng hiÕn c¸ nh©n kh«ng ®ñ, kh«ng thÓ sö dông chøc n¨ng nµy.")
 		return 
 	end
-	
-	if CalcFreeItemCellCount() < 2 then
-		Talk(1, "", "Hµnh trang ph¶i cã hai « trèng.");
-		return 
-	end
-	
-	
 	TWS_ApplyAddDayOutput(nTongID, nWorkshopID, -(VALUE_MUREN_CONTRIBUTION ))
 	
 	local nItemIndex = AddItem(6,1,1085,1,1,0)
@@ -259,12 +246,12 @@ end
 
 function USE_G_2(nTongID, nWorkshopID)
 	SetTaskTemp(196, 0)
+	SetTask(TASKID_GET_TIME, TONG_GetDay(nTongID))
 	local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
 	local nCost = aLevelCost[nLevel]
 	if (GetContribution() < nCost) then
 		return
 	end
-	SetTask(TASKID_GET_TIME, TONG_GetDay(nTongID))
 	local nCount = floor(aLevelTime[nLevel] * 2)
 	AddContribution(-nCost)
 	Msg2Player("B¹n tiªu tèn "..nCost.." ®iÓm cèng hiÕn!")

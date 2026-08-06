@@ -1,9 +1,7 @@
---Ìá¹©¸£ÔµÁìÈ¡µÄNPC
---2004.8.5
-
 Include( "\\script\\global\\fuyuan.lua" )
 Include("\\script\\task\\newtask\\education\\jiaoyutasknpc.lua") 
 Include("\\script\\task\\newtask\\newtask_head.lua")
+--Include("\\script\\event\\storm\\award_npc.lua")	--Storm
 Include("\\script\\event\\mid_autumn\\autumn_portal.lua")
 Include("\\script\\event\\tongwar\\head.lua")
 Include("\\script\\task\\system\\task_string.lua")
@@ -12,6 +10,7 @@ Include([[\script\missions\chrismas\ch_head.lua]]);--
 Include([[\script\event\springfestival07\head.lua]]);
 --ÎäÁÖÁî»î¶¯
 Include( "\\script\\event\\wulinling\\wulinling.lua" )
+Include( "\\script\\event\\nanfangjiefangri\\event.lua" )
 Include("\\script\\event\\tongwar\\head.lua");
 --dinhhq_20110124:Vip acc 2011
 Include("\\script\\vng_event\\vip_account_2011\\npc\\volamtruyennhan.lua")
@@ -26,37 +25,27 @@ function main()
 	tinsert(aryTalk, "<dec><npc>Thêi thÕ lo¹n l¹c, ch­ vŞ nªn gi÷ ®¹o chİnh ph¸i, t¹o phóc chóng sinh. Cã thÕ míi hi väng trë thµnh mét ®¹i hiÖp ®­îc mäi ng­êi ng­ìng mé.");
 	--dinhhq_20110124:Vip acc 2011
 	tbVNG_VipAcc2011_VLTN:addDialog(aryTalk)
-	
+	if ndate >= 2007042800 and ndate <= 2007051324 then
+		tinsert(aryTalk,"Ho¹t ®éng 30-4 vµ Quèc tÕ lao ®éng/nanfangjiefangri_main");
+	end
 	--if (not FALSE(tongwar_checkinphase())) then
-		tinsert(aryTalk, "Vâ L©m §Ö NhÊt Bang/tongWar_Start");
+		--tinsert(aryTalk, "Vâ L©m §Ö NhÊt Bang/tongWar_Start");
 	--end;
-	
-	tinsert(aryTalk, "§i danh nh©n ®­êng/honor_hall_enter");
-	
+	--tinsert(aryTalk, "§i danh nh©n ®­êng/honor_hall_enter");
 	tinsert(aryTalk, "§i Minh NguyÖt trÊn/autumn_enter");
-	
-	--tinsert(aryTalk, "§æi tèng kim chiªu binh lÖnh (25 phóc duyªn)/OnGain_TK");
-
-
-	tinsert(aryTalk, "NhËn ®iÓm phóc duyªn /OnGain_Self");
-
-	
-	tinsert(aryTalk, "NhËn ®iÓm danh väng/W33_prise");
-	
-	tinsert(aryTalk, "KiÓm tra thêi gian tİch lòy Online/OnQueryTime");
-	
+	tinsert(aryTalk, "NhËn ®iÓm phóc duyªn cña b¹n/OnGain_Self");
+	if( GetTeamSize() > 1 ) then
+		tinsert(aryTalk, "NhËn ®iÓm phóc duyªn cña tÊt c¶ thµnh viªn trong nhãm/OnGain_Team");
+	end;
+	tinsert(aryTalk, "NhËn ®iÓm danh väng (ch¬i nhiÒu giê) /W33_prise");
+	tinsert(aryTalk, "Thêi gian tİch lòy ®æi ®iÓm phóc duyªn/OnQueryTime");
 	tinsert(aryTalk, "Liªn quan ®Õn phóc duyªn/OnAbout");
-	
 	tinsert(aryTalk, "Hñy bá /OnCancel");
-	
 	if ( Uworld1000 ==340 ) or ( Uworld1000 == 350 ) then
 		education_wulinmengchuanren();
 		return
 	end;
-	
 	CreateTaskSay(aryTalk);
-	
-	
 end
 
 --ÁìÈ¡Íæ¼Ò±¾ÈËµÄ¸£ÔµµãÊı

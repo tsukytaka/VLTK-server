@@ -5,6 +5,7 @@ IncludeLib("FILESYS");
 Include("\\script\\dailogsys\\dailogsay.lua")
 Include("\\script\\task\\newtask\\newtask_head.lua"); 
 function diadovolam()
+	if (tbItemFeatureConfig:IsEnabled("starter", "quests") ~= 1) then Msg2Player("Chuc nang nay dang tat."); return end
 dofile("script/global/general/thunghiem/diadovolam.lua")
 	local Talk = "C»m nang Æ∆c bi÷t giÛp dﬁch chuy”n nhanh c∏c Æﬁa Æi”m lµm nhi÷m vÙ.\nHoµn thµnh nhi÷m vÙ, ng≠¨i sœ nhÀn Æ≠Óc nh˜ng ph«n th≠Îng x¯ng Æ∏ng."
 	local tb = {

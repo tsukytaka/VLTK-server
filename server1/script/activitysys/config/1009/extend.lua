@@ -95,14 +95,14 @@ function pActivity:UseHatFreedom()
 		end
 	end
 end
---function pActivity:UseHatPeace()
---	local tbAward = %tbAward_Ext["awardnomal"];
---	local nCount = tbVNG_BitTask_Lib:getBitTask(%tbBITTSK_LIMIT_HAT_PEACE_USING)
---	if %tbVNG_BitTask_Lib:isMaxBitTaskValue(%tbBITTSK_LIMIT_HAT_PEACE_USING) == 1 then
---		Msg2Player("Sö dông vËt phÈm ®· ®¹t ®Õn giíi h¹n, kh«ng thÓ sö dông thªm");
---		return
---	end
---	%tbVNG_BitTask_Lib:addTask(%tbBITTSK_LIMIT_HAT_PEACE_USING, 1)	
---	tbAwardTemplet:Give(tbAward, 1 , {%EVENT_LOG_TITLE, "SuDungMuHoaBinh"})
---end
+function pActivity:UseHatPeace()
+	local tbAward = %tbAward_Ext["awardnomal"];
+	local nCount = tbVNG_BitTask_Lib:getBitTask(%tbBITTSK_LIMIT_HAT_PEACE_USING)
+	if %tbVNG_BitTask_Lib:isMaxBitTaskValue(%tbBITTSK_LIMIT_HAT_PEACE_USING) == 1 then
+		Msg2Player("Sö dông vËt phÈm ®· ®¹t ®Õn giíi h¹n, kh«ng thÓ sö dông thªm");
+		return
+	end
+	%tbVNG_BitTask_Lib:addTask(%tbBITTSK_LIMIT_HAT_PEACE_USING, 1)	
+	tbAwardTemplet:Give(tbAward, 1 , {%EVENT_LOG_TITLE, "SuDungMuHoaBinh"})
+end
 

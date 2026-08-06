@@ -8,10 +8,10 @@ TASK_LEVEL = 50						--µ»º∂œﬁ÷∆
 TASK_DATE_END = 07092324-- π”√Ωÿ÷¡ ±º‰
 function main(sel)
 	nDate = tonumber(GetLocalDate("%y%m%d%H"))
-	--if TASK_DATE_END < nDate then
-	--	Talk(1,"","ThÀt Æ∏ng ti’c, vÀt ph»m nµy Æ∑ qu∏ hπn sˆ dÙng.")
-	--	return 0
-	--end
+	if TASK_DATE_END < nDate then
+		Talk(1,"","ThÀt Æ∏ng ti’c, vÀt ph»m nµy Æ∑ qu∏ hπn sˆ dÙng.")
+		return 0
+	end
 	if GetLevel() < TASK_LEVEL then
 		Talk(1,"","Chÿ c„ ng≠Íi ch¨i c p tı 50 trÎ l™n mÌi c„ th” sˆ dÙng huy ch≠¨ng QuËc Kh∏nh.")
 		return 1

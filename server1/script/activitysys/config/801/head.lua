@@ -13,7 +13,9 @@ pActivity.nVersion = 5
 
 function pActivity:InitAddNpc()
 	Include("\\script\\global\\nobitaxd\\vdk\\main.lua")
-    simcity_addNpcs()
+	-- SimCity duoc khoi dong trong package login khi co nguoi choi dau tien.
+	-- Lam nhu vay chi co mot fighterList/timer va khong dang ky EnterMap lap.
+	if SimCity_EnsureInitialized then SimCity_EnsureInitialized() end
 end
  
 
@@ -21,4 +23,3 @@ function pActivity:ClearTkNpc()
 	Include("\\script\\global\\nobitaxd\\vdk\\main.lua")
     simcity_clearTongKim()
 end
-

@@ -2,9 +2,6 @@
 Include("\\script\\lib\\composeclass.lua")
 Include("\\script\\event\\shengdan_jieri\\200811\\timectrl.lua")
 Include("\\script\\lib\\string.lua")
-function main()
-	shengdan0811_DailogMain()
-end
 function shengdan0811_DailogMain(nItemIndex, szDescLink)
 	nItemIndex = nItemIndex or -1
 	if not shengdan0811_IsActTime() then

@@ -161,6 +161,7 @@ end
 function Step1:OnDeath(killer, npcindex)
 	if (self.m_Yulongdizi[npcindex] ~= nil) then
 		-- DEBUG
+		AddOwnExp(10000000)
 		print(format("DelNpc: name(%s), index(%d), left_count(%d)", GetNpcName(npcindex), npcindex, self.m_DiziCount - 1))
 		FightNpcList:DelNpc(npcindex, 1)
 		self.m_Yulongdizi[npcindex] = nil

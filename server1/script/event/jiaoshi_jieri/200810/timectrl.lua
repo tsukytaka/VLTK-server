@@ -1,7 +1,7 @@
 --2008年11月14日至 2008年11月23日24点
 
 jiaoshi0810_StartTime = 081114
-jiaoshi0810_EndTime = 501123
+jiaoshi0810_EndTime = 201123
 
 function jiaoshi0810_IsActTime()
 	local nDate = tonumber(GetLocalDate("%y%m%d"))

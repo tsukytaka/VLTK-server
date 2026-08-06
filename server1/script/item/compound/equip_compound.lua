@@ -2,17 +2,13 @@
 -- Fanghao Wu 2005.1.15
 
 Include( "\\script\\item\\compound\\compound_header.lua" );
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 -- [ºÏ³É]·ÑÓÃ
 COMPOUND_COST = 10000;
 
 
 -- ³õÊ¼»¯ÊıÖµ
 function initData()
-	if (CFG_TrangBiHuyenTinh	== 0) then
-		do return end
-	end
 	g_nEquipVer = 0;
 	g_nEquipRandSeed = 0;
 	g_nEquipGenre = 0;
@@ -25,17 +21,17 @@ end
 
 -- »ñÈ¡[ºÏ³É]²Ù×÷²ÎÊı£¨ÓÃÓÚ´«µİ¸øITEM_CalcItemValue¼ÆËãÎïÆ·¼ÛÖµÁ¿£©
 function getCompoundParam()
-	if (CFG_TrangBiHuyenTinh	== 0) then
-		do return end
-	end
 	return "EQUIP_COMPOUND";
 end
 
 -- Ğ£ÑéÔ­ÁÏÊÇ·ñ·ûºÏ[ºÏ³É]¹æÔò£¨Í¬Ê±´æ´¢Ò»Ğ©Ô­ÁÏÊı¾İ£©
 function verifySrcItems( arynNecessaryItemIdx, arynAlternativeItemIdx )
-	if (CFG_TrangBiHuyenTinh	== 0) then
-		do return end
+	if AllowCheTaoDoTim ~= 1 then
+		Say("<color=orange>Thî rÌn: <color>HiÖn t¹i tİnh n¨ng chÕ t¹o ®å tİm ch­a më,  t¹i h¹ kh«ng d¸m kh¸ng lÖnh, phiÒn ®¹i hiÖp quay l¹i sau!")
+		--Msg2Player("<color=yellow>HiÖn t¹i tİnh n¨ng chÕ t¹o ®å tİm ch­a më, t¹i h¹ kh«ng d¸m kh¸ng lÖnh, phiÒn ®¹i hiÖp quay l¹i sau!")
+		return RESULT_UNKNOWN
 	end
+
 	local nNecessaryItemCount = getn( arynNecessaryItemIdx );
 	for i = 1, nNecessaryItemCount do
 		local nGenre, nDetailType, nParticular, nLevel, nSeries, nLuck = GetItemProp( arynNecessaryItemIdx[i] );
@@ -56,9 +52,10 @@ end
 
 -- Éú³ÉÄ¿±êÎïÆ·ĞÅÏ¢
 function genDesItemsInfo( arynNecessaryItemIdx )
-	if (CFG_TrangBiHuyenTinh	== 0) then
-		do return end
-	end
+	 if AllowCheTaoDoTim ~= 1 then
+		 Say("<color=orange>Thî rÌn: <color>HiÖn t¹i tİnh n¨ng chÕ t¹o ®å tİm ch­a më, t¹i h¹ kh«ng d¸m kh¸ng lÖnh, phiÒn ®¹i hiÖp quay l¹i sau!")
+		 return RESULT_FAIL
+	 end
 	local aryDesItemInfo = {};
 	for i = 1, 5 do
 		local arynMagLvl = { 0, 0, 0, 0, 0, 0 };
@@ -72,8 +69,6 @@ end
 
 -- Íê³ÉÑ¡ÔñÄ¿±êÎïÆ·¡¢É¾³ıÔ­ÁÏµÈÊÕÎ²²Ù×÷
 function finalCompound( arynNecessaryItemIdx, arynAlternativeItemIdx, nSrcItemValSum, aryDesItemInfo, arydDesItemVal )
-	if (CFG_TrangBiHuyenTinh	== 0) then
-		do return end
-	end
+	if AllowCheTaoDoTim ~= 1 then return RESULT_FAIL end
 	return defFinalCompound( arynNecessaryItemIdx, arynAlternativeItemIdx, nSrcItemValSum, aryDesItemInfo, arydDesItemVal );
 end

@@ -1,10 +1,4 @@
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua");
-
 function main()
-	if (CFG_GreatNight == 0) then
-		Say("Hi÷n tπi t›nh n®ng nµy ch≠a mÎ ! ! !", 0)
-		return
-	end
 	local nPlayerLevel = GetLevel();
 	local nNpcIdx = GetLastDiagNpc();
 	

@@ -17,10 +17,10 @@ TSK_TOUSHI_FLAG				=	1881						-- ¡°´øÒÕÍ¶Ê¦¡±ÍË³öÃÅÅÉµÄ±ê¼Ç
 TSK_TOUSHI_COUNT			=	1883						-- ¡°´øÒÕÍ¶Ê¦¡±×ªÖ°µÄ´ÎÊý
 
 function main(nItemIdx)
-	if (gb_GetModule("SWITH_DAIYITOUSHI") ~= 1) then
-		Say("Xin lçi, c«ng n¨ng nµy t¹m thêi ®· bÞ ®ãng, thêi gian më l¹i sÏ ®ùoc th«ng b¸o sau ", 0);
-		return 1;
-	end
+--	if (gb_GetModule("SWITH_DAIYITOUSHI") ~= 1) then
+--		Say("Xin lçi, c«ng n¨ng nµy t¹m thêi ®· bÞ ®ãng, thêi gian më l¹i sÏ ®ùoc th«ng b¸o sau ", 0);
+--		return 1;
+--	end
 	
 	local nValue	= GetTask(TSK_ZHENPAILINGDAN_USECNT);
 	local nTimes = GetByte(nValue, 1);

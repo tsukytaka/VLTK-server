@@ -4,17 +4,16 @@
 --by fmz
 --ÎäÁÖÊ¹Õß,Ô½ÄÏ2007¹úÇì»î¶¯
 --modify by Ð¡ÀË¶à¶à
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
-ACT2YEARS_YN_CELLPAPER_ID = 1436        --²£Á§Ö½µÄID
-ACT2YEARS_YN_BOWKNOT_ID = 1437          --ºûµû½áµÄID
-ACT2YEARS_YN_ROSE_ID =  1438            --Ãµ¹å»¨µÄID
-ACT2YEARS_YN_WHITEBOX_ID =  1439        --°×É«ÀñºÐ
-ACT2YEARS_YN_BLUEBOX_ID =   1441        --À¶É«ÀñºÐ
-ACT2YEARS_YN_YELLOWBOX_ID = 1440        --»ÆÉ«ÀñºÐ
-ACT2YEARS_YN_NORMALCAKE_ID =1442        --ÔÂ±ý
-ACT2YEARS_YN_MIDCAKE_ID = 1443          --ÖÐÐÍÔÂ±ý
-ACT2YEARS_YN_SPECIALCAKE_ID = 1444      --ÌØÊâÔÂ±ý
+--ACT2YEARS_YN_CELLPAPER_ID = 1436        --²£Á§Ö½µÄID
+--ACT2YEARS_YN_BOWKNOT_ID = 1437          --ºûµû½áµÄID
+--ACT2YEARS_YN_ROSE_ID =  1438            --Ãµ¹å»¨µÄID
+--ACT2YEARS_YN_WHITEBOX_ID =  1439        --°×É«ÀñºÐ
+--ACT2YEARS_YN_BLUEBOX_ID =   1441        --À¶É«ÀñºÐ
+--ACT2YEARS_YN_YELLOWBOX_ID = 1440        --»ÆÉ«ÀñºÐ
+--ACT2YEARS_YN_NORMALCAKE_ID =1442        --ÔÂ±ý
+--ACT2YEARS_YN_MIDCAKE_ID = 1443          --ÖÐÐÍÔÂ±ý
+--ACT2YEARS_YN_SPECIALCAKE_ID = 1444      --ÌØÊâÔÂ±ý
 ACT2YEARS_YN_BEGINTIME = 070825     --»î¶¯¿ªÊ¼ÈÕÆÚ
 ACT2YEARS_YN_ENDTIME = 120909       --»î¶¯½áÊøÈÕÆÚ
 --
@@ -35,39 +34,20 @@ end
 --
 function main()
     --if Act2Years2007_CheckInTime() == 1 then
-        --Say("NhiÖt liÖt chóc mõng sinh nhËt thø 2 cña Vâ L©m TruyÒn Kú<enter>Tõ ngµy 11 th¸ng 6 n¨m 2007 ®Õn ngµy 11 th¸ng 7 n¨m 2007, sÏ cã nh÷ng b«ng hång ®Ñp nhÊt vµ th¬m nhÊt ë s«ng hå, nÕu b¹n cã thÓ thu thËp ®­îc mét sè, t«i sÏ tÆng b¹n mét mãn quµ phong phó.",
+        --Say("ÈÈÁÒ×£ºØÎäÁÖ´«ÆæÁ½ÖÜÄêµÄÉúÈÕ¡£<enter>´Ó2007Äê06ÔÂ11ÈÕÖÁ2007Äê07ÔÂ11ÈÕÆÚ¼ä½«»áÔÚ½­ºþÉÏ³öÏÖ×îÃÀÀöºÍ·Ò·¼µÄÃµ¹å»¨£¬Èç¹ûÄãÄÜÊÕ¼¯µ½Ò»Ð©£¬ÎÒ½«ÓÐºñÀñÏàÔù¡£",
         --5,"¶Ò»»°×É«ÀñÆ·ºÐ/WLSZ_ExcWhiteBox","¶Ò»»À¶É«ÀñÆ·ºÐ/WLSZ_ExcBlueBox","¶Ò»»»ÆÉ«ÀñÆ·ºÐ/WLSZ_ExcYellowBox",
         --"ÏêÏ¸ËµÃ÷/WLSZ_ExcDetail","½áÊø¶Ô»°/WLSZ_End")
-    --if Act2Years2007_CheckInTime() == 1 then
-    		--Describe("Sø gi¶ vâ l©m: NhiÖt liÖt chóc mõng ngµy Quèc Kh¸nh. Trong kho¶ng thêi gian tõ <color=red>25-08-2007<color> ®Õn <color=red>09-09-2007<color>, ng­êi ch¬i cã thÓ ®em 10 <color=yellow>Ng«i sao chiÕn th¾ng<color> vµ <color=yellow>15 v¹n l­îng<color> ®Ó ®æi lÊy  <color=yellow>Hép quµ Quèc Kh¸nh<color>.<color=yellow>Bªn trong hép quµ Quèc Kh¸nh<color> cã chøa Huy ch­¬ng Quèc Kh¸nh vµ c¸c m¶nh b¶n ®å. NÕu thu thËp ®ñ 12 m¶nh b¶n ®å kh¸c nhau sÏ cã c¬ héi <color=yellow>më réng r­¬ng thø 3<color>.",3,
-    				--"Ta muèn ®æi hép quµ Quèc Kh¸nh/GuoQing_Give",
-    				--"C¸ch ®æi hép quµ Quèc Kh¸nh/guoQing_About",
-    				--"BiÕt råi/no"
-    			--)
-	if (CFG_Act2Years2007	== 1) and (CFG_GUOQING2007	== 1) then
-		Say("Ta chÝnh lµ sø gi¶ vâ l©m. Sù kiÖn sinh nhËt vµ quèc kh¸nh kh«ng ®­îc më cïng lóc",0)
-	elseif (CFG_Act2Years2007	== 1) then
-		Act2Years2007()
-	elseif (CFG_GUOQING2007	== 1) then
-		GUOQING2007()
-	else		
-		Say("Ta chÝnh lµ sø gi¶ vâ l©m.",0)
-	end
+    if Act2Years2007_CheckInTime() == 1 then
+    		Describe("Sø gi¶ vâ l©m: NhiÖt liÖt chóc mõng ngµy Quèc Kh¸nh. Trong kho¶ng thêi gian tõ <color=red>25-08-2007<color> ®Õn <color=red>09-09-2007<color>, ng­êi ch¬i cã thÓ ®em 10 <color=yellow>Ng«i sao chiÕn th¾ng<color> vµ <color=yellow>15 v¹n l­îng<color> ®Ó ®æi lÊy  <color=yellow>Hép quµ Quèc Kh¸nh<color>.<color=yellow>Bªn trong hép quµ Quèc Kh¸nh<color> cã chøa Huy ch­¬ng Quèc Kh¸nh vµ c¸c m¶nh b¶n ®å. NÕu thu thËp ®ñ 12 m¶nh b¶n ®å kh¸c nhau sÏ cã c¬ héi <color=yellow>më réng r­¬ng thø 3<color>.",3,
+    				"Ta muèn ®æi hép quµ Quèc Kh¸nh/GuoQing_Give",
+    				"C¸ch ®æi hép quµ Quèc Kh¸nh/guoQing_About",
+    				"BiÕt råi/no"
+    			)
+    else		
+        Say("Ta chÝnh lµ sø gi¶ vâ l©m.",0)
+    end
 end
 --
--- Mr Loc - 08/03/2023
-function Act2Years2007()
-	Say("NhiÖt liÖt chóc mõng sinh nhËt thø 2 cña Vâ L©m TruyÒn Kú<enter>Tõ ngµy 11 th¸ng 6 n¨m 2007 ®Õn ngµy 11 th¸ng 7 n¨m 2007, sÏ cã nh÷ng b«ng hång ®Ñp nhÊt vµ th¬m nhÊt ë s«ng hå, nÕu b¹n cã thÓ thu thËp ®­îc mét sè, t«i sÏ tÆng b¹n mét mãn quµ phong phó.",
-	5,"§æi hép quµ mµu tr¾ng/WLSZ_ExcWhiteBox","§æi hép quµ mµu xanh/WLSZ_ExcBlueBox","§æi hép quµ mµu vµng/WLSZ_ExcYellowBox",
-	"T×m hiÓu ho¹t ®éng/WLSZ_ExcDetail","KÕt thóc ®èi tho¹i/WLSZ_End")
-end
-function GUOQING2007()
-	Describe("Sø gi¶ vâ l©m: NhiÖt liÖt chóc mõng ngµy Quèc Kh¸nh. Trong kho¶ng thêi gian tõ <color=red>25-08-2007<color> ®Õn <color=red>09-09-2007<color>, ng­êi ch¬i cã thÓ ®em 10 <color=yellow>Ng«i sao chiÕn th¾ng<color> vµ <color=yellow>15 v¹n l­îng<color> ®Ó ®æi lÊy  <color=yellow>Hép quµ Quèc Kh¸nh<color>.<color=yellow>Bªn trong hép quµ Quèc Kh¸nh<color> cã chøa Huy ch­¬ng Quèc Kh¸nh vµ c¸c m¶nh b¶n ®å. NÕu thu thËp ®ñ 12 m¶nh b¶n ®å kh¸c nhau sÏ cã c¬ héi <color=yellow>më réng r­¬ng thø 3<color>.",3,
-		"Ta muèn ®æi hép quµ Quèc Kh¸nh/GuoQing_Give",
-		"C¸ch ®æi hép quµ Quèc Kh¸nh/guoQing_About",
-		"BiÕt råi/no")
-end
-
 function WLSZ_End()    
 end
 --

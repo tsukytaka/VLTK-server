@@ -1,4 +1,4 @@
--- Ò°ÛÅÈÎÎñÁ´½Å±¾
+-- KŞch b¶n: Chuæi nhiÖm vô hoang d· (D· TÈu) - Editor by AloneScript
 -- Edited by peres
 -- 2004/12/24 Ê¥µ®½ÚÇ°Ò¹
 
@@ -11,45 +11,21 @@ Include("\\script\\lib\\awardtemplet.lua")
 Include("\\script\\lib\\log.lua")
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
-Include("\\script\\tasktrace\\tasktrace.lua")
-
-
-MOC10_DATE_TASKID = 2060
-MOC20_DATE_TASKID = 2061
-MOC30_DATE_TASKID = 2062
-MOC40_DATE_TASKID = 2063
-DAILY_STREAK_TASKID = 2064
-DAILY_QUOTA_CAP_TASKID = 2065   
-
+Include("\\script\\global\\mel\\feature\\libs\\head.lua")
+Include("\\script\\global\\mel\\mission\\datau.lua")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
+-------------PhÇn Th­ëng Ho¹t §éng-----------------------
+Include("\\script\\global\\pgaming\\configserver\\phanthuonghoatdong.lua")
+---------------------------------------------
+--Storm ÕæÕıµÄ½ÓĞÂÈÎÎñ
 function storm_goon_start(gameid, b_nonext)
-    local nNum = GetTask(ID_TASKLINK_LIMITNUM)
-    nNum = nNum + 1
-    SetTask(ID_TASKLINK_LIMITNUM, nNum)
-    if b_nonext then return end    
-    tl_dealtask()      
-    if Loai_NV_Muon_Nhan then
-        local tbAllowed = {}
-        if type(Loai_NV_Muon_Nhan) == "table" then
-            for _, v in Loai_NV_Muon_Nhan do
-                if v >= 1 and v <= 6 then
-                    tbAllowed[v] = 1
-                end
-            end
-        elseif type(Loai_NV_Muon_Nhan) == "number" 
-            and Loai_NV_Muon_Nhan >= 1 and Loai_NV_Muon_Nhan <= 5 then
-            tbAllowed[Loai_NV_Muon_Nhan] = 1
-        end        
-        if next(tbAllowed) then
-            local i = 0
-            while not tbAllowed[tl_getplayertasktype()] and i < 20 do
-                tl_dealtask()
-                i = i + 1
-            end
-        end
-    end
-    
-    Task_MainDialog()
+	local nNum     = GetTask(ID_TASKLINK_LIMITNUM);
+		-- Ã¿ÌìµÄÏŞÖÆ´ÎÊı +1
+		nNum = nNum + 1;
+		SetTask(ID_TASKLINK_LIMITNUM, nNum);
+	if b_nonext then return end
+	tl_dealtask()
+	Task_MainDialog()
 end
 
 -- ¼ì²âÈÎÎñÊÇ·ñÒÑ¾­¹ıÁËÃ¿ÌìµÄÏŞÖÆ
@@ -65,18 +41,12 @@ local nNum     = GetTask(ID_TASKLINK_LIMITNUM);
 		SetTask(ID_TASKLINK_LIMITDATE, tonumber(GetLocalDate("%y%m%d")) );
 		SetTask(ID_TASKLINK_LIMITNUM, 0);
 		SetTask(ID_TASKLINK_LIMITCancelCount, 0);
-		SetTask(DAILY_STREAK_TASKID, 0); 
-		SetTask(DAILY_QUOTA_CAP_TASKID, SLNV_DaTau);
 		return 1;
 		
-	else		
-		local nCap = tonumber(GetTask(DAILY_QUOTA_CAP_TASKID)) or 0;
-		if nCap < SLNV_DaTau then nCap = SLNV_DaTau end
-		
-		if nNum >= nCap then
-			Say("Ha! Ha! VŞ <color=yellow>"..GetPlayerSex().."<color> nµy! H«m nay ®· lµm ®ñ "..nCap.." nhiÖm vô råi! Ngµy mai trë l¹i nhĞ!", 3,
-				"Ta muèn nép KNB ®Ó cã thªm nhiÖm vô/Reset_nNum",
-				"KÕt thóc ®èi tho¹i/Task_Wait")
+	else
+		-- 40 ´ÎµÄÏŞÖÆ
+		if (nNum >= So_Lan_Da_Tau_Trong_Ngay) then
+			Say("Ha! Ha! Ng­¬i thËt sù rÊt cã tµi n¨ng! H«m nay ng­¬i ®· lµm ®ñ "..So_Lan_Da_Tau_Trong_Ngay.." nhiÖm vô råi, t¹m thêi h·y nghÜ ng¬i ®i! Ngµy mai trë l¹i nhĞ!", 0);
 			return 0;
 		end;
 		
@@ -85,36 +55,16 @@ local nNum     = GetTask(ID_TASKLINK_LIMITNUM);
 	end;
 	
 end;
-
-function Reset_nNum()
-	if (GetItemCountEx(343)>=1) then 
-		ConsumeEquiproomItem(1, 4, 343, 1, 1)
-		
-		local nNowDate = tonumber(GetLocalDate("%y%m%d"));
-		if nNowDate ~= GetTask(ID_TASKLINK_LIMITDATE) then
-			SetTask(ID_TASKLINK_LIMITDATE, nNowDate);
-			SetTask(ID_TASKLINK_LIMITNUM, 0);
-			SetTask(ID_TASKLINK_LIMITCancelCount, 0);
-			SetTask(DAILY_STREAK_TASKID, 0);
-			SetTask(DAILY_QUOTA_CAP_TASKID, SLNV_DaTau);
-			SetTask(MOC10_DATE_TASKID, 0);
-			SetTask(MOC20_DATE_TASKID, 0);
-			SetTask(MOC30_DATE_TASKID, 0);
-			SetTask(MOC40_DATE_TASKID, 0);
-		end
-		
-		local nCap = tonumber(GetTask(DAILY_QUOTA_CAP_TASKID)) or 0;
-		if nCap < SLNV_DaTau then nCap = SLNV_DaTau end
-		nCap = nCap + SLNV_DaTau;
-		SetTask(DAILY_QUOTA_CAP_TASKID, nCap);
-		
-		Msg2Player("<color=green>B¹n ®· n¹p 1 Kim Nguyªn B¶o. H«m nay cã thÓ lµm tèi ®a <color=yellow>"..nCap.."<color=green> nhiÖm vô D· TÈu.<color>");
-		Msg2Player("<color=yellow>L­u ı: PhÇn th­ëng nhiÖm vô mèc 10/20/30/40 chØ nhËn ®­îc 1 lÇn/ngµy. NÕu h«m nay b¹n ®· nhËn mèc nµo råi th× sÏ kh«ng nhËn l¹i mèc ®ã n÷a.<color>");
-	else
-	  	Talk(1,"","D· TÈu: CÇn mét <color=yellow>Kim Nguyªn B¶o<color> ®Ó ®æi. §¹i hiÖp h×nh nh­ ch­a ®ñ Kim Nguyªn B¶o!")
-	end
-end;
 	
+	
+--Task_BuyGoods = {}
+--Task_FindGoods = {}
+--Task_ShowGoods = {}
+--Task_FindMaps = {}
+--Task_UpGround = {}
+--Task_WorldMaps = {}
+--Task_Level = {}
+--Task_MainLevelRate = {}
 
 -- ¹¹ÔìÈÎÎñÄÚ´æ±äÁ¿
 Task_BuyGoods = AssignValue(Task_BuyGoods,TL_BUYGOODS)
@@ -123,18 +73,13 @@ Task_ShowGoods = AssignValue(Task_ShowGoods,TL_SHOWGOODS)
 Task_FindMaps = AssignValue(Task_FindMaps,TL_FINDMAPS)
 Task_UpGround = AssignValue(Task_UpGround,TL_UPGROUND)
 Task_WorldMaps = AssignValue(Task_WorldMaps,TL_WORLDMAPS)
-
 Task_MainTaskLink = AssignValue_TaskLink(Task_MainTaskLink,TL_LEVELLINK)
 Task_MainLevelRate = AssignValue_TaskRate(Task_MainLevelRate,TL_MAINTASKLEVEL)
-
 -- ¹¹Ôì½±ÀøÄÚ´æ±äÁ¿
 Task_AwardBasic = AssignValue_Award(Task_AwardBasic,TL_AWARDBASIC)
-
 -- ¹¹ÔìÍê³É´ÎÊıµÄ½±Àø
 Task_AwardLink = AssignValue_LinkAward(TL_AWARDLINK)
-
 Task_AwardLoop = AssignValue_Award(Task_AwardLoop,TL_AWARDLOOP)
-
 -- ¹¹Ôì¶Ô»°ÄÚÈİÄÚ´æ±äÁ¿
 Task_TalkGoods = AssignValue_TaskTalk(Task_TalkGoods,TL_TASKGOODSTALK)
 Task_TalkBuy = AssignValue_TaskTalk(Task_TalkBuy,TL_TASKBUYTALK)
@@ -143,26 +88,26 @@ Task_TalkFind = AssignValue_TaskTalk(Task_TalkFind,TL_TASKFINDMAPS)
 Task_TalkUp = AssignValue_TaskTalk(Task_TalkUp,TL_TASKUPGROUNDTALK)
 Task_TalkWorld = AssignValue_TaskTalk(Task_TalkWorld,TL_TASKWORLDTALK)
 
-
-function Task_NewVersionAward()
-	local nNum = tonumber(GetTask(ID_TASKLINK_LIMITNUM)) or 0;
-	local nCancelNum = tonumber(GetTask(ID_TASKLINK_LIMITCancelCount)) or 0;
-	G_ACTIVITY:OnMessage("FinishYesou", nNum, nCancelNum);
-end
-
-
 function main()
-
+dofile("script/global/seasonnpc.lua")
+	if NPCDaTau ~= 1 then
+		return Msg2Player("<color=yellow>Tİnh n¨ng nµy ®· t¹m ®ãng, h·y quay l¹i sau!")
+	end
 	--ÓĞÓÛÀ¼½Ú»î¶¯ÆÚ¼ä¶Ô»°¡£
-	if (CFG_menglan_2006 == 1) then
-		local tab_Content = {
-			"Xem cßn nhiÖm vô g× ®Ó lµm kh«ng/tasklink_entence",
-		}
-		tinsert(tab_Content, "Ta muèn lµm mét vßng Liªn Hoa/menglanjie");
-		tinsert(tab_Content, "Rêi khái/Task_Wait");
-		Say("MÊy n¨m nay chiÕn tranh triÒn miªn, d©n t×nh thèng khæ. Ph­¬ng tr­îng ThiÕu L©m tù muèn tæ chøc thä trai mõng LÔ Vu Lan ®Ó mäi ng­êi h­ëng chót gi©y phót yªn b×nh", getn(tab_Content), tab_Content);
-		return
-	end;
+	-- local nDate = tonumber(GetLocalDate("%y%m%d"));
+	-- if (nDate >= 60808 and nDate <= 60815) then
+		-- local tab_Content = {
+			-- "Xem cßn nhiÖm vô g× ®Ó lµm kh«ng/tasklink_entence",
+		-- }
+		-- tinsert(tab_Content, "Ta muèn lµm mét vßng Liªn Hoa/menglanjie");
+		-- tinsert(tab_Content, "Rêi khái/Task_Wait");
+		-- Say("MÊy n¨m nay chiÕn tranh triÒn miªn, d©n t×nh thèng khæ. Ph­¬ng tr­îng ThiÕu L©m tù muèn tæ chøc thä trai mõng LÔ Vu Lan ®Ó mäi ng­êi h­ëng chót gi©y phót yªn b×nh", getn(tab_Content), tab_Content);
+		-- return
+	-- end;
+	
+	if (GetLevel() < Dang_Cap_Lam_Co_The_Lam_NV_Da_Tau) then
+		Talk(1, "", "§¼ng cÊp nh©n vËt trªn "..Dang_Cap_Lam_Co_The_Lam_NV_Da_Tau.." cÊp míi cã thÓ lµm nhiÖm vô D· TÈu")
+	return end
 	
 	tasklink_entence();
 end;
@@ -174,10 +119,10 @@ function menglanjie()
 	end;
 	local tab_Content = {
 		"Ta muèn kÕt vßng Kim Liªn Hoa [cÇn 9 Kim Liªn Hoa]/#process(1)",
-		"Ta muèn kÕt vßng Méc Liªn Hoa [cÇn 9 Méc Liªn Hoa]/#process(2)",
-		"Ta muèn kÕt vßng Thñy Liªn Hoa [cÇn 9 Thñy Liªn Hoa]/#process(3)",
-		"Ta muèn kÕt vßng Háa Liªn Hoa [cÇn 9 Háa Liªn Hoa]/#process(4)",
-		"Ta muèn kÕt vßng Thæ Liªn Hoa [cÇn 9 Thæ Liªn Hoa]/#process(5)",
+		"Ta muèn hîp thµnh vßng Méc Liªn Hoa [cÇn 9 Méc Liªn Hoa]/#process(2)",
+		"Ta muèn hîp thµnh vßng Thñy Liªn Hoa [cÇn 9 Thñy Liªn Hoa]/#process(3)",
+		"Ta muèn hîp thµnh vßng Háa Liªn Hoa [cÇn 9 Háa Liªn Hoa]/#process(4)",
+		"Ta muèn hîp thµnh vßng Thæ Liªn Hoa [cÇn 9 Thæ Liªn Hoa]/#process(5)",
 		"ChØ ®Õn th¨m «ng chót th«i!/Task_Wait"
 	}
 	Say("ChØ cÇn ng­¬i ®i thu thËp ®ñ sè Liªn Hoa vµ <color=yellow>"..MAKING_COST.."<color> l­îng ta sÏ gióp ng­¬i kÕt vßng hoa tuyÖt ®Ñp. Nh­ng l­u ı: mçi ngµy chØ cã thÓ kÕt ®­îc 2 vßng Liªn Hoa cïng thuéc tİnh mµ th«i.", getn(tab_Content), tab_Content);
@@ -213,15 +158,13 @@ end;
 
 function make_round(nIdx)
 	if (GetCash() < MAKING_COST) then
-		Say("Xin t×m ®ñ 1 v¹n l­îng råi h·y quay l¹i! Ta ë ®©y chê!", 1, "§­îc th«i! Ta ®i lÊy thªm tiÒn!/Task_Wait");
-		return
-	end;
+		Say("Xin t×m ®ñ 10000 l­îng råi h·y quay l¹i! Ta ë ®©y chê!", 1, "§­îc th«i! Ta ®i lÊy thªm tiÒn!/Task_Wait");
+	return end;
 	
 	local nCount = CalcEquiproomItemCount(6,1,tab_Flower[nIdx][1],-1);
 	if (nCount < 9) then
 		Say("Ng­¬i h×nh nh­ ch­a ®ñ <color=yellow>"..tab_Flower[nIdx][2].." Liªn Hoa<color=yellow>. Ch­a ®ñ 9 <color=yellow>"..tab_Flower[nIdx][2].." Liªn Hoa<color> th× ta kh«ng thÓ gióp ng­¬i kÕt vßng "..tab_Flower[nIdx][2].." Liªn Hoa hoµn", 1, "§Ó ta ®i chuÈn bŞ ®·!/Task_Wait");
-		return
-	end;
+	return end;
 	
 	local nDate = tonumber(GetLocalDate("%y%m%d"));
 	if (nDate ~= GetTask(tab_Flower[nIdx][4])) then
@@ -232,8 +175,7 @@ function make_round(nIdx)
 	local nTimes = GetTask(tab_Flower[nIdx][5]);
 	if (nTimes >= 2) then
 		Say(tab_Flower[nIdx][2].."H«m nay ®· kÕt thµnh c«ng 2 vßng råi! Mai h·y ®Õn nhĞ!", 0)
-		return
-	end;
+	return end;
 	
 	Pay(MAKING_COST);
 	ConsumeEquiproomItem(9, 6, 1, tab_Flower[nIdx][1], -1);
@@ -245,11 +187,6 @@ end;
     
 -- ÈÎÎñÁ´µÄÈë¿Ú
 function tasklink_entence()
-	local	nlv	=	Level_DaTau
-	if GetLevel() < nlv then
-		Say("H·y luyÖn ®Õn cÊp "..nlv.." råi h·y ®Õn t×m ta.",0);
-		return
-	end
 
 _TaskLinkDebug() -- ¶ÔÓÚÈÎÎñÁ´ÎŞ·¨½øĞĞÏÂÈ¥µÄ BUG ĞŞ¸´
 
@@ -285,25 +222,22 @@ end
 	end
 
 	if (tl_gettaskcourse() == 0) then
-		-- Èç¹û»¹Ã»ÓĞ¿ªÊ¼Ò°ÛÅµÄÈÎÎñÁ´µÄ»°
-		Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy xem ra ®· b«n ba giang hå ®­îc mét thêi gian dµi råi nhØ, cã muèn tham gia kh¶o nghiÖm nhiÖm vô liªn tôc cña ta kh«ng?",3,"§­îc th«i! Ta kh«ng tin cã nhiÖm vô nµo lµm khã dÔ ®­îc ta/Task_Confirm","Ta muèn biÕt kh¶o nghiÖm cña ng­¬i nãi cã néi dung ra sao/Task_Info","Ta bËn råi, kh«ng r¶nh ngåi t¸n gÉu víi «ng/Task_Exit");
-
+	local szTitle ="<npc>VŞ "..GetPlayerSex().."nµy xem ra ®· b«n ba giang hå ®­îc mét thêi gian dµi råi nhØ, cã muèn tham gia kh¶o nghiÖm nhiÖm vô liªn tôc cña ta kh«ng?"
+	local tbOpt =
+	{		
+		{"§­îc th«i! Ta kh«ng tin cã nhiÖm vô nµo lµm khã dÔ ®­îc ta.",Task_Confirm},
+		{"Ta muèn biÕt kh¶o nghiÖm cña ng­¬i nãi cã néi dung ra sao.",Task_Info},
+		{"Ta bËn råi, kh«ng r¶nh ngåi t¸n gÉu víi «ng.",Task_Exit},
+	}
+	CreateNewSayEx(szTitle, tbOpt)
 end
 	
 	if (tl_gettaskcourse() == 3) then
-
 		-- ¼ì²âÊÇ·ñ³¬¹ıÃ¿ÌìµÄÏŞÖÆ
 		if checkTask_Limit()~=1 then return end;
-	
 		myCountLinks = tl_counttasklinknum(2)
 		myCountTimes = tl_counttasklinknum(1)
-		
-		local nCap = tonumber(GetTask(DAILY_QUOTA_CAP_TASKID)) or SLNV_DaTau
-		if nCap < SLNV_DaTau then nCap = SLNV_DaTau end
-		local nLeft = nCap - GetTask(ID_TASKLINK_LIMITNUM)
-		if nLeft < 0 then nLeft = 0 end
-		
-		Say("<enter>VŞ <color=yellow>"..GetPlayerSex().."<color> nµy ®· hoµn thµnh nhiÖm vô thø <color=yellow>"..myCountTimes.."<color>. Ngµy h«m nay cã thÓ lµm <color=yellow>"..nLeft.."<color> nhiÖm vô n÷a! Ng­¬i cã muèn lµm n÷a kh«ng?",3,"§­¬ng nhiªn, mau cho ta biÕt nhiÖm vô tiÕp theo lµ g× /Task_TaskProcess","Ta muèn biÕt tİch lòy hiÖn t¹i ra sao/Task_ProcessInfo","§Ó ta nghØ ng¬i mét l¸t ®·! Ta bËn råi/Task_Wait");
+		Say("<color=green>D· TÈu:<color><enter>VŞ "..GetPlayerSex().." nµy ®· hoµn thµnh tÊt c¶ ®­îc <color=yellow>"..myCountTimes.."<color> nhiÖm vô.<enter>Ngµy h«m nay cã thÓ thùc hiÖn thªm<color=yellow> "..(So_Lan_Da_Tau_Trong_Ngay - GetTask(ID_TASKLINK_LIMITNUM)).."<color> nhiÖm vô n÷a.<enter>Ng­¬i cã muèn lµm n÷a kh«ng?",2,"§­¬ng nhiªn, mau cho ta biÕt nhiÖm vô tiÕp theo lµ g×/Task_TaskProcess","§Ó ta nghØ ng¬i mét l¸t ®·! Ta bËn råi/Task_Wait")
 	elseif (tl_gettaskcourse() == 1) then
 		Task_MainDialog()
 	end
@@ -326,24 +260,8 @@ nt_setTask(DEBUG_TASKVALUE, 0);
 
 tl_settaskstate(6,0)
 
-
-local nNowDate = tonumber(GetLocalDate("%y%m%d"));
-if nNowDate ~= GetTask(ID_TASKLINK_LIMITDATE) then
-	SetTask(ID_TASKLINK_LIMITDATE, nNowDate);
-	SetTask(ID_TASKLINK_LIMITNUM, 0);
-	SetTask(ID_TASKLINK_LIMITCancelCount, 0);
-	SetTask(DAILY_QUOTA_CAP_TASKID, SLNV_DaTau);
-	SetTask(DAILY_STREAK_TASKID, 0);         
-	SetTask(MOC10_DATE_TASKID, 0);           
-	SetTask(MOC20_DATE_TASKID, 0);         
-	SetTask(MOC30_DATE_TASKID, 0);           
-	SetTask(MOC40_DATE_TASKID, 0);          
-end
-
 storm_ask2start(4)	--Storm ¿ªÊ¼ÌôÕ½
 tbLog:PlayerActionLog("TinhNangKey","NhanNhiemVuDaTau")
-nt_setTask(5123, 1)
-open_task_trace()
 end
 
 
@@ -382,80 +300,38 @@ tl_settaskcourse(1)
 
 
 if myTaskTotalNum==0 or myTaskTotalNum==nil then
-	myTitleText = "<enter><enter>"..myTaskInfo;
+	myTitleText = "<npc><enter>z"..myTaskInfo;
 else
-	myTitleText = "<enter><enter> §©y lµ nhiÖm vô thø <color=green>"..myTaskTotalNum.."<color>, "..myTaskInfo;
+	myTitleText = "<npc><enter>		§©y lµ nhiÖm vô thø <color=green>"..myTaskTotalNum.."<color>, "..myTaskInfo;
 end;
 
-Say(myTitleText,
-	6,
-	"BiÕt råi, ®Ó ta hoµn thµnh nhiÖm vô xong míi l¹i t×m ng­¬i/Task_Wait",
-	"Ta muèn biÕt tİch lòy hiÖn t¹i ra sao/Task_ProcessInfo",
-	"ta ®· hoµn thµnh nhiÖm vô lÇn nµy, xin h·y kiÓm tra l¹i!/Task_Accept",
-	"NhiÖm vô lÇn nµy khã qu¸, Ta muèn dïng vËt phÈm ®Ó hoµn thµnh nhanh/Task_CancelConfirm_Accept",
-	"NhiÖm vô lÇn nµy khã qu¸, Ta muèn hñy bá kh«ng lµm n÷a/Task_CancelConfirm",
-	"Ta muèn biÕt kh¶o nghiÖm cña ng­¬i nãi cã néi dung ra sao/Task_Info"
-	);
+--Say(myTitleText,
+	--4,
+	--"BiÕt råi, ®Ó ta hoµn thµnh nhiÖm vô xong míi l¹i t×m ng­¬i/Task_Wait",
+	--"ta ®· hoµn thµnh nhiÖm vô lÇn nµy, xin h·y kiÓm tra l¹i!/Task_Accept",
+	--"NhiÖm vô lÇn nµy khã qu¸, Ta muèn hñy bá kh«ng lµm n÷a/Task_CancelConfirm",
+	--"Ta muèn biÕt kh¶o nghiÖm cña ng­¬i nãi cã néi dung ra sao/Task_Info"
+	--);
 
+local szTitle =myTitleText
+
+	local tbOpt =
+	{		
+		{"BiÕt råi, ®Ó ta hoµn thµnh nhiÖm vô xong míi l¹i t×m ng­¬i",Task_Wait},
+		{"Ta ®· hoµn thµnh nhiÖm vô lÇn nµy, xin h·y kiÓm tra l¹i!",Task_Accept},
+		{"NhiÖm vô lÇn nµy khã qu¸, ta muèn hñy bá nhiÖm vô.",Task_CancelConfirm},
+		{"Ta muèn biÕt kh¶o nghiÖm cña ng­¬i nãi cã néi dung ra sao.",Task_Info},
+		{"Ta muèn dïng tiÒn v¹n ®Ó hoµn thµnh nhiÖm vô lÇn nµy",lamnhiemvudatau},
+		{"Rêi khái.", no},
+	}
+	CreateNewSayEx(szTitle, tbOpt)
+	--return 1	
 
 -- ÉèÖÃÈ¡ÏûÈÎÎñµÄ±ê¼ÇÎª¿ÉÒÔÈ¡Ïû
 nt_setTask(1045, 1);
 
 end
 
-function Task_CancelConfirm_Accept()
-	Say(" HiÖn t¹i b¹n cã thÓ hoµn thµnh nhanh kh¶o nghiÖm cña D· TÈu b»ng c¸c c¸ch sau.",
-		5,
-		"Ta muèn hoµn thµnh nhanh b»ng Thñy Tinh/Task_CancelConfirm_Accept_ThuyTinh",
-		"Ta muèn hoµn thµnh nhanh b»ng Tinh Hång B¶o Th¹ch/Task_CancelConfirm_Accept_TinhHong",
-		"Ta muèn hoµn thµnh nhanh b»ng TiÒn §ång/Task_CancelConfirm_Accept_TienDong",
-		"Ta muèn hoµn thµnh nhanh b»ng Ng©n L­îng/Task_CancelConfirm_Accept_NganLuong",
-		"Uhm! §Ó ta suy nghÜ l¹i ®·/Task_Wait");
-end
-function Task_CancelConfirm_Accept_ThuyTinh()
-	if (GetItemCountEx(238)>=1) then 
-		ConsumeEquiproomItem(1, 4, 238, 1, 1)
-		Task_AwardRecord()
-		Task_GiveAward()
-	elseif (GetItemCountEx(239)>=1) then 
-		ConsumeEquiproomItem(1, 4, 239, 1, 1)
-		Task_AwardRecord()
-		Task_GiveAward()
-	elseif (GetItemCountEx(240)>=1) then 
-		ConsumeEquiproomItem(1, 4, 240, 1, 1)
-		Task_AwardRecord()
-		Task_GiveAward()
-	else
-	  	Talk(1,"","D· TÈu: CÇn mét trong ba lo¹i thñy tinh <color=yellow>Lôc Thñy Tinh<color> <color=yellow>Tö Tñy Tinh<color> <color=yellow>Lam Thñy Tinh<color> ®Ó ®æi. §¹i hiÖp h×nh nh­ ch­a ®ñ Thñy Tinh!")
-	end
-end;
-function Task_CancelConfirm_Accept_TinhHong()
-	if (GetItemCountEx(353)>=1) then 
-		ConsumeEquiproomItem(1, 4, 353, 1, 1)
-		Task_AwardRecord()
-		Task_GiveAward()
-	else
-	  	Talk(1,"","D· TÈu: CÇn mét <color=yellow>Tinh Hång B¶o Th¹ch<color> ®Ó ®æi. §¹i hiÖp h×nh nh­ ch­a ®ñ Tinh Hång B¶o Th¹ch!")
-	end
-end;
-function Task_CancelConfirm_Accept_TienDong()
-	if (GetItemCountEx(417)>=1) then 
-		ConsumeEquiproomItem(1, 4, 417, 1, 1)
-		Task_AwardRecord()
-		Task_GiveAward()
-	else
-	  	Talk(1,"","D· TÈu: CÇn mét <color=yellow>TiÒn §ång<color> ®Ó ®æi. §¹i hiÖp h×nh nh­ ch­a ®ñ TiÒn §ång!")
-	end
-end;
-function Task_CancelConfirm_Accept_NganLuong()
-	if (GetCash() >= 300000) then 
-	  	Pay(300000)
-		Task_AwardRecord()
-		Task_GiveAward()
-	else
-	  	Talk(1,"","D· TÈu: CÇn <color=yellow>30 v¹n l­îng<color> ®Ó ®æi. §¹i hiÖp h×nh nh­ ch­a ®ñ <color=yellow>30 v¹n l­îng.<color>")
-	end
-end;
 
 -- È¡ÏûÈÎÎñÊ±¸øÓèÍæ¼ÒÒ»´ÎÈ·ÈÏµÄ»ú»á
 function Task_CancelConfirm()
@@ -477,7 +353,7 @@ if (myTaskCancel==0) then
 	
 else
 	
-	Say(" HiÖn t¹i b¹n cßn "..myTaskCancel.." sè lÇn c¬ héi hñy bá nhiÖm vô, b¹n x¸c ®Şnh hñy bá nhiÖm vô lÇn nµy ®óng kh«ng?",
+	Say(" HiÖn t¹i b¹n cßn"..myTaskCancel.." sè lÇn c¬ héi hñy bá nhiÖm vô, b¹n x¸c ®Şnh hñy bá nhiÖm vô lÇn nµy ®óng kh«ng?",
 		2,
 		"§óng, ta kh«ng muèn lµm nhiÖm vô quû qu¸i nµy ®©u/#Task_Cancel(1)",
 		"Uhm! §Ó ta suy nghÜ l¹i ®·/Task_Wait");
@@ -489,9 +365,9 @@ end
 
 -- Õı³£µÄÈ¡Ïû·½Ê½ÔÙÈ·ÈÏÒ»´Î
 function Task_NormalCancel()
-
-Say(" B¹n suy nghÜ kü hñy bá nhiÖm vô lÇn nµy ®óng kh«ng?",2,"§õng l«i th«i n÷a! ta kh«ng muèn lµm nhiÖm vô quû qu¸i nµy ®©u/#Task_Cancel(1)","Th«i ®Ó ta suy nghÜ l¹i ®·!/Task_Wait");
-
+	Say(" B¹n suy nghÜ kü hñy bá nhiÖm vô lÇn nµy ®óng kh«ng?",2,
+	"§õng l«i th«i n÷a! ta kh«ng muèn lµm nhiÖm vô quû qu¸i nµy ®©u/#Task_Cancel(1)",
+	"Th«i ®Ó ta suy nghÜ l¹i ®·!/Task_Wait")
 end;
 
 
@@ -526,37 +402,31 @@ end;
 
 -- ÏÔÊ¾Íæ¼Òµ±Ç°µÄÈÎÎñËù½øĞĞµÄ³Ì¶È£¨µ÷ÊÔÓÃ£©
 function Task_ProcessInfo()
-	local nNowDate = tonumber(GetLocalDate("%y%m%d"));
-	if nNowDate ~= GetTask(ID_TASKLINK_LIMITDATE) then
-		SetTask(ID_TASKLINK_LIMITDATE, nNowDate);
-		SetTask(ID_TASKLINK_LIMITNUM, 0);
-		SetTask(ID_TASKLINK_LIMITCancelCount, 0);
-		SetTask(DAILY_STREAK_TASKID, 0);
-		SetTask(DAILY_QUOTA_CAP_TASKID, SLNV_DaTau);
-	end
-	local myTaskCancel = tl_gettaskstate(4)
-	local myCountTimes = tl_counttasklinknum(1)
-	local myCountLinks = tl_counttasklinknum(2)
- 
-	-- Tinh NV hom nay
-	local nNumToday = tonumber(GetTask(ID_TASKLINK_LIMITNUM)) or 0
-	local nCancelToday = tonumber(GetTask(ID_TASKLINK_LIMITCancelCount)) or 0
-	local nStreak = tonumber(GetTask(DAILY_STREAK_TASKID)) or 0
-	local nCap = tonumber(GetTask(DAILY_QUOTA_CAP_TASKID)) or SLNV_DaTau
-	if nCap < SLNV_DaTau then nCap = SLNV_DaTau end
-	local nLeft = nCap - nNumToday
-	if nLeft < 0 then nLeft = 0 end
-	local nKNBUsed = floor((nCap - SLNV_DaTau) / SLNV_DaTau)
-	 
-	local szText = "D· TÈu: T×nh h×nh chuçi nhiÖm vô cña ng­¬i:<enter>"
-		.."<enter>- Sè NV h«m nay ®ang lµm: <color=yellow>"..nNumToday.."<color>/<color=green>"..nCap.."<color> (cßn <color=yellow>"..nLeft.."<color> lÇn)"
-		.."<enter>- Sè NV h«m nay ®· hoµn thµnh: <color=green>"..nStreak.."<color> lÇn"
-		.."<enter>- Sè lÇn hñy NV h«m nay: <color=yellow>"..nCancelToday.."<color> lÇn" 
-		.."<enter>- C¬ héi hñy NV hiÖn cã: <color=yellow>"..myTaskCancel.."<color> lÇn"
-		.."<enter>- Sè KNB ®· n¹p h«m nay: <color=yellow>"..nKNBUsed.."<color> lÇn"
-		.."<enter>- TiÕn tíi mèc 8000: <color=yellow>"..myCountTimes.."<color> nhiÖm vô ®· hoµn thµnh"	
-	Say(szText, 0);
- 
+
+local myTaskTimes = tl_gettaskstate(1) -- Íæ¼Ò½øĞĞµ½µÄ´ÎÊı
+local myTaskLinks = tl_gettaskstate(2) -- Íæ¼Ò½øĞĞµ½µÄÁ´Êı
+local myTaskLoops = tl_gettaskstate(3) -- Íæ¼Ò½øĞĞµ½µÄ»·Êı
+local myTaskCancel = tl_gettaskstate(4) -- Íæ¼Ò¿ÉÒÔÈ¡ÏûµÄ´ÎÊı
+
+local myTaskType = tl_getplayertasktype()
+
+local myTimes = tl_gettaskstate(1)
+local myLinks = tl_gettaskstate(2)
+
+local myCountTimes = tl_counttasklinknum(1)
+
+-- local myTaskValue1 = tonumber(TabFile_GetCell(tl_gettasktextID(myTaskType),tl_gettasktablecol(),"TaskValue1"))
+-- local myTaskValue2 = tonumber(TabFile_GetCell(tl_gettasktextID(myTaskType),tl_gettasktablecol(),"TaskValue2"))
+	
+
+-- local myMainValue = myTaskValue1 + (myTaskValue2 * (1+(myCountLinks+myTimes)*0.1))
+
+-- local myMainValueText1 = "ÄãÄ¿Ç°µÄÈÎÎñÎïÆ·¼ÛÖµÎª: "..myTaskValue1.."  ÈÎÎñ¼ÛÖµÎª: "..myTaskValue2.."<enter>".."ÄãÏÖÔÚµÄÈÎÎñ×Ü¼ÛÖµÁ¿Îª: "..myMainValue
+
+--	Say("Ò°ÛÅ£ºÄãÏÖÔÚ½øĞĞµ½ÁËµÚ "..myTaskLoops.." »·ÖĞµÄµÚ "..myTaskLinks.." Á´ÖĞµÄµÚ "..myTaskTimes.." ´Î¡£<enter>ÄãÁ¬Ğø½øĞĞµÄ´ÎÊıÎª£º"..tl_counttasklinknum(1).." ´Î<enter>ÄãÁ¬Ğø½øĞĞµÄÁ´ÊıÎª£º"..tl_counttasklinknum(2).." Á´<enter>"..myMainValueText1,0);
+
+	Say(" HiÖn t¹i ng­êi ®· hoµn thµnh <color=yellow>"..myCountTimes.."<color> sè lÇn nhiÖm vô ta giao cho, cÇn cè g¾ng h¬n nhĞ!", 0);
+
 end
 
 
@@ -587,16 +457,17 @@ local myTaskType = tl_getplayertasktype()
 
 end
 
+
 -- ÈÎÎñÒ»µÄÅĞ¶Ï´¦Àí
 function Task_Accept_01(nCount)
 local myTaskGoods
 local ItemGenre,DetailType,ParticularType,Level,nSeries,Luck
 
 if ( nCount > 1 ) then
-	Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy, Ng­¬i bá nhiÒu ®å v« nh­ vËy xem tíi ta hoa c¶ m¾t, tõ tõ th«i nµo!",0);
+	Say(" VŞ nµy"..GetPlayerSex()..", Ng­¬i bá nhiÒu ®å v« nh­ vËy xem tíi ta hoa c¶ m¾t, tõ tõ th«i nµo!",0);
 	return 0
 elseif ( nCount == 0) then
-	Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy, ng­¬i cã thËt ®· bá vµo thø ta cÇn kh«ng? Kh«ng ph¶i l·o phu hoa m¾t chø?",0);
+	Say(" VŞ nµy"..GetPlayerSex()..", ng­¬i cã thËt ®· bá vµo thø ta cÇn kh«ng? Kh«ng ph¶i l·o phu hoa m¾t chø?",0);
 	return 0
 end
 
@@ -626,10 +497,10 @@ local magictype,p1,p2,p3
 local i,n,m = 0,0,0
 
 if ( nCount > 1 ) then
-	Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy, Ng­¬i bá nhiÒu ®å v« nh­ vËy xem tíi ta hoa c¶ m¾t, tõ tõ th«i nµo!",0);
+	Say(" VŞ nµy"..GetPlayerSex()..", Ng­¬i bá nhiÒu ®å v« nh­ vËy xem tíi ta hoa c¶ m¾t, tõ tõ th«i nµo!",0);
 	return 0
 elseif ( nCount == 0) then
-	Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy, ng­¬i cã thËt ®· bá vµo thø ta cÇn kh«ng? Kh«ng ph¶i l·o phu hoa m¾t chø?",0);
+	Say(" VŞ nµy"..GetPlayerSex()..", ng­¬i cã thËt ®· bá vµo thø ta cÇn kh«ng? Kh«ng ph¶i l·o phu hoa m¾t chø?",0);
 	return 0
 end
 
@@ -663,10 +534,10 @@ local magictype,p1,p2,p3
 local i,n,m = 0,0,0
 
 if ( nCount > 1 ) then
-	Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy, Ng­¬i bá nhiÒu ®å v« nh­ vËy xem tíi ta hoa c¶ m¾t, tõ tõ th«i nµo!",0);
+	Say(" VŞ nµy"..GetPlayerSex()..", Ng­¬i bá nhiÒu ®å v« nh­ vËy xem tíi ta hoa c¶ m¾t, tõ tõ th«i nµo!",0);
 	return 0
 elseif ( nCount == 0) then
-	Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy, ng­¬i cã thËt ®· bá vµo thø ta cÇn kh«ng? Kh«ng ph¶i l·o phu hoa m¾t chø?",0);
+	Say(" VŞ nµy"..GetPlayerSex()..", ng­¬i cã thËt ®· bá vµo thø ta cÇn kh«ng? Kh«ng ph¶i l·o phu hoa m¾t chø?",0);
 	return 0
 end
 
@@ -727,7 +598,7 @@ function Task_Accept_06()
 		Task_GiveAward()
 		return 1
 	else
-		Say(" Hahaha! VŞ <color=yellow>"..GetPlayerSex().."<color> nµy, ta tuy bÊt tµi, nh÷ng còng hiÓu ®­îc ch÷ tİn trªn giang hå, ng­¬i cßn ch­a thu thËp ®ñ m¶nh s¬n Hµ X· T¾c mµ ta yªu cÇu sao cã thÓ ®Õn l·nh th­ëng ®©y?",0);
+		Say(" Hahaha! VŞ nµy"..GetPlayerSex()..", ta tuy bÊt tµi, nh÷ng còng hiÓu ®­îc ch÷ tİn trªn giang hå, ng­¬i cßn ch­a thu thËp ®ñ m¶nh s¬n Hµ X· T¾c mµ ta yªu cÇu sao cã thÓ ®Õn l·nh th­ëng ®©y?",0);
 		return 0
 	end
 
@@ -760,7 +631,7 @@ if _CancelTaskDebug()~=1 then
 	Say("Uhm! B¹n trÎ nµy h×nh nh­ kh«ng cßn c¬ héi hñy bá ", 0);
 	return
 end;
-SetTask(DAILY_STREAK_TASKID, 0);
+
 -- ¼ì²âÊÇ·ñ³¬¹ıÃ¿ÌìµÄÏŞÖÆ
 if checkTask_Limit()~=1 then return end;
 
@@ -770,7 +641,7 @@ if checkTask_Limit()~=1 then return end;
 			nt_setTask(1027, myMapNum);
 			myTaskCancel = myTaskCancel + 1;
 			Msg2Player("B¹n ®· sö dông 100 m¶nh s¬n Hµ X· T¾c ®Ó hñy bá nhiÖm vô nµy!");
-			Msg2Player("M¶nh s¬n Hµ X· T¾c hiÖn t¹i cña b¹n cßn d­ "..myMapNum.." tÊm!");
+			Msg2Player("M¶nh s¬n Hµ X· T¾c hiÖn t¹i cña b¹n cßn d­ "..myMapNum.." TÊm!");
 		else
 			Say(" ng­¬i cã ®óng ®· mang <color=yellow>100<color> m¶nh s¬n Hµ X· T¾c kh«ng? Ta cã nh×n lÇm kh«ng vËy?",0);
 			return
@@ -831,7 +702,7 @@ if checkTask_Limit()~=1 then return end;
 		-- ÔÚÕâÀï¼ÇÂ¼Ò»ÏÂÈÎÎñµÄ×ÜÊı
 		nt_setTask(1044, tl_counttasklinknum(1));
 		
-		Msg2Player("<color=yellow>Chuçi nhiÖm vô D· TÈu ®· huû bá hoµn toµn, b©y giê sÏ ph¶i lµm l¹i tõ nhiÖm vô ®Çu tiªn!<color>");
+		Msg2Player("<color=yellow>Chuçi nhiÖm vô D· TÈu ®· xãa bá hoµn toµn, b©y giê sÏ ph¶i lµm l¹i tõ nhiÖm vô ®Çu tiªn<color>!");
 	end
 	
 	-- ÉèÖÃÈ¡ÏûÈÎÎñµÄ±ê¼ÇÎª²»¿ÉÒÔÈ¡Ïû
@@ -874,7 +745,7 @@ end
 
 
 function Task_Punish()
-	Say(" VŞ <color=yellow>"..GetPlayerSex().."<color> nµy cã ph¶i gÊp l¾m kh«ng, kh¶o nghiÖm cña ta s¾p xÕp khã ®Õn nh­ vËy ­? LÇn sau ®Õn vËy!",0);
+	Say(" VŞ nµy"..GetPlayerSex().."Cã ph¶i gÊp l¾m kh«ng, kh¶o nghiÖm cña ta s¾p xÕp khã ®Õn nh­ vËy ­? LÇn sau ®Õn vËy!",0);
 	return 0
 end
 
@@ -894,56 +765,15 @@ function Task_GiveAward()
 	local myGoodsText = ""
 	local ShowText = {"","",""}
 
-	local nNowDateD = tonumber(GetLocalDate("%y%m%d"));
-	if nNowDateD ~= GetTask(ID_TASKLINK_LIMITDATE) then
-		SetTask(ID_TASKLINK_LIMITDATE, nNowDateD);
-		SetTask(ID_TASKLINK_LIMITNUM, 0);  
-		SetTask(ID_TASKLINK_LIMITCancelCount, 0);
-		SetTask(DAILY_STREAK_TASKID, 0);   
-		SetTask(DAILY_QUOTA_CAP_TASKID, SLNV_DaTau);
-		SetTask(MOC10_DATE_TASKID, 0);
-		SetTask(MOC20_DATE_TASKID, 0);
-		SetTask(MOC30_DATE_TASKID, 0);
-		SetTask(MOC40_DATE_TASKID, 0);
-	end
-	
-	local nStreak = (tonumber(GetTask(DAILY_STREAK_TASKID)) or 0) + 1;
-	SetTask(DAILY_STREAK_TASKID, nStreak);
-	
-	if nStreak == 10 and GetTask(MOC10_DATE_TASKID) ~= nNowDateD then
-		SetTask(MOC10_DATE_TASKID, nNowDateD);
-		tl_addPlayerExp(500000);
-		local tbItem = {tbProp = {6, 1, 2374, 1, 0, 0}}
-		tbAwardTemplet:GiveAwardByList(tbItem, "seasonnpc_10task")
-		Msg2Player("H«m nay hoµn thµnh liªn tôc nhiÖm vô D· TÈu lÇn thø 10, nhËn ®­îc <color=green>500.000<color> ®iÓm kinh nghiÖm vµ <color=green>1 b¶o r­¬ng cña D· TÈu<color>!");
-		WriteLog(" [PhÇn th­ëng D· TÈu mèc 10]"..date(" [%y n¨m %m th¸ng %d ngµy  %H giê %M phót]")..": Tµi kho¶n "..GetAccount()..", nh©n vËt "..GetName().." nhËn ®­îc 500.000 ®iÓm kinh nghiÖm + 1 b¶o r­¬ng cña D· TÈu.");
-	end
-	if nStreak == 20 and GetTask(MOC20_DATE_TASKID) ~= nNowDateD then
-		SetTask(MOC20_DATE_TASKID, nNowDateD);
-		tl_addPlayerExp(1000000);
-		local tbItem = {tbProp = {6, 1, 2374, 1, 0, 0}}
-		tbAwardTemplet:GiveAwardByList(tbItem, "seasonnpc_20task")
-		Msg2Player("H«m nay hoµn thµnh liªn tôc nhiÖm vô D· TÈu lÇn thø 20, nhËn ®­îc <color=green>1.000.000<color> ®iÓm kinh nghiÖm vµ <color=green>1 b¶o r­¬ng cña D· TÈu<color>!");
-		WriteLog(" [PhÇn th­ëng D· TÈu mèc 20]"..date(" [%y n¨m %m th¸ng %d ngµy  %H giê %M phót]")..": Tµi kho¶n "..GetAccount()..", nh©n vËt "..GetName().." nhËn ®­îc 1.000.000 ®iÓm kinh nghiÖm + 1 b¶o r­¬ng cña D· TÈu.");
-	end
-	if nStreak == 30 and GetTask(MOC30_DATE_TASKID) ~= nNowDateD then
-		SetTask(MOC30_DATE_TASKID, nNowDateD);
-		tl_addPlayerExp(1500000);
-		local tbItem = {tbProp = {6, 1, 2374, 1, 0, 0}}
-		tbAwardTemplet:GiveAwardByList(tbItem, "seasonnpc_30task")
-		Msg2Player("H«m nay hoµn thµnh liªn tôc nhiÖm vô D· TÈu lÇn thø 30, nhËn ®­îc <color=green>1.500.000<color> ®iÓm kinh nghiÖm vµ <color=green>1 b¶o r­¬ng cña D· TÈu<color>!");
-		WriteLog(" [PhÇn th­ëng D· TÈu mèc 30]"..date(" [%y n¨m %m th¸ng %d ngµy  %H giê %M phót]")..": Tµi kho¶n "..GetAccount()..", nh©n vËt "..GetName().." nhËn ®­îc 1.500.000 ®iÓm kinh nghiÖm + 1 b¶o r­¬ng cña D· TÈu.");
-	end
-	if nStreak == 40 and GetTask(MOC40_DATE_TASKID) ~= nNowDateD then
-		SetTask(MOC40_DATE_TASKID, nNowDateD);
-		tl_addPlayerExp(2000000);
-		local tbItem = {tbProp = {6, 1, 2374, 1, 0, 0}}
-		tbAwardTemplet:GiveAwardByList(tbItem, "seasonnpc_40task")
-		Msg2Player("H«m nay hoµn thµnh liªn tôc nhiÖm vô D· TÈu lÇn thø 40, nhËn ®­îc <color=green>2.000.000<color> ®iÓm kinh nghiÖm vµ <color=green>1 b¶o r­¬ng cña D· TÈu<color>!");
-		WriteLog(" [PhÇn th­ëng D· TÈu mèc 40]"..date(" [%y n¨m %m th¸ng %d ngµy  %H giê %M phót]")..": Tµi kho¶n "..GetAccount()..", nh©n vËt "..GetName().." nhËn ®­îc 2.000.000 ®iÓm kinh nghiÖm + 1 b¶o r­¬ng cña D· TÈu.");
-	end
-
 	local nTotalTaskNum = tl_counttasklinknum(1); -- »ñÈ¡µ±Ç°Íæ¼ÒÒ»¹²×öÁË¶àÉÙ´ÎÈÎÎñ
+	--if (nTotalTaskNum ~= 0 and mod(nTotalTaskNum, 10) == 0 and GetTask(TKS_TASKLINK_SPITEM) ~= nTotalTaskNum) then
+	--	SetTask(TKS_TASKLINK_SPITEM, nTotalTaskNum);
+	--	local tbItem = {tbProp = {6, 1, 71, 1, 0, 0}}
+	--	tbAwardTemplet:GiveAwardByList(tbItem, "seasonnpc_10task")
+	--	Msg2Player(format("Chóc mõng ®¹i hiÖp ®· hoµn thµnh liªn tiÕp %d nhiÖm vô D· TÈu, nhËn ®­îc phÇn th­ëng %s!", 10, "Tiªn Th¶o Lé"));
+	--end
+
+	--tl_print ("¸øÁ´½±ÀøºÍ»·½±Àø·¢½±Íê±Ï£¡£¡£¡");
 	local nTongValue;
 	myAward, nTongValue = tl_giveplayeraward(1);
 	if (not nTongValue) then
@@ -954,15 +784,31 @@ function Task_GiveAward()
 		nTongValue = floor(nTongValue / nBeishu);
 	end;
 	
+	-- S¾p xÕp tiÒn lu«n hiÖn « ®Çu tiªn
+	local nMoneyIndex = 0
+	for i=1,3 do
+		if (myAward[i][1] == 1) or (myAward[i][1] == 4 and myAward[i][10] == 3) then
+			nMoneyIndex = i
+			break
+		end
+	end
+	
+	-- NÕu cã tiÒn vµ kh«ng ë vŞ trİ ®Çu tiªn th× ho¸n ®æi
+	if nMoneyIndex > 1 then
+		local temp = myAward[1]
+		myAward[1] = myAward[nMoneyIndex]
+		myAward[nMoneyIndex] = temp
+	end
+
 	for i=1,3 do
 	--	tl_print ("µÃµ½½ğÇ®½±Àø£¡");
 		if (myAward[i][1] == 1) then
-			ShowText[i] = "NhËn ®­îc "..myAward[i][9].."/3".."/"..myAward[i][2].."/SelectAward_Money"
+			ShowText[i] = "NhËn ®­îc"..myAward[i][9].."/3".."/"..myAward[i][2].."/SelectAward_Money"
 		elseif (myAward[i][1] == 2) then
-			ShowText[i] = "NhËn ®­îc "..myAward[i][9].."/4".."/"..myAward[i][2].."/SelectAward_Exp"
+			ShowText[i] = "NhËn ®­îc"..myAward[i][9].."/4".."/"..myAward[i][2].."/SelectAward_Exp"
 		elseif (myAward[i][1] == 3) then
 			myGoodsText = myAward[i][3]..","..myAward[i][4]..","..myAward[i][5]..","..myAward[i][6]..","..myAward[i][7]..","..myAward[i][8]
-			ShowText[i] = "NhËn ®­îc "..myAward[i][9].."/5".."/"..myGoodsText.."/mySG"
+			ShowText[i] = "NhËn ®­îc"..myAward[i][9].."/5".."/"..myGoodsText.."/mySG"
 		elseif (myAward[i][1] == 4) then
 			if (myAward[i][10]==1) then
 				myGoodsText = myAward[i][3]..","..myAward[i][4]..","..myAward[i][5]..","..myAward[i][6]..","..myAward[i][7]..","..myAward[i][8]
@@ -974,7 +820,7 @@ function Task_GiveAward()
 			end
 			
 		elseif (myAward[i][1] == 5) then
-			ShowText[i] = "NhËn ®­îc "..myAward[i][9].."/7".."/"..myAward[i][1].."/SelectAward_Cancel"
+			ShowText[i] = "NhËn ®­îc"..myAward[i][9].."/7".."/"..myAward[i][1].."/SelectAward_Cancel"
 		end
 		
 	end
@@ -983,9 +829,17 @@ function Task_GiveAward()
 	tl_print(ShowText[2])
 	tl_print(ShowText[3])
 	
+	print(ShowText[1])
+	print(ShowText[2])
+	print(ShowText[3])
+	
 	Prise( "Ng­¬i vÊt v¶ qu¸, xin mêi vŞ "..GetPlayerSex().." chän mãn m×nh thİch ®i!",ShowText[1],ShowText[2],ShowText[3] );
 	
+	--tl_print ("·¢½±Íê±Ï£¡£¡£¡£¡£¡");
+
 end
+
+
 
 -- ÔÚÒÑ¾­È·ÈÏÁËÈÎÎñÍê³Éµ«ÊÇ»¹Î´·¢½±Ê±µÄ±äÁ¿´¦Àí£¬ÒÔ·ÀÍæ¼ÒË¢½±
 function Task_AwardRecord()
@@ -1073,7 +927,8 @@ if (tl_gettaskcourse() == 3) then
 end
 
 	Earn(nAward)
-	Msg2Player("B¹n nhËn ®­îc <color=green>"..nAward.."<color> l­îng b¹c");
+	--Msg2Player("B¹n nhËn ®­îc <color=green>"..nAward.."<color> l­îng  b¹c");
+	Msg2Player("B¹n nhËn ®­îc <color=green>"..pLibs:FormatNumber(nAward).."<color> l­îng  b¹c");
 	
 	tl_settaskcourse(3)	
 	PayPlayerLinkAward();
@@ -1104,8 +959,9 @@ if (tl_gettaskcourse() == 3) then
 	return
 end
 
-	tl_addPlayerExp(nAward)
-	Msg2Player("B¹n nhËn ®­îc <color=green>"..nAward.."<color> ®iÓm kinh nghiÖm");
+	--tl_addPlayerExp(nAward)
+	--Msg2Player("B¹n nhËn ®­îc <color=green>"..nAward.."<color> ®iÓm kinh nghiÖm");
+	pLibs:AddPlayerExp(nAward)
 	
 	tl_settaskcourse(3)
 	PayPlayerLinkAward();
@@ -1165,7 +1021,7 @@ local myNewCancel = GetTask(DEBUG_TASKVALUE);
 	tl_settaskstate(4, myCancel);
 	
 	if myCancel<=254 then
-		Msg2Player("B¹n nhËn ®­îc <color=green>1 c¬ héi hñy bá nhiÖm vô!<color>");
+		Msg2Player("B¹n nhËn ®­îc <color=green>1 c¬ héi hñy bá nhiÖm vô<color>!");
 	end;
 
 	WriteLog(" [Ghi nhí nhËn phÇn th­ëng]"..
@@ -1205,31 +1061,26 @@ Ladder_NewLadder(10118, GetName(), nTotalTask, 1);
 -- ÔÚÕâÀï·¢Óè¹Ì¶¨ÈÎÎñ´ÎÊıµÄ½±Àø
 tl_getlinkaward(Task_AwardLink, nTotalTask);
 
+-- Ô½ÄÏ°æÍê³É 8000 ´ÎÈÎÎñ²»×öÈÎºÎ´¦Àí
 if (nTotalTask == 8000) then
 
-	-- Broadcast toan server
-	AddGlobalNews("C«ng bè: <color=yellow>"..GetName().."<color> ®· hoµn thµnh <color=green>8000<color> nhiÖm vô D· TÈu, Giang hå cïng chóc mõng!");
+--	nGoldenID = myGolden[random(getn(myGolden))]
 	
-	-- Message cho chinh player
-	for i=1,3 do
-		Msg2Player("<color=yellow>Chóc mõng! B¹n ®· hoµn thµnh <color=green>8.000<color> nhiÖm vô D· TÈu! §©y lµ mèc cao nhÊt cña chuçi nhiÖm vô D· TÈu.<color>");
-	end
+--	-- Âú 8000 ´ÎÈÎÎñ½±Àø 1E ½ğÇ®
+--	Earn(100000000);
 	
-	-- Ghi log
-	WriteLog(" [D· TÈu Mèc 8000]"..date(" [%y n¨m %m th¸ng %d ngµy  %H giê %M phót]")..": Tµi kho¶n "..GetAccount()..", nh©n vËt "..GetName().." ®· hoµn thµnh 8000 nhiÖm vô D· TÈu!");
+--	AddGoldItem( 0, nGoldenID )
+	
+--	WriteLog("[ÈÎÎñÁ´½±Àø¼ÇÂ¼]"..date("[%yÄê%mÔÂ%dÈÕ%HÊ±%M·Ö]").."£ºÕËºÅ"..GetAccount().."£¬½ÇÉ«"..GetName().."ÔÚÈÎÎñÁ´½±ÀøÖĞÒòÎªÍê³É 8000 ´ÎÈÎÎñµÃµ½ÁË»Æ½ğ×°±¸Ò»¼ş£¬»Æ½ğ×°±¸±àºÅÎª£º"..nGoldenID)
+	
+--	AddGlobalCountNews("¹«¸æ£ºÍæ¼Ò "..GetName().." ÒòÎªÍê³ÉÁË 8000 ´ÎÈÎÎñÔÚÒ°ÛÅ´¦µÃµ½ÁËÃÅÅÉ´ó»Æ½ğ×°±¸Ò»¼şºÍ½£ÏÀ±ÒÒ»ÒÚÁ½£¡£¡£¡", 3);
+	
+--	for i=1,3 do
+--		Msg2Player("¹§Ï²Äã£¡£¡ÒòÎªÄãÁ¬ĞøÍê³ÉÁË 8000 ´ÎÈÎÎñËùÒÔµÃµ½ÁËÒ»¸ö¼«Æ·½±ÀøºÍÒ»ÒÚÁ½½£ÏÀ±Ò£¡£¡£¡");
+--	end
 
 	return
 	
-end
-
-local nNowDate = tonumber(GetLocalDate("%y%m%d"));
-if nNowDate == GetTask(ID_TASKLINK_LIMITDATE) then
-	local nCap = tonumber(GetTask(DAILY_QUOTA_CAP_TASKID)) or SLNV_DaTau
-	if nCap < SLNV_DaTau then nCap = SLNV_DaTau end
-	if GetTask(ID_TASKLINK_LIMITNUM) >= nCap then
-		Msg2Player("H«m nay ®· lµm ®ñ "..nCap.." nhiÖm vô D· TÈu! NÕu muèn tiÕp tôc, h·y n¹p Kim Nguyªn B¶o hoÆc quay l¹i ngµy mai!");
-		return
-	end
 end
 
 storm_ask2start(4, 1)	--Storm ¿ªÊ¼ÌôÕ½
@@ -1290,3 +1141,4 @@ function _WriteCancelLog(nType, nTime, nCancel)
 	end;
 
 end;
+

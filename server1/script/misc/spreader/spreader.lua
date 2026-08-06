@@ -17,16 +17,14 @@ Include("\\script\\misc\\rename\\rename_func.lua")
 --Include("\\script\\misc\\lostgolditem\\restore_goldeqitem.lua")		--ÁìÈ¡¶ªÊ§»Æ½ð×°±¸
 
 function main()
-
 --DinhHQ
 --20110322: Hæ trî copy nh©n vËt cho gi¶i ®Êu VLMC
 	local now = tonumber(GetLocalDate("%Y%m%d"));
-	if now >= 20110328 and now <= 20120401 then
+	if now >= 20110328 and now <= 20110401 then
 		Talk(1, "", "Chøc n¨ng t¹m ®ãng")
 		return
 	end
 	game_spreader()
-
 end
 function game_spreader()
 	if (SWITCH_SPREADER ~= 1) then
@@ -37,7 +35,7 @@ function game_spreader()
 	{
 		"NhËp cd-key kÝch ho¹t tµi kho¶n/gsp_input_cdkey",
 		"NhËn ®­îc phÇn th­ëng! /gsp_phase_prize",
-		"NhËn s­ ®å thiÕp hoµng kim ng­êi míi/gsp_accept_goldcard", 
+		-- "ÁìÈ¡»Æ½ðÊ¦Í½¿¨/gsp_accept_goldcard",
 		"Liªn quan Th«ng c¸o.../gsp_about",
 		"Båi th­êng cho bang héi ®ang chiÕm thµnh/about_castellan_remedy",
 		"§Æt l¹i tªn cho nh©n vËt/about_rename_role",		
@@ -57,17 +55,10 @@ function game_spreader()
 			szOp[6],
 			szOp[8]);
 	elseif (SYSCFG_PRODUCT_REGION_ID	== DEF_PRODUCT_REGION_VN) then -- Ô½ÄÏ°æ±¾	
-		Say("Xin hái cã thÓ gióp g× cho quý kh¸ch?", 10,
-			szOp[1],
-			szOp[2],
-			szOp[3],
-			szOp[4],
-			szOp[5],
+		Say("Xin hái cã thÓ gióp g× cho quý kh¸ch?", 3,
 			szOp[6],
 			szOp[7],
-			szOp[8],
-			szOp[10],
-			szOp[9]);
+			szOp[8]);
 	else
 		Say("Xin hái cã thÓ gióp g× cho quý kh¸ch?", 1,
 			szOp[8]);	

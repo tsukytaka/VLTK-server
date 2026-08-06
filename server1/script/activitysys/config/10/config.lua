@@ -13,7 +13,7 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
---		{"AddDialogOpt",	{"§æi phÇn th­ëng Hµnh HiÖp LÖnh",2} },
+		--{"AddDialogOpt",	{"§æi phÇn th­ëng Hµnh HiÖp LÖnh",2} },
 	},
 }
 tbConfig[2] = --Ò»¸öÏ¸½Ú
@@ -23,7 +23,7 @@ tbConfig[2] = --Ò»¸öÏ¸½Ú
 	szName = "ChangXingXiaLing",
 	nStartDate = nil,
 	nEndDate  = nil,
-	tbMessageParam = {"<npc><color=yellow> Hµnh HiÖp LÖnh <color> nhËn ®­îc tõ trong c¸c ho¹t ®éng cña trß ch¬i,cã thÓ ®ëi lÊy phÇn th­ëng t¹i chç cña ta ®©y."},
+	tbMessageParam = {"<npc><color=yellow> Hµnh HiÖp LÖnh <color> nhËn ®­îc t?trong c¸c ho¹t ®éng cña tr?ch¬i,c?th?®ëi lÊy phÇn th­ëng t¹i ch?cña ta ®©y."},
 	tbCondition = 
 	{
 	},

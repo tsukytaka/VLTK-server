@@ -6,15 +6,15 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	szMessageType = "ClickNpc",
 	szName = "click npc1",
 	nStartDate = 201204020000,
-	nEndDate  = 205005010000,
-	tbMessageParam = {"Tæng Tiªu §Çu"},
+	nEndDate  = 202205010000,
+	tbMessageParam = {"Ng­êi VËn ChuyÓn"},
 	tbCondition = 
 	{
 	},
 	tbActition = 
 	{
 		{"AddDialogOpt",	{"Ta muèn hé tèng ",2} },
-		{"SetDialogTitle",	{"Giao nép 1 Hé Tiªu LÖnh cho ta th× cã thÓ tiÕp nhËn nhiÖm vô hé tèng, hé tèng hµng ®Õn chç th­¬ng bu«n th× cã thÓ nhËn ®­îc phÇn th­ëng phong phó, mçi ®¹i hiÖp mçi ngµy cã thÓ tiÕp nhËn nhiÖm vô 3 lÇn, trong hµnh tr×nh hé tèng, ®¹i hiÖp cÇn ph¶I b¶o vÖ sù an toµn cña Xe Ngùa, nÕu Xe Ngùa bÞ chÕt, th× sÏ r¬i ra 1 Hé Tiªu LÖnh vµ nhiÖm vô sÏ thÊt b¹i"} },
+		{"SetDialogTitle",	{"Giao nép 1 Hçn Nguyªn Linh Lé cho ta th× cã thÓ tiÕp nhËn nhiÖm vô hé tèng, hé tèng hµng ®Õn chç th­¬ng bu«n th× cã thÓ nhËn ®­îc phÇn th­ëng phong phó, mçi ®¹i hiÖp mçi ngµy cã thÓ tiÕp nhËn nhiÖm vô 3 lÇn, trong hµnh tr×nh hé tèng, ®¹i hiÖp cÇn ph¶I b¶o vÖ sù an toµn cña Xe Ngùa, nÕu Xe Ngùa bÞ chÕt, th× sÏ r¬i ra 1 Hçn Nguyªn Linh Lé vµ nhiÖm vô sÏ thÊt b¹i"} },
 	},
 }
 tbConfig[2] = --Ò»¸öÏ¸½Ú
@@ -23,11 +23,11 @@ tbConfig[2] = --Ò»¸öÏ¸½Ú
 	szMessageType = "nil",
 	szName = "give task",
 	nStartDate = 201204020000,
-	nEndDate  = 205005010000,
+	nEndDate  = 202205010000,
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{50,szLEVEL_TIP,">="} },
+		{"PlayerFunLib:CheckTotalLevel",	{150,szLEVEL_TIP,">="} },
 		{"ThisActivity:CheckCamp",	{0, szCAMP_TIP} },
 		{"ThisActivity:CheckTaskDaily",	{TSKI_DAILY_COUNT,MAX_DAILY_COUNT,"H«m nay ®¹i hiÖp ®· hé tèng 3 lÇn råi, ®îi ngµy mai tiÕp tôc nhÐ.","<"} },
 	},
@@ -42,12 +42,12 @@ tbConfig[3] = --Ò»¸öÏ¸½Ú
 	szMessageType = "nil",
 	szName = "give award",
 	nStartDate = 201204020000,
-	nEndDate  = 205005010000,
+	nEndDate  = 202205010000,
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
 		{"ThisActivity:IsWinner",	{nil} },
-		{"PlayerFunLib:CheckTotalLevel",	{50,szLEVEL_TIP,">="} },
+		{"PlayerFunLib:CheckTotalLevel",	{150,szLEVEL_TIP,">="} },
 		{"ThisActivity:CheckCamp",	{0, szCAMP_TIP} },
 	},
 	tbActition = 
@@ -62,8 +62,8 @@ tbConfig[4] = --Ò»¸öÏ¸½Ú
 	nId = 4,
 	szMessageType = "ServerStart",
 	szName = "server start",
-	nStartDate = 201204020000,
-	nEndDate  = 205005010000,
+	nStartDate = nil,
+	nEndDate  = nil,
 	tbMessageParam = {nil},
 	tbCondition = 
 	{
@@ -71,8 +71,8 @@ tbConfig[4] = --Ò»¸öÏ¸½Ú
 	tbActition = 
 	{
 		{"ThisActivity:ServerStart",	{nil} },
-		{"NpcFunLib:AddDialogNpc",	{"Diªm Th­¬ng Thanh Thµnh S¬n",244,{{21,1949,3499}}} },
-		{"NpcFunLib:AddDialogNpc",	{"Tæng Tiªu §Çu",376,{{21,2873,3649}}} },
+		{"NpcFunLib:AddDialogNpc",	{"Th­¬ng Bu«n",1905,{{1,1865,2755}}} },
+		{"NpcFunLib:AddDialogNpc",	{"Ng­êi VËn ChuyÓn",1904,{{1,1564,2759}}} },
 	},
 }
 tbConfig[5] = --Ò»¸öÏ¸½Ú
@@ -81,8 +81,8 @@ tbConfig[5] = --Ò»¸öÏ¸½Ú
 	szMessageType = "ClickNpc",
 	szName = "click npc2",
 	nStartDate = 201204020000,
-	nEndDate  = 205005010000,
-	tbMessageParam = {"Diªm Th­¬ng Thanh Thµnh S¬n"},
+	nEndDate  = 202205010000,
+	tbMessageParam = {"Th­¬ng Bu«n"},
 	tbCondition = 
 	{
 	},
@@ -98,11 +98,11 @@ tbConfig[6] = --Ò»¸öÏ¸½Ú
 	szMessageType = "ClickNpc",
 	szName = "Click lingfan",
 	nStartDate = 201204020000,
-	nEndDate  = 205005010000,
+	nEndDate  = 202205010000,
 	tbMessageParam = {"Hµng rong"},
 	tbCondition = 
 	{
-		{"PlayerFunLib:CheckTotalLevel",	{50,"",">="} },
+		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 		{"ThisActivity:CheckCamp",	{0} },
 	},
 	tbActition = 
@@ -116,12 +116,12 @@ tbConfig[7] = --Ò»¸öÏ¸½Ú
 	szMessageType = "CreateCompose",
 	szName = "buy healing bag",
 	nStartDate = 201204020000,
-	nEndDate  = 205005010000,
+	nEndDate  = 202205010000,
 	tbMessageParam = {"Gia HuyÕt Phï",1,1,1,0.02},
 	tbCondition = 
 	{
 		{"AddOneMaterial",	{"Ng©n l­îng",{nJxb=50000},1} },
-		{"PlayerFunLib:CheckTotalLevel",	{50,"",">="} },
+		{"PlayerFunLib:CheckTotalLevel",	{150,"",">="} },
 		{"ThisActivity:CheckCamp",	{0, szCAMP_TIP} },
 	},
 	tbActition = 

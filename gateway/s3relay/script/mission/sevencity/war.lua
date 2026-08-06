@@ -464,13 +464,3 @@ end
 -- º”‘ÿΩ±¿¯–≈œ¢
 AwardDb = MapDatabase:New(SDKEY_SEVENCITY)
 AwardDb:LoadAll()
-
-function BattleWorld:SimTDCOccupy(param, result)
-	local buff = ObjBuffer:New(param)
-	local mapid = buff:Pop()
-	local bang_name = buff:Pop()
-	if (type(mapid) == "number" and type(bang_name) == "string" and bang_name ~= "") then
-		self:Occupy(mapid, bang_name)
-		OutputMsg(format("[SEVENCITY] SimTDC fake occupy: map[%d] <- bang[%s]", mapid, bang_name))
-	end
-end

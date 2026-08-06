@@ -15,8 +15,6 @@ Include("\\script\\event\\zhongqiu_jieri\\200909\\rongshu\\head.lua")
 Include("\\script\\event\\great_night\\great_night_head.lua")	--Ë«Áú¶´»Æ½ðÖ®ºË
 --§iÒu chØnh reset 5h ch¬i - Modified by DinhHQ - 20110630
 Include("\\script\\vng_feature\\challengeoftime\\npcNhiepThiTran.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
--- /script/global/nobitaxd/config/cfg_server.lua
 szStationOp = 
 	{
 		"Nh÷ng n¬i ®· ®i qua/WayPointFun", 		-- 1
@@ -72,7 +70,7 @@ aryCondition = {
 szStationOp_Cancel = "Kh«ng cÇn ®©u/StationOnCancel";
 
 function go_HSBattle()
-	Msg2Player("Ngåi ch¾c nhÐ! Chóng ta ®i ®Õn <color=green>Hoa S¬n<color> c¶nh kü tr­êng !")
+	Msg2Player("Ngåi ch¾c nhÐ! Chóng ta ®i ®Õn Hoa s¬n c¶nh kü tr­êng")
 	NewWorld(2,2605,3592)
 	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
 	AddSkillState(963, 1, 0, 18*3) 	
@@ -147,7 +145,7 @@ else
 end;
 
 if (PrePay(nPrice) == 1 or GetCamp() == 6 ) then
-Msg2Player("Ngåi yªn ch­a? Chóng ta ®i<color=green> "..GetWharfName(nWharfId).."!")
+Msg2Player("Ngåi yªn ch­a? Chóng ta ®i "..GetWharfName(nWharfId))
 nW , nX, nY = GetWharfPos(nWharfId);
 nResult = NewWorld(nW, nX , nY );
 	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
@@ -202,7 +200,7 @@ function SelStation(nSel)
 		nResult = NewWorld(nW, nX , nY );
 	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
 	AddSkillState(963, 1, 0, 18*3) 
-		Msg2Player("Ngåi yªn ch­a? Chóng ta ®i<color=green> "..GetStationName(nStation).."!")
+		Msg2Player("Ngåi yªn ch­a? Chóng ta ®i "..GetStationName(nStation))
 		if (nResult == 2) then
 			--Msg2Player("·þÎñÆ÷×ª»»ÖÐ...")
 		end
@@ -224,7 +222,7 @@ function TownPortalFun()			-- ·µ»ØÒª2000Á½Òø×Ó£¨Ô­µØµã£©¡¡¡¡£¨BY: Dan_Deng 2004-
 --	if (PrePay(2000) == 1 or GetCamp() == 6) then
 		ReturnFromPortal()
 --	else
---		Say("ThËt ng¹i kh«ng cã tiÒn th× kh«ng thÓ ®i ®©u ®­îc", 0)
+--		Say("²»ºÃÒâË¼£¬Ã»Ç®¿É×ø²»ÁË³µ£¬Äú»¹ÊÇ×ßÈ¥°É£¡", 0)
 --	end
 end;
 
@@ -240,14 +238,14 @@ function SelWayPoint(nSel)			-- ·µ»ØÒª1000Á½Òø×Ó£¨¶´¿Ú£©¡¡¡¡¡¡£¨BY£ºDan_Deng 200
 			SetFightState(nFightState)
 --			Msg2Player("Goto"..GetWayPointName(nWayPoint)..nW..nX..nY);
 			if (nResult == 2) then
---				Msg2Player("Phôc vô khÝ chuyÓn ®æi trung...")
+--				Msg2Player("·þÎñÆ÷×ª»»ÖÐ...")
 			end
 			if (nResult == 0) then
---				Msg2Player("TruyÒn vµo ®iÓm cã sai lÇm.")
+--				Msg2Player("´«ÈëµãÓÐ´íÎó.")
 			end
 		end;
 --	else									-- ²»¹»Ç®¾Í¾Ü¾ø
---		Say("ThËt ng¹i kh«ng cã tiÒn th× kh«ng thÓ ®i u ®­îc", 0);
+--		Say("²»ºÃÒâË¼£¬Ã»Ç®¿É×ø²»ÁË³µ£¬Äú»¹ÊÇ×ßÈ¥°É£¡", 0);
 --	end;
 end
 
@@ -402,14 +400,14 @@ CITY_OPTIONS =
 	{"Trë l¹i ®Þa ®iÓm cò ",				TownPortalFun}, 		-- 3
 	{"§i Hoa s¬n c¶nh kü tr­êng",			go_HSBattle}, 			-- 4
 	{"§i ChiÕn tr­êng c«ng thµnh",				GoCityWar},				-- 5
-	{"§i c«ng thµnh huÊn luyÖn chiÕn tr­êng ",			GoDemoWar},				-- 6
+	{"§i chiÕn tr­êng huÊn luyÖn",			GoDemoWar},				-- 6
 	{"§i ®¶o TÈy Tñy",				GotoClearSkillMap},		-- 7
 	{"§i ®Õn n¬i lµm nhiÖm vô D· TÈu",		tl_moveToTaskMap},		-- 8
 	{"§i n¬i ®Æc biÖt lµm NhiÖm vô TÝn Sø ",	messenger_wagoner},     -- 9
 	--{"§i V« Danh C«c",				GotoAnonymVale},			--10
 	{"Xin h·y ®­a ta ®Õn ChiÕn Long §éng",		OnGoToNewLiangShuiDong},-- 10
 	--{"§i KiÕm Gia Mª Cung",				goto_shijiangu},		-- 11
-	--{"§i ¸c Lang Cèc",				_GoELangGu},
+	-- {"§i ¸c Lang Cèc",				_GoELangGu},
 }
 
 -- ³ÇÊÐ³µ·òÍ¨ÓÃ½Å±¾
@@ -437,16 +435,8 @@ function CityStationCommon(szMsg)
 	tbDailog:Show()
 end;
 
-
 -- ÐÂÊÖ´å³µ·òÍ¨ÓÃ½Å±¾ (×¢Òâ£ºÄÏÔÀÕò²»ÊÇÐÂÊÖ´å£¬²»µ÷´Ëº¯Êý)
 function NewcomerStationCommon(szMsg)
-	local zDate = tonumber(date("%Y%m%d%H%M"))
-	if zDate <= ThoiGianHetHanDiemTP then
-		Say("§óng vµo lóc <color=yellow>"..ThoiGianOpenStr.."<color> míi b¾t ®Çu chÝnh thøc khai më m¸y chñ");
-		return 1
-	end
-
-
 --	check_update()					-- ¼¼ÄÜ¸üÐÂ¡¢ÃÅÅÉ¼Ó±êÊ¶£¨2004-05-31£©
 	if (GetLevel() >= 5) then
 		if (WhichWarBegin() ~= 0) then

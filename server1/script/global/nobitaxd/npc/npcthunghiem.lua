@@ -2325,7 +2325,7 @@ function itemLuyenCap()
 	return end
 	for i = 1, 5 do
 		AddItem(6,1,125,1,0,0,0)
-		AddItem(6,1,1181,1,0,0,0)
+		AddItem(6,1,5020,1,0,0,0)
 	end
 	AddItem(0,11,561,1,0,0,0)
 	AddGoldItem(0, 514)

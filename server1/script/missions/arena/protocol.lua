@@ -1,9 +1,8 @@
-
-
 Include("\\script\\lib\\objbuffer_head.lua")
 Include("\\script\\missions\\arena\\rule.lua")
 Include("\\script\\dailogsys\\dailogsay.lua")
-
+Include("\\script\\lib\\timerlist.lua")
+Include("\\script\\global\\nobitaxd\\vdk\\simcity\\webconfig.lua")
 
 Include("\\script\\global\\logout_head.lua")
 IncludeLib("SETTING")
@@ -29,6 +28,55 @@ local tbAccMapList =
 
 tinsert(TB_LOGOUT_FILEFUN, {"\\script\\missions\\arena\\protocol.lua",		"player_logout"})
 
+ArenaSimCityQueue = ArenaSimCityQueue or {}
+ArenaSimCityTimer = ArenaSimCityTimer or {}
+
+function ArenaSimCityTimer:OnTime(szName, nTimerId)
+	ArenaSimCityQueue[szName] = nil
+	if SIMCITY_DUEL_ENABLED ~= 1 or SIMCITY_DUEL_BOT_ENABLED ~= 1 then
+		return 0
+	end
+	local nPlayerIndex = SearchPlayer(szName)
+	if nPlayerIndex <= 0 then
+		return 0
+	end
+	local nCurMapId = CallPlayerFunction(nPlayerIndex, GetWorldPos)
+	if not CallPlayerFunction(nPlayerIndex, tbPlayer.CheckState, tbPlayer) or not %tbAccMapList[nCurMapId] then
+		return 0
+	end
+	player_cancel_remote(szName)
+	local pDungeonType = DungeonType["arena"]
+	if pDungeonType then
+		local pDungeon = pDungeonType:new_dungeon(pDungeonType.TEMPLATE_MAP_ID)
+		if pDungeon then
+			pDungeon:StartSimCityMatch(nPlayerIndex)
+			CallPlayerFunction(nPlayerIndex, Msg2Player, "Khong tim thay nguoi choi. Dang ghep doi thu SimCity...")
+		else
+			CallPlayerFunction(nPlayerIndex, Msg2Player, "Chua tao duoc dau truong, hay thu lai.")
+		end
+	end
+	return 0
+end
+
+function cancel_simcity_timer(szName)
+	local nTimerId = ArenaSimCityQueue[szName]
+	if nTimerId then
+		TimerList:DelTimer(nTimerId)
+		ArenaSimCityQueue[szName] = nil
+	end
+end
+
+function schedule_simcity_timer(szName)
+	cancel_simcity_timer(szName)
+	if SIMCITY_DUEL_BOT_ENABLED == 1 then
+		local nWait = tonumber(SIMCITY_DUEL_WAIT_SECONDS) or 30
+		if nWait < 5 then
+			nWait = 5
+		end
+		ArenaSimCityQueue[szName] = TimerList:AddTimer(%ArenaSimCityTimer, nWait * 18, szName)
+	end
+end
+
 function allocate_map(ParamHandle, ResultHandle)
 
 	local pDungeonType = DungeonType["arena"]
@@ -46,6 +94,7 @@ end
 
 function player_enter_map(ParamHandle, ResultHandle)
 	local szName = ObjBuffer:PopObject(ParamHandle)
+	cancel_simcity_timer(szName)
 	local nMapId = ObjBuffer:PopObject(ParamHandle)
 	local nTimeOut = ObjBuffer:PopObject(ParamHandle)
 	local nPlayerIndex = SearchPlayer(szName)	
@@ -70,6 +119,7 @@ end
 function player_logout(nPlayerIndex)
 	if nPlayerIndex > 0 then
 		local szName = CallPlayerFunction(nPlayerIndex, GetName)
+		cancel_simcity_timer(szName)
 		local handle = OB_Create()
 		ObjBuffer:PushObject(handle, szName)
 		RemoteExecute("\\script\\missions\\arena\\protocol.lua", "player_logout", handle)
@@ -78,6 +128,11 @@ function player_logout(nPlayerIndex)
 end
 
 function player_cancel(szName)
+	cancel_simcity_timer(szName)
+	player_cancel_remote(szName)
+end
+
+function player_cancel_remote(szName)
 	local handle = OB_Create()
 	ObjBuffer:PushObject(handle, szName)
 	RemoteExecute("\\script\\missions\\arena\\protocol.lua", "player_cancel", handle)
@@ -130,14 +185,15 @@ function signup_callback(nParam, ParamHandle)
 	local bFind = ObjBuffer:PopObject(ParamHandle)
 	
 	local nPlayerIndex = SearchPlayer(szName)
-	if nPlayerIndex > 0 and not bFind then
-		CallPlayerFunction(nPlayerIndex, Talk, 1, "", "B¸o danh thµnh c«ng. §ang t×m ®èi thñ, xin h·y ®îi …")
+	if nPlayerIndex > 0 and bFind ~= 1 then
+		CallPlayerFunction(nPlayerIndex, Talk, 1, "", "Bao danh thanh cong. Dang tim doi thu, xin hay doi...")
 	end
 end
 
 
 function finded_oppoent(ParamHandle, ResultHandle)
 	local szName = ObjBuffer:PopObject(ParamHandle)
+	cancel_simcity_timer(szName)
 	local nPlayerIndex = SearchPlayer(szName)
 	if nPlayerIndex > 0 then
 		CallPlayerFunction(nPlayerIndex, Msg2Player, "T×m ®­îc ®èi thñ")
@@ -195,43 +251,28 @@ end
 
 
 function apply_signup()
-	--§ãng chøc n¨ng c¶nh kü tr­êng  - Modified By NgaVN - 20120305
-	do return end
+	if SIMCITY_DUEL_ENABLED ~= 1 then
+		return Talk(1, "", "Canh Ky Truong 1 dau 1 dang tam tat trong Web Admin.")
+	end
+	if not tbPlayer:CheckState() then
+		return Talk(1, "", "Trang thai hien tai khong the bao danh Canh Ky Truong.")
+	end
 	local nMapId = GetWorldPos()
 	if not %tbAccMapList[nMapId] then
-		return Talk(1, "", "ChØ cã thÓ b¸o danh t¹i t©n thñ th«n hoÆc thµnh thÞ.")
+		return Talk(1, "", "Hay bao danh tai thanh thi hoac thon tran.")
 	end
-
-	if ST_IsTransLife() ~= 1  and GetLevel() < 125 then
-		return Talk(1, "", "CÊp 125 trë lªn míi ®­îc b¸o danh.")
-	end
-
-	local _, nValue = GetRoleEquipValue()
-	if nValue < 400 then
-		return Talk(1, "", "Gi¸ trÞ binh gi¸p 400 trë lªn míi ®­îc b¸o danh.")
-	end
-
-	local nMapId = GetWorldPos()
-	if not tbPlayer:CheckState() then
-		return Talk(1, "", "Trong tr¹ng th¸i ñy th¸c hoÆc bµy b¸n kh«ng thÓ b¸o danh.")
-	end
-	
+	local szName = GetName()
 	local nRank = tbPlayer:GetRank()
-	local nGroup = 0	
-	if nRank < 1200 then
+	local nGroup = floor(nRank / 100) + 1
+	if nGroup < 1 then
 		nGroup = 1
-	elseif 1200 <= nRank and nRank <= 2599 then
-		nGroup = ceil((nRank - 1200 + 1)/50 + 1)
-	else
-		nGroup = ceil((2600 - 1200 + 1)/50 + 1)
+	elseif nGroup > 30 then
+		nGroup = 30
 	end
-	
 	local handle = OB_Create()
-	ObjBuffer:PushObject(handle, GetName())
+	ObjBuffer:PushObject(handle, szName)
 	ObjBuffer:PushObject(handle, nGroup)
-	if nGroup > 0 then
-		RemoteExecute("\\script\\missions\\arena\\protocol.lua", "apply_search_opponents", handle, "signup_callback")
-	end
+	RemoteExecute("\\script\\missions\\arena\\protocol.lua", "apply_search_opponents", handle, "signup_callback")
 	OB_Release(handle)
+	schedule_simcity_timer(szName)
 end
-

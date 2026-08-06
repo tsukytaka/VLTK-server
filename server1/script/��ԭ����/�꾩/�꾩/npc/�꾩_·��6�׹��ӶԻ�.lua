@@ -22,7 +22,6 @@ end;
 
 function W12_sale_get()
 	Say("NÕu ®· nh­ vËy T¹i h¹ xin nãi th¼ng. Xin hái ng­¬i cã thÓ cho ta xem bøc mËt hµm trong ng­êi cña ng­¬i kia ®­îc kh«ng? ë ®©y t¹i h¹ cã 20000 l­îng gäi lµ cã chót lßng thµnh.",2,"Thø lçi. Ta ph¶i nghe theo lêi dÆn cña DÞch quan, kh«ng giao bøc mËt hµm nµy cho ng­êi kh¸c /W12_sale_no","VËy nÕu nh­ ta tÆng ng­¬i 20000 l­¬ng b¹c vµ tÊm ¸o da nµy th× thÕ nµo? /W12_sale_yes")
-	--Say("NÕu ®· nh­ vËy T¹i h¹ xin nãi th¼ng. Xin hái ng­¬i cã thÓ cho ta xem bøc mËt hµm trong ng­êi cña ng­¬i kia ®­îc kh«ng? ë ®©y t¹i h¹ cã 20000 l­îng gäi lµ cã chót lßng thµnh.",1,"Thø lçi. Ta ph¶i nghe theo lêi dÆn cña DÞch quan, kh«ng giao bøc mËt hµm nµy cho ng­êi kh¸c /W12_sale_no")
 end
 
 function W12_sale_yes()

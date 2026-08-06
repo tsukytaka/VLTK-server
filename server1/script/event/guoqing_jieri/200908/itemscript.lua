@@ -4,7 +4,7 @@ Include("\\script\\event\\guoqing_jieri\\200908\\head.lua")
 
 function tbGuoqing0908:UseCapHepin(nItemIndex)
 	local nDate = tonumber(GetLocalDate("%Y%m%d"))
-	if nDate >= 20500927 then
+	if nDate >= 20090927 then
 		Talk(1, "" ,"Ho¹t ®éng ®· kÕt thóc.")
 		return 0
 	end
@@ -51,7 +51,7 @@ local tbAwardList =
 
 function tbGuoqing0908:UseCapOther(nItemIndex)
 	local nDate = tonumber(GetLocalDate("%Y%m%d"))
-	if nDate >= 20500927  then
+	if nDate >= 20090927  then
 		Talk(1, "" ,"Ho¹t ®éng ®· kÕt thóc.")
 		return 0
 	end

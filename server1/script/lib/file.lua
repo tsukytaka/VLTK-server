@@ -2,6 +2,25 @@ IncludeLib("FILESYS")
 
 ------------------------------------------------------------------------------------
 
+function GS_SetData(filename,szsect,szkey,szvalue)
+	IniFile_SetData(filename, szsect, szkey, szvalue)	
+end
+
+function GS_GetData(filename,szsect,szkey)
+	return IniFile_GetData(filename, szsect, szkey)
+end
+
+function GS_SaveData(filename)
+	IniFile_Save(filename,filename)
+end
+
+function GS_LoadFile(filename)
+	if (IniFile_Load(filename,filename) == 0) then 
+			File_Create(filename)
+			IniFile_Load(filename, filename)
+	end
+end
+
 -- 打开配置文件
 function ini_loadfile(filename, is_create)
 	if (IniFile_Load(filename, filename) == 0) and (is_create ~= nil) then

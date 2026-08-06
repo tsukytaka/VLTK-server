@@ -6,7 +6,6 @@
 -- ´´½¨Ê±¼ä£º2009-06-01 14:27:01
 
 -- ======================================================
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 Include("\\script\\event\\birthday_jieri\\200905\\class.lua");
 Include("\\script\\task\\system\\task_string.lua");
@@ -28,11 +27,6 @@ Include("\\script\\vng_event\\201203_huyenvulenh\\main.lua")
 Include("\\script\\vng_event\\2012_vlnb\\main.lua")
 
 function main() 
-if (tbBirthday0905:IsActDate() == 1) then                                                                            
-	CreateTaskSay({"<dec><npc>".."§©y lµ lo¹i tiÒm n¨ng trêi ban nh­ng rÊt Ýt ng­êi biÕt béc ph¸t lo¹i tiÒm lùc nµy. Ta bi",
-		"Ta muèn nhËn Nh©n gi¶ v« ®Þch quyÕt/tbBirthday0905_renzhewudi",                     
-		"Tù ta cã thÓ kh¬i dËy søc m¹nh tiÒm tµng cña b¶n th©n./OnCancel"});                 
-else
 	local nCurDate = tonumber(GetLocalDate("%Y%m%d"))          
 	local nMonth =tonumber(GetLocalDate("%d"))
 	local IsDailyTSK = GetTask(Task_Daily_Quest)
@@ -43,7 +37,7 @@ else
 		SetTask(Task_lag_TskID, 0)
 	end                                                                                     
 	local tbOpt = {};                                                                                              
-	local szTitle = format("- Chµo mõng b¹n ®Õn víi <color=yellow>Vâ L©m TruyÒn Kú<color=yellow><enter>- <color=Red>C­u Niªn T­¬ng Phïng <color>");   
+	local szTitle = format("- Chµo mõng b¹n ®Õn víi <color=yellow>Vâ L©m TruyÒn Kú<color>");   
 	tinsert(tbOpt, 1, szTitle)  
 	tbVngToolAward:AddDialog(tbOpt, "ChiÕn T©m T«n Gi¶") 
 	
@@ -72,21 +66,24 @@ else
 --	                }                        
 	end                                                                                              
         -- §Òn bï PQCH -Created By - AnhHH - 20110919
-	if (DenBuPQCH2011:IsActive() == 1 and DenBuPQCH2011:CheckAccount() == 1) then
-		tinsert(tbOpt, "NhËn phÇn th­ëng Phó Quý CÈm H¹p/#DenBuPQCH2011:GetAward()")
-	end
+	--  if (DenBuPQCH2011:IsActive() == 1 and DenBuPQCH2011:CheckAccount() == 1) then
+			tinsert(tbOpt, "NhËn phÇn th­ëng Phó Quý CÈm H¹p/#DenBuPQCH2011:GetAward()")
+	--  end
         
-	if tbVngEventThang6Reward:isActive() == 1 then
-		tinsert(tbOpt, "NhËn phÇn th­ëng ®Òn bï event trång c©y/#tbVngEventThang6Reward:main()")
-	end       
-	if (CFG_tagnewplayer	== 1) then		
-		tinsert(tbOpt,  "Ta muèn tham gia/NWP_main")
-	end
+--        if tbVngEventThang6Reward:isActive() == 1 then
+--        	tinsert(tbOpt, "NhËn phÇn th­ëng ®Òn bï event trång c©y/#tbVngEventThang6Reward:main()")
+--        end       
 	tinsert(tbOpt,  "KÕt thóc/OnCancel")
 	CreateTaskSay(tbOpt);                                                                                                  
-
-end;
-
+                                                                                                                               
+        --if (tbBirthday0905:IsActDate() ~= 1) then                                                                            
+                --Talk(1, "", "Ho¹t ®éng ®· kÕt thóc.");                                                                       
+                --return^                                                                                                       
+        --end                                                                                                                  
+                                                                                                                              
+        --CreateTaskSay({"<dec><npc>".."§©y lµ lo¹i tiÒm n¨ng trêi ban nh­ng rÊt Ýt ng­êi biÕt béc ph¸t lo¹i tiÒm lùc nµy. Ta bi
+                                        --"Ta muèn nhËn Nh©n gi¶ v« ®Þch quyÕt/tbBirthday0905_renzhewudi",                     
+                                        --"Tù ta cã thÓ kh¬i dËy søc m¹nh tiÒm tµng cña b¶n th©n./OnCancel"});                 
 end    
 
 function OnCancel()
@@ -94,7 +91,7 @@ end
 
 
 function tbBirthday0905_renzhewudi()
-	--do return end
+	do return end
 	if (GetLevel() <= 79 and tbBirthday0905:IsActDate() == 1) then
 		AddSkillState(512,20,1,60*60*18)--40ÅÜËÙ
 		AddSkillState(527,5,1,60*60*18)--500Ñª

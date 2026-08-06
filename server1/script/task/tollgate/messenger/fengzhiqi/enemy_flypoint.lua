@@ -8,7 +8,7 @@ Include("\\script\\task\\newtask\\newtask_head.lua") --µ÷ÓÃ nt_getTask Í¬²½±äÁ¿µ
 Include("\\script\\task\\tollgate\\messenger\\lib_messenger.lua") --µ÷ÓÃ×é¶ÓÅÐ¶Ï
 
 function messenger_killpoint()
-	local Uworld1205 = nt_getTask(1205)  --ÐÅÊ¹»ý·Ö
+	--local Uworld1205 = nt_getTask(3000)  --ÐÅÊ¹»ý·Ö
 	local Uworld1213 = nt_getTask(1213)  --Ë«±¶¾­ÑéÊ±¼ä
 	local Uworld1214 = nt_getTask(1214)  --¶¨µã´ò¹Ö¿ª¹Ø
 	

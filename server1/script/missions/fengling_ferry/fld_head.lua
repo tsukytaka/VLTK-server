@@ -1,7 +1,7 @@
 --AddEventItem(489)·çÁê¶ÉÁìÅÆ
 IncludeLib("FILESYS")
 Include("\\script\\lib\\log.lua")
-
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 MISSIONID = 15			--Î´¶¨
 FRAME2TIME = 18;		--18Ö¡ÓÎÏ·Ê±¼äÏàµ±ÓÚ1ÃëÖÓ
 boatMAPS = {337, 338, 339};		--ÄÏ°¶¶É´¬µØÍ¼ÒÀË³ĞòÎª£¬337ÄÏ°¶ÉÏÓÎ¡¢338ÖĞÓÎ¡¢339ÏÂÓÎ
@@ -12,70 +12,79 @@ TNPC_THIEF = {724, 725}
 TNPC_THIEF_COUNT = 30
 npcthiefpos = "\\settings\\maps\\ÖĞÔ­±±Çø\\¶É´¬\\¶É´¬Ë¢¹Öµã.txt"
 FLD_TIMER_1 = 20 * FRAME2TIME	--Ã¿20Ãë¹«²¼Ò»ÏÂÕ½¿ö
-FLD_TIMER_2 = 25 * 60 * FRAME2TIME		--´Ó±¨Ãûµ½½øÈë´ò±¦µØÍ¼40·ÖÖÓ
-ENDSIGN_TIME = 2 * 60 * FRAME2TIME/FLD_TIMER_1		--±¨ÃûÊ±¼ä½áÊø
-UPBOSS_TIME = 3 * 60 * FRAME2TIME/FLD_TIMER_1		--¿ª´ò15·ÖÖÓÊ±²úÉúµÚ1¸öBOSS
-UPBOSS_TIME2 = 9 * 60 * FRAME2TIME/FLD_TIMER_1		--¿ª´ò20·ÖÖÓÊ±²úÉúµÚ2¸öBOSS
-UPBOSS_TIME3 = 16 * 60 * FRAME2TIME/FLD_TIMER_1		--¿ª´ò25·ÖÖÓÊ±²úÉúµÚ3¸öBOSS
-REPORT_TIME = 24 * 60 * FRAME2TIME/FLD_TIMER_1 
+FLD_TIMER_2 = ThoiGianDiThuyenPLD * 60 * FRAME2TIME		--´Ó±¨Ãûµ½½øÈë´ò±¦µØÍ¼40·ÖÖÓ --- test 1
+ENDSIGN_TIME = ThoiGianBaoDanhPLD * 60 * FRAME2TIME/FLD_TIMER_1		--±¨ÃûÊ±¼ä½áÊø --- test 2
+UPBOSS_TIME = (ThoiGianDiThuyenPLD  - 10) * 60 * FRAME2TIME/FLD_TIMER_1		--¿ª´ò15·ÖÖÓÊ±²úÉúµÚ1¸öBOSS
+UPBOSS_TIME2 = (ThoiGianDiThuyenPLD -5) * 60 * FRAME2TIME/FLD_TIMER_1		--¿ª´ò20·ÖÖÓÊ±²úÉúµÚ2¸öBOSS
+UPBOSS_TIME3 = (ThoiGianDiThuyenPLD - 3) * 60 * FRAME2TIME/FLD_TIMER_1		--¿ª´ò25·ÖÖÓÊ±²úÉúµÚ3¸öBOSS
+REPORT_TIME = (ThoiGianDiThuyenPLD-1) * 60 * FRAME2TIME/FLD_TIMER_1 
 HUOYUEDU_TIME = 3 * 60 * FRAME2TIME/FLD_TIMER_1 -- »îÔ¾¶È»ñµÃÊ±¼ä£¬´¬¿ªÆôºóµÄ3·ÖÖÓ
-
+TASKID_COUNT_PLD = 5964
+TASKID_DAY_PLD = 5965
 MS_STATE = 1
 MS_TIMEACC_1MIN = 2
 MS_TIMEACC_20SEC = 3
-PLD_MODE_FILE = "/home/jxser/gateway/settings/pld_mode.cfg"
 
-function GetPLDMode()
-	local f = openfile(PLD_MODE_FILE, "r")
-	if (f == nil) then return 0 end
-	local line = read(f, "*l")
-	closefile(f)
-	if (line == nil) then return 0 end
-	local n = tonumber(line)
-	if (n == nil) then return 0 end
-	return n
-end
-
-function fld_cancel()
-end
-
-function fld_wanttakeboat(addr)	
-	local nMode = GetPLDMode()
+function fld_wanttakeboat(addr)
 	
+	if PhongLangDo ~= 1 then
+		Msg2Player("<color=yellow>Tİnh N¨ng nµy t¹m ®ãng!<color>")
+		return 0
+	end
+	
+	if GetTask(TASKID_DAY_PLD) ~= tonumber(GetLocalDate("%m%d")) then
+		SetTask(TASKID_COUNT_PLD, 0)
+		SetTask(TASKID_DAY_PLD, tonumber(GetLocalDate("%m%d")))
+	end
+	if GetTask(TASKID_COUNT_PLD) >= SoLanDiThuyenPLDTrongNgay then
+		Talk(1,"","<color=yellow>B¹n ®· ®i "..GetTask(TASKID_COUNT_PLD).."/"..SoLanDiThuyenPLDTrongNgay.." lÇn Phong L¨ng §é trong ngµy nay!<color>")
+		return
+	end
+	-- Gia nhËp m«n ph¸i míi lªn thuyÒn Modified - by AnhHH - 20110724
 	if (GetLastFactionNumber() == -1)then
-		Talk(1,"","B¹n ch­a gia nhËp m«n ph¸i kh«ng thÓ lªn thuyÒn")
+		Talk(1,"","§¹i hiÖp ch­a gia nhËp m«n ph¸i kh«ng thÓ lªn thuyÒn")
 		return
 	end
 	
 	local orgworld = SubWorld
 	local MapId = boatMAPS[addr]
-	if (MapId <= 0) then return end
+	if (MapId <= 0) then
+		print("error:fenglingdu script wrong! mapid is nil!")
+		return
+	end
 	local idx = SubWorldID2Idx(MapId)		
 	if (idx < 0) then
 		Say("Xin lçi! Phİa tr­íc ®ang cã nguy hiÓm! T¹m thêi ch­a thÓ lªn thuyÒn!.",0)
 		return
 	end
-	if (fld_haveroom() == 1) then return end
-	
-	local sz_msg
-	local str
-	
-	if (nMode == 2) then
-		sz_msg = format("CÇn ph¶i cã %s míi cã thÓ ®i tham gia Bê B¾c Phong L¨ng §é, sau khi thuËn lîi v­ît qua sÏ cã phÇn th­ëng", "LÖnh Bµi Thñy TÆc");
-		str = {	
-			format("Ta cã %s/use_suizeilingpai", "LÖnh Bµi Thñy TÆc"),
-			"§Ó ta suy nghÜ l¹i!/fld_cancel",
-		};
-	else
-		sz_msg = "Muèn ®ãn thuyÒn ®Õn bê B¾c Phong L¨ng §é ph¶i cã Phong L¨ng §é lÖnh bµi, ta sÏ cho ng­¬i lªn thuyÒn!";
-		str = {	
-			"Ta cã lÖnh bµi Phong L¨ng §é/use_lingpai",
-			"§Ó ta suy nghÜ l¹i!/fld_cancel",
-		};
+	if (fld_haveroom() == 1) then
+		return
+	end
+	local sz_msg = "Muèn ®ãn thuyÒn ®Õn bê B¾c Phong L¨ng §é ph¶i cã Phong L¨ng §é lÖnh bµi hoÆc ng­¬i ®­a ta <color=red>200<color> cuèn MËt ®å thÇn bİ, ta sÏ cho ng­¬i lªn thuyÒn!";
+	local str = {	
+		"Ta cã lÖnh bµi Phong L¨ng §é/use_lingpai",
+		--"Ta ®· thu thËp ®ñ 200 cuèn MËt ®å thÇn bİ/use_juanzhou",
+		"§Ó ta suy nghÜ l¹i!/fld_cancel",
+			};
+	--§iÒu chØnh thêi gian phong l¨ng ®é tèn phİ - Modified by DinhHQ - 20110504
+	if (check_new_shuizeitask() == 1) then
+		sz_msg = "Muèn ®ãn thuyÒn ®Õn bê B¾c Phong L¨ng §é ph¶i cã Phong L¨ng §é lÖnh bµi hoÆc ng­¬i ®­a ta <color=red>200<color> cuèn MËt ®å thÇn bİ, ta sÏ cho ng­¬i lªn thuyÒn!";
+		local str = {	
+		"Ta cã lÖnh bµi Phong L¨ng §é/use_lingpai",
+		--"Ta ®· thu thËp ®ñ 200 cuèn MËt ®å thÇn bİ/use_juanzhou",
+		"§Ó ta suy nghÜ l¹i!/fld_cancel",
+			};
 	end
 	
-	Say(" "..sz_msg, getn(str), str);
+	if (addr == 1) then
+		Say(" "..sz_msg, getn(str), str);
+	elseif (addr == 2) then
+		Say(" "..sz_msg, getn(str), str);
+	elseif (addr == 3) then
+		Say(" "..sz_msg, getn(str), str);
+	end
 end
+
 
 
 function fld_TakeBoat(plindex)
@@ -101,11 +110,11 @@ function fld_TakeBoat(plindex)
 	if (fld_haveroom() == 1) then
 		return 0
 	end
-	t = 1 - GetMissionV(MS_TIMEACC_1MIN)
+	t = ThoiGianBaoDanhPLD - GetMissionV(MS_TIMEACC_1MIN)
 	if (t <= 0) then
 		return 0
 	end
-	LeaveTeam()
+	--LeaveTeam()
 	--DinhHQ
 	--20110405: Fix bug, ngoµi thêi gian 13h, 15h, 17h, 19h bÕn 2 3 cã thÓ pk cõu s¸t
 	if (check_new_shuizeitask() == 1) then
@@ -119,7 +128,8 @@ function fld_TakeBoat(plindex)
 --		ForbidEnmity(1);
 --		SetCurCamp(1);
 --	end
-	
+	local nCount = tonumber(GetTask(TASKID_COUNT_PLD)) or 0
+	SetTask(TASKID_COUNT_PLD, nCount + 1)
 --	SetTaskTemp(200,1);
 	SetFightState(0)
 	posx, posy = fld_getadata(npcthiefpos)
@@ -127,11 +137,11 @@ function fld_TakeBoat(plindex)
 	posy = floor(posy/32)
 	AddMSPlayer(MISSIONID,1)
 	NewWorld(boatmapid, posx, posy)
-	Msg2Player("Cßn "..t.." phót thuyÒn rêi bÕn, ®Õn bê B¾c Phong L¨ng §é")
+	Msg2Player("cßn"..t.." phót thuyÒn rêi bÕn, ®Õn bê B¾c Phong L¨ng §é")
 	DisabledUseTownP(1)	--ÏŞÖÆÆäÔÚ¶É´¬ÄÚÊ¹ÓÃ»Ø³Ç·û
-	SetRevPos(175,1);		--ÉèÖÃÖØÉúµãÔÚÎ÷É½´å
+	SetRevPos(GetPlayerRev()); 		--ÉèÖÃÖØÉúµãÔÚÎ÷É½´å
 	SetLogoutRV(1)
-	SetCreateTeam(0);
+	--SetCreateTeam(0); --cho phep PT
 	SetDeathScript("\\script\\missions\\fengling_ferry\\fld_death.lua")
 	SubWorld = oldsubworldindex
 	PlayerIndex = orgplayerindex
@@ -232,13 +242,13 @@ end;
 
 
 -- ·çÁê¶ÉÁîÅÆ½»¸¶½çÃæ
-function use_lingpai()	--Ê¹ÓÃ·çÁê¶ÉÁîÅÆ
-	GiveItemUI( format("Giao diÖn giao phİ %s LÖnh Bµi", "LÖnh bµi Phong L¨ng §é"), format("Dïng 1 c¸i %s ®Æt vµo « trèng phİa d­íi. NÕu ng­¬i lÊy nh÷ng thø r¸c r­ëi kh¸c ®Æt vµo, ta sÏ kh«ng thÌm nhËn", "LÖnh bµi Phong L¨ng §é"), "exchange_lingpai_1", "no" );
+function	use_lingpai()	--Ê¹ÓÃ·çÁê¶ÉÁîÅÆ
+	GiveItemUI( format("Giao diÖn giao phİ %s LÖnh Bµi", "LÖnh bµi Phong L¨ng §é"), format("Dïng 1 c¸i %s ®Æt vµo « trèng phİa d­íi. N?u ng­¬i lÊy nh÷ng thø r¸c r­ëi kh¸c ®Æt vµo, ta sÏ kh«ng thÌm nhËn", "LÖnh bµi Phong L¨ng §é"), "exchange_lingpai_1", "no" );
 end;
 
 function use_suizeilingpai()
 --Modified By DinhHQ - 20110930
-	GiveItemUI( format("Giao diÖn giao phİ %s LÖnh Bµi", "LÖnh Bµi Thñy TÆc"), format("Dïng 1 c¸i %s ®Æt vµo « trèng phİa d­íi. NÕu ng­¬i lÊy nh÷ng thø r¸c r­ëi kh¸c ®Æt vµo, ta sÏ kh«ng thÌm nhËn", "LÖnh Bµi Thñy TÆc"), "exchange_lingpai_2", "no", 1 );
+	GiveItemUI( format("Giao diÖn giao phİ %s LÖnh Bµi", "LÖnh Bµi Thñy TÆc"), format("Dïng 1 c¸i %s ®Æt vµo « trèng phİa d­íi. N?u ng­¬i lÊy nh÷ng thø r¸c r­ëi kh¸c ®Æt vµo, ta sÏ kh«ng thÌm nhËn", "LÖnh Bµi Thñy TÆc"), "exchange_lingpai_2", "no", 1 );
 end
 
 function exchange_lingpai_1(ncount)
@@ -302,18 +312,24 @@ function exchange_lingpai(ncount, ntype)
 end;
 
 function check_new_shuizeitask()
-	if (GetPLDMode() == 2) then
+	local nHour = tonumber(GetLocalDate("%H"));
+	--§iÒu chØnh thêi gian phong l¨ng ®é tèn phİ - Modified by DinhHQ - 20110504
+	local tb_sptime = {
+		[10] = 1,
+		[14] = 1,
+		[16] = 1,
+		[18] = 1,
+		[20] = 1,
+	};
+	if (tb_sptime[nHour] and tb_sptime[nHour] == 1) then
 		return 1
+	else
+		return 0
 	end
-	return 0
+end	
+
+function fld_cancel()
 end
+
 function no()
 end;
-
-function StartPLDNormal()
-	fenglingdu_main()
-end
-
-function StartPLDThuyTac()
-	fenglingdu_main()
-end

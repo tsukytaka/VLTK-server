@@ -1,11 +1,10 @@
 Include("\\script\\event\\cookies2007\\head.lua");
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 function main(nItemIdx)
-	if (CFG_cookies2007	== 0) then
-		Say("Nguyªn liÖu nµy ®· ®Ó qu¸ h¹n sö dông. Kh«ng thÓ dïng ®Ó lµm b¸nh n÷a.", 0);
-		return 0;
-	end;
+	--if (checkcookies2007Date(20070424) ~= 1) then
+		--Say("Nguyªn liÖu nµy ®· ®Ó qu¸ h¹n sö dông. Kh«ng thÓ dïng ®Ó lµm b¸nh n÷a.", 0);
+		--return 0;
+	--end;
 	
 	local nteam = GetTeamSize();
 	if (nteam ~= 2) then

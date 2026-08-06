@@ -1,4 +1,6 @@
---Á½ºşÇø ÄÏÔÀÕò ²èÌ¯ÀÏ°å¶Ô»°
+-- MÉn Tø ThÈm ë Nam Nh¹c TrÊn - Editor by AloneScript (Linh Em)
+
+Include("\\script\\lib\\alonelib.lua");
 
 function main(sel)
 	if ( GetTask(1256) == 1 ) then
@@ -19,7 +21,7 @@ function main(sel)
 	if (i == 0) then
 		Talk(1,"","Kh¸ch quan! §· ®Õn Hoµnh s¬n nhÊt ®Şnh ph¶i thö trµ V©n Vô ë chç chóng ta ®Êy. ")
 	elseif (i == 1) then
-		Talk(1,""," 'Danh s¬n danh thñy xuÊt danh trµ', trµ V©n Vô lµ ®Æc s¶n cña Hoµnh s¬n chóng ta tõ l©u ®· thµnh danh, sím ®· ®­îc liÖt vµo danh s¸ch cèng phÈm ®êi §­êng. ")
+		Talk(1,"","“Danh s¬n danh thñy xuÊt danh trµ”, trµ V©n Vô lµ ®Æc s¶n cña Hoµnh s¬n chóng ta tõ l©u ®· thµnh danh, sím ®· ®­îc liÖt vµo danh s¸ch cèng phÈm ®êi §­êng. ")
 	else
 		Talk(1,"","Mïi vŞ trµ V©n Vô rÊt nång, h­¬ng khİ ngµo ng¹t, tinh khiÕt mµ kh«ng nh¹t, nång mµ kh«ng ch¸t, pha lªn 1 Êm trµ, kh«ng chØ cã thÓ ®­îc gi¶i kh¸t mµ cßn cã thÓ gi¶i ®éc")
 	end

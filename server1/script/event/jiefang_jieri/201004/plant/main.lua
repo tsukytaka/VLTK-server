@@ -155,8 +155,8 @@ end
 
 --------------------Seed--------------------
 FreedomSeed2010 = {}
-FreedomSeed2010.EVENT_START_DATE = 20100426
-FreedomSeed2010.EVENT_END_DATE 	= 20100531
+FreedomSeed2010.EVENT_START_DATE = 20170426
+FreedomSeed2010.EVENT_END_DATE 	= 20170531
 FreedomSeed2010.USE_MINLEVEL 	= 50
 FreedomSeed2010.USE_CHARGED 	= 1
 FreedomSeed2010.USE_DAILY_LIMIT 	= 4

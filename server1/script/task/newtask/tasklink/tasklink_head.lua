@@ -4,6 +4,7 @@
 
 Include("\\script\\global\\fuyuan.lua"); -- ÓÃÓÚÈ¡µÃ¸£ÔµµÄÎÄ¼ş
 Include("\\script\\task\\newtask\\newtask_head.lua"); -- ĞÂÈÎÎñÏµÍ³µÄÍ·ÎÄ¼ş£¬ÓÃÓÚÍ¬²½±äÁ¿
+Include("\\script\\global\\mel\\configserver.lua")
 
 IncludeLib("FILESYS");
 IncludeLib("BATTLE");
@@ -577,60 +578,48 @@ function tl_getfirstlink()
 end
 
 
--- ËÑÑ°ÈÎÎñÁ´×Ü±í£¬»ñÈ¡ÏàÓ¦µÈ¼¶µÄËæ»úÀàĞÍÈÎÎñ
--- ´«Èë²ÎÊı myTaskLevel ÎªÈÎÎñÁ´µÄµÈ¼¶ 1~20
--- ·µ»ØÖµÎª 1~6 1£ºÎïÆ·¹ºÂò 2£ºÎïÆ·Ñ°ÕÒ 3£ºÎïÆ·Õ¹Ê¾ 4£ºµØÍ¼ÊÕ¼¯ 5£ºÊıÖµÉı¼¶ 6£ºÉ½ºÓÉçğ¢
+-- Lo¹i nhiÖm vô D· TÈu
 function tl_gettasktype(myTaskLevel)
-
-	local i,j,k = 0,0,0
-	local myMainRate = 0 -- ËùÓĞÈÎÎñÀàĞÍÔÚÒ»¸öµÈ¼¶ÀïµÄ×Ü±ÈÂÊ
-	local myTaskType -- ·µ»ØµÄÈÎÎñÀàĞÍ
-	
-	for i = 1,getn(Task_MainLevelRate[myTaskLevel]) do
-		myMainRate = myMainRate + Task_MainLevelRate[myTaskLevel][i]
-	end
-	
-	-- ¸ù¾İÈ¨ÖØ¹«Ê½×îºóËæ»ú¼ÆËã³öÈÎÎñÀàĞÍ
-	j = random(1,myMainRate)
-	
-	for i = 1,getn(Task_MainLevelRate[myTaskLevel]) do
-		k = k + Task_MainLevelRate[myTaskLevel][i]
-		if ( j <= k) then
-			return i
+	if DaTauDoChiMatChi == 1 then
+		return 4
+	else
+		local i,j,k = 0,0,0
+		local myMainRate = 0 
+		local myTaskType
+		for i = 1,getn(Task_MainLevelRate[myTaskLevel]) do
+			myMainRate = myMainRate + Task_MainLevelRate[myTaskLevel][i]
 		end
+		j = random(1,myMainRate)
+		for i = 1,getn(Task_MainLevelRate[myTaskLevel]) do
+			k = k + Task_MainLevelRate[myTaskLevel][i]
+			if ( j <= k) then
+				return i
+			end
+		end
+		return 0
 	end
-	
-	-- Òì³£´¦Àí£¬Èç¹ûÍæ¼Ò¶¼Ñ¡²»µ½ÈÎÎñÀàĞÍµÄ»°¾ÍÑ¡ 4
-	
-	--tl_print("½Å±¾ÔÚÑ¡ÔñÈÎÎñÀàĞÍµÄÊ±ºò³ö´í£¡");
-	
-	return 0
-
 end
 
-
--- ËÑÑ°ÈÎÎñÁ´£¬È¡µÃÏàÓ¦µÄÈÎÎñ
--- ·µ»ØÖµÊÇ¸ÃÈÎÎñÔÚ±íÖĞµÄĞĞºÅ
 function tl_gettasklink(myTaskType,myTaskLevel)
-
-	local myTaskCol -- ¼ÇÂ¼ÈÎÎñµÄĞĞºÅ
-
-	if ( myTaskType == 1 ) then -- Èç¹ûÊÇ¹ºÂòÎïÆ·µÄÈÎÎñ
-		myTaskCol = tl_selecttask(Task_BuyGoods,myTaskLevel)
-	elseif ( myTaskType == 2 ) then
-		myTaskCol = tl_selecttask(Task_FindGoods,myTaskLevel)	
-	elseif ( myTaskType == 3 ) then
-		myTaskCol = tl_selecttask(Task_ShowGoods,myTaskLevel)	
-	elseif ( myTaskType == 4 ) then
-		myTaskCol = tl_selecttask(Task_FindMaps,myTaskLevel)
-	elseif ( myTaskType == 5 ) then
-		myTaskCol = tl_selecttask(Task_UpGround,myTaskLevel)
-	elseif ( myTaskType == 6 ) then
-		myTaskCol = tl_selecttask(Task_WorldMaps,myTaskLevel)
+	if DaTauDoChiMatChi == 1 then
+		return tl_selecttask(Task_FindMaps,myTaskLevel)
+	else
+		local myTaskCol
+		if ( myTaskType == 1 ) then
+			myTaskCol = tl_selecttask(Task_BuyGoods,myTaskLevel)
+		elseif ( myTaskType == 2 ) then
+			myTaskCol = tl_selecttask(Task_FindGoods,myTaskLevel)	
+		elseif ( myTaskType == 3 ) then
+			myTaskCol = tl_selecttask(Task_ShowGoods,myTaskLevel)	
+		elseif ( myTaskType == 4 ) then
+			myTaskCol = tl_selecttask(Task_FindMaps,myTaskLevel)
+		elseif ( myTaskType == 5 ) then
+			myTaskCol = tl_selecttask(Task_UpGround,myTaskLevel)
+		elseif ( myTaskType == 6 ) then
+			myTaskCol = tl_selecttask(Task_WorldMaps,myTaskLevel)
+		end
+		return myTaskCol
 	end
-
-	return myTaskCol
-
 end
 
 
@@ -858,7 +847,7 @@ local myWhen, myWhere, myWho, myWhy1, myWhy2, myWhat, myMainTalk
 		myWho = TabFile_GetCell(TL_TASKBUYTALK, tl_gettalkvalue(3), "Who")
 		myWhat = TabFile_GetCell(TL_TASKBUYTALK, tl_gettalkvalue(6), "What")
 		
-		myMainTalk = "H·y ®i <color=yellow>"..myTaskInfo1.."<color> Mua gióp ta <color=yellow>"..myTaskOrder.."<color> vÒ ®©y!";
+		myMainTalk = "H·y ®i <color=yellow>"..myTaskInfo1.."<color> mua gióp ta <color=yellow>"..myTaskOrder.."<color> vÒ ®©y!";
 		
 		myTaskMainInfo = myMainTalk
 		
@@ -884,7 +873,7 @@ local myWhen, myWhere, myWho, myWhy1, myWhy2, myWhat, myMainTalk
 			myTaskMainInfo = "1 c¸i <color=yellow>"..myTaskInfo1.."<color>"
 			myMainTalk = "H·y gióp ta ®i t×m mãn nµy: <color=yellow>"..myTaskMainInfo.."<color>.";
 		else		
-			myMainTalk = "H·y gióp ta ®i t×m mãn nµy: <color=yellow>"..myTaskInfo1.."<color>£¬<color=yellow>"..myTaskOrder.."<color>, nhá nhÊt: <color=yellow>"..myTaskInfo2.."<color>, lín nhÊt: <color=yellow>"..myTaskInfo3.."<color>.";
+			myMainTalk = "H·y gióp ta ®i t×m mãn nµy: <color=yellow>"..myTaskInfo1.."<color> <color=yellow>"..myTaskOrder.."<color>, nhá nhÊt: <color=yellow>"..myTaskInfo2.."<color>, lín nhÊt: <color=yellow>"..myTaskInfo3.."<color>.";
 		end
 
 		myTaskMainInfo = myMainTalk
@@ -925,7 +914,7 @@ local myWhen, myWhere, myWho, myWhy1, myWhy2, myWhat, myMainTalk
 			myTaskInfo3 = "MËt chİ "
 		end
 
-		myTaskMainInfo = "Ng­¬i h·y ®Õn <color=yellow>"..myTaskOrder.."<color> t×m gióp ta <color=yellow>"..myTaskInfo1.."<color> quyÓn <color=yellow> "..myTaskInfo3.." <color>.";
+		myTaskMainInfo = "Ng­¬i h·y ®Õn <color=yellow>"..myTaskOrder.."<color> t×m gióp ta <color=yellow>"..myTaskInfo1.."<color> quyÓn <color=yellow>"..myTaskInfo3.."<color>.";
 		
 	elseif (myTaskType == 5) then
 
@@ -960,7 +949,7 @@ local myWhen, myWhere, myWho, myWhy1, myWhy2, myWhat, myMainTalk
 			myTaskInfo3 = "®iÓm tİch lòy Tèng Kim "
 		end
 		
-		myTaskMainInfo = "H·y ®i n©ng cÊp <color=yellow>"..myTaskInfo3.." "..myTaskInfo1.."<color>.";
+		myTaskMainInfo = "H·y mau ®i n©ng cÊp <color=yellow>"..myTaskInfo1.." "..myTaskInfo3.."<color>.";
 		
 	elseif (myTaskType == 6) then
 
@@ -1022,7 +1011,7 @@ function GetPlayerSex()
 local mySex -- ÓÃÒÔÏÔÊ¾ÈËÎïĞÔ±ğµÄ×Ö·û
 
 	if (GetSex() == 0) then
-		mySex = "C«ng tö "
+		mySex = "C«ng tö"
 	else
 		mySex = "N÷ hiÖp"
 	end
@@ -1111,7 +1100,6 @@ local myTableRow = TabFile_GetRowCount(myTaskTextID)
 			myTaskVariable[j] = {myTaskLevel,myTaskStart,myTaskEnd}
 			
 		end
-
 		
 --		tl_print("ÈÎÎñµÈ¼¶Á´£º"..j.."Ê±³õÊ¼ÖµÎª£º"..myTaskVariable[j][2].."  ×î¸ßÖµÎª£º"..myTaskVariable[j][3].."  ĞèÇóµÈ¼¶Îª£º"..myTaskVariable[j][1]);
 	

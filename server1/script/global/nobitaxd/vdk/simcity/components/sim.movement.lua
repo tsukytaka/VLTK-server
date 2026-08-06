@@ -870,22 +870,7 @@ SimMovement.Citizen = {
             
         end
 
-        -- [TK RALLY 2026-06-28] dieu huong TK bot khi KHONG danh: co boss MINH -> ve THU; boss DICH -> qua DANH; chua co boss -> don GIUA map (soi dong, het idle/march cho cu).
-        if tbNpc.tongkim == 1 and tbNpc.worldInfo and tbNpc.isFighting == 0 and tbNpc.camp then
-            local _wi = tbNpc.worldInfo
-            local _myM = _wi.tkMarshal and _wi.tkMarshal[tbNpc.camp]
-            local _enM = _wi.tkMarshal and _wi.tkMarshal[(tbNpc.camp == 1) and 2 or 1]
-            local _myA = _myM and _myM[3] and NPCINFO_GetNpcCurrentLife and (NPCINFO_GetNpcCurrentLife(_myM[3]) or 0) > 0
-            local _enA = _enM and _enM[3] and NPCINFO_GetNpcCurrentLife and (NPCINFO_GetNpcCurrentLife(_enM[3]) or 0) > 0
-            local _tx, _ty
-            if _myA then _tx = _myM[1]; _ty = _myM[2]   -- co boss minh -> ve THU
-            elseif _enA then _tx = _enM[1]; _ty = _enM[2]   -- boss dich -> qua DANH
-            elseif _wi.tkCenter then _tx = _wi.tkCenter[1]; _ty = _wi.tkCenter[2] end   -- chua co boss -> don GIUA map
-            if _tx then
-                if GetDistanceRadius(myPosX, myPosY, _tx, _ty) > 6 then NpcRun(tbNpc.finalIndex, _tx + random(-6, 6), _ty + random(-6, 6)) end
-                return 1   -- da co diem rally; fight-trigger o tren lo danh dich gan
-            end
-        end
+        -- TK bot tiep tuc tuan tra va giao chien binh thuong, ke ca khi Nguyen Soai xuat hien.
 
         -- Khong phai dang keo xe
         -- [STALL FIX 2026-06-19] TẮT stuck-respawn: bot NGỒI BÁN (stall) đứng yên 1 chỗ theo thiết kế →

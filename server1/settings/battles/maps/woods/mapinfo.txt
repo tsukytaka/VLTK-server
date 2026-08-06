@@ -11,9 +11,6 @@ SinglePos2=50656,99200
 
 [Area_1]
 
-;BOSS模式BOSS刷出点
-bosspos=\\settings\\battles\\maps\\woods\boss1.txt
-
 ;本区域后营2重生点
 homepos=\\settings\\battles\\maps\\woods\\后营2.txt
 
@@ -70,8 +67,6 @@ camparea=0
 
 [Area_2]
 
-;BOSS模式BOSS刷出点
-bosspos=\\settings\\battles\\maps\\woods\boss2.txt
 
 ;本区域后营4重生点
 homepos=\\settings\\battles\\maps\\woods\\后营4.txt

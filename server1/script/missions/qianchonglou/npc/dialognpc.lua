@@ -40,7 +40,7 @@ function give_award()
 end
 --§ãng tİnh n¨ng thiªn trïng l©u - Modified By DinhHQ - 20120402
 function dialog()
-do return end
+--do return end
 	local szTitle = "Sau khi më phã b¶n, mçi ng­êi ch¬i sÏ nhËn ®­îc sè ®iÓm c¬ së nhÊt ®Şnh, mçi lÇn ph¸t ra c«ng kİch sÏ tiªu hao ®iÓm c¬ së. C¸c b¹o né kh«ng gièng nhau sÏ tiªu hao ®iÓm c¬ së kh«ng gièng nhau, cã thÓ th«ng qua viÖc nhÊn chuét vµo bªn ph¶i bªn tr¸i trªn mµn h×nh ®Ó ®æi ®¼ng cÊp b¹o né. §¼ng cÊp b¹o né cµng cao, th× tØ lÖ ®¸nh tróng qu¸i vËt cµng lín. Sau khi ®¸nh tróng qu¸i vËt sÏ nhËn ®­îc phÇn th­ëng, khi ®iÓm c¬ së bŞ tiªu hao hÕt, th× còng cã thÓ dïng ®iÓm phÇn th­ëng ®Ó ®æi b¹o né. Cø mçi lÇn ®¸nh tróng sè l­îng qu¸i vËt nhÊt ®Şnh, th× cã thÓ nhËn ®­îc l­îng b¹o né t­¬ng ®èi lín, cã thÓ ®¸nh tróng tÊt c¶ ®Şch nh©n trong ph¹m vi xung quanh."
 	local tbOpt = 
 	{
@@ -54,4 +54,4 @@ end
 
 Include("\\script\\misc\\eventsys\\type\\npc.lua")
 
---pEventType:Reg("Quan nh¾c nhë Hoµng Thµnh T­", "Thiªn Trïng L©u", dialog, {})
+--pEventType:Reg("Ch­ëng §¨ng Cung N÷","Thiªn Trïng L©u", dialog, {})

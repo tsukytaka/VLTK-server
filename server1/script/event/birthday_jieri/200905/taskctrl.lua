@@ -40,8 +40,8 @@ function tbTask:_init(nstartdate, nenddate)
 	self.tsk_msg_date			= 2608;		-- 每个信使任务每天只能作一次
 	self.tsk_msg_needcount		= 2617;		-- 每个信使任务完成所需要的数量
 			
-	self.item_expiredtime1	= 20500720;
-	self.item_expiredtime2	= 20500728;
+	self.item_expiredtime1	= 20090720;
+	self.item_expiredtime2	= 20290728;
 	
 end
 

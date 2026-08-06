@@ -32,7 +32,7 @@ function ws_main(nTongID, nWorkshopID)
 	end
 	local aryszContent = {
 		"Söa th«ng th­êng/#repair_ok1".."("..nTongID..","..nWorkshopID..")",
-		"Söa gia cè/#repair_ok2".."("..nTongID..","..nWorkshopID..")",
+		"söa gia cè/#repair_ok2".."("..nTongID..","..nWorkshopID..")",
 		"NhËn ®­îc tói ®å nghÒ/#use_xiulibao("..nTongID..","..nWorkshopID..")",
 		"Kh«ng cÇn ®©u/cancel"
 	}
@@ -124,10 +124,10 @@ function repair_ok1(nTongID, nWorkshopID)
 end
 
 function repair_ok2(nTongID, nWorkshopID)
-	--if (TWS_GetDayOutput(nTongID, nWorkshopID) <= 0) then
-	--	Say("<#>Tæng qu¶n Thiªn c«ng ph­êng: H«m nay bËn viÖc qu¸, kh«ng thÓ gióp ng­¬i söa gia cè trang bÞ, ngµy mai h·y ®Õn nhÐ!", 0)
-	--	return 0;
-	-- end
+	if (TWS_GetDayOutput(nTongID, nWorkshopID) <= 0) then
+		Say("<#>Tæng qu¶n Thiªn c«ng ph­êng: H«m nay bËn viÖc qu¸, kh«ng thÓ gióp ng­¬i söa gia cè trang bÞ, ngµy mai h·y ®Õn nhÐ!", 0)
+		return 0;
+	end
 	local nLevel = TWS_GetUseLevel(nTongID, nWorkshopID)
 	TWS_ApplyUse(nTongID, nWorkshopID, 2)
 end

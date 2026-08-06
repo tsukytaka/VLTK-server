@@ -1,11 +1,10 @@
 -- 炼金活动 头文件
 Include("\\script\\misc\\taskmanager.lua")
-Include("\\script\\global\\nobitaxd\\config\\cfg_server.lua")
 
 tbRefiningIron = 
 {
 	nStartDate = 20100426,	-- 开始日期（前包）
-	nCloseDate = 20500607, 	-- 结束日期（后闭）
+	nCloseDate = 20100607, 	-- 结束日期（后闭）
 	
 	tbCity = 
 	{
@@ -96,7 +95,7 @@ tbRefiningIron.tbAward =
 
 function tbRefiningIron:IsCarryOn()
 	local nDate = tonumber(GetLocalDate("%Y%m%d"));
-	if (CFG_jiefang_jieri2010	== 0) then
+	if nDate < self.nStartDate or nDate >= self.nCloseDate then
 		 return 0;
 	else	
 		 return 1;

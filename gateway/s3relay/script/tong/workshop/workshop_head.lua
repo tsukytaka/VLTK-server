@@ -18,12 +18,12 @@ function SVR_CheckUse(nTongID, nWorkshopID, szName)
 		if (GetTask(TASK_LP_COUNT) ~= 0) then --Èç¹ûÓÐ°ï»áÌØÊâÁîÅÆÈÎÎñ
 			local nRwlp = rwlp_taskcheck(nTongID, nWorkshopID);
 			local szLevel = "<color=yellow>"..GetTask(TASK_LP_ZONGGUANLEVEL).." -cÊp<color> ";
-			local szZGName = "<color=yellow>"..tab_Workshop[GetTask(TASK_LP_ZONGGUANIDX)].." Ph­êng tæng qu¶n<color>";
+			local szZGName = "<color=yellow>"..tab_Workshop[GetTask(TASK_LP_ZONGGUANIDX)].."Ph­êng tæng qu¶n<color>";
 			if (nRwlp == 2) then --Èç¹ûµØÍ¼ÊÇ¶ÔµÄ
-				Say("H×nh nh­ ng­¬i ®ang lµm nhiÖm vô lÖnh bµi, nhanh chãng t×m  "..szZGName.." xem «ng Êy cã gióp ®­îc g× cho ng­¬i kh«ng.", 0);
-				Msg2Player("T×m ®èi tho¹i "..szZGName.." trong ph¹m vi khu vùc.");
+				Say("H×nh nh­ ng­¬i ®ang lµm nhiÖm vô lÖnh bµi, nhanh chãng t×m  "..szZGName.."xem «ng Êy cã gióp ®­îc g× cho ng­¬i kh«ng.", 0);
+				Msg2Player("T×m ®èi tho¹i "..szZGName.."trong ph¹m vi khu vùc.");
 			elseif (nRwlp == 0) then --
-				Say("H×nh nh­ ng­¬i ®ang lµm nhiÖm vô lÖnh bµi, nh­ng tæng qu¶n khu vùc chung kh«ng qu¶n lý viÖc <color=yellow>th­ tiÕn cö<color> nµy, h·y ®Õn bang héi kh¸c t×m "..szZGName.." xem «ng Êy cã gióp ®­îc g× cho ng­¬i kh«ng.", 0);
+				Say("H×nh nh­ ng­¬i ®ang lµm nhiÖm vô lÖnh bµi, nh­ng tæng qu¶n khu vùc chung kh«ng qu¶n lý viÖc <color=yellow>th­ tiÕn cö<color> nµy, h·y ®Õn bang héi kh¸c t×m "..szZGName.."xem «ng Êy cã gióp ®­îc g× cho ng­¬i kh«ng.", 0);
 				Msg2Player("Kh«ng thÓ t×m thÊy <color=yellow>th­ tiÕn cö<color> t¹i khu vùc chung.");
 			elseif (nRwlp == 1) then --
 				rwlp_dedaojianshu(nTongID, nWorkshopID);
@@ -66,10 +66,10 @@ function RL_DoLevelUp(nTongID, nID, nToLevel)
 	
 	-- °ï»áÀúÊ·/ÊÂ¼þ¼ÇÂ¼¡¢Í¨Öª
 	local szExecutorName = TONGM_GetName(nTongID, ExecutorId);
-	local szRecord = wsGetName(eType).." Th¨ng lªn cÊp "..nToLevel.."cÊp";
+	local szRecord = wsGetName(eType).."Th¨ng lªn cÊp "..nToLevel.."cÊp";
 	local szRecordPlus;
 	if (szExecutorName ~= "") then
-		szRecordPlus = szExecutorName.." lµm cho "..szRecord;
+		szRecordPlus = szExecutorName.." lµm cho"..szRecord;
 	else
 		szExecutorName = "";
 		szRecordPlus = szRecord;
@@ -103,11 +103,11 @@ function RL_DoDegrade(nTongID, nID, nToLevel)
 	TONG_ApplyAddPerStandFund(nTongID, nMaintainAdd * 7)
 	
 	-- °ï»áÀúÊ·/ÊÂ¼þ¼ÇÂ¼¡¢Í¨Öª
-	local szRecord = wsGetName(eType).." Gi¶m xuèng cÊp "..nToLevel.." cÊp";
+	local szRecord = wsGetName(eType).."Gi¶m xuèng cÊp"..nToLevel.."cÊp";
 	local szRecordPlus;
 	local szExecutorName = TONGM_GetName(nTongID, ExecutorId);
 	if (szExecutorName ~= "") then
-		szRecordPlus = szExecutorName.." lµm cho "..szRecord;
+		szRecordPlus = szExecutorName.." lµm cho"..szRecord;
 	else
 		szExecutorName = "";
 		szRecordPlus = szRecord;
@@ -140,7 +140,7 @@ function RL_DoOpen(nTongID, nID)
 	local szRecordPlus;
 	local szExecutorName = TONGM_GetName(nTongID, ExecutorId);
 	if (szExecutorName ~= "") then
-		szRecordPlus = szExecutorName.." lµm cho "..szRecord;
+		szRecordPlus = szExecutorName.." lµm cho"..szRecord;
 	else
 		szExecutorName = "";
 		szRecordPlus = szRecord;
@@ -163,11 +163,11 @@ function RL_DoClose(nTongID, nID)
 	--ÖÜÎ¬»¤Õ½±¸»ù½ð±ä»¯
 	TONG_ApplyAddPerStandFund(nTongID, -nMaintainAdd * 7)	
 	-- °ï»áÀúÊ·/ÊÂ¼þ¼ÇÂ¼¡¢Í¨Öª
-	local szRecord = wsGetName(eType).." §ãng";
+	local szRecord = wsGetName(eType).."§ãng";
 	local szRecordPlus;
 	local szExecutorName = TONGM_GetName(nTongID, ExecutorId);
 	if (szExecutorName ~= "") then
-		szRecordPlus = szExecutorName.." lµm cho "..szRecord;
+		szRecordPlus = szExecutorName.." lµm cho"..szRecord;
 	else
 		szExecutorName = "";
 		szRecordPlus = szRecord;
@@ -192,7 +192,7 @@ function RL_DoDestroy(nTongID, nID)
 	TONG_ApplyAddPerStandFund(nTongID, -nMaintainAdd * 7)
 	
 	-- °ï»áÀúÊ·/ÊÂ¼þ¼ÇÂ¼¡¢Í¨Öª
-	local szRecord = wsGetName(eType).." Hñy bá";
+	local szRecord = wsGetName(eType).."Hñy bá";
 	local szRecordPlus;
 	local szExecutorName = TONGM_GetName(nTongID, ExecutorId);
 	if (szExecutorName ~= "") then
@@ -223,7 +223,7 @@ function RL_DoLearn(nTongID, eType)
 	--ÖÜÎ¬»¤Õ½±¸»ù½ð±ä»¯
 	TONG_ApplyAddPerStandFund(nTongID, nMaintainAdd * 7)	
 	-- °ï»áÀúÊ·/ÊÂ¼þ¼ÇÂ¼¡¢Í¨Öª
-	local szRecord = "§· x©y dùng "..wsGetName(eType);
+	local szRecord = "§· x©y dùng"..wsGetName(eType);
 	local szRecordPlus;
 	local szExecutorName = TONGM_GetName(nTongID, ExecutorId);
 	if (szExecutorName ~= "") then

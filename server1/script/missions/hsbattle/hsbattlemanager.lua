@@ -18,14 +18,14 @@ MapTab[1]= {212, 1577, 3288};
 function main()
 --[DinhHQ]
 --20110330: change request 30/03/2011
-do
-	Talk(1, "", "Chøc n¨ng t¹m ®ãng")
-	return
-end
+-- do
+	-- Talk(1, "", "Chøc n¨ng t¹m ®ãng")
+	-- return
+-- end
 	local tbSay = 
 	{
 		"<dec><npc>§¹i hiÖp t×m ta cã viÖc g×?",
-		"L«i ®µi Hoa S¬n tuyÖt ®Ønh/HSBattle_Dailog_Main",
+		-- "L«i ®µi Hoa S¬n tuyÖt ®Ønh/HSBattle_Dailog_Main",
 	}
 	tinsert(tbSay, "L«i ®µi Hoa S¬n/#huashanqunzhan_SignUpMain(1)")
 	tinsert(tbSay, "KÕt thóc ®èi tho¹i/OnCancel")

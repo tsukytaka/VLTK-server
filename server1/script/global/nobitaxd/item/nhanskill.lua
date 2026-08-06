@@ -1,12 +1,15 @@
 ------NhËn SKILL-----------
 Include("\\script\\global\\skills_table.lua");
 function NhanSkill()
-local szTitle = "Xin chµo Admin <color=red>"..GetName().."<color>,Nh÷ng chøc n¨ng bªn d­íi cã thÓ gióp b¹n kiÓm tra Server hoÆc hæ trî ng­êi ch¬i.\n\n<pic=137> Online    : <color=green>"..GetPlayerCount().."<color>"
+local szTitle = "Xin chµo Admin <color=red>"..GetName().."<color>,Nh÷ng chøc n¨ng bªn d­íi cã thÓ gióp b¹n kiÓm tra Server hoÆc hæ trî ng­êi ch¬i.\n\n<pic=137> Trùc tuyÕn: <color=green>"..GetPlayerCount().."<color>"
 local tbOpt =
 	{		
-		{"Vµo Ph¸i Vµ Häc Skill 120",choose_faction12x},
+		{"Vµo ph¸i vµ häc kü n¨ng 120",choose_faction12x},
+		{"Häc kü n¨ng 150 m«n ph¸i",knang150},
+		{"Häc kü n¨ng 180 m«n ph¸i",knang180},
+		{"NhËn Maxskill", NhanMaxSkill},
 		{"Céng ®iÓm kü n¨ng", congdiemkynang},
-		{"LÊy Skill Theo ID", LaySkillID},
+		{"LÊy kü n¨ng theo ID", LaySkillID},
 		{"§æi Tªn Nh©n VËt", doiten},	
 		--{"ChuyÓn ®æi ngò hµnh", nguhanh},
 		--{"TÈy Tñy",clear_attibute_point},
@@ -14,6 +17,10 @@ local tbOpt =
 		{"Tho¸t"},
 	}
 	CreateNewSayEx(szTitle, tbOpt)
+end
+
+function testserver()
+	return main()
 end
 
 ------------------------Cong Diem Ky Nang------------------------------
@@ -84,7 +91,7 @@ function congdiemkynang()
         Say("Nh©n vËt ®¹t cÊp 10 vµ ®· gia nhËp m«n ph¸i míi dïng ®­îc chøc n¨ng nµy.", 1, "Tho¸t/Quit")
         return
     end
-    Say("Ng­¬i muèn céng kü n¨ng thÕ nµo?", 5,
+    Say("Ng­êi muèn céng kü n¨ng thÕ nµo?", 5,
         "Céng theo tõng kü n¨ng/#Add_PointMagic(1,"..nFaction..")",
         "Céng theo h­íng luyÖn c«ng/#Add_PointMagic(2,"..nFaction..")",
         "Céng toµn bé kü n¨ng lªn cÊp cao nhÊt/#Add_PointMagic(3,"..nFaction..")",
@@ -131,7 +138,7 @@ function add_magic(nFaction)
     "Quay l¹i/main",
     "Tho¸t/Quit",
     }
-    Say(NpcName.."Ng­¬i ®· gia nhËp m«n ph¸i <color=yellow>"..nMonPhai.."<color>, ng­¬i muèn céng kü n¨ng thÕ nµo?", getn(tab_Content),tab_Content);
+    Say(NpcName.."Ng­êi ®· gia nhËp m«n ph¸i <color=yellow>"..nMonPhai.."<color>, ng­êi muèn céng kü n¨ng thÕ nµo?", getn(tab_Content),tab_Content);
 end
 function Add_PointMagic(nId,nFaction)
     if nFaction < 0 then
@@ -255,7 +262,7 @@ function Add_PointMagic(nId,nFaction)
             "Quay l¹i/#add_magic("..nFaction..")",
             "Tho¸t/Quit",
             }
-            Say(NpcName.."Ng­¬i lµ mét ®Ö tö cña ph¸i <color=yellow>"..nMonPhai.."<color>. M«n ph¸i cã tæng céng <color=green>"..nTongSoSkill.."<color> Kü n¨ng cã thÓ th¨ng cÊp. Ng­¬i míi chØ l·nh gi¸o ®­îc <color=green>"..CheckFullSkill.."<color> Kü n¨ng. H·y cè g¾ng tu luyÖn thªm, khi nµo ®Çy ®ñ <color=green>"..nTongSoSkill.."<color> Kü N¨ng míi cã thÓ sö dông chøc n¨ng nµy.", getn(tab_Content),tab_Content);
+            Say(NpcName.."Ng­êi lµ mét ®Ö tö cña ph¸i <color=yellow>"..nMonPhai.."<color>. M«n ph¸i cã tæng céng <color=green>"..nTongSoSkill.."<color> Kü n¨ng cã thÓ th¨ng cÊp. Ng­êi míi chØ l·nh gi¸o ®­îc <color=green>"..CheckFullSkill.."<color> Kü n¨ng. H·y cè g¾ng tu luyÖn thªm, khi nµo ®Çy ®ñ <color=green>"..nTongSoSkill.."<color> Kü N¨ng míi cã thÓ sö dông chøc n¨ng nµy.", getn(tab_Content),tab_Content);
             return
         end
         if GetMagicPoint() < nTongSoPoint_Need then --NÕu sè ®iÓm yªu cÇu kh«ng ®ñ ®Ó céng.
@@ -263,7 +270,7 @@ function Add_PointMagic(nId,nFaction)
             "Quay l¹i/#add_magic("..nFaction..")",
             "Tho¸t/Quit",
             }
-            Say(NpcName.."Ng­¬i lµ mét ®Ö tö cña ph¸i <color=yellow>"..nMonPhai.."<color>. M«n ph¸i cã tæng céng <color=green>"..nTongSoSkill.."<color> Kü n¨ng, yªu cÇu ph¶i cã Ýt nhÊt <color=green>"..nTongSoPoint_Need.."<color> ®iÓm Kü N¨ng míi cã thÓ n©ng cÊp. H·y tu luyÖn thªm ®i.", getn(tab_Content),tab_Content);
+            Say(NpcName.."Ng­êi lµ mét ®Ö tö cña ph¸i <color=yellow>"..nMonPhai.."<color>. M«n ph¸i cã tæng céng <color=green>"..nTongSoSkill.."<color> Kü n¨ng, yªu cÇu ph¶i cã Ýt nhÊt <color=green>"..nTongSoPoint_Need.."<color> ®iÓm Kü N¨ng míi cã thÓ n©ng cÊp. H·y tu luyÖn thªm ®i.", getn(tab_Content),tab_Content);
             return
         end
         for i=1,nTongSoSkill do
@@ -414,7 +421,7 @@ function doitennv(strings)
 end
 
 function nguhanh()
-local szTitle = "<npc>Ng­¬i cÇn g×?"
+local szTitle = "<npc>Ng­êi cÇn g×?"
 	local tbOpt =
 	{
 		{"ChuyÓn ®æi sang n÷ hÖ Kim", nukim},
@@ -429,7 +436,7 @@ if GetSex() == 1 then
 SetSeries(0)
 KickOutSelf()
 	else
-	Talk(1,"","Ng­¬i lµ Pª §ª µ ?")
+	Talk(1,"","Ng­êi lµ Pª §ª µ ?")
 end
 end
 
@@ -450,134 +457,130 @@ end
 --	return 1
 --end
 
+SKILL_90 = {
+    [0] = {318, 319, 321},
+    [1] = {322, 325, 323},
+    [2] = {339, 302, 342, 351},
+    [3] = {353, 355, 390},
+    [4] = {380, 328, 332},
+    [5] = {336, 337},
+    [6] = {357, 359},
+    [7] = {361, 362, 391},
+    [8] = {365, 368},
+    [9] = {372, 375, 394},
+}
+
+SKILL_120 = {
+    [0] = {709},
+    [1] = {708},
+    [2] = {710},
+    [3] = {711},
+    [4] = {712},
+    [5] = {713},
+    [6] = {714},
+    [7] = {715},
+    [8] = {716},
+    [9] = {717},
+}
+
+SKILL_150 = {
+    [0] = {1055, 1056, 1057},
+    [1] = {1058, 1059, 1060},
+    [2] = {1069, 1070, 1071, 1110},
+    [3] = {1066, 1067, 1068},
+    [4] = {1061, 1062, 1114},
+    [5] = {1063, 1064, 1065},
+    [6] = {1072, 1073, 1074},
+    [7] = {1075, 1076},
+    [8] = {1078, 1079},
+    [9] = {1080, 1081},
+}
+
+function learn_skill150_list(tbSkill, nLevel, szTag)
+    local szLearned = ""
+    if not tbSkill then
+        return szLearned
+    end
+    for i = 1, getn(tbSkill) do
+        if HaveMagic(tbSkill[i]) == -1 then
+            AddMagic(tbSkill[i], nLevel)
+        end
+        if szLearned ~= "" then
+            szLearned = szLearned.."<enter>"
+        end
+        szLearned = szLearned.."<color=yellow>"..GetSkillName(tbSkill[i]).."<color>"
+        WriteLog("[SkillLearn] "..GetName().." hoc "..szTag.." skill "..tbSkill[i].." cap "..nLevel)
+    end
+    return szLearned
+end
+
+function NhanMaxSkill()
+    local tbOpt = {
+        {"Max Skill 90", TanThu_MaxSkill, {90}},
+        {"Max Skill 120", TanThu_MaxSkill, {120}},
+        {"Max Skill 150", TanThu_MaxSkill, {150}},
+        {"Max Skill 180", TanThu_MaxSkill, {180}},
+        {"Trë L¹i", NhanSkill},
+        {"Tho¸t"},
+    }
+    CreateNewSayEx("NhËn Maxskill", tbOpt)
+end
+
+function TanThu_MaxSkillList(tbSkill, nLevel, szTag)
+    if not tbSkill then
+        return 0
+    end
+    local nCount = 0
+    for i = 1, getn(tbSkill) do
+        AddMagic(tbSkill[i], nLevel)
+        nCount = nCount + 1
+        WriteLog("[MaxSkill] "..GetName().." max "..szTag.." skill "..tbSkill[i].." cap "..nLevel)
+    end
+    return nCount
+end
+
+function TanThu_MaxSkill(nType)
+    local nFaction = GetLastFactionNumber()
+    if nFaction < 0 or nFaction > 9 then
+        Say("B¹n ph¶i gia nhËp mét trong 10 m«n ph¸i tr­íc khi nhËn Maxskill.", 0)
+        return
+    end
+    local nCount = 0
+    if nType == 90 then
+        nCount = TanThu_MaxSkillList(SKILL_90[nFaction], 20, "90")
+    elseif nType == 120 then
+        nCount = TanThu_MaxSkillList(SKILL_120[nFaction], 20, "120")
+    elseif nType == 150 then
+        nCount = TanThu_MaxSkillList(SKILL_150[nFaction], 20, "150")
+    elseif nType == 180 then
+        nCount = TanThu_MaxSkillList({SKILL_180[nFaction + 1]}, 20, "180")
+    end
+    Say("§· nhËn Maxskill "..nType..", tæng "..nCount.." kü n¨ng lªn cÊp 20.", 0)
+end
+
+function knang150()
+    local nFaction = GetLastFactionNumber()
+    if nFaction < 0 or nFaction > 9 then
+        Say("B¹n ph¶i gia nhËp mét trong 10 m«n ph¸i tr­íc khi häc kü n¨ng 150.", 0)
+        return
+    end
+
+    if GetLevel() < 150 then
+        Say("Nh©n vËt ph¶i ®¹t cÊp 150 míi häc ®­îc kü n¨ng 150.", 0)
+        return
+    end
+
+    if not SKILL_150[nFaction] then
+        Say("Kh«ng t×m thÊy cÊu h×nh kü n¨ng 150 cho m«n ph¸i nµy.", 0)
+        return
+    end
+
+    local szLearned = learn_skill150_list(SKILL_150[nFaction], 1, "150")
+    Say("§· häc kü n¨ng 150 m«n ph¸i:<enter>"..szLearned, 0)
+end
+
 function knang150xx()
-if check_faction() == 1 then
-	Talk(1, "", "Ch­a gia nhËp m«n ph¸i kh«ng thÓ nhËn Skill ®­îc.")
-	return end
-
-if GetLevel() >= 150 then	
-if GetLastFactionNumber() == 0 then  ------thieu lam
---if GetFaction() == "shaolin" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1055,20)
-AddMagic(1056,20)
-AddMagic(1057,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña ThiÕu L©m. ")
-
-elseif GetLastFactionNumber() == 1 then --------thien vuong vuong
---elseif GetFaction() == "tianwang" then
-AddMagic(1058,20)
-AddMagic(1059,20)
-AddMagic(1060,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Thiªn V­¬ng. ")
-
-elseif GetLastFactionNumber() == 2 then ---------duong mon
---elseif GetFaction() == "tangmen" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1069,20)
-AddMagic(1070,20)
-AddMagic(1071,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña §­êng M«n. ")
-
-elseif GetLastFactionNumber() == 3 then  ----------ngu doc
---elseif GetFaction() == "wudu" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1066,20)
-AddMagic(1067,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Ngò §éc.")
-
-elseif GetLastFactionNumber() == 4 then  ----------nga my
---elseif GetFaction() == "emei" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1061,20)
-AddMagic(1062,20)
-AddMagic(1114,20)
-AddMagic(332,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Nga My.")
-
-elseif GetFaction() == "cuiyan" then -----thuy yen
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1063,20)
-AddMagic(1065,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Thóy Yªn.")
-
-elseif GetLastFactionNumber == 5 then  -------thuy yen
---elseif GetFaction() == "cuiyan" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1063,20)
-AddMagic(1065,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Thóy Yªn.")
-
-elseif GetLastFactionNumber() == 6 then -----gaibang
---elseif GetFaction() == "gaibang" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1073,20)
-AddMagic(1074,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña C¸i Bang.")
-
-elseif GetLastFactionNumber() == 7 then -----thien nhan
---elseif GetFaction() == "tianren" then
-AddMagic(1075,20)
-AddMagic(1076,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Thiªn NhÉn.")
-
-elseif GetLastFactionNumber() == 8 then -------vo dang
---elseif GetFaction() == "wudang" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1078,20)
-AddMagic(1079,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Vâ §ang.")
-
-elseif GetLastFactionNumber() == 9 then ------con luon
---elseif GetFaction() == "kunlun" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-AddMagic(1080,20)
-AddMagic(1081,20)
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña C«n L«n.")
-
-elseif GetLastFactionNumber() == 10 then ------hoa son
---elseif GetFaction() == "kunlun" then
-		for i=1220,1229 do
-		DelMagic(i,0)
-		end
-		AddMagic(1364,20) --Skill Hoa son
-		AddMagic(1382,20) --Skill Hoa son
-		AddMagic(1363,20) --Skill Hoa son --------Skill
-		AddMagic(1365,20) --Skill Hoa son
-		AddMagic(1370,20) --Skill Hoa son
-		AddMagic(1369,20) --Skill Hoa son
-		AddMagic(1384,20) --Skill Hoa son
-		AddMagic(1368,20) --Skill Hoa son --------Doc Co Cuu Kiem
-Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Hoa S¬n.")
-end
-else
-Talk(1, "", "LuyÖn ®Õn cÊp 150 råi h·y ®Õn t×m ta")
-end
-Talk(1, "", "Ban khong thuoc bat ky phai nao!")
-		-- for i=1220,1229 do
-		-- DelMagic(i,0)
-		-- end
--- AddMagic(1063,20)
--- AddMagic(1065,20)
--- Talk(1,"","Chóc mõng b¹n ®· häc ®­îc tuyÖt kü 150 cña Thóy Yªn.")
+    return knang150()
 end
 
 SKILL_180 = {1220,1221,1223,1222,1224,1225,1227,1226,1228,1229 } --1235, 138, 
@@ -589,23 +592,34 @@ local tbEquipFreeCell =
 }
 
 function knang180()
-local nFaction = GetLastFactionNumber() + 1
-if nFaction==0 then
-Say("Kh«ng cã m«n ph¸i mµ ®åi nhËn skill thÊt truyÒn, ta kh«ng cã thêi gian ®ïa víi ng­¬i", 0)
-return
-else
-for i=1,10 do
-if (nFaction==i) then
-if (HaveMagic(SKILL_180[i]) == -1) then
-AddMagic(SKILL_180[i],20)
-Say("B¹n häc ®­îc kü n¨ng cÊp 180 <color=yellow>"..GetSkillName(SKILL_180[i]), 0)
-else
-Say("Ng­¬i ®· cã kü n¨ng thÊt truyÒn råi, ®õng tham lam", 0)
-return
-end
-end
-end
-end
+    if GetLevel() < 180 then
+        Say("Nh©n vËt ph¶i ®¹t cÊp 180 míi häc ®­îc kü n¨ng 180 m«n ph¸i.", 0)
+        return
+    end
+
+    local nFaction = GetLastFactionNumber()
+    if nFaction < 0 or nFaction > 9 then
+        Say("B¹n ph¶i gia nhËp mét trong 10 m«n ph¸i tr­íc khi häc kü n¨ng 180.", 0)
+        return
+    end
+
+    local nSkillId = SKILL_180[nFaction + 1]
+    local nCurrentLevel = HaveMagic(nSkillId)
+    if nCurrentLevel >= 1 then
+        Say("B¹n ®· häc kü n¨ng 180 <color=yellow>"..GetSkillName(nSkillId).."<color>.", 0)
+        return
+    end
+
+    AddMagic(nSkillId, 1)
+
+    local nLevelAfter = HaveMagic(nSkillId)
+    if nLevelAfter >= 0 then
+        Say("§· häc kü n¨ng 180 <color=yellow>"..GetSkillName(nSkillId).."<color>, cÊp hiÖn t¹i: "..nLevelAfter..".", 0)
+        WriteLog(format("[Skill180] Account:%s Name:%s Faction:%d Skill:%d Level:%d", GetAccount(), GetName(), nFaction, nSkillId, nLevelAfter))
+    else
+        Say("Kh«ng thÓ thªm kü n¨ng 180. H·y b¸o Admin kiÓm tra b¶ng skills.txt.", 0)
+        WriteLog(format("[Skill180-FAILED] Account:%s Name:%s Faction:%d Skill:%d", GetAccount(), GetName(), nFaction, nSkillId))
+    end
 end
 
 ------------------------Vµo ph¸i full skill 12x-----------------------------
@@ -619,7 +633,7 @@ end
 
 function choose_faction12x()
 	if check_faction12x() ~= 1 then
-		Talk(1, "", "Ng­¬i ®· gia nhËp m«n ph¸i.")
+		Talk(1, "", "Ng­êi ®· gia nhËp m«n ph¸i.")
 		return
 	end
 	local nSeries = GetSeries() + 1
@@ -640,14 +654,14 @@ function set_faction12x(nIndex)
 	{
 		{"X¸c nhËn!", do_set_faction12x, {nIndex}},
 		{"Trë VÒ.", choose_faction12x},
-		{"Kªt thóc ®èi tho¹i."},
+		{"KÕt thóc ®èi tho¹i."},
 	}
 	CreateNewSayEx(szTitle, tbOpt)
 end
 
 function do_set_faction12x(nIndex)
 	if check_faction12x() ~= 1 then
-		Talk(1, "", "Ng­¬i ®· gia nhËp m«n ph¸i.")
+		Talk(1, "", "Ng­êi ®· gia nhËp m«n ph¸i.")
 		return
 	end
 	local nResult = SetFaction(%tbFaction[nIndex].szFaction)
@@ -661,7 +675,7 @@ function do_set_faction12x(nIndex)
 	for i=1, getn(%tbFaction[nIndex].tbRank) do--Add X­ng HiÖu
 		SetRank(%tbFaction[nIndex].tbRank[i])
 	end
-	Talk(1, "KickOutSelf", format("Ng­¬i ®· gia nhËp thµnh c«ng ph¸i <color=yellow>%s", %tbFaction[nIndex].szShowName))
+	Talk(1, "KickOutSelf", format("Ng­êi ®· gia nhËp thµnh c«ng ph¸i <color=yellow>%s", %tbFaction[nIndex].szShowName))
 end
 
 
@@ -691,7 +705,7 @@ end
 AddMagicPoint(rollback_point)
 if (i ~= -1) then AddMagic(210, i) end 
 if (j ~= -1) then AddMagic(400, j) end
-Msg2Player("TÈy tñy thµnh c«ng! Ng­¬i cã "..rollback_point.." ®iÓm kü n¨ng ®Ó ph©n phèi l¹i.")
+Msg2Player("TÈy tñy thµnh c«ng! Ng­êi cã "..rollback_point.." ®iÓm kü n¨ng ®Ó ph©n phèi l¹i.")
 KickOutSelf()
 end
 function do_clear_prop()
@@ -709,14 +723,14 @@ AddEng(base_eng[player_series] - GetEng(1) + GetByte(Utask88, 4))
 end
 ------Lay Skill Theo ID--------
 function LaySkillID()
-local szTitle = "Xin chµo Admin <color=red>"..GetName().."<color>,Nh÷ng chøc n¨ng bªn d­íi cã thÓ gióp b¹n kiÓm tra Server hoÆc hæ trî ng­êi ch¬i.\n\n<pic=137> Online    : <color=green>"..GetPlayerCount().."<color>"
+local szTitle = "Xin chµo Admin <color=red>"..GetName().."<color>,Nh÷ng chøc n¨ng bªn d­íi cã thÓ gióp b¹n kiÓm tra Server hoÆc hæ trî ng­êi ch¬i.\n\n<pic=137> Trùc tuyÕn: <color=green>"..GetPlayerCount().."<color>"
 local tbOpt =
 {
-	{"LÊy Skills", g_AskClientStringEx, {"1200,20", 0, 256, "ID Skill", {AddSkill, {self}} }}, 
-	{"Xãa Skills", g_AskClientStringEx, {"1200", 0, 300, "ID Skill", {DelSkill, {self}} }},
-	--{"Xãa Skills", skillmoi},
-	{"LÊy Danh S¸ch Skills", g_AskClientStringEx, {"1200,1210", 0, 256, "ID Skill", {AddDSSkill, {self}} }}, 
-	{"Xãa Danh S¸ch Skills", g_AskClientStringEx, {"1,1500", 0, 256, "ID Skill", {DelDSSkill, {self}} }}, 
+	{"NhËn kü n¨ng", g_AskClientStringEx, {"1200,20", 0, 256, "ID kü n¨ng", {AddSkill, {self}} }}, 
+	{"Xãa kü n¨ng", g_AskClientStringEx, {"1200", 0, 300, "ID kü n¨ng", {DelSkill, {self}} }},
+	--{"Xãa kü n¨ng", skillmoi},
+	{"NhËn danh s¸ch kü n¨ng", g_AskClientStringEx, {"1200,1210", 0, 256, "ID kü n¨ng", {AddDSSkill, {self}} }}, 
+	{"Xãa danh s¸ch kü n¨ng", g_AskClientStringEx, {"1,1500", 0, 256, "ID kü n¨ng", {DelDSSkill, {self}} }}, 
 	{"Trë VÒ", NhanSkill},
 	{"Tho¸t."},
 }

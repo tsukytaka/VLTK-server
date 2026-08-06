@@ -15,10 +15,5 @@ SKILLS={
 	qiankun_wuliang_six={
 		enhancehit_rate={{{1,4},{20,4}},{{1,-1},{2,-1}}},
 	},
-	
-	--Ç¬À¤ÎÞÁ¿7×ª
-	qiankun_wuliang_seven={
-		enhancehit_rate={{{1,5},{20,5}},{{1,-1},{2,-1}}},
-	},
 
 }

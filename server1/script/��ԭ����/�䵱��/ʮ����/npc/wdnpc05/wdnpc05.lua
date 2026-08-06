@@ -30,8 +30,8 @@ function main()
 		else					--ÒÑ¾­Íê³É30¼¶ÈÎÎñ£¬ÉĞÎ´³öÊ¦£¨È±Ê¡¶Ô»°£©
 			Talk(1,"","Vâ c«ng bæn ph¸i rÊt chó träng viÖc tu luyÖn néi c«ng, di chuyÓn linh ho¹t, nh­ng kh«ng xem thÊp néi c«ng thuÇn khiÕt, còng ph¸t huy trong ®ã kh«ng İt uy lùc ch©n chİnh.")
 		end
---	elseif (Uworld50 < 10) and (GetLevel() >= 50) and (GetReputeLevel(GetRepute()) >= 4) then		-- µãĞÑĞìÖĞÔ­ÈÎÎñ£¬Æô¶¯
-		--		Talk(3,"Uworld50_get","Ğìá·ÔÀ£ºÖĞÔ­£¬²»ÊÇÎª¸¸ÓĞËù³É¼û£¬ÄÇ°×Ó¨Ó¨ĞÄÈçÉßĞ«£¬ÒõÏÕ¶¾À±£¬¾ø·ÇÁ¼Å¼¡£","ĞìÖĞÔ­£ºµù£¬ÄãÃ»ÓĞºÍÓ¨Ó¨¼û¹ıÃæ£¬¹âÆ¾½­ºş´«ÑÔ¾ÍÕâÑù°ÑÈË¼Ò¸øÁ¿ËÀÁË£¬ÆäÊµÓ¨Ó¨ËıÕæµÄÊÇ³öÓÙÄà¶ø²»È¾µÄºÃ¹ÃÄï£¬¾ø·ÇÈËÃÇ¿ÚÖĞËùËµµÄÄÇÑù¡£","Íæ¼Ò£ºĞìÇ°±²£¬ÄúÇÒ±ğĞÄ¼±£¬ĞìÉÙÏÀÈÃÎÒÀ´È°È°°É¡£")
+	elseif (Uworld50 < 10) and (GetLevel() >= 50) and (GetReputeLevel(GetRepute()) >= 4) then		-- µãĞÑĞìÖĞÔ­ÈÎÎñ£¬Æô¶¯
+				Talk(3,"Uworld50_get","Tõ ®¹i nh¹c: Trung Nguyªn, kh«ng ph¶i v× cha cã së thµnh gÆp, kia tr¾ng ãng ¸nh t©m nh­ xµ h¹t, ©m hiÓm ®éc ¸c, tuyÖt kh«ng ph¶i l­¬ng ngÉu.","Tõ Trung Nguyªn: Cha, ng­¬i kh«ng cã cïng o¸nh o¸nh gÆp mÆt qua, b»ng vµo giang hå truyÒn ng«n cø nh­ vËy ®Ó ng­êi ta cho l­îng chÕt, kú thËt o¸nh o¸nh nµng thËt lµ ra n­íc bïn mµ kh«ng nhiÔm c« n­¬ng tèt, tuyÖt kh«ng ph¶i mäi ng­êi trong miÖng nãi nh­ vËy.","Ng­êi ch¬i: Tõ tiÒn bèi, ngµi l¹i ®õng nãng lßng, Tõ thiÕu hiÖp ®Ó cho ta tíi khuyªn nhñ ®i.")
 	elseif (Uworld50 == 30) then
 		Talk(2,"","Yªu n÷ B¹ch Doanh Doanh dïng lêi ®­êng mËt ®Ó lõa g¹t ng­¬i råi ®ã!"," B©y giê ta còng chØ b¸n tİn b¸n nghi, kh«ng hoµn toµn tin t­ëng c« ta. NÕu c« Êy ®óng lµ ch©n thËt, chóng ta nªn cho c« ta c¬ héi míi ®­îc")
 	elseif (Uworld50 == 50) then		-- ½±Àø2£¬ÈÎÎñÍê³É

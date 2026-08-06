@@ -102,7 +102,7 @@ function tbDangBoss:OnPlayerJoin()
 	
 	
 	if nMissionState == self.BATTLE_STATE then
-		nMoney = nContinueCount * 1e5
+		nMoney = nContinueCount * 10000
 	end
 	
 	if self:IsPlayerEligible() ~= 1 then

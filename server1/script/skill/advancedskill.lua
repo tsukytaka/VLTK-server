@@ -138,8 +138,7 @@ SKILLS=
 		{
 			{{1,1238 * 256 + 1},{20,1238 * 256 + 20}},
 			{{1,-1 },{20,-1 }},
-			--{{1,30*18*256 + 3},{19,20*18*256 + 5},{20,20*18*256 + 5}}
-			{{1,30*18*256 + 3},{19,20*18*256 + 9},{20,20*18*256 + 10}}--¸ÅÂÊÔö¼Óµ½10%
+			{{1,30*18*256 + 3},{19,20*18*256 + 5},{20,20*18*256 + 5}}
 		},
 		damage2addmana_p=
 		{
@@ -150,7 +149,7 @@ SKILLS=
 	kl_adskill ={ --À¥ÂØ½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return format("Khi dïng <color=water>[Tiªn Thiªn C­¬ng Khİ]<color> cã thÓ n©ng cao[L­ìng Nghi Ch©n Khİ]tØ lÖ kİch ho¹t <color=orange>%d%%<color>, \n vµ bá qua l«i phßng cña ®èi ph­¬ng: <color=orange>%d%% (d­¬ng) <color>, duy tr× hiÖu øng <color=orange>%d gi©y <color>\n",floor(Link(level,SKILLS.kl_adskill.enhance_717_auto[1])), floor(Link(level,SKILLS.kl_adskill.anti_lightingres_yan_p[1])),floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[2])/18))
+				return format("Khi dïng <color=water>[Tiªn Thiªn C­¬ng Khİ]<color> cã thÓ n©ng cao?L­ìng Nghi Ch©n Khİ]tØ lÖ kİch ho¹t <color=orange>%d%%<color>, \n vµ bá qua l«i phßng cña ®èi ph­¬ng: <color=orange>%d%% (d­¬ng) <color>, duy tr× hiÖu øng <color=orange>%d gi©y <color>\n ",floor(Link(level,SKILLS.kl_adskill.enhance_717_auto[1])), floor(Link(level,SKILLS.kl_adskill.anti_lightingres_yan_p[1])),floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[2])/18))
 				end,
 		autoreplyskill=
 		{
