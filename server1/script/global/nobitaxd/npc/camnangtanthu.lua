@@ -90,49 +90,13 @@ function StarterGuide_Main(nSkipReload)
 		"NhiÖm vô D· TÈu ®· hoµn thµnh : <color=green>"..nDaTau.."<color>\n"..
 		"ChØ sè May m¾n: <color=green>"..nMayMan.."<color> / §iÓm Vinh Dù: <color=green>"..nVinhDu.."<color>"
 		
-	if (CFG_ChayThuNghiem == 0) then
-		local tbOpt =
-		{				
-		{"Hç trî lµm nhiÖm vô nhanh", diadovolam},
-		{"NhËn kü n¨ng", NhanSkill},
-		{"Shop hç trî", Shop_Support},
-		{"T¹o nhãm qu¸i luyÖn c«ng", SummonMapMonsterGroup},
-		{"Méc nh©n luyÖn c«ng", TanThuMocNhan_Add},
-		{"Thî rÌn ®a n¨ng", thorendanang},	
-		{"Viªm §Õ", TanThu_ViemDeMenu},
-		{"Trïng sinh", TanThu_TrungSinhMenu},
-		{"\078\104\203\110\032\077\198\116\032\078\185\032\045\032\086\105\112", TanThuMatNaKhacGiveOne, {592}},
-		{"Hñy bá mäi thø", TanThu_DisposeItemMain},
-		{"Hñy khãa vØnh viÔn", UnbindPermanentItem_Open},
-		{"Tho¸t"},
-		}
-		CreateNewSayEx(szTitle, tbOpt)
-	else
-		local tbOpt =
-		{			
-		{"Gäi ho¹t ®éng Game nhanh", goihoatdongmaychu},
-		{"Hç trî lµm NhiÖm vô nhanh", diadovolam},		
-		{"NhËn kü n¨ng", NhanSkill},
-		{"NhËn hç trî Test nh©n vËt", HoTroTest},
-		{"Gäi SimCity", goisimcity},
-		{"T¹o nhãm qu¸i luyÖn c«ng", SummonMapMonsterGroup},
-		{"Méc nh©n luyÖn c«ng", TanThuMocNhan_Add},
-		{"Viªm §Õ", TanThu_ViemDeMenu},
-		{"Trïng sinh", TanThu_TrungSinhMenu},
-		{"\078\104\203\110\032\077\198\116\032\078\185\032\045\032\086\105\112", TanThuMatNaKhacGiveOne, {592}},
-		{"Thî rÌn ®a n¨ng", thorendanang},	
-		{"Hñy bá mäi thø", TanThu_DisposeItemMain},
-		{"Hñy khãa vØnh viÔn", UnbindPermanentItem_Open},
-		{"LÊy th«ng tin NPC", LastNpcTalk},		
-		{"Di chuyÓn vÒ Ba L¨ng HuyÖn", GotoBLH},
-		--{"Thö nghiÖm", LayDoRes},
-		--{"KT Res", kiemtrares},		
-		--{"TriÖu tËp ®ång ®éi", GoiPTToiNoi},	
-		{"Tho¸t"},
-		--{"§æi r¸c lÊy vò khÝ ngÉu nhiªn", weapon_ring},
-		}
-		CreateNewSayEx(szTitle, tbOpt)
-	end
+	local tbOpt =
+	{				
+		{"Công ðiãm ký nãng", congdiemkynang},
+		{"Tãy tûÿ nhanh", TayTuyNhanh},
+		{"Thoát"},
+	}
+	CreateNewSayEx(szTitle, tbOpt)
 	return 1
 end
 function main()
