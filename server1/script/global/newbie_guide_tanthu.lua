@@ -40,7 +40,25 @@ function NewbieGuideTanThu_ReadAccountFlag(szSection, szAccount)
 end
 
 function NewbieGuideTanThu_IsEnabled()
-	return 0
+	local szAccount = strlower(GetAccount() or "")
+	if (NewbieGuideTanThu_ReadAccountFlag("admin", szAccount) == 1) then return 0 end
+	local hFile = openfile(NEWBIE_GUIDE_TANTHU_FILE, "r")
+	if (hFile == nil) then return 1 end
+	local szRoleHex = NewbieGuideTanThu_NameHex(GetName())
+	while 1 do
+		local szLine = read(hFile, "*l")
+		if (szLine == nil) then break end
+		if (strsub(szLine, 1, 1) ~= "#") then
+			local tb = split(szLine, "|")
+			if (getn(tb) >= 4 and strlower(tb[1]) == szAccount and tb[2] == szRoleHex) then
+				closefile(hFile)
+				if (tonumber(tb[4]) == 0) then return 0 end
+				return 1
+			end
+		end
+	end
+	closefile(hFile)
+	return 1
 end
 
 function NewbieGuideTanThu_ProcessLogin()
