@@ -86,6 +86,28 @@ function main(bExchangeIn)
 		end
 	end
 
+	-- Quà khởi tạo nhân vật (Set Động Sát & Ngựa Chiếu Dạ)
+	if (GetTask(3000) == 0) then
+		if CalcFreeItemCellCount() >= 5 then
+			-- Set Động Sát
+			for i = 143, 146 do
+				local nItemIndex = AddGoldItem(0, i)
+				if (nItemIndex and nItemIndex > 0) then
+					SetItemBindState(nItemIndex, -2)
+					SyncItem(nItemIndex)
+				end
+			end
+			-- Ngựa Chiếu Dạ
+			local nHorseIndex = AddItem(0, 10, 5, 10, 0, 0)
+			if (nHorseIndex and nHorseIndex > 0) then
+				SetItemBindState(nHorseIndex, -2)
+				SyncItem(nHorseIndex)
+			end
+			SetTask(3000, 1)
+			Msg2Player("Bạn nhận được 1 bộ trang bị Động Sát và 1 Ngựa Chiếu Dạ (Khóa)!")
+		end
+	end
+
 	-- Gi�i H�n IP
 	if GioiHanLoginIP == 1 then
 		if (LimitAccountPerIP:Login() == 1) then
