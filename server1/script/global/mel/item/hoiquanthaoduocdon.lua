@@ -12,7 +12,7 @@ end
 
 function GetDesc(nItemIdx)
     local szDesc = "<color=water>Trong vßng 7 ngµy håi phôc sinh lùc vµ néi lùc<color>\n"
-    szDesc = szDesc.."<color=water>Mçi nöa gi©y phôc håi sinh lùc: <color><color=orange>50 ®iÓm<color>\n"
-    szDesc = szDesc.."<color=water>Mçi nöa gi©y phôc håi néi lùc: <color><color=orange>50 ®iÓm<color>"
+    szDesc = szDesc.."<color=water>Mçi nöa gi©y phôc håi sinh lùc: <color><color=orange>500 ®iÓm<color>\n"
+    szDesc = szDesc.."<color=water>Mçi nöa gi©y phôc håi néi lùc: <color><color=orange>500 ®iÓm<color>"
     return szDesc
 end
