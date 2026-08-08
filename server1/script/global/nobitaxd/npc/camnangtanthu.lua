@@ -92,9 +92,9 @@ function StarterGuide_Main(nSkipReload)
 		
 	local tbOpt =
 	{				
-		{"Công ðiãm ký nãng", congdiemkynang},
-		{"Tãy tûÿ nhanh", TayTuyNhanh},
-		{"Thoát"},
+		{"Céng ®iÓm kü n¨ng", congdiemkynang},
+		{"TÈy tñy nhanh", TayTuyNhanh},
+		{"Tho¸t"},
 	}
 	CreateNewSayEx(szTitle, tbOpt)
 	return 1

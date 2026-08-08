@@ -95,7 +95,7 @@ function congdiemkynang()
         "Céng theo tõng kü n¨ng/#Add_PointMagic(1,"..nFaction..")",
         "Céng theo h­íng luyÖn c«ng/#Add_PointMagic(2,"..nFaction..")",
         "Céng toµn bé kü n¨ng lªn cÊp cao nhÊt/#Add_PointMagic(3,"..nFaction..")",
-        "Quay l¹i/NhanSkill",
+        "Quay l¹i/testserver",
         "Tho¸t/Quit"
     )
 end
