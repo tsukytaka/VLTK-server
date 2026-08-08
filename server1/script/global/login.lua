@@ -71,11 +71,7 @@ function main(bExchangeIn)
 	end
 
 	-- BËt/T¾t Giao DÞch
-	if KhoaChucNangGiaoDich == 1 then
-		ForbitTrade(1)
-	else
-		ForbitTrade(0)
-	end
+	ForbitTrade(0)
 
 	-- CÊp §é §¨ng NhËp LÇn §Çu
 	if CapKhiLoginVaoServer == 1 then
