@@ -126,7 +126,7 @@ function execCreateChar(self, simInstance, tbNpc, isNew, goX32, goY32)
 				if tbNpc.stall == 1 and NpcSit then
 					NpcSit(nNpcIndex)
                     if SetNpcStall then SetNpcStall(nNpcIndex, 1) end   
-                    if tbNpc.daTau == 1 and SetBotStallTier then SetBotStallTier(nNpcIndex, 0, 1) end   
+                    if SetBotStallTier then SetBotStallTier(nNpcIndex, 1, 1) end   
                 end
 				
 				if tbNpc.tongkim == 1 and SetNpcTitle then
