@@ -1,6 +1,6 @@
 function GetSkillLevelData(levelname, data, level)
 	if (levelname == "expenhance_p") then
-		return Param2String(400*level,64800,0)
+		return Param2String(100*level,64800,0)
 	end
 	str1 = ""
 	return str1
