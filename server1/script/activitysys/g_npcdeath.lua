@@ -275,6 +275,34 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		ITEM_DropRateItem(nNpcIndex, rate, finalDropFile, 1, 100, GetNpcSeries(nNpcIndex));
 	end
 
+	-- Roi do An Bang / Dinh Quoc tu Boss Xanh (ti le 0.1%)
+	if npcType == 1 then
+		local nChance = random(1, 1000)
+		if nChance == 1 then
+			local tbItems = {
+				{4, 0, 0, 215}, -- An Bang Day chuyen
+				{4, 0, 0, 216}, -- An Bang Nhan
+				{4, 0, 0, 217}, -- An Bang Ngoc boi
+				{4, 0, 0, 218}, -- An Bang Nhan 2
+				{4, 0, 0, 397}, -- Dinh Quoc Ao
+				{4, 0, 0, 398}, -- Dinh Quoc Non
+				{4, 0, 0, 399}, -- Dinh Quoc Giay
+				{4, 0, 0, 400}, -- Dinh Quoc Bao tay
+				{4, 0, 0, 401}, -- Dinh Quoc That lung
+			}
+			local nSelect = random(1, 9)
+			local tbItem = tbItems[nSelect]
+			local nX32, nY32, nSubWorldIdx = GetNpcPos(nNpcIndex)
+			if nSubWorldIdx then
+				local nBelonger = PlayerIndex or -1
+				DropItemEx(nSubWorldIdx, nX32, nY32, nBelonger, 4, 0, 0, tbItem[1], tbItem[2], tbItem[3], tbItem[4], 0, 0, 0, 0, 0, 0, 0)
+				if PlayerIndex and PlayerIndex > 0 then
+					Msg2Player("Chuc mung ban da tieu diet Thu Linh va nhan duoc trang bi hiem!")
+				end
+			end
+		end
+	end
+
 	
 	return found
 end
