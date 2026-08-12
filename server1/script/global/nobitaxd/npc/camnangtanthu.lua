@@ -94,6 +94,7 @@ function StarterGuide_Main(nSkipReload)
 	{				
 		{"Céng ®iÓm kü n¨ng", congdiemkynang},
 		{"TÈy tñy nhanh", TayTuyNhanh},
+		{"T¹o Bang Héi", DieuKienTaoBangHoi},
 		{"Tho¸t"},
 	}
 	CreateNewSayEx(szTitle, tbOpt)
