@@ -3,11 +3,11 @@ Include("\\script\\vng_lib\\files_lib.lua")
 
 TB_ListToaDo = {
     -- Tu Luy÷n CËc 10-180
-    {nNpcId = 12,   nNpcLv = 15, fileName = "tuluyencap10.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 10"},
-    {nNpcId = 6,    nNpcLv = 25, fileName = "tuluyencap20.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 20"},
-    {nNpcId = 1,    nNpcLv = 35, fileName = "tuluyencap30.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 30"},
-    {nNpcId = 10,   nNpcLv = 45, fileName = "tuluyencap40.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 40"},
-    {nNpcId = 15,   nNpcLv = 55, fileName = "tuluyencap50.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 50"},
+    {nNpcId = 600,  nNpcLv = 95, fileName = "tuluyencap10.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 10"},
+    {nNpcId = 600,  nNpcLv = 95, fileName = "tuluyencap20.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 20"},
+    {nNpcId = 1521, nNpcLv = 95, fileName = "tuluyencap30.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 30"},
+    {nNpcId = 1521, nNpcLv = 95, fileName = "tuluyencap40.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 40"},
+    {nNpcId = 1522, nNpcLv = 95, fileName = "tuluyencap50.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 50"},
     {nNpcId = 17,   nNpcLv = 65, fileName = "tuluyencap60.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 60"},
     {nNpcId = 18,   nNpcLv = 75, fileName = "tuluyencap70.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 70"},
     {nNpcId = 13,   nNpcLv = 85, fileName = "tuluyencap80.txt",  nCount=20, sMonsterName = "Tu Luy÷n Qu∏i 80"},
