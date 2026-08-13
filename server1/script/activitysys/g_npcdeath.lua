@@ -303,6 +303,23 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		end
 	end
 
-	
+	-- Roi bi kip 120 tu Elite/Leader 110 tro len (ti le 2%)
+	if (npcType == 1 or npcType == 2) then
+		local dropFile = GetNpcDropRateFile(nNpcIndex) or ""
+		if strfind(dropFile, "110") or strfind(dropFile, "119") then
+			local nChance = random(1, 100)
+			if nChance <= 2 then
+				local nX32, nY32, nSubWorldIdx = GetNpcPos(nNpcIndex)
+				if nSubWorldIdx then
+					local nBelonger = PlayerIndex or -1
+					DropItemEx(nSubWorldIdx, nX32, nY32, nBelonger, 4, 0, 0, 6, 1, 1125, 1, 0, 0, 0, 0, 0, 0, 0)
+					if PlayerIndex and PlayerIndex > 0 then
+						Msg2Player("Chuc mung ban da tieu diet quai Tinh Anh/Thu Linh va nhan duoc Bi quyet ky nang cap 120!")
+					end
+				end
+			end
+		end
+	end
+
 	return found
 end
