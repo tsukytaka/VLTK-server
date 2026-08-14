@@ -71,6 +71,8 @@ function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 			end
 		end
 	end
+	local found = vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
+
 	if PlayerIndex and PlayerIndex > 0 then
 		JX_WebDropCoin(nNpcIndex)
 		--PlayerEvent:OnEvent("OnKillNpc", nNpcIndex, nAttackerIndex)
@@ -84,12 +86,16 @@ function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		if nTeamSize > 0 then
 			for i=1, nTeamSize do
 				local nPlayerIndex = GetTeamMember(i)
-				lib:DoFunByPlayer(nPlayerIndex, tbKillMonster.KillMonster, tbKillMonster, nNpcIndex)
+				if (type(found) ~= "table" or found[nPlayerIndex] == nil) then
+					lib:DoFunByPlayer(nPlayerIndex, tbKillMonster.KillMonster, tbKillMonster, nNpcIndex)
+				end
 				--tinhpn 20100706: VLMC
 				lib:DoFunByPlayer(nPlayerIndex, VLMC.KillMonster, VLMC, nNpcIndex)
 			end
 		else
-			tbKillMonster:KillMonster(nNpcIndex)
+			if (type(found) ~= "table" or found[PlayerIndex] == nil) then
+				tbKillMonster:KillMonster(nNpcIndex)
+			end
 			--tinhpn 20100706: VLMC
 			VLMC:KillMonster(nNpcIndex)
 		end
@@ -221,7 +227,9 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 					end
 					local AddExpAmount = vGetNpcExp(min(npcLevel, nPlayerLevel))
 
+					if (type(found) ~= "table" or found[nPlayerIndex] == nil) then
 					lib:DoFunByPlayer(nPlayerIndex, tbKillMonster.KillMonster, tbKillMonster, nNpcIndex)
+				end
 					CallPlayerFunction(nPlayerIndex, AddOwnExp, floor(AddExpAmount * rate))
 
 					found[nPlayerIndex] = true
@@ -243,7 +251,9 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 				rate = rate * random(4,10)
 			end
 			local AddExpAmount = vGetNpcExp(min(npcLevel, nPlayerLevel))
-			lib:DoFunByPlayer(nPlayerIndex, tbKillMonster.KillMonster, tbKillMonster, nNpcIndex)
+			if (type(found) ~= "table" or found[nPlayerIndex] == nil) then
+					lib:DoFunByPlayer(nPlayerIndex, tbKillMonster.KillMonster, tbKillMonster, nNpcIndex)
+				end
 			CallPlayerFunction(nPlayerIndex, AddOwnExp, floor(AddExpAmount * rate))
 			found[nPlayerIndex] = true
 		end
