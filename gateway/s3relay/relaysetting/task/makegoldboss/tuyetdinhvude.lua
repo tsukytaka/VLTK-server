@@ -9,7 +9,7 @@ function TaskShedule()
 end
 
 function TaskContent()
-	GlobalExecute("dwf \\script\\global\\mel\\mission\\tuyetdinhvude\\goldboss_main.lua bigboss_call2world()")
+	GlobalExecute("dwf \\script\\global\\mel\\mission\\tuyetdinhvude\\goldboss_main.lua vude_call2world()")
 	OutputMsg("BOSS TUYET DINH VU DE xuat lien luc [12:45 PM]")
 end
 

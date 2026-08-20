@@ -51,6 +51,9 @@ function JX_WebDropCoin(nNpcIndex)
 end
 
 function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
+	if PlayerIndex and PlayerIndex > 0 then
+		Msg2Player("DEBUG: OnGlobalNpcDeath triggered!")
+	end
 	-- [PARTY XP 2026-07-01] bot trong nhom giet quai -> gan PlayerIndex = chu nhom + cong exp tay
 	--   (engine CalcExp bo qua bot kill; nAttackerIndex=0 -> lay KNpc bot qua GetNpcLastAttacker -> PollParty)
 	if (not PlayerIndex or PlayerIndex <= 0) and GetNpcLastAttacker and PollParty then
@@ -200,6 +203,9 @@ end;
 function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	local found = {}
 	local npcType = GetNpcPowerType(nNpcIndex)
+	if PlayerIndex and PlayerIndex > 0 then
+		Msg2Player("DEBUG: vinh_OnGlobalNpcDeath called! npcType="..tostring(npcType))
+	end
 
 	-- Neu la SimCity bi chet thi dung rot gi ca
 	local param4 = GetNpcParam(nNpcIndex, 4)
@@ -286,9 +292,12 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	end
 
 	-- Roi do An Bang / Dinh Quoc tu Boss Xanh (ti le 0.1%)
-	if npcType == 1 then
-		local nChance = random(1, 1000)
+	if (npcType == 1 or npcType == 2) then
+		local nChance = 1
 		if nChance == 1 then
+			if PlayerIndex and PlayerIndex > 0 then
+				Msg2Player("DEBUG: Dropping An Bang / Dinh Quoc!")
+			end
 			local tbItems = {
 				{4, 0, 0, 215}, -- An Bang Day chuyen
 				{4, 0, 0, 216}, -- An Bang Nhan
@@ -316,9 +325,12 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	-- Roi bi kip 120 tu Elite/Leader 110 tro len (ti le 2%)
 	if (npcType == 1 or npcType == 2) then
 		local dropFile = GetNpcDropRateFile(nNpcIndex) or ""
-		if strfind(dropFile, "110") or strfind(dropFile, "119") then
-			local nChance = random(1, 100)
-			if nChance <= 2 then
+		if strfind(dropFile, "110") or strfind(dropFile, "119") or true then
+			local nChance = 1
+			if nChance <= 100 then
+				if PlayerIndex and PlayerIndex > 0 then
+					Msg2Player("DEBUG: Dropping Skill 120 Book!")
+				end
 				local nX32, nY32, nSubWorldIdx = GetNpcPos(nNpcIndex)
 				if nSubWorldIdx then
 					local nBelonger = PlayerIndex or -1
