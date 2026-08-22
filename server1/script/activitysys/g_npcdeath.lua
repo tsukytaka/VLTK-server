@@ -108,10 +108,10 @@ function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		G_TASK:OnMessage("Nga Mi", nNpcIndex, "KillNpc")
 		G_TASK:OnMessage("§­êng M«n", nNpcIndex, "KillNpc")
 		G_TASK:OnMessage("C¸i Bang", nNpcIndex, "KillNpc")
-		G_TASK:OnMessage("Ngò §éc", nNpcIndex, "KillNpc")
+		G_TASK:OnMessage("Ng?§éc", nNpcIndex, "KillNpc")
 		G_TASK:OnMessage("Thiªn NhÉn", nNpcIndex, "KillNpc")
 		G_TASK:OnMessage("ThiÕu L©m", nNpcIndex, "KillNpc")
-		G_TASK:OnMessage("Vâ §ang", nNpcIndex, "KillNpc")
+		G_TASK:OnMessage("V?§ang", nNpcIndex, "KillNpc")
 		G_TASK:OnMessage("Thiªn V­¬ng", nNpcIndex, "KillNpc")
 		G_TASK:OnMessage("C«n L«n", nNpcIndex, "KillNpc")
 		DynamicExecute("\\script\\missions\\tianchimijing\\floor4\\bossdeath.lua", "OnDeath", nNpcIndex, PlayerIndex)
@@ -122,7 +122,7 @@ function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		
 		-- Á¶½ð»î¶¯µôÂä
 		if NpcFunLib:CheckBoatBoss(nNpcIndex) == 1 and tbRefiningIron:IsCarryOn() == 1 then
-			tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, {tbProp={6,1, 2293, 1,0,0,},nExpiredTime=tbRefiningIron.nCloseDate,}, "Thñy tÆc ®Çu lÜnh r¬i ë ho¹t ®éng luyÖn kim", 1)
+			tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, {tbProp={6,1, 2293, 1,0,0,},nExpiredTime=tbRefiningIron.nCloseDate,}, "Thñy tÆc ®Çu lÜnh r¬i ?ho¹t ®éng luyÖn kim", 1)
 		end
 		
 		if (DynamicExecute("\\script\\event\\jiefang_jieri\\201004\\main.lua", "FreedomEvent2010:IsActive1") == 1) then
@@ -203,46 +203,18 @@ end;
 function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	local found = {}
 	local npcType = GetNpcPowerType(nNpcIndex)
+	
+	Msg2Player("DEBUG: nNpcIndex="..tostring(nNpcIndex))
+	Msg2Player("DEBUG: nAttackerIndex="..tostring(nAttackerIndex))
 	if PlayerIndex and PlayerIndex > 0 then
-		Msg2Player("DEBUG: vinh_OnGlobalNpcDeath called! npcType="..tostring(npcType))
+		Msg2Player("DEBUG: vinh_OnGlobalNpcDeath called 1! npcType="..tostring(npcType))
 	end
 
 	-- Neu la SimCity bi chet thi dung rot gi ca
 	local param4 = GetNpcParam(nNpcIndex, 4)
+	Msg2Player("DEBUG: vinh_OnGlobalNpcDeath param4="..tostring(param4))
 	if param4 and (param4 == 1 or param4 == 2) then
 		return 1
-	end
-
-	-- Them diem cho Thanh Vien Bang dung gan
-	if PlayerIndex and PlayerIndex > 0 then		
-
-		local npcLevel = NPCINFO_GetLevel(nNpcIndex)
-		local tbRoundPlayer, nCount = GetNpcAroundPlayerList(nNpcIndex, 20);
-		local myTong = GetTong()
-		found[PlayerIndex] = true
-		for i = 1, nCount do
-			local nPlayerIndex = tbRoundPlayer[i]
-			if nPlayerIndex ~= PlayerIndex then
-				local nPlayerTong = CallPlayerFunction(nPlayerIndex, GetTong)
-				if nPlayerTong == myTong then
-					local nPlayerLevel = CallPlayerFunction(nPlayerIndex, GetLevel)
-					local rate = 1 + (nPlayerLevel - (10 * floor(nPlayerLevel / 10))) / 10
-
-					if not npcType and (npcType > 1) then
-						rate = rate * random(4,10)
-					end
-					local AddExpAmount = vGetNpcExp(min(npcLevel, nPlayerLevel))
-
-					if (type(found) ~= "table" or found[nPlayerIndex] == nil) then
-					lib:DoFunByPlayer(nPlayerIndex, tbKillMonster.KillMonster, tbKillMonster, nNpcIndex)
-				end
-					CallPlayerFunction(nPlayerIndex, AddOwnExp, floor(AddExpAmount * rate))
-
-					found[nPlayerIndex] = true
-				end
-			end
-		end
-		return found
 	end
 
 	-- Keoxe: them EXP
@@ -292,29 +264,39 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	end
 
 	-- Roi do An Bang / Dinh Quoc tu Boss Xanh (ti le 0.1%)
-	if (npcType == 1 or npcType == 2) then
-		local nChance = 1
+	if (npcType == 2) then
+		local nChance = random(1, 1000)
 		if nChance == 1 then
 			if PlayerIndex and PlayerIndex > 0 then
 				Msg2Player("DEBUG: Dropping An Bang / Dinh Quoc!")
+				Msg2Player("DEBUG: PlayerIndex="..tostring(PlayerIndex))
 			end
+			-- goldequip.txt rowID - 2
 			local tbItems = {
-				{4, 0, 0, 215}, -- An Bang Day chuyen
-				{4, 0, 0, 216}, -- An Bang Nhan
-				{4, 0, 0, 217}, -- An Bang Ngoc boi
-				{4, 0, 0, 218}, -- An Bang Nhan 2
-				{4, 0, 0, 397}, -- Dinh Quoc Ao
-				{4, 0, 0, 398}, -- Dinh Quoc Non
-				{4, 0, 0, 399}, -- Dinh Quoc Giay
-				{4, 0, 0, 400}, -- Dinh Quoc Bao tay
-				{4, 0, 0, 401}, -- Dinh Quoc That lung
+				{0, 152, 0, 0}, -- DQ
+				{0, 153, 0, 0}, -- DQ
+				{0, 154, 0, 0}, -- DQ
+				{0, 155, 0, 0}, -- DQ
+				{0, 156, 0, 0}, -- DQ
+				{0, 157, 0, 0}, -- DQ
+				{0, 158, 0, 0}, -- DQ
+				{0, 159, 0, 0}, -- DQ
+				{0, 160, 0, 0}, -- DQ
+				{0, 161, 0, 0}, -- DQ
+				{0, 162, 0, 0}, -- DQ
+				{0, 163, 0, 0}, -- An Bang Hang Lien
+				{0, 164, 0, 0}, -- An Bang Cuc Hoa
+				{0, 165, 0, 0}, -- An Bang Ngoc Boi
+				{0, 166, 0, 0}, -- An Bang Gioi Chi
+				{6, 1, 15, 1}, -- Phi Phong
 			}
-			local nSelect = random(1, 9)
+			local nSelect = random(1, 16)
 			local tbItem = tbItems[nSelect]
 			local nX32, nY32, nSubWorldIdx = GetNpcPos(nNpcIndex)
+			Msg2Player("DEBUG: nSubWorldIdx="..tostring(nSubWorldIdx))
 			if nSubWorldIdx then
 				local nBelonger = PlayerIndex or -1
-				DropItemEx(nSubWorldIdx, nX32, nY32, nBelonger, 4, 0, 0, tbItem[1], tbItem[2], tbItem[3], tbItem[4], 0, 0, 0, 0, 0, 0, 0)
+				DropItemEx(nSubWorldIdx, nX32, nY32, nBelonger, 4, 0, 1, tbItem[1], tbItem[2], tbItem[3], tbItem[4], 0, 0, 0, 0, 0, 0, 0)
 				if PlayerIndex and PlayerIndex > 0 then
 					Msg2Player("Chuc mung ban da tieu diet Thu Linh va nhan duoc trang bi hiem!")
 				end
@@ -322,12 +304,12 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		end
 	end
 
-	-- Roi bi kip 120 tu Elite/Leader 110 tro len (ti le 2%)
-	if (npcType == 1 or npcType == 2) then
+	-- Roi bi kip 120 tu Elite/Leader 110 tro len (ti le 0.1%)
+	if (npcType == 2) then
 		local dropFile = GetNpcDropRateFile(nNpcIndex) or ""
 		if strfind(dropFile, "110") or strfind(dropFile, "119") or true then
-			local nChance = 1
-			if nChance <= 100 then
+			local nChance = random(1, 1000)
+			if nChance = 1 then
 				if PlayerIndex and PlayerIndex > 0 then
 					Msg2Player("DEBUG: Dropping Skill 120 Book!")
 				end
