@@ -44,6 +44,20 @@ end
 -- Ban New an toan: khong de lai ghost neu reset vi tri loi, va giu fighter
 -- trong hang retry neu engine tam het slot NPC.
 function SimCitizen:New(fighter)
+    -- Dien Vo Truong Cong Binh Tu chi duoc phep co mot bot do BotDuel tao.
+    -- Chan tai allocator de ca timer cu va batch dang cho cung khong the tao them.
+    if fighter and fighter.nMapId and fighter.ploidaiBot ~= 1
+       and SimCityIsDuelOnlyMap and SimCityIsDuelOnlyMap(fighter.nMapId) == 1 then
+        return nil
+    end
+    -- Final creation gate. EnterMap callbacks can retain an older function
+    -- reference in this engine, so enforce a zero per-map target at the
+    -- central SimCitizen allocator as well.
+    if fighter and fighter.nMapId and fighter.mode ~= "chiendau" then
+        local trainTarget = SIMCITY_TRAIN_SIZE_BY_MAP
+                            and SIMCITY_TRAIN_SIZE_BY_MAP[fighter.nMapId]
+        if trainTarget ~= nil and trainTarget <= 0 then return nil end
+    end
     -- THANHTHI_SIZE/THON_SIZE are total populations, including stall NPCs.
     -- Normal stalls and Da Tau stalls have separate web limits. Both groups
     -- are still included in the total city/village population.
@@ -257,6 +271,12 @@ function SimCityThanhThi:onPlayerEnterMap()
     local nW = GetWorldPos()
     local worldInfo = SimCityWorld:Get(nW)
     if worldInfo then
+        -- Mark configured training maps before the legacy 3-second creation
+        -- timer runs. Otherwise the watchdog can briefly treat a new map as
+        -- an ordinary world and fill SIMCITY_DEFAULT_SIZE citizens even when
+        -- that map's configured target is zero.
+        local trainTarget = SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[nW]
+        if trainTarget ~= nil then worldInfo.isTrainMap = 1 end
         worldInfo.simcityActivated = 1
         if SimCityWorld:IsThanhThiMap(nW) == 1
            or SimCityWatchdog:IsVillage(nW) == 1 then
@@ -285,6 +305,18 @@ end
 SIMCITY_ORIGINAL_AUTO_CREATE = SIMCITY_ORIGINAL_AUTO_CREATE or SimCityThanhThi.autoCreateNpc
 function SimCityThanhThi:autoCreateNpc(nW)
     local worldInfo = SimCityWorld:Get(nW)
+    -- The legacy implementation deliberately kept training-map citizens alive.
+    -- That still leaks population across visited maps even when persistence is
+    -- disabled. Clean every ordinary empty map; event maps own their lifecycle.
+    if SIMCITY_PERSIST_EMPTY_MAPS ~= 1 and worldInfo and worldInfo.worldId
+       and (worldInfo.playerTrackerCount or 0) <= 0 then
+        local isLeagueHall = SimCityLeague and SimCityLeague.hallMap == nW
+        if SimCityWorld:IsTongKimMap(nW) ~= 1 and not isLeagueHall then
+            SimCitizen:ClearMap(nW, "thanhthi")
+            self.playerTimerIdsByMap[nW] = nil
+            return 1
+        end
+    end
     if SIMCITY_PERSIST_EMPTY_MAPS == 1 and worldInfo and worldInfo.worldId then
         if (worldInfo.playerTrackerCount or 0) > 0 then
             worldInfo.simcityActivated = 1
@@ -354,10 +386,18 @@ end
 function SimCityWatchdog:IsManagedWorld(worldInfo)
     if not worldInfo or not worldInfo.worldId or worldInfo.name == "" then return 0 end
     local nW = worldInfo.worldId
+    -- Map loi dai 1v1 co lifecycle rieng; khong ap muc dan so mac dinh 15.
+    if SimCityIsDuelOnlyMap and SimCityIsDuelOnlyMap(nW) == 1 then return 0 end
     if SimCityWorld:IsTongKimMap(nW) == 1 then return 0 end
     if SubWorldID2Idx and SubWorldID2Idx(nW) < 0 then return 0 end
     if worldInfo.playerTrackerCount and worldInfo.playerTrackerCount > 0 then
         worldInfo.simcityActivated = 1
+    end
+    -- Activation is historical. It must not make an empty map eligible for
+    -- refill forever when persistence is disabled.
+    if SIMCITY_PERSIST_EMPTY_MAPS ~= 1
+       and (not worldInfo.playerTrackerCount or worldInfo.playerTrackerCount <= 0) then
+        return 0
     end
     -- Chi bu dan so sau khi map da duoc nguoi choi kich hoat. Neu coi tat ca
     -- thanh/thon la managed ngay luc preload, watchdog se tao hang nghin NPC
@@ -370,6 +410,11 @@ end
 
 function SimCityWatchdog:GetTarget(worldInfo)
     local nW = worldInfo.worldId
+    local trainTarget = SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[nW]
+    if trainTarget ~= nil then
+        worldInfo.isTrainMap = 1
+        return trainTarget
+    end
     if SimCityWorld:IsThanhThiMap(nW) == 1 then
         return SIMCITY_WEB_CITY_SIZE or THANHTHI_SIZE or 300
     end
@@ -377,7 +422,7 @@ function SimCityWatchdog:GetTarget(worldInfo)
         return SIMCITY_WEB_VILLAGE_SIZE or THON_SIZE or 50
     end
     if worldInfo.isTrainMap == 1 then return SIMCITY_TRAIN_SIZE or 10 end
-    return SIMCITY_DEFAULT_SIZE or 100
+    return SIMCITY_DEFAULT_SIZE or 15
 end
 
 function SimCityWatchdog:Reconcile(simInstance)
@@ -446,10 +491,9 @@ function SimCityWatchdog:MaintainPopulation()
     if startAt > n then startAt = 1 end
     local lastIndex = startAt
     for offset = 0, n - 1 do
-        if globalLeft > 0 then
-            local index = mod(startAt - 1 + offset, n) + 1
-            lastIndex = index
-            local worldInfo = worlds[index]
+        local index = mod(startAt - 1 + offset, n) + 1
+        lastIndex = index
+        local worldInfo = worlds[index]
             -- Dat hoa binh truoc khi tao bot bu, tranh bot danh nhau trong
             -- thanh/thon do thu tu khoi tao map.
             if SimCityWorld:IsThanhThiMap(worldInfo.worldId) == 1
@@ -457,8 +501,16 @@ function SimCityWatchdog:MaintainPopulation()
                 worldInfo.allowFighting = 0
                 worldInfo.cityPeace = 1
             end
-            local live, pending = self:CountMap(worldInfo.worldId)
-            local missing = self:GetTarget(worldInfo) - live - pending
+        local live, pending = self:CountMap(worldInfo.worldId)
+        local target = self:GetTarget(worldInfo)
+        if target <= 0 then
+            -- A zero target means disabled, not merely "do not refill".
+            -- Remove citizens left by an earlier value or by the old race.
+            if live + pending > 0 then
+                SimCitizen:ClearMap(worldInfo.worldId, "thanhthi")
+            end
+        elseif globalLeft > 0 then
+            local missing = target - live - pending
             if missing > 0 then
                 local amount = missing
                 local perMap = SIMCITY_REFILL_BATCH or 20
@@ -477,12 +529,46 @@ function SimCityWatchdog:KeepTongKimFighting()
     for id, fighter in SimCitizen.fighterList do
         if fighter.tongkim == 1 and fighter.worldInfo and fighter.worldInfo.tkWarStarted == 1
            and fighter.finalIndex and fighter.finalIndex > 0 and SimCitizen:IsOwnedNpc(fighter) == 1 then
+            local npcIndex = fighter.finalIndex
             fighter.isStanding = 0
             fighter.tick_canWalk = 0
             fighter.peaceState = 0
-            if SetNpcPeace then SetNpcPeace(fighter.finalIndex, 0) end
+            -- Respawn/index replacement can leave the native camp out of sync
+            -- with the Lua fighter camp. Re-apply it before looking for enemies.
+            if SetNpcCurCamp and fighter.camp then
+                if not GetNpcCurCamp or GetNpcCurCamp(npcIndex) ~= fighter.camp then
+                    SetNpcCurCamp(npcIndex, fighter.camp)
+                end
+            end
+            if SetNpcPeace then SetNpcPeace(npcIndex, 0) end
             if SetNpcCombat then
-                SetNpcCombat(fighter.finalIndex, 1, fighter.skillCastBua and fighter.skillCastBua[1] or 0)
+                SetNpcCombat(npcIndex, 1, fighter.skillCastBua and fighter.skillCastBua[1] or 0)
+            end
+
+            -- SetNpcCombat alone lets some legacy AI instances keep following
+            -- their patrol path without ever acquiring a target. Assign one
+            -- nearby enemy SimCity NPC explicitly, but do not force-cast skills.
+            if GetNpcAroundNpcList and SetNpcFightTarget and IsAttackableCamp then
+                local around, count = GetNpcAroundNpcList(npcIndex, SIMCITY_TK_COMBAT_RADIUS or 40)
+                local target = 0
+                if around and count then
+                    for i = 1, count do
+                        local candidate = around[i]
+                        if candidate and candidate > 0 and candidate ~= npcIndex
+                           and (not GetNpcKind or GetNpcKind(candidate) == 0)
+                           and (not GetNpcParam or GetNpcParam(candidate, 4) == 1)
+                           and GetNpcCurCamp
+                           and IsAttackableCamp(fighter.camp, GetNpcCurCamp(candidate)) == 1 then
+                            target = candidate
+                            break
+                        end
+                    end
+                end
+                if target > 0 then
+                    fighter.isFighting = 1
+                    fighter.tick_canswitch = (fighter.tick_breath or 0) + 6000
+                    SetNpcFightTarget(npcIndex, target)
+                end
             end
         end
     end

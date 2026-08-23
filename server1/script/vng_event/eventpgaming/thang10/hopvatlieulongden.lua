@@ -25,7 +25,7 @@ local nTime = "20"..nYear.."1101"
 	for i = 1, getn(tab_material) do
 		nSum = nSum + tab_material[i][3];
 		if (nSeed < nSum) then
-			tbAwardTemplet:GiveAwardByList({tbProp = {6,1,tab_material[i][2],1,0,0}, nExpiredTime=nTime}, "test", 1);
+			tbAwardTemplet:GiveAwardByList({tbProp = {6,1,tab_material[i][2],1,0,0}, nExpiredTime=0}, "test", 1);
 			Msg2Player("B¹n nhËn ®­îc <color=yellow>"..tab_material[i][1]..". <color>");
 			return 0;
 		end;

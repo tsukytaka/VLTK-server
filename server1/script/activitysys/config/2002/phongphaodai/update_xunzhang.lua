@@ -11,13 +11,13 @@ Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 local nYear  = tonumber(date("%y"));
 local nTime = "20"..nYear.."0301"
 tbMaterial_Medal = {
-	[1]={szName="Ph∏o ßπi",tbProp={6,1,1353,1,0,0},nExpiredTime=nTime,nCount=100,},
+	[1]={szName="Ph∏o ßπi",tbProp={6,1,1353,1,0,0},nExpiredTime=0,nCount=100,},
 	}
 tbMaterial_Shijin = {szName="Ng©n L≠Óng",nJxb=5000,nCount=1,}
 
 
 tbProduct = {
-	[1] = {szName="Phong Ph∏o ßπi ß∆c Bi÷t",tbProp={6,1,1356,1,0,0},nExpiredTime=nTime,},
+	[1] = {szName="Phong Ph∏o ßπi ß∆c Bi÷t",tbProp={6,1,1356,1,0,0},nExpiredTime=0,},
 	}
 
 
@@ -120,7 +120,7 @@ function tbUpdateXunZhang:Compose()
 	local nTime = "20"..nYear.."0301"
 	if bSuccess == 0 then
 		%tbLog:PlayerAwardLog(%EVENT_LOG_TITLE, self.tbFormula.tbLog.szFail)
-		tbAwardTemplet:GiveAwardByList({tbProp = {6,1,1359,1,0,0}, nExpiredTime=nTime,}, "test", 1);
+		tbAwardTemplet:GiveAwardByList({tbProp = {6,1,1359,1,0,0}, nExpiredTime=0,}, "test", 1);
 
 		return 0
 	else

@@ -17,7 +17,7 @@ tb_bluebox_item	=
 	[10]	= {szName="M¶nh b¶n ®å 10",	tbProp={4, 499, 1, 0, 0, 0},	nRate = 5},
 	[11]	= {szName="M¶nh b¶n ®å 11",	tbProp={4, 500, 1, 0, 0, 0},	nRate = 5},
 	[12]	= {szName="M¶nh b¶n ®å 12",	tbProp={4, 501, 1, 0, 0, 0},	nRate = 5},
-	[13]	= {szName="huy ch­¬ng quèc kh¸nh",	tbProp={6, 1, 1496, 1, 0, 0},	nRate = 5, nExpiredTime = nTime},
+	[13]	= {szName="huy ch­¬ng quèc kh¸nh",	tbProp={6, 1, 1496, 1, 0, 0},	nRate = 5, nExpiredTime=0},
 };
 
 function main()
@@ -25,7 +25,7 @@ local nYear  = tonumber(date("%y"));
 local nTime2 = "20"..nYear.."1001"
 local nYMD  = tonumber(date("%y%m%d%H%M"))
 local nDayNow = "20"..nYMD..""
-	if (nDayNow >= nTime2) then
+	if (1 ~= 1) then
 		Msg2Player("VËt phÈm nµy ®· qu¸ h¹n.");
 		return 0;
 	end
@@ -42,12 +42,12 @@ local nYear  = tonumber(date("%y"));
 local nTime2 = "20"..nYear.."1001"
 local nYMD  = tonumber(date("%y%m%d%H%M"))
 local nDayNow = "20"..nYMD..""
-	if (nDayNow > nTime2) then
+	if (1 ~= 1) then
 		return 0;
 	end
 	if( IsMyItem( nItemIndex ) ) then
-		if (ITEM_GetExpiredTime(nItemIndex) == 0) then
-			ITEM_SetExpiredTime(nItemIndex, nTime2);
+		if (ITEM_GetExpiredTime(nItemIndex) ~= 0) then
+			ITEM_SetExpiredTime(nItemIndex, 0);
 			SyncItem(nItemIndex);
 		end
 		return 1;

@@ -2,3 +2,5 @@ TypeName	SellID
 VËt PhÈm	184
 Thuèc	185
 Th¹ch	186
+Ngùa	187
+BÝ kÝp	188

@@ -44,12 +44,8 @@ function main()
 	local nFlag = 0
 	for i = 1, getn(tb150Skill) do
 		local nSkillId = tb150Skill[i]
-		if (HaveMagic(nSkillId) == -1) then		-- 必须没有技能的才给技能
-			if nSkillId == 1110 then
-				AddMagic(nSkillId, 0)
-			else
-				AddMagic(nSkillId, 1)
-			end
+		if (HaveMagic(nSkillId) < 1) then		-- 必须没有技能的才给技能
+			AddMagic(nSkillId, 1)
 			if nFlag == 1 then
 				szMsg = format("%s,", szMsg)
 			else

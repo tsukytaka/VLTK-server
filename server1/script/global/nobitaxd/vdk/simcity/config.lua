@@ -9,6 +9,8 @@ THANHTHI_SIZE = THANHTHI_SIZE or 30   		 -- so luong nhan si trong thanh thi (gi
 THON_SIZE = THON_SIZE or 10               -- so luong bot trong THON nho (it hon thanh, chong ket/chay 1 cho)
 THANHTHI_QUAI = 0			 -- co cho phep quai nhan tu dong xuat hien trong thanh thi hay khong
 LUYENCONG_AUTOADD = LUYENCONG_AUTOADD or 1		 -- tu dong them nhan si luyen cong vao map 9x
+SIMCITY_TRAIN_SIZE_BY_MAP = SIMCITY_TRAIN_SIZE_BY_MAP or {}
+SIMCITY_TRAIN_LEVEL_BY_MAP = SIMCITY_TRAIN_LEVEL_BY_MAP or {}
 
 RADIUS_FIGHT_PLAYER = RADIUS_FIGHT_PLAYER or 20     -- tam quet+tan cong player 
 RADIUS_FIGHT_NPC = RADIUS_FIGHT_NPC or 8         -- tam quet NPC chung quanh va tan cong
@@ -45,10 +47,14 @@ BOT_COMBAT_RADIUS = BOT_COMBAT_RADIUS or 20             -- tam quet bot combat
 -- Watchdog vong doi va dan so bot.
 SIMCITY_WATCHDOG_ENABLED = 1
 SIMCITY_WATCHDOG_INTERVAL = 15 * 18
-SIMCITY_PERSIST_EMPTY_MAPS = 1
-SIMCITY_REFILL_BATCH = 20
-SIMCITY_REFILL_GLOBAL_BATCH = 80
-SIMCITY_DEFAULT_SIZE = 100
+-- Empty maps must not keep a permanent simulated population. Apart from the
+-- NPC cost, every retained citizen is still visited by the one-second tick.
+SIMCITY_PERSIST_EMPTY_MAPS = 0
+-- Spread refill work across watchdog sweeps instead of creating tens of NPCs
+-- in one game-loop frame.
+SIMCITY_REFILL_BATCH = 5
+SIMCITY_REFILL_GLOBAL_BATCH = 20
+SIMCITY_DEFAULT_SIZE = 15
 SIMBOT_RESPAWN_RETRY_TICKS = 5 * 18 / REFRESH_RATE
 SIMBOT_RESPAWN_MAX_RETRIES = 5
 SIMBOT_STUCK_ENABLED = 1
@@ -58,14 +64,16 @@ SIMBOT_STUCK_MAX_RETRIES = 2
 -- Vo Lam Lien Dau: virtual SimCity teams. Bot teams are created only after
 -- at least one real team has registered for the current event.
 WLLS_BOT_TEAMS_ENABLED = WLLS_BOT_TEAMS_ENABLED or 1
-WLLS_BOT_TEAM_COUNT_1V1 = WLLS_BOT_TEAM_COUNT_1V1 or 32
-WLLS_BOT_TEAM_COUNT_2V2 = WLLS_BOT_TEAM_COUNT_2V2 or 16
-WLLS_BOT_TEAM_COUNT_3V3 = WLLS_BOT_TEAM_COUNT_3V3 or 12
+-- Pairing remembers the previous opponent, so keep two bot teams rather than
+-- reducing this to one. Larger pools create many hall/combat NPCs at once.
+WLLS_BOT_TEAM_COUNT_1V1 = 2
+WLLS_BOT_TEAM_COUNT_2V2 = 2
+WLLS_BOT_TEAM_COUNT_3V3 = 2
 WLLS_BOT_HALL_ENABLED = WLLS_BOT_HALL_ENABLED or 1
-WLLS_BOT_HALL_BATCH_SIZE = WLLS_BOT_HALL_BATCH_SIZE or 8
+WLLS_BOT_HALL_BATCH_SIZE = 1
 WLLS_BOT_HALL_RESERVED_RADIUS = WLLS_BOT_HALL_RESERVED_RADIUS or 8
 WLLS_BOT_HALL_GRID_SPACING = WLLS_BOT_HALL_GRID_SPACING or 3
-WLLS_BOT_SIGNUP_COUNT = WLLS_BOT_SIGNUP_COUNT or 16
+WLLS_BOT_SIGNUP_COUNT = 2
 WLLS_BOT_EMERGENCY_DISABLE = WLLS_BOT_EMERGENCY_DISABLE or 0
 WLLS_BOT_QUEUE_MIN_SECONDS = WLLS_BOT_QUEUE_MIN_SECONDS or 60
 
@@ -156,3 +164,125 @@ ENABLE_BANNGUAMIXDEV = 0	   -- sua lai thanh 1 neu xai ban mix dev vi bi mat ban
 
 -- webconfig.lua duoc nap mot lan trong head.lua, sau file mac dinh nay va
 -- truoc cac plugin. Khong Include long o day vi engine JX xu ly theo hang doi.
+
+-- BEGIN WEBADMIN TRAINING MAP CONFIG
+-- Generated from the SimCity web form. Do not edit this block manually.
+SIMCITY_TRAIN_SIZE = 1
+SIMCITY_TRAIN_SIZE_BY_MAP = {
+    [19] = 1,
+    [7] = 1,
+    [179] = 1,
+    [193] = 1,
+    [170] = 1,
+    [92] = 1,
+    [22] = 1,
+    [4] = 1,
+    [6] = 1,
+    [21] = 1,
+    [167] = 1,
+    [23] = 1,
+    [5] = 1,
+    [182] = 1,
+    [164] = 1,
+    [38] = 1,
+    [42] = 1,
+    [24] = 1,
+    [79] = 1,
+    [56] = 1,
+    [166] = 1,
+    [114] = 1,
+    [69] = 1,
+    [94] = 1,
+    [319] = 1,
+    [123] = 1,
+    [206] = 1,
+    [72] = 1,
+    [169] = 1,
+    [224] = 1,
+    [198] = 1,
+    [320] = 1,
+    [181] = 1,
+    [201] = 1,
+    [203] = 1,
+    [202] = 1,
+    [322] = 1,
+    [321] = 1,
+    [75] = 1,
+    [225] = 1,
+    [226] = 1,
+    [227] = 1,
+    [336] = 1,
+    [340] = 1,
+    [144] = 1,
+    [93] = 1,
+    [124] = 1,
+    [152] = 1,
+    [919] = 1,
+    [920] = 1,
+    [917] = 1,
+    [918] = 1,
+    [921] = 1,
+    [922] = 1,
+    [923] = 1,
+    [924] = 1,
+}
+SIMCITY_TRAIN_LEVEL_BY_MAP = {
+    [19] = 20,
+    [7] = 20,
+    [179] = 20,
+    [193] = 30,
+    [170] = 30,
+    [92] = 30,
+    [22] = 30,
+    [4] = 30,
+    [6] = 30,
+    [21] = 40,
+    [167] = 40,
+    [23] = 40,
+    [5] = 40,
+    [182] = 50,
+    [164] = 50,
+    [38] = 50,
+    [42] = 50,
+    [24] = 50,
+    [79] = 60,
+    [56] = 60,
+    [166] = 60,
+    [114] = 60,
+    [69] = 60,
+    [94] = 60,
+    [319] = 70,
+    [123] = 70,
+    [206] = 70,
+    [72] = 70,
+    [169] = 70,
+    [224] = 80,
+    [198] = 80,
+    [320] = 80,
+    [181] = 80,
+    [201] = 80,
+    [203] = 80,
+    [202] = 80,
+    [322] = 90,
+    [321] = 90,
+    [75] = 90,
+    [225] = 90,
+    [226] = 90,
+    [227] = 90,
+    [336] = 90,
+    [340] = 90,
+    [144] = 90,
+    [93] = 90,
+    [124] = 90,
+    [152] = 90,
+    [919] = 100,
+    [920] = 100,
+    [917] = 100,
+    [918] = 100,
+    [921] = 110,
+    [922] = 110,
+    [923] = 110,
+    [924] = 110,
+}
+if WriteLog then WriteLog("SIMCITY_TRAIN_CONFIG	Map224:"..tostring(SIMCITY_TRAIN_SIZE_BY_MAP[224])) end
+-- END WEBADMIN TRAINING MAP CONFIG

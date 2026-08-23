@@ -34,7 +34,7 @@ function pActivity:AddInitNpc()
 	end
 end
 function pActivity:OnGetMuTong()
-	--PlayerFunLib:GetItem({tbProp={6,1,2736,1,0,0},nBindState = -2,nExpiredTime=20500405,},1,"2011植ｗ节，礎到木桶")
+	--PlayerFunLib:GetItem({tbProp={6,1,2736,1,0,0},nBindState = -2,nExpiredTime=0,},1,"2011植ｗ节，礎到木桶")
 	WriteLog(format("%s\tAccount:%s[Name:%s]礎到1个水桶.",
 				GetLocalDate("%Y-%m-%d %H:%M:%S"),
 				GetAccount(),

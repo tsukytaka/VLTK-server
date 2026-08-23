@@ -133,13 +133,20 @@ function SimCityNgoaiTrang:makeup(config, nNpcIndex)
 	config.nNewHelmType = config.nNewHelmType or self:pickHelm()
 	config.nNewArmorType = config.nNewArmorType or self:pickArmor(config.nSettingsIdx, config.faction)
 	config.nNewWeaponType = config.nNewWeaponType or self:pickWeapon()
-	config.nNewHorseType = config.nNewHorseType or self.HORSE_WL[random(1, getn(self.HORSE_WL))]
+	-- Mét sè tæ hîp res §­êng M«n bÞ mÊt toµn bé th©n khi ®ang c­ìi;
+	-- client chØ dùng l¹i h×nh sau khi NPC tróng ®ßn vµ xuèng ngùa. Gi÷ bot
+	-- §­êng M«n ®i bé ngay tõ feature ban ®Çu ®Ó h×nh lu«n ®­îc ®ång bé.
+	if config.faction == "duongmon" then
+		config.nNewHorseType = 0
+	else
+		config.nNewHorseType = config.nNewHorseType or self.HORSE_WL[random(1, getn(self.HORSE_WL))]
+	end
 
 	ChangeNpcFeature(nNpcIndex, 0, 0, config.nSettingsIdx, config.nNewHelmType, config.nNewArmorType,
 		config.nNewWeaponType,
 		config.nNewHorseType)
 
-	if SetNpcRideHorse then SetNpcRideHorse(nNpcIndex, 1) end
+	if SetNpcRideHorse then SetNpcRideHorse(nNpcIndex, config.faction == "duongmon" and 0 or 1) end
 end
 
 function SimCityNgoaiTrang:getData(charType, objectName)

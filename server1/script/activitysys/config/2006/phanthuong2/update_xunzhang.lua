@@ -11,16 +11,16 @@ Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 local nYear  = tonumber(date("%y"));
 local nTime = "20"..nYear.."0701"
 tbMaterial_Medal = {
-	[1]={szName="Mõng",tbProp={6,1,1752,1,0,0},nExpiredTime=nTime,nCount=3,},
+	[1]={szName="Mõng",tbProp={6,1,1752,1,0,0},nExpiredTime=0,nCount=3,},
 	}
-tbMaterial_Shijin = {szName="VLTK",tbProp={6,1,1753,1,0,0},nExpiredTime=nTime,nCount=3,}
-tbMaterial_Shijin2 = {szName="3",tbProp={6,1,1754,1,0,0},nExpiredTime=nTime,nCount=3,}
-tbMaterial_Shijin3 = {szName="Tuæi",tbProp={6,1,1755,1,0,0},nExpiredTime=nTime,nCount=3,}
+tbMaterial_Shijin = {szName="VLTK",tbProp={6,1,1753,1,0,0},nExpiredTime=0,nCount=3,}
+tbMaterial_Shijin2 = {szName="3",tbProp={6,1,1754,1,0,0},nExpiredTime=0,nCount=3,}
+tbMaterial_Shijin3 = {szName="Tuæi",tbProp={6,1,1755,1,0,0},nExpiredTime=0,nCount=3,}
 tbMaterial_Shijin4 = {szName="Ng©n L­îng",nJxb=100000,nCount=1,}
 
 
 tbProduct = {
-	[1] = {szName="B¸nh Kem Nh­ ý",tbProp={6,1,1761,1,0,0},nExpiredTime=nTime,},	
+	[1] = {szName="B¸nh Kem Nh­ ý",tbProp={6,1,1761,1,0,0},nExpiredTime=0,},	
 	}
 
 
@@ -122,7 +122,7 @@ function tbUpdateXunZhang:Compose()
 	local bSuccess = self:CanCompose()
 	if bSuccess == 0 then
 		%tbLog:PlayerAwardLog(%EVENT_LOG_TITLE, self.tbFormula.tbLog.szFail)
-		--tbAwardTemplet:GiveAwardByList({tbProp = {6,1,1359,1,0,0}, nExpiredTime=nTime,}, "test", 1);--=========================
+		--tbAwardTemplet:GiveAwardByList({tbProp = {6,1,1359,1,0,0}, nExpiredTime=0,}, "test", 1);--=========================
 		Msg2Player("ThËt ®¸ng tiÕc, n©ng cÊp thÊt b¹i")
 		return 0
 	else

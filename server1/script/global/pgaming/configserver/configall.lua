@@ -18,7 +18,7 @@ TinSuSonThanMieu = 0 -- S¬n ThÇn MiÕu: L©m An - Ph­îng T­êng
 Mo3LoaiTinSuNhuVNG = 0 -- §¹i Lý random 3 map
 
 ----------------------------------------------------------------------------------------------------
-BauCua = 0 -- 0: §ãng, 1: Më - Trung T©m T­¬ng D­¬ng
+BauCua = 1 -- 0: §ãng, 1: Më - Trung T©m T­¬ng D­¬ng
 
 ----------------------------------------------------------------------------------------------------
 -- Tèng Kim
@@ -98,8 +98,8 @@ ChinhServerPkNhanFullDoVaCap = 0 -- 0: §ãng, 1: Më
 -- NPC
 ChuyenDoiTrangBiHoangKim = 0 -- 0: §ãng, 1: Më
 TienDongChuyenTrangBi = 500
-DoiVatPham = 0 -- 0: §ãng, 1: Më - §æi nguyªn liÖu c¸c ho¹t ®éng
-BanItemHoTro = 0 -- 0: §ãng, 1: Më - NPC b¸n c¸c vËt phÈm hæ trî nh­ Thuèc lag Tèng Kim,..
+DoiVatPham = 1 -- 0: §ãng, 1: Më - §æi nguyªn liÖu c¸c ho¹t ®éng
+BanItemHoTro = 1 -- 0: §ãng, 1: Më - NPC b¸n c¸c vËt phÈm hæ trî nh­ Thuèc lag Tèng Kim,..
 DoiVuKhiXanh = 0 -- 0: §ãng, 1: Më - §æi Vò KhÝ Xanh, cßn lçi, test l¹i sau
 
 ----------------------------------------------------------------------------------------------------
@@ -135,7 +135,16 @@ VoDanhTangHocSkill150 = 0
 --                                     Sù KiÖn Tù §éng 12 Th¸ng                                   --
 ----------------------------------------------------------------------------------------------------
 -- T¾t më Sù KiÖn Tù §éng
-EventTuDong = 0 -- 0: §ãng, 1: Më
+EventTuDong = 1 -- 0: §ãng, 1: Më
+EventThangLuaChon = 9 -- 0: Tu dong theo thang hien tai, 1-12: Co dinh mot event thang
+function EventThangDangMo(nThang)
+	if EventTuDong ~= 1 then return 0 end
+	local nThangChon = tonumber(EventThangLuaChon) or 0
+	local nThangHienTai = tonumber(date("%m"))
+	if nThangChon == tonumber(nThang) then return 1 end
+	if nThangChon == 0 and nThangHienTai == tonumber(nThang) then return 1 end
+	return 0
+end
 -- Giíi h¹n sö dông sù KiÖn lo¹i th­êng vµ ®Æc biÖt
 nGioiHanEventThuong = 1000
 nGioiHanEventDacBiet = 2000

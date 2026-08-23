@@ -563,4 +563,4 @@ MÆt n¹ Xu©n Ng­u	0	11	558	\spr\item\equip\mask\yrmj_02.spr	379	1	1	Sau khi ®eo l
 MÆt n¹ V­¬ng Gi¶	0	11	561	\spr\item\equip\mask\yrmj_02.spr	379	1	1	Sau khi ®eo vµo sÏ nh©n ®­îc vâ c«ng c¸i thÕ		0	1	0		1657	1657	139	1	1																											
 Ò×ÈÝÃæ¾ß-Õ½Áú»Í¼×(ÄÐ)	0	11	562	\spr\item\equip\mask\yrmj_02.spr	379	1	1	Sau khi ®eo lªn ng­êi sÏ trë thµnh h×no d¹ng cña NPC nµy		0	1	0		1885	1885																														
 Ò×ÈÝÃæ¾ß-Õ½Áú»Í¼×(Å®)	0	11	563	\spr\item\equip\mask\yrmj_02.spr	379	1	1	Sau khi ®eo lªn ng­êi sÏ trë thµnh h×no d¹ng cña NPC nµy		0	1	0		1886	1886																														
-MÆt n¹ - Vip	0	11	592	\spr\item\equip\mask\yrmj_02.spr	379	1	1	Sau khi ®eo vµo sÏ nhËn ®­îc vâ c«ng c¸i thÕ		0	1	0				139	20	20	115	350	350	116	350	350	88	20000	20000	92	500	500	111	150	150	114	50	50												
+MÆt n¹ - Vip	0	11	592	\spr\item\equip\mask\yrmj_02.spr	379	1	1	Sau khi ®eo vµo sÏ nhËn ®­îc vâ c«ng c¸i thÕ		0	1	0				139	20	20	115	350	350	116	350	350	88	20000	20000	92	500	500	111	150	150															

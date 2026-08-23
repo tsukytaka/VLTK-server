@@ -51,7 +51,7 @@ local nDayNow = "20"..nYMD..""
 if GetLevel() < 50 then
 	Talk(1,"",""..myplayersex().." Ch­a §ñ CÊp 50 kh«ng thÓ sö dông")
 return 1 end
-	if (nDayNow >= nTime1) and (nDayNow <= nTime2) then
+	if 1 == 1 then
 			if GetTask(BOHOAHONG) < nGioiHanEventDacBiet then
 				if CalcFreeItemCellCount() >= 10 then
 					tbAwardTemplet:GiveAwardByList(tbBoHoaHong,1)

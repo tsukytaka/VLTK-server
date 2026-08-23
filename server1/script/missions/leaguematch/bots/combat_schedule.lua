@@ -3,6 +3,7 @@ Include("\\script\\missions\\leaguematch\\glbmission\\combat.lua")
 -- environment need DelNpcSafe and friends reachable through include links.
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\head.lua")
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\config.lua")
+Include("\\script\\global\\nobitaxd\\vdk\\simcity\\webconfig.lua")
 Include("\\script\\global\\nobitaxd\\vdk\\simcity\\components\\sim.strength.lua")
 
 if DynamicExecute then

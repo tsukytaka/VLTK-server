@@ -29,7 +29,7 @@ tbConfig[1] = --Tèng Kim 1000 §iÓm
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tTongKim1000]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tTongKim1000]"} },
 	},
 }
 tbConfig[2] = --Tèng Kim 3000 §iÓm
@@ -47,7 +47,7 @@ tbConfig[2] = --Tèng Kim 3000 §iÓm
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tTongKim3000]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tTongKim3000]"} },
 	},
 }
 tbConfig[3] =
@@ -64,7 +64,7 @@ tbConfig[3] =
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tVuotAi17]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tVuotAi17]"} },
 	},
 }
 tbConfig[4] =
@@ -81,7 +81,7 @@ tbConfig[4] =
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tVuotAi28]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tVuotAi28]"} },
 	},
 }
 tbConfig[5] = --Thñy TÆc §Çu LÜnh
@@ -99,7 +99,7 @@ tbConfig[5] = --Thñy TÆc §Çu LÜnh
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietThuyTacDauLinh]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietThuyTacDauLinh]"} },
 	},
 }
 tbConfig[6] = --Thñy TÆc §¹i §Çu LÜnh
@@ -118,7 +118,7 @@ tbConfig[6] = --Thñy TÆc §¹i §Çu LÜnh
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietThuyTacDaiDauLinh]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietThuyTacDaiDauLinh]"} },
 	},
 }
 tbConfig[7] = --Viªm §Õ
@@ -135,7 +135,7 @@ tbConfig[7] = --Viªm §Õ
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},25,"[Event_Mõng Sinh NhËt VLTK] [tVuotAiViemDe10]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},25,"[Event_Mõng Sinh NhËt VLTK] [tVuotAiViemDe10]"} },
 	},
 }
 tbConfig[8] = --Tin Su
@@ -152,7 +152,7 @@ tbConfig[8] = --Tin Su
 	},
 	tbActition = 
 	{
-		--{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tTinSu10]"} },
+		--{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},20,"[Event_Mõng Sinh NhËt VLTK] [tTinSu10]"} },
 	},
 }
 tbConfig[9] = --V­LMC
@@ -169,7 +169,7 @@ tbConfig[9] = --V­LMC
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tVLMC]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},10,"[Event_Mõng Sinh NhËt VLTK] [tVLMC]"} },
 	},
 }
 tbConfig[10] = --Boss ThÕ Giíi
@@ -187,7 +187,7 @@ tbConfig[10] = --Boss ThÕ Giíi
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},50,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietBossTheGioi]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},50,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietBossTheGioi]"} },
 	},
 }
 tbConfig[11] = --Boss S¸t Thñ
@@ -205,7 +205,7 @@ tbConfig[11] = --Boss S¸t Thñ
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},5,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietBossS¸tThñ]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},5,"[Event_Mõng Sinh NhËt VLTK] [tTieuDietBossS¸tThñ]"} },
 	},
 }
 tbConfig[12] = --?»¸öÏ¸½Ú
@@ -224,7 +224,7 @@ tbConfig[12] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},1,"2"} },
+		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},1,"2"} },
 	},
 }
 tbConfig[13] = --§èi tho¹i
@@ -234,7 +234,7 @@ tbConfig[13] = --§èi tho¹i
 	szName = "§èi Tho¹i Npc",
 	nStartDate = nil,
 	nEndDate  = nil,
-	tbMessageParam = {"Hµng rong"},
+	tbMessageParam = {"Qu¶n Lý Sù KiÖn"},
 	tbCondition = 
 	{
 	},
@@ -258,7 +258,7 @@ tbConfig[14] =
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1394,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Kem]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1394,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Kem]"} },
 	},
 }
 tbConfig[15] = 
@@ -276,7 +276,7 @@ tbConfig[15] =
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,1682,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Sinh NhËt]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,1682,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Sinh NhËt]"} },
 	},
 }
 tbConfig[16] = --Sö Dông
@@ -344,7 +344,7 @@ tbConfig[19] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},1,"2"} },
+		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},1,"2"} },
 	},
 }
 tbConfig[20] = --?»¸öÏ¸½Ú
@@ -363,7 +363,7 @@ tbConfig[20] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=nTime,tbProp={6,1,1393,1,0,0},},1,"2"} },
+		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1393,1,0,0},},1,"2"} },
 	},
 }
 tbConfig[21] = 
@@ -380,7 +380,7 @@ tbConfig[21] =
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,4946,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Kem]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,4946,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Kem]"} },
 	},
 }
 tbConfig[22] = --§èi tho¹i
@@ -450,7 +450,7 @@ tbConfig[25] =
 	},
 	tbActition = 
 	{
-		{"dostring",	{"local nRandomKeyValue = random(1, 100);if (nRandomKeyValue < 2) then AddItem(4,238,1,1,0,0,0);end;if (nRandomKeyValue <= 10 and nRandomKeyValue>2) then AddItem(4,353,1,1,0,0,0);end;if(nRandomKeyValue <= 12 and nRandomKeyValue>10) then AddItem(4,240,1,1,0,0,0);end;if(nRandomKeyValue <= 14 and nRandomKeyValue>12) then ItemIndex = AddItem(6,1,1181,1,0,0,0);ITEM_SetExpiredTime(ItemIndex, nTime);SyncItem(ItemIndex);end;if(nRandomKeyValue <= 16 and nRandomKeyValue>14) then AddItem(4,239,1,1,0,0,0);end;if(nRandomKeyValue <= 18 and nRandomKeyValue>16) then ItemIndex = AddItem(6,1,71,1,0,0,0);ITEM_SetExpiredTime(ItemIndex, nTime);SyncItem(ItemIndex);end;if(nRandomKeyValue <= 30 and nRandomKeyValue>18) then AddItem(6,1,147,3,0,0,0);end;if(nRandomKeyValue <= 65 and nRandomKeyValue>30) then AddItem(6,1,122,1,0,0,0);end;if(nRandomKeyValue <= 70 and nRandomKeyValue>65) then AddItem(6,1,124,1,0,0,0);end;if(nRandomKeyValue <= 80 and nRandomKeyValue>70) then AddItem(6,1,123,1,0,0,0);end;if(nRandomKeyValue <= 100 and nRandomKeyValue>80) then AddItem(0,0,0,0,0,0,0);end;if  GetTask(5853) < 5000 then AddOwnExp(1000); end SetTask(5853, GetTask(5853)+1);"} },
+		{"dostring",	{"local nRandomKeyValue = random(1, 100);if (nRandomKeyValue < 2) then AddItem(4,238,1,1,0,0,0);end;if (nRandomKeyValue <= 10 and nRandomKeyValue>2) then AddItem(4,353,1,1,0,0,0);end;if(nRandomKeyValue <= 12 and nRandomKeyValue>10) then AddItem(4,240,1,1,0,0,0);end;if(nRandomKeyValue <= 14 and nRandomKeyValue>12) then ItemIndex = AddItem(6,1,1181,1,0,0,0);ITEM_SetExpiredTime(ItemIndex, 0);SyncItem(ItemIndex);end;if(nRandomKeyValue <= 16 and nRandomKeyValue>14) then AddItem(4,239,1,1,0,0,0);end;if(nRandomKeyValue <= 18 and nRandomKeyValue>16) then ItemIndex = AddItem(6,1,71,1,0,0,0);ITEM_SetExpiredTime(ItemIndex, 0);SyncItem(ItemIndex);end;if(nRandomKeyValue <= 30 and nRandomKeyValue>18) then AddItem(6,1,147,3,0,0,0);end;if(nRandomKeyValue <= 65 and nRandomKeyValue>30) then AddItem(6,1,122,1,0,0,0);end;if(nRandomKeyValue <= 70 and nRandomKeyValue>65) then AddItem(6,1,124,1,0,0,0);end;if(nRandomKeyValue <= 80 and nRandomKeyValue>70) then AddItem(6,1,123,1,0,0,0);end;if(nRandomKeyValue <= 100 and nRandomKeyValue>80) then AddItem(0,0,0,0,0,0,0);end;if  GetTask(5853) < 5000 then AddOwnExp(1000); end SetTask(5853, GetTask(5853)+1);"} },
 		{"dostring",	{"Msg2Player(format([[B¹n ®· tÆng ®­îc %d hoa hång]], GetTask(5853)))"} },
 	},
 }

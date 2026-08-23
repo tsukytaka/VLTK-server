@@ -32,7 +32,7 @@ tbConfig[1] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,1220,1,0,0},nExpiredTime=nTime,},1,"5"} },
+		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,1220,1,0,0},nExpiredTime=0,},1,"5"} },
 	},
 }
 tbConfig[2] = --?»¸öÏ¸½Ú
@@ -51,7 +51,7 @@ tbConfig[2] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,1220,1,0,0},nExpiredTime=nTime,},1,"5"} },
+		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,1220,1,0,0},nExpiredTime=0,},1,"5"} },
 	},
 }
 tbConfig[3] = --?»¸öÏ¸½Ú
@@ -69,7 +69,7 @@ tbConfig[3] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,1220,1,0,0},nExpiredTime=nTime,},1,"1"} },
+		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,1220,1,0,0},nExpiredTime=0,},1,"1"} },
 	},
 }
 tbConfig[4] = --?»¸öÏ¸½Ú
@@ -133,7 +133,7 @@ tbConfig[6] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1241,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn b­¬m b­ím]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1241,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn b­¬m b­ím]"} },
 	},
 }
 tbConfig[7] = --?»¸öÏ¸½Ú
@@ -156,7 +156,7 @@ tbConfig[7] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1242,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1242,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[8] = --?»¸öÏ¸½Ú
@@ -179,7 +179,7 @@ tbConfig[8] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1243,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1243,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[9] = --?»¸öÏ¸½Ú
@@ -202,7 +202,7 @@ tbConfig[9] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1244,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1244,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[10] = --?»¸öÏ¸½Ú
@@ -225,7 +225,7 @@ tbConfig[10] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1245,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1245,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[11] = --?»¸öÏ¸½Ú
@@ -248,7 +248,7 @@ tbConfig[11] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1246,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1246,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[12] = --?»¸öÏ¸½Ú
@@ -291,7 +291,7 @@ tbConfig[13] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1229,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1229,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[14] = --?»¸öÏ¸½Ú
@@ -312,7 +312,7 @@ tbConfig[14] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1230,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1230,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[15] = --?»¸öÏ¸½Ú
@@ -333,7 +333,7 @@ tbConfig[15] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1231,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1231,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[16] = --?»¸öÏ¸½Ú
@@ -354,7 +354,7 @@ tbConfig[16] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1232,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1232,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[17] = --?»¸öÏ¸½Ú
@@ -375,7 +375,7 @@ tbConfig[17] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1233,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1233,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[18] = --?»¸öÏ¸½Ú
@@ -396,7 +396,7 @@ tbConfig[18] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1234,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1234,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[19] = --?»¸öÏ¸½Ú
@@ -438,7 +438,7 @@ tbConfig[20] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1235,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1235,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[21] = --?»¸öÏ¸½Ú
@@ -459,7 +459,7 @@ tbConfig[21] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1236,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1236,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[22] = --?»¸öÏ¸½Ú
@@ -480,7 +480,7 @@ tbConfig[22] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1237,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1237,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[23] = --?»¸öÏ¸½Ú
@@ -501,7 +501,7 @@ tbConfig[23] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1237,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1237,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[24] = --?»¸öÏ¸½Ú
@@ -522,7 +522,7 @@ tbConfig[24] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1238,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1238,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[25] = --?»¸öÏ¸½Ú
@@ -543,7 +543,7 @@ tbConfig[25] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1239,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1239,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[26] = --?»¸öÏ¸½Ú
@@ -564,7 +564,7 @@ tbConfig[26] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1240,1,0,0},nExpiredTime=nTime,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,1240,1,0,0},nExpiredTime=0,},1,"[Ho¹t ®éng trung thu] [Hîp thµnh lång ®Ìn]"} },
 	},
 }
 tbConfig[27] = --?»¸öÏ¸½Ú

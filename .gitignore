@@ -1,20 +1,25 @@
-# Logs directories
-gateway/Logs/
-gateway/s3relay/Logs/
-gateway/s3relay/relay_log/
-server1/Logs/
+# Log directories and files
+Logs/
+**/Logs/
+**/logs/
+**/relay_log/
+**/relay_log*/
+**/Backup/
+**/RelayRunData/
+**/SaveData/
+**/Stat/
+**/roleback/
+**/rolevalue_log/
 server1/itemexchange_setting/rolevalue_log/
 server1/rolevalueladder_setting/rolevalue_log/
 server1/dulieu/login/
 
-# Stats & data directories
-gateway/s3relay/Stat/
-gateway/s3relay/RelayRunData/
-gateway/s3relay/SaveData/
-
 # Log files
+*.log
+*.log_*
+*.log.*
+servershutdown_log
 server1/gameserver.log
-server1/servershutdown_log
 server1/data/gm/lockaccount.log
 server1/data/gm/lockplayer.log
 
@@ -26,11 +31,15 @@ server1/data/rankphuhao.txt
 
 # Config files
 gateway/bishop.cfg
+gateway/bishop.cfg*
 gateway/bishop_livetime.dat
 gateway/goddess.cfg
+gateway/goddess.cfg*
 gateway/s3relay/relay_config.ini
 server1/servercf0.ini
+server1/servercf0.ini*
 server1/servercfg.ini
+server1/servercfg.ini*
 
 # Backup files
 *.bak

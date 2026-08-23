@@ -53,7 +53,7 @@ function pActivity:InitNpc()
 end
 
 function pActivity:GiveRedRoseBud(nCount)
-	local tbAward = {szName="Cöu Tiªn Ngù YÕn",tbProp={6,1,30128,1,0,0},nCount=1,nExpiredTime=%nItemExpiredTime}
+	local tbAward = {szName="Cöu Tiªn Ngù YÕn",tbProp={6,1,30128,1,0,0},nCount=1,nExpiredTime=0}
 	for i = 1, nCount do
 	
 		if %tbVNG_BitTask_Lib:isMaxBitTaskValue(%tbGiveRedRoseBudLimit) ~= 1 then

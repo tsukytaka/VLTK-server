@@ -8,14 +8,14 @@ Include("\\script\\lib\\progressbar.lua")
 
 
 tbMaterial_Medal = {
-	[1]={szName="Ng«i Sao ChiÕn Th¾ng",tbProp={6,1,1494,1,0,0},nExpiredTime=20191001,nCount=10,},
-	[2]={szName="Ph¸o Trung",tbProp={6,1,1352,1,0,0},nExpiredTime=20191001,nCount=3,},
+	[1]={szName="Ng«i Sao ChiÕn Th¾ng",tbProp={6,1,1494,1,0,0},nExpiredTime=0,nCount=10,},
+	[2]={szName="Ph¸o Trung",tbProp={6,1,1352,1,0,0},nExpiredTime=0,nCount=3,},
 	}
 tbMaterial_Shijin = {szName="Ng©n L­îng",nJxb=150000,nCount=1,}	
 	
 tbProduct = {
-	[1] = {szName="quµ quèc kh¸nh",tbProp={6,1,1495,1,0,0},nExpiredTime=20191001,},
-	[2] = {szName="Ph¸o §¹i",tbProp={6,1,1353,1,0,0},nExpiredTime=20191001,}
+	[1] = {szName="quµ quèc kh¸nh",tbProp={6,1,1495,1,0,0},nExpiredTime=0,},
+	[2] = {szName="Ph¸o §¹i",tbProp={6,1,1353,1,0,0},nExpiredTime=0,}
 	}
 
 tbMedalLevelUpRate = {25,35 }	

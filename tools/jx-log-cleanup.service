@@ -1,0 +1,11 @@
+[Unit]
+Description=Delete old JX server log files
+
+[Service]
+Type=oneshot
+ExecStart=/home/jxser/tools/cleanup-jx-logs.sh
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

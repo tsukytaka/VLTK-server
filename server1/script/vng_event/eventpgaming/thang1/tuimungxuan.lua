@@ -1,14 +1,16 @@
 ---------------Youtube PGaming---------------
 Include("\\script\\lib\\awardtemplet.lua");
+Include("\\script\\global\\pgaming\\configserver\\configall.lua");
 Include("\\script\\item\\newyear_2009\\head.lua");
 local nYear  = tonumber(date("%y"));
 local nTime = "20"..nYear.."0201"
+if 1 == 1 and tonumber(EventThangLuaChon) == 1 then nTime = 0 end
 tb_bluebox_item	=
 {
-	[1]	= {szName="L¸ b¸nh",	tbProp={6, 1, 1653, 1, 0, 0},	nRate = 60,	nExpiredTime = nTime},
-	[2]	= {szName="G¹o nÕp",	tbProp={6, 1, 1654, 1, 0, 0},	nRate = 25, nExpiredTime = nTime},
-	[3]	= {szName="§Ëu xanh",	tbProp={6, 1, 1655, 1, 0, 0},	nRate = 10, nExpiredTime = nTime},
-	[4]	= {szName="ThÞt heo",	tbProp={6, 1, 1656, 1, 0, 0},	nRate = 5, nExpiredTime = nTime},
+	[1]	= {szName="L¸ b¸nh",	tbProp={6, 1, 1653, 1, 0, 0},	nRate = 60,	nExpiredTime=0},
+	[2]	= {szName="G¹o nÕp",	tbProp={6, 1, 1654, 1, 0, 0},	nRate = 25, nExpiredTime=0},
+	[3]	= {szName="§Ëu xanh",	tbProp={6, 1, 1655, 1, 0, 0},	nRate = 10, nExpiredTime=0},
+	[4]	= {szName="ThÞt heo",	tbProp={6, 1, 1656, 1, 0, 0},	nRate = 5, nExpiredTime=0},
 };
 
 function main()
@@ -17,7 +19,7 @@ local nTime1 = "20"..nYear.."01010000"
 local nTime2 = "20"..nYear.."02010000"
 local nYMD  = tonumber(date("%y%m%d%H%M"))
 local nDayNow = "20"..nYMD..""
-	if (nDayNow >= nTime2) then
+	if (1 ~= 1) then
 		Msg2Player("VËt phÈm nµy ®· qu¸ h¹n.");
 		return 0;
 	end
@@ -30,19 +32,24 @@ local nDayNow = "20"..nYMD..""
 end
 
 function IsPickable( nItemIndex, nPlayerIndex )
-	local nYear  = tonumber(date("%y"));
-local nTime1 = "20"..nYear.."0101"
-local nTime2 = "20"..nYear.."0201"
-local nYMD  = tonumber(date("%y%m%d%H%M"))
-local nDayNow = "20"..nYMD..""
-	if (nDayNow > nTime2) then
+	if (1 ~= 1) then
 		return 0;
 	end
-	if( IsMyItem( nItemIndex ) ) then
-		if (ITEM_GetExpiredTime(nItemIndex) == 0) then
-			ITEM_SetExpiredTime(nItemIndex, nTime2);
-			SyncItem(nItemIndex);
+	if (IsMyItem(nItemIndex)) then
+		if (tonumber(EventThangLuaChon) == 1) then
+			if (ITEM_GetExpiredTime(nItemIndex) ~= 0) then
+				ITEM_SetExpiredTime(nItemIndex, 0);
+				SyncItem(nItemIndex);
+			end
+		else
+			local nYear = tonumber(date("%y"));
+			local nTime2 = "20"..nYear.."0201";
+			if (ITEM_GetExpiredTime(nItemIndex) == 0) then
+				ITEM_SetExpiredTime(nItemIndex, 0);
+				SyncItem(nItemIndex);
+			end
 		end
 		return 1;
 	end
+	return 0;
 end

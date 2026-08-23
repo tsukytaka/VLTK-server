@@ -122,6 +122,14 @@ function execCreateChar(self, simInstance, tbNpc, isNew, goX32, goY32)
                     local _wc = _ak[tbNpc.skillCastBua[1]]
                     if _wc then SetBotWeaponView(nNpcIndex, _wc) end
                 end
+
+                -- §­êng M«n ph¶i ë tr¹ng th¸i ®i bé ngay khi spawn. Mét sè
+                -- kiÓu ngo¹i h×nh c­ìi ngùa kh«ng cã res t­¬ng øng nªn client
+                -- giÊu NPC cho tíi lóc bÞ ®¸nh vµ tù xuèng ngùa.
+                if tbNpc.faction == "duongmon" and SetNpcRideHorse then
+                    SetNpcRideHorse(nNpcIndex, 0)
+                    tbNpc.lastRideWant = 0
+                end
 				
 				if tbNpc.stall == 1 and NpcSit then
 					NpcSit(nNpcIndex)

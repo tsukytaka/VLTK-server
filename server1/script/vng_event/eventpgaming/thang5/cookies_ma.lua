@@ -6,7 +6,7 @@ local nYear  = tonumber(date("%y"));
 local nTime2 = "20"..nYear.."0601"
 local nYMD  = tonumber(date("%y%m%d%H%M"))
 local nDayNow = "20"..nYMD..""
-	if (checkcookies2007Date(nTime2) ~= 1) then
+	if (1 ~= 1) then
 		Say("Nguyªn liÖu nµy ®· ®Ó qu¸ h¹n sö dông. Kh«ng thÓ dïng ®Ó lµm b¸nh n÷a.", 0);
 		return 0;
 	end;

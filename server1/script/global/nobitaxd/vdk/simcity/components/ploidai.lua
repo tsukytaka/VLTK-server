@@ -21,6 +21,13 @@ BotDuel = {
     prepTicks  = floor((SIMCITY_DUEL_READY_SECONDS or 18) / 3),
 }
 
+-- Map 209 chi danh cho mot cap dau BotDuel. Watchdog va bo tao dan so
+-- SimCity thuong phai bo qua map nay, neu khong se bu them 15 bot khi tran dau bat dau.
+function SimCityIsDuelOnlyMap(nW)
+    if BotDuel and nW == BotDuel.arenaMap then return 1 end
+    return 0
+end
+
 if SimCityWorld and SimCityWorld.New then
     SimCityWorld:New({
         worldId   = 209,
@@ -149,6 +156,9 @@ function BotDuel:PrepArena(camp)
 end
 
 function BotDuel:StartCombat(pidx, a)
+    -- Don lan cuoi ngay truoc khi khai chien de dam bao tren dai chi con
+    -- dung mot SIM da duoc nguoi choi chon.
+    self:ClearArenaExtras(a.botId)
     local _oldSW = SubWorld
     if SubWorldID2Idx then SubWorld = SubWorldID2Idx(self.arenaMap) end
     if RunMission then RunMission(BW_MISSIONID_DUEL) end
@@ -170,6 +180,33 @@ function BotDuel:StartCombat(pidx, a)
     if Msg2MSAll then Msg2MSAll(BW_MISSIONID_DUEL, "C«ng B×nh Tö: HÕt giê chuÈn bÞ, trËn tØ vâ b¾t ®Çu!") end
 end
 
+function BotDuel:ClearArenaExtras(keepId)
+    if not SimCitizen or not SimCitizen.fighterList then return end
+    local removeIds = {}
+    for id, tb in SimCitizen.fighterList do
+        if id ~= keepId and tb and tb.nMapId == self.arenaMap then
+            tinsert(removeIds, id)
+        end
+    end
+    for i = 1, getn(removeIds) do
+        local id = removeIds[i]
+        local tb = SimCitizen.fighterList[id]
+        if tb then
+            tb._ownerRemove = 1
+            if tb.finalIndex and tb.finalIndex > 0 then DelNpcSafe(tb.finalIndex) end
+            tb.finalIndex = nil
+            tb.isDead = 1
+            self.botToOwner[id] = nil
+            SimCitizen:Remove(id)
+        end
+    end
+    if SimCityThanhThi then
+        SimCityThanhThi.batchesByMap[self.arenaMap] = nil
+        SimCityThanhThi.timerIdsByMap[self.arenaMap] = nil
+        SimCityThanhThi.playerTimerIdsByMap[self.arenaMap] = nil
+    end
+end
+
 function BotDuel:Start(pidx)
     if BOTDUEL_ENABLED ~= 1 then return end
     if self.active[pidx] then return end
@@ -187,6 +224,8 @@ function BotDuel:Start(pidx)
     local rw, rx, ry = GetWorldPos()
     self.active[pidx] = { botId = id, botName = tb.szName, retW = rw, retX = rx, retY = ry, ticks = 0, stage = "prep", prepLeft = self.prepTicks }
     self.botToOwner[id] = pidx
+
+    self:ClearArenaExtras(id)
 
     if not self:PutBotInArena(tb, pidx) then
         self.active[pidx] = nil

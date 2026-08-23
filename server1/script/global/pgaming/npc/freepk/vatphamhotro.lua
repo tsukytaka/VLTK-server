@@ -28,17 +28,12 @@ local nXu = CalcEquiproomItemCount(4,417,1,-1);
 end
 
 function PhiTocHoan2()
-	local nXu = CalcEquiproomItemCount(4,417,1,-1)/2
+	local nXu = floor(CalcEquiproomItemCount(4,417,1,-1)/2)
 	AskClientForNumber("PhiTocHoan3",0,nXu, "2/1: ")
 end
 
 function PhiTocHoan3(n_key)
-local nRuong = CalcFreeItemCellCount() 
-for i=1,n_key do
-		ItemIndex = AddStackItem(1,6,0,6,1,1,0)
-		SetItemBindState(ItemIndex, -2)
-		ConsumeEquiproomItem(2, 4, 417, 1, 1)
-	end
+	MuaVatPhamXepChong(n_key, 0, 6, "Phi Tèc Hoµn")
 end;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function DaiLucHoan()
@@ -50,17 +45,12 @@ local nXu = CalcEquiproomItemCount(4,417,1,-1);
 end
 
 function DaiLucHoan2()
-	local nXu = CalcEquiproomItemCount(4,417,1,-1)/2
+	local nXu = floor(CalcEquiproomItemCount(4,417,1,-1)/2)
 	AskClientForNumber("DaiLucHoan3",0,nXu, "2/1: ")
 end
 
 function DaiLucHoan3(n_key)
-local nRuong = CalcFreeItemCellCount() 
-for i=1,n_key do
-		ItemIndex = AddStackItem(1,6,0,3,1,1,0)
-		SetItemBindState(ItemIndex, -2)
-		ConsumeEquiproomItem(2, 4, 417, 1, 1)
-	end
+	MuaVatPhamXepChong(n_key, 0, 3, "§¹i Lùc Hoµn")
 end;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function TKPhiTocHoan()
@@ -72,17 +62,12 @@ local nXu = CalcEquiproomItemCount(4,417,1,-1);
 end
 
 function tkphitochoan2()
-	local nXu = CalcEquiproomItemCount(4,417,1,-1)/2
+	local nXu = floor(CalcEquiproomItemCount(4,417,1,-1)/2)
 	AskClientForNumber("tkphitochoan3",0,nXu, "2/1: ")
 end
 
 function tkphitochoan3(n_key)
-local nRuong = CalcFreeItemCellCount() 
-for i=1,n_key do
-		ItemIndex = AddStackItem(1,6,1,190,1,0,0)
-		SetItemBindState(ItemIndex, -2)
-		ConsumeEquiproomItem(2, 4, 417, 1, 1)
-	end
+	MuaVatPhamXepChong(n_key, 1, 190, "Tèng Kim Phi Tèc Hoµn")
 end;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function LenhBai()
@@ -94,17 +79,12 @@ local nXu = CalcEquiproomItemCount(4,417,1,-1);
 end
 
 function LenhBai2()
-	local nXu = CalcEquiproomItemCount(4,417,1,-1)/2
+	local nXu = floor(CalcEquiproomItemCount(4,417,1,-1)/2)
 	AskClientForNumber("LenhBai3",0,nXu, "2/1: ")
 end
 
 function LenhBai3(n_key)
-local nRuong = CalcFreeItemCellCount() 
-for i=1,n_key do
-		ItemIndex = AddStackItem(1,6,1,157,1,0,0)
-		SetItemBindState(ItemIndex, -2)
-		ConsumeEquiproomItem(2, 4, 417, 1, 1)
-	end
+	MuaVatPhamXepChong(n_key, 1, 157, "LÖnh Bµi")
 end;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function ChienCo()
@@ -116,17 +96,12 @@ local nXu = CalcEquiproomItemCount(4,417,1,-1);
 end
 
 function ChienCo2()
-	local nXu = CalcEquiproomItemCount(4,417,1,-1)/2
+	local nXu = floor(CalcEquiproomItemCount(4,417,1,-1)/2)
 	AskClientForNumber("ChienCo3",0,nXu, "2/1: ")
 end
 
 function ChienCo3(n_key)
-local nRuong = CalcFreeItemCellCount() 
-for i=1,n_key do
-		ItemIndex = AddStackItem(1,6,1,156,1,0,0)
-		SetItemBindState(ItemIndex, -2)
-		ConsumeEquiproomItem(2, 4, 417, 1, 1)
-	end
+	MuaVatPhamXepChong(n_key, 1, 156, "ChiÕn Cæ")
 end;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function KhangDonChiGiac()
@@ -138,18 +113,40 @@ local nXu = CalcEquiproomItemCount(4,417,1,-1);
 end
 
 function KhangDonChiGiac2()
-	local nXu = CalcEquiproomItemCount(4,417,1,-1)/2
+	local nXu = floor(CalcEquiproomItemCount(4,417,1,-1)/2)
 	AskClientForNumber("KhangDonChiGiac3",0,nXu, "2/1: ")
 end
 
 function KhangDonChiGiac3(n_key)
-local nRuong = CalcFreeItemCellCount() 
-for i=1,n_key do
-		ItemIndex = AddStackItem(1,6,1,214,1,0,0)
-		SetItemBindState(ItemIndex, -2)
-		ConsumeEquiproomItem(2, 4, 417, 1, 1)
-	end
+	MuaVatPhamXepChong(n_key, 1, 214, "Kh¸ng §¬n Chi Gi¸c")
 end;
+
+function MuaVatPhamXepChong(nSoLuong, nDetail, nParticular, szTenVatPham)
+	nSoLuong = floor(tonumber(nSoLuong) or 0)
+	if nSoLuong < 1 then
+		Msg2Player("Sè l­îng mua kh«ng hîp lÖ.")
+		return 0
+	end
+
+	local nChiPhi = nSoLuong * 2
+	if CalcEquiproomItemCount(4,417,1,-1) < nChiPhi then
+		Msg2Player("Kh«ng ®ñ Xu ®Ó mua vËt phÈm.")
+		return 0
+	end
+	if CalcFreeItemCellCount() < 1 then
+		Msg2Player("Hµnh trang cÇn Ýt nhÊt 1 « trèng.")
+		return 0
+	end
+
+	ConsumeEquiproomItem(nChiPhi, 4, 417, 1, 1)
+	tbAwardTemplet:GiveAwardByList({
+		szName = szTenVatPham,
+		tbProp = {6,nDetail,nParticular,1,(nDetail == 0 and 1 or 0),0},
+		nCount = nSoLuong,
+		nBindState = -2,
+	}, "NPC B¸n VËt PhÈm Hç Trî", 1)
+	return 1
+end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function OnTimer(nNpcIndex,nTimeOut)
     local tab_Chat = {

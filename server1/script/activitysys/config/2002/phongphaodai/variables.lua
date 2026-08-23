@@ -1,8 +1,8 @@
 ---------------Youtube PGaming---------------
-ITEM_MEDAL_1		= {szName="Huy Hi÷u c p 1",tbProp={6,1,3133,1,0,0},nExpiredTime=20120501,}
-ITEM_MEDAL_2		= {szName="Huy Hi÷u c p 2",tbProp={6,1,3134,1,0,0},nExpiredTime=20120501,}
-ITEM_MEDAL_3		= {szName="Huy Hi÷u c p 3",tbProp={6,1,3135,1,0,0},nExpiredTime=20120501,}
-ITEM_SHIJIN		= {szName="Thπch Kim",tbProp={6,1,3136,1,0,0},nExpiredTime=20120501,}
+ITEM_MEDAL_1		= {szName="Huy Hi÷u c p 1",tbProp={6,1,3133,1,0,0},nExpiredTime=0,}
+ITEM_MEDAL_2		= {szName="Huy Hi÷u c p 2",tbProp={6,1,3134,1,0,0},nExpiredTime=0,}
+ITEM_MEDAL_3		= {szName="Huy Hi÷u c p 3",tbProp={6,1,3135,1,0,0},nExpiredTime=0,}
+ITEM_SHIJIN		= {szName="Thπch Kim",tbProp={6,1,3136,1,0,0},nExpiredTime=0,}
 TSK_DAILY_MEDAL		= 1
 TSK_MARK		= 2
 TSK_DAILY_ACTIVE		= 3

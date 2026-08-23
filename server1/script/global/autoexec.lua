@@ -156,7 +156,7 @@ addnewtasknpc={
 	{666,60,5,103,1750,2668,0,"Kh«ng TŞch §¹i S­",0,"\\script\\task\\newtask\\master\\zhongli\\enemy_shaolinkongji.lua"},
 	{651,80,4,176,1630,2992,0,"M·nh Phµm",0,"\\script\\½­ÄÏÇø\\ÁÙ°²\\ÁÙ°²\\npc\\Â·ÈË_ÃÏ·².lua"},
 	{650,80,4,80,1703,3119,0,"H¹ V« Th¶ ",0,"\\script\\ÖĞÔ­ÄÏÇø\\ÑïÖİ\\npc\\Â·ÈË_ÏÄÎŞÇÒ.lua"},
-	{665,80,4,103,1774,2842,0,"Kh«ng TŞch §¹i S­",0,"\\script\\ÖĞÔö±Çø\\ÉÙÁÖÅÉ\\ÉÙÁÖÅÉ\\npc\\passerby_shaolinkongji.lua"},
+	{665,80,4,103,1774,2842,0,"Kh«ng TŞch §¹i S­",0,"\\script\\task\\newtask\\master\\zhongli\\passerby_shaolinkongji.lua"},
 	{677,80,4,59,1640,3186,0,"Hµn Ng­ ¤ng ",0,"\\script\\Á½ºşÇø\\ÌìÍõ°ï\\ÌìÍõ°ï\\npc\\passerby_hanjiangdudiaosou.lua"},
 	{723,25,5,332,1262,2821,0,"Tµng B¶o kh¸ch",0,"\\script\\task\\newtask\\branch\\zhengpai\\enemy_cangbaoke.lua"},
 	{723,25,5,332,1220,2833,0,"Tµng B¶o kh¸ch",0,"\\script\\task\\newtask\\branch\\zhengpai\\enemy_cangbaoke.lua"},
@@ -260,10 +260,10 @@ function main()
 	if ChinhServerPkNhanFullDoVaCap == 1 and ChuyenDoiTrangBiHoangKim == 1 then
 		Add_Npc_ChuyenDoiTrangBiHKMP()
 	end
-	if ChinhServerPkNhanFullDoVaCap == 1 and DoiVatPham == 1 then
+	if DoiVatPham == 1 then
 		Add_Npc_DoiVatPham()
 	end
-	if ChinhServerPkNhanFullDoVaCap == 1 and BanItemHoTro == 1 then
+	if BanItemHoTro == 1 then
 		Add_Npc_VatPhamHoTro()
 	end
 	if ChinhServerPkNhanFullDoVaCap == 1 and DoiVuKhiXanh == 1 then

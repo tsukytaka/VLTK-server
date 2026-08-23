@@ -1,5 +1,6 @@
 ---------------Youtube PGaming---------------
 IncludeLib("ITEM")
+Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 -----------------------------------------------------------
 nTSK_USE_TIMES_LIMIT	 = 5767
 nTSK_USE_COUNT_LIMIT	 = 5766
@@ -41,7 +42,7 @@ local nTime1 = "20"..nYear.."1101"
 local nTime2 = "20"..nYear.."1001"
 local nYMD  = tonumber(date("%y%m%d%H%M"))
 local nDayNow = "20"..nYMD..""
-	if (nDayNow >= nTime1 or nDayNow < nTime2 or gb_GetTask("midautumn2006_city_all", 1) ~= 0) then --
+	if 1 ~= 1 then --
 		Say("Ho¹t ®éng kÕt thóc kh«ng thÓ sö dông.", 0);
 		return 1;
 	end;

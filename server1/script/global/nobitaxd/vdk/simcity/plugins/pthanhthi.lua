@@ -24,6 +24,14 @@ end
 
 
 function SimCityThanhThi:_createSingle(id, Map, config)
+	-- Map loi dai Cong Binh Tu chi nhan bot do BotDuel quan ly.
+	if SimCityIsDuelOnlyMap and SimCityIsDuelOnlyMap(Map) == 1 then
+		return nil
+	end
+	local trainTarget = SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[Map]
+	if trainTarget ~= nil and trainTarget <= 0 then
+		return nil
+	end
 	local nW, nX, nY = GetWorldPos()
 	local worldInfo = SimCityWorld:Get(nW)
 	local kind = 0
@@ -435,12 +443,32 @@ function SimCityThanhThi:onPlayerEnterMap()
 	local nW, pX, pY = GetWorldPos()
 	local worldInfo = SimCityWorld:Get(nW)
 	if not worldInfo or not worldInfo.worldId then return 1 end
+	if SimCityIsDuelOnlyMap and SimCityIsDuelOnlyMap(nW) == 1 then
+		self.playerTimerIdsByMap[nW] = nil
+		self.batchesByMap[nW] = nil
+		self.timerIdsByMap[nW] = nil
+		return 1
+	end
 	local camp = GetCurCamp()
 	worldInfo.playerTracker = worldInfo.playerTracker or {}
 	if not worldInfo.playerTracker[PlayerIndex] then
 		worldInfo.playerTrackerCount = (worldInfo.playerTrackerCount or 0) + 1
 	end
 	worldInfo.playerTracker[PlayerIndex] = {pX, pY, camp}
+	local trainTarget = SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[nW]
+	if trainTarget ~= nil then
+		worldInfo.isTrainMap = 1
+		if trainTarget <= 0 then
+			self:removeAll(nW)
+			self.playerTimerIdsByMap[nW] = nil
+			SIMCITY_TRAIN_ZERO_LOGGED = SIMCITY_TRAIN_ZERO_LOGGED or {}
+			if not SIMCITY_TRAIN_ZERO_LOGGED[nW] then
+				WriteLog("SIMCITY_TRAIN_ZERO\tBlocked map "..nW)
+				SIMCITY_TRAIN_ZERO_LOGGED[nW] = 1
+			end
+			return 1
+		end
+	end
 	if self.autoAddThanhThi ~= 1 then
 		return 1
 	end
@@ -494,6 +522,19 @@ function SimCityThanhThi:autoCreateNpc(nW)
 		self.playerTimerIdsByMap[nW] = nil
 		return 1
 	end
+	if SimCityIsDuelOnlyMap and SimCityIsDuelOnlyMap(nW) == 1 then
+		self.playerTimerIdsByMap[nW] = nil
+		self.batchesByMap[nW] = nil
+		self.timerIdsByMap[nW] = nil
+		return 1
+	end
+	local trainTarget = SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[nW]
+	if trainTarget ~= nil and trainTarget <= 0 then
+		worldInfo.isTrainMap = 1
+		self:removeAll(nW)
+		self.playerTimerIdsByMap[nW] = nil
+		return 1
+	end
 
 	if (SimCityWorld:IsTongKimMap(nW) ~= 1 and worldInfo.name ~= "" and worldInfo.playerTrackerCount >= 1 and self:countMap(nW) == 0) then
 		self:createNpcSoCapByMap(nW)
@@ -519,6 +560,12 @@ function SimCityThanhThi:createNpcSoCapByMap(worldId)
 
 	local worldInfo = SimCityWorld:Get(nW)
 	if (worldInfo.name ~= "") then
+		local trainTarget = SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[nW]
+		if trainTarget ~= nil and trainTarget <= 0 then
+			worldInfo.isTrainMap = 1
+			self:removeAll(nW)
+			return 1
+		end
 		local tmpFound = {}
 		local level
 		local total = 100
@@ -608,7 +655,7 @@ function SimCityThanhThi:createNpcSoCapByMap(worldId)
 				)
 				end
 			end
-		elseif map9x == 0 then
+		elseif map9x == 0 and not (SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[nW] ~= nil) then
 			if isThanhThi then
 			worldInfo.allowFighting = 0
 			worldInfo.cityPeace = 1
@@ -693,7 +740,8 @@ function SimCityThanhThi:createNpcSoCapByMap(worldId)
 			N = getn(tmpFound)
 			worldInfo.allowFighting = 1
 			worldInfo.isTrainMap = 1   
-			total = SIMCITY_TRAIN_SIZE or 10
+			total = (SIMCITY_TRAIN_SIZE_BY_MAP and SIMCITY_TRAIN_SIZE_BY_MAP[nW]) or SIMCITY_TRAIN_SIZE or 10
+			local trainLevel = (SIMCITY_TRAIN_LEVEL_BY_MAP and SIMCITY_TRAIN_LEVEL_BY_MAP[nW]) or level or 95
 			local everything = {}
 			local _spNodes = {}  
 			for _k, _v in worldInfo.nodes do
@@ -732,7 +780,7 @@ function SimCityThanhThi:createNpcSoCapByMap(worldId)
 						szName = SimCityNPCInfo:generateName(),
 						ngoaitrang = 1,
 						mode = "train",
-						level = level or 95,
+						level = trainLevel,
 						capHP = 1,
 						camp = grpCamp,   
 						goX32 = _gx, goY32 = _gy,   

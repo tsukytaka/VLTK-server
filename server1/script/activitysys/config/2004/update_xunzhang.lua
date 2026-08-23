@@ -9,14 +9,14 @@ Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 local nYear  = tonumber(date("%y"));
 local nTime = "20"..nYear.."0501"
 tbMaterial_Medal = {
-	[1]={szName="M¶nh cê 1",tbProp={6,1,1735,1,0,0},nExpiredTime=nTime,nCount=1,},
+	[1]={szName="M¶nh cê 1",tbProp={6,1,1735,1,0,0},nExpiredTime=0,nCount=1,},
 	}
-tbMaterial_Shijin = {szName="M¶nh cê 2",tbProp={6,1,1736,1,0,0},nExpiredTime=nTime,nCount=1,}
-tbMaterial_Shijin2 = {szName="M¶nh cê 3",tbProp={6,1,1737,1,0,0},nExpiredTime=nTime,nCount=1,}
-tbMaterial_Shijin3 = {szName="M¶nh cê 4",tbProp={6,1,1738,1,0,0},nExpiredTime=nTime,nCount=1,}
+tbMaterial_Shijin = {szName="M¶nh cê 2",tbProp={6,1,1736,1,0,0},nExpiredTime=0,nCount=1,}
+tbMaterial_Shijin2 = {szName="M¶nh cê 3",tbProp={6,1,1737,1,0,0},nExpiredTime=0,nCount=1,}
+tbMaterial_Shijin3 = {szName="M¶nh cê 4",tbProp={6,1,1738,1,0,0},nExpiredTime=0,nCount=1,}
 	
 tbProduct = {
-	[1] = {szName="L¸ cê chiOn th¾ng",tbProp={6,1,1739,1,0,0},nExpiredTime=nTime,},
+	[1] = {szName="L¸ cê chiOn th¾ng",tbProp={6,1,1739,1,0,0},nExpiredTime=0,},
 	}
 
 

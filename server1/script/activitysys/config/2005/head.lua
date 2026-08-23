@@ -2,7 +2,7 @@
 Include("\\script\\activitysys\\activity.lua")
 Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 local nMonth = tonumber(date("%m"));
-if EventTuDong == 1 and nMonth==5 then
+if EventTuDong == 1 and ((EventThangLuaChon == 0 and nMonth==5) or EventThangLuaChon==5) then
 pActivity = ActivityClass:new()
 pActivity.nId = 2005
 pActivity.szName = "nÊu b¸nh th¸ng 5"

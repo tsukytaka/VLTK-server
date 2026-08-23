@@ -71,14 +71,14 @@ end
 ---------------------------------------------------------------------------------------------------------------------------
 function pActivity:TuiTra()
 	local tbAward = {
-		{szName="Trµ Th¶o Méc",tbProp={6,1,49391,1,0,0},nCount = 50, nExpiredTime=20190201},
+		{szName="Trµ Th¶o Méc",tbProp={6,1,49391,1,0,0},nCount = 50, nExpiredTime=0},
 	}
 	tbAwardTemplet:GiveAwardByList(tbAward,"Tói Trµ")
 end
 ---------------------------------------------------------------------------------------------------------------
 function pActivity:HopSoCoLa()
 	local tbAward = {
-		{szName="S« C« La",tbProp={6,1,28541,1,0,0},nCount = 100, nExpiredTime=20190630},
+		{szName="S« C« La",tbProp={6,1,28541,1,0,0},nCount = 100, nExpiredTime=0},
 	}
 	tbAwardTemplet:GiveAwardByList(tbAward,"Hép S« C« La")
 end

@@ -487,10 +487,10 @@ SKILL_150 = {
     [0] = {1055, 1056, 1057},
     [1] = {1058, 1059, 1060},
     [2] = {1069, 1070, 1071, 1110},
-    [3] = {1066, 1067, 1068},
+    [3] = {1066, 1067},
     [4] = {1061, 1062, 1114},
-    [5] = {1063, 1064, 1065},
-    [6] = {1072, 1073, 1074},
+    [5] = {1063, 1065},
+    [6] = {1073, 1074},
     [7] = {1075, 1076},
     [8] = {1078, 1079},
     [9] = {1080, 1081},
@@ -502,7 +502,7 @@ function learn_skill150_list(tbSkill, nLevel, szTag)
         return szLearned
     end
     for i = 1, getn(tbSkill) do
-        if HaveMagic(tbSkill[i]) == -1 then
+        if HaveMagic(tbSkill[i]) < nLevel then
             AddMagic(tbSkill[i], nLevel)
         end
         if szLearned ~= "" then

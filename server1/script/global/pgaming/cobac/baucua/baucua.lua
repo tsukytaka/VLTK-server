@@ -24,7 +24,7 @@ tbWinCoinMsg = {
 -- "Lµm giµu kh«ng khã víi bÇu cua. %s ®Æt tróng ngay %s tiÒn ®ång. Xa gÇn tËn trêi mµ gÇn ngay tr­íc m¾t. Ba L¨ng th¼ng tiÕn nµo.",
 -- "§Õn víi Vâ l©m bÝ sö tr¶i nghiÖm bÇu cua. Ai ngê %s tróng ngay %s tiÒn ®ång. Sao hªn vËy ta?",
 }
-FishGame = FishGame or {
+BauCuaTDGame = BauCuaTDGame or {
 tbPlayerList = {},--luu toan bo thong tin nguoi choi: {nIndex,{Chua so cac con danh:["Bau"] = nCash,["Cua"] = nCash....},nAwardCash = 0-- luu so tien thang neu nguoi choi out game hoac trong truong hop dac biet khong add duoc tien}
 nResult = {},--{"Bau","Cua"}
 
@@ -40,7 +40,7 @@ tbAllResult = tbAllResult or {
 }
 
 
-function FishGame:Init()
+function BauCuaTDGame:Init()
 if SubWorldID2Idx(78) < 0 then-- kiem tra xem co phai map tuong duong ko?
 	return
 end
@@ -48,6 +48,7 @@ if self.nStarted == 0 then
 self.TimerID = TimerList:AddTimer(self, 18*60); --1 phut se chay 1 lan
 self.nStarted = 1
 self.nStatus = 0
+Msg2SubWorld("<color=yellow>[BÇu Cua]<color> ®· më t¹i trung t©m T­¬ng D­¬ng. Mçi l­ît ®Æt c­îc kÐo dµi 2 phót.")
 end
 local nLuckRand= random(1,100)
 self.NORMAL_RATE = nLuckRand
@@ -66,12 +67,12 @@ for i=1,6 do-- khoi tao bang gia tri
 	end
 end
 end
-function FishGame:Stop()-- dong bau cua
+function BauCuaTDGame:Stop()-- dong bau cua
 self.nStarted = 0
 --TimerList:DelTimer(self.TimerID);
 end
--- FishGame:Init()
-function FishGame:GetNextResult()
+-- BauCuaTDGame:Init()
+function BauCuaTDGame:GetNextResult()
 print("Da chay qua")
 local nRand = random(1,self.nTOTAL_RATE)
 local nResult = 0
@@ -100,8 +101,7 @@ end
 		self.nResult[SprThongBao[i]] = self.nResult[tbResult[i]] + 1
 	end
 		local szMsg = format("<bclr=white>KÕt Qu¶ LÇn Më N¾p Nµy Lµ:<bclr><enter> <enter><color=violet> Ba MÆt<color> %s   --  %s  --  %s <enter> <enter><color=green>Mêi rót tay ra ®Ó ta L¾c Hét !<color>",SprThongBao[1],SprThongBao[2],SprThongBao[3])
-		--Msg2SubWorld(szMsg)
-		Msg2Map(78, szMsg)
+		Msg2SubWorld(szMsg)
 	return 1
 end
 -----  GAN GIA TRI MOI CHO NVALUE DE HIEN THI RA BEN NGOAI HE THONG -----
@@ -137,7 +137,7 @@ function ChangeToString(nValue)
 	end
 end
 
-function FishGame:CalAwardForPlayer()
+function BauCuaTDGame:CalAwardForPlayer()
 print("Da chay qua 2")
 local nLoseCash = 0
 local nLoseCoint = 0
@@ -172,7 +172,7 @@ self.nTotalCoin = 0
 self.nResult = {}
 end
 
-function FishGame:AddAwardForPlayer()
+function BauCuaTDGame:AddAwardForPlayer()
 print("Da chay qua 3")
 for szName,tbInfo in self.tbPlayerList do
 	
@@ -224,11 +224,11 @@ end
 end
 function showFishGate()
 local szName = GetName()
-if not FishGame.tbPlayerList[szName]  then--
+if not BauCuaTDGame.tbPlayerList[szName]  then--
 Say("Ng­¬i ch­a ®Æt cöa nµo c¶",0)
 return
 end
-local pPlayer =FishGame.tbPlayerList[szName]
+local pPlayer =BauCuaTDGame.tbPlayerList[szName]
 local szMsg = ""
 for szChoice,tbKind in pPlayer.tbPut do
 szMsg = szMsg.."Cöa: <color=green>"..szChoice.."<color> ".."TiÒn ®Æt:"
@@ -250,11 +250,11 @@ Say("Ng­¬i muèn ch¬i kh« m¸u?",3,"TiÒn v¹n/#joinFishGame(1)","TiÒn ®ång/#joinFis
 end
 
 function joinFishGame(nKind)
-if FishGame.nStatus ~= 1 then
+if BauCuaTDGame.nStatus ~= 1 then
 Talk(1,"","<color=green> ===== Ta ®ang l¾c hò ®õng véi! ===== <enter><color=violet>§îi 1 Phót n÷a ta l¾c hò xong råi ®Æt !<color>")
 return
 end
-FishGame:OnPlayerJoin(PlayerIndex,GetName())
+BauCuaTDGame:OnPlayerJoin(PlayerIndex,GetName())
 if nKind == 1 then
 local tbSay = {
 "BÇu/#OnChoose(1,1)",
@@ -284,18 +284,18 @@ function OnChoose(nChoice,nKind)
 -- Say("")
 if nKind == 1 then
 local nMaxCount = 100
-g_AskClientNumberEx(1,nMaxCount, format("TiÒn (1-%d) v¹n", nMaxCount), {FishGame.GetNumberFromClient,{FishGame,nChoice,nKind} })
+g_AskClientNumberEx(1,nMaxCount, format("TiÒn (1-%d) v¹n", nMaxCount), {BauCuaTDGame.GetNumberFromClient,{BauCuaTDGame,nChoice,nKind} })
 else
 local nMaxCount = 100
-g_AskClientNumberEx(1,nMaxCount, format("TiÒn ®ång (1-%d)", nMaxCount), {FishGame.GetNumberFromClient,{FishGame,nChoice,nKind} })
+g_AskClientNumberEx(1,nMaxCount, format("TiÒn ®ång (1-%d)", nMaxCount), {BauCuaTDGame.GetNumberFromClient,{BauCuaTDGame,nChoice,nKind} })
 end
 end
 
-function FishGame:GetNumberFromClient(nChoice,nKind,nPutCash)
+function BauCuaTDGame:GetNumberFromClient(nChoice,nKind,nPutCash)
 self:OnPlayerPut(PlayerIndex,GetName(),nPutCash,nChoice,nKind)
 end
 
-function FishGame:OnPlayerPut(nPlayerIndex,szName,nPutCash,nChoice,nKind)
+function BauCuaTDGame:OnPlayerPut(nPlayerIndex,szName,nPutCash,nChoice,nKind)
 if nPutCash > 100 then
 Say("§õng cã ¨n gian...:D",0)
 return
@@ -449,7 +449,7 @@ end
 
 
 
-function FishGame:OnPlayerJoin(nPlayerIndex,szName)
+function BauCuaTDGame:OnPlayerJoin(nPlayerIndex,szName)
 if not self.tbPlayerList[szName] then
 self:AddNewPlayer(nPlayerIndex,szName)
 return
@@ -488,7 +488,7 @@ self.tbPlayerList[szName].nIndex = nPlayerIndex-- tra lai index cho dung
 end
 
 
-function FishGame:AddNewPlayer(nPlayerIndex,szName)
+function BauCuaTDGame:AddNewPlayer(nPlayerIndex,szName)
 self.tbPlayerList[szName] = {
 nIndex = nPlayerIndex,
 tbPut ={
@@ -503,27 +503,27 @@ nAwardCash = 0,
 nAwardCoin = 0,
 }
 end
-function FishGame:OnTime()-- moi 1 phut se chay 1 lan 
+function BauCuaTDGame:OnTime()-- moi 1 phut se chay 1 lan 
 print("BAU CUA DA CHAY")
 local nMin = tonumber(GetLocalDate("%M")); -- lay so phut
 local nX = mod(nMin,3)-- phut 1, 2 cho danh phut thu 3 ko cho danh
 if nX == 0 then-- dang tinh ket qua khong cho danh tranh bug
-FishGame.nStatus = 0
-if FishGame:GetNextResult() ~= 1 then-- loi tinh toan
+BauCuaTDGame.nStatus = 0
+if BauCuaTDGame:GetNextResult() ~= 1 then-- loi tinh toan
 print("Bi dien roi")
 return
 end
-FishGame:CalAwardForPlayer()
-FishGame:AddAwardForPlayer()
+BauCuaTDGame:CalAwardForPlayer()
+BauCuaTDGame:AddAwardForPlayer()
 else
-FishGame.nStatus = 1
+BauCuaTDGame.nStatus = 1
 end
 -- Say("TÝnh n¨ng chØ ®­îc khai më c¸c khung giê 6h-7h, 12h-13h,17h-19h, 22h-23h59h»ng ngµy. Vui lßng quay l¹i sau",0)
 local nNowTime = tonumber(date( "%H%M "))
 -- if (nNowTime >=600 and nNowTime < 700 ) or (nNowTime >=1200 and nNowTime < 1300 ) or (nNowTime >=1700 and nNowTime < 1900 ) or (nNowTime >=2200) then
 if (nNowTime > ThoiGianBatDauBauCua and nNowTime < ThoiGianKetThucBauCua ) then  
 if nX == 1 then
-Msg2Map(78, "<bclr=white> B¾t ®Çu ®Æt c­îc bÇu cua, h·y lùa chän cöa ®Ó xuèng x¸c nµo, thêi gian ®Æt c­îc lµ <color=yellow>1<color> phót.<bclr>")
+Msg2SubWorld("<bclr=white> BÇu Cua t¹i trung t©m T­¬ng D­¬ng b¾t ®Çu nhËn c­îc; thêi gian ®Æt c­îc cßn <color=yellow>1<color> phót.<bclr>")
 end
 return 1
 end
@@ -537,7 +537,7 @@ end
 function OnTimer(nNpcIndex,nTimeOut)
 local nNowTime = tonumber(date( "%H%M "))
     if (nNowTime > ThoiGianBatDauBauCua and nNowTime < ThoiGianKetThucBauCua ) then   
-		DynamicExecute("\\script\\global\\pgaming\\cobac\\baucua\\baucua.lua", "FishGame:Init")
+		DynamicExecute("\\script\\global\\pgaming\\cobac\\baucua\\baucua.lua", "BauCuaTDGame:Init")
     local tab_Chat = {
 			"     <pic=115><pic=115><pic=115><bclr=blue><enter>LiÒu th× ¨n Shit <pic=00>!!!<color><bclr>",
             "     <pic=36><bclr=blue><enter>Chóc c¸c nh©n sü gÆp nhiÒu may m¾n vµ ph¸t tµi...! <bclr>",            
@@ -555,7 +555,7 @@ else
 		NpcChat(nNpcIndex,tab_Chat2[ran])
 		local ranTimer = random(10,20)
 		SetNpcTimer(nNpcIndex,ranTimer*18)
-		DynamicExecute("\\script\\global\\pgaming\\cobac\\baucua\\baucua.lua", "FishGame:Stop")
+		DynamicExecute("\\script\\global\\pgaming\\cobac\\baucua\\baucua.lua", "BauCuaTDGame:Stop")
     end
 end
 
@@ -571,4 +571,6 @@ function Add_Npc_BauCua()
             SetNpcTimer(npcdialog,5*18)
             SetNpcScript(npcdialog,"\\script\\global\\pgaming\\cobac\\baucua\\baucua.lua")     
     end
+	-- Khëi ®éng bµn c­îc trùc tiÕp, kh«ng phô thuéc OnTimer tù tho¹i cña NPC.
+	BauCuaTDGame:Init()
 end

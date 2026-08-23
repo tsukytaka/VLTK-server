@@ -1,7 +1,7 @@
 ---------------Youtube PGaming---------------
 tbActivityNpc = {	
 	[1] = {
-		szName = " ", 
+		szName = "LÔ Quan", 
 		nLevel = 95,
 		nNpcId = 1866,
 		nIsboss = 0,
@@ -59,7 +59,7 @@ tbHandInMedal = {
 	}	
 	
 tbActivLog = {
-	-- Ñ×µÛ£¬´³¹Ø£¬ËÎ½ð
+	-- Ñ×µÛ£î³¹Ø£¬ËÎ½ð
 	"KichHoatTinhNangViemDe",
 	"KichHoatTinhNangVuotAi",
 	"KichHoatTinhNangTongKim",

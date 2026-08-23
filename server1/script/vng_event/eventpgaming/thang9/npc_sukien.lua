@@ -40,7 +40,7 @@ local nTime1 = "20"..nYear.."09010000"
 local nTime2 = "20"..nYear.."10010000"
 local nYMD  = tonumber(date("%y%m%d%H%M"))
 local nDayNow = "20"..nYMD..""
-	if (nDayNow >= nTime1) and (nDayNow <= nTime2) then
+	if EventThangDangMo(9) == 1 then
 		tbDailog:AddOptEntry("NhËn Th­ëng §¹t Mèc",NhanMoc);
 		tbDailog:Show();
 	else

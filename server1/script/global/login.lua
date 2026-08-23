@@ -20,6 +20,7 @@ Include("\\script\\global\\gm\\lenhbaiadmintestserver.lua")
 Include("\\script\\global\\login_head.lua")
 Include("\\script\\global\\admin_item_login.lua")
 Include("\\script\\global\\newbie_guide_tanthu.lua")
+Include("\\script\\global\\vipmask_resall.lua")
 Include("\\script\\global\\Ï´pkµÄÑÃÒÛ.lua")
 Include("\\script\\global\\limitaccount_ip.lua")
 Include("\\script\\global\\pgaming\\configserver\\configall.lua")
@@ -40,6 +41,9 @@ function main(bExchangeIn)
 	PlayerList:AddPlayer(PlayerIndex)
 	TaskManager:ResetUseGroup()
 	LoginDelaySync(1)
+	if (VipMaskRes_Start) then
+		VipMaskRes_Start()
+	end
 
 	-- Kh¸ng ¢m
 	local seris = GetSeries()

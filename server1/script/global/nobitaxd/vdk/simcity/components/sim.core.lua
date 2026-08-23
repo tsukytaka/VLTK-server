@@ -968,7 +968,9 @@ function SimCore:OnTimer(tbNpc, rate)
             SetBotSpeed(tbNpc.finalIndex, 15, 24)  
         end
        
-        if (BotMountSync) then
+        -- Kh«ng gäi ®ång bé c­ìi ngùa native cho §­êng M«n: mét sè tæ hîp
+        -- th©n/vò khÝ/ngùa bÞ client dùng thµnh NPC v« h×nh cho tíi khi tróng ®ßn.
+        if (BotMountSync and tbNpc.faction ~= "duongmon") then
             BotMountSync(tbNpc.finalIndex, tbNpc.isFighting or 0)
         end
     
@@ -976,7 +978,8 @@ function SimCore:OnTimer(tbNpc, rate)
             local _dmSk = tbNpc.skillCastBua and tbNpc.skillCastBua[1]
             local _isDm = _dmSk and SIMBOT_DISMOUNT_SKILLS[_dmSk]
             local _inCbt = (tbNpc.isFighting or 0) == 1 or tbNpc.duelPlayerId or tbNpc.botDuelTarget
-            local _wantRide = (_inCbt and _isDm) and 0 or 1  
+            local _forceFoot = tbNpc.faction == "duongmon"
+            local _wantRide = (_forceFoot or (_inCbt and _isDm)) and 0 or 1  
            
             if _isDm and _inCbt then
                 if not tbNpc.dmFootSince then tbNpc.dmFootSince = tbNpc.tick_breath end

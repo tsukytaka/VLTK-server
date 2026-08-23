@@ -5,9 +5,9 @@ Include("\\script\\activitysys\\config\\2002\\phongphaotrung\\variables.lua")
 Include("\\script\\dailogsys\\g_dialog.lua")
 
 tbMaterial_Medal = {
-	[1]={szName="Huy Hi÷u c p 1",tbProp={6,1,3133,1,0,0},nExpiredTime=20120501,nCount=1,},
-	[2]={szName="Huy Hi÷u c p 2",tbProp={6,1,3134,1,0,0},nExpiredTime=20120501,nCount=1,},
-	[3]={szName="Huy Hi÷u c p 3",tbProp={6,1,3135,1,0,0},nExpiredTime=20120501,nCount=1,},
+	[1]={szName="Huy Hi÷u c p 1",tbProp={6,1,3133,1,0,0},nExpiredTime=0,nCount=1,},
+	[2]={szName="Huy Hi÷u c p 2",tbProp={6,1,3134,1,0,0},nExpiredTime=0,nCount=1,},
+	[3]={szName="Huy Hi÷u c p 3",tbProp={6,1,3135,1,0,0},nExpiredTime=0,nCount=1,},
 	}
 
 pActivity.tbCompose = {}

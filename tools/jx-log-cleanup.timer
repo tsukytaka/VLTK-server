@@ -1,0 +1,11 @@
+[Unit]
+Description=Clean old JX server logs every day
+
+[Timer]
+OnCalendar=*-*-* 03:30:00
+Persistent=true
+RandomizedDelaySec=10m
+Unit=jx-log-cleanup.service
+
+[Install]
+WantedBy=timers.target

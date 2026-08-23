@@ -9,12 +9,12 @@ Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 local nYear  = tonumber(date("%y"));
 local nTime = "20"..nYear.."0301"
 tbMaterial_Medal = {
-	[1]={szName="Ph∏o Ti”u",tbProp={6,1,1351,1,0,0},nExpiredTime=nTime,nCount=3,},
-	[2]={szName="Ph∏o Trung",tbProp={6,1,1352,1,0,0},nExpiredTime=nTime,nCount=3,},
+	[1]={szName="Ph∏o Ti”u",tbProp={6,1,1351,1,0,0},nExpiredTime=0,nCount=3,},
+	[2]={szName="Ph∏o Trung",tbProp={6,1,1352,1,0,0},nExpiredTime=0,nCount=3,},
 	}
 tbProduct = {
-	[1] = {szName="Ph∏o Trung",tbProp={6,1,1352,1,0,0},nExpiredTime=nTime,},
-	[2] = {szName="Ph∏o ßπi",tbProp={6,1,1353,1,0,0},nExpiredTime=nTime,}
+	[1] = {szName="Ph∏o Trung",tbProp={6,1,1352,1,0,0},nExpiredTime=0,},
+	[2] = {szName="Ph∏o ßπi",tbProp={6,1,1353,1,0,0},nExpiredTime=0,}
 	}
 
 

@@ -34,7 +34,7 @@ tbConfig[2] =
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,30131,1,0,0},nExpiredTime=nTime,},1,"2"} },
+		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,30131,1,0,0},nExpiredTime=0,},1,"2"} },
 	},
 }
 tbConfig[3] = --Tèng kim 1000 ®iÓm
@@ -53,7 +53,7 @@ tbConfig[3] = --Tèng kim 1000 ®iÓm
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},20,"EventVuLanBaoHieu\tTongKim1000"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},20,"EventVuLanBaoHieu\tTongKim1000"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "TongKim1000", "20 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -72,7 +72,7 @@ tbConfig[4] = --Tèng kim 3000 ®iÓm
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},40,"EventVuLanBaoHieu\tTongKim3000"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},40,"EventVuLanBaoHieu\tTongKim3000"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "TongKim3000", "40 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -90,7 +90,7 @@ tbConfig[5] =
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},15,"EventVuLanBaoHieu\tVuotAi17"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},15,"EventVuLanBaoHieu\tVuotAi17"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "VuotAi17", "15 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -108,7 +108,7 @@ tbConfig[6] =
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},25,"EventVuLanBaoHieu\tVuotAi28"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},25,"EventVuLanBaoHieu\tVuotAi28"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "VuotAi28", "25 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -127,7 +127,7 @@ tbConfig[7] = --Thñy tÆc ®Çu lÜnh
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},10,"EventVuLanBaoHieu\tTieuDietThuyTacDauLinh"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},10,"EventVuLanBaoHieu\tTieuDietThuyTacDauLinh"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "TieuDietThuyTacDauLinh", "10 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -147,7 +147,7 @@ tbConfig[8] = --thuû tÆc ®¹i ®Çu lÜnh
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},20,"EventVuLanBaoHieu\tTieuDietThuyTacDaiDauLinh"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},20,"EventVuLanBaoHieu\tTieuDietThuyTacDaiDauLinh"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "TieuDietThuyTacDaiDauLinh", "20 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -165,7 +165,7 @@ tbConfig[9] = --Viªm ®Õ
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},30,"EventVuLanBaoHieu\tVuotAiViemDe10"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},30,"EventVuLanBaoHieu\tVuotAiViemDe10"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "VuotAiViemDe10", "30 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -184,7 +184,7 @@ tbConfig[10] = --Boss thÕ giíi
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},50,"EventVuLanBaoHieu\tTieuDietBossTheGioi"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},50,"EventVuLanBaoHieu\tTieuDietBossTheGioi"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "TieuDietBossTheGioi", "50 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -203,7 +203,7 @@ tbConfig[11] = --boss s¸t thñ
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=nTime,},5,"EventVuLanBaoHieu\tTieuDietBossS¸tThñ"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30132,1,0,0},nExpiredTime=0,},5,"EventVuLanBaoHieu\tTieuDietBossS¸tThñ"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "TieuDietBossSatThu", "5 Nô Hoa Hång §á", 1}},
 	},
 }
@@ -236,7 +236,7 @@ tbConfig[13] = --®æi Cöu Tiªn Ngù YÕn
 	tbCondition = 
 	{
 		{"PlayerFunLib:CheckTotalLevel",	{50,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
-		{"AddOneMaterial",	{"Nô Hoa Hång §á",{tbProp={6,1,30132,-1,-1,-1},nExpiredTime=nTime,},1} },
+		{"AddOneMaterial",	{"Nô Hoa Hång §á",{tbProp={6,1,30132,-1,-1,-1},nExpiredTime=0,},1} },
 	},
 	tbActition = 
 	{
@@ -272,13 +272,13 @@ tbConfig[15] = --®æi Thóy Tùu Hå Tiªn
 	tbCondition = 
 	{
 		{"PlayerFunLib:CheckTotalLevel",	{50,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
-		{"AddOneMaterial",	{"Hoa Hång §á",{tbProp={6,1,30131,-1,-1,-1},nExpiredTime=nTime,},5} },
-		{"AddOneMaterial",	{"Cöu Tiªn Ngù YÕn",{tbProp={6,1,30128,-1,-1,-1},nExpiredTime=nTime,},1} },
-		{"AddOneMaterial",	{"H¶i VÞ Bång Lai",{tbProp={6,1,30129,-1,-1,-1},nExpiredTime=nTime,},1} },
+		{"AddOneMaterial",	{"Hoa Hång §á",{tbProp={6,1,30131,-1,-1,-1},nExpiredTime=0,},5} },
+		{"AddOneMaterial",	{"Cöu Tiªn Ngù YÕn",{tbProp={6,1,30128,-1,-1,-1},nExpiredTime=0,},1} },
+		{"AddOneMaterial",	{"H¶i VÞ Bång Lai",{tbProp={6,1,30129,-1,-1,-1},nExpiredTime=0,},1} },
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30130,1,0,0},nExpiredTime=nTime,},1,"EventVuLanBaoHieu\tGhepThuyTuuHoTien"} },
+		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30130,1,0,0},nExpiredTime=0,},1,"EventVuLanBaoHieu\tGhepThuyTuuHoTien"} },
 		{"tbVngTransLog:Write", {strTranLogFolder, nPromotionID, "GhepThuyTuuHoTien", "1 Thóy Tùu Hå Tiªn", 1}},
 	},
 }
@@ -293,7 +293,7 @@ tbConfig[16] = --tÆng hoa hång
 	tbCondition = 
 	{
 		{"PlayerFunLib:CheckTotalLevel",	{50,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
-		{"AddOneMaterial",	{"Hoa Hång §á",{tbProp={6,1,30131,-1,-1,-1},nExpiredTime=nTime,},1} },
+		{"AddOneMaterial",	{"Hoa Hång §á",{tbProp={6,1,30131,-1,-1,-1},nExpiredTime=0,},1} },
 		{"ThisActivity:CheckGiveRedRoseLimit", {nil}},
 	},
 	tbActition = 
@@ -333,7 +333,7 @@ tbConfig[18] = --tÆng Cöu Tiªn Ngù YÕn
 	{
 		{"PlayerFunLib:CheckTotalLevel",	{50,"§¼ng cÊp cña ng­¬i kh«ng ®ñ, lÇn sau h·y ®Õn nhÐ!",">="} },
 		{"ThisActivity:GiveCuuTienLimit", {nil}},
-		{"AddOneMaterial",	{"Cöu Tiªn Ngù YÕn",{tbProp={6,1,30128,-1,-1,-1},nExpiredTime=nTime,},1} },		
+		{"AddOneMaterial",	{"Cöu Tiªn Ngù YÕn",{tbProp={6,1,30128,-1,-1,-1},nExpiredTime=0,},1} },		
 	},
 	tbActition = 
 	{
@@ -355,7 +355,7 @@ tbConfig[19] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,30131,1,0,0},nExpiredTime=nTime,},1,"2"} },
+		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,30131,1,0,0},nExpiredTime=0,},1,"2"} },
 	},
 }
 tbConfig[20] = --?»¸öÏ¸½Ú
@@ -374,7 +374,7 @@ tbConfig[20] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,30131,1,0,0},nExpiredTime=nTime,},1,"2"} },
+		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,30131,1,0,0},nExpiredTime=0,},1,"2"} },
 	},
 }
 tbConfig[21] = --Ò»¸öÏ¸½Ú
@@ -409,6 +409,6 @@ tbConfig[22] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{nExpiredTime=nTime,tbProp={6,1,30129,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Sinh NhËt]"} },
+		{"PlayerFunLib:GetItem",	{{nExpiredTime=0,tbProp={6,1,30129,1,0,0},},1,"[Event_Mõng Sinh NhËt VLTK] [B¸nh Sinh NhËt]"} },
 	},
 }

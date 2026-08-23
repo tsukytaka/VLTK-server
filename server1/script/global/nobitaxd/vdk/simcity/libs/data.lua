@@ -310,6 +310,38 @@ function loadMap()
             end
         end
     end
+
+    -- Bo sung cac map luyen cong co trong Than Hanh Phu nhung chua co file node SimCity.
+    local extraTrainingWorlds = {
+        {917, 1816, 3392}, {918, 1816, 3392}, {336, 1124, 3187},
+        {152, 1672, 3361}, {181, 1425, 2999}, {206, 1603, 3215},
+        {169, 1596, 3212}, {79, 1600, 3206}, {166, 1649, 3231},
+        {38, 1602, 3206}, {193, 1938, 2845}
+    }
+    local offsets = {{0,0}, {-12,0}, {12,0}, {0,-12}, {0,12}, {-9,-9}, {9,-9}, {-9,9}, {9,9}}
+    for i = 1, getn(extraTrainingWorlds) do
+        local def = extraTrainingWorlds[i]
+        if not SimCityMap[def[1]] then
+            local world = createWorldIfNotExists(def[1], "Training " .. def[1])
+            local nodeNames = {}
+            for j = 1, getn(offsets) do
+                local x = def[2] + offsets[j][1]
+                local y = def[3] + offsets[j][2]
+                local nodeName = format("%d_%d", x, y)
+                tinsert(nodeNames, nodeName)
+                world.nodes[nodeName] = {x=x, y=y, linkedNodes={}, isExact=0, nodeType=1, isNearAtraction=0, isNotPreset=0}
+            end
+            for j = 1, getn(nodeNames) do
+                local links = {}
+                for k = 1, getn(nodeNames) do
+                    if k ~= j then tinsert(links, nodeNames[k]) end
+                end
+                world.nodes[nodeNames[j]].linkedNodes = links
+            end
+            world.firstNode = {def[2], def[3]}
+            world.presetPaths.training = nodeNames
+        end
+    end
 end
 
 -- Doc phai

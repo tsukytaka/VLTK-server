@@ -16,8 +16,7 @@ Include("\\script\\global\\pgaming\\configserver\\configall.lua")
 --										  Hoµn Thµnh D∑ T»u								  	  	  --
 ----------------------------------------------------------------------------------------------------
 DTL_TASK = 8000
-DTL_LIMIT= 40
-
+DTL_LIMIT = So_Lan_Da_Tau_Trong_Ngay or 40
 function lamnhiemvudatau()
 	if HoanThanhDaTau == 1 then
 		lamnhiemvudatau1()
@@ -36,7 +35,7 @@ function lamnhiemvudatau1()
 		nUseTimes = 0
 	end
 	if (nUseTimes >= DTL_LIMIT) then
-		Say(format("MÈt ngµy chÿ c„ th” dÔng t›nh n®ng nµy 40 l«n th´i", DTL_LIMIT), 0)
+		Say("Moi ngay chi co the hoan thanh nhanh toi da "..DTL_LIMIT.." nhiem vu Da Tau.", 0)
 		return 1
 	end
 	if GetCash() < (SoTienHoanThanhDaTau * 10000) then

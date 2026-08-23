@@ -38,7 +38,7 @@ local nDayNow = "20"..nYMD..""
 	local tbDailog = DailogClass:new(szNpcName);
 	tbDailog.szTitleMsg = "<color=green>Ng­¬i cã muèn nhËn mèc nµo?<color>",
 	G_ACTIVITY:OnMessage("ClickNpc", tbDailog, nNpcIndex)
-	if (nDayNow >= nTime1) and (nDayNow <= nTime2) then
+	if EventThangDangMo(6) == 1 then
 		tbDailog:AddOptEntry("NhËn Th­ëng §¹t Mèc",NhanMoc);
 		tbDailog:Show();
 	else
