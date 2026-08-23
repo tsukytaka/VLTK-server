@@ -44,3 +44,6 @@ server1/servercfg.ini*
 # Backup files
 *.bak
 *.bak_*
+server1/BarrierError.Log
+server1/BarrierError.log
+server1/data/rank*

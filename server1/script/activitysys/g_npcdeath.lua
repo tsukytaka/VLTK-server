@@ -204,15 +204,15 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	local found = {}
 	local npcType = GetNpcPowerType(nNpcIndex)
 	
-	Msg2Player("DEBUG: nNpcIndex="..tostring(nNpcIndex))
-	Msg2Player("DEBUG: nAttackerIndex="..tostring(nAttackerIndex))
+	--Msg2Player("DEBUG: nNpcIndex="..tostring(nNpcIndex))
+	--Msg2Player("DEBUG: nAttackerIndex="..tostring(nAttackerIndex))
 	if PlayerIndex and PlayerIndex > 0 then
 		Msg2Player("DEBUG: vinh_OnGlobalNpcDeath called 1! npcType="..tostring(npcType))
 	end
 
 	-- Neu la SimCity bi chet thi dung rot gi ca
 	local param4 = GetNpcParam(nNpcIndex, 4)
-	Msg2Player("DEBUG: vinh_OnGlobalNpcDeath param4="..tostring(param4))
+	--Msg2Player("DEBUG: vinh_OnGlobalNpcDeath param4="..tostring(param4))
 	if param4 and (param4 == 1 or param4 == 2) then
 		return 1
 	end
@@ -264,9 +264,9 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	end
 
 	-- Roi do An Bang / Dinh Quoc tu Boss Xanh (ti le 0.1%)
-	if (npcType == 2) then
+	if (npcType > 1) then
 		local nChance = random(1, 1000)
-		if nChance == 1 then
+		if nChance < 3 then
 			if PlayerIndex and PlayerIndex > 0 then
 				Msg2Player("DEBUG: Dropping An Bang / Dinh Quoc!")
 				Msg2Player("DEBUG: PlayerIndex="..tostring(PlayerIndex))
@@ -309,7 +309,7 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		local dropFile = GetNpcDropRateFile(nNpcIndex) or ""
 		if strfind(dropFile, "110") or strfind(dropFile, "119") or true then
 			local nChance = random(1, 1000)
-			if nChance = 1 then
+			if nChance == 1 then
 				if PlayerIndex and PlayerIndex > 0 then
 					Msg2Player("DEBUG: Dropping Skill 120 Book!")
 				end
