@@ -52,7 +52,7 @@ end
 
 function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	if PlayerIndex and PlayerIndex > 0 then
-		Msg2Player("DEBUG: OnGlobalNpcDeath triggered!")
+		--Msg2Player("DEBUG: OnGlobalNpcDeath triggered!")
 	end
 	-- [PARTY XP 2026-07-01] bot trong nhom giet quai -> gan PlayerIndex = chu nhom + cong exp tay
 	--   (engine CalcExp bo qua bot kill; nAttackerIndex=0 -> lay KNpc bot qua GetNpcLastAttacker -> PollParty)
@@ -207,7 +207,7 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 	--Msg2Player("DEBUG: nNpcIndex="..tostring(nNpcIndex))
 	--Msg2Player("DEBUG: nAttackerIndex="..tostring(nAttackerIndex))
 	if PlayerIndex and PlayerIndex > 0 then
-		Msg2Player("DEBUG: vinh_OnGlobalNpcDeath called 1! npcType="..tostring(npcType))
+		--Msg2Player("DEBUG: vinh_OnGlobalNpcDeath called 1! npcType="..tostring(npcType))
 	end
 
 	-- Neu la SimCity bi chet thi dung rot gi ca
@@ -263,34 +263,22 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		ITEM_DropRateItem(nNpcIndex, rate, finalDropFile, 1, 100, GetNpcSeries(nNpcIndex));
 	end
 
-	-- Roi do An Bang / Dinh Quoc tu Boss Xanh (ti le 0.1%)
+	-- Roi do An Bang / Dinh Quoc tu Boss Xanh (ti le 1%)
 	if (npcType > 1) then
-		local nChance = random(1, 1000)
-		if nChance < 3 then
+		local nChance = random(1, 100)
+		if nChance < 2 then
 			if PlayerIndex and PlayerIndex > 0 then
 				Msg2Player("DEBUG: Dropping An Bang / Dinh Quoc!")
 				Msg2Player("DEBUG: PlayerIndex="..tostring(PlayerIndex))
 			end
 			-- goldequip.txt rowID - 2
 			local tbItems = {
-				{0, 152, 0, 0}, -- DQ
-				{0, 153, 0, 0}, -- DQ
-				{0, 154, 0, 0}, -- DQ
-				{0, 155, 0, 0}, -- DQ
-				{0, 156, 0, 0}, -- DQ
-				{0, 157, 0, 0}, -- DQ
-				{0, 158, 0, 0}, -- DQ
-				{0, 159, 0, 0}, -- DQ
-				{0, 160, 0, 0}, -- DQ
-				{0, 161, 0, 0}, -- DQ
-				{0, 162, 0, 0}, -- DQ
 				{0, 163, 0, 0}, -- An Bang Hang Lien
 				{0, 164, 0, 0}, -- An Bang Cuc Hoa
 				{0, 165, 0, 0}, -- An Bang Ngoc Boi
 				{0, 166, 0, 0}, -- An Bang Gioi Chi
-				{6, 1, 15, 1}, -- Phi Phong
 			}
-			local nSelect = random(1, 16)
+			local nSelect = random(1, 4)
 			local tbItem = tbItems[nSelect]
 			local nX32, nY32, nSubWorldIdx = GetNpcPos(nNpcIndex)
 			Msg2Player("DEBUG: nSubWorldIdx="..tostring(nSubWorldIdx))
