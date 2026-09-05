@@ -214,7 +214,7 @@ tbConfig[12] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1494,1,0,0},},1,"0"} },
+		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1494,1,0,0},},1,"2"} },
 	},
 }
 tbConfig[13] = --§èi tho¹i
@@ -338,7 +338,7 @@ tbConfig[19] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1494,1,0,0},},1,"0"} },
+		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1494,1,0,0},},1,"2"} },
 	},
 }
 tbConfig[20] = --?»¸öÏ¸½Ú
@@ -357,7 +357,7 @@ tbConfig[20] = --?»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1494,1,0,0},},1,"0"} },
+		{"NpcFunLib:DropSingleItem",	{{nExpiredTime=0,tbProp={6,1,1494,1,0,0},},1,"2"} },
 	},
 }
 tbConfig[21] = 

@@ -304,7 +304,8 @@ function vinh_OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 				local nX32, nY32, nSubWorldIdx = GetNpcPos(nNpcIndex)
 				if nSubWorldIdx then
 					local nBelonger = PlayerIndex or -1
-					DropItemEx(nSubWorldIdx, nX32, nY32, nBelonger, 4, 0, 0, 6, 1, 1125, 1, 0, 0, 0, 0, 0, 0, 0)
+					--DropItemEx(nSubWorldIdx, nX32, nY32, nBelonger, 4, 0, 0, 6, 1, 1125, 1, 0, 0, 0, 0, 0, 0, 0)
+					DropItemEx(nSubWorldIdx, nX32, nY32, nBelonger, 4, 0, 0, 6, 1, 2921, 1, 0, 0, 0, 0, 0, 0, 0)
 					if PlayerIndex and PlayerIndex > 0 then
 						Msg2Player("Chuc mung ban da tieu diet quai Tinh Anh/Thu Linh va nhan duoc Bi quyet ky nang cap 120!")
 					end
